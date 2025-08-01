@@ -1,34 +1,12 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "../globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Med Academy",
-  description: "Med Academy - Your Gateway to Medical Knowledge",
-};
-
+// app/(auth)/layout.tsx
 export default function AuthLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <div className="relative flex min-h-svh flex-col items-center justify-center">
+      <div className="flex w-full max-w-sm flex-col gap-6">{children}</div>
+    </div>
   );
 }

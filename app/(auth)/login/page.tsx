@@ -3,6 +3,7 @@ import {
   CardTitle,
   CardHeader,
   CardDescription,
+  CardContent,
 } from "@/components/ui/card";
 
 const LoginPage = () => {
@@ -12,6 +13,7 @@ const LoginPage = () => {
         <CardTitle>Welcome Back !</CardTitle>
         <CardDescription>Login using your Gmail account</CardDescription>
       </CardHeader>
+      <CardContent></CardContent>
     </Card>
   );
 };
