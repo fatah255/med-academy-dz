@@ -14,6 +14,7 @@ import {
   InputOTPSlot,
 } from "@/components/ui/input-otp";
 import { authClient } from "@/lib/auth-client";
+import { Loader2 } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useTransition } from "react";
 import { toast } from "sonner";
@@ -24,7 +25,7 @@ const VerifyRequest = () => {
   const router = useRouter();
   const params = useSearchParams();
   const email = params.get("email") || "";
-
+  const isOtpCompleted = otp.length === 6;
   const handleVerify = () => {
     startEmailTransition(async () => {
       await authClient.signIn.emailOtp({
@@ -73,10 +74,19 @@ const VerifyRequest = () => {
         </p>
         <Button
           onClick={handleVerify}
-          disabled={emailPending}
+          disabled={emailPending || !isOtpCompleted}
           className="w-full"
         >
-          Verify
+          {emailPending ? (
+            <>
+              <Loader2 className="animate-spin size-4" />
+              <span> Pending...</span>
+            </>
+          ) : (
+            <>
+              <span>Verify</span>
+            </>
+          )}
         </Button>
       </CardContent>
     </Card>
