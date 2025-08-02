@@ -37,8 +37,8 @@ export const auth = betterAuth({
     <body style="margin: 0; background-color: #f4f6f9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
       <div style="max-width: 600px; margin: auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
         <div style="text-align: center; padding-bottom: 20px;">
-          <img src="https://cdn-icons-png.flaticon.com/512/3771/3771434.png" alt="MedLearn Logo" style="width: 80px; margin-bottom: 10px;">
-          <h1 style="margin: 0; font-size: 20px; color: #007b83;">MedLearn Platform</h1>
+          <img src="https://raw.githubusercontent.com/fatah255/med-academy-dz/refs/heads/main/public/logo.svg" alt="Med Academy DZ Logo" style="width: 100px; margin-bottom: 10px;">
+          <h1 style="margin: 0; font-size: 20px; color: #007b83;">Med Academy DZ</h1>
         </div>
         <div style="text-align: center; color: #333333;">
           <h2 style="font-size: 22px;">Verify Your Email</h2>
@@ -50,8 +50,8 @@ export const auth = betterAuth({
           <p style="font-size: 14px;">If you didn’t request this, please ignore this email.</p>
         </div>
         <div style="text-align: center; font-size: 12px; color: #999999; margin-top: 30px;">
-          &copy; 2025 MedLearn. All rights reserved.<br>
-          Contact us: <a href="mailto:support@medlearn.com" style="color: #007b83; text-decoration: none;">support@medlearn.com</a>
+          &copy; 2025 Med Academy DZ. All rights reserved.<br>
+          Contact us: <a href="mailto:support@medacademy.dz" style="color: #007b83; text-decoration: none;">support@medacademy.dz</a>
         </div>
       </div>
     </body>

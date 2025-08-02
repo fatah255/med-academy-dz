@@ -20,7 +20,7 @@ import { toast } from "sonner";
 
 const VerifyRequest = () => {
   const [otp, setOtp] = useState("");
-  const [emailPendng, startEmailTransition] = useTransition();
+  const [emailPending, startEmailTransition] = useTransition();
   const router = useRouter();
   const params = useSearchParams();
   const email = params.get("email") || "";
