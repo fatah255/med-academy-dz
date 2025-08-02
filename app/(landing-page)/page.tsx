@@ -33,7 +33,6 @@ const features=[
 export default function Home() {
   return (
     <>
-      <ThemeToggle />
      <section className="relative py-20">
       <div className="flex flex-col items-center text-center space-y-8">
         <Badge variant={"outline"}> The future of online education</Badge>
