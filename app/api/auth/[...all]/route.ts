@@ -21,7 +21,7 @@ const emailOptions = {
 } satisfies EmailOptions;
 
 const botOptions = {
-  mode: "LIVE",
+  mode: "LIVE", // will block requests. Use "DRY_RUN" to log only
   // configured with a list of bots to allow from
   // https://arcjet.com/bot-list
   allow: [], // prevents bots from submitting the form

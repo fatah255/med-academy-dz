@@ -24,7 +24,9 @@ model User {
   updatedAt     DateTime
   sessions      Session[]
   accounts      Account[]
-
+  level         CourseLevel @default(FIRST_YEAR)
+  courses Course[]
+  isAdmin      Boolean @default(false)
   @@unique([email])
   @@map("user")
 }
@@ -60,6 +62,7 @@ model Account {
   createdAt             DateTime
   updatedAt             DateTime
 
+
   @@map("account")
 }
 
@@ -72,4 +75,40 @@ model Verification {
   updatedAt  DateTime?
 
   @@map("verification")
+}
+
+
+model Course {
+  id String @id @default(uuid())
+  title String
+  description String
+  fileKey String
+  price Int
+  duration Int
+  level CourseLevel @default(FIRST_YEAR)
+  category String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  smallDescription String
+  slug String @unique
+  status CourseStatus @default(DRAFT)
+
+
+  User User[]
+}
+
+enum CourseLevel {
+  FIRST_YEAR
+  SECOND_YEAR
+  THIRD_YEAR
+  FOURTH_YEAR
+  FIFTH_YEAR
+  SIXTH_YEAR
+ 
+}
+
+enum CourseStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
 }

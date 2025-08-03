@@ -51,7 +51,7 @@ export const auth = betterAuth({
         </div>
         <div style="text-align: center; font-size: 12px; color: #999999; margin-top: 30px;">
           &copy; 2025 Med Academy DZ. All rights reserved.<br>
-          Contact us: <a href="mailto:support@medacademy.dz" style="color: #007b83; text-decoration: none;">a.lebkara@esi-sba.dz</a>
+          Contact us: <a href="mailto:support@medacademy.dz" style="color: #007b83; text-decoration: none;">na_lebkara@esi.dz</a>
         </div>
       </div>
     </body>
