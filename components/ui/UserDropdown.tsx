@@ -28,6 +28,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { authClient } from "@/lib/auth-client";
+import { useSession } from "@/lib/auth-client";
 
 interface iAppProps {
   name: string;
@@ -36,6 +37,7 @@ interface iAppProps {
 }
 
 export function UserDropdown({ name, email, image }: iAppProps) {
+  const { data: session } = useSession();
   const router = useRouter();
   const signOut = async () => {
     await authClient.signOut({
@@ -55,8 +57,18 @@ export function UserDropdown({ name, email, image }: iAppProps) {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="h-auto p-0 hover:bg-transparent">
           <Avatar>
-            <AvatarImage src={image} alt="Profile image" />
-            <AvatarFallback>{name.charAt(0).toUpperCase()}</AvatarFallback>
+            <AvatarImage
+              src={
+                session?.user.image ??
+                `https://avatar.vercel.sh/${session?.user.name}`
+              }
+              alt="Profile image"
+            />
+            <AvatarFallback>
+              {session?.user.name && session?.user.name.length > 0
+                ? session?.user.name.charAt(0).toUpperCase()
+                : session?.user.email.charAt(0).toUpperCase()}
+            </AvatarFallback>
           </Avatar>
           <ChevronDownIcon
             size={16}
@@ -65,7 +77,7 @@ export function UserDropdown({ name, email, image }: iAppProps) {
           />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="max-w-64">
+      <DropdownMenuContent align="end" className="min-w-52">
         <DropdownMenuLabel className="flex min-w-0 flex-col">
           <span className="text-foreground truncate text-sm font-medium">
             {name}

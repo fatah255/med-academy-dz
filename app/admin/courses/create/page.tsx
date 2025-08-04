@@ -9,12 +9,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import slugify from "slugify";
-import { ArrowLeft, SparklesIcon } from "lucide-react";
+import { ArrowLeft, PlusIcon, SparklesIcon } from "lucide-react";
 import Link from "next/link";
 import { modulesByYear } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, useWatch } from "react-hook-form";
-import { courseLevels } from "@/lib/zodSchemas";
+import { courseLevels, courseStatus } from "@/lib/zodSchemas";
 import { useEffect, useState } from "react";
 
 import { Check, ChevronsUpDown } from "lucide-react";
@@ -47,6 +47,15 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import dynamic from "next/dynamic";
+import Uploader from "@/components/file-uploader/Uploader";
+
+const RichTextEditor = dynamic(
+  () => import("@/components/rich-text-editor/Editor"),
+  {
+    ssr: false,
+  }
+);
 
 const page = () => {
   const form = useForm<courseSchemaType>({
@@ -104,12 +113,7 @@ const page = () => {
         </CardHeader>
         <CardContent>
           <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(onSubmit, (errors) =>
-                console.log("❌ Validation Errors:", errors)
-              )}
-              className="space-y-6"
-            >
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <FormField
                 control={form.control}
                 name="title"
@@ -179,7 +183,7 @@ const page = () => {
                     <FormItem className="w-full">
                       <FormLabel>Description</FormLabel>
                       <FormControl>
-                        <Textarea {...field} placeholder="Description" />
+                        <RichTextEditor field={field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -194,7 +198,8 @@ const page = () => {
                     <FormItem className="w-full">
                       <FormLabel>File Key</FormLabel>
                       <FormControl>
-                        <Textarea {...field} placeholder="thumbnail url" />
+                        {/* <Textarea {...field} placeholder="thumbnail url" /> */}
+                        <Uploader />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -337,7 +342,114 @@ const page = () => {
                   )}
                 />
               </div>
-              <Button type="submit">submit</Button>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <FormField
+                  control={form.control}
+                  name="duration"
+                  render={({ field }) => {
+                    return (
+                      <FormItem className="w-full">
+                        <FormLabel>Duration (in hours)</FormLabel>
+                        <FormControl>
+                          <Input
+                            {...field}
+                            type="number"
+                            placeholder="Duration"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    );
+                  }}
+                />
+                <FormField
+                  control={form.control}
+                  name="price"
+                  render={({ field }) => {
+                    return (
+                      <FormItem className="w-full">
+                        <FormLabel>Price (DZD) </FormLabel>
+                        <FormControl>
+                          <Input {...field} type="number" placeholder="Price" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    );
+                  }}
+                />
+              </div>
+
+              <FormField
+                control={form.control}
+                name="status"
+                render={({ field }) => (
+                  <FormItem className="flex flex-col">
+                    <FormLabel>Status</FormLabel>
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+                          <Button
+                            variant="outline"
+                            role="combobox"
+                            className={cn(
+                              "w-[200px] justify-between",
+                              !field.value && "text-muted-foreground"
+                            )}
+                          >
+                            {field.value
+                              ? courseStatus.find(
+                                  (status) => status === field.value
+                                )
+                              : "Select status"}
+                            <ChevronsUpDown className="opacity-50" />
+                          </Button>
+                        </FormControl>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-[200px] p-0">
+                        <Command>
+                          <CommandInput
+                            placeholder="Select status..."
+                            className="h-9"
+                          />
+                          <CommandList>
+                            <CommandEmpty>No status found.</CommandEmpty>
+                            <CommandGroup>
+                              {courseStatus.map((status) => (
+                                <CommandItem
+                                  value={status}
+                                  key={status}
+                                  onSelect={() => {
+                                    form.setValue("status", status);
+                                  }}
+                                >
+                                  {status}
+                                  <Check
+                                    className={cn(
+                                      "ml-auto",
+                                      status === field.value
+                                        ? "opacity-100"
+                                        : "opacity-0"
+                                    )}
+                                  />
+                                </CommandItem>
+                              ))}
+                            </CommandGroup>
+                          </CommandList>
+                        </Command>
+                      </PopoverContent>
+                    </Popover>
+                    <FormDescription>
+                      Select the status for this course.
+                    </FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <Button type="submit">
+                <PlusIcon className="mr-2 size-4" />
+                Create Course
+              </Button>
             </form>
           </Form>
         </CardContent>
