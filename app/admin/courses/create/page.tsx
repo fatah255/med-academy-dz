@@ -57,7 +57,7 @@ const page = () => {
       slug: "",
       status: "DRAFT",
       level: "FIRST_YEAR",
-      category: "",
+      category: "Anatomie",
       smallDescription: "",
       fileKey: "",
       price: 0,
@@ -104,7 +104,12 @@ const page = () => {
         </CardHeader>
         <CardContent>
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <form
+              onSubmit={form.handleSubmit(onSubmit, (errors) =>
+                console.log("❌ Validation Errors:", errors)
+              )}
+              className="space-y-6"
+            >
               <FormField
                 control={form.control}
                 name="title"
@@ -196,7 +201,7 @@ const page = () => {
                   );
                 }}
               />
-              <div className="grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <FormField
                   control={form.control}
                   name="level"
@@ -264,10 +269,11 @@ const page = () => {
                   )}
                 />
                 <FormField
+                  className="mt-2 w-fit"
                   control={form.control}
                   name="category"
                   render={({ field }) => (
-                    <FormItem className="flex flex-col">
+                    <FormItem className="flex flex-col mt-1">
                       <FormLabel>{categoryLabel}</FormLabel>
                       <Popover>
                         <PopoverTrigger asChild>
@@ -276,7 +282,7 @@ const page = () => {
                               variant="outline"
                               role="combobox"
                               className={cn(
-                                "w-[200px] justify-between",
+                                "w-fit justify-between",
                                 !field.value && "text-muted-foreground"
                               )}
                             >
@@ -331,6 +337,7 @@ const page = () => {
                   )}
                 />
               </div>
+              <Button type="submit">submit</Button>
             </form>
           </Form>
         </CardContent>
