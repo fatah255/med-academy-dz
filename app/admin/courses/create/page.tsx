@@ -9,13 +9,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import slugify from "slugify";
-import { ArrowLeft, PlusIcon, SparklesIcon } from "lucide-react";
+import { ArrowLeft, Loader2, PlusIcon, SparklesIcon } from "lucide-react";
 import Link from "next/link";
 import { modulesByYear } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, useWatch } from "react-hook-form";
 import { courseLevels, courseStatus } from "@/lib/zodSchemas";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useTransition } from "react";
 
 import { Check, ChevronsUpDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -49,6 +49,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import dynamic from "next/dynamic";
 import Uploader from "@/components/file-uploader/Uploader";
+import { tryCatch } from "@/hooks/try-catch";
+import { createCourse } from "./actions";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 const RichTextEditor = dynamic(
   () => import("@/components/rich-text-editor/Editor"),
@@ -58,6 +62,8 @@ const RichTextEditor = dynamic(
 );
 
 const page = () => {
+  const [isPending, startTransition] = useTransition();
+  const router = useRouter();
   const form = useForm<courseSchemaType>({
     resolver: zodResolver(courseSchema),
     defaultValues: {
@@ -87,7 +93,20 @@ const page = () => {
   }, [selectedYear]);
 
   function onSubmit(values: courseSchemaType) {
-    console.log(values);
+    startTransition(async () => {
+      const { data, error } = await tryCatch(createCourse(values));
+
+      if (error) {
+        toast.error("Something went wrong while creating the course");
+      }
+      if (data.status === "success") {
+        toast.success(data.message);
+        form.reset();
+        router.push("/admin/courses");
+      } else {
+        toast.error(data.message);
+      }
+    });
   }
 
   return (
@@ -196,10 +215,12 @@ const page = () => {
                 render={({ field }) => {
                   return (
                     <FormItem className="w-full">
-                      <FormLabel>File Key</FormLabel>
+                      <FormLabel>Cover</FormLabel>
                       <FormControl>
-                        {/* <Textarea {...field} placeholder="thumbnail url" /> */}
-                        <Uploader />
+                        <Uploader
+                          onChange={field.onChange}
+                          value={field.value}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -225,9 +246,22 @@ const page = () => {
                               )}
                             >
                               {field.value
-                                ? courseLevels.find(
-                                    (level) => level === field.value
-                                  )
+                                .split("_")
+                                .map(
+                                  (word) =>
+                                    word.charAt(0).toUpperCase() +
+                                    word.slice(1).toLowerCase()
+                                )
+                                .join(" ")
+                                ? courseLevels
+                                    .find((level) => level === field.value)
+                                    ?.split("_")
+                                    .map(
+                                      (word) =>
+                                        word.charAt(0).toUpperCase() +
+                                        word.slice(1).toLowerCase()
+                                    )
+                                    .join(" ")
                                 : "Select year"}
                               <ChevronsUpDown className="opacity-50" />
                             </Button>
@@ -250,7 +284,14 @@ const page = () => {
                                       form.setValue("level", year);
                                     }}
                                   >
-                                    {year}
+                                    {year
+                                      .split("_")
+                                      .map(
+                                        (word) =>
+                                          word.charAt(0).toUpperCase() +
+                                          word.slice(1).toLowerCase()
+                                      )
+                                      .join(" ")}
                                     <Check
                                       className={cn(
                                         "ml-auto",
@@ -446,9 +487,18 @@ const page = () => {
                 )}
               />
 
-              <Button type="submit">
-                <PlusIcon className="mr-2 size-4" />
-                Create Course
+              <Button type="submit" disabled={isPending} className="w-full">
+                {isPending ? (
+                  <>
+                    Creating...
+                    <Loader2 className="animate-spin size-4 ml-2" />
+                  </>
+                ) : (
+                  <>
+                    <PlusIcon className="mr-2 size-4" />
+                    Create Course
+                  </>
+                )}
               </Button>
             </form>
           </Form>

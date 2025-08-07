@@ -15,7 +15,7 @@ datasource db {
 }
 
 model User {
-  id            String    @id
+  id            String      @id
   name          String
   email         String
   emailVerified Boolean
@@ -25,8 +25,13 @@ model User {
   sessions      Session[]
   accounts      Account[]
   level         CourseLevel @default(FIRST_YEAR)
-  courses Course[]
-  isAdmin      Boolean @default(false)
+  courses       Course[]
+  isAdmin       Boolean     @default(false)
+  role          String?
+  banned        Boolean?
+  banReason     String?
+  banExpires    DateTime?
+
   @@unique([email])
   @@map("user")
 }
@@ -41,6 +46,8 @@ model Session {
   userAgent String?
   userId    String
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  impersonatedBy String?
 
   @@unique([token])
   @@map("session")
@@ -62,7 +69,6 @@ model Account {
   createdAt             DateTime
   updatedAt             DateTime
 
-
   @@map("account")
 }
 
@@ -77,24 +83,23 @@ model Verification {
   @@map("verification")
 }
 
-
 model Course {
-  id String @id @default(uuid())
-  title String
-  description String
-  fileKey String
-  price Int
-  duration Int
-  level CourseLevel @default(FIRST_YEAR)
-  category String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id               String       @id @default(uuid())
+  title            String
+  description      String
+  fileKey          String
+  price            Int
+  duration         Int
+  level            CourseLevel  @default(FIRST_YEAR)
+  category         String
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @updatedAt
   smallDescription String
-  slug String @unique
-  status CourseStatus @default(DRAFT)
+  slug             String       @unique
+  status           CourseStatus @default(DRAFT)
 
-
-  User User[]
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
 }
 
 enum CourseLevel {
@@ -104,7 +109,6 @@ enum CourseLevel {
   FOURTH_YEAR
   FIFTH_YEAR
   SIXTH_YEAR
- 
 }
 
 enum CourseStatus {
