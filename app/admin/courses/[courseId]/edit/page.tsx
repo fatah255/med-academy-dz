@@ -49,7 +49,7 @@ const page = async ({ params }: { params: Params }) => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <CourseStructure />
+              <CourseStructure course={data} />
             </CardContent>
           </Card>
         </TabsContent>

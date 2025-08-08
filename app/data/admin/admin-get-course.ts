@@ -21,6 +21,23 @@ export const adminGetCourse = async (id: string) => {
       description: true,
       price: true,
       status: true,
+      chapter: {
+        select: {
+          id: true,
+          title: true,
+          position: true,
+          lesson: {
+            select: {
+              id: true,
+              title: true,
+              position: true,
+              description: true,
+              thumbnailKey: true,
+              videoKey: true,
+            },
+          },
+        },
+      },
     },
   });
 
