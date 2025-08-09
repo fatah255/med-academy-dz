@@ -142,6 +142,7 @@ model Lesson {
   position    Int
   thumbnailKey   String?
   videoKey    String?   
+  
 
   chapterId   String
   chapter     Chapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)

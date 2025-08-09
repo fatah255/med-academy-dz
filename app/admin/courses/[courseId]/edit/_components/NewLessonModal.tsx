@@ -17,16 +17,27 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { chapterSchema, chapterSchemaType } from "@/lib/zodSchemas";
+import {
+  chapterSchema,
+  chapterSchemaType,
+  lessonSchema,
+  lessonSchemaType,
+} from "@/lib/zodSchemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { PlusIcon } from "lucide-react";
 import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
-import { createChapter } from "../actions";
+import { createChapter, createLesson } from "../actions";
 import { tryCatch } from "@/hooks/try-catch";
 import { toast } from "sonner";
 
-const NewChapterModal = ({ courseId }: { courseId: string }) => {
+const NewLessonModal = ({
+  courseId,
+  chapterId,
+}: {
+  courseId: string;
+  chapterId: string;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
 
@@ -34,9 +45,9 @@ const NewChapterModal = ({ courseId }: { courseId: string }) => {
     setIsOpen(open);
   }
 
-  async function handleSubmit(values: chapterSchemaType) {
+  async function handleSubmit(values: lessonSchemaType) {
     startTransition(async () => {
-      const { data: result, error } = await tryCatch(createChapter(values));
+      const { data: result, error } = await tryCatch(createLesson(values));
       if (error) {
         toast.error("Something went wrong");
         return;
@@ -51,26 +62,27 @@ const NewChapterModal = ({ courseId }: { courseId: string }) => {
     });
   }
 
-  const form = useForm<chapterSchemaType>({
-    resolver: zodResolver(chapterSchema),
+  const form = useForm<lessonSchemaType>({
+    resolver: zodResolver(lessonSchema),
     defaultValues: {
       name: "",
       courseId,
+      chapterId,
     },
   });
 
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
-        <Button variant="outline" size="sm">
-          <PlusIcon className="size-4" /> New Chapter
+        <Button variant="outline" className="w-full justify-center gap-1">
+          <PlusIcon className="size-4" /> New Lesson
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Create New Chapter</DialogTitle>
+          <DialogTitle>Create New Lesson</DialogTitle>
           <DialogDescription>
-            Choose a name for your new chapter
+            Choose a name for your new lesson
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
@@ -85,7 +97,7 @@ const NewChapterModal = ({ courseId }: { courseId: string }) => {
                 <FormItem>
                   <FormLabel>Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Chapter Name" {...field} />
+                    <Input placeholder="Lesson Name" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -99,7 +111,7 @@ const NewChapterModal = ({ courseId }: { courseId: string }) => {
                 variant="default"
                 className="w-full"
               >
-                {isPending ? "Creating..." : "Create Chapter"}
+                {isPending ? "Creating..." : "Create Lesson"}
               </Button>
             </DialogFooter>
           </form>
@@ -109,4 +121,4 @@ const NewChapterModal = ({ courseId }: { courseId: string }) => {
   );
 };
 
-export default NewChapterModal;
+export default NewLessonModal;
