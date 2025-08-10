@@ -150,7 +150,9 @@ const LessonForm = ({ data, chapterId, courseId }: LessonFormProps) => {
                   </FormItem>
                 )}
               />
-              <Button type="submit">Save Lesson</Button>
+              <Button type="submit">
+                {isPending ? "Saving..." : "Save Lesson"}
+              </Button>
             </form>
           </Form>
         </CardContent>

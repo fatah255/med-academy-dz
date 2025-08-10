@@ -53,6 +53,7 @@ import { tryCatch } from "@/hooks/try-catch";
 import { createCourse } from "./actions";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { useConfetti } from "@/hooks/use-confetti";
 
 const RichTextEditor = dynamic(
   () => import("@/components/rich-text-editor/Editor"),
@@ -101,6 +102,7 @@ const page = () => {
       }
       if (data.status === "success") {
         toast.success(data.message);
+        useConfetti();
         form.reset();
         router.push("/admin/courses");
       } else {

@@ -22,6 +22,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const CourseCard = ({ course }: { course: AdminCourseType }) => {
   const level = course.level
@@ -109,3 +110,17 @@ const CourseCard = ({ course }: { course: AdminCourseType }) => {
 };
 
 export default CourseCard;
+
+export async function CourseCardSkeleton() {
+  return (
+    <Card className="group relative py-0 gap-0">
+      <div className="absolute top-2 right-2 z-10 flex items-center justify-center">
+        <Skeleton className="h-6 w-16 rounded-full" />
+        <Skeleton className="size-8 rounded-md" />
+      </div>
+      <div className="w-full h-fit relative">
+        <Skeleton className="w-full rounded-t-lg aspect-video" />
+      </div>
+    </Card>
+  );
+}
