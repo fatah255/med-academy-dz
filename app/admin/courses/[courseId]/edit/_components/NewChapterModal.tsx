@@ -31,6 +31,9 @@ const NewChapterModal = ({ courseId }: { courseId: string }) => {
   const [isPending, startTransition] = useTransition();
 
   function handleOpenChange(open: boolean) {
+    if (!open) {
+      form.reset();
+    }
     setIsOpen(open);
   }
 

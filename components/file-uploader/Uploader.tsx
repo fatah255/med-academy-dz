@@ -29,9 +29,10 @@ interface FileState {
 interface iAppProps {
   value?: string;
   onChange?: (value: string) => void;
+  fileType: "image" | "video";
 }
 
-const Uploader = ({ value, onChange }: iAppProps) => {
+const Uploader = ({ value, onChange, fileType }: iAppProps) => {
   const fileUrl = useConstructUrl(value || "");
   const [fileState, setFileState] = useState<FileState>({
     id: null,
@@ -40,11 +41,11 @@ const Uploader = ({ value, onChange }: iAppProps) => {
     isDeleting: false,
     progress: 0,
     error: false,
-    fileType: "image",
-    objectUrl: fileUrl,
+    fileType,
+    objectUrl: value ? fileUrl : undefined,
   });
 
-  const uploadFile = async (file: File) => {
+  const uploadFile = useCallback(async (file: File) => {
     setFileState((prev) => prev && { ...prev, uploading: true, progress: 0 });
 
     try {
@@ -57,7 +58,7 @@ const Uploader = ({ value, onChange }: iAppProps) => {
           fileName: file.name,
           contentType: file.type,
           size: file.size,
-          isImage: true,
+          isImage: fileType === "image",
         }),
       });
 
@@ -110,7 +111,7 @@ const Uploader = ({ value, onChange }: iAppProps) => {
         (prev) => prev && { ...prev, uploading: false, error: true }
       );
     }
-  };
+  }, []);
 
   const onDrop = useCallback(
     (acceptedFiles: File[]) => {
@@ -130,7 +131,7 @@ const Uploader = ({ value, onChange }: iAppProps) => {
         progress: 0,
         error: false,
         objectUrl,
-        fileType: "image",
+        fileType,
       };
 
       setFileState(newFile);
@@ -169,7 +170,7 @@ const Uploader = ({ value, onChange }: iAppProps) => {
         progress: 0,
         error: false,
         objectUrl: undefined,
-        fileType: "image",
+        fileType,
       }));
       toast.success("File deleted successfully");
     } catch (error) {
@@ -192,10 +193,10 @@ const Uploader = ({ value, onChange }: iAppProps) => {
     onDrop,
     disabled:
       fileState?.uploading || fileState?.isDeleting || !!fileState?.objectUrl,
-    accept: { "image/*": [] },
+    accept: fileType === "video" ? { "video/*": [] } : { "image/*": [] },
     maxFiles: 1,
     multiple: false,
-    maxSize: 5 * 1024 * 1024, // 5 MB
+    maxSize: fileType === "video" ? 1024 * 1024 * 1024 : 5 * 1024 * 1024, // 5 MB for images, 1GB for videos
     onDropRejected: (rejectedFiles) => {
       rejectedFiles.forEach(({ errors }) => {
         errors.forEach((e) => {
@@ -234,6 +235,7 @@ const Uploader = ({ value, onChange }: iAppProps) => {
             isDeleting={fileState.isDeleting}
             handleRemoveFile={handleRemoveFile}
             previewUrl={fileState.objectUrl}
+            fileType={fileState.fileType}
           />
         ) : (
           <RenderEmptyState isDragActive={isDragActive} />

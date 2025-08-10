@@ -218,6 +218,7 @@ const page = () => {
                       <FormLabel>Cover</FormLabel>
                       <FormControl>
                         <Uploader
+                          fileType="image"
                           onChange={field.onChange}
                           value={field.value}
                         />

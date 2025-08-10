@@ -42,6 +42,9 @@ const NewLessonModal = ({
   const [isPending, startTransition] = useTransition();
 
   function handleOpenChange(open: boolean) {
+    if (!open) {
+      form.reset();
+    }
     setIsOpen(open);
   }
 
