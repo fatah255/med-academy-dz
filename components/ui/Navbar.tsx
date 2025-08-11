@@ -37,7 +37,6 @@ export function Navbar() {
             ))}
           </div>
           <div className="flex items-center space-x-4">
-            <ThemeToggle />
             {isPending ? null : session ? (
               <UserDropdown
                 name={session.user.name}
@@ -59,6 +58,7 @@ export function Navbar() {
             )}
           </div>
         </nav>
+        <ThemeToggle />
       </div>
     </header>
   );

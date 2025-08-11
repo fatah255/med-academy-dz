@@ -30,16 +30,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <NavbarClient />
-          {children}
-          <Toaster />
-        </ThemeProvider>
+        <main className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <NavbarClient />
+            {children}
+            <Toaster />
+          </ThemeProvider>
+        </main>
       </body>
     </html>
   );

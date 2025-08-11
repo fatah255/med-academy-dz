@@ -97,8 +97,9 @@ model Course {
   smallDescription String
   slug             String       @unique
   status           CourseStatus @default(DRAFT)
+  qcm             Qcm[]
 
-  chapter Chapter[] 
+  chapters Chapter[] 
 
   userId String
   user   User   @relation(fields: [userId], references: [id])
@@ -133,6 +134,8 @@ model Chapter {
 
   courseId    String
   course      Course  @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  
+
 }
 
 model Lesson {
@@ -162,6 +165,8 @@ model Qcm {
   answerD     String
   correctAnswer String
   position    Int
+  courseId    String
+  course      Course  @relation(fields: [courseId], references: [id], onDelete: Cascade)
 
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt

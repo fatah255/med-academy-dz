@@ -44,9 +44,8 @@ export default function Home() {
             Elevate Your Learning Experience
           </h1>
           <p className="max-w-[700px] text-muted-foreground md:text-xl">
-            Discover a new way to learn to learn with our modern, interactive
-            learning management system. Access high-quality courses anytime,
-            anywhere
+            Discover a new way to learn with our modern, interactive learning
+            management system. Access high-quality courses anytime, anywhere
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             {!session && (
