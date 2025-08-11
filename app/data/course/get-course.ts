@@ -15,7 +15,7 @@ export const getCourse = async (slug: string) => {
       fileKey: true,
       slug: true,
       price: true,
-      chapter: {
+      chapters: {
         select: {
           id: true,
           title: true,

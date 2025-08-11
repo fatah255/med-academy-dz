@@ -5,8 +5,35 @@ import { env } from "./env";
 import { emailOTP } from "better-auth/plugins";
 import { resend } from "./resend";
 import { admin } from "better-auth/plugins";
+import { multiSession } from "better-auth/plugins";
+import { createAuthMiddleware } from "better-auth/api";
 
 export const auth = betterAuth({
+  hooks: {
+    after: createAuthMiddleware(async (ctx) => {
+      // Runs after each auth endpoint; if a new session was created, this is set
+      const ns = ctx.context.newSession;
+      if (!ns) return;
+
+      // newSession is the created session; shape varies by endpoint,
+      // so grab the session id defensively
+      const currentSessionId =
+        // some endpoints expose ns.session.id
+        // and others expose ns.id directly
+        // @ts-expect-error: narrow at runtime
+        (ns.session?.id as string) ?? (ns.id as string);
+      const userId =
+        // @ts-expect-error: narrow at runtime
+        (ns.user?.id as string) ?? (ns.userId as string);
+
+      if (!currentSessionId || !userId) return;
+
+      // keep the new one, delete everything else
+      await prisma.session.deleteMany({
+        where: { userId, id: { not: currentSessionId } },
+      });
+    }),
+  },
   database: prismaAdapter(prisma, {
     provider: "postgresql", // or "mysql", "postgresql", ...etc
   }),
@@ -21,6 +48,7 @@ export const auth = betterAuth({
     },
   },
   plugins: [
+    multiSession({ maximumSessions: 1 }),
     admin(),
     emailOTP({
       async sendVerificationOTP({ email, otp, type }) {
