@@ -60,7 +60,7 @@ interface SortableItemProps {
 const CourseStructure = ({ course }: CourseStructureProps) => {
   useEffect(() => {
     setItems((prev) => {
-      const newItems = course.chapter.map((chapter) => ({
+      const newItems = course.chapters.map((chapter) => ({
         id: chapter.id,
         title: chapter.title,
         order: chapter.position,
@@ -103,7 +103,7 @@ const CourseStructure = ({ course }: CourseStructureProps) => {
   }
 
   const initialItems =
-    course.chapter.map((chapter) => ({
+    course.chapters.map((chapter) => ({
       id: chapter.id,
       title: chapter.title,
       order: chapter.position,

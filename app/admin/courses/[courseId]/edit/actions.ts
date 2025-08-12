@@ -390,13 +390,13 @@ export const deleteChapter = async (
     const courseWithChapters = await prisma.course.findUnique({
       where: { id: courseId },
       select: {
-        chapter: {
+        chapters: {
           orderBy: { position: "asc" },
           select: { id: true, position: true },
         },
       },
     });
-    const chapters = courseWithChapters?.chapter || [];
+    const chapters = courseWithChapters?.chapters || [];
 
     if (!chapters || chapters.length === 0) {
       return {
