@@ -23,6 +23,9 @@ importers:
       '@aws-sdk/s3-request-presigner':
         specifier: ^3.859.0
         version: 3.859.0
+      '@chargily/chargily-pay':
+        specifier: ^2.1.0
+        version: 2.1.0
       '@dnd-kit/core':
         specifier: ^6.3.1
         version: 6.3.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -474,6 +477,9 @@ packages:
 
   '@bufbuild/protobuf@1.10.1':
     resolution: {integrity: sha512-wJ8ReQbHxsAfXhrf9ixl0aYbZorRuOWpBNzm8pL8ftmSxQx/wnJD5Eg861NwJU/czy2VXFIebCeZnZrI9rktIQ==}
+
+  '@chargily/chargily-pay@2.1.0':
+    resolution: {integrity: sha512-BMmvgowoZN2ETqNcSTle7VIVX4wHYvxTzk1Cu3o1TV+1Lj2P1hznIo6dgj7Die9ALUsBAnSR+SjuhYsrN1LlPw==}
 
   '@connectrpc/connect-node@1.6.1':
     resolution: {integrity: sha512-DxcD1wsF/aX9GegjAtl7VbpiZNjVJozy87VbaFoN6AF0Ln1Q757r5dgV59Gz0wmlk5f17txUsrEr1f2inlnnAg==}
@@ -4567,6 +4573,8 @@ snapshots:
   '@better-fetch/fetch@1.1.18': {}
 
   '@bufbuild/protobuf@1.10.1': {}
+
+  '@chargily/chargily-pay@2.1.0': {}
 
   '@connectrpc/connect-node@1.6.1(@bufbuild/protobuf@1.10.1)(@connectrpc/connect@1.6.1(@bufbuild/protobuf@1.10.1))':
     dependencies:

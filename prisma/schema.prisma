@@ -169,7 +169,8 @@ model Qcm {
 model Enrollment {
   id        String   @id @default(uuid())
   amount    Int
-  status    EnrollmentStatus @default(PENDING)
+  status    String   @default("PENDING")
+  transactionId String? @unique 
   userId    String
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   courseId  String
@@ -181,8 +182,3 @@ model Enrollment {
   @@map("enrollment")
 } 
 
-enum  EnrollmentStatus {
-  PENDING
-  COMPLETED
-  FAILED
-}

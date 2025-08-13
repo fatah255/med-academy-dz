@@ -23,5 +23,5 @@ export async function userIsEnrolled(courseId: string) {
     },
   });
 
-  return enrollment ? enrollment.status === "COMPLETED" : false;
+  return enrollment ? enrollment.status === "PAID" : false;
 }

@@ -30,6 +30,7 @@ import {
 import { Button, buttonVariants } from "@/components/ui/button";
 import { userIsEnrolled } from "@/app/data/user/user-is-enrolled";
 import Link from "next/link";
+import EnrollementButton from "./EnrollementButton";
 
 type Params = Promise<{
   slug: string;
@@ -40,6 +41,7 @@ const page = async ({ params }: { params: Params }) => {
   const course = await getCourse(slug);
   const thumbnailUrl = useConstructUrl(course.fileKey);
   const isEnrolled = await userIsEnrolled(course.id);
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-9 mt-5">
       <div className="order-1 lg:col-span-2">
@@ -268,9 +270,7 @@ const page = async ({ params }: { params: Params }) => {
                 </>
               ) : (
                 <>
-                  <Button className="w-full font-bold text-lg cursor-pointer">
-                    Enroll Now!{" "}
-                  </Button>
+                  <EnrollementButton courseId={course.id} />
                 </>
               )}
             </CardContent>
