@@ -27,7 +27,9 @@ import {
   IconSchool,
   IconWriting,
 } from "@tabler/icons-react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { userIsEnrolled } from "@/app/data/user/user-is-enrolled";
+import Link from "next/link";
 
 type Params = Promise<{
   slug: string;
@@ -37,6 +39,7 @@ const page = async ({ params }: { params: Params }) => {
   const { slug } = await params;
   const course = await getCourse(slug);
   const thumbnailUrl = useConstructUrl(course.fileKey);
+  const isEnrolled = await userIsEnrolled(course.id);
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-9 mt-5">
       <div className="order-1 lg:col-span-2">
@@ -252,9 +255,24 @@ const page = async ({ params }: { params: Params }) => {
                   </li>
                 </ul>
               </div>
-              <Button className="w-full font-bold text-lg cursor-pointer">
-                Enroll Now!{" "}
-              </Button>
+              {isEnrolled ? (
+                <>
+                  <Link
+                    href={`/dashboard`}
+                    className={buttonVariants({
+                      className: "w-full font-bold text-lg cursor-pointer",
+                    })}
+                  >
+                    Study Now !
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Button className="w-full font-bold text-lg cursor-pointer">
+                    Enroll Now!{" "}
+                  </Button>
+                </>
+              )}
             </CardContent>
           </Card>
         </div>

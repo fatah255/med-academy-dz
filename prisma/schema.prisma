@@ -26,6 +26,7 @@ model User {
   accounts      Account[]
   level         CourseLevel @default(FIRST_YEAR)
   courses       Course[]
+  enrollments   Enrollment[]
   isAdmin       Boolean     @default(false)
   role          String?
   banned        Boolean?
@@ -100,6 +101,7 @@ model Course {
   qcm              Qcm[]
 
   chapters Chapter[]
+  enrollments Enrollment[]
   userId   String
   user     User      @relation(fields: [userId], references: [id])
 }
@@ -162,4 +164,25 @@ model Qcm {
   updatedAt DateTime @updatedAt
 
   @@map("qcm")
+}
+
+model Enrollment {
+  id        String   @id @default(uuid())
+  amount    Int
+  status    EnrollmentStatus @default(PENDING)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId  String
+  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, courseId])
+  @@map("enrollment")
+} 
+
+enum  EnrollmentStatus {
+  PENDING
+  COMPLETED
+  FAILED
 }
