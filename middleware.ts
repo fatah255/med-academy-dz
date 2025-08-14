@@ -36,7 +36,11 @@ const aj = arcjet({
 });
 // Pass any existing middleware with the optional existingMiddleware prop
 export default createMiddleware(aj, async (req: NextRequest) => {
-  if (req.nextUrl.pathname.startsWith("/admin")) {
+  if (
+    req.nextUrl.pathname.startsWith("/admin") ||
+    req.nextUrl.pathname.startsWith("/settings") ||
+    req.nextUrl.pathname.startsWith("/dashboard")
+  ) {
     return middleware(req);
   }
 

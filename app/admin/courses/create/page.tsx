@@ -100,13 +100,13 @@ const page = () => {
       if (error) {
         toast.error("Something went wrong while creating the course");
       }
-      if (data.status === "success") {
+      if (data?.status === "success") {
         toast.success(data.message);
         useConfetti();
         form.reset();
         router.push("/admin/courses");
       } else {
-        toast.error(data.message);
+        toast.error(data?.message);
       }
     });
   }

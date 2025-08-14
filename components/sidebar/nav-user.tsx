@@ -6,6 +6,7 @@ import {
   IconDotsVertical,
   IconLogout,
   IconNotification,
+  IconSettings,
   IconUserCircle,
 } from "@tabler/icons-react";
 import useSignOut from "@/hooks/useSignOut";
@@ -127,6 +128,7 @@ export function NavUser() {
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
+
             <DropdownMenuItem onClick={signOut}>
               <IconLogout />
               Log out

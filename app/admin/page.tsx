@@ -1,16 +1,25 @@
-import { ChartAreaInteractive } from "@/components/sidebar/chart-area-interactive";
-import { DataTable } from "@/components/sidebar/data-table";
 import { SectionCards } from "@/components/sidebar/section-cards";
-import data from "./data.json";
+import { EnrollmentsChart } from "./_components/chart";
+import { ChartPieSeparatorNone } from "./_components/PieChart";
+import {
+  countTotalUsers,
+  countUsersWithAtLeastOnePaidEnrollment,
+  getCategoryEnrollments,
+} from "./actions";
 
-const AdminPage = () => {
+const AdminPage = async () => {
+  const data = await getCategoryEnrollments();
+  console.log(data);
+  const total = await countTotalUsers();
+  const enrolled = await countUsersWithAtLeastOnePaidEnrollment();
+  const notEnrolled = total - enrolled;
   return (
     <>
       <SectionCards />
       <div className="px-4 lg:px-6">
-        <ChartAreaInteractive />
+        <EnrollmentsChart data={data} />
+        <ChartPieSeparatorNone enrolled={enrolled} notEnrolled={notEnrolled} />
       </div>
-      <DataTable data={data} />
     </>
   );
 };

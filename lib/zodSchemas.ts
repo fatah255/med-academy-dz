@@ -55,6 +55,11 @@ export const lessonSchema = z.object({
   videoKey: z.string().optional(),
 });
 
+export const settingsSchema = z.object({
+  year: z.enum(courseLevels),
+});
+
 export type courseSchemaType = z.infer<typeof courseSchema>;
 export type chapterSchemaType = z.infer<typeof chapterSchema>;
 export type lessonSchemaType = z.infer<typeof lessonSchema>;
+export type settingsSchemaType = z.infer<typeof settingsSchema>;

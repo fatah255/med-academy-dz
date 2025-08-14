@@ -4,7 +4,16 @@ import PublicCourseCard, {
 } from "../(landing-page)/_components/PublicCourseCard";
 import { getAllCourses } from "../data/course/get-all-courses";
 
-export default function PublicCoursesroute() {
+import { getLevel } from "./actions";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
+
+export default async function PublicCoursesroute() {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+  const isAdmin = session?.user.role === "admin";
+  const userId = session?.user.id;
   return (
     <div className="mt-5">
       <div className="flex flex-col space-y-2 mb-10">
@@ -16,19 +25,30 @@ export default function PublicCoursesroute() {
           learning goals.
         </p>
         <Suspense fallback={<RenderCoursesSkeleton />}>
-          <RenderCourses />
+          <RenderCourses isAdmin={isAdmin} userId={userId as string} />
         </Suspense>
       </div>
     </div>
   );
 }
 
-async function RenderCourses() {
+async function RenderCourses({
+  isAdmin,
+  userId,
+}: {
+  isAdmin: boolean;
+  userId: string;
+}) {
   const courses = await getAllCourses();
+  const level = await getLevel(userId);
+  const coursesToRender =
+    isAdmin || !userId
+      ? courses
+      : courses.filter((course) => course.level === level);
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-3 gap-9 m-5">
-      {courses.map((course) => (
+      {coursesToRender.map((course) => (
         <PublicCourseCard key={course.id} course={course} />
       ))}
     </div>

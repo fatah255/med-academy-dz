@@ -29,6 +29,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { authClient } from "@/lib/auth-client";
 import { useSession } from "@/lib/auth-client";
+import { IconSettings } from "@tabler/icons-react";
 
 interface iAppProps {
   name: string;
@@ -113,6 +114,12 @@ export function UserDropdown({ name, email, image }: iAppProps) {
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
+        <DropdownMenuItem asChild>
+          <Link href="/settings">
+            <IconSettings />
+            Settings
+          </Link>
+        </DropdownMenuItem>
         <DropdownMenuItem onClick={signOut}>
           <LogOutIcon size={16} className="opacity-60" aria-hidden="true" />
           <span>Logout</span>
