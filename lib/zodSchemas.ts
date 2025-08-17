@@ -59,6 +59,80 @@ export const settingsSchema = z.object({
   year: z.enum(courseLevels),
 });
 
+/** One answer row (no id on create) */
+export const qcmAnswerCreateSchema = z.object({
+  text: z.string().trim().min(1, "Answer text is required").max(500),
+  isCorrect: z.boolean().default(false),
+  // if you receive strings from forms, use z.coerce.number()
+  order: z.coerce.number().int().min(1, "Order must be >= 1"),
+});
+
+/** Full create */
+export const qcmCreateSchema = z.object({
+  question: z.string().trim().min(5).max(1000),
+  answers: z
+    .array(qcmAnswerCreateSchema)
+    .min(2, "At least two answers")
+    .max(4, "At most four answers") // adjust if you allow more than A–D
+    .superRefine((answers, ctx) => {
+      // must have at least one correct
+      if (!answers.some((a) => a.isCorrect)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "At least one answer must be correct",
+          path: ["answers"],
+        });
+      }
+      // no duplicate order values
+      const seen = new Set<number>();
+      answers.forEach((a, i) => {
+        if (seen.has(a.order)) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Duplicate order: ${a.order}`,
+            path: ["answers", i, "order"],
+          });
+        }
+        seen.add(a.order);
+      });
+    }),
+});
+
+/** Update: replace-all strategy (simplest) */
+export const qcmUpdateSchema = z.object({
+  id: z.string().uuid(),
+  question: z.string().trim().min(5).max(1000).optional(),
+  // optional: if provided, you'll replace the whole answers set
+  answers: z
+    .array(qcmAnswerCreateSchema) // same shape as create (we recreate rows)
+    .min(2)
+    .max(4)
+    .optional()
+    .superRefine((answers, ctx) => {
+      if (!answers) return;
+      if (!answers.some((a) => a.isCorrect)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "At least one answer must be correct",
+          path: ["answers"],
+        });
+      }
+      const seen = new Set<number>();
+      answers.forEach((a, i) => {
+        if (seen.has(a.order)) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Duplicate order: ${a.order}`,
+            path: ["answers", i, "order"],
+          });
+        }
+        seen.add(a.order);
+      });
+    }),
+});
+
+export type QcmCreateInput = z.infer<typeof qcmCreateSchema>;
+
 export type courseSchemaType = z.infer<typeof courseSchema>;
 export type chapterSchemaType = z.infer<typeof chapterSchema>;
 export type lessonSchemaType = z.infer<typeof lessonSchema>;

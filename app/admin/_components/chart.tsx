@@ -10,15 +10,6 @@ import {
 } from "@/components/ui/chart";
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
-const chartData = [
-  { course: "Anatomy", enrollments: 186 },
-  { course: "Physiology", enrollments: 305 },
-  { course: "Biology", enrollments: 237 },
-  { course: "Chemistry", enrollments: 73 },
-  { course: "Physics", enrollments: 209 },
-  { course: "Mathematics", enrollments: 214 },
-];
-
 const chartConfig = {
   enrollments: {
     label: "Enrollments",

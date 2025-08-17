@@ -1,6 +1,11 @@
 "use client";
 
-import { IconCirclePlusFilled, IconMail, type Icon } from "@tabler/icons-react";
+import {
+  IconAbc,
+  IconCirclePlusFilled,
+  IconMail,
+  type Icon,
+} from "@tabler/icons-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -32,13 +37,28 @@ export function NavMain({
           {isAdmin && (
             <SidebarMenuItem className="flex items-center gap-2">
               <SidebarMenuButton
-                tooltip="Quick Create"
+                tooltip="Quick Create Course"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground min-w-8 duration-200 ease-linear"
                 asChild
               >
                 <Link href="/admin/courses/create">
                   <IconCirclePlusFilled />
-                  <span>Quick Create</span>
+                  <span>Quick Create Course</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          )}
+          {isAdmin && (
+            <SidebarMenuItem className="flex items-center gap-2 mt-1">
+              <SidebarMenuButton
+                tooltip="Quick Create Quiz"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground min-w-8 duration-200 ease-linear"
+                asChild
+              >
+                <Link href="/admin/quizzes/create">
+                  {/* <IconCirclePlusFilled /> */}
+                  <IconAbc />
+                  <span>Quick Create Quiz</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>

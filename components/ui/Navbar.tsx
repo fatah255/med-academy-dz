@@ -25,7 +25,7 @@ export function Navbar() {
           <span className="font-bold">Med Academy</span>
         </Link>
         <nav className="hidden md:flex md:flex-1 md:items-center md:justify-between">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-4">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
@@ -35,6 +35,14 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
+            {session?.user.role === "admin" && (
+              <Link
+                href="/admin"
+                className="text-sm font-medium transition-colors hover:text-primary"
+              >
+                Admin Panel
+              </Link>
+            )}
           </div>
           <div className="flex items-center space-x-4">
             {isPending ? null : session ? (

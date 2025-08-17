@@ -99,7 +99,7 @@ model Course {
   smallDescription String
   slug             String       @unique
   status           CourseStatus @default(DRAFT)
-  qcm              Qcm[]
+
 
   chapters Chapter[]
   enrollments Enrollment[]
@@ -151,22 +151,28 @@ model Lesson {
 }
 
 model Qcm {
-  id            String @id @default(uuid())
-  question      String
-  answerA       String
-  answerB       String
-  answerC       String
-  answerD       String
-  correctAnswer String
-  position      Int
-  courseId      String
-  course        Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id        String       @id @default(uuid())
+  question  String
+  answers   QcmAnswer[]  // <- answers live here
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
 
   @@map("qcm")
 }
+
+model QcmAnswer {
+  id        String  @id @default(uuid())
+  text      String  // the answer text
+  isCorrect Boolean @default(false)
+  order     Int     // to keep A/B/C/D ordering
+
+  qcmId String
+  qcm   Qcm     @relation(fields: [qcmId], references: [id], onDelete: Cascade)
+
+  @@unique([qcmId, order])  // one row per position
+  @@map("qcm_answer")
+}
+
 
 model Enrollment {
   id        String   @id @default(uuid())
