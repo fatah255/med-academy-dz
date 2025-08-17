@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Implement your logic based on event.type, etc.
-
+  //if state 2 update to "paid" not "PAID"
   console.log("Received event:", event);
   if (event.type === "checkout.paid" && event.data.status === "paid") {
     await prisma.enrollment.update({

@@ -27,6 +27,7 @@ model User {
   level         CourseLevel @default(FIRST_YEAR)
   courses       Course[]
   enrollments   Enrollment[]
+  lessonProgress LessonProgress[]
   isAdmin       Boolean     @default(false)
   role          String?
   banned        Boolean?
@@ -142,6 +143,7 @@ model Lesson {
   videoKey     String?
   chapterId    String
   chapter      Chapter  @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  progress     LessonProgress[]
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 
@@ -182,3 +184,17 @@ model Enrollment {
   @@map("enrollment")
 } 
 
+
+
+model LessonProgress {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lessonId  String
+  lesson    Lesson   @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  completed Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, lessonId])
+}

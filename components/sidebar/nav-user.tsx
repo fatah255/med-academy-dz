@@ -115,19 +115,25 @@ export function NavUser() {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/admin">
+                <Link href="/dashboard">
                   <IconDashboard />
                   Dashboard
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/admin/courses">
+                <Link href="/courses">
                   <Tv2 />
                   Courses
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
+            <DropdownMenuItem asChild>
+              <Link href="/settings">
+                <IconSettings />
+                Settings
+              </Link>
+            </DropdownMenuItem>
 
             <DropdownMenuItem onClick={signOut}>
               <IconLogout />
