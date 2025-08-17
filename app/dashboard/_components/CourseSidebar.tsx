@@ -7,14 +7,21 @@ import { CollapsibleTrigger } from "@radix-ui/react-collapsible";
 import { ChevronDown, PlayIcon } from "lucide-react";
 import LessonItem from "./LessonItem";
 import { usePathname } from "next/navigation";
+import { useCourseProgress } from "@/hooks/use-course-progress";
 
 interface CourseSidebarProps {
   course: CourseSidebarType["course"];
+  userId: string;
 }
 
-const CourseSidebar = ({ course }: CourseSidebarProps) => {
+const CourseSidebar = ({ course, userId }: CourseSidebarProps) => {
   const pathname = usePathname();
   const currentLessonId = pathname.split("/").pop() || "";
+
+  const { totalLessons, completedLessons, progress } = useCourseProgress({
+    course,
+    userId,
+  });
   return (
     <div className="flex flex-col h-full">
       <div className="pb-4 pr-4 border-b border-border">
@@ -31,10 +38,13 @@ const CourseSidebar = ({ course }: CourseSidebarProps) => {
         </div>
         <div className="space-y-2 flex justify-between text-xs ">
           <span className="text-muted-foreground">Progress</span>
-          <span> 4/10 lessons</span>
+          <span>
+            {" "}
+            {completedLessons}/{totalLessons} lessons
+          </span>
         </div>
-        <Progress value={40} className="h-2" />
-        <p className="text-muted-foreground text-xs">40% Completed</p>
+        <Progress value={progress} className="h-2" />
+        <p className="text-muted-foreground text-xs">{progress}% Completed</p>
       </div>
       <div className="py-4 pr-2 space-y-3">
         {course.chapters.map((chapter) => (
@@ -64,6 +74,10 @@ const CourseSidebar = ({ course }: CourseSidebarProps) => {
                   lesson={lesson}
                   slug={course.slug}
                   isActive={lesson.id === currentLessonId}
+                  completed={
+                    lesson.progress.find((p) => p.lessonId === lesson.id)
+                      ?.completed || false
+                  }
                 />
               ))}
             </CollapsibleContent>

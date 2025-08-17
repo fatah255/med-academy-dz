@@ -11,12 +11,13 @@ const LessonItem = ({
   lesson,
   slug,
   isActive,
+  completed,
 }: {
   lesson: lessonType;
   slug: string;
   isActive?: boolean;
+  completed?: boolean;
 }) => {
-  const completed = false; // This should be replaced with actual logic to check if the lesson is completed
   return (
     <Link
       className={buttonVariants({
