@@ -4,12 +4,15 @@ import { getInrolledCourses } from "../data/user/get-inrolled-courses";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import PublicCourseCard from "../(landing-page)/_components/PublicCourseCard";
+import DashboardCourseCard from "./_components/DashboardCourseCard";
+import { requireUser } from "../data/user/require-user";
 
 const page = async () => {
   const [courses, enrolledCourses] = await Promise.all([
     getAllCourses(),
     getInrolledCourses(),
   ]);
+  const session = await requireUser();
   return (
     <>
       <div className="flex flex-col gap-2">
@@ -21,15 +24,13 @@ const page = async () => {
       {enrolledCourses.length > 0 ? (
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {courses
-              .filter((course) =>
-                enrolledCourses.some(
-                  (enrolled) => enrolled.course.id === course.id
-                )
-              )
-              .map((course) => (
-                <PublicCourseCard key={course.id} course={course} />
-              ))}
+            {enrolledCourses.map((course) => (
+              <DashboardCourseCard
+                key={course.id}
+                userId={session.user.id}
+                course={course}
+              />
+            ))}
           </div>
         </>
       ) : (

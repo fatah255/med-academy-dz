@@ -1,5 +1,8 @@
 import { getLessonContent } from "@/app/data/course/get-lesson-content";
-import CourseContent from "./_components/CourseContent";
+import CourseContent, {
+  CourseContentSkeleton,
+} from "./_components/CourseContent";
+import { Suspense } from "react";
 
 type Params = Promise<{ lessonId: string }>;
 interface PageProps {
@@ -7,8 +10,16 @@ interface PageProps {
 }
 const page = async ({ params }: PageProps) => {
   const { lessonId } = await params;
-  const lesson = await getLessonContent(lessonId);
-  return <CourseContent lesson={lesson} />; // Render the lesson content component with the fetched lesson data
+  return (
+    <Suspense fallback={<CourseContentSkeleton />}>
+      <CourseLoader lessonId={lessonId} />
+    </Suspense>
+  );
 };
 
 export default page;
+
+const CourseLoader = async ({ lessonId }: { lessonId: string }) => {
+  const lesson = await getLessonContent(lessonId);
+  return <CourseContent lesson={lesson} />;
+};

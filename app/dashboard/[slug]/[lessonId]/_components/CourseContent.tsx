@@ -9,6 +9,7 @@ import { markLessonAsCompleted } from "../actions";
 import { toast } from "sonner";
 import { tryCatch } from "@/hooks/try-catch";
 import { useConfetti } from "@/hooks/use-confetti";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface CourseContentProps {
   lesson: LessonContentType;
@@ -67,7 +68,7 @@ const CourseContent = ({ lesson }: CourseContentProps) => {
         toast.error("Something went wrong while updating the lesson");
       }
       if (response?.status === "success") {
-        toast.success("Ypu have completed the lesson!");
+        toast.success("You have completed the lesson!");
         confetti();
       } else {
         toast.error(response?.message);
@@ -112,3 +113,17 @@ const CourseContent = ({ lesson }: CourseContentProps) => {
 };
 
 export default CourseContent;
+
+export const CourseContentSkeleton = () => {
+  return (
+    <div className="flex flex-col h-full bg-background pl-6">
+      <Skeleton className="aspect-video bg-muted rounded-lg" />
+      <div className="py-4 border-b">
+        <Skeleton className="w-32 h-10 mb-4" />
+      </div>
+      <div className="space-y-3 pt-3 ">
+        <Skeleton className="w-1/2 h-8" />
+      </div>
+    </div>
+  );
+};
