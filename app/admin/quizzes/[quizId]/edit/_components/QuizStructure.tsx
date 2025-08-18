@@ -25,12 +25,7 @@ import {
   CollapsibleTrigger,
   CollapsibleContent,
 } from "@/components/ui/collapsible";
-import {
-  ChevronDown,
-  ChevronRight,
-  FileTextIcon,
-  GripVerticalIcon,
-} from "lucide-react";
+import { ChevronDown, ChevronRight, GripVerticalIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
@@ -40,6 +35,8 @@ import NewQcmModal from "./NewQcmModal";
 import DeleteQuestionModal from "./DeleteQuestion";
 import DeleteAnswerModal from "./DeleteAnswer";
 import NewAnswerModal from "./NewAnswerModal";
+import EditAnswerModal from "./EditAnswerModal";
+import EditQcmModal from "./EditQcmModal";
 
 interface QuizStructureProps {
   quiz: AdminSingleQuizType;
@@ -54,6 +51,10 @@ interface SortableItemProps {
     qcmId?: string; // only for answers
   };
 }
+
+const numToLetter = new Map(
+  Array.from({ length: 26 }, (_, i) => [i + 1, String.fromCharCode(65 + i)])
+);
 
 const QuizStructure = ({ quiz }: QuizStructureProps) => {
   const mapQuizToState = (keepOpenFrom?: Record<string, boolean>) =>
@@ -253,7 +254,17 @@ const QuizStructure = ({ quiz }: QuizStructureProps) => {
                             {item.question}
                           </p>
                         </div>
-                        <DeleteQuestionModal qcmId={item.id} quizId={quiz.id} />
+                        <div>
+                          <EditQcmModal
+                            quizId={quiz.id}
+                            qcmId={item.id}
+                            question={item.question}
+                          />
+                          <DeleteQuestionModal
+                            qcmId={item.id}
+                            quizId={quiz.id}
+                          />
+                        </div>
                       </div>
 
                       <CollapsibleContent>
@@ -278,14 +289,27 @@ const QuizStructure = ({ quiz }: QuizStructureProps) => {
                                       >
                                         <GripVerticalIcon className="size-4" />
                                       </Button>
-                                      <FileTextIcon className="size-4 text-muted-foreground" />
+
+                                      <span>
+                                        {numToLetter.get(answer.order)}
+                                        {" ) "}
+                                      </span>
                                       {answer.text}
                                     </div>
-                                    <DeleteAnswerModal
-                                      answerId={answer.id}
-                                      qcmId={item.id}
-                                      quizId={quiz.id}
-                                    />
+                                    <div>
+                                      <EditAnswerModal
+                                        quizId={quiz.id}
+                                        qcmId={item.id}
+                                        answerText={answer.text}
+                                        answerId={answer.id}
+                                        isCorrect={answer.isCorrect}
+                                      />
+                                      <DeleteAnswerModal
+                                        answerId={answer.id}
+                                        qcmId={item.id}
+                                        quizId={quiz.id}
+                                      />
+                                    </div>
                                   </div>
                                 )}
                               </SortableItem>

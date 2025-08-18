@@ -4,6 +4,8 @@ import { requireAdmin } from "@/app/data/admin/require-admin";
 import { prisma } from "@/lib/db";
 import { ApiResponse } from "@/lib/types";
 import {
+  answerSchema,
+  answerSchemaType,
   chapterSchema,
   chapterSchemaType,
   courseSchema,
@@ -443,5 +445,57 @@ export const deleteChapter = async (
       status: "error",
       message: "Failed to delete chapter",
     };
+  }
+};
+
+export const updateAnswer = async (
+  answerId: string,
+  values: answerSchemaType
+): Promise<ApiResponse> => {
+  await requireAdmin();
+
+  const parsed = answerSchema.safeParse(values);
+  if (!parsed.success) {
+    return { status: "error", message: "Invalid answer data" };
+  }
+
+  const { quizId, questionId, text, isCorrect } = parsed.data;
+
+  try {
+    await prisma.$transaction(async (tx) => {
+      // Ensure the question exists and belongs to the quiz
+      const qcm = await tx.qcm.findFirst({
+        where: { id: questionId, quizId },
+        select: { id: true },
+      });
+      if (!qcm) throw new Error("Question not found for this quiz");
+
+      // Ensure the answer belongs to this question
+      const exists = await tx.qcmAnswer.findFirst({
+        where: { id: answerId, qcmId: questionId },
+        select: { id: true },
+      });
+      if (!exists) throw new Error("Answer not found for this question");
+
+      // Update fields
+      await tx.qcmAnswer.update({
+        where: { id: answerId }, // unique selector
+        data: { text, isCorrect },
+      });
+
+      // Optional policy: only one correct answer per question
+      if (isCorrect) {
+        await tx.qcmAnswer.updateMany({
+          where: { qcmId: questionId, id: { not: answerId } },
+          data: { isCorrect: false },
+        });
+      }
+    });
+
+    revalidatePath(`/admin/quizzes/${quizId}/edit`);
+    return { status: "success", message: "Answer updated successfully" };
+  } catch (e) {
+    console.error(e);
+    return { status: "error", message: "Failed to update answer" };
   }
 };

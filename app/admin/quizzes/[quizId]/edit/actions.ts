@@ -262,6 +262,50 @@ export const createQcm = async (
   }
 };
 
+export const updateQcm = async (
+  qcmId: string,
+  values: questionSchemaType
+): Promise<ApiResponse> => {
+  await requireAdmin();
+
+  const parsed = QuestionSchema.safeParse(values);
+  if (!parsed.success) {
+    return { status: "error", message: "Invalid question data" };
+  }
+
+  const { quizId, question } = parsed.data;
+
+  try {
+    const req = await request();
+    const decision = await aj2.protect(req, { fingerprint: quizId });
+    if (decision.isDenied()) {
+      return { status: "error", message: "Request denied" };
+    }
+
+    await prisma.$transaction(async (tx) => {
+      // Ensure the QCM exists and belongs to this quiz
+      const exists = await tx.qcm.findFirst({
+        where: { id: qcmId, quizId },
+        select: { id: true },
+      });
+      if (!exists) {
+        throw new Error("QCM not found for this quiz");
+      }
+
+      await tx.qcm.update({
+        where: { id: qcmId }, // unique selector
+        data: { question },
+      });
+    });
+
+    revalidatePath(`/admin/quizzes/${quizId}/edit`);
+    return { status: "success", message: "Question updated successfully" };
+  } catch (e) {
+    console.error(e);
+    return { status: "error", message: "Failed to update question" };
+  }
+};
+
 export const createAnswer = async (
   values: answerSchemaType
 ): Promise<ApiResponse> => {
