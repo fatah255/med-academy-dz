@@ -7,10 +7,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import EditCourseForm from "./_components/EditCourseForm";
-import CourseStructure from "./_components/CourseStructure";
+
 import { adminGetQuiz } from "@/app/data/admin/admin-get-quiz";
 import EditQuizForm from "./_components/EditQuizForm";
+import QuizStructure from "./_components/QuizStructure";
 
 type Params = Promise<{ quizId: string }>;
 
@@ -47,7 +47,9 @@ const page = async ({ params }: { params: Params }) => {
               <CardTitle>Quiz Structure</CardTitle>
               <CardDescription>Edit the structure of the quiz</CardDescription>
             </CardHeader>
-            <CardContent>{/* <CourseStructure course={data} /> */}</CardContent>
+            <CardContent>
+              <QuizStructure quiz={data} />
+            </CardContent>
           </Card>
         </TabsContent>
       </Tabs>

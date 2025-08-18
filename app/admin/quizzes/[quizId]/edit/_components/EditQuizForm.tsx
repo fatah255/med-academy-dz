@@ -47,7 +47,7 @@ import { tryCatch } from "@/hooks/try-catch";
 import { createCourse } from "./actions";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import { editCourse } from "../actions";
+import { editCourse, editQuiz } from "../actions";
 
 import { AdminSingleCourseType } from "@/app/data/admin/admin-get-course";
 import { AdminSingleQuizType } from "@/app/data/admin/admin-get-quiz";
@@ -101,19 +101,19 @@ const EditQuizForm = ({ quiz }: EditQuizFormProps) => {
   }, [selectedYear]);
 
   function onSubmit(values: qcmSchemaType) {
-    // startTransition(async () => {
-    //   const { data, error } = await tryCatch(editCourse(values, course.id));
-    //   if (error) {
-    //     toast.error("Something went wrong while updating the course");
-    //   }
-    //   if (data.status === "success") {
-    //     toast.success(data.message);
-    //     form.reset();
-    //     router.push("/admin/courses");
-    //   } else {
-    //     toast.error(data.message);
-    //   }
-    // });
+    startTransition(async () => {
+      const { data, error } = await tryCatch(editQuiz(values, quiz.id));
+      if (error) {
+        toast.error("Something went wrong while updating the quiz");
+      }
+      if (data?.status === "success") {
+        toast.success(data?.message);
+        form.reset();
+        router.push("/admin/quizzes");
+      } else {
+        toast.error(data?.message);
+      }
+    });
   }
 
   return (

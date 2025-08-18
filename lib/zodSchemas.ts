@@ -55,6 +55,19 @@ export const lessonSchema = z.object({
   videoKey: z.string().optional(),
 });
 
+export const QuestionSchema = z.object({
+  question: z.string().min(3, { message: "Question name is required." }),
+  quizId: z.string().uuid({ message: "Invalid course ID." }),
+});
+
+export const answerSchema = z.object({
+  text: z.string().min(3, { message: "Answer name is required." }),
+  quizId: z.string().uuid({ message: "Invalid quiz ID." }),
+  questionId: z.string().uuid({ message: "Invalid question ID." }),
+
+  isCorrect: z.boolean().default(false),
+});
+
 export const settingsSchema = z.object({
   year: z.enum(courseLevels),
 });
@@ -155,6 +168,9 @@ export const qcmSchema = z.object({
 export type qcmSchemaType = z.infer<typeof qcmSchema>;
 
 export type QcmCreateInput = z.infer<typeof qcmCreateSchema>;
+
+export type questionSchemaType = z.infer<typeof QuestionSchema>;
+export type answerSchemaType = z.infer<typeof answerSchema>;
 
 export type courseSchemaType = z.infer<typeof courseSchema>;
 export type chapterSchemaType = z.infer<typeof chapterSchema>;
