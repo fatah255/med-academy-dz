@@ -8,7 +8,12 @@ import { Loader2, PlusIcon, SparklesIcon } from "lucide-react";
 import { modulesByYear } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, useWatch } from "react-hook-form";
-import { courseLevels, courseStatus, qcmSchemaType } from "@/lib/zodSchemas";
+import {
+  courseLevels,
+  courseStatus,
+  qcmSchema,
+  qcmSchemaType,
+} from "@/lib/zodSchemas";
 import { useEffect, useTransition } from "react";
 
 import { Check, ChevronsUpDown } from "lucide-react";
@@ -29,7 +34,6 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-import { courseSchema, courseSchemaType } from "@/lib/zodSchemas";
 import {
   Form,
   FormControl,
@@ -40,16 +44,15 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+
 import dynamic from "next/dynamic";
 import Uploader from "@/components/file-uploader/Uploader";
 import { tryCatch } from "@/hooks/try-catch";
-import { createCourse } from "./actions";
+
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import { editCourse, editQuiz } from "../actions";
+import { editQuiz } from "../actions";
 
-import { AdminSingleCourseType } from "@/app/data/admin/admin-get-course";
 import { AdminSingleQuizType } from "@/app/data/admin/admin-get-quiz";
 
 const RichTextEditor = dynamic(
@@ -66,8 +69,8 @@ interface EditQuizFormProps {
 const EditQuizForm = ({ quiz }: EditQuizFormProps) => {
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
-  const form = useForm<courseSchemaType>({
-    resolver: zodResolver(courseSchema),
+  const form = useForm<qcmSchemaType>({
+    resolver: zodResolver(qcmSchema),
     defaultValues: {
       title: quiz?.title,
       description: quiz?.description,
