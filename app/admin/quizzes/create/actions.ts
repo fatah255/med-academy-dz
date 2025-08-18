@@ -5,7 +5,12 @@ import arcjet, { detectBot, fixedWindow } from "@/lib/arcjet";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { ApiResponse } from "@/lib/types";
-import { courseSchema, courseSchemaType } from "@/lib/zodSchemas";
+import {
+  courseSchema,
+  courseSchemaType,
+  qcmSchema,
+  qcmSchemaType,
+} from "@/lib/zodSchemas";
 import { request } from "@arcjet/next";
 import { headers } from "next/headers";
 const aj = arcjet
@@ -22,9 +27,7 @@ const aj = arcjet
       max: 5,
     })
   );
-export const createCourse = async (
-  data: courseSchemaType
-): Promise<ApiResponse> => {
+export const createQuiz = async (data: qcmSchemaType): Promise<ApiResponse> => {
   const session = await requireAdmin();
   try {
     const req = await request();
@@ -38,8 +41,7 @@ export const createCourse = async (
       };
     }
 
-    const validation = courseSchema.safeParse(data);
-
+    const validation = qcmSchema.safeParse(data);
 
     if (!validation.success) {
       return {
@@ -48,7 +50,7 @@ export const createCourse = async (
       };
     }
 
-    const courseData = await prisma.course.create({
+    const quizData = await prisma.quiz.create({
       data: {
         ...validation.data,
         userId: session?.user.id || "",
@@ -56,13 +58,12 @@ export const createCourse = async (
     });
     return {
       status: "success",
-      message: "Course created successfully",
+      message: "Quiz created successfully",
     };
   } catch (error) {
-    console.error(error);
     return {
       status: "error",
-      message: "Failed to create course",
+      message: "Failed to create quiz",
     };
   }
 };

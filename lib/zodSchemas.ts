@@ -100,7 +100,6 @@ export const qcmCreateSchema = z.object({
 
 /** Update: replace-all strategy (simplest) */
 export const qcmUpdateSchema = z.object({
-  id: z.string().uuid(),
   question: z.string().trim().min(5).max(1000).optional(),
   // optional: if provided, you'll replace the whole answers set
   answers: z
@@ -130,6 +129,30 @@ export const qcmUpdateSchema = z.object({
       });
     }),
 });
+
+export const qcmSchema = z.object({
+  title: z
+    .string()
+    .min(3, { message: "Title must be at least 3 characters long." })
+    .max(100, { message: "Title must not exceed 100 characters." }),
+  description: z
+    .string()
+    .min(10, { message: "Description must be at least 10 characters long." })
+    .max(500, { message: "Description must not exceed 500 characters." }),
+
+  price: z.coerce.number().min(1, { message: "Price is required." }),
+  fileKey: z.string().min(1, { message: "File key is required." }),
+
+  level: z.enum(courseLevels),
+  category: z.string().min(1, { message: "Category is required." }),
+  slug: z
+    .string()
+    .min(3, { message: "Slug must be at least 3 characters long." })
+    .max(100, { message: "Slug must not exceed 100 characters." }),
+  status: z.enum(courseStatus),
+});
+
+export type qcmSchemaType = z.infer<typeof qcmSchema>;
 
 export type QcmCreateInput = z.infer<typeof qcmCreateSchema>;
 
