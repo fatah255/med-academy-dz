@@ -2,7 +2,7 @@ import "server-only";
 import { requireUser } from "./require-user";
 import { prisma } from "@/lib/db";
 
-export async function getInrolledQuizzes() {
+export async function getEnrolledQuizzes() {
   const user = await requireUser();
 
   const data = await prisma.enrollment.findMany({
@@ -50,5 +50,5 @@ export async function getInrolledQuizzes() {
 }
 
 export type EnrolledQuizType = Awaited<
-  ReturnType<typeof getInrolledQuizzes>
+  ReturnType<typeof getEnrolledQuizzes>
 >[number];

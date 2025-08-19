@@ -9,10 +9,15 @@ generator client {
   output   = "../lib/generated/prisma"
 }
 
+// datasource db {
+//   provider = "cockroachdb"
+//   url      = env("DB_URL")
+// }
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
 
 model User {
   id            String      @id

@@ -4,6 +4,8 @@ import { SiteHeader } from "@/components/site-header";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { ReactNode } from "react";
 import { DashboardSidebar } from "./_components/DashboardSidebar";
+import { prisma } from "@/lib/db";
+import { requireUser } from "../data/user/require-user";
 
 const Layout = async ({ children }: { children: ReactNode }) => {
   return (
@@ -16,6 +18,7 @@ const Layout = async ({ children }: { children: ReactNode }) => {
       }
     >
       <DashboardSidebar variant="inset" />
+
       <SidebarInset>
         <SiteHeader />
         <div className="flex flex-1 flex-col">

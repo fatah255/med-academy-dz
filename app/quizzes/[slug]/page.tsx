@@ -176,7 +176,7 @@ const page = async ({ params }: { params: Params }) => {
                       className: "w-full font-bold text-lg cursor-pointer",
                     })}
                   >
-                    Study Now !
+                    Test Yourself Now!
                   </Link>
                 </>
               ) : (

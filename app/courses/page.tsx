@@ -7,6 +7,7 @@ import { getAllCourses } from "../data/course/get-all-courses";
 import { getLevel } from "./actions";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
+import { prisma } from "@/lib/db";
 
 export default async function PublicCoursesroute() {
   const session = await auth.api.getSession({
@@ -14,6 +15,8 @@ export default async function PublicCoursesroute() {
   });
   const isAdmin = session?.user.role === "admin";
   const userId = session?.user.id;
+
+  console.log(session?.user.role);
   return (
     <div className="mt-5">
       <div className="flex flex-col space-y-2 mb-10">

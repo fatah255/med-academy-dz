@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import {
+  IconAbc,
   IconCamera,
   IconChartBar,
   IconDashboard,
@@ -37,14 +38,14 @@ import Image from "next/image";
 const data = {
   navMain: [
     {
-      title: "Dashboard",
+      title: "Courses",
       url: "/dashboard",
-      icon: IconDashboard,
+      icon: IconListDetails,
     },
     {
-      title: "Courses",
-      url: "/courses",
-      icon: IconListDetails,
+      title: "Quizzes",
+      url: "/dashboard/quizzes",
+      icon: IconAbc,
     },
   ],
   navClouds: [
