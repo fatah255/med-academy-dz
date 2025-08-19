@@ -28,7 +28,6 @@ model User {
   courses       Course[]
   quizzes       Quiz[]
   enrollments   Enrollment[]
-  quizEnrollments QuizEnrollment[]
   lessonProgress LessonProgress[]
   isAdmin       Boolean     @default(false)
   role          String?
@@ -165,7 +164,8 @@ model Quiz {
   
   level            CourseLevel  @default(FIRST_YEAR)
   category         String
-  quizEnrollments QuizEnrollment[]
+  enrollments      Enrollment[]
+
   userId   String
   user     User      @relation(fields: [userId], references: [id])
 
@@ -210,29 +210,16 @@ model Enrollment {
   transactionId String? @unique 
   userId    String
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  courseId  String
-  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  courseId  String?
+  course    Course?  @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  quizId    String?
+  quiz      Quiz?    @relation(fields: [quizId], references: [id], onDelete: Cascade)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@unique([userId, courseId])
-  @@map("enrollment")
-} 
-
-model QuizEnrollment {
-  id        String   @id @default(uuid())
-  amount    Int
-  status    String   @default("PENDING")
-  transactionId String? @unique 
-  userId    String
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  quizId    String
-  quiz      Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
   @@unique([userId, quizId])
-  @@map("quiz_enrollment")
+  @@map("enrollment")
 } 
 
 

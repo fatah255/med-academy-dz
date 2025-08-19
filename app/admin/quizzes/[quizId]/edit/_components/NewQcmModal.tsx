@@ -106,7 +106,7 @@ const NewQcmModal = ({ quizId }: { quizId: string }) => {
                 variant="default"
                 className="w-full"
               >
-                {isPending ? "Creating..." : "Create Chapter"}
+                {isPending ? "Creating..." : "Create Question"}
               </Button>
             </DialogFooter>
           </form>

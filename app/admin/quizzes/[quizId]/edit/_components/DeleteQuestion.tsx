@@ -64,7 +64,7 @@ const DeleteQuestionModal = ({
             onClick={handleDelete}
             variant="destructive"
           >
-            {isPending ? "Deleting..." : "Delete chapter"}
+            {isPending ? "Deleting..." : "Delete Question"}
           </Button>
         </AlertDialogFooter>
       </AlertDialogContent>

@@ -19,6 +19,15 @@ export const adminGetCourses = async () => {
       level: true,
       category: true,
       duration: true,
+      chapters: {
+        select: {
+          lesson: {
+            select: {
+              id: true,
+            },
+          },
+        },
+      },
     },
   });
   return data;

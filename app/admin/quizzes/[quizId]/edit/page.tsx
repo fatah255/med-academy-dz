@@ -26,7 +26,7 @@ const page = async ({ params }: { params: Params }) => {
       <Tabs defaultValue="basic-info" className="w-full">
         <TabsList className="grid grid-cols-2 w-full">
           <TabsTrigger value="basic-info">Basic Info</TabsTrigger>
-          <TabsTrigger value="course-structure">Course Structure</TabsTrigger>
+          <TabsTrigger value="course-structure">Quiz Structure</TabsTrigger>
         </TabsList>
         <TabsContent value="basic-info">
           <Card>

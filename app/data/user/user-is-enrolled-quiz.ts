@@ -2,7 +2,7 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { headers } from "next/headers";
 
-export async function userIsEnrolled(courseId: string) {
+export async function userIsEnrolledQuiz(quizId: string) {
   const session = await auth.api.getSession({
     headers: await headers(),
   });
@@ -13,9 +13,9 @@ export async function userIsEnrolled(courseId: string) {
 
   const enrollment = await prisma.enrollment.findUnique({
     where: {
-      userId_courseId: {
+      userId_quizId: {
         userId: session.user.id,
-        courseId,
+        quizId,
       },
     },
     select: {

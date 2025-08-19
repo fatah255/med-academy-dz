@@ -48,7 +48,7 @@ const QuizCard = ({ quiz }: { quiz: AdminQuizType }) => {
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <Link href={`/admin/quizzes/${quiz.slug}`}>
+              <Link href={`/quizzes/${quiz.slug}`}>
                 <Eye className="mr-2 size-4" />
                 Preview Quiz
               </Link>

@@ -29,7 +29,7 @@ const CourseCard = ({ course }: { course: AdminCourseType }) => {
     .split("_")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(" ");
-
+  const firstLesson = course.chapters[0]?.lesson[0];
   return (
     <Card className="group relative py-0 gap-0">
       <div className="absolute top-2 right-2 z-10">
@@ -47,7 +47,7 @@ const CourseCard = ({ course }: { course: AdminCourseType }) => {
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <Link href={`/admin/courses/${course.slug}`}>
+              <Link href={`/dashboard/${course.slug}/${firstLesson?.id || ""}`}>
                 <Eye className="mr-2 size-4" />
                 Preview Course
               </Link>

@@ -46,6 +46,11 @@ const data = {
       url: "/admin/courses",
       icon: IconListDetails,
     },
+    {
+      title: "Quizzes",
+      url: "/admin/quizzes",
+      icon: IconFileWord,
+    },
   ],
   navClouds: [
     {
