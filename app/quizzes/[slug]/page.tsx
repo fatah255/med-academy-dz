@@ -20,10 +20,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {
+  IconAbc,
   IconBook,
   IconChevronDown,
   IconClock,
   IconPlayerPlay,
+  IconQuestionMark,
   IconSchool,
   IconWriting,
 } from "@tabler/icons-react";
@@ -116,7 +118,7 @@ const page = async ({ params }: { params: Params }) => {
                       <IconSchool className="size-4" />
                     </div>
                     <div>
-                      <p className="font-medium text-sm">Course's Year</p>
+                      <p className="font-medium text-sm">Quiz's Year</p>
                       <p className="text-sm text-muted-foreground">
                         {course.level.split("_").join(" ").toLowerCase()}
                       </p>
@@ -135,8 +137,11 @@ const page = async ({ params }: { params: Params }) => {
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="flex size-8 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <IconWriting className="size-4" />
+                      <IconQuestionMark className="size-4" />
                     </div>
+                    <p className="text-sm font-medium">
+                      {course.qcm.length} QCMs
+                    </p>
                   </div>
                 </div>
               </div>
@@ -153,13 +158,13 @@ const page = async ({ params }: { params: Params }) => {
                     <div className="rounded-full bg-green-500/10 text-green-700 p-1">
                       <Check className="size-3" />
                     </div>
-                    <span>study and practice</span>
+                    <span>test you knowledge with the best way</span>
                   </li>
                   <li className="flex items-center gap-2 text-sm ">
                     <div className="rounded-full bg-green-500/10 text-green-700 p-1">
                       <Check className="size-3" />
                     </div>
-                    <span>updated content</span>
+                    <span>updated quizzes</span>
                   </li>
                 </ul>
               </div>

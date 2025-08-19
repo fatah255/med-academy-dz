@@ -9,7 +9,7 @@ import {
 
 const AdminPage = async () => {
   const data = await getCategoryEnrollments();
-  console.log(data);
+
   const total = await countTotalUsers();
   const enrolled = await countUsersWithAtLeastOnePaidEnrollment();
   const notEnrolled = total - enrolled;

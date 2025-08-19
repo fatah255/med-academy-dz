@@ -15,6 +15,7 @@ import {
   countTotalUsers,
   countUsersWithAtLeastOnePaidEnrollment,
   countUsersWithAtLeastOnePaidEnrollmentCalendarLastMonth,
+  getQuizRevenueLast30Days,
   totalCourses,
   totalRevenueCalendarLastMonthFromCoursePrice,
   totalRevenueLast30Days,
@@ -22,6 +23,7 @@ import {
 } from "@/app/admin/actions";
 import { PlusIcon } from "lucide-react";
 import { requireAdmin } from "@/app/data/admin/require-admin";
+import { Separator } from "../ui/separator";
 
 export async function SectionCards() {
   await requireAdmin();
@@ -54,6 +56,16 @@ export async function SectionCards() {
             currency: "DZD",
           }).format(await totalRevenueLast30Days())}
         </CardContent>
+        <CardFooter className="flex-col items-start gap-1.5 text-sm">
+          <Separator className="my-2" />
+          <p className="text-sm text-muted-foreground">
+            the revenue from quizzes is:{" "}
+          </p>
+          {new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "DZD",
+          }).format(await getQuizRevenueLast30Days())}
+        </CardFooter>
       </Card>
       <Card className="@container/card ">
         <CardHeader>
@@ -66,6 +78,7 @@ export async function SectionCards() {
             style: "currency",
             currency: "DZD",
           }).format(await totalRevenueLast30DaysUser())}
+          <p> </p>
         </CardContent>
       </Card>
       <Card className="@container/card">

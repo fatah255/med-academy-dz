@@ -70,6 +70,7 @@ export const answerSchema = z.object({
 
 export const settingsSchema = z.object({
   year: z.enum(courseLevels),
+  adminEmail: z.email().optional(),
 });
 
 /** One answer row (no id on create) */

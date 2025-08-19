@@ -161,21 +161,15 @@ type CourseLevel =
   | "FIFTH_YEAR"
   | "SIXTH_YEAR";
 
-/**
- * Returns [{ course: category, enrollments: count }, ...]
- * - Counts only PAID enrollments
- * - Optionally filter by CourseLevel (year)
- * - Optionally filter by time window: since (rolling) or calendar last month
- */
 export async function getCategoryEnrollments(opts?: {
-  level?: CourseLevel; // e.g. "FIRST_YEAR"
-  since?: Date | null; // e.g. new Date(Date.now() - 30*24*60*60*1000)
-  calendarLastMonth?: boolean; // if true, ignore `since` and use previous calendar month
+  level?: CourseLevel;
+  since?: Date | null;
+  calendarLastMonth?: boolean;
 }) {
   const level = opts?.level;
 
-  // Build time window
-  let createdAtFilter: { gte?: Date; lte?: Date } | undefined;
+  // Time window
+  let createdAtFilter: Prisma.DateTimeFilter | undefined;
   if (opts?.calendarLastMonth) {
     const now = new Date();
     const start = new Date(now.getFullYear(), now.getMonth() - 1, 1);
@@ -185,7 +179,7 @@ export async function getCategoryEnrollments(opts?: {
     createdAtFilter = { gte: opts.since };
   }
 
-  // If level is provided, prefetch course IDs for that level to filter enrollments
+  // Optional: limit to a level first
   let courseIdFilter: string[] | undefined;
   if (level) {
     const ids = await prisma.course.findMany({
@@ -196,39 +190,49 @@ export async function getCategoryEnrollments(opts?: {
     if (courseIdFilter.length === 0) return [];
   }
 
-  // 1) Group enrollments by courseId (only PAID, optionally filtered by time/level)
+  // Build where once
+  const enrollWhere: Prisma.EnrollmentWhereInput = {
+    status: "PAID",
+    ...(createdAtFilter ? { createdAt: createdAtFilter } : {}),
+    ...(courseIdFilter ? { courseId: { in: courseIdFilter } } : {}),
+    // defensive: avoid null courseId values propagating to `in: [...]`
+    NOT: { courseId: null },
+  };
+
+  // 1) Group enrollments by course
   const enrollGroups = await prisma.enrollment.groupBy({
     by: ["courseId"],
-    where: {
-      status: "PAID",
-      ...(createdAtFilter ? { createdAt: createdAtFilter } : {}),
-      ...(courseIdFilter ? { courseId: { in: courseIdFilter } } : {}),
-    },
+    where: enrollWhere,
     _count: { _all: true },
   });
-
   if (enrollGroups.length === 0) return [];
 
-  // 2) Fetch categories for those course IDs
+  // 2) Keep only non-null courseIds
+  const courseIds = enrollGroups
+    .map((g) => g.courseId)
+    .filter((id): id is string => !!id);
+
+  if (courseIds.length === 0) return [];
+
+  // 3) Fetch categories for those courses
   const courses = await prisma.course.findMany({
-    where: { id: { in: enrollGroups.map((g) => g.courseId) } },
+    where: { id: { in: courseIds } },
     select: { id: true, category: true },
   });
   const catById = new Map(courses.map((c) => [c.id, c.category]));
 
-  // 3) Aggregate counts by category (in case multiple courses share the same category)
+  // 4) Aggregate per category
   const byCategory = new Map<string, number>();
   for (const g of enrollGroups) {
+    if (!g.courseId) continue;
     const cat = catById.get(g.courseId);
     if (!cat) continue;
     byCategory.set(cat, (byCategory.get(cat) ?? 0) + g._count._all);
   }
 
-  // 4) Shape like your chartData and sort by category name
-  return Array.from(byCategory, ([course, enrollments]) => ({
-    course,
-    enrollments,
-  })).sort((a, b) => a.course.localeCompare(b.course));
+  return [...byCategory]
+    .map(([course, enrollments]) => ({ course, enrollments }))
+    .sort((a, b) => a.course.localeCompare(b.course));
 }
 
 export async function totalCourses() {
@@ -242,4 +246,26 @@ export async function totalCourses() {
     draft,
     archived,
   };
+}
+
+// If you store money as Prisma.Decimal, we'll coerce to number at the end.
+
+export async function getQuizRevenueLast30Days(): Promise<number> {
+  const since = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+
+  const agg = await prisma.enrollment.aggregate({
+    where: {
+      status: "PAID", // adjust if you use another success status
+      createdAt: { gte: since },
+      quizId: { not: null }, // it's a quiz enrollment
+      courseId: null, // and NOT a course enrollment
+    },
+    _sum: {
+      amount: true, // <<< change to your column name if needed
+    },
+  });
+
+  // If you store cents as an integer, remove the division.
+  const total = agg._sum.amount ?? 0;
+  return Number(total); // Decimal -> number (okay for totals)
 }

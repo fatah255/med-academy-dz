@@ -2,13 +2,13 @@ import "server-only";
 import { requireUser } from "./require-user";
 import { prisma } from "@/lib/db";
 
-export async function getInrolledCourses() {
+export async function getInrolledQuizzes() {
   const user = await requireUser();
 
   const data = await prisma.enrollment.findMany({
     where: {
       userId: user.user.id,
-      courseId: {
+      quizId: {
         not: null,
       },
       status: {
@@ -16,31 +16,27 @@ export async function getInrolledCourses() {
       },
     },
     include: {
-      course: {
+      quiz: {
         select: {
           id: true,
           title: true,
           description: true,
-          smallDescription: true,
+
           fileKey: true,
           slug: true,
           level: true,
           category: true,
-          duration: true,
-          chapters: {
+
+          qcm: {
             select: {
               id: true,
-              lesson: {
+              question: true,
+              answers: {
                 select: {
                   id: true,
-                  progress: {
-                    select: {
-                      completed: true,
-                      userId: true,
-                      lessonId: true,
-                      id: true,
-                    },
-                  },
+                  position: true,
+                  text: true,
+                  isCorrect: true,
                 },
               },
             },
@@ -53,6 +49,6 @@ export async function getInrolledCourses() {
   return data;
 }
 
-export type EnrolledCourseType = Awaited<
-  ReturnType<typeof getInrolledCourses>
+export type EnrolledQuizType = Awaited<
+  ReturnType<typeof getInrolledQuizzes>
 >[number];

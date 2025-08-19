@@ -13,6 +13,26 @@ const page = async () => {
     getInrolledCourses(),
   ]);
   const session = await requireUser();
+
+  if (!enrolledCourses || enrolledCourses.length === 0) {
+    return (
+      <div className="flex flex-1 flex-col h-full items-center justify-center rounded-md border border-dashed p-8 text-center animate-in fade-in-50">
+        <Ban className="mb-4 h-12 w-12 text-primary" />
+        <h2 className="mb-2 text-lg font-semibold">No Courses Available</h2>
+        <p className="text-sm text-muted-foreground">
+          You didn't enroll in any course yet.
+        </p>
+        <Link
+          href="/courses"
+          className={buttonVariants({
+            className: "mt-4 w-full cursor-pointer",
+          })}
+        >
+          Explore Courses
+        </Link>
+      </div>
+    );
+  }
   return (
     <>
       <div className="flex flex-col gap-2">

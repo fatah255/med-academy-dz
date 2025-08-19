@@ -33,11 +33,12 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Check, ChevronsUpDown, Loader2 } from "lucide-react";
 import { useEffect, useTransition } from "react";
 import { useForm } from "react-hook-form";
-import { editLevel } from "./actions";
+import { addAdmin, editLevel } from "./actions";
 import { useSession } from "@/lib/auth-client";
 import { getLevel } from "../courses/actions";
 import { tryCatch } from "@/hooks/try-catch";
 import { toast } from "sonner";
+import { Input } from "@/components/ui/input";
 
 const toLabel = (v?: string) =>
   v
@@ -93,8 +94,23 @@ export default function Page() {
       } else if (result.status === "error") {
         toast.error("you have been blocked , try again later");
       }
+      if (data.adminEmail) {
+        const { data: result2, error: error2 } = await tryCatch(
+          addAdmin(data.adminEmail)
+        );
+        if (error2) {
+          toast.error("Failed to add admin. Please try again.");
+          return;
+        }
+        if (result2.status === "success") {
+          toast.success("Admin added successfully");
+        } else if (result2.status === "error") {
+          toast.error("Failed to add admin");
+        }
+      }
     });
   }
+  const userIsOwner = session?.user.id === "f6oOnieZJqNV2NxQ364xNyo2Gzp5S5p3";
 
   return (
     <div className="max-w-2xl mx-auto p-6 mt-5">
@@ -160,6 +176,21 @@ export default function Page() {
               </FormItem>
             )}
           />
+          {userIsOwner && (
+            <FormField
+              control={form.control}
+              name="adminEmail"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Add a new Admin</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Enter admin email" {...field} />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+          )}
+
           <Button type="submit" className="w-full">
             {isPending ? (
               <>
