@@ -108,12 +108,7 @@ const NewLessonModal = ({
             />
 
             <DialogFooter>
-              <Button
-                disabled={isPending}
-                type="submit"
-                variant="default"
-                className="w-full"
-              >
+              <Button disabled={isPending} type="submit" className="w-full">
                 {isPending ? "Creating..." : "Create Lesson"}
               </Button>
             </DialogFooter>

@@ -137,7 +137,7 @@ const NewAnswerModal = ({
               <Button
                 disabled={isPending}
                 type="submit"
-                variant="default"
+          
                 className="w-full"
               >
                 {isPending ? "Creating..." : "Create answer"}

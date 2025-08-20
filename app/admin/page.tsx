@@ -27,7 +27,10 @@ const AdminPage = async () => {
   const notEnrolled = total - enrolled;
 
   const dataToRender =
-    session.user.email === "a.lebkara@esi-sba.dz" ? data : finalData;
+    session.user.email === "a.lebkara@esi-sba.dz" ||
+    session.user.email === "abdouzerguine897@gmail.com"
+      ? data
+      : finalData;
   return (
     <>
       <SectionCards email={session.user.email} />

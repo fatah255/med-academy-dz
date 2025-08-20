@@ -13,6 +13,7 @@ import { useCourseProgress } from "@/hooks/use-course-progress";
 import { BookAIcon, TimerIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import StartTest from "./StartTestModal";
 
 const DashboardQuizCard = ({
   quiz,
@@ -23,12 +24,7 @@ const DashboardQuizCard = ({
 }) => {
   const level = quiz.quiz?.level.split("_").join(" ").toLowerCase();
   const thumbnailUrl = useConstructUrl(quiz.quiz?.fileKey);
-  // const { progress, totalLessons, completedLessons } = useCourseProgress({
-  //   course: quiz,
-  //   userId,
-  // });
 
-  const progress = 20;
   return (
     <Card className="group relative py-0 gap-0 space-y-3">
       <Badge className="absolute top-2 right-2 z-10 p-2 font-medium">
@@ -42,12 +38,9 @@ const DashboardQuizCard = ({
         height={400}
       />
       <CardContent className="p-4">
-        <Link
-          className="font-medium text-lg line-clamp-2 hover:underline group-hover:text-primary transition-colors"
-          href={`/courses/${quiz.quiz?.slug}`}
-        >
+        <div className="font-medium text-lg line-clamp-2 group-hover:text-primary transition-colors">
           {quiz.quiz?.title}
-        </Link>
+        </div>
 
         <div className="mt-4 flex items-center gap-x-5">
           <div className="flex items-center gap-x-2">
@@ -57,16 +50,11 @@ const DashboardQuizCard = ({
             </p>
           </div>
         </div>
-        <div className="mx-2 my-4 flex flex-col items-end justify-end">
-          <Progress value={progress} max={100} />
-          <p className="text-sm text-muted-foreground">{progress}% completed</p>
-        </div>
-        <Link
-          className={buttonVariants({ className: "mt-4 w-full" })}
-          href={`/dashboard/${quiz.quiz?.slug}`}
-        >
-          {progress > 0 ? "Continue studying" : "Start Studying"}
-        </Link>
+
+        <StartTest
+          totalQuestions={quiz.quiz?.qcm.length || 0}
+          quizId={quiz.quiz?.id as string}
+        />
       </CardContent>
     </Card>
   );

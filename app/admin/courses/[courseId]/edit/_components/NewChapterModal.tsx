@@ -96,12 +96,7 @@ const NewChapterModal = ({ courseId }: { courseId: string }) => {
             />
 
             <DialogFooter>
-              <Button
-                disabled={isPending}
-                type="submit"
-                variant="default"
-                className="w-full"
-              >
+              <Button disabled={isPending} type="submit" className="w-full">
                 {isPending ? "Creating..." : "Create Chapter"}
               </Button>
             </DialogFooter>

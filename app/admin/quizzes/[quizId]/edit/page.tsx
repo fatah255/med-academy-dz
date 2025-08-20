@@ -1,4 +1,3 @@
-import { adminGetCourse } from "@/app/data/admin/admin-get-course";
 import {
   Card,
   CardContent,

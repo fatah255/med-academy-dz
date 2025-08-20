@@ -46,7 +46,8 @@ export async function SectionCards({ email }: { email?: string }) {
           </div>
         </CardFooter>
       </Card>
-      {email === "a.lebkara@esi-sba.dz" && (
+      {(email === "a.lebkara@esi-sba.dz" ||
+        email === "abdouzerguine897@gmail.com") && (
         <Card className="@container/card ">
           <CardHeader>
             <CardDescription>
@@ -85,7 +86,8 @@ export async function SectionCards({ email }: { email?: string }) {
           <p> </p>
         </CardContent>
       </Card>
-      {email === "a.lebkara@esi-sba.dz" && (
+      {(email === "a.lebkara@esi-sba.dz" ||
+        email === "abdouzerguine897@gmail.com") && (
         <Card className="@container/card">
           <CardHeader>
             <CardDescription>Total Courses</CardDescription>

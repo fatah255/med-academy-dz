@@ -136,12 +136,7 @@ const EditAnswerModal = ({
             />
 
             <DialogFooter>
-              <Button
-                disabled={isPending}
-                type="submit"
-                variant="default"
-                className="w-full"
-              >
+              <Button disabled={isPending} type="submit" className="w-full">
                 {isPending ? "Updating..." : "Update answer"}
               </Button>
             </DialogFooter>

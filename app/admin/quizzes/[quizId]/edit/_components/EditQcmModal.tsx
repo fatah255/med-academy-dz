@@ -108,12 +108,7 @@ const EditQcmModal = ({
             />
 
             <DialogFooter>
-              <Button
-                disabled={isPending}
-                type="submit"
-                variant="default"
-                className="w-full"
-              >
+              <Button disabled={isPending} type="submit" className="w-full">
                 {isPending ? "Updating..." : "Update Question"}
               </Button>
             </DialogFooter>

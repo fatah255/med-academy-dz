@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
-import PublicCourseCard from "../../(landing-page)/_components/PublicCourseCard";
-import DashboardCourseCard from "../_components/DashboardCourseCard";
+
 import { requireUser } from "../../data/user/require-user";
 import { getEnrolledQuizzes } from "@/app/data/user/get-enrolled-quizzes";
 import { Ban } from "lucide-react";
