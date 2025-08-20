@@ -52,7 +52,7 @@ interface SortableItemProps {
   };
 }
 
-const numToLetter = new Map(
+export const numToLetter = new Map(
   Array.from({ length: 26 }, (_, i) => [i + 1, String.fromCharCode(65 + i)])
 );
 

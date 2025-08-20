@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/db";
 import { notFound } from "next/navigation";
 import ClientQCM from "../_components/ClientQCM";
+import { v4 } from "uuid";
 
 type PageProps = {
   params: { quizId: string }; // not a Promise
@@ -43,11 +44,12 @@ export default async function Page({ params, searchParams }: PageProps) {
       .map((a, i) => (a.isCorrect ? i : -1))
       .filter((i) => i >= 0),
   }));
+  const gameId = v4(); // Generate a new UUID for the game
 
   return (
     <ClientQCM
       game={{
-        id: "hhhh", // or crypto.randomUUID()
+        id: gameId,
         topic: data.title ?? "Test Quiz",
         timeStarted: new Date().toISOString(),
         questions,
