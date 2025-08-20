@@ -6,12 +6,6 @@ import { ApiResponse } from "@/lib/types";
 import {
   answerSchema,
   answerSchemaType,
-  chapterSchema,
-  chapterSchemaType,
-  courseSchema,
-  courseSchemaType,
-  lessonSchema,
-  lessonSchemaType,
   qcmSchema,
   qcmSchemaType,
   QuestionSchema,
@@ -68,7 +62,7 @@ export const editQuiz = async (
     });
     return {
       status: "success",
-      message: "Course updated successfully",
+      message: "Quiz updated successfully",
     };
   } catch {
     return {
@@ -257,7 +251,7 @@ export const createQcm = async (
   } catch {
     return {
       status: "error",
-      message: "Failed to create chapter",
+      message: "Failed to create question",
     };
   }
 };
