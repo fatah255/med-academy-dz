@@ -1,5 +1,3 @@
-import { getCourse } from "@/app/data/course/get-course";
-
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import useConstructUrl from "@/hooks/use-construct-url";
@@ -7,36 +5,17 @@ import useConstructUrl from "@/hooks/use-construct-url";
 import { Book, Check, School, TimerIcon } from "lucide-react";
 import Image from "next/image";
 
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
-  IconAbc,
-  IconBook,
-  IconChevronDown,
-  IconClock,
-  IconPlayerPlay,
-  IconQuestionMark,
-  IconSchool,
-  IconWriting,
-} from "@tabler/icons-react";
-import { Button, buttonVariants } from "@/components/ui/button";
-import { userIsEnrolled } from "@/app/data/user/user-is-enrolled";
+import { Card, CardContent } from "@/components/ui/card";
+import { IconBook, IconQuestionMark, IconSchool } from "@tabler/icons-react";
+import { buttonVariants } from "@/components/ui/button";
+
 import Link from "next/link";
 
 import { getQuiz } from "@/app/data/quiz/get-quiz";
 import Description from "@/app/courses/[slug]/Description";
 import EnrollementQuizButton from "@/app/quizzes/[slug]/EnrollmentQuizButton";
 import { userIsEnrolledQuiz } from "@/app/data/user/user-is-enrolled-quiz";
+import { prisma } from "@/lib/db";
 
 type Params = Promise<{
   slug: string;

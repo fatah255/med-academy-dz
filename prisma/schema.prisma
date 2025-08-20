@@ -4,15 +4,17 @@
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
-generator client {
-  provider = "prisma-client-js"
-  output   = "../lib/generated/prisma"
-}
 
 // datasource db {
 //   provider = "cockroachdb"
 //   url      = env("DB_URL")
 // }
+generator client {
+  provider = "prisma-client-js"
+  output   = "../lib/generated/prisma"
+}
+
+
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
@@ -34,6 +36,7 @@ model User {
   quizzes       Quiz[]
   enrollments   Enrollment[]
   lessonProgress LessonProgress[]
+  games         Game[]
   isAdmin       Boolean     @default(false)
   role          String?
   banned        Boolean?
@@ -170,6 +173,7 @@ model Quiz {
   level            CourseLevel  @default(FIRST_YEAR)
   category         String
   enrollments      Enrollment[]
+  games            Game[]
 
   userId   String
   user     User      @relation(fields: [userId], references: [id])
@@ -183,6 +187,7 @@ model Qcm {
   id        String       @id @default(uuid())
   question  String
   answers   QcmAnswer[]  // <- answers live here
+  gameAnswers GameAnswer[] // <- game answers live here
   position         Int
   
   createdAt DateTime     @default(now())
@@ -240,4 +245,37 @@ model LessonProgress {
   updatedAt DateTime @updatedAt
 
   @@unique([userId, lessonId])
+}
+
+model Game {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  quizId      String
+  quiz        Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  topic       String
+  timeStarted DateTime @default(now())
+  endedAt     DateTime?
+  correct     Int      @default(0)
+  wrong       Int      @default(0)
+  answers     GameAnswer[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([userId, quizId])
+  @@map("game")
+}
+
+model GameAnswer {
+  id           String   @id @default(uuid())
+  gameId       String
+  game         Game     @relation(fields: [gameId], references: [id], onDelete: Cascade)
+  qcmId        String
+  qcm          Qcm      @relation(fields: [qcmId], references: [id], onDelete: Cascade)
+  selectedText String
+  isCorrect    Boolean
+  position     Int?
+  createdAt    DateTime @default(now())
+
+  @@map("game_answer")
 }
