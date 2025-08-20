@@ -20,6 +20,11 @@ export async function userIsEnrolledQuiz(quizId: string) {
     },
     select: {
       status: true,
+      course: {
+        select: {
+          userId: true,
+        },
+      },
     },
   });
 

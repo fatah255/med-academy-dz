@@ -7,6 +7,7 @@ import { ThemeToggle } from "./ThemeToggle";
 const navigationItems = [
   { name: "Home", href: "/" },
   { name: "Courses", href: "/courses" },
+  { name: "Quizzes", href: "/quizzes" },
   { name: "Dashboard", href: "/dashboard" },
 ];
 // Update the path below to the correct relative path if needed
