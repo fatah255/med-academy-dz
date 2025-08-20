@@ -5,6 +5,7 @@
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { requireAdmin } from "../data/admin/require-admin";
+import { requireUser } from "../data/user/require-user";
 
 /** ---------- Helpers ---------- **/
 function date30DaysAgo() {
@@ -102,6 +103,7 @@ function calendarLastMonthRange() {
 /** ✅ Recommended: sum Enrollment.amount for PAID enrollments in last 30 days */
 export async function totalRevenueLast30Days() {
   const since = date30DaysAgo();
+  const session = await requireAdmin();
   const res = await prisma.enrollment.aggregate({
     _sum: { amount: true },
     where: { status: "PAID", createdAt: { gte: since } },
@@ -116,7 +118,7 @@ export async function totalRevenueLast30DaysUser() {
   const since = date30DaysAgo();
   const res = await prisma.enrollment.aggregate({
     _sum: { amount: true },
-    where: { status: "PAID", createdAt: { gte: since }, userId },
+    where: { status: "PAID", createdAt: { gte: since }, course: { userId } },
   });
   return res._sum.amount ?? 0;
 }
@@ -128,7 +130,7 @@ export async function totalRevenueLast30DaysFromCoursePrice() {
     where: { status: "PAID", createdAt: { gte: since } },
     select: { course: { select: { price: true } } },
   });
-  return rows.reduce((sum, r) => sum + r.course.price, 0);
+  return rows.reduce((sum, r) => sum + r.course?.price || 0, 0);
 }
 
 /* --------------- REVENUE: previous calendar month --------------- */

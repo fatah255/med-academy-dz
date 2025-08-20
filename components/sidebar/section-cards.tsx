@@ -25,7 +25,7 @@ import { PlusIcon } from "lucide-react";
 import { requireAdmin } from "@/app/data/admin/require-admin";
 import { Separator } from "../ui/separator";
 
-export async function SectionCards() {
+export async function SectionCards({ email }: { email?: string }) {
   await requireAdmin();
   const { published, draft, archived } = await totalCourses();
   return (
@@ -46,27 +46,31 @@ export async function SectionCards() {
           </div>
         </CardFooter>
       </Card>
-      <Card className="@container/card ">
-        <CardHeader>
-          <CardDescription>Total Revenues for the last 30 days</CardDescription>
-        </CardHeader>
-        <CardContent className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl mt-2">
-          {new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "DZD",
-          }).format(await totalRevenueLast30Days())}
-        </CardContent>
-        <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <Separator className="my-2" />
-          <p className="text-sm text-muted-foreground">
-            the revenue from quizzes is:{" "}
-          </p>
-          {new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "DZD",
-          }).format(await getQuizRevenueLast30Days())}
-        </CardFooter>
-      </Card>
+      {email === "a.lebkara@esi-sba.dz" && (
+        <Card className="@container/card ">
+          <CardHeader>
+            <CardDescription>
+              Total Revenues for the last 30 days
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl mt-2">
+            {new Intl.NumberFormat("en-US", {
+              style: "currency",
+              currency: "DZD",
+            }).format(await totalRevenueLast30Days())}
+          </CardContent>
+          <CardFooter className="flex-col items-start gap-1.5 text-sm">
+            <Separator className="my-2" />
+            <p className="text-sm text-muted-foreground">
+              the revenue from quizzes is:{" "}
+            </p>
+            {new Intl.NumberFormat("en-US", {
+              style: "currency",
+              currency: "DZD",
+            }).format(await getQuizRevenueLast30Days())}
+          </CardFooter>
+        </Card>
+      )}
       <Card className="@container/card ">
         <CardHeader>
           <CardDescription>
@@ -81,16 +85,18 @@ export async function SectionCards() {
           <p> </p>
         </CardContent>
       </Card>
-      <Card className="@container/card">
-        <CardHeader>
-          <CardDescription>Total Courses</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>{published} Published courses</p>
-          <p>{draft} Draft courses</p>
-          <p>{archived} Archived courses</p>
-        </CardContent>
-      </Card>
+      {email === "a.lebkara@esi-sba.dz" && (
+        <Card className="@container/card">
+          <CardHeader>
+            <CardDescription>Total Courses</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>{published} Published courses</p>
+            <p>{draft} Draft courses</p>
+            <p>{archived} Archived courses</p>
+          </CardContent>
+        </Card>
+      )}
     </div>
   );
 }
