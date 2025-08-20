@@ -17,6 +17,11 @@ export const adminGetQuizzes = async () => {
       fileKey: true,
       level: true,
       category: true,
+      qcm: {
+        select: {
+          id: true,
+        },
+      },
     },
   });
   return data;

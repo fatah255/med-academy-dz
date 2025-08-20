@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Skeleton } from "@/components/ui/skeleton";
 import { AdminQuizType } from "@/app/data/admin/admin-get-quizzes";
+import PreviewQuizModal from "./PreviewQuizModal";
 
 const QuizCard = ({ quiz }: { quiz: AdminQuizType }) => {
   const level = quiz.level
@@ -48,10 +49,14 @@ const QuizCard = ({ quiz }: { quiz: AdminQuizType }) => {
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <Link href={`/quizzes/${quiz.slug}`}>
+              {/* <Link href={`/quizzes/${quiz.slug}`}>
                 <Eye className="mr-2 size-4" />
                 Preview Quiz
-              </Link>
+              </Link> */}
+              <PreviewQuizModal
+                totalQuestions={quiz.qcm.length}
+                quizId={quiz.id}
+              />
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
