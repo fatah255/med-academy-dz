@@ -43,23 +43,6 @@ const QuizCard = ({ quiz }: { quiz: AdminQuizType }) => {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-48" align="end">
             <DropdownMenuItem asChild>
-              <Link href={`/admin/quizzes/${quiz.id}/edit`}>
-                <Pencil className="mr-2 size-4" />
-                Edit Quiz
-              </Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem asChild>
-              {/* <Link href={`/quizzes/${quiz.slug}`}>
-                <Eye className="mr-2 size-4" />
-                Preview Quiz
-              </Link> */}
-              <PreviewQuizModal
-                totalQuestions={quiz.qcm.length}
-                quizId={quiz.id}
-              />
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem asChild>
               <Link href={`/admin/quizzes/${quiz.id}/delete`}>
                 <Trash2 className="mr-2 text-destructive size-4" />
                 Delete Quiz
