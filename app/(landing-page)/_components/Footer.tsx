@@ -25,7 +25,7 @@ const navigation: Social[] = [
   },
   {
     name: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/medacademy_dz?igsh=MTZ3Z3ozM2tranJudA==",
     external: true,
     icon: (props) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>

@@ -1,7 +1,6 @@
-
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Dialog, DialogPanel } from "@headlessui/react";
@@ -13,16 +12,30 @@ import { buttonVariants } from "@/components/ui/button";
 import { UserDropdown } from "./UserDropdown";
 import { useSession } from "@/lib/auth-client";
 
-const navigationItems = [
-  { name: "Home", href: "/" },
-  { name: "Courses", href: "/courses" },
-  { name: "Quizzes", href: "/quizzes" },
-  { name: "Dashboard", href: "/dashboard" },
-];
-
 export function Navbar() {
   const { data: session, isPending } = useSession();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [navigationItems, setNavigationItems] = useState([
+    { name: "Home", href: "/" },
+    { name: "Courses", href: "/courses" },
+    { name: "Quizzes", href: "/quizzes" },
+  ]);
+  useEffect(() => {
+    if (session?.user) {
+      setNavigationItems([
+        { name: "Home", href: "/" },
+        { name: "Courses", href: "/courses" },
+        { name: "Quizzes", href: "/quizzes" },
+        { name: "Dashboard", href: "/dashboard" },
+      ]);
+    } else {
+      setNavigationItems([
+        { name: "Home", href: "/" },
+        { name: "Courses", href: "/courses" },
+        { name: "Quizzes", href: "/quizzes" },
+      ]);
+    }
+  }, [session?.user]);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -119,7 +132,11 @@ export function Navbar() {
               className="-m-1.5 p-1.5 flex items-center gap-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <Image src={Logo} alt="Med Academy" className="h-8 w-8 dark:invert" />
+              <Image
+                src={Logo}
+                alt="Med Academy"
+                className="h-8 w-8 dark:invert"
+              />
               <span className="font-bold">Med Academy</span>
             </Link>
             <button
@@ -157,7 +174,7 @@ export function Navbar() {
               </div>
 
               <div className="py-6 flex items-center gap-3">
-                {isPending ? null : session ? (
+                {isPending ? null : session?.user ? (
                   <Link
                     href="/dashboard"
                     onClick={() => setMobileMenuOpen(false)}
