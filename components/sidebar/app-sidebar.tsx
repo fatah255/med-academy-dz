@@ -130,7 +130,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   width={20}
                   height={20}
                   alt="logo"
-                  className="!size-5"
+                  className="!size-5 dark:invert"
                 />
                 <span className="text-base font-semibold">Med Academy</span>
               </Link>

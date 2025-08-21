@@ -26,7 +26,13 @@ export default function AuthLayout({
           className="flex items-center gap-2 self-center font-medium"
           href="/"
         >
-          <Image src="/logo.svg" alt="Med Academy DZ" width={32} height={32} />
+          <Image
+            src="/logo.svg"
+            className="dark:invert"
+            alt="Med Academy DZ"
+            width={32}
+            height={32}
+          />
           Med Academy DZ
         </Link>
         {children}
