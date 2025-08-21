@@ -23,9 +23,7 @@ export async function userIsEnrolled(courseId: string) {
     },
   });
 
-  return session.user.role === "admin"
-    ? true
-    : enrollment
+  return enrollment
     ? enrollment.status === "PAID" || enrollment.status === "paid"
     : false;
 }

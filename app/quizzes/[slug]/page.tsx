@@ -150,7 +150,7 @@ const page = async ({ params }: { params: Params }) => {
               {isEnrolled ? (
                 <>
                   <Link
-                    href={`/dashboard`}
+                    href={`/dashboard/quizzes`}
                     className={buttonVariants({
                       className: "w-full font-bold text-lg cursor-pointer",
                     })}

@@ -86,6 +86,20 @@ export async function createCheckout(courseId: string): Promise<ApiResponse> {
           transactionId: res.id,
         },
       });
+    } else {
+      await prisma.enrollment.update({
+        where: {
+          userId_courseId: {
+            userId,
+            courseId,
+          },
+        },
+        data: {
+          amount: price,
+          status: "PENDING",
+          transactionId: res.id,
+        },
+      });
     }
   } catch (error) {
     return {

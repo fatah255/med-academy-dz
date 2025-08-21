@@ -111,7 +111,7 @@ export function NavUser() {
               <DropdownMenuItem asChild>
                 <Link href="/">
                   <HomeIcon />
-                  HomePage
+                  Home
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
