@@ -56,12 +56,12 @@ export const lessonSchema = z.object({
 });
 
 export const QuestionSchema = z.object({
-  question: z.string().min(3, { message: "Question name is required." }),
+  question: z.string().min(1, { message: "Question name is required." }),
   quizId: z.string().uuid({ message: "Invalid course ID." }),
 });
 
 export const answerSchema = z.object({
-  text: z.string().min(3, { message: "Answer name is required." }),
+  text: z.string().min(1, { message: "Answer name is required." }),
   quizId: z.string().uuid({ message: "Invalid quiz ID." }),
   questionId: z.string().uuid({ message: "Invalid question ID." }),
 
@@ -147,7 +147,7 @@ export const qcmUpdateSchema = z.object({
 export const qcmSchema = z.object({
   title: z
     .string()
-    .min(3, { message: "Title must be at least 3 characters long." })
+    .min(1, { message: "Title must be at least 1 character long." })
     .max(100, { message: "Title must not exceed 100 characters." }),
   description: z
     .string()

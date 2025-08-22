@@ -7,39 +7,44 @@ import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
 
 const faqs = [
   {
-    question: "What makes Med Academy different?",
+    question: "What is Med Academy?",
     answer:
-      "Our courses and board-style quizzes are written and reviewed by clinicians. Content is concise, clinically integrated, and focused on what shows up in exams and on the wards.",
+      "Med Academy is an online learning platform designed for medical students. We provide high-quality courses, lectures, and study resources to help you succeed in your medical studies and exams.",
   },
   {
-    question: "What quiz formats do you support?",
+    question: "Who can use the platform?",
     answer:
-      "Single-best-answer (SBA), multi-select (select all that apply), and timed/untimed practice. Every question includes a clear explanation to reinforce the concept.",
+      "Our platform is mainly for medical students and teachers, but anyone interested in medical sciences are welcome to join.",
   },
   {
-    question: "How is my progress tracked?",
+    question: "How do I register?",
     answer:
-      "You’ll see accuracy and time on task by system and topic, plus trends over time. This helps you identify strengths and gaps so you can study smarter.",
+      "Simply click on the Sign In button and create an account. Once registered, you can browse free and paid courses.",
   },
   {
-    question: "Is there free content?",
+    question: "Are the courses free?",
     answer:
-      "Yes. You can try sample quizzes and preview lessons before enrolling in full courses.",
+      "We offer a mix of free and paid courses. Free courses are accessible to everyone after registration. Paid courses require a one-time payment.",
   },
   {
-    question: "Will my quiz results be saved?",
+    question: "How do I pay for a course?",
     answer:
-      "Yes—your attempts and statistics are saved on your device so you can review them on the Statistics page even after you leave the quiz.",
+      "You can pay online using Dahabia or CIB. After payment, you get instant access to the course materials.",
   },
   {
-    question: "Does it work on mobile?",
+    question: "What do I get after enrolling in a course?",
     answer:
-      "Absolutely. Med Academy is mobile-friendly and works on all modern browsers.",
+      "You get full access to: Video lectures, Downloadable resources (PDFs, notes, presentations), Practice quizzes and exam simulations.",
   },
   {
-    question: "Can I request new topics?",
+    question: "Can I access my courses anytime?",
     answer:
-      "We’d love to hear from you. Send requests from the feedback link—high-demand topics are prioritized.",
+      "Yes! Once enrolled, you can access your courses 24/7 from any device (computer, tablet, or smartphone).",
+  },
+  {
+    question: "Can I cancel or get a refund?",
+    answer:
+      "Refunds depend on the course type and our refund policy. If you face a technical issue or purchased by mistake, please contact our support within 2 days for assistance.",
   },
 ];
 
