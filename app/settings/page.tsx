@@ -110,7 +110,7 @@ export default function Page() {
       }
     });
   }
-  const userIsOwner = session?.user.id === "f6oOnieZJqNV2NxQ364xNyo2Gzp5S5p3";
+  const userIsOwner = session?.user.email === "a.lebkara@esi-sba.dz";
 
   return (
     <div className="max-w-2xl mx-auto p-6 mt-5">
