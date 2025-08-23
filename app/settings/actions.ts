@@ -56,7 +56,7 @@ export async function addAdmin(email: string): Promise<ApiResponse> {
   try {
     await prisma.user.update({
       where: { email },
-      data: { isAdmin: true },
+      data: { isAdmin: true, role: "admin" },
     });
     return { status: "success", message: "Admin added successfully" };
   } catch (error) {
