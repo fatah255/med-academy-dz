@@ -98,7 +98,7 @@ const Page = (): ReactNode => {
       const { data, error } = await tryCatch(createCourse(values));
 
       if (error) {
-        toast.error("Something went wrong while creating the course");
+        toast.error(error.message || "Something went wrong");
       }
       if (data?.status === "success") {
         toast.success(data.message);
