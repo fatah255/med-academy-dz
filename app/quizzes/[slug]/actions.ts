@@ -61,7 +61,7 @@ export async function createQuizCheckout(quizId: string): Promise<ApiResponse> {
     };
 
     const res = await fetch(
-      "https://pay.chargily.net/test/api/v2/checkouts",
+      "https://pay.chargily.net/api/v2/checkouts",
       options
     ).then((response) => response.json());
 

@@ -61,11 +61,12 @@ export async function createCheckout(courseId: string): Promise<ApiResponse> {
     };
 
     const res = await fetch(
-      "https://pay.chargily.net/test/api/v2/checkouts",
+      "https://pay.chargily.net/api/v2/checkouts",
       options
     ).then((response) => response.json());
 
     checkoutUrl = res.checkout_url;
+    console.log(res);
 
     const enrollment = await prisma.enrollment.findUnique({
       where: {
@@ -86,18 +87,19 @@ export async function createCheckout(courseId: string): Promise<ApiResponse> {
           transactionId: res.id,
         },
       });
-    } else {
-      await prisma.enrollment.update({
-        where: {
-          userId_courseId: {
-            userId,
-            courseId,
-          },
+    } else if (enrollment.status === "PENDING") {
+      await prisma.enrollment.upsert({
+        where: { userId_courseId: { userId, courseId } },
+        update: {
+          amount: price,
+          transactionId: String(res.id), // <- always set/refresh
         },
-        data: {
+        create: {
+          user: { connect: { id: userId } },
+          course: { connect: { id: courseId } },
           amount: price,
           status: "PENDING",
-          transactionId: res.id,
+          transactionId: String(res.id), // <- always set/refresh
         },
       });
     }
@@ -109,6 +111,7 @@ export async function createCheckout(courseId: string): Promise<ApiResponse> {
   }
 
   redirect(checkoutUrl);
+  console.log("Checkout created successfully:", checkoutUrl);
 
   return {
     status: "success",
