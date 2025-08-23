@@ -389,21 +389,51 @@ const Page = (): ReactNode => {
                 <FormField
                   control={form.control}
                   name="duration"
-                  render={({ field }) => {
-                    return (
-                      <FormItem className="w-full">
-                        <FormLabel>Duration (in hours)</FormLabel>
-                        <FormControl>
-                          <Input
-                            {...field}
-                            type="number"
-                            placeholder="Duration"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    );
-                  }}
+                  render={({ field }) => (
+                    <FormItem className="w-full">
+                      <FormLabel>Duration (in hours)</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          type="number"
+                          placeholder="Duration"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="duration"
+                  render={({ field }) => (
+                    <FormItem className="w-full">
+                      <FormLabel>Price (DZD)</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="number"
+                          inputMode="numeric"
+                          // keep it controlled: always pass a string
+                          value={
+                            field.value === undefined || field.value === null
+                              ? ""
+                              : String(field.value)
+                          }
+                          onChange={(e) => {
+                            const v = e.target.value;
+                            if (v === "") {
+                              // empty input -> undefined (so Zod can show “required”)
+                              field.onChange(undefined);
+                              return;
+                            }
+                            const n = Number(v);
+                            field.onChange(Number.isNaN(n) ? undefined : n);
+                          }}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
                 <FormField
                   control={form.control}
