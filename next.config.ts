@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "med-academy-dz.t3.storageapi.dev",
+        hostname: "medacademydz.t3.storageapi.dev",
         port: "",
       },
     ],
