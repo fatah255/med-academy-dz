@@ -77,7 +77,7 @@ const Page = (): ReactNode => {
       smallDescription: "",
       fileKey: "",
       price: undefined,
-      duration: 0,
+      duration: undefined,
     },
   });
 
@@ -391,24 +391,7 @@ const Page = (): ReactNode => {
                   name="duration"
                   render={({ field }) => (
                     <FormItem className="w-full">
-                      <FormLabel>Duration (in hours)</FormLabel>
-                      <FormControl>
-                        <Input
-                          {...field}
-                          type="number"
-                          placeholder="Duration"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="duration"
-                  render={({ field }) => (
-                    <FormItem className="w-full">
-                      <FormLabel>Price (DZD)</FormLabel>
+                      <FormLabel>Duration in hours</FormLabel>
                       <FormControl>
                         <Input
                           type="number"
