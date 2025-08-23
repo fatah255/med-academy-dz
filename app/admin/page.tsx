@@ -28,7 +28,8 @@ const AdminPage = async () => {
 
   const dataToRender =
     session.user.email === "a.lebkara@esi-sba.dz" ||
-    session.user.email === "abdouzerguine897@gmail.com"
+    session.user.email === "abdouzerguine897@gmail.com" ||
+    session.user.email === "medacademydz@gmail.com"
       ? data
       : finalData;
   return (
