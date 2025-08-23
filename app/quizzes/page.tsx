@@ -1,7 +1,5 @@
 import { Suspense } from "react";
-import PublicCourseCard, {
-  PublicCourseCardSkeleton,
-} from "../(landing-page)/_components/PublicCourseCard";
+import { PublicCourseCardSkeleton } from "../(landing-page)/_components/PublicCourseCard";
 
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";

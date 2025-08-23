@@ -26,6 +26,8 @@ const CourseContent = ({ lesson }: CourseContentProps) => {
     videoKey: string | null;
     thumbnailKey: string | null;
   }) => {
+    const videoUrl = useConstructUrl(videoKey || "");
+    const poster = thumbnailKey ? useConstructUrl(thumbnailKey) : undefined;
     if (!videoKey) {
       return (
         <div className="aspect-video rounded-lg bg-muted flex flex-col items-center justify-center">
@@ -34,9 +36,6 @@ const CourseContent = ({ lesson }: CourseContentProps) => {
         </div>
       );
     }
-
-    const videoUrl = useConstructUrl(videoKey);
-    const poster = thumbnailKey ? useConstructUrl(thumbnailKey) : undefined;
 
     return (
       <div className="aspect-video relative rounded-lg overflow-hidden bg-black">

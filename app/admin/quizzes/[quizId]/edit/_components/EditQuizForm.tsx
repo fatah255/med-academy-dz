@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 
 import slugify from "slugify";
-import { Loader2, PlusIcon, SparklesIcon } from "lucide-react";
+import { Loader2, SparklesIcon } from "lucide-react";
 
 import { modulesByYear } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -101,7 +101,7 @@ const EditQuizForm = ({ quiz }: EditQuizFormProps) => {
     ) {
       form.setValue("category", "");
     }
-  }, [selectedYear]);
+  }, [selectedYear, form]);
 
   function onSubmit(values: qcmSchemaType) {
     startTransition(async () => {
@@ -291,7 +291,6 @@ const EditQuizForm = ({ quiz }: EditQuizFormProps) => {
             )}
           />
           <FormField
-            className="mt-2 w-fit"
             control={form.control}
             name="category"
             render={({ field }) => (

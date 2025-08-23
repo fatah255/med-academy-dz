@@ -17,14 +17,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import {
-  answerSchema,
-  answerSchemaType,
-  chapterSchema,
-  chapterSchemaType,
-  lessonSchema,
-  lessonSchemaType,
-} from "@/lib/zodSchemas";
+import { answerSchema, answerSchemaType } from "@/lib/zodSchemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { PlusIcon } from "lucide-react";
 import { useState, useTransition } from "react";
@@ -134,12 +127,7 @@ const NewAnswerModal = ({
             />
 
             <DialogFooter>
-              <Button
-                disabled={isPending}
-                type="submit"
-          
-                className="w-full"
-              >
+              <Button disabled={isPending} type="submit" className="w-full">
                 {isPending ? "Creating..." : "Create answer"}
               </Button>
             </DialogFooter>

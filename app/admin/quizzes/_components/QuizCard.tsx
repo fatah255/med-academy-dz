@@ -1,16 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import { AdminCourseType } from "@/app/data/admin/admin-get-courses";
+
 import useConstructUrl from "@/hooks/use-construct-url";
 import Link from "next/link";
 import {
   ArrowRight,
   BookCheck,
-  Eye,
   MoreVertical,
-  Pencil,
   School,
-  TimerIcon,
   Trash2,
 } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -19,12 +16,10 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Skeleton } from "@/components/ui/skeleton";
 import { AdminQuizType } from "@/app/data/admin/admin-get-quizzes";
-import PreviewQuizModal from "./PreviewQuizModal";
 
 const QuizCard = ({ quiz }: { quiz: AdminQuizType }) => {
   const level = quiz.level

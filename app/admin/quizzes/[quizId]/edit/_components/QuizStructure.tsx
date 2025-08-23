@@ -139,13 +139,23 @@ const QuizStructure = ({ quiz }: QuizStructureProps) => {
       setItems(moved);
 
       const payload = moved.map((qcm) => ({ id: qcm.id, position: qcm.order }));
-      toast.promise(reorderQcm(quiz.id, payload), {
+
+      const promise = reorderQcm(quiz.id, payload).then((r) => {
+        if (r.status === "success") {
+          return r.message;
+        } else {
+          throw new Error(r.message);
+        }
+      });
+
+      toast.promise(promise, {
         loading: "Reordering questions...",
-        success: (r) =>
-          r.status === "success" ? r.message : Promise.reject(r.message),
+        success: (message) => message,
         error: (err) => {
           setItems(prev);
-          return typeof err === "string" ? err : "Failed to reorder questions";
+          return err instanceof Error
+            ? err.message
+            : "Failed to reorder questions";
         },
       });
       return;
@@ -180,13 +190,25 @@ const QuizStructure = ({ quiz }: QuizStructureProps) => {
       setItems(nextItems);
 
       const payload = reordered.map((a) => ({ id: a.id, position: a.order }));
-      toast.promise(reorderAnswers(activeQcmId, payload, quiz.id), {
+
+      const promise = reorderAnswers(activeQcmId, payload, quiz.id).then(
+        (r) => {
+          if (r.status === "success") {
+            return r.message;
+          } else {
+            throw new Error(r.message);
+          }
+        }
+      );
+
+      toast.promise(promise, {
         loading: "Reordering answers...",
-        success: (r) =>
-          r.status === "success" ? r.message : Promise.reject(r.message),
+        success: (message) => message,
         error: (err) => {
           setItems(prev);
-          return typeof err === "string" ? err : "Failed to reorder answers";
+          return err instanceof Error
+            ? err.message
+            : "Failed to reorder answers";
         },
       });
       return;

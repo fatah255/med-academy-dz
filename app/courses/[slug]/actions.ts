@@ -101,7 +101,7 @@ export async function createCheckout(courseId: string): Promise<ApiResponse> {
         },
       });
     }
-  } catch (error) {
+  } catch {
     return {
       status: "error",
       message: "Failed to process request",

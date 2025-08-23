@@ -20,7 +20,7 @@ import {
   qcmSchema,
   qcmSchemaType,
 } from "@/lib/zodSchemas";
-import { useEffect, useState, useTransition } from "react";
+import { ReactNode, useEffect, useTransition } from "react";
 
 import { Check, ChevronsUpDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -40,7 +40,6 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-import { courseSchema, courseSchemaType } from "@/lib/zodSchemas";
 import {
   Form,
   FormControl,
@@ -51,7 +50,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+
 import dynamic from "next/dynamic";
 import Uploader from "@/components/file-uploader/Uploader";
 import { tryCatch } from "@/hooks/try-catch";
@@ -68,7 +67,7 @@ const RichTextEditor = dynamic(
   }
 );
 
-const page = () => {
+const Page = (): ReactNode => {
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
   const form = useForm<qcmSchemaType>({
@@ -95,7 +94,7 @@ const page = () => {
       : "Module";
   useEffect(() => {
     form.setValue("category", "");
-  }, [selectedYear]);
+  }, [selectedYear, form]);
 
   function onSubmit(values: qcmSchemaType) {
     startTransition(async () => {
@@ -308,7 +307,6 @@ const page = () => {
                   )}
                 />
                 <FormField
-                  className="mt-2 w-fit"
                   control={form.control}
                   name="category"
                   render={({ field }) => (
@@ -482,4 +480,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

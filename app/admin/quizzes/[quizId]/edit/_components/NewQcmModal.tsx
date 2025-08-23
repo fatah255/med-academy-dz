@@ -17,12 +17,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import {
-  chapterSchema,
-  chapterSchemaType,
-  QuestionSchema,
-  questionSchemaType,
-} from "@/lib/zodSchemas";
+import { QuestionSchema, questionSchemaType } from "@/lib/zodSchemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { PlusIcon } from "lucide-react";
 import { useState, useTransition } from "react";

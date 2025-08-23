@@ -18,8 +18,8 @@ export const courseSchema = z.object({
     .min(10, { message: "Description must be at least 10 characters long." })
     .max(500, { message: "Description must not exceed 500 characters." }),
   fileKey: z.string().min(1, { message: "File key is required." }),
-  price: z.coerce.number().min(1, { message: "Price is required." }),
-  duration: z.coerce
+  price: z.number().min(1, { message: "Price is required." }),
+  duration: z
     .number()
     .min(1, { message: "Duration is required" })
     .max(500, { message: "Duration must not exceed 500 hours" }),
@@ -64,8 +64,7 @@ export const answerSchema = z.object({
   text: z.string().min(1, { message: "Answer name is required." }),
   quizId: z.string().uuid({ message: "Invalid quiz ID." }),
   questionId: z.string().uuid({ message: "Invalid question ID." }),
-
-  isCorrect: z.boolean().default(false),
+  isCorrect: z.boolean(),
 });
 
 export const settingsSchema = z.object({
@@ -154,7 +153,7 @@ export const qcmSchema = z.object({
     .min(10, { message: "Description must be at least 10 characters long." })
     .max(500, { message: "Description must not exceed 500 characters." }),
 
-  price: z.coerce.number().min(1, { message: "Price is required." }),
+  price: z.number().min(1, { message: "Price is required." }),
   fileKey: z.string().min(1, { message: "File key is required." }),
 
   level: z.enum(courseLevels),

@@ -2,17 +2,12 @@
 
 import { requireAdmin } from "@/app/data/admin/require-admin";
 import arcjet, { detectBot, fixedWindow } from "@/lib/arcjet";
-import { auth } from "@/lib/auth";
+
 import { prisma } from "@/lib/db";
 import { ApiResponse } from "@/lib/types";
-import {
-  courseSchema,
-  courseSchemaType,
-  qcmSchema,
-  qcmSchemaType,
-} from "@/lib/zodSchemas";
+import { qcmSchema, qcmSchemaType } from "@/lib/zodSchemas";
 import { request } from "@arcjet/next";
-import { headers } from "next/headers";
+
 const aj = arcjet
   .withRule(
     detectBot({
@@ -50,7 +45,7 @@ export const createQuiz = async (data: qcmSchemaType): Promise<ApiResponse> => {
       };
     }
 
-    const quizData = await prisma.quiz.create({
+    await prisma.quiz.create({
       data: {
         ...validation.data,
         userId: session?.user.id || "",
@@ -60,7 +55,7 @@ export const createQuiz = async (data: qcmSchemaType): Promise<ApiResponse> => {
       status: "success",
       message: "Quiz created successfully",
     };
-  } catch (error) {
+  } catch {
     return {
       status: "error",
       message: "Failed to create quiz",

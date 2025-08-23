@@ -44,7 +44,7 @@ export const deleteCourse = async (courseId: string): Promise<ApiResponse> => {
       status: "success",
       message: "Course deleted successfully",
     };
-  } catch (error) {
+  } catch {
     return {
       status: "error",
       message: "Something went wrong while deleting the course",

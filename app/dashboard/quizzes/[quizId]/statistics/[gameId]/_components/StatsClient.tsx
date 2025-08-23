@@ -79,7 +79,7 @@ export default function StatsClient({ gameId }: { gameId: string }) {
   const durationSeconds = Number.isFinite(stats.durationSeconds)
     ? stats.durationSeconds
     : differenceInSeconds(ended, started);
-
+  ``;
   return (
     <div className="p-8 mx-auto max-w-7xl">
       <div className="flex items-center justify-between space-y-2">

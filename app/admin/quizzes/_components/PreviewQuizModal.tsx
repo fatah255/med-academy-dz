@@ -43,7 +43,7 @@ export default function PreviewQuizModal({
   const router = useRouter();
   const direction = useDirection();
   const FormSchema = z.object({
-    numberOfQuestions: z.coerce
+    numberOfQuestions: z
       .number()
       .min(1, "Number of questions is required")
       .max(

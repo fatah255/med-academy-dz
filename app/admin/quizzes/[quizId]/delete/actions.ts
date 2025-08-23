@@ -44,7 +44,7 @@ export const deleteQuiz = async (quizId: string): Promise<ApiResponse> => {
       status: "success",
       message: "Quiz deleted successfully",
     };
-  } catch (error) {
+  } catch {
     return {
       status: "error",
       message: "Something went wrong while deleting the quiz",

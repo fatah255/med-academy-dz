@@ -19,13 +19,13 @@ import {
 import { Input } from "@/components/ui/input";
 import { answerSchema, answerSchemaType } from "@/lib/zodSchemas";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Pen, PlusIcon } from "lucide-react";
+import { Pen } from "lucide-react";
 import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 
 import { tryCatch } from "@/hooks/try-catch";
 import { toast } from "sonner";
-import { createAnswer } from "../actions";
+
 import { Checkbox } from "@/components/ui/checkbox";
 import { updateAnswer } from "@/app/admin/courses/[courseId]/edit/actions";
 
@@ -74,10 +74,10 @@ const EditAnswerModal = ({
   const form = useForm<answerSchemaType>({
     resolver: zodResolver(answerSchema),
     defaultValues: {
-      text: answerText,
-      quizId,
-      questionId: qcmId,
-      isCorrect,
+      text: answerText || "",
+      quizId: quizId || "",
+      questionId: qcmId || "",
+      isCorrect: isCorrect ?? false,
     },
   });
 

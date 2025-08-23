@@ -3,15 +3,12 @@ import { getAllCourses } from "../data/course/get-all-courses";
 import { getInrolledCourses } from "../data/user/get-inrolled-courses";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
-import PublicCourseCard from "../(landing-page)/_components/PublicCourseCard";
+
 import DashboardCourseCard from "./_components/DashboardCourseCard";
 import { requireUser } from "../data/user/require-user";
 
 const page = async () => {
-  const [courses, enrolledCourses] = await Promise.all([
-    getAllCourses(),
-    getInrolledCourses(),
-  ]);
+  const enrolledCourses = await getInrolledCourses();
   const session = await requireUser();
 
   if (!enrolledCourses || enrolledCourses.length === 0) {

@@ -3,6 +3,7 @@ import { buttonVariants } from "@/components/ui/button";
 import Features from "./_components/Features"; // adjust path if needed
 import FaqSection from "./_components/FaqSection";
 import Footer from "./_components/Footer";
+import Image from "next/image";
 
 export default function LandingPage() {
   return (

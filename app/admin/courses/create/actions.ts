@@ -2,12 +2,12 @@
 
 import { requireAdmin } from "@/app/data/admin/require-admin";
 import arcjet, { detectBot, fixedWindow } from "@/lib/arcjet";
-import { auth } from "@/lib/auth";
+
 import { prisma } from "@/lib/db";
 import { ApiResponse } from "@/lib/types";
 import { courseSchema, courseSchemaType } from "@/lib/zodSchemas";
 import { request } from "@arcjet/next";
-import { headers } from "next/headers";
+
 const aj = arcjet
   .withRule(
     detectBot({
@@ -48,7 +48,7 @@ export const createCourse = async (
       };
     }
 
-    const courseData = await prisma.course.create({
+   await prisma.course.create({
       data: {
         ...validation.data,
         userId: session?.user.id || "",

@@ -1,11 +1,7 @@
-import { AppSidebar } from "@/components/app-sidebar";
-
 import { SiteHeader } from "@/components/site-header";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { ReactNode } from "react";
 import { DashboardSidebar } from "./_components/DashboardSidebar";
-import { prisma } from "@/lib/db";
-import { requireUser } from "../data/user/require-user";
 
 const Layout = async ({ children }: { children: ReactNode }) => {
   return (

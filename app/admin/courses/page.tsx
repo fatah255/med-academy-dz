@@ -22,8 +22,7 @@ const page = () => {
 };
 
 export default page;
-
-export async function RenderCourses() {
+async function RenderCourses() {
   const data = await adminGetCourses();
   return (
     <>

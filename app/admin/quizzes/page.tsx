@@ -1,8 +1,6 @@
-import { adminGetCourses } from "@/app/data/admin/admin-get-courses";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 
-import EmptyCourses from "@/components/general/EmptyCourses";
 import { Suspense } from "react";
 import { adminGetQuizzes } from "@/app/data/admin/admin-get-quizzes";
 import QuizCard, { QuizCardSkeleton } from "./_components/QuizCard";
@@ -25,8 +23,7 @@ const page = () => {
 };
 
 export default page;
-
-export async function RenderCourses() {
+async function RenderCourses() {
   const data = await adminGetQuizzes();
   return (
     <>

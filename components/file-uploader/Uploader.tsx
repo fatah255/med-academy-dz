@@ -224,7 +224,7 @@ const Uploader = ({ value, onChange, fileType }: iAppProps) => {
     >
       <CardContent className="flex items-center justify-center h-full">
         <input {...getInputProps()} />
-        {fileState?.uploading ? (
+        {fileState?.uploading && fileState.file ? (
           <RenderUploadingState
             file={fileState.file}
             progress={fileState.progress}

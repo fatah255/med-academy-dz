@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Safe to parse after verification
-  let event: unknown;
+  let event: any;
   try {
     event = JSON.parse(raw);
   } catch {
@@ -42,11 +42,11 @@ export async function POST(req: NextRequest) {
   // Implement your logic based on event.type, etc.
   //if state 2 update to "paid" not "PAID"
   console.log("Received event:", event);
-  if (event.type === "checkout.paid" && event.data.status === "paid") {
+  if (event?.type === "checkout.paid" && event?.data?.status === "paid") {
     console.log(event);
     await prisma.enrollment.update({
       where: {
-        transactionId: String(event.data.id),
+        transactionId: String(event?.data?.id),
       },
       data: {
         status: "PAID",

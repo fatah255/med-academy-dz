@@ -152,7 +152,7 @@ export const reorderAnswers = async (
 
     revalidatePath(`/admin/quizzes/${quizId}/edit`);
     return { status: "success", message: "Answers reordered successfully" };
-  } catch (e) {
+  } catch {
     return {
       status: "error",
       message: "Something went wrong while reordering",

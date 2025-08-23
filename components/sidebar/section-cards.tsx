@@ -1,9 +1,5 @@
-import { IconTrendingDown, IconTrendingUp } from "@tabler/icons-react";
-
-import { Badge } from "@/components/ui/badge";
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -13,15 +9,12 @@ import {
 import {
   countNewUsersLastMonth,
   countTotalUsers,
-  countUsersWithAtLeastOnePaidEnrollment,
-  countUsersWithAtLeastOnePaidEnrollmentCalendarLastMonth,
   getQuizRevenueLast30Days,
   totalCourses,
-  totalRevenueCalendarLastMonthFromCoursePrice,
   totalRevenueLast30Days,
   totalRevenueLast30DaysUser,
 } from "@/app/admin/actions";
-import { PlusIcon } from "lucide-react";
+
 import { requireAdmin } from "@/app/data/admin/require-admin";
 import { Separator } from "../ui/separator";
 

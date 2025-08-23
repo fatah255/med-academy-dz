@@ -29,10 +29,10 @@ import {
 import {
   ChevronDown,
   ChevronRight,
-  DeleteIcon,
+
   FileTextIcon,
   GripVerticalIcon,
-  Trash2,
+
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";

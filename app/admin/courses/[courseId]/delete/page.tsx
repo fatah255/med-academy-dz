@@ -11,13 +11,13 @@ import {
 import { tryCatch } from "@/hooks/try-catch";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useTransition } from "react";
+import { ReactNode, useTransition } from "react";
 import { toast } from "sonner";
 import { deleteCourse } from "./actions";
 import { useParams } from "next/navigation";
 import { Loader2, Trash2 } from "lucide-react";
 
-const page = () => {
+const Page = (): ReactNode => {
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
   const { courseId } = useParams<{ courseId: string }>();
@@ -77,4 +77,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

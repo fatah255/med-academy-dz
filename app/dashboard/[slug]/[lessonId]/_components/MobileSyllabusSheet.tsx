@@ -13,7 +13,6 @@ import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 
 export default function MobileSyllabusSheet({
-  title,
   children, // <- server component comes in here
 }: {
   title: string;

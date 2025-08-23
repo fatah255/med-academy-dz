@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import useConstructUrl from "@/hooks/use-construct-url";
 
-import { Book, Check, School, TimerIcon } from "lucide-react";
+import { Book, Check, School } from "lucide-react";
 import Image from "next/image";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -15,13 +15,12 @@ import { getQuiz } from "@/app/data/quiz/get-quiz";
 import Description from "@/app/courses/[slug]/Description";
 import EnrollementQuizButton from "@/app/quizzes/[slug]/EnrollmentQuizButton";
 import { userIsEnrolledQuiz } from "@/app/data/user/user-is-enrolled-quiz";
-import { prisma } from "@/lib/db";
 
 type Params = Promise<{
   slug: string;
 }>;
 
-const page = async ({ params }: { params: Params }) => {
+const Page = async ({ params }: { params: Params }) => {
   const { slug } = await params;
   const course = await getQuiz(slug);
   const thumbnailUrl = useConstructUrl(course.fileKey);
@@ -171,4 +170,4 @@ const page = async ({ params }: { params: Params }) => {
   );
 };
 
-export default page;
+export default Page;

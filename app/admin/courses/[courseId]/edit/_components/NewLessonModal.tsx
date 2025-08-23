@@ -17,17 +17,12 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import {
-  chapterSchema,
-  chapterSchemaType,
-  lessonSchema,
-  lessonSchemaType,
-} from "@/lib/zodSchemas";
+import { lessonSchema, lessonSchemaType } from "@/lib/zodSchemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { PlusIcon } from "lucide-react";
 import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
-import { createChapter, createLesson } from "../actions";
+import { createLesson } from "../actions";
 import { tryCatch } from "@/hooks/try-catch";
 import { toast } from "sonner";
 

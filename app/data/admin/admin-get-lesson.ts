@@ -22,7 +22,7 @@ export const getLesson = async (lessonId: string) => {
     }
 
     return lesson;
-  } catch (error) {
+  } catch {
     return notFound();
   }
 };

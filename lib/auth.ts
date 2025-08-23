@@ -51,8 +51,8 @@ export const auth = betterAuth({
     multiSession({ maximumSessions: 1 }),
     admin(),
     emailOTP({
-      async sendVerificationOTP({ email, otp, type }) {
-        const { data, error } = await resend.emails.send({
+      async sendVerificationOTP({ email, otp }) {
+        await resend.emails.send({
           from: "Med Academy DZ <onboarding@resend.dev>",
           to: [email],
           subject: "Med Academy DZ - Email Verification",

@@ -1,13 +1,10 @@
 "use client";
 
 import {
-  IconCreditCard,
   IconDashboard,
   IconDotsVertical,
   IconLogout,
-  IconNotification,
   IconSettings,
-  IconUserCircle,
 } from "@tabler/icons-react";
 import useSignOut from "@/hooks/useSignOut";
 

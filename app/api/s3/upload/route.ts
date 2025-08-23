@@ -6,11 +6,10 @@ import { v4 as uuid } from "uuid";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { S3 } from "@/lib/S3Client";
 import arcjet, { detectBot, fixedWindow } from "@/lib/arcjet";
-import { auth } from "@/lib/auth";
-import { headers } from "next/headers";
+
 import { requireAdmin } from "@/app/data/admin/require-admin";
 
-export const uploadSchema = z.object({
+const uploadSchema = z.object({
   fileName: z.string().min(1, "File name is required"),
   contentType: z.string().min(1, "Content type is required"),
   size: z.number().min(1, "File size must be greater than 0"),
@@ -60,7 +59,7 @@ export const POST = async (request: Request) => {
       );
     }
 
-    const { fileName, contentType, size, isImage } = validation.data;
+    const { fileName, contentType, size } = validation.data;
     const uniqueKey = `${uuid()}-${fileName}`;
     const command = new PutObjectCommand({
       Bucket: env.NEXT_PUBLIC_S3_BUCKET_NAME_IMAGES,
@@ -77,7 +76,7 @@ export const POST = async (request: Request) => {
       uniqueKey,
     };
     return NextResponse.json(response);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to generate presigned URL" },
       { status: 500 }

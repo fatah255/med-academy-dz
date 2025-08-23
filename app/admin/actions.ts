@@ -1,9 +1,7 @@
 "use server";
 
-"use server";
-
-import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
+import { Prisma } from "@/lib/generated/prisma";
 import { requireAdmin } from "../data/admin/require-admin";
 import { requireUser } from "../data/user/require-user";
 
@@ -130,7 +128,7 @@ export async function totalRevenueLast30DaysFromCoursePrice() {
     where: { status: "PAID", createdAt: { gte: since } },
     select: { course: { select: { price: true } } },
   });
-  return rows.reduce((sum, r) => sum + r.course?.price || 0, 0);
+  return rows.reduce((sum, r) => sum + (r.course?.price ?? 0), 0);
 }
 
 /* --------------- REVENUE: previous calendar month --------------- */
@@ -152,7 +150,7 @@ export async function totalRevenueCalendarLastMonthFromCoursePrice() {
     where: { status: "PAID", createdAt: { gte: start, lte: end } },
     select: { course: { select: { price: true } } },
   });
-  return rows.reduce((sum, r) => sum + r.course.price, 0);
+  return rows.reduce((sum, r) => sum + (r.course?.price ?? 0), 0);
 }
 
 type CourseLevel =

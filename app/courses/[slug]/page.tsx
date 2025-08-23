@@ -12,13 +12,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   IconBook,
   IconChevronDown,
@@ -27,7 +21,7 @@ import {
   IconSchool,
   IconWriting,
 } from "@tabler/icons-react";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { userIsEnrolled } from "@/app/data/user/user-is-enrolled";
 import Link from "next/link";
 import EnrollementButton from "./EnrollementButton";
@@ -36,7 +30,7 @@ type Params = Promise<{
   slug: string;
 }>;
 
-const page = async ({ params }: { params: Params }) => {
+const Page = async ({ params }: { params: Params }) => {
   const { slug } = await params;
   const course = await getCourse(slug);
   const thumbnailUrl = useConstructUrl(course.fileKey);
@@ -281,4 +275,4 @@ const page = async ({ params }: { params: Params }) => {
   );
 };
 
-export default page;
+export default Page;

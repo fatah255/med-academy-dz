@@ -103,7 +103,7 @@ export async function createQuizCheckout(quizId: string): Promise<ApiResponse> {
         },
       });
     }
-  } catch (error) {
+  } catch {
     return {
       status: "error",
       message: "Failed to process request",

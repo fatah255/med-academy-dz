@@ -4,13 +4,14 @@ import ClientQCM from "../_components/ClientQCM";
 import { v4 } from "uuid";
 
 type PageProps = {
-  params: { quizId: string }; // not a Promise
-  searchParams: { ques?: string }; // optional
+  params: Promise<{ quizId: string }>; // Promise in Next.js 15
+  searchParams: Promise<{ ques?: string }>; // Also Promise in Next.js 15
 };
 
 export default async function Page({ params, searchParams }: PageProps) {
-  const { quizId } = params;
-  const numberOfQuestions = parseInt(searchParams?.ques ?? "", 10) || 5;
+  const { quizId } = await params;
+  const resolvedSearchParams = await searchParams;
+  const numberOfQuestions = parseInt(resolvedSearchParams?.ques ?? "", 10) || 5;
 
   const data = await prisma.quiz.findUnique({
     where: { id: quizId },

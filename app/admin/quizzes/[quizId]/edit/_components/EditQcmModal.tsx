@@ -17,20 +17,15 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import {
-  chapterSchema,
-  chapterSchemaType,
-  QuestionSchema,
-  questionSchemaType,
-} from "@/lib/zodSchemas";
+import { QuestionSchema, questionSchemaType } from "@/lib/zodSchemas";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Pen, PlusIcon } from "lucide-react";
+import { Pen } from "lucide-react";
 import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 
 import { tryCatch } from "@/hooks/try-catch";
 import { toast } from "sonner";
-import { createQcm, updateQcm } from "../actions";
+import { updateQcm } from "../actions";
 
 const EditQcmModal = ({
   quizId,

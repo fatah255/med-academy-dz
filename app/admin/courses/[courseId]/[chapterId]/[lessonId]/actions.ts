@@ -33,7 +33,7 @@ export const updateLesson = async (
       status: "success",
       message: "Lesson updated successfully.",
     };
-  } catch (error) {
+  } catch {
     return {
       status: "error",
       message: "An error occurred while updating the lesson.",

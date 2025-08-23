@@ -15,7 +15,7 @@ import { modulesByYear } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, useWatch } from "react-hook-form";
 import { courseLevels, courseStatus } from "@/lib/zodSchemas";
-import { useEffect, useState, useTransition } from "react";
+import { ReactNode, useEffect, useTransition } from "react";
 
 import { Check, ChevronsUpDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -62,7 +62,7 @@ const RichTextEditor = dynamic(
   }
 );
 
-const page = () => {
+const Page = (): ReactNode => {
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
   const form = useForm<courseSchemaType>({
@@ -91,7 +91,7 @@ const page = () => {
       : "Module";
   useEffect(() => {
     form.setValue("category", "");
-  }, [selectedYear]);
+  }, [selectedYear, form]);
 
   function onSubmit(values: courseSchemaType) {
     startTransition(async () => {
@@ -318,7 +318,6 @@ const page = () => {
                   )}
                 />
                 <FormField
-                  className="mt-2 w-fit"
                   control={form.control}
                   name="category"
                   render={({ field }) => (
@@ -511,4 +510,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

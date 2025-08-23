@@ -1,5 +1,6 @@
 "use client";
 
+import { ReactNode } from "react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Card,
@@ -17,7 +18,7 @@ import { deleteQuiz } from "./actions";
 import { useParams } from "next/navigation";
 import { Loader2, Trash2 } from "lucide-react";
 
-const page = () => {
+const Page = (): ReactNode => {
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
   const { quizId } = useParams<{ quizId: string }>();
@@ -77,4 +78,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -10,9 +10,9 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { authClient, signIn, useSession } from "@/lib/auth-client"; // Adjust the import path as necessary
+import { authClient, signIn } from "@/lib/auth-client"; // Adjust the import path as necessary
 import { toast } from "sonner";
-import { useTransition, useState, useEffect } from "react";
+import { useTransition, useState } from "react";
 import { Loader2, Send } from "lucide-react";
 import { useRouter } from "next/navigation";
 

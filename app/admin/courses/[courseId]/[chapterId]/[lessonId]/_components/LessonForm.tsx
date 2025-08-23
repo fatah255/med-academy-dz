@@ -2,7 +2,7 @@
 
 import { AdminLessonType } from "@/app/data/admin/admin-get-lesson";
 import Uploader from "@/components/file-uploader/Uploader";
-import RichTextEditor from "@/components/rich-text-editor/Editor";
+
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Card,

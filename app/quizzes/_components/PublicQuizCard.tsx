@@ -1,11 +1,10 @@
-import { PublicCourseType } from "@/app/data/course/get-all-courses";
 import { PublicQuizType } from "@/app/data/quiz/get-all-quizzes";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import useConstructUrl from "@/hooks/use-construct-url";
-import { BookAIcon, TimerIcon } from "lucide-react";
+import { BookAIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 

@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 
 import slugify from "slugify";
-import { Loader2, PlusIcon, SparklesIcon } from "lucide-react";
+import { Loader2, SparklesIcon } from "lucide-react";
 
 import { modulesByYear } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -44,7 +44,7 @@ import { Textarea } from "@/components/ui/textarea";
 import dynamic from "next/dynamic";
 import Uploader from "@/components/file-uploader/Uploader";
 import { tryCatch } from "@/hooks/try-catch";
-import { createCourse } from "./actions";
+
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { editCourse } from "../actions";
@@ -68,16 +68,16 @@ const EditCourseForm = ({ course }: EditCourseFormProps) => {
   const form = useForm<courseSchemaType>({
     resolver: zodResolver(courseSchema),
     defaultValues: {
-      title: course?.title,
-      description: course?.description,
-      slug: course?.slug,
-      status: course?.status,
-      level: course?.level,
-      category: course?.category,
-      smallDescription: course?.smallDescription,
-      fileKey: course?.fileKey,
-      price: course?.price,
-      duration: course?.duration,
+      title: course?.title || "",
+      description: course?.description || "",
+      slug: course?.slug || "",
+      status: course?.status || "DRAFT",
+      level: course?.level || "FIRST_YEAR",
+      category: course?.category || "",
+      smallDescription: course?.smallDescription || "",
+      fileKey: course?.fileKey || "",
+      price: course?.price || 0,
+      duration: course?.duration || 0,
     },
   });
 
@@ -98,7 +98,7 @@ const EditCourseForm = ({ course }: EditCourseFormProps) => {
     ) {
       form.setValue("category", "");
     }
-  }, [selectedYear]);
+  }, [selectedYear, form]);
 
   function onSubmit(values: courseSchemaType) {
     startTransition(async () => {
@@ -106,13 +106,14 @@ const EditCourseForm = ({ course }: EditCourseFormProps) => {
 
       if (error) {
         toast.error("Something went wrong while updating the course");
+        return;
       }
-      if (data.status === "success") {
+      if (data?.status === "success") {
         toast.success(data.message);
         form.reset();
         router.push("/admin/courses");
       } else {
-        toast.error(data.message);
+        toast.error(data?.message || "Something went wrong");
       }
     });
   }
@@ -303,7 +304,6 @@ const EditCourseForm = ({ course }: EditCourseFormProps) => {
             )}
           />
           <FormField
-            className="mt-2 w-fit"
             control={form.control}
             name="category"
             render={({ field }) => (

@@ -1,6 +1,5 @@
 "use client";
 
-import { PublicCourseType } from "@/app/data/course/get-all-courses";
 import { EnrolledCourseType } from "@/app/data/user/get-inrolled-courses";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
@@ -20,13 +19,40 @@ const DashboardCourseCard = ({
   course: EnrolledCourseType;
   userId: string;
 }) => {
-  const level = course.course.level.split("_").join(" ").toLowerCase();
-  const thumbnailUrl = useConstructUrl(course.course.fileKey);
-  const { progress, totalLessons, completedLessons } = useCourseProgress({
-    course: course.course,
-    userId,
-  });
-  const firstLesson = course.course.chapters[0]?.lesson[0];
+  const level = course.course?.level.split("_").join(" ").toLowerCase();
+  const thumbnailUrl = useConstructUrl(course.course?.fileKey || "");
+
+  // Simple progress calculation without the hook
+  const calculateProgress = () => {
+    if (!course.course) return 0;
+
+    let totalLessons = 0;
+    let completedLessons = 0;
+
+    course.course.chapters.forEach((chapter) => {
+      chapter.lesson.forEach((lesson) => {
+        totalLessons++;
+        const isCompleted = lesson.progress.some(
+          (p) => p.lessonId === lesson.id && p.userId === userId && p.completed
+        );
+        if (isCompleted) {
+          completedLessons++;
+        }
+      });
+    });
+
+    return totalLessons > 0
+      ? Math.round((completedLessons / totalLessons) * 100)
+      : 0;
+  };
+
+  const progress = calculateProgress();
+  const firstLesson = course.course?.chapters[0]?.lesson[0];
+
+  if (!course.course) {
+    return null;
+  }
+
   return (
     <Card className="group relative py-0 gap-0 space-y-3">
       <Badge className="absolute top-2 right-2 z-10 p-2 font-medium">
@@ -42,24 +68,24 @@ const DashboardCourseCard = ({
       <CardContent className="p-4">
         <Link
           className="font-medium text-lg line-clamp-2 hover:underline group-hover:text-primary transition-colors"
-          href={`/courses/${course.course.slug}`}
+          href={`/courses/${course.course?.slug}`}
         >
-          {course.course.title}
+          {course.course?.title}
         </Link>
         <p className="text-sm text-muted-foreground line-clamp-2 mt-1">
-          {course.course.smallDescription}
+          {course.course?.smallDescription}
         </p>
         <div className="mt-4 flex items-center gap-x-5">
           <div className="flex items-center gap-x-2">
             <TimerIcon className="size-6 p-1 rounded-md text-primary bg-primary/10" />
             <p className="text-sm text-muted-foreground">
-              {course.course.duration} hours
+              {course.course?.duration} hours
             </p>
           </div>
           <div className="flex items-center gap-x-2">
             <BookAIcon className="size-6 p-1 rounded-md text-primary bg-primary/10" />
             <p className="text-sm text-muted-foreground">
-              {course.course.category}
+              {course.course?.category}
             </p>
           </div>
         </div>
