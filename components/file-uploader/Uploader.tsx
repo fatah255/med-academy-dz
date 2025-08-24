@@ -107,6 +107,7 @@ const Uploader = ({ value, onChange, fileType }: iAppProps) => {
       });
     } catch (err) {
       toast.error("Failed to upload file");
+      console.log(err);
 
       setFileState(
         (prev) => prev && { ...prev, uploading: false, error: true }
