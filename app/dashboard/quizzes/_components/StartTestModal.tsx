@@ -20,6 +20,7 @@ import {
   FormDescription,
   FormField,
   FormItem,
+  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 
@@ -64,7 +65,7 @@ export default function StartTest({
         <AlertTitle>You will bre redirected into the test</AlertTitle>
       </Alert>
     ));
-    console.log("Form submitted with values:", form.getValues());
+
     router.push(
       `/dashboard/quizzes/${quizId}?ques=${form.getValues().numberOfQuestions}`
     );
@@ -90,14 +91,30 @@ export default function StartTest({
                 control={form.control}
                 name="numberOfQuestions"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="w-full">
+                    <FormLabel>Number of Questions</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Enter number of questions"
                         type="number"
+                        inputMode="numeric"
                         min={1}
                         max={totalQuestions}
-                        {...field}
+                        // keep it controlled: always pass a string
+                        value={
+                          field.value === undefined || field.value === null
+                            ? ""
+                            : String(field.value)
+                        }
+                        onChange={(e) => {
+                          const v = e.target.value;
+                          if (v === "") {
+                            // empty input -> undefined (so Zod can show “required”)
+                            field.onChange(undefined);
+                            return;
+                          }
+                          const n = Number(v);
+                          field.onChange(Number.isNaN(n) ? undefined : n);
+                        }}
                       />
                     </FormControl>
                     <FormDescription>
