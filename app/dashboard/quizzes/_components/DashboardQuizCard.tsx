@@ -50,8 +50,8 @@ const DashboardQuizCard = ({
         </div>
 
         <StartTest
-          totalQuestions={quiz.quiz?.qcm.length || 0}
-          quizId={quiz.quiz?.id as string}
+          totalQuestions={quiz?.quiz?.qcm.length || 0}
+          quizId={quiz?.quiz?.id as string}
         />
       </CardContent>
     </Card>

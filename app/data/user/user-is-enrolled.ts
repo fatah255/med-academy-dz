@@ -11,6 +11,19 @@ export async function userIsEnrolled(courseId: string) {
     return false;
   }
 
+  const course = await prisma.course.findUnique({
+    where: {
+      id: courseId,
+    },
+    select: {
+      price: true,
+    },
+  });
+
+  if (course?.price === 0) {
+    return true;
+  }
+
   const enrollment = await prisma.enrollment.findUnique({
     where: {
       userId_courseId: {

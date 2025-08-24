@@ -49,8 +49,48 @@ export async function getInrolledCourses() {
       },
     },
   });
+  const freeCourses = await prisma.course.findMany({
+    where: {
+      price: 0,
+    },
+    select: {
+      id: true,
+      title: true,
+      description: true,
+      smallDescription: true,
+      fileKey: true,
+      slug: true,
+      level: true,
+      category: true,
+      duration: true,
+      chapters: {
+        select: {
+          id: true,
+          lesson: {
+            select: {
+              id: true,
+              progress: {
+                select: {
+                  completed: true,
+                  userId: true,
+                  lessonId: true,
+                  id: true,
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  });
+  const freeCoursesObjects = freeCourses.map((c) => ({
+    course: {
+      ...c,
+    },
+  }));
+  const finalData = [...data, ...freeCoursesObjects];
 
-  return data;
+  return finalData;
 }
 
 export type EnrolledCourseType = Awaited<

@@ -43,7 +43,7 @@ const page = async () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {enrolledCourses.map((course) => (
               <DashboardCourseCard
-                key={course.id}
+                key={course.course?.id}
                 userId={session.user.id}
                 course={course}
               />

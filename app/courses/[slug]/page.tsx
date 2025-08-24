@@ -251,7 +251,7 @@ const Page = async ({ params }: { params: Params }) => {
                   </li>
                 </ul>
               </div>
-              {isEnrolled ? (
+              {isEnrolled && course.price !== 0 ? (
                 <>
                   <Link
                     href={`/dashboard`}

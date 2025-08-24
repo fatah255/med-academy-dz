@@ -4,7 +4,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import useConstructUrl from "@/hooks/use-construct-url";
-import { BookAIcon, TimerIcon } from "lucide-react";
+import { BookAIcon, DollarSignIcon, TimerIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -44,6 +44,12 @@ const PublicCourseCard = ({ course }: { course: PublicCourseType }) => {
             <BookAIcon className="size-6 p-1 rounded-md text-primary bg-primary/10" />
             <p className="text-sm text-muted-foreground">{course.category}</p>
           </div>
+          {course.price === 0 && (
+            <div className="flex items-center gap-x-2">
+              <DollarSignIcon className="size-6 p-1 rounded-md text-primary bg-primary/10" />
+              <p className="text-sm text-muted-foreground">FREE</p>
+            </div>
+          )}
         </div>
         <Link
           className={buttonVariants({ className: "mt-4 w-full" })}
