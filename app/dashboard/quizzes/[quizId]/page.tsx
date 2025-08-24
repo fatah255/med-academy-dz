@@ -2,6 +2,7 @@ import { prisma } from "@/lib/db";
 import { notFound } from "next/navigation";
 import ClientQCM from "../_components/ClientQCM";
 import { v4 } from "uuid";
+import { requireUser } from "@/app/data/user/require-user";
 
 type PageProps = {
   params: Promise<{ quizId: string }>; // Promise in Next.js 15
@@ -10,6 +11,7 @@ type PageProps = {
 
 export default async function Page({ params, searchParams }: PageProps) {
   const { quizId } = await params;
+  const session = await requireUser();
   const resolvedSearchParams = await searchParams;
   const numberOfQuestions = parseInt(resolvedSearchParams?.ques ?? "", 10) || 5;
 
@@ -17,6 +19,7 @@ export default async function Page({ params, searchParams }: PageProps) {
     where: { id: quizId },
     select: {
       title: true,
+      price: true,
       qcm: {
         select: {
           id: true, // <-- include id
@@ -32,6 +35,19 @@ export default async function Page({ params, searchParams }: PageProps) {
   });
 
   if (!data) return notFound();
+
+  const enrollment = await prisma.enrollment.findUnique({
+    where: {
+      userId_quizId: {
+        userId: session.user.id,
+        quizId: quizId,
+      },
+    },
+  });
+
+  if (!enrollment && data.price > 0) {
+    return notFound();
+  }
 
   // Optional shuffle (copy first to avoid mutating `data.qcm`)
   const shuffled = [...data.qcm].sort(() => Math.random() - 0.5);

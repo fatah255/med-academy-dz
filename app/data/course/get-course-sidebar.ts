@@ -14,6 +14,7 @@ export async function getCourseSidebar(slug: string) {
       description: true,
       smallDescription: true,
       fileKey: true,
+      price: true,
       level: true,
       category: true,
       duration: true,
@@ -64,7 +65,7 @@ export async function getCourseSidebar(slug: string) {
     },
   });
 
-  if (!enrollment) {
+  if (!enrollment && course.price > 0) {
     return notFound();
   }
 

@@ -20,24 +20,6 @@ export const getQuiz = async (slug: string) => {
           id: true,
         },
       },
-      // chapters: {
-      //   select: {
-      //     id: true,
-      //     title: true,
-      //     lesson: {
-      //       select: {
-      //         id: true,
-      //         title: true,
-      //       },
-      //       orderBy: {
-      //         position: "asc",
-      //       },
-      //     },
-      //   },
-      //   orderBy: {
-      //     position: "asc",
-      //   },
-      // },
     },
   });
 
