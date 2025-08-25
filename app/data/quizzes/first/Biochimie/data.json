@@ -1,6 +1,6 @@
 {
   "data": {
-    "name": "Biochimie",
+    "name": "Biochimie & Anatomie",
     "questions": [
       {
         "id": "109173",
@@ -2215,134 +2215,6 @@
         "timeSpent": 0
       },
       {
-        "id": "109215",
-        "categoryId": "iRe5ipLqcRiOoQ8Qf7aH",
-        "categoryName": "Biochimie",
-        "subcategoryId": "GhjMoZhWKXVwehAY5lZz",
-        "subcategoryName": "Structure des acides aminés",
-        "text": "Choisissez l'énoncé incorrect parmi les suivants :",
-        "year": 2024,
-        "location": "TIZIOUZOU",
-        "type": "qcs",
-        "type2": "externat",
-        "cliniqCaseId": null,
-        "explanation": "",
-        "explanationImage": null,
-        "createdAt": {
-          "_seconds": 1743466532,
-          "_nanoseconds": 373000000
-        },
-        "suggestions": [
-          {
-            "id": "abc789c4-a676-406e-b71e-000cdd0c75d5",
-            "isSelected": false,
-            "text": "Seuls les acides aminés L se trouvent dans le système biologique",
-            "isStudentAnswer": false,
-            "count": 1
-          },
-          {
-            "id": "451aaefc-36aa-4097-8eb7-ea4297ab8367",
-            "isSelected": false,
-            "text": "La glycine est optiquement inactive",
-            "isStudentAnswer": false,
-            "count": 0
-          },
-          {
-            "id": "acc88bfa-b0b3-49bd-8248-1c994b714b53",
-            "isSelected": false,
-            "text": "La tyrosine est un acide aminé modifié",
-            "isStudentAnswer": false,
-            "count": 1
-          },
-          {
-            "id": "e31b27da-2e9b-4c64-8727-fdde5a04ef42",
-            "isSelected": false,
-            "text": "La sélénocystéine est le 21ème acide aminé",
-            "isStudentAnswer": false,
-            "count": 1
-          },
-          {
-            "id": "9760f393-5ce0-4e88-849c-50ea5baea29e",
-            "isSelected": false,
-            "text": "L'histidine est un acide aminé imidazole",
-            "isStudentAnswer": false,
-            "count": 0
-          }
-        ],
-        "correctWrongStats": {
-          "correct": 1,
-          "totalInteractions": 3,
-          "wrong": 2
-        },
-        "selectedSuggestionId": [],
-        "isCorrect": null,
-        "timeSpent": 0
-      },
-      {
-        "id": "109216",
-        "categoryId": "iRe5ipLqcRiOoQ8Qf7aH",
-        "categoryName": "Biochimie",
-        "subcategoryId": "GhjMoZhWKXVwehAY5lZz",
-        "subcategoryName": "Structure des acides aminés",
-        "text": "Ionisation des acides aminés :",
-        "year": 2024,
-        "location": "TIZIOUZOU",
-        "type": "qcm",
-        "type2": "externat",
-        "cliniqCaseId": null,
-        "explanation": "",
-        "explanationImage": null,
-        "createdAt": {
-          "_seconds": 1743466532,
-          "_nanoseconds": 991000000
-        },
-        "suggestions": [
-          {
-            "id": "99caf21d-ff67-44dd-b062-ae4ed457b4da",
-            "isSelected": false,
-            "text": "Tous les acides aminés possèdent au minimum 3 groupements ionisables",
-            "isStudentAnswer": false,
-            "count": 0
-          },
-          {
-            "id": "a16d641b-167c-43c5-9472-6f21546107e2",
-            "isSelected": false,
-            "text": "Tous les acides aminés sont caractérisés par une valeur de pKa à laquelle ils se trouvent sous une forme neutre",
-            "isStudentAnswer": false,
-            "count": 2
-          },
-          {
-            "id": "9894ccd3-e1af-45bc-822a-c7efa9fc59c0",
-            "isSelected": false,
-            "text": "La variation du pH du milieu modifie l'ionisation de n'importe quel acide aminé",
-            "isStudentAnswer": false,
-            "count": 1
-          },
-          {
-            "id": "f2d334b9-ed1a-495f-8c4a-da80104ccfa0",
-            "isSelected": false,
-            "text": "Les groupements COOH ont des valeurs de pKa comprises entre 8,8 et 10,6",
-            "isStudentAnswer": false,
-            "count": 0
-          },
-          {
-            "id": "30cb9b4c-7632-4884-8190-257378d134a5",
-            "isSelected": false,
-            "text": "Tous les acides aminés se trouvent sous la forme cationique à pH plutôt acide",
-            "isStudentAnswer": false,
-            "count": 1
-          }
-        ],
-        "correctWrongStats": {
-          "correct": 0,
-          "totalInteractions": 2,
-          "wrong": 2
-        },
-        "selectedSuggestionId": [],
-        "isCorrect": null,
-        "timeSpent": 0
-      },
-      {
         "id": "109367",
         "categoryId": "iRe5ipLqcRiOoQ8Qf7aH",
         "categoryName": "Biochimie",
@@ -2708,191 +2580,6 @@
             "text": "Courbe de titrage",
             "isStudentAnswer": false,
             "count": 1
-          }
-        ],
-        "correctWrongStats": {
-          "correct": 0,
-          "totalInteractions": 1,
-          "wrong": 1
-        },
-        "selectedSuggestionId": [],
-        "isCorrect": null,
-        "timeSpent": 0
-      },
-      {
-        "id": "109212",
-        "categoryId": "iRe5ipLqcRiOoQ8Qf7aH",
-        "categoryName": "Biochimie",
-        "subcategoryId": "GhjMoZhWKXVwehAY5lZz",
-        "subcategoryName": "Structure des acides aminés",
-        "text": "La chromatographie par adsorption spécifique (affinité), peut être basée sur quel principe?",
-        "year": 2023,
-        "location": "TIZIOUZOU",
-        "type": "qcs",
-        "type2": "externat",
-        "cliniqCaseId": null,
-        "explanation": "",
-        "explanationImage": null,
-        "createdAt": {
-          "_seconds": 1743466530,
-          "_nanoseconds": 196000000
-        },
-        "suggestions": [
-          {
-            "id": "31076f1c-ec5f-42ef-8266-24d3a0d14fce",
-            "isSelected": false,
-            "text": "Séparation selon la taille",
-            "isStudentAnswer": false,
-            "count": 0
-          },
-          {
-            "id": "16ddeec6-d1d7-4785-95b2-1b13e16cb4e3",
-            "isSelected": false,
-            "text": "Séparation selon la filtration",
-            "isStudentAnswer": false,
-            "count": 1
-          },
-          {
-            "id": "884e8d0b-e39f-4c43-97c8-08b8245569b0",
-            "isSelected": false,
-            "text": "Séparation selon la combinaison de taille et de charge",
-            "isStudentAnswer": false,
-            "count": 0
-          },
-          {
-            "id": "398cea12-ddc4-4c2e-89ae-dc6ec17743d2",
-            "isSelected": false,
-            "text": "Séparation selon la charge électrique",
-            "isStudentAnswer": false,
-            "count": 0
-          },
-          {
-            "id": "ceb0ec47-e7c7-4f60-9e7d-f944a36dc80c",
-            "isSelected": false,
-            "text": "Séparation selon la réaction antigène-anticorps.",
-            "isStudentAnswer": false,
-            "count": 1
-          }
-        ],
-        "correctWrongStats": {
-          "correct": 0,
-          "totalInteractions": 2,
-          "wrong": 2
-        },
-        "selectedSuggestionId": [],
-        "isCorrect": null,
-        "timeSpent": 0
-      },
-      {
-        "id": "109213",
-        "categoryId": "iRe5ipLqcRiOoQ8Qf7aH",
-        "categoryName": "Biochimie",
-        "subcategoryId": "GhjMoZhWKXVwehAY5lZz",
-        "subcategoryName": "Structure des acides aminés",
-        "text": "La loi de Beer-Lambert :",
-        "year": 2023,
-        "location": "TIZIOUZOU",
-        "type": "qcm",
-        "type2": "externat",
-        "cliniqCaseId": null,
-        "explanation": "",
-        "explanationImage": null,
-        "createdAt": {
-          "_seconds": 1743466530,
-          "_nanoseconds": 793000000
-        },
-        "suggestions": [
-          {
-            "id": "017cd16d-765a-480a-a0d5-91f4ffffac7e",
-            "isSelected": false,
-            "text": "S'applique aux dispositifs polarimétriques",
-            "isStudentAnswer": false,
-            "count": 0
-          },
-          {
-            "id": "1823b304-e5fd-47a1-b89c-becb3b3d04c1",
-            "isSelected": false,
-            "text": "S'applique aux dispositifs spectrophotométriques",
-            "isStudentAnswer": false,
-            "count": 0
-          },
-          {
-            "id": "ccc69a4c-4eb2-4059-a83a-5ebc37c0b9dd",
-            "isSelected": false,
-            "text": "Est valable quelle que soit la concentration de la solution",
-            "isStudentAnswer": false,
-            "count": 1
-          },
-          {
-            "id": "2f0e28ab-9c38-4531-b5ba-892817d1ed91",
-            "isSelected": false,
-            "text": "Établit un lien entre l'absorbance et la concentration de l'espèce colorée en solution",
-            "isStudentAnswer": false,
-            "count": 1
-          },
-          {
-            "id": "f459f970-27cd-43ed-97df-73dddb0f7e97",
-            "isSelected": false,
-            "text": "Établit un lien entre l'absorbance et la quantité de matière de l'espèce colorée en solution",
-            "isStudentAnswer": false,
-            "count": 0
-          }
-        ],
-        "correctWrongStats": {
-          "correct": 0,
-          "totalInteractions": 1,
-          "wrong": 1
-        },
-        "selectedSuggestionId": [],
-        "isCorrect": null,
-        "timeSpent": 0
-      },
-      {
-        "id": "109214",
-        "categoryId": "iRe5ipLqcRiOoQ8Qf7aH",
-        "categoryName": "Biochimie",
-        "subcategoryId": "GhjMoZhWKXVwehAY5lZz",
-        "subcategoryName": "Structure des acides aminés",
-        "text": "Photométrie colorimètre et spectrophotomètre :",
-        "year": 2023,
-        "location": "TIZIOUZOU",
-        "type": "qcm",
-        "type2": "externat",
-        "cliniqCaseId": null,
-        "explanation": "",
-        "explanationImage": null,
-        "createdAt": {
-          "_seconds": 1743466531,
-          "_nanoseconds": 774000000
-        },
-        "suggestions": [
-          {
-            "id": "6bf0bcad-f2b9-4ec3-a860-a049b0a370de",
-            "isSelected": false,
-            "text": "Sont des méthodes de mesures qualitatives et quantitatives.",
-            "isStudentAnswer": false,
-            "count": 1
-          },
-          {
-            "id": "90d4a7f8-d408-4546-b706-dcc42e9249ae",
-            "isSelected": false,
-            "text": "Sont basées sur l'absorption de la lumière par des molécules en solution.",
-            "isStudentAnswer": false,
-            "count": 1
-          },
-          {
-            "id": "33cdff6f-8805-4d45-bc21-f4a9ed29d267",
-            "isSelected": false,
-            "text": "Sont basées sur la déflexion de la lumière incidente.",
-            "isStudentAnswer": false,
-            "count": 0
-          },
-          {
-            "id": "7a152bfa-4bee-4b2b-b4a3-8c8bd0d365e4",
-            "isSelected": false,
-            "text": "La quantité de lumière transmise diminue de façon exponentielle avec une augmentation de la concentration de matériau absorbant.",
-            "isStudentAnswer": false,
-            "count": 0
           }
         ],
         "correctWrongStats": {
@@ -8309,6 +7996,478 @@
         "timeSpent": 0
       },
       {
+        "id": "108870",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+        "subcategoryName": "Les coupes histologique (membre supérieur)",
+        "text": "Cas clinique 02<br />Le schéma ci-dessous représente une coupe effectuée au niveau du membre thoracique, cocher la Légende correspondante à chaque structure :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": "cas clinique",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanationImage": "https://storage.googleapis.com/bmset-85f8a.appspot.com/images/TIZIOUZOU/MEDICINE/1-year/Anatomie/Cas%20clinique%2002.png?GoogleAccessId=firebase-adminsdk-n13kr%40bmset-85f8a.iam.gserviceaccount.com&Expires=16447017600&Signature=W0GjrnvLSCHtD5Z%2B1vV0RBz51DQNyXWYlV0yuatxIWNY3an5UYdDJYslDIq%2B7a9vj11Ik5GNK3QWoVQ%2BlwH2o%2FvC6XxEg2u%2BFq%2Fn3VXOng1maWmJOHWhUdXLvNDJqsqQ7k8cow9C%2F3sU8aMt7TRAPD4mMCZGk7mTy2%2F9n%2BjXDTWRqZkYJ1Q6HP6%2BkTW09Ebfb01vUaqVsHbr6WzCTQYXq6ioctgsTPJcQPvtTclYJvi3WW3NY98YbOsBEPZ474y%2BmxWMeIYeHeeXGPQ9pQXnhBJGzMS1jzIsDtnW9%2BkfWgwYkhDu5rxMeWCRMZvV0LQEu%2B3SwXpHMqcTbwwzWbagOw%3D%3D",
+        "createdAt": {
+          "_seconds": 1746751722,
+          "_nanoseconds": 436000000
+        },
+        "subQsts": [
+          {
+            "id": "108871",
+            "cliniqCaseId": "108870",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+            "subcategoryName": "Les coupes histologique (membre supérieur)",
+            "text": "Structure 1 :",
+            "year": 2020,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751722,
+              "_nanoseconds": 793000000
+            },
+            "suggestions": [
+              {
+                "id": "3bcd58e4-dd71-4276-b783-80d065d8e447",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Membrane interosseuse.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "987237eb-c6fa-4da0-a8ee-a0196d2964c1",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Ligament interosseux",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "a9df2f06-c629-4e7a-9d6d-d5cdc5f2a552",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Rétinaculum des fléchisseurs.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "72ec8cf6-65eb-4b77-a51a-5b68f99534ac",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Rétinaculum des extenseurs.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "44cc98a5-c4d9-41da-8c4e-433883d0722e",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Tendon palmaire.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "108872",
+            "cliniqCaseId": "108870",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+            "subcategoryName": "Les coupes histologique (membre supérieur)",
+            "text": "Structure 2 :",
+            "year": 2020,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751723,
+              "_nanoseconds": 288000000
+            },
+            "suggestions": [
+              {
+                "id": "bce2ff25-f24e-4f2a-bc9e-31813b93253f",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Pédicule vasculo-nerveux radial.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "679cd367-17ae-4409-b90b-aef1b1640146",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Pédicule vasculo-nerveux ulnaire.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "c4f53db9-38fc-42e1-8e2f-06dece2c48c2",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Pédicule vasculo-nerveux brachial.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "574826b7-390a-4012-b693-6e1b22d68806",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Pédicule vasculo-nerveux du pouce.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "f4787fcb-d9ca-4b3a-a32b-0a55595a0341",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Pédicule vasculo-nerveux du petit doigt.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "108873",
+            "cliniqCaseId": "108870",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+            "subcategoryName": "Les coupes histologique (membre supérieur)",
+            "text": "Structure 3 :",
+            "year": 2020,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751723,
+              "_nanoseconds": 786000000
+            },
+            "suggestions": [
+              {
+                "id": "78970609-b8b6-485f-912c-1b936fd8bba0",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Os lunatum.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "d66ec465-042a-4c8c-94f0-0961759a243b",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Os scaphoïde.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "28704831-de15-446b-a6d5-715a70413476",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Os pisiforme.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "ed664be9-f83e-4ea1-9799-3b7b1a7417df",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Os trapèze.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "946e8ea8-f2e7-47a5-9b2c-d7506ff181da",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Os trapézoïde.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "108874",
+            "cliniqCaseId": "108870",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+            "subcategoryName": "Les coupes histologique (membre supérieur)",
+            "text": "Structure 4 :",
+            "year": 2020,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751724,
+              "_nanoseconds": 281000000
+            },
+            "suggestions": [
+              {
+                "id": "f9181b28-1d51-4d2c-90a5-9bf06a1de723",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Ligament interosseux.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "b0b00df3-2127-43b5-93ea-98f7c02aad95",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Rétinaculum des fléchisseurs.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "33efd2f5-40aa-4f89-91bb-ec897de4bc1b",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Gaine des fléchisseurs.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "fe862798-3ea1-4e15-a038-d16a57aa8fde",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Gaine des extenseurs.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "e55dd448-83d8-4bac-8018-e952d12d8e99",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Fascia palmaire.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "108875",
+            "cliniqCaseId": "108870",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+            "subcategoryName": "Les coupes histologique (membre supérieur)",
+            "text": "Structure 5 :",
+            "year": 2020,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751724,
+              "_nanoseconds": 772000000
+            },
+            "suggestions": [
+              {
+                "id": "9eb99790-4b1b-4fd8-af53-7d7bf6c23ff3",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Tendons des fléchisseurs.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "34b53169-e743-4182-bf7b-ecea1a22c88b",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Tendons des extenseurs.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "aae6bedc-0425-4fa2-a6ab-25398f80eda0",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Tendons des interosseux.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "582a2464-0b4a-4947-9d7f-1d014b0f21b0",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Tendons des lombricaux.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "f6899d48-ef32-4349-93ad-30e9a849d2c0",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Tendons thénariens.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "108876",
+            "cliniqCaseId": "108870",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+            "subcategoryName": "Les coupes histologique (membre supérieur)",
+            "text": "Structure 6 :",
+            "year": 2020,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751725,
+              "_nanoseconds": 300000000
+            },
+            "suggestions": [
+              {
+                "id": "30b72d52-144e-4700-9509-10c63c0ed85b",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "m. brachio-radial.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "d922d3f3-8193-4f5f-9b03-9c4162601214",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "m. fléchisseur radial du carpe.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "c3c40b4f-4a1e-4dbe-a6c5-5b6b1105acc1",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "m. fléchisseur propre du pouce.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "e958303f-d1c5-4e33-b7f6-08f43d92e9b4",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "m. fléchisseur propre de l'auriculaire.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "48cbc873-5b21-447e-87de-f34ccb8a367b",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "m. long abducteur du pouce.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "108877",
+            "cliniqCaseId": "108870",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+            "subcategoryName": "Les coupes histologique (membre supérieur)",
+            "text": "Structure 7 :",
+            "year": 2020,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751725,
+              "_nanoseconds": 801000000
+            },
+            "suggestions": [
+              {
+                "id": "e0c3985b-f924-45dd-9b09-4058af682ef6",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "m. fléchisseur propre de l'index.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "fc2c3cbb-4c5c-4914-883d-b3a1a5792829",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "m. fléchisseur radial du carpe.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "d1335e1b-640b-4fe6-8cd0-07e2a94e0e22",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "m. fléchisseur propre du pouce.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "9463c9ce-7401-48dc-b9fb-853fa5c97a8e",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "m. long extenseur du pouce.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "3eac433b-ab55-4769-aa30-e817509db8bb",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "m. long abducteur du pouce.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "108878",
+            "cliniqCaseId": "108870",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+            "subcategoryName": "Les coupes histologique (membre supérieur)",
+            "text": "Structure 8 :",
+            "year": 2020,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751726,
+              "_nanoseconds": 286000000
+            },
+            "suggestions": [
+              {
+                "id": "523d1f0a-d037-4f9f-828e-06f335b63a86",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Nerf ulnaire.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "6061f5ae-cdcd-4dbe-b7dc-3ce85c87f1fe",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Veine ulnaire.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "4c5fc2c9-3154-4356-bbec-3bca4b7af5f9",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Nerf radial.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "f149bb5d-4059-42e4-83cc-022b9d6bff16",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Nerf médian.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "62ed293f-c4e1-4c7d-8c11-60c34012ea3b",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Veine médiane",
+                "isStudentAnswer": false
+              }
+            ]
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
         "id": "109158",
         "cliniqCaseId": "109157",
         "categoryId": "iRe5ipLqcRiOoQ8Qf7aH",
@@ -8980,6 +9139,518 @@
           }
         ],
         "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "108871",
+        "cliniqCaseId": "108870",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+        "subcategoryName": "Les coupes histologique (membre supérieur)",
+        "text": "Structure 1 :",
+        "year": 2020,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751722,
+          "_nanoseconds": 793000000
+        },
+        "suggestions": [
+          {
+            "id": "3bcd58e4-dd71-4276-b783-80d065d8e447",
+            "isSelected": false,
+            "text": "Membrane interosseuse.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "987237eb-c6fa-4da0-a8ee-a0196d2964c1",
+            "isSelected": false,
+            "text": "Ligament interosseux",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a9df2f06-c629-4e7a-9d6d-d5cdc5f2a552",
+            "isSelected": false,
+            "text": "Rétinaculum des fléchisseurs.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "72ec8cf6-65eb-4b77-a51a-5b68f99534ac",
+            "isSelected": false,
+            "text": "Rétinaculum des extenseurs.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "44cc98a5-c4d9-41da-8c4e-433883d0722e",
+            "isSelected": false,
+            "text": "Tendon palmaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 2,
+          "totalInteractions": 3,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "108872",
+        "cliniqCaseId": "108870",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+        "subcategoryName": "Les coupes histologique (membre supérieur)",
+        "text": "Structure 2 :",
+        "year": 2020,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751723,
+          "_nanoseconds": 288000000
+        },
+        "suggestions": [
+          {
+            "id": "bce2ff25-f24e-4f2a-bc9e-31813b93253f",
+            "isSelected": false,
+            "text": "Pédicule vasculo-nerveux radial.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "679cd367-17ae-4409-b90b-aef1b1640146",
+            "isSelected": false,
+            "text": "Pédicule vasculo-nerveux ulnaire.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "c4f53db9-38fc-42e1-8e2f-06dece2c48c2",
+            "isSelected": false,
+            "text": "Pédicule vasculo-nerveux brachial.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "574826b7-390a-4012-b693-6e1b22d68806",
+            "isSelected": false,
+            "text": "Pédicule vasculo-nerveux du pouce.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f4787fcb-d9ca-4b3a-a32b-0a55595a0341",
+            "isSelected": false,
+            "text": "Pédicule vasculo-nerveux du petit doigt.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 2,
+          "totalInteractions": 2
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "108873",
+        "cliniqCaseId": "108870",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+        "subcategoryName": "Les coupes histologique (membre supérieur)",
+        "text": "Structure 3 :",
+        "year": 2020,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751723,
+          "_nanoseconds": 786000000
+        },
+        "suggestions": [
+          {
+            "id": "78970609-b8b6-485f-912c-1b936fd8bba0",
+            "isSelected": false,
+            "text": "Os lunatum.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d66ec465-042a-4c8c-94f0-0961759a243b",
+            "isSelected": false,
+            "text": "Os scaphoïde.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "28704831-de15-446b-a6d5-715a70413476",
+            "isSelected": false,
+            "text": "Os pisiforme.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "ed664be9-f83e-4ea1-9799-3b7b1a7417df",
+            "isSelected": false,
+            "text": "Os trapèze.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "946e8ea8-f2e7-47a5-9b2c-d7506ff181da",
+            "isSelected": false,
+            "text": "Os trapézoïde.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 1,
+          "totalInteractions": 2
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "108874",
+        "cliniqCaseId": "108870",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+        "subcategoryName": "Les coupes histologique (membre supérieur)",
+        "text": "Structure 4 :",
+        "year": 2020,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751724,
+          "_nanoseconds": 281000000
+        },
+        "suggestions": [
+          {
+            "id": "f9181b28-1d51-4d2c-90a5-9bf06a1de723",
+            "isSelected": false,
+            "text": "Ligament interosseux.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b0b00df3-2127-43b5-93ea-98f7c02aad95",
+            "isSelected": false,
+            "text": "Rétinaculum des fléchisseurs.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "33efd2f5-40aa-4f89-91bb-ec897de4bc1b",
+            "isSelected": false,
+            "text": "Gaine des fléchisseurs.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "fe862798-3ea1-4e15-a038-d16a57aa8fde",
+            "isSelected": false,
+            "text": "Gaine des extenseurs.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e55dd448-83d8-4bac-8018-e952d12d8e99",
+            "isSelected": false,
+            "text": "Fascia palmaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 2,
+          "totalInteractions": 2
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "108875",
+        "cliniqCaseId": "108870",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+        "subcategoryName": "Les coupes histologique (membre supérieur)",
+        "text": "Structure 5 :",
+        "year": 2020,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751724,
+          "_nanoseconds": 772000000
+        },
+        "suggestions": [
+          {
+            "id": "9eb99790-4b1b-4fd8-af53-7d7bf6c23ff3",
+            "isSelected": false,
+            "text": "Tendons des fléchisseurs.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "34b53169-e743-4182-bf7b-ecea1a22c88b",
+            "isSelected": false,
+            "text": "Tendons des extenseurs.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "aae6bedc-0425-4fa2-a6ab-25398f80eda0",
+            "isSelected": false,
+            "text": "Tendons des interosseux.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "582a2464-0b4a-4947-9d7f-1d014b0f21b0",
+            "isSelected": false,
+            "text": "Tendons des lombricaux.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f6899d48-ef32-4349-93ad-30e9a849d2c0",
+            "isSelected": false,
+            "text": "Tendons thénariens.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 2,
+          "totalInteractions": 2
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "108876",
+        "cliniqCaseId": "108870",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+        "subcategoryName": "Les coupes histologique (membre supérieur)",
+        "text": "Structure 6 :",
+        "year": 2020,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751725,
+          "_nanoseconds": 300000000
+        },
+        "suggestions": [
+          {
+            "id": "30b72d52-144e-4700-9509-10c63c0ed85b",
+            "isSelected": false,
+            "text": "m. brachio-radial.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d922d3f3-8193-4f5f-9b03-9c4162601214",
+            "isSelected": false,
+            "text": "m. fléchisseur radial du carpe.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c3c40b4f-4a1e-4dbe-a6c5-5b6b1105acc1",
+            "isSelected": false,
+            "text": "m. fléchisseur propre du pouce.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "e958303f-d1c5-4e33-b7f6-08f43d92e9b4",
+            "isSelected": false,
+            "text": "m. fléchisseur propre de l'auriculaire.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "48cbc873-5b21-447e-87de-f34ccb8a367b",
+            "isSelected": false,
+            "text": "m. long abducteur du pouce.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 1,
+          "totalInteractions": 2
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "108877",
+        "cliniqCaseId": "108870",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+        "subcategoryName": "Les coupes histologique (membre supérieur)",
+        "text": "Structure 7 :",
+        "year": 2020,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751725,
+          "_nanoseconds": 801000000
+        },
+        "suggestions": [
+          {
+            "id": "e0c3985b-f924-45dd-9b09-4058af682ef6",
+            "isSelected": false,
+            "text": "m. fléchisseur propre de l'index.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "fc2c3cbb-4c5c-4914-883d-b3a1a5792829",
+            "isSelected": false,
+            "text": "m. fléchisseur radial du carpe.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "d1335e1b-640b-4fe6-8cd0-07e2a94e0e22",
+            "isSelected": false,
+            "text": "m. fléchisseur propre du pouce.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "9463c9ce-7401-48dc-b9fb-853fa5c97a8e",
+            "isSelected": false,
+            "text": "m. long extenseur du pouce.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "3eac433b-ab55-4769-aa30-e817509db8bb",
+            "isSelected": false,
+            "text": "m. long abducteur du pouce.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 1,
+          "totalInteractions": 2
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "108878",
+        "cliniqCaseId": "108870",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+        "subcategoryName": "Les coupes histologique (membre supérieur)",
+        "text": "Structure 8 :",
+        "year": 2020,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751726,
+          "_nanoseconds": 286000000
+        },
+        "suggestions": [
+          {
+            "id": "523d1f0a-d037-4f9f-828e-06f335b63a86",
+            "isSelected": false,
+            "text": "Nerf ulnaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6061f5ae-cdcd-4dbe-b7dc-3ce85c87f1fe",
+            "isSelected": false,
+            "text": "Veine ulnaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4c5fc2c9-3154-4356-bbec-3bca4b7af5f9",
+            "isSelected": false,
+            "text": "Nerf radial.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f149bb5d-4059-42e4-83cc-022b9d6bff16",
+            "isSelected": false,
+            "text": "Nerf médian.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "62ed293f-c4e1-4c7d-8c11-60c34012ea3b",
+            "isSelected": false,
+            "text": "Veine médiane",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 2,
+          "totalInteractions": 2
+        },
         "selectedSuggestionId": [],
         "isCorrect": null,
         "timeSpent": 0
@@ -10049,6 +10720,252 @@
         "timeSpent": 0
       },
       {
+        "id": "108863",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+        "subcategoryName": "Les coupes histologique (membre supérieur)",
+        "text": "Cas clinique 01<br />La figure ci-dessous représente une coupe d’une région du membre thoracique :",
+        "year": 2018,
+        "location": "TIZIOUZOU",
+        "type": "cas clinique",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanationImage": "https://storage.googleapis.com/bmset-85f8a.appspot.com/images/TIZIOUZOU/MEDICINE/1-year/Anatomie/Cas%20clinique%2001.png?GoogleAccessId=firebase-adminsdk-n13kr%40bmset-85f8a.iam.gserviceaccount.com&Expires=16447017600&Signature=fB5cM%2FjJ6oFH0uHd4bT9AvBi8p4RJiHHYREPRC7LRaBWMXhDXkhhNG5%2FfDgxvN%2BCXMm1UBF2pGlxz3ekGFACgQ5WQh37ihwMA3rTcetEMjTcD7GWc%2BsjIqtFL9cceK3nquluTFVtbu9TyFyCgI12xe47HUr6gq%2Bfz0PqGscC7R7VZXWFuXibzx3MpTuLY210braUAZbJ8ekSd%2Bwqi57lkaFhTCbBqB9KoomP%2FlrdE5vmDGXmTUkQsd3L6uU5%2BDwjSRTXOw4GDQHR9k%2FMk9BkdaGIrESQV%2FLCyW350Qb7T0gX2Hsfm2X%2F5GPsyteISEJkzjD91aBJIRJ1aWCDjzIAAA%3D%3D",
+        "createdAt": {
+          "_seconds": 1746751718,
+          "_nanoseconds": 949000000
+        },
+        "subQsts": [
+          {
+            "id": "108864",
+            "cliniqCaseId": "108863",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+            "subcategoryName": "Les coupes histologique (membre supérieur)",
+            "text": "Donnez le titre du schéma.",
+            "year": 2018,
+            "type": "qroc",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751719,
+              "_nanoseconds": 298000000
+            },
+            "suggestions": [
+              {
+                "id": "77dc8843-2059-4d02-bdfa-8c354ab9c3da",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Veuillez cocher cette option. Ainsi, vous ne serez pas pénalisé par un point incorrect car il s'agit d'un Qroc et non d'une question à choix multiples"
+              }
+            ]
+          },
+          {
+            "id": "108865",
+            "cliniqCaseId": "108863",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+            "subcategoryName": "Les coupes histologique (membre supérieur)",
+            "text": "A quoi correspond la lettre A ?",
+            "year": 2018,
+            "type": "qroc",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751719,
+              "_nanoseconds": 794000000
+            },
+            "suggestions": [
+              {
+                "id": "caefc40c-2948-449b-9847-1486163e3832",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Veuillez cocher cette option. Ainsi, vous ne serez pas pénalisé par un point incorrect car il s'agit d'un Qroc et non d'une question à choix multiples"
+              }
+            ]
+          },
+          {
+            "id": "108866",
+            "cliniqCaseId": "108863",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+            "subcategoryName": "Les coupes histologique (membre supérieur)",
+            "text": "Donnez les deux fonctions principales de chacun des éléments a et b.",
+            "year": 2018,
+            "type": "qroc",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751720,
+              "_nanoseconds": 280000000
+            },
+            "suggestions": [
+              {
+                "id": "b904941e-48eb-4e15-bfcc-c79b9f104285",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Veuillez cocher cette option. Ainsi, vous ne serez pas pénalisé par un point incorrect car il s'agit d'un Qroc et non d'une question à choix multiples"
+              }
+            ]
+          },
+          {
+            "id": "108867",
+            "cliniqCaseId": "108863",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+            "subcategoryName": "Les coupes histologique (membre supérieur)",
+            "text": "La lettre B correspond à un espace traversé par plusieurs éléments. Lesquels ? Cochez la ou les réponses justes. et Placez-les sur le schéma en les désignant par leur chiffre correspondant.<br />L'artère radiale - le nerf médian- L'artère axillaire- Le nerf musculo-cutané - Le nerf ulnaire -<br />La veine axillaire - Le nerf axillaire - Les noeuds lymphatiques - Le nerf radial - L'artère brachiale",
+            "year": 2018,
+            "type": "qroc",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751720,
+              "_nanoseconds": 781000000
+            },
+            "suggestions": [
+              {
+                "id": "67d4841d-1733-4b14-8fa3-4dc513cdb781",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Veuillez cocher cette option. Ainsi, vous ne serez pas pénalisé par un point incorrect car il s'agit d'un Qroc et non d'une question à choix multiples"
+              }
+            ]
+          },
+          {
+            "id": "108868",
+            "cliniqCaseId": "108863",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+            "subcategoryName": "Les coupes histologique (membre supérieur)",
+            "text": "A son passage dans le sillon bicipital médial, le nerf médian :",
+            "year": 2018,
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751721,
+              "_nanoseconds": 282000000
+            },
+            "suggestions": [
+              {
+                "id": "99ab0002-0c08-4abc-b69c-35c906e2cb28",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Répond en dehors à la face antérieure du muscle brachial."
+              },
+              {
+                "id": "6ce9d8fc-3fb5-47b6-b742-c9f90957c772",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Est croisé en avant par l'artère brachiale et sa branche médiale."
+              },
+              {
+                "id": "57717e75-3e3a-44e3-84e2-18f60cde32d5",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Est accompagné du nerf ulnaire et de l'artère ulnaire."
+              },
+              {
+                "id": "492d90cf-4419-4edd-bec1-3262784fd6c8",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Est en dedans de l'artère brachiale et de ses veines."
+              },
+              {
+                "id": "ebfd8519-09e9-4c39-9613-2face536abdc",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Les réponses a et b sont exactes."
+              },
+              {
+                "id": "8cbb48db-511e-4abf-80d5-84aa6d34ef75",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+                "isStudentAnswer": true
+              }
+            ]
+          },
+          {
+            "id": "108869",
+            "cliniqCaseId": "108863",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+            "subcategoryName": "Les coupes histologique (membre supérieur)",
+            "text": "Tous ces éléments traversent la région du poignet :",
+            "year": 2018,
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751721,
+              "_nanoseconds": 768000000
+            },
+            "suggestions": [
+              {
+                "id": "fef7d540-e7df-4d31-a6bb-6412e7cb335d",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Le nerf médian se place entre les deux plans tendineux des fléchisseurs superficiel et profond des doigts"
+              },
+              {
+                "id": "af7c5157-afee-4c83-b411-fc21991e2522",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Le nerf ulnaire accompagné de l'artère ulnaire traverse un Canal en dedans."
+              },
+              {
+                "id": "dbb8e24d-6cde-49c8-ac31-fb8b282c3351",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Le nerf radial traverse le canal carpien en dehors."
+              },
+              {
+                "id": "eabff50d-67e0-4254-bf28-02655200105e",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Le tendon du fléchisseur ulnaire du carpe se place en dedans du nerf médian dans le canal carpien."
+              },
+              {
+                "id": "96ad45c6-9db3-49c6-a712-f272c28040c7",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Toutes ces propositions sont exactes."
+              },
+              {
+                "id": "2f3811e9-fe0a-4ac5-acad-55bd54f3a177",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+                "isStudentAnswer": true
+              }
+            ]
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
         "id": "109239",
         "cliniqCaseId": "109238",
         "categoryId": "iRe5ipLqcRiOoQ8Qf7aH",
@@ -10104,6 +11021,256 @@
           }
         ],
         "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "108864",
+        "cliniqCaseId": "108863",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+        "subcategoryName": "Les coupes histologique (membre supérieur)",
+        "text": "Donnez le titre du schéma.",
+        "year": 2018,
+        "type": "qroc",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751719,
+          "_nanoseconds": 298000000
+        },
+        "suggestions": [
+          {
+            "id": "77dc8843-2059-4d02-bdfa-8c354ab9c3da",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. Ainsi, vous ne serez pas pénalisé par un point incorrect car il s'agit d'un Qroc et non d'une question à choix multiples"
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "108865",
+        "cliniqCaseId": "108863",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+        "subcategoryName": "Les coupes histologique (membre supérieur)",
+        "text": "A quoi correspond la lettre A ?",
+        "year": 2018,
+        "type": "qroc",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751719,
+          "_nanoseconds": 794000000
+        },
+        "suggestions": [
+          {
+            "id": "caefc40c-2948-449b-9847-1486163e3832",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. Ainsi, vous ne serez pas pénalisé par un point incorrect car il s'agit d'un Qroc et non d'une question à choix multiples"
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "108866",
+        "cliniqCaseId": "108863",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+        "subcategoryName": "Les coupes histologique (membre supérieur)",
+        "text": "Donnez les deux fonctions principales de chacun des éléments a et b.",
+        "year": 2018,
+        "type": "qroc",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751720,
+          "_nanoseconds": 280000000
+        },
+        "suggestions": [
+          {
+            "id": "b904941e-48eb-4e15-bfcc-c79b9f104285",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. Ainsi, vous ne serez pas pénalisé par un point incorrect car il s'agit d'un Qroc et non d'une question à choix multiples"
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "108867",
+        "cliniqCaseId": "108863",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+        "subcategoryName": "Les coupes histologique (membre supérieur)",
+        "text": "La lettre B correspond à un espace traversé par plusieurs éléments. Lesquels ? Cochez la ou les réponses justes. et Placez-les sur le schéma en les désignant par leur chiffre correspondant.<br />L'artère radiale - le nerf médian- L'artère axillaire- Le nerf musculo-cutané - Le nerf ulnaire -<br />La veine axillaire - Le nerf axillaire - Les noeuds lymphatiques - Le nerf radial - L'artère brachiale",
+        "year": 2018,
+        "type": "qroc",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751720,
+          "_nanoseconds": 781000000
+        },
+        "suggestions": [
+          {
+            "id": "67d4841d-1733-4b14-8fa3-4dc513cdb781",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. Ainsi, vous ne serez pas pénalisé par un point incorrect car il s'agit d'un Qroc et non d'une question à choix multiples"
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "108868",
+        "cliniqCaseId": "108863",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+        "subcategoryName": "Les coupes histologique (membre supérieur)",
+        "text": "A son passage dans le sillon bicipital médial, le nerf médian :",
+        "year": 2018,
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751721,
+          "_nanoseconds": 282000000
+        },
+        "suggestions": [
+          {
+            "id": "99ab0002-0c08-4abc-b69c-35c906e2cb28",
+            "isSelected": false,
+            "text": "Répond en dehors à la face antérieure du muscle brachial.",
+            "count": 0
+          },
+          {
+            "id": "6ce9d8fc-3fb5-47b6-b742-c9f90957c772",
+            "isSelected": false,
+            "text": "Est croisé en avant par l'artère brachiale et sa branche médiale.",
+            "count": 0
+          },
+          {
+            "id": "57717e75-3e3a-44e3-84e2-18f60cde32d5",
+            "isSelected": false,
+            "text": "Est accompagné du nerf ulnaire et de l'artère ulnaire.",
+            "count": 0
+          },
+          {
+            "id": "492d90cf-4419-4edd-bec1-3262784fd6c8",
+            "isSelected": false,
+            "text": "Est en dedans de l'artère brachiale et de ses veines.",
+            "count": 1
+          },
+          {
+            "id": "ebfd8519-09e9-4c39-9613-2face536abdc",
+            "isSelected": false,
+            "text": "Les réponses a et b sont exactes.",
+            "count": 0
+          },
+          {
+            "id": "8cbb48db-511e-4abf-80d5-84aa6d34ef75",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "108869",
+        "cliniqCaseId": "108863",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "iznFBwWpOtxsXs0uBglg",
+        "subcategoryName": "Les coupes histologique (membre supérieur)",
+        "text": "Tous ces éléments traversent la région du poignet :",
+        "year": 2018,
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751721,
+          "_nanoseconds": 768000000
+        },
+        "suggestions": [
+          {
+            "id": "fef7d540-e7df-4d31-a6bb-6412e7cb335d",
+            "isSelected": false,
+            "text": "Le nerf médian se place entre les deux plans tendineux des fléchisseurs superficiel et profond des doigts",
+            "count": 1
+          },
+          {
+            "id": "af7c5157-afee-4c83-b411-fc21991e2522",
+            "isSelected": false,
+            "text": "Le nerf ulnaire accompagné de l'artère ulnaire traverse un Canal en dedans.",
+            "count": 1
+          },
+          {
+            "id": "dbb8e24d-6cde-49c8-ac31-fb8b282c3351",
+            "isSelected": false,
+            "text": "Le nerf radial traverse le canal carpien en dehors.",
+            "count": 1
+          },
+          {
+            "id": "eabff50d-67e0-4254-bf28-02655200105e",
+            "isSelected": false,
+            "text": "Le tendon du fléchisseur ulnaire du carpe se place en dedans du nerf médian dans le canal carpien.",
+            "count": 0
+          },
+          {
+            "id": "96ad45c6-9db3-49c6-a712-f272c28040c7",
+            "isSelected": false,
+            "text": "Toutes ces propositions sont exactes.",
+            "count": 0
+          },
+          {
+            "id": "2f3811e9-fe0a-4ac5-acad-55bd54f3a177",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
         "selectedSuggestionId": [],
         "isCorrect": null,
         "timeSpent": 0
@@ -10287,6 +11454,2354 @@
         "selectedSuggestionId": [],
         "isCorrect": null,
         "timeSpent": 0
+      },
+      {
+        "id": "124544",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "MIL8jtZtzdjXYCI2lHNQ",
+        "subcategoryName": "Innervation du membre inférieur",
+        "text": "Cas clinique 01 :<br />À propos de cette image :",
+        "year": null,
+        "location": "TIZIOUZOU",
+        "type": "cas clinique",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanationImage": "https://storage.googleapis.com/bmset-85f8a.appspot.com/images/TIZIOUZOU/MEDICINE/1-year/ANATOMIE/Cas%20clinique%2001.png?GoogleAccessId=firebase-adminsdk-n13kr%40bmset-85f8a.iam.gserviceaccount.com&Expires=16447017600&Signature=KHp3tGqpoC7wSMul3o7JPTsiNruv4H2m0wzlBwLNtqzvCcN6IYHlHTPGZHIdWaWaM1yUbY485VsIzQ1bYwnxfLvUs%2BbHkCXXIsLP9CcpPtbVdIa1PWZESvNod78UroYi1xsMFEE2wY3MaIZN1L09IIm9mjpCYEmNwO6bWSX52Yq4NBjGGds6XiXrAkbeGDz9rmT1%2BLwgJGeSsBvqj0k8fKcRZRDMi%2Fj8KXYnTx9Iow6FggzT3UKWihI5MG%2FNjEMZn1nhOtncyIWixjPGwdLsYB9q3iGiVwFARruz5%2Bm58TBUUbVHlWJeX6Z9bLoVQGa2FP5QkRt92FbSxsEKPE9hiw%3D%3D",
+        "createdAt": {
+          "_seconds": 1746751821,
+          "_nanoseconds": 475000000
+        },
+        "subQsts": [
+          {
+            "id": "124545",
+            "cliniqCaseId": "124544",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "MIL8jtZtzdjXYCI2lHNQ",
+            "subcategoryName": "Innervation du membre inférieur",
+            "text": "L'élément A représente le nerf fémoral:",
+            "year": null,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751821,
+              "_nanoseconds": 820000000
+            },
+            "suggestions": [
+              {
+                "id": "59365563-42f1-46df-a8f6-ac963e191edc",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Il est constitué de fibres L1-L2-L3.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "9b658f3e-01a1-4a76-b432-3d4156ead7b6",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Il est moteur pour les m. fléchisseurs de la cuisse.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "963722d6-d8ab-4b14-a902-cf60c13943cf",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Son territoire sensitif atteint la malléole médiale.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "262c2458-04ff-4d3f-8c77-53fb8aaceb30",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Il Innerve les muscles adducteurs de la cuisse.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "e6611079-35fb-42a5-9f0f-40bd096056c2",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Aucune proposition n'est exacte",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "124546",
+            "cliniqCaseId": "124544",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "MIL8jtZtzdjXYCI2lHNQ",
+            "subcategoryName": "Innervation du membre inférieur",
+            "text": "L'élément B:",
+            "year": null,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751822,
+              "_nanoseconds": 309000000
+            },
+            "suggestions": [
+              {
+                "id": "cf2cfabf-bdf2-4292-8d28-f4cc5dec26ab",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Correspond à la veine grande saphène.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "8032c256-0053-4964-8907-1e0c5b3857b7",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Représente la veine petite saphène.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "cb1022ef-3a16-4ddf-9239-eab5ced92408",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Prend origine à partir de la veine marginale latérale.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "194b2f04-97a7-4234-9db9-1c1d36c977b4",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Rejoint la veine iliaque externe.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "cc9168d6-5b04-4124-8592-22e0cddea9df",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Les propositions A et C sont exactes.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "124547",
+            "cliniqCaseId": "124544",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "MIL8jtZtzdjXYCI2lHNQ",
+            "subcategoryName": "Innervation du membre inférieur",
+            "text": "L'élément H correspond au:",
+            "year": null,
+            "type": "qcm",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751822,
+              "_nanoseconds": 819000000
+            },
+            "suggestions": [
+              {
+                "id": "f909d2be-b749-4468-907c-af3fe7e25c43",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Nerf cutané médial de la cuisse.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "500ae686-260e-42f3-bcef-08954e39b006",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Nerf musculo-cutané latéral.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "d487a1de-d326-45f4-bd9c-67b15d12af92",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Nerf musculo cutané médial.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "060b16ab-578c-4e8d-adc9-ec78d0085961",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Nerf perforant médial.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "7b336c54-0af6-456e-8cd8-189c07c89643",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Nerf saphène accessoire.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "124548",
+            "cliniqCaseId": "124544",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "MIL8jtZtzdjXYCI2lHNQ",
+            "subcategoryName": "Innervation du membre inférieur",
+            "text": "L'élément G:",
+            "year": null,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751823,
+              "_nanoseconds": 317000000
+            },
+            "suggestions": [
+              {
+                "id": "460d9f91-f138-4648-bfce-625d813ba7ce",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Correspond au nerf saphène dans le canal des adducteurs.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "32111733-c0ce-4e81-90bd-d16f4f1911b7",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Correspond au nerf cutané médial de la cuisse.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "5d922351-0f4c-451f-97cd-d6d510181c64",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Traverse le septum médial pour devenir superficiel.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "5d152c20-1d55-4e58-9955-8f1edd022982",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "il se termine avec l'élément F au niveau de la cheville.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "4da4633b-f06a-4e29-a548-e9068c89ba38",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Aucune proposition n'est exacte.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "124549",
+            "cliniqCaseId": "124544",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "MIL8jtZtzdjXYCI2lHNQ",
+            "subcategoryName": "Innervation du membre inférieur",
+            "text": "L'élément F:",
+            "year": null,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751823,
+              "_nanoseconds": 784000000
+            },
+            "suggestions": [
+              {
+                "id": "1dee3fbc-734f-457c-a022-25503db2e591",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Représente les nerfs moteurs destinés au muscle sartorius.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "0fb16601-17b3-4072-a06a-55c16751361c",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Correspond aux branches destinées au muscle quadriceps.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "7d9e2f57-12b7-41bd-a02b-0e6a166daafd",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Correspond aux nerfs cutanés antérieurs de la cuisse.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "59100361-091e-4c6f-9dec-7165333072f0",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Sont des branches cutanées du nerf saphène.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "c0e1883f-87d8-4df5-b8c1-ba9015a0ee74",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Les propositions B et D sont exactes.",
+                "isStudentAnswer": false
+              }
+            ]
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124598",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+        "subcategoryName": "Les coupes histologique (membre inférieur)",
+        "text": "Cas clinique 01 :<br />À propos de cette image :",
+        "year": null,
+        "location": "TIZIOUZOU",
+        "type": "cas clinique",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanationImage": "https://storage.googleapis.com/bmset-85f8a.appspot.com/images/TIZIOUZOU/MEDICINE/1-year/ANATOMIE/les%20coupes%20Cas%20clinique%2001.png?GoogleAccessId=firebase-adminsdk-n13kr%40bmset-85f8a.iam.gserviceaccount.com&Expires=16447017600&Signature=iwCqqMurUK0vnVEzKfposW2xPGWR1mN%2Bj1w85AtA3P3GixmdIbB3UuEN81ejLiOyqA07rN%2FZYtq87lUeuj%2FqgePkOlV%2F%2F%2B8UTMvqQPNyPmc1L%2BY%2FFFF1v2exb7ONcNo5fZGNTZsVLbuF9shTxBamOBWB82lYKL2mfh7HaGjp5bmeZJ495rHZkrOjJ0HJUKd8mz4VzydukzfFWYzzDBoYgCS8CjWrmf%2FjB%2BJidO0ueOOef2R9UuKHnFHgsrZqhfR%2FeB9JOSx3MraPMpOejr43GRf%2FC%2BMviopeAFa8C3PsPJ9l4oPe4na34LBu9i3fH8JcJI8gJDMMiu%2B%2BY2UCzilsRg%3D%3D",
+        "createdAt": {
+          "_seconds": 1746751845,
+          "_nanoseconds": 69000000
+        },
+        "subQsts": [
+          {
+            "id": "124599",
+            "cliniqCaseId": "124598",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+            "subcategoryName": "Les coupes histologique (membre inférieur)",
+            "text": "La structure 1:",
+            "year": null,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751845,
+              "_nanoseconds": 410000000
+            },
+            "suggestions": [
+              {
+                "id": "55a8a855-17fe-461d-8dab-4a0975d887df",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Muscle vaste médial.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "8b43fc9e-6973-49f4-997c-7e6d079fe5ee",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Plan fibreux antérieur du genou.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "60d6bbcf-1669-41cd-9f30-f5264dfac319",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Bourse synoviale du genou.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "d4f10567-571f-4105-8f44-79faee454b90",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Capsule articulaire.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "e7e1eaa6-3cc7-468c-96e7-6088b97aeeea",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Rétinaculum patellaire.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "124600",
+            "cliniqCaseId": "124598",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+            "subcategoryName": "Les coupes histologique (membre inférieur)",
+            "text": "La structure 2:",
+            "year": null,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751845,
+              "_nanoseconds": 907000000
+            },
+            "suggestions": [
+              {
+                "id": "1e644978-a8f9-453d-922c-f565369fc364",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Muscle plantaire.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "ac052012-0897-45b0-9308-cb03cfb1a421",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Ligament collatéral latéral.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "b31d42b8-cfd7-40ea-b9ed-722a944e1e90",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Ligament collatéral médial.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "64d2c445-b933-4d2f-922c-c15b2ef7f0f4",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Ligament croisé postérieur.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "18a0f15e-1ca0-42bc-a0ed-627d40987e09",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Ligament croisé antérieur.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "124601",
+            "cliniqCaseId": "124598",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+            "subcategoryName": "Les coupes histologique (membre inférieur)",
+            "text": "La structure 3:",
+            "year": null,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751846,
+              "_nanoseconds": 377000000
+            },
+            "suggestions": [
+              {
+                "id": "862b5743-eb98-422a-8354-e3945997332b",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Muscle poplité.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "fba341b3-bd85-450e-9a91-e778e7e5f798",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Muscle semi-membraneux.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "21f34f77-36e4-4b15-831f-25b4ca533e5a",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Muscle sartorius.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "a326b8bc-91a5-4b0e-aa06-9c6679c00639",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Ligament collatéral médial.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "57a14354-adeb-4209-af9f-f7f5c25ea40a",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Ligament poplité arqué.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "124602",
+            "cliniqCaseId": "124598",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+            "subcategoryName": "Les coupes histologique (membre inférieur)",
+            "text": "La structure 4:",
+            "year": null,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751846,
+              "_nanoseconds": 853000000
+            },
+            "suggestions": [
+              {
+                "id": "51028bb0-3002-4985-98de-e4d27cd8acf5",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Muscle gracile.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "5fee1ef5-a748-4015-abda-ed068c2152ce",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Muscle sartorius.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "1e28a284-e7b5-41ec-a93e-9ce82412b9ed",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Bandelette ilio-tibiale.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "d1c16d23-e92d-4316-9591-617281e18a22",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Ligament collatéral médial.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "e3e7aec1-ae0e-4195-a6df-10a58a904c7e",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Muscle long adducteur.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "124603",
+            "cliniqCaseId": "124598",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+            "subcategoryName": "Les coupes histologique (membre inférieur)",
+            "text": "La structure 5:",
+            "year": null,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751847,
+              "_nanoseconds": 324000000
+            },
+            "suggestions": [
+              {
+                "id": "4acf880e-fdc5-4304-97cd-5982720981e0",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Muscle poplité.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "4d4dae82-6240-4b52-ad66-f8dce4ed7b90",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Muscle semi-tendineux.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "762f81ea-fbda-4ee9-acb2-30a868b21bab",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Muscle semi-membraneux.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "c2dea9ab-2f2a-4dde-91ca-01ca7165e837",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Muscle plantaire.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "e9380658-28fc-4939-9b98-d3b6a0d65a2f",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Muscle gracile.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "124604",
+            "cliniqCaseId": "124598",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+            "subcategoryName": "Les coupes histologique (membre inférieur)",
+            "text": "La structure 6:",
+            "year": null,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751847,
+              "_nanoseconds": 798000000
+            },
+            "suggestions": [
+              {
+                "id": "dc02ea39-6ae0-43f8-9878-ceb9268eeddb",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Tronc artériel tibio-fibulaire.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "a854763f-1afb-402a-8615-6b903c484dcb",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Artère tibiale postérieure.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "f580c187-4014-457e-9056-5a9285daf32b",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Veine petite saphène.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "c1c32437-338c-4a00-b753-9cecb768a8d2",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Nerf ischiatique.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "4462b014-1083-44a7-98e2-55943992fc2d",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Veine poplitée.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "124605",
+            "cliniqCaseId": "124598",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+            "subcategoryName": "Les coupes histologique (membre inférieur)",
+            "text": "La structure 7:",
+            "year": null,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751848,
+              "_nanoseconds": 282000000
+            },
+            "suggestions": [
+              {
+                "id": "65dfe657-9a74-40f4-86dc-1da05858b9e3",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Nerf ischiatique.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "33341464-05d0-4369-9bf7-2c6f0ace0d85",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Nerf obturateur.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "2bef8c19-bae7-4c01-bb73-cf87715beb5a",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Nerf tibial.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "7669eb41-2d45-48eb-9525-b7b086f77867",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Nerf fibulaire profond.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "2b239842-fb5c-41c0-a71b-7538107b87fe",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Nerf fibulaire commun.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "124606",
+            "cliniqCaseId": "124598",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+            "subcategoryName": "Les coupes histologique (membre inférieur)",
+            "text": "La structure 8:",
+            "year": null,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751848,
+              "_nanoseconds": 866000000
+            },
+            "suggestions": [
+              {
+                "id": "08edfea7-5e8f-4e91-8584-5fc367ef34e2",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Muscle gastrocnémien latéral.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "38c6cb07-14b0-4d2b-bfd6-6213ebade80b",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Muscle gastrocnémien médial.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "a3a25bd1-17b0-4773-9750-3ff62fea28b5",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Muscle semi-tendineux.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "4eedeb55-6ade-4cd3-b513-c91b1f6a2b20",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Muscle semi-membraneux.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "556ae28f-df02-4290-bf03-df72c05e1620",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Plan fibreux postérieur.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "124607",
+            "cliniqCaseId": "124598",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+            "subcategoryName": "Les coupes histologique (membre inférieur)",
+            "text": "La structure 9:",
+            "year": null,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751849,
+              "_nanoseconds": 345000000
+            },
+            "suggestions": [
+              {
+                "id": "a6b88819-c612-46bb-95cc-45e8e8ffe441",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Muscle poplité.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "c96dbad4-a2c3-44ad-a4cf-b75e7c42844e",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Muscle plantaire.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "6a471cb2-948c-486e-a2df-25bd4b995933",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Ligament poplité oblique.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "4fda0e7c-c2b8-4ede-9d29-907d6ae69cb3",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Ligament poplité arqué.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "7eba30af-da3e-4303-a964-f8311c26bbe7",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Muscle sartorius.",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "124608",
+            "cliniqCaseId": "124598",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+            "subcategoryName": "Les coupes histologique (membre inférieur)",
+            "text": "La structure 10:",
+            "year": null,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751849,
+              "_nanoseconds": 812000000
+            },
+            "suggestions": [
+              {
+                "id": "752f55d4-e7af-43ee-8141-1c74d61156b7",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Nerf obturateur.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "a7225ed2-c783-41cd-9fd5-5907f5c3294a",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Ligament collatéral latéral.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "c03dff9f-f116-47dc-b18d-3805a89b5ac3",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Nerf fémoral.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "92e626da-7be3-4a6a-8d12-15c0cf339bc7",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Veine grande saphène.",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "365cadb6-90be-4af2-bfef-4f357825028a",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Nerf sural médial.",
+                "isStudentAnswer": false
+              }
+            ]
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124626",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+        "subcategoryName": "Les coupes histologique (membre inférieur)",
+        "text": "Cas clinique 01 :<br />À propos de cette image :",
+        "year": null,
+        "location": "TIZIOUZOU",
+        "type": "cas clinique",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanationImage": "https://storage.googleapis.com/bmset-85f8a.appspot.com/images/TIZIOUZOU/MEDICINE/1-year/ANATOMIE/Cas%20clinique%2002.png?GoogleAccessId=firebase-adminsdk-n13kr%40bmset-85f8a.iam.gserviceaccount.com&Expires=16447017600&Signature=RkfAmmakvyJMjSzh%2BVLPw0CuCA9G32C6wlOGIPsP9A6MXUOduDytNjT%2BSUdTDEDV476RxL%2BWLQa%2F0De6xInsvVRG4JuDdjeykLol16%2FTeJxJvj2Ix3igneOT%2BABqbXaQIAh%2FSGsViVYwebqtvjMHriGOxHIxPletbdPBjW9nqkW5HFJ9%2FMryuroOEtpt7vjaCtEsKTCV06P7q03WNC%2B0enH07H8RwbbpBxBL%2FcEPRWoTlAe8oBK6Kpj2zAM0oi0%2BANUKNVp454QC%2F68EDPORx%2BpFbhWcp4%2FBhzw7i3Fcz1oQSLW%2F2idY3%2FcS0WD7ZGaZ6q3FAlycm5C%2Binx2sRbZGw%3D%3D",
+        "createdAt": {
+          "_seconds": 1746751857,
+          "_nanoseconds": 706000000
+        },
+        "subQsts": [
+          {
+            "id": "124627",
+            "cliniqCaseId": "124626",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+            "subcategoryName": "Les coupes histologique (membre inférieur)",
+            "text": "La figure ci-contre représente une coupe transversale au niveau de la cuisse: À quel niveau correspond cette coupe",
+            "year": null,
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751858,
+              "_nanoseconds": 40000000
+            },
+            "suggestions": [
+              {
+                "id": "4d835978-33e6-44fe-908d-71e15f0d6ff9",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Tiers supérieur."
+              },
+              {
+                "id": "2ce83a82-f0a9-42cf-b2bf-c69c93d15404",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Tiers moyen."
+              },
+              {
+                "id": "33d876cc-b255-419a-af3a-4f7ee7034d53",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Tiers inferieur."
+              },
+              {
+                "id": "93c8146d-a1bb-4cb5-bda5-5ebfae8eba77",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Triangle fémoral."
+              },
+              {
+                "id": "e408a8bf-6c07-4687-950e-08ad510068cc",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Toutes ces propositions sont fausses."
+              },
+              {
+                "id": "f17dd9da-5a25-44fa-8320-93a5837aa0a2",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+                "isStudentAnswer": true
+              }
+            ]
+          },
+          {
+            "id": "124628",
+            "cliniqCaseId": "124626",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+            "subcategoryName": "Les coupes histologique (membre inférieur)",
+            "text": "La figure ci-contre représente une coupe transversale au niveau de la cuisse: La légende A correspond:",
+            "year": null,
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751858,
+              "_nanoseconds": 536000000
+            },
+            "suggestions": [
+              {
+                "id": "d6973362-8f1b-4693-8c62-18deb2a6a148",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "À la loge des adducteurs avec le nerf obturateur."
+              },
+              {
+                "id": "6f1a2f37-014b-4bd7-931a-a99b243dbe06",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Au canal fémoral avec les vaisseaux fémoraux."
+              },
+              {
+                "id": "dd7f4bfb-1abb-4ed9-9596-dd4ff98a16de",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Au nerf fémoral dans le canal fémoral."
+              },
+              {
+                "id": "adba3a68-8eb6-4842-837e-9423f6ff78cd",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Au nerf saphène dans l'anneau du grand adducteur."
+              },
+              {
+                "id": "5a859bcd-b328-4a57-82a2-3fb2de2e3f4d",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Toutes ces propositions sont fausses."
+              },
+              {
+                "id": "9f6c1d8a-d3ad-40cc-94ca-3b8986c1687e",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+                "isStudentAnswer": true
+              }
+            ]
+          },
+          {
+            "id": "124629",
+            "cliniqCaseId": "124626",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+            "subcategoryName": "Les coupes histologique (membre inférieur)",
+            "text": "La figure ci-contre représente une coupe transversale au niveau de la cuisse: La légende B correspond:",
+            "year": null,
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751859,
+              "_nanoseconds": 16000000
+            },
+            "suggestions": [
+              {
+                "id": "dc74bfd7-f043-4e62-9006-4391f21e7797",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Au muscle semi-membraneux et semi-tendineux."
+              },
+              {
+                "id": "2b1cbcf8-c0fc-43a0-a5b8-427ba131a701",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Aux long et court chef du biceps."
+              },
+              {
+                "id": "964f9d59-bf1b-4ec8-82e4-5877268c6558",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Au muscle droit fémoral."
+              },
+              {
+                "id": "ecae2b1f-e1f0-4179-baae-5a991cb05eb3",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Au muscle long biceps et semi-membraneux."
+              },
+              {
+                "id": "6f0f7853-85fd-49e9-92bf-8955e2258bc6",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Toutes ces propositions sont fausses."
+              },
+              {
+                "id": "17ff11f8-12fc-4abf-91bc-db188984a615",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+                "isStudentAnswer": true
+              }
+            ]
+          },
+          {
+            "id": "124630",
+            "cliniqCaseId": "124626",
+            "categoryId": "70oWAE7RRSJrcUCFeHzI",
+            "categoryName": "Anatomie",
+            "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+            "subcategoryName": "Les coupes histologique (membre inférieur)",
+            "text": "La figure ci-contre représente une coupe transversale au niveau de la cuisse: La légende C correspond:",
+            "year": null,
+            "type2": "externat",
+            "explanation": "",
+            "location": "TIZIOUZOU",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1746751859,
+              "_nanoseconds": 503000000
+            },
+            "suggestions": [
+              {
+                "id": "0c0e21f3-9541-45fa-bebb-c6dd17d9b76f",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Au muscle gracile de la loge interne des adducteurs."
+              },
+              {
+                "id": "1e402129-541d-456e-b41c-770cb5eaaaea",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Au court adducteur avec ses deux chefs."
+              },
+              {
+                "id": "dec22b84-a162-4419-a444-f6b02ca0a28c",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Au sartorius tendu de l'épine iliaque antéro-supérieure à la face interne du tibia."
+              },
+              {
+                "id": "d8c66eed-b1ca-4b5e-a2c3-c61c0df7309f",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Au faisceau superficiel du vaste interne du quadriceps."
+              },
+              {
+                "id": "668bdb3a-fcda-45cb-b6ac-989c16924b8d",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Toutes ces propositions sont exactes"
+              },
+              {
+                "id": "b53a47ee-9d4e-4cea-b1a3-f2cc2f6373a9",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+                "isStudentAnswer": true
+              }
+            ]
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124545",
+        "cliniqCaseId": "124544",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "MIL8jtZtzdjXYCI2lHNQ",
+        "subcategoryName": "Innervation du membre inférieur",
+        "text": "L'élément A représente le nerf fémoral:",
+        "year": null,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751821,
+          "_nanoseconds": 820000000
+        },
+        "suggestions": [
+          {
+            "id": "59365563-42f1-46df-a8f6-ac963e191edc",
+            "isSelected": false,
+            "text": "Il est constitué de fibres L1-L2-L3.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9b658f3e-01a1-4a76-b432-3d4156ead7b6",
+            "isSelected": false,
+            "text": "Il est moteur pour les m. fléchisseurs de la cuisse.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "963722d6-d8ab-4b14-a902-cf60c13943cf",
+            "isSelected": false,
+            "text": "Son territoire sensitif atteint la malléole médiale.",
+            "isStudentAnswer": false,
+            "count": 10
+          },
+          {
+            "id": "262c2458-04ff-4d3f-8c77-53fb8aaceb30",
+            "isSelected": false,
+            "text": "Il Innerve les muscles adducteurs de la cuisse.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e6611079-35fb-42a5-9f0f-40bd096056c2",
+            "isSelected": false,
+            "text": "Aucune proposition n'est exacte",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 9,
+          "totalInteractions": 10
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124546",
+        "cliniqCaseId": "124544",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "MIL8jtZtzdjXYCI2lHNQ",
+        "subcategoryName": "Innervation du membre inférieur",
+        "text": "L'élément B:",
+        "year": null,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751822,
+          "_nanoseconds": 309000000
+        },
+        "suggestions": [
+          {
+            "id": "cf2cfabf-bdf2-4292-8d28-f4cc5dec26ab",
+            "isSelected": false,
+            "text": "Correspond à la veine grande saphène.",
+            "isStudentAnswer": false,
+            "count": 10
+          },
+          {
+            "id": "8032c256-0053-4964-8907-1e0c5b3857b7",
+            "isSelected": false,
+            "text": "Représente la veine petite saphène.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "cb1022ef-3a16-4ddf-9239-eab5ced92408",
+            "isSelected": false,
+            "text": "Prend origine à partir de la veine marginale latérale.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "194b2f04-97a7-4234-9db9-1c1d36c977b4",
+            "isSelected": false,
+            "text": "Rejoint la veine iliaque externe.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "cc9168d6-5b04-4124-8592-22e0cddea9df",
+            "isSelected": false,
+            "text": "Les propositions A et C sont exactes.",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 10,
+          "totalInteractions": 11,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124547",
+        "cliniqCaseId": "124544",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "MIL8jtZtzdjXYCI2lHNQ",
+        "subcategoryName": "Innervation du membre inférieur",
+        "text": "L'élément H correspond au:",
+        "year": null,
+        "type": "qcm",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751822,
+          "_nanoseconds": 819000000
+        },
+        "suggestions": [
+          {
+            "id": "f909d2be-b749-4468-907c-af3fe7e25c43",
+            "isSelected": false,
+            "text": "Nerf cutané médial de la cuisse.",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "500ae686-260e-42f3-bcef-08954e39b006",
+            "isSelected": false,
+            "text": "Nerf musculo-cutané latéral.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "d487a1de-d326-45f4-bd9c-67b15d12af92",
+            "isSelected": false,
+            "text": "Nerf musculo cutané médial.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "060b16ab-578c-4e8d-adc9-ec78d0085961",
+            "isSelected": false,
+            "text": "Nerf perforant médial.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "7b336c54-0af6-456e-8cd8-189c07c89643",
+            "isSelected": false,
+            "text": "Nerf saphène accessoire.",
+            "isStudentAnswer": false,
+            "count": 5
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 5,
+          "correct": 5,
+          "totalInteractions": 10
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124548",
+        "cliniqCaseId": "124544",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "MIL8jtZtzdjXYCI2lHNQ",
+        "subcategoryName": "Innervation du membre inférieur",
+        "text": "L'élément G:",
+        "year": null,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751823,
+          "_nanoseconds": 317000000
+        },
+        "suggestions": [
+          {
+            "id": "460d9f91-f138-4648-bfce-625d813ba7ce",
+            "isSelected": false,
+            "text": "Correspond au nerf saphène dans le canal des adducteurs.",
+            "isStudentAnswer": false,
+            "count": 5
+          },
+          {
+            "id": "32111733-c0ce-4e81-90bd-d16f4f1911b7",
+            "isSelected": false,
+            "text": "Correspond au nerf cutané médial de la cuisse.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "5d922351-0f4c-451f-97cd-d6d510181c64",
+            "isSelected": false,
+            "text": "Traverse le septum médial pour devenir superficiel.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "5d152c20-1d55-4e58-9955-8f1edd022982",
+            "isSelected": false,
+            "text": "il se termine avec l'élément F au niveau de la cheville.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4da4633b-f06a-4e29-a548-e9068c89ba38",
+            "isSelected": false,
+            "text": "Aucune proposition n'est exacte.",
+            "isStudentAnswer": false,
+            "count": 2
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 5,
+          "correct": 5,
+          "totalInteractions": 10
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124549",
+        "cliniqCaseId": "124544",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "MIL8jtZtzdjXYCI2lHNQ",
+        "subcategoryName": "Innervation du membre inférieur",
+        "text": "L'élément F:",
+        "year": null,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751823,
+          "_nanoseconds": 784000000
+        },
+        "suggestions": [
+          {
+            "id": "1dee3fbc-734f-457c-a022-25503db2e591",
+            "isSelected": false,
+            "text": "Représente les nerfs moteurs destinés au muscle sartorius.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "0fb16601-17b3-4072-a06a-55c16751361c",
+            "isSelected": false,
+            "text": "Correspond aux branches destinées au muscle quadriceps.",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "7d9e2f57-12b7-41bd-a02b-0e6a166daafd",
+            "isSelected": false,
+            "text": "Correspond aux nerfs cutanés antérieurs de la cuisse.",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "59100361-091e-4c6f-9dec-7165333072f0",
+            "isSelected": false,
+            "text": "Sont des branches cutanées du nerf saphène.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "c0e1883f-87d8-4df5-b8c1-ba9015a0ee74",
+            "isSelected": false,
+            "text": "Les propositions B et D sont exactes.",
+            "isStudentAnswer": false,
+            "count": 2
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 3,
+          "totalInteractions": 9,
+          "wrong": 6
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124599",
+        "cliniqCaseId": "124598",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+        "subcategoryName": "Les coupes histologique (membre inférieur)",
+        "text": "La structure 1:",
+        "year": null,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751845,
+          "_nanoseconds": 410000000
+        },
+        "suggestions": [
+          {
+            "id": "55a8a855-17fe-461d-8dab-4a0975d887df",
+            "isSelected": false,
+            "text": "Muscle vaste médial.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "8b43fc9e-6973-49f4-997c-7e6d079fe5ee",
+            "isSelected": false,
+            "text": "Plan fibreux antérieur du genou.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "60d6bbcf-1669-41cd-9f30-f5264dfac319",
+            "isSelected": false,
+            "text": "Bourse synoviale du genou.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "d4f10567-571f-4105-8f44-79faee454b90",
+            "isSelected": false,
+            "text": "Capsule articulaire.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "e7e1eaa6-3cc7-468c-96e7-6088b97aeeea",
+            "isSelected": false,
+            "text": "Rétinaculum patellaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 2,
+          "wrong": 2
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124600",
+        "cliniqCaseId": "124598",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+        "subcategoryName": "Les coupes histologique (membre inférieur)",
+        "text": "La structure 2:",
+        "year": null,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751845,
+          "_nanoseconds": 907000000
+        },
+        "suggestions": [
+          {
+            "id": "1e644978-a8f9-453d-922c-f565369fc364",
+            "isSelected": false,
+            "text": "Muscle plantaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ac052012-0897-45b0-9308-cb03cfb1a421",
+            "isSelected": false,
+            "text": "Ligament collatéral latéral.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b31d42b8-cfd7-40ea-b9ed-722a944e1e90",
+            "isSelected": false,
+            "text": "Ligament collatéral médial.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "64d2c445-b933-4d2f-922c-c15b2ef7f0f4",
+            "isSelected": false,
+            "text": "Ligament croisé postérieur.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "18a0f15e-1ca0-42bc-a0ed-627d40987e09",
+            "isSelected": false,
+            "text": "Ligament croisé antérieur.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124601",
+        "cliniqCaseId": "124598",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+        "subcategoryName": "Les coupes histologique (membre inférieur)",
+        "text": "La structure 3:",
+        "year": null,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751846,
+          "_nanoseconds": 377000000
+        },
+        "suggestions": [
+          {
+            "id": "862b5743-eb98-422a-8354-e3945997332b",
+            "isSelected": false,
+            "text": "Muscle poplité.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "fba341b3-bd85-450e-9a91-e778e7e5f798",
+            "isSelected": false,
+            "text": "Muscle semi-membraneux.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "21f34f77-36e4-4b15-831f-25b4ca533e5a",
+            "isSelected": false,
+            "text": "Muscle sartorius.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a326b8bc-91a5-4b0e-aa06-9c6679c00639",
+            "isSelected": false,
+            "text": "Ligament collatéral médial.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "57a14354-adeb-4209-af9f-f7f5c25ea40a",
+            "isSelected": false,
+            "text": "Ligament poplité arqué.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124602",
+        "cliniqCaseId": "124598",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+        "subcategoryName": "Les coupes histologique (membre inférieur)",
+        "text": "La structure 4:",
+        "year": null,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751846,
+          "_nanoseconds": 853000000
+        },
+        "suggestions": [
+          {
+            "id": "51028bb0-3002-4985-98de-e4d27cd8acf5",
+            "isSelected": false,
+            "text": "Muscle gracile.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "5fee1ef5-a748-4015-abda-ed068c2152ce",
+            "isSelected": false,
+            "text": "Muscle sartorius.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "1e28a284-e7b5-41ec-a93e-9ce82412b9ed",
+            "isSelected": false,
+            "text": "Bandelette ilio-tibiale.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d1c16d23-e92d-4316-9591-617281e18a22",
+            "isSelected": false,
+            "text": "Ligament collatéral médial.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e3e7aec1-ae0e-4195-a6df-10a58a904c7e",
+            "isSelected": false,
+            "text": "Muscle long adducteur.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124603",
+        "cliniqCaseId": "124598",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+        "subcategoryName": "Les coupes histologique (membre inférieur)",
+        "text": "La structure 5:",
+        "year": null,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751847,
+          "_nanoseconds": 324000000
+        },
+        "suggestions": [
+          {
+            "id": "4acf880e-fdc5-4304-97cd-5982720981e0",
+            "isSelected": false,
+            "text": "Muscle poplité.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "4d4dae82-6240-4b52-ad66-f8dce4ed7b90",
+            "isSelected": false,
+            "text": "Muscle semi-tendineux.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "762f81ea-fbda-4ee9-acb2-30a868b21bab",
+            "isSelected": false,
+            "text": "Muscle semi-membraneux.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c2dea9ab-2f2a-4dde-91ca-01ca7165e837",
+            "isSelected": false,
+            "text": "Muscle plantaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e9380658-28fc-4939-9b98-d3b6a0d65a2f",
+            "isSelected": false,
+            "text": "Muscle gracile.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124604",
+        "cliniqCaseId": "124598",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+        "subcategoryName": "Les coupes histologique (membre inférieur)",
+        "text": "La structure 6:",
+        "year": null,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751847,
+          "_nanoseconds": 798000000
+        },
+        "suggestions": [
+          {
+            "id": "dc02ea39-6ae0-43f8-9878-ceb9268eeddb",
+            "isSelected": false,
+            "text": "Tronc artériel tibio-fibulaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a854763f-1afb-402a-8615-6b903c484dcb",
+            "isSelected": false,
+            "text": "Artère tibiale postérieure.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f580c187-4014-457e-9056-5a9285daf32b",
+            "isSelected": false,
+            "text": "Veine petite saphène.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "c1c32437-338c-4a00-b753-9cecb768a8d2",
+            "isSelected": false,
+            "text": "Nerf ischiatique.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4462b014-1083-44a7-98e2-55943992fc2d",
+            "isSelected": false,
+            "text": "Veine poplitée.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124605",
+        "cliniqCaseId": "124598",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+        "subcategoryName": "Les coupes histologique (membre inférieur)",
+        "text": "La structure 7:",
+        "year": null,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751848,
+          "_nanoseconds": 282000000
+        },
+        "suggestions": [
+          {
+            "id": "65dfe657-9a74-40f4-86dc-1da05858b9e3",
+            "isSelected": false,
+            "text": "Nerf ischiatique.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "33341464-05d0-4369-9bf7-2c6f0ace0d85",
+            "isSelected": false,
+            "text": "Nerf obturateur.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "2bef8c19-bae7-4c01-bb73-cf87715beb5a",
+            "isSelected": false,
+            "text": "Nerf tibial.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7669eb41-2d45-48eb-9525-b7b086f77867",
+            "isSelected": false,
+            "text": "Nerf fibulaire profond.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "2b239842-fb5c-41c0-a71b-7538107b87fe",
+            "isSelected": false,
+            "text": "Nerf fibulaire commun.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124606",
+        "cliniqCaseId": "124598",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+        "subcategoryName": "Les coupes histologique (membre inférieur)",
+        "text": "La structure 8:",
+        "year": null,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751848,
+          "_nanoseconds": 866000000
+        },
+        "suggestions": [
+          {
+            "id": "08edfea7-5e8f-4e91-8584-5fc367ef34e2",
+            "isSelected": false,
+            "text": "Muscle gastrocnémien latéral.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "38c6cb07-14b0-4d2b-bfd6-6213ebade80b",
+            "isSelected": false,
+            "text": "Muscle gastrocnémien médial.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a3a25bd1-17b0-4773-9750-3ff62fea28b5",
+            "isSelected": false,
+            "text": "Muscle semi-tendineux.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4eedeb55-6ade-4cd3-b513-c91b1f6a2b20",
+            "isSelected": false,
+            "text": "Muscle semi-membraneux.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "556ae28f-df02-4290-bf03-df72c05e1620",
+            "isSelected": false,
+            "text": "Plan fibreux postérieur.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124607",
+        "cliniqCaseId": "124598",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+        "subcategoryName": "Les coupes histologique (membre inférieur)",
+        "text": "La structure 9:",
+        "year": null,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751849,
+          "_nanoseconds": 345000000
+        },
+        "suggestions": [
+          {
+            "id": "a6b88819-c612-46bb-95cc-45e8e8ffe441",
+            "isSelected": false,
+            "text": "Muscle poplité.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c96dbad4-a2c3-44ad-a4cf-b75e7c42844e",
+            "isSelected": false,
+            "text": "Muscle plantaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6a471cb2-948c-486e-a2df-25bd4b995933",
+            "isSelected": false,
+            "text": "Ligament poplité oblique.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4fda0e7c-c2b8-4ede-9d29-907d6ae69cb3",
+            "isSelected": false,
+            "text": "Ligament poplité arqué.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7eba30af-da3e-4303-a964-f8311c26bbe7",
+            "isSelected": false,
+            "text": "Muscle sartorius.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124608",
+        "cliniqCaseId": "124598",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+        "subcategoryName": "Les coupes histologique (membre inférieur)",
+        "text": "La structure 10:",
+        "year": null,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751849,
+          "_nanoseconds": 812000000
+        },
+        "suggestions": [
+          {
+            "id": "752f55d4-e7af-43ee-8141-1c74d61156b7",
+            "isSelected": false,
+            "text": "Nerf obturateur.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a7225ed2-c783-41cd-9fd5-5907f5c3294a",
+            "isSelected": false,
+            "text": "Ligament collatéral latéral.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "c03dff9f-f116-47dc-b18d-3805a89b5ac3",
+            "isSelected": false,
+            "text": "Nerf fémoral.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "92e626da-7be3-4a6a-8d12-15c0cf339bc7",
+            "isSelected": false,
+            "text": "Veine grande saphène.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "365cadb6-90be-4af2-bfef-4f357825028a",
+            "isSelected": false,
+            "text": "Nerf sural médial.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124627",
+        "cliniqCaseId": "124626",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+        "subcategoryName": "Les coupes histologique (membre inférieur)",
+        "text": "La figure ci-contre représente une coupe transversale au niveau de la cuisse: À quel niveau correspond cette coupe",
+        "year": null,
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751858,
+          "_nanoseconds": 40000000
+        },
+        "suggestions": [
+          {
+            "id": "4d835978-33e6-44fe-908d-71e15f0d6ff9",
+            "isSelected": false,
+            "text": "Tiers supérieur.",
+            "count": 3
+          },
+          {
+            "id": "2ce83a82-f0a9-42cf-b2bf-c69c93d15404",
+            "isSelected": false,
+            "text": "Tiers moyen.",
+            "count": 0
+          },
+          {
+            "id": "33d876cc-b255-419a-af3a-4f7ee7034d53",
+            "isSelected": false,
+            "text": "Tiers inferieur.",
+            "count": 0
+          },
+          {
+            "id": "93c8146d-a1bb-4cb5-bda5-5ebfae8eba77",
+            "isSelected": false,
+            "text": "Triangle fémoral.",
+            "count": 0
+          },
+          {
+            "id": "e408a8bf-6c07-4687-950e-08ad510068cc",
+            "isSelected": false,
+            "text": "Toutes ces propositions sont fausses.",
+            "count": 0
+          },
+          {
+            "id": "f17dd9da-5a25-44fa-8320-93a5837aa0a2",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 3,
+          "totalInteractions": 3
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124628",
+        "cliniqCaseId": "124626",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+        "subcategoryName": "Les coupes histologique (membre inférieur)",
+        "text": "La figure ci-contre représente une coupe transversale au niveau de la cuisse: La légende A correspond:",
+        "year": null,
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751858,
+          "_nanoseconds": 536000000
+        },
+        "suggestions": [
+          {
+            "id": "d6973362-8f1b-4693-8c62-18deb2a6a148",
+            "isSelected": false,
+            "text": "À la loge des adducteurs avec le nerf obturateur.",
+            "count": 1
+          },
+          {
+            "id": "6f1a2f37-014b-4bd7-931a-a99b243dbe06",
+            "isSelected": false,
+            "text": "Au canal fémoral avec les vaisseaux fémoraux.",
+            "count": 0
+          },
+          {
+            "id": "dd7f4bfb-1abb-4ed9-9596-dd4ff98a16de",
+            "isSelected": false,
+            "text": "Au nerf fémoral dans le canal fémoral.",
+            "count": 1
+          },
+          {
+            "id": "adba3a68-8eb6-4842-837e-9423f6ff78cd",
+            "isSelected": false,
+            "text": "Au nerf saphène dans l'anneau du grand adducteur.",
+            "count": 0
+          },
+          {
+            "id": "5a859bcd-b328-4a57-82a2-3fb2de2e3f4d",
+            "isSelected": false,
+            "text": "Toutes ces propositions sont fausses.",
+            "count": 0
+          },
+          {
+            "id": "9f6c1d8a-d3ad-40cc-94ca-3b8986c1687e",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 2,
+          "totalInteractions": 2
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124629",
+        "cliniqCaseId": "124626",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+        "subcategoryName": "Les coupes histologique (membre inférieur)",
+        "text": "La figure ci-contre représente une coupe transversale au niveau de la cuisse: La légende B correspond:",
+        "year": null,
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751859,
+          "_nanoseconds": 16000000
+        },
+        "suggestions": [
+          {
+            "id": "dc74bfd7-f043-4e62-9006-4391f21e7797",
+            "isSelected": false,
+            "text": "Au muscle semi-membraneux et semi-tendineux.",
+            "count": 0
+          },
+          {
+            "id": "2b1cbcf8-c0fc-43a0-a5b8-427ba131a701",
+            "isSelected": false,
+            "text": "Aux long et court chef du biceps.",
+            "count": 0
+          },
+          {
+            "id": "964f9d59-bf1b-4ec8-82e4-5877268c6558",
+            "isSelected": false,
+            "text": "Au muscle droit fémoral.",
+            "count": 0
+          },
+          {
+            "id": "ecae2b1f-e1f0-4179-baae-5a991cb05eb3",
+            "isSelected": false,
+            "text": "Au muscle long biceps et semi-membraneux.",
+            "count": 0
+          },
+          {
+            "id": "6f0f7853-85fd-49e9-92bf-8955e2258bc6",
+            "isSelected": false,
+            "text": "Toutes ces propositions sont fausses.",
+            "count": 1
+          },
+          {
+            "id": "17ff11f8-12fc-4abf-91bc-db188984a615",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124630",
+        "cliniqCaseId": "124626",
+        "categoryId": "70oWAE7RRSJrcUCFeHzI",
+        "categoryName": "Anatomie",
+        "subcategoryId": "fcZr13ShtrZz4AcYHuWQ",
+        "subcategoryName": "Les coupes histologique (membre inférieur)",
+        "text": "La figure ci-contre représente une coupe transversale au niveau de la cuisse: La légende C correspond:",
+        "year": null,
+        "type2": "externat",
+        "explanation": "",
+        "location": "TIZIOUZOU",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746751859,
+          "_nanoseconds": 503000000
+        },
+        "suggestions": [
+          {
+            "id": "0c0e21f3-9541-45fa-bebb-c6dd17d9b76f",
+            "isSelected": false,
+            "text": "Au muscle gracile de la loge interne des adducteurs.",
+            "count": 0
+          },
+          {
+            "id": "1e402129-541d-456e-b41c-770cb5eaaaea",
+            "isSelected": false,
+            "text": "Au court adducteur avec ses deux chefs.",
+            "count": 0
+          },
+          {
+            "id": "dec22b84-a162-4419-a444-f6b02ca0a28c",
+            "isSelected": false,
+            "text": "Au sartorius tendu de l'épine iliaque antéro-supérieure à la face interne du tibia.",
+            "count": 0
+          },
+          {
+            "id": "d8c66eed-b1ca-4b5e-a2c3-c61c0df7309f",
+            "isSelected": false,
+            "text": "Au faisceau superficiel du vaste interne du quadriceps.",
+            "count": 0
+          },
+          {
+            "id": "668bdb3a-fcda-45cb-b6ac-989c16924b8d",
+            "isSelected": false,
+            "text": "Toutes ces propositions sont exactes",
+            "count": 0
+          },
+          {
+            "id": "b53a47ee-9d4e-4cea-b1a3-f2cc2f6373a9",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
       }
     ],
     "modules": [
@@ -10294,93 +13809,17 @@
         "id": "iRe5ipLqcRiOoQ8Qf7aH",
         "name": "Biochimie",
         "studyLevel": 1
+      },
+      {
+        "id": "70oWAE7RRSJrcUCFeHzI",
+        "name": "Anatomie",
+        "studyLevel": 1
       }
     ],
     "subcategories": [
       {
-        "id": "1YxlIQHHcN8r5QD1jH5x",
-        "name": "Métabolisme des lipides",
-        "category": {
-          "id": "iRe5ipLqcRiOoQ8Qf7aH",
-          "father": "",
-          "name": "Biochimie"
-        }
-      },
-      {
-        "id": "FXM34n8S91by5fNb070P",
-        "name": "Structure des protéines",
-        "category": {
-          "id": "iRe5ipLqcRiOoQ8Qf7aH",
-          "father": "",
-          "name": "Biochimie"
-        }
-      },
-      {
-        "id": "GhjMoZhWKXVwehAY5lZz",
-        "name": "Structure des acides aminés",
-        "category": {
-          "id": "iRe5ipLqcRiOoQ8Qf7aH",
-          "father": "",
-          "name": "Biochimie"
-        }
-      },
-      {
-        "id": "OxNZBVbN49rMWWzRbMlo",
-        "name": "La voie pentose phosphate",
-        "category": {
-          "id": "iRe5ipLqcRiOoQ8Qf7aH",
-          "father": "",
-          "name": "Biochimie"
-        }
-      },
-      {
-        "id": "SByVbvv6XZswlFVQVltE",
-        "name": "Structure des lipides",
-        "category": {
-          "id": "iRe5ipLqcRiOoQ8Qf7aH",
-          "father": "",
-          "name": "Biochimie"
-        }
-      },
-      {
-        "id": "WplFGMtSSXS1nO7UvFaP",
-        "name": "Le cycle de krebs",
-        "category": {
-          "id": "iRe5ipLqcRiOoQ8Qf7aH",
-          "father": "",
-          "name": "Biochimie"
-        }
-      },
-      {
-        "id": "Wr8n9dRyUZWuZWV0MCmC",
-        "name": "La bioénergétique",
-        "category": {
-          "id": "iRe5ipLqcRiOoQ8Qf7aH",
-          "father": "",
-          "name": "Biochimie"
-        }
-      },
-      {
-        "id": "mmKAzJYFmZnw0p1DvccS",
-        "name": "Structure des glucides",
-        "category": {
-          "id": "iRe5ipLqcRiOoQ8Qf7aH",
-          "father": "",
-          "name": "Biochimie"
-        }
-      },
-      {
         "id": "mvy2LfDvQKTC3Z85UJxN",
         "name": "Glucogenèse et néoglucogenèse",
-        "category": {
-          "id": "iRe5ipLqcRiOoQ8Qf7aH",
-          "father": "",
-          "name": "Biochimie"
-        }
-      },
-      {
-        "id": "nRMrrevIbSFKYoywjsrj",
-        "name": "Les enzymes",
         "category": {
           "id": "iRe5ipLqcRiOoQ8Qf7aH",
           "father": "",
@@ -10397,12 +13836,219 @@
         }
       },
       {
+        "id": "Wr8n9dRyUZWuZWV0MCmC",
+        "name": "La bioénergétique",
+        "category": {
+          "id": "iRe5ipLqcRiOoQ8Qf7aH",
+          "father": "",
+          "name": "Biochimie"
+        }
+      },
+      {
+        "id": "OxNZBVbN49rMWWzRbMlo",
+        "name": "La voie pentose phosphate",
+        "category": {
+          "id": "iRe5ipLqcRiOoQ8Qf7aH",
+          "father": "",
+          "name": "Biochimie"
+        }
+      },
+      {
+        "id": "WplFGMtSSXS1nO7UvFaP",
+        "name": "Le cycle de krebs",
+        "category": {
+          "id": "iRe5ipLqcRiOoQ8Qf7aH",
+          "father": "",
+          "name": "Biochimie"
+        }
+      },
+      {
+        "id": "nRMrrevIbSFKYoywjsrj",
+        "name": "Les enzymes",
+        "category": {
+          "id": "iRe5ipLqcRiOoQ8Qf7aH",
+          "father": "",
+          "name": "Biochimie"
+        }
+      },
+      {
         "id": "z7Hk9RATXnCyXLpiy7m1",
         "name": "Métabolisme des acides aminés",
         "category": {
           "id": "iRe5ipLqcRiOoQ8Qf7aH",
           "father": "",
           "name": "Biochimie"
+        }
+      },
+      {
+        "id": "1YxlIQHHcN8r5QD1jH5x",
+        "name": "Métabolisme des lipides",
+        "category": {
+          "id": "iRe5ipLqcRiOoQ8Qf7aH",
+          "father": "",
+          "name": "Biochimie"
+        }
+      },
+      {
+        "id": "GhjMoZhWKXVwehAY5lZz",
+        "name": "Structure des acides aminés",
+        "category": {
+          "id": "iRe5ipLqcRiOoQ8Qf7aH",
+          "father": "",
+          "name": "Biochimie"
+        }
+      },
+      {
+        "id": "mmKAzJYFmZnw0p1DvccS",
+        "name": "Structure des glucides",
+        "category": {
+          "id": "iRe5ipLqcRiOoQ8Qf7aH",
+          "father": "",
+          "name": "Biochimie"
+        }
+      },
+      {
+        "id": "SByVbvv6XZswlFVQVltE",
+        "name": "Structure des lipides",
+        "category": {
+          "id": "iRe5ipLqcRiOoQ8Qf7aH",
+          "father": "",
+          "name": "Biochimie"
+        }
+      },
+      {
+        "id": "FXM34n8S91by5fNb070P",
+        "name": "Structure des protéines",
+        "category": {
+          "id": "iRe5ipLqcRiOoQ8Qf7aH",
+          "father": "",
+          "name": "Biochimie"
+        }
+      },
+      {
+        "id": "4JckgTyPADEqgQ8iqG3y",
+        "name": "Arthrologie du membre inférieur",
+        "category": {
+          "id": "70oWAE7RRSJrcUCFeHzI",
+          "father": "",
+          "name": "Anatomie"
+        }
+      },
+      {
+        "id": "Ij8kslJB9M3kGFD01sp5",
+        "name": "Arthrologie du membre supérieur",
+        "category": {
+          "id": "70oWAE7RRSJrcUCFeHzI",
+          "father": "",
+          "name": "Anatomie"
+        }
+      },
+      {
+        "id": "NhKcGnVFcBOM3onclu33",
+        "name": "Généralités",
+        "category": {
+          "id": "70oWAE7RRSJrcUCFeHzI",
+          "father": "",
+          "name": "Anatomie"
+        }
+      },
+      {
+        "id": "MIL8jtZtzdjXYCI2lHNQ",
+        "name": "Innervation du membre inférieur",
+        "category": {
+          "id": "70oWAE7RRSJrcUCFeHzI",
+          "father": "",
+          "name": "Anatomie"
+        }
+      },
+      {
+        "id": "XLei9TjbQuSbXrfMP4Ey",
+        "name": "Innervation du membre supérieur",
+        "category": {
+          "id": "70oWAE7RRSJrcUCFeHzI",
+          "father": "",
+          "name": "Anatomie"
+        }
+      },
+      {
+        "id": "fcZr13ShtrZz4AcYHuWQ",
+        "name": "Les coupes histologique (membre inférieur)",
+        "category": {
+          "id": "70oWAE7RRSJrcUCFeHzI",
+          "father": "",
+          "name": "Anatomie"
+        }
+      },
+      {
+        "id": "iznFBwWpOtxsXs0uBglg",
+        "name": "Les coupes histologique (membre supérieur)",
+        "category": {
+          "id": "70oWAE7RRSJrcUCFeHzI",
+          "father": "",
+          "name": "Anatomie"
+        }
+      },
+      {
+        "id": "33eoPfuYY8NUmfpzVIHm",
+        "name": "Myologie du membre inférieur",
+        "category": {
+          "id": "70oWAE7RRSJrcUCFeHzI",
+          "father": "",
+          "name": "Anatomie"
+        }
+      },
+      {
+        "id": "6mPSV3a5Qphn4yOlYBWX",
+        "name": "Myologie du membre supérieur",
+        "category": {
+          "id": "70oWAE7RRSJrcUCFeHzI",
+          "father": "",
+          "name": "Anatomie"
+        }
+      },
+      {
+        "id": "1DJeF3NrDmbi5Vbs7wEF",
+        "name": "Ostéologie du membre inférieur",
+        "category": {
+          "id": "70oWAE7RRSJrcUCFeHzI",
+          "father": "",
+          "name": "Anatomie"
+        }
+      },
+      {
+        "id": "eiVOqo7fR1EgQcbekuMw",
+        "name": "Ostéologie du membre supérieur",
+        "category": {
+          "id": "70oWAE7RRSJrcUCFeHzI",
+          "father": "",
+          "name": "Anatomie"
+        }
+      },
+      {
+        "id": "cptkos39VTbZt83Y6AFc",
+        "name": "Regions anatomique du membre supérieur",
+        "category": {
+          "id": "70oWAE7RRSJrcUCFeHzI",
+          "father": "",
+          "name": "Anatomie"
+        }
+      },
+      {
+        "id": "I9ahPiDkYHdhaADLbPOr",
+        "name": "Vascularisation du membre inférieur",
+        "category": {
+          "id": "70oWAE7RRSJrcUCFeHzI",
+          "father": "",
+          "name": "Anatomie"
+        }
+      },
+      {
+        "id": "7I204jcHUS0PXAspQpGO",
+        "name": "Vascularisation du membre supérieur",
+        "category": {
+          "id": "70oWAE7RRSJrcUCFeHzI",
+          "father": "",
+          "name": "Anatomie"
         }
       }
     ],
@@ -10412,12 +14058,12 @@
       "correctCount": 0,
       "lastAnsweredQuestionIndex": 0,
       "neutralCount": 0,
-      "questionsCount": 127
+      "questionsCount": 155
     },
     "type": "quiz",
     "createdAt": {
-      "_seconds": 1756064817,
-      "_nanoseconds": 189000000
+      "_seconds": 1756081678,
+      "_nanoseconds": 986000000
     }
   }
 }

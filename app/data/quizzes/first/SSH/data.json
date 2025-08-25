@@ -1,0 +1,4966 @@
+{
+  "data": {
+    "name": "SSH",
+    "questions": [
+      {
+        "id": "124077",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "L'éthique médicale : (RJ)",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318934,
+          "_nanoseconds": 719000000
+        },
+        "suggestions": [
+          {
+            "id": "cb4131f3-8f5e-4599-89b7-eeb264acaf3a",
+            "isSelected": false,
+            "text": "C'est l'ensemble des règles qui régissent la profession médicale ;",
+            "count": 1
+          },
+          {
+            "id": "9b2a9659-8cd1-43c5-bcc9-4ccd89e8add4",
+            "isSelected": false,
+            "text": "Elle tente de résoudre les conflits entre les principes éthiques ;",
+            "count": 2
+          },
+          {
+            "id": "f86223f6-bfd8-4ddf-88fa-571042803b6d",
+            "isSelected": false,
+            "text": "Le non-respect de ses principes est passible de sanctions disciplinaires uniquement.",
+            "count": 0
+          },
+          {
+            "id": "a2113ea7-b127-40d3-8824-920d9b80b1d3",
+            "isSelected": false,
+            "text": "Est un concept nouveau, apparu à la fin de la deuxième guerre mondiale ;",
+            "count": 0
+          },
+          {
+            "id": "7fca16c2-a17b-407b-8e83-9ee3a1a6d9e0",
+            "isSelected": false,
+            "text": "Toutes ces réponses sont justes",
+            "count": 0
+          },
+          {
+            "id": "2c2d86e7-f6b3-403b-9c8a-3612550770fc",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 2,
+          "totalInteractions": 2
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124078",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "Les recommandations pour un comportement correct de l'étudiant en médecine sont:(RF)",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318935,
+          "_nanoseconds": 229000000
+        },
+        "suggestions": [
+          {
+            "id": "2bd70d6c-a4b2-46e7-9fc9-b8871199a541",
+            "isSelected": false,
+            "text": "Travailler selon les principes éthiques et dans le cadre légal",
+            "count": 0
+          },
+          {
+            "id": "bded26fa-e8b7-4b59-851a-860669b9f163",
+            "isSelected": false,
+            "text": "Avoir une attitude respectueuse vis-à-vis des médecins et des malades",
+            "count": 0
+          },
+          {
+            "id": "cda03cbf-e04a-4131-9441-4b505159f624",
+            "isSelected": false,
+            "text": "Montrer un comportement incompatible avec l'éthique dans la profession médicale",
+            "count": 0
+          },
+          {
+            "id": "db889b41-c54e-47f3-8d29-294666d216ec",
+            "isSelected": false,
+            "text": "Respect de la ponctualité",
+            "count": 0
+          },
+          {
+            "id": "6fc04588-885f-4062-99aa-cdb16aa18e69",
+            "isSelected": false,
+            "text": "Le sens de responsabilité dès le début des études est exigé",
+            "count": 1
+          },
+          {
+            "id": "b3f3c3f5-f60c-42a3-a4f8-daeb46641638",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124082",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "05zVinaWLQYG10Csqw05",
+        "subcategoryName": "Histoire de la medecine",
+        "text": "La médecine au moyen âge : (RJ)",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318937,
+          "_nanoseconds": 657000000
+        },
+        "suggestions": [
+          {
+            "id": "a096a6b4-fcd7-432f-b12b-cd98b445d1b6",
+            "isSelected": false,
+            "text": "Durant la période du 5ème au 11ème siècle la pratique de la médecine n'était pas dévolue aux moines",
+            "count": 0
+          },
+          {
+            "id": "e66e98a0-9771-4094-9068-c61a31835b22",
+            "isSelected": false,
+            "text": "Le déclin de l'activité scientifique dans le monde arabe était pendant la 1ere phase (du 7eme eu 8eme siècle)",
+            "count": 0
+          },
+          {
+            "id": "a0b1d28a-20b0-4f64-8372-00d840342b31",
+            "isSelected": false,
+            "text": "Ibn Sina était un praticien célèbre du monde arabe durant la phase d'innovation",
+            "count": 0
+          },
+          {
+            "id": "504285bd-a405-4068-aa4e-24476625c518",
+            "isSelected": false,
+            "text": "La traduction du Canon d'Avicenne n'avait aucun impact sur la discipline",
+            "count": 0
+          },
+          {
+            "id": "20a63748-9992-424e-b012-8d9fb05ef352",
+            "isSelected": false,
+            "text": "Toutes ces réponses sont fausses",
+            "count": 0
+          },
+          {
+            "id": "2139f219-1c6f-4eb8-a694-0c46c593cb25",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124083",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "05zVinaWLQYG10Csqw05",
+        "subcategoryName": "Histoire de la medecine",
+        "text": "Dans l'histoire des origines de la médecine : (RJ)",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318938,
+          "_nanoseconds": 180000000
+        },
+        "suggestions": [
+          {
+            "id": "de6fa767-6986-40c3-87ca-95f552413b7d",
+            "isSelected": false,
+            "text": "Chez les Maya la médecine était pratiquée par l'élite religieuse",
+            "count": 0
+          },
+          {
+            "id": "ed84d4f2-461e-4518-9ca0-d3923556ca3b",
+            "isSelected": false,
+            "text": "Les tablettes de Mésopotamie étaient les premiers documents médicaux connus de l'humanité",
+            "count": 0
+          },
+          {
+            "id": "6ba4ad42-8a73-40fa-9030-f5cfa7f1ba11",
+            "isSelected": false,
+            "text": "Imhotep est considéré comme le fondateur de la médecine égyptienne",
+            "count": 0
+          },
+          {
+            "id": "4ab37771-3f8f-4389-b7b4-7f921eff744b",
+            "isSelected": false,
+            "text": "La médecine chinoise était basée sur les plantes médicinales et sur l'acupuncture",
+            "count": 0
+          },
+          {
+            "id": "a857f5d8-5a30-4e04-9132-27f810486751",
+            "isSelected": false,
+            "text": "Toutes ces réponses sont justes",
+            "count": 0
+          },
+          {
+            "id": "8aaa5bca-77db-44a5-8383-d19f35a34879",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124084",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "05zVinaWLQYG10Csqw05",
+        "subcategoryName": "Histoire de la medecine",
+        "text": "Pendant la période coloniale en Algérie : (RF)",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318938,
+          "_nanoseconds": 697000000
+        },
+        "suggestions": [
+          {
+            "id": "c4b82f8d-6523-4a9d-89fe-9f8e0b2a917f",
+            "isSelected": false,
+            "text": "Au début : les services curatifs étaient pour les autochtones et les mesures d'hygiène pour les européens",
+            "count": 0
+          },
+          {
+            "id": "ceb352ad-b6c7-4628-8d2c-77027874da4d",
+            "isSelected": false,
+            "text": "Soigner était l'une des missions de l'église catholique, en plus de l'évangélisation et l'éducation",
+            "count": 0
+          },
+          {
+            "id": "f10de18d-6d11-435e-9317-95b5f1129b92",
+            "isSelected": false,
+            "text": "Il fut créé le corps des auxiliaires médicaux indigènes affectés auprès des médecins de colonisation",
+            "count": 0
+          },
+          {
+            "id": "7be508fe-74d4-4c2f-820a-cd8e4988682e",
+            "isSelected": false,
+            "text": "Le Docteur Mohamed Benlarbey était le premier médecin algérien de l'époque coloniale",
+            "count": 0
+          },
+          {
+            "id": "a8aaded4-b2e5-40a1-a885-a7af95e86ac5",
+            "isSelected": false,
+            "text": "des médecins et étudiants en médecine ont rejoint le maquis à la suite de la grève de mai 1956",
+            "count": 0
+          },
+          {
+            "id": "7d07b7d7-49e8-4667-8e5a-beaddba7d526",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124085",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "05zVinaWLQYG10Csqw05",
+        "subcategoryName": "Histoire de la medecine",
+        "text": "Le médecin anglais Edward Jenner : (RJ)",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318939,
+          "_nanoseconds": 213000000
+        },
+        "suggestions": [
+          {
+            "id": "2fbca437-efb1-4379-81af-ad2da0c2c2b1",
+            "isSelected": false,
+            "text": "Est à l'origine de la vaccination antivariolique",
+            "count": 0
+          },
+          {
+            "id": "9021e2d5-a28e-41f1-90b6-57003769a79f",
+            "isSelected": false,
+            "text": "Il a inoculé à un jeune enfant âgé de 8 ans, du pus prélevé sur la main d'une fermière infectée",
+            "count": 0
+          },
+          {
+            "id": "574fdafc-dc70-4006-96c3-c7c6c7fe4b72",
+            "isSelected": false,
+            "text": "Il a ainsi réalisé la 1ere vaccination humaine d'un enfant contre la rage",
+            "count": 0
+          },
+          {
+            "id": "8048173d-4326-4d21-9a86-ccb25d7c205c",
+            "isSelected": false,
+            "text": "Les réponses A et B sont justes",
+            "count": 0
+          },
+          {
+            "id": "0af279ab-ffef-4d0a-9a48-89020291e197",
+            "isSelected": false,
+            "text": "Les réponses A, B et C sont justes",
+            "count": 0
+          },
+          {
+            "id": "7852e1a6-17ee-403e-8f81-ed3d95e04fb7",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124089",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "ngyfCu02Ydmw0p0I6oQQ",
+        "subcategoryName": "Iatrogene evenement lie aux soins",
+        "text": "L'iatrogénie englobe : (RF)",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318941,
+          "_nanoseconds": 640000000
+        },
+        "suggestions": [
+          {
+            "id": "a65532b4-50e7-4caa-97ba-ee6c2904f515",
+            "isSelected": false,
+            "text": "Les complications chirurgicales",
+            "count": 0
+          },
+          {
+            "id": "15d0aa80-7282-4ff2-a51f-83a9443b5f38",
+            "isSelected": false,
+            "text": "La faute médicale",
+            "count": 0
+          },
+          {
+            "id": "387d8619-e77e-4034-9959-f2d3fd879c8b",
+            "isSelected": false,
+            "text": "Les infections nosocomiales",
+            "count": 0
+          },
+          {
+            "id": "cacf4574-dc04-4a69-91ac-b04a49a44fa2",
+            "isSelected": false,
+            "text": "L'iatrogénie médicamenteuse",
+            "count": 0
+          },
+          {
+            "id": "685af8ae-f081-4d03-9d57-7ab8541681dc",
+            "isSelected": false,
+            "text": "Les complications de l'imagerie",
+            "count": 0
+          },
+          {
+            "id": "e27f91c0-25d3-47fc-a4b1-3f047b40def7",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124100",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "fM6ZEyo8xRiM2qfidZ8f",
+        "subcategoryName": "La responsabilite medicale",
+        "text": "A propos de la responsabilité médicale pénale : (RJ)",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318947,
+          "_nanoseconds": 597000000
+        },
+        "suggestions": [
+          {
+            "id": "8ab4ce6b-43cb-4ef1-ac06-4a024735b551",
+            "isSelected": false,
+            "text": "Le médecin ne peut pas être traduit devant la justice répressive pour les actes accomplis dans le cadre de sa profession",
+            "count": 0
+          },
+          {
+            "id": "f950b123-da19-423f-a2b6-aa2f2b8cc313",
+            "isSelected": false,
+            "text": "Les incriminations pénales sont toujours des délits",
+            "count": 0
+          },
+          {
+            "id": "ec034638-1df6-4c93-9120-d7c4823e2434",
+            "isSelected": false,
+            "text": "La non-assistance à une personne en péril n'engage pas la responsabilité pénale",
+            "count": 0
+          },
+          {
+            "id": "c8221e0e-bc6a-43b3-b934-9f2a4c37f658",
+            "isSelected": false,
+            "text": "Les infractions peuvent concerner l'acte médical ou la profession médicale",
+            "count": 0
+          },
+          {
+            "id": "ba7e3a61-94d2-4e3b-95f8-4766a5467780",
+            "isSelected": false,
+            "text": "La responsabilité pénale peut être couverte par l'assurance",
+            "count": 0
+          },
+          {
+            "id": "1ec61cc0-80a2-4640-8aac-3017b3016759",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124101",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "fM6ZEyo8xRiM2qfidZ8f",
+        "subcategoryName": "La responsabilite medicale",
+        "text": "Sur les types de responsabilité médicale : (RJ)",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318948,
+          "_nanoseconds": 98000000
+        },
+        "suggestions": [
+          {
+            "id": "f8b926f3-11ba-43de-af3f-271a025eb96d",
+            "isSelected": false,
+            "text": "La responsabilité Administrative concerne les médecins libéraux",
+            "count": 0
+          },
+          {
+            "id": "09712315-72c3-41d4-8f9c-37e7b45afdb1",
+            "isSelected": false,
+            "text": "La responsabilité civile est indemnitaires",
+            "count": 0
+          },
+          {
+            "id": "a2f7a477-c87d-4348-ac81-d9148ec785bd",
+            "isSelected": false,
+            "text": "La responsabilité Disciplinaire n'a pas de rapport avec le conseil de l'ordre des médecins",
+            "count": 0
+          },
+          {
+            "id": "0cc39c68-3849-4456-ab12-dcadae8bc10d",
+            "isSelected": false,
+            "text": "La responsabilité pénale n'est pas personnelle",
+            "count": 0
+          },
+          {
+            "id": "cfc6ea39-8a30-41d7-bb49-f9b7a446dc93",
+            "isSelected": false,
+            "text": "L'étudiant en médecine n'est concerné par aucune de ces responsabilités",
+            "count": 0
+          },
+          {
+            "id": "4510885f-7a55-4811-9648-a2ef0af42ffd",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124102",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "fM6ZEyo8xRiM2qfidZ8f",
+        "subcategoryName": "La responsabilite medicale",
+        "text": "Pour quelle(s) faute(s) la responsabilité pénale est engagée :",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318948,
+          "_nanoseconds": 743000000
+        },
+        "suggestions": [
+          {
+            "id": "fb5cd78e-de40-4622-bd5c-66ba4ace353f",
+            "isSelected": false,
+            "text": "La violation du secret médical professionnel",
+            "count": 0
+          },
+          {
+            "id": "df949cfe-17b6-4063-bbdf-e222e27c73b3",
+            "isSelected": false,
+            "text": "La non-assistance à une personne en péril",
+            "count": 0
+          },
+          {
+            "id": "5b8a4676-795a-4571-8d55-4afa89e229de",
+            "isSelected": false,
+            "text": "Les faux certificats",
+            "count": 0
+          },
+          {
+            "id": "aadfbb49-4238-4712-b3f3-f0eceba41fdf",
+            "isSelected": false,
+            "text": "Les réponses B et C sont justes",
+            "count": 0
+          },
+          {
+            "id": "0c870507-28a6-4f01-9dac-aa48afc9987a",
+            "isSelected": false,
+            "text": "Les réponses A, B et C sont justes",
+            "count": 0
+          },
+          {
+            "id": "ae86ec2a-aed8-47ad-8305-2c412f10705e",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124139",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "NCHoAwUjR8UjezKtubgF",
+        "subcategoryName": "Relation entre medecin et malade",
+        "text": "Concernant la confraternité : (RJ)",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318969,
+          "_nanoseconds": 801000000
+        },
+        "suggestions": [
+          {
+            "id": "60f398c0-6d01-4d4a-a6f7-63c0a198f1f7",
+            "isSelected": false,
+            "text": "Il s'agit d'un devoir du médecin envers le malade",
+            "count": 0
+          },
+          {
+            "id": "f5e4ac76-2295-494d-9784-3f0b7713dc0b",
+            "isSelected": false,
+            "text": "Son respect est instauré dans l'intérêt de l'administration hospitalière",
+            "count": 2
+          },
+          {
+            "id": "6297d1f7-dfbe-4885-8a50-e8f61d935410",
+            "isSelected": false,
+            "text": "Le non-respect du devoir de confraternité est passible de sanction pénale",
+            "count": 0
+          },
+          {
+            "id": "50f9b151-3ee9-4c8d-83ce-4092a8597d28",
+            "isSelected": false,
+            "text": "Elle est fondée sur le principe de la loyauté entre les médecins",
+            "count": 0
+          },
+          {
+            "id": "5fab7d63-545b-4875-af36-c9bca086ff27",
+            "isSelected": false,
+            "text": "Toutes ces réponses sont fausses.",
+            "count": 0
+          },
+          {
+            "id": "c81e4bda-f5f2-4873-be38-2b552c20c2c5",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 2,
+          "totalInteractions": 2
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124140",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "NCHoAwUjR8UjezKtubgF",
+        "subcategoryName": "Relation entre medecin et malade",
+        "text": "Concernant les devoirs généraux des médecins : (RJ)",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318970,
+          "_nanoseconds": 323000000
+        },
+        "suggestions": [
+          {
+            "id": "b3d667c6-459e-4375-b162-4769bb5a42b4",
+            "isSelected": false,
+            "text": "Le médecin est uniquement au service de la santé de l'individu ;",
+            "count": 0
+          },
+          {
+            "id": "c8b78011-9e87-4c72-82b1-dc6791065014",
+            "isSelected": false,
+            "text": "Le médecin exerce sa profession exclusivement pour préserver la santé publique ;",
+            "count": 0
+          },
+          {
+            "id": "c66e8a20-3d0c-4478-ae22-44d7c1822f3e",
+            "isSelected": false,
+            "text": "Le médecin est au service de l'individu et de la communauté ;",
+            "count": 0
+          },
+          {
+            "id": "3a059f0e-aa6a-4a36-b38e-f3a35302622b",
+            "isSelected": false,
+            "text": "Le médecin n'est pas obligé d'informer le malade ni d'avoir son consentement ;",
+            "count": 0
+          },
+          {
+            "id": "0131ceca-c2da-429c-948d-7833d3b4e9a3",
+            "isSelected": false,
+            "text": "Les réponses A et B sont justes.",
+            "count": 0
+          },
+          {
+            "id": "c744e873-5d48-444d-86a0-a4159a09e71a",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124130",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "ZgWPAIRofiHK95SsvvuL",
+        "subcategoryName": "Pratique medicale pendant la periode coloniale en algerie",
+        "text": "Pendant la période coloniale en Algérie : (RF)",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318964,
+          "_nanoseconds": 755000000
+        },
+        "suggestions": [
+          {
+            "id": "85f8c5f3-6cf4-4369-a91c-8e3ad4f7587e",
+            "isSelected": false,
+            "text": "Au début : les services curatifs étaient pour les autochtones et les mesures d'hygiène pour les européens",
+            "count": 1
+          },
+          {
+            "id": "1da59bba-0e30-47fc-a76b-bc6f4c7ec37b",
+            "isSelected": false,
+            "text": "Soigner était l'une des missions de l'église catholique, en plus de l'évangélisation et l'éducation",
+            "count": 0
+          },
+          {
+            "id": "b7c573a9-ff90-410a-ae77-bc7671710c29",
+            "isSelected": false,
+            "text": "Il fut créé le corps des auxiliaires médicaux indigènes affectés auprès des médecins de colonisation",
+            "count": 0
+          },
+          {
+            "id": "aa5dd60e-f1e6-4ff0-a42c-5d18b0ec3ad2",
+            "isSelected": false,
+            "text": "Le Docteur Mohamed Benlarbey était le premier médecin algérien de l'époque coloniale",
+            "count": 0
+          },
+          {
+            "id": "da53480a-68e1-4b25-9275-69b388f1e5fa",
+            "isSelected": false,
+            "text": "des médecins et étudiants en médecine ont rejoint le maquis à la suite de la grève de mai 1956",
+            "count": 0
+          },
+          {
+            "id": "58d318cf-2c5a-4562-acf0-22a9a8c5a75d",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124123",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "WJCrERfDAOYz4XV0vvzJ",
+        "subcategoryName": "Le secret medicale",
+        "text": "Le secret professionnel : (RJ)",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318960,
+          "_nanoseconds": 394000000
+        },
+        "suggestions": [
+          {
+            "id": "7e9dc976-736f-4e28-a427-62391b4059b9",
+            "isSelected": false,
+            "text": "S'impose à tout médecin sauf quand la loi en dispose autrement",
+            "count": 0
+          },
+          {
+            "id": "16f55905-16f4-43b4-a2e9-ea3b878ce36f",
+            "isSelected": false,
+            "text": "Couvre seulement ce que le médecin a vu",
+            "count": 0
+          },
+          {
+            "id": "9e50c2d5-51f0-4dee-a58f-316b1c2dc9cd",
+            "isSelected": false,
+            "text": "Est aboli par le décès du patient",
+            "count": 0
+          },
+          {
+            "id": "11836830-e2c5-445e-a2b9-7021582d471c",
+            "isSelected": false,
+            "text": "La divulgation du secret médical est permise en cas de publication scientifique",
+            "count": 0
+          },
+          {
+            "id": "20e17ce8-53cc-43af-9b0c-c24651001d6a",
+            "isSelected": false,
+            "text": "Les confidences du patient ne sont pas incluses dans le secret médical",
+            "count": 0
+          },
+          {
+            "id": "98f96154-1c92-4279-9381-299718ff314b",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124124",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "WJCrERfDAOYz4XV0vvzJ",
+        "subcategoryName": "Le secret medicale",
+        "text": "Sur les principes du secret médical : (RJ)",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318960,
+          "_nanoseconds": 918000000
+        },
+        "suggestions": [
+          {
+            "id": "9f3bb61d-0bbe-40a0-85cd-bb30248e4ebe",
+            "isSelected": false,
+            "text": "En adressant le malade à un autre médecin, il est interdit de transmettre ses informations médicales",
+            "count": 0
+          },
+          {
+            "id": "733dab48-a6eb-4c66-9d19-9fe1216656c5",
+            "isSelected": false,
+            "text": "L'adresse d'un patient ne fait pas partie des informations concernées par le secret",
+            "count": 0
+          },
+          {
+            "id": "59ce1806-9616-4752-aa75-b2f62238b9fa",
+            "isSelected": false,
+            "text": "L'étudiant en médecine en stage à l'hôpital est concerné par le secret médical",
+            "count": 0
+          },
+          {
+            "id": "5d603bbd-eeae-4094-b805-23cacf2c9b14",
+            "isSelected": false,
+            "text": "La notion du secret médical n'a pas de fondement juridique",
+            "count": 0
+          },
+          {
+            "id": "83db7907-8637-44aa-b0cc-79b9f7ea0255",
+            "isSelected": false,
+            "text": "Aucune de ces réponses n'est correcte",
+            "count": 0
+          },
+          {
+            "id": "c7cc528b-71f7-4463-a0de-d73d634ed00f",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124064",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "Les principes de l'éthique reposent sur :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318927,
+          "_nanoseconds": 969000000
+        },
+        "suggestions": [
+          {
+            "id": "eaefd22c-8c7f-4108-a779-bab8d54a8d95",
+            "isSelected": false,
+            "text": "L'autonomie.",
+            "count": 0
+          },
+          {
+            "id": "a42a0b79-6dc7-4939-9b64-f73e377265b7",
+            "isSelected": false,
+            "text": "La supériorité.",
+            "count": 0
+          },
+          {
+            "id": "1e05ebcc-a456-4126-976f-8b2224290993",
+            "isSelected": false,
+            "text": "La bienfaisance.",
+            "count": 0
+          },
+          {
+            "id": "760a5992-efc3-40e9-9be8-e1e10c5dfb27",
+            "isSelected": false,
+            "text": "La non-malfaisance.",
+            "count": 0
+          },
+          {
+            "id": "adc745c6-e22b-4f65-b341-0092583a26f0",
+            "isSelected": false,
+            "text": "La compassion.",
+            "count": 0
+          },
+          {
+            "id": "0e8fc0ed-494a-457e-a1c3-4941d89cb296",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124065",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "L'éthique médicale est :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318928,
+          "_nanoseconds": 485000000
+        },
+        "suggestions": [
+          {
+            "id": "455360a3-be8e-452e-9065-415cfdaedff0",
+            "isSelected": false,
+            "text": "La totalité de l'éthique.",
+            "count": 0
+          },
+          {
+            "id": "801bedf9-91aa-4d5e-a685-ddcc2325fde8",
+            "isSelected": false,
+            "text": "Consacrée aux questions scientifiques relatives à la pratique médicale.",
+            "count": 0
+          },
+          {
+            "id": "fc172663-159e-49af-8ef7-3eb9b0af3ece",
+            "isSelected": false,
+            "text": "Consacrée aux questions morales relatives à la pratique médicale.",
+            "count": 0
+          },
+          {
+            "id": "e984220d-8781-4bd6-94df-b39dba87d787",
+            "isSelected": false,
+            "text": "Consacrée aux questions religieuses relatives à la pratique médicale.",
+            "count": 0
+          },
+          {
+            "id": "c855585e-f0f7-4242-ada2-d2aff1c9181f",
+            "isSelected": false,
+            "text": "Une discipline de la neurologie.",
+            "count": 0
+          },
+          {
+            "id": "0ac042d6-f097-432d-a9d4-6576d7c82f03",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124066",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "La bioéthique s'intéresse à :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318928,
+          "_nanoseconds": 986000000
+        },
+        "suggestions": [
+          {
+            "id": "18de2c01-50cb-44ab-9fe1-d87f96f92f97",
+            "isSelected": false,
+            "text": "La psychologie médicale.",
+            "count": 0
+          },
+          {
+            "id": "7bd8354b-a59e-4147-82af-d15304428635",
+            "isSelected": false,
+            "text": "Le prélèvement et la transplantation d'organes.",
+            "count": 0
+          },
+          {
+            "id": "1f4c3616-2dd5-402e-b4ac-d3f249d8a7f2",
+            "isSelected": false,
+            "text": "Le don de sang.",
+            "count": 0
+          },
+          {
+            "id": "7e502be3-be1a-4e89-97ae-eb2ffc8cf449",
+            "isSelected": false,
+            "text": "L'assistance médicale à la procréation.",
+            "count": 0
+          },
+          {
+            "id": "0896747d-6d42-4016-8870-3a811b20f1c3",
+            "isSelected": false,
+            "text": "La recherche biomédicale.",
+            "count": 0
+          },
+          {
+            "id": "95568159-8713-443c-927e-412d5185511a",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124067",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "L'éthique médicale :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318929,
+          "_nanoseconds": 517000000
+        },
+        "suggestions": [
+          {
+            "id": "dedda688-1889-4300-a515-bb352d6e7ba7",
+            "isSelected": false,
+            "text": "N'est pas une composante essentielle de la pratique médicale.",
+            "count": 0
+          },
+          {
+            "id": "d8518b61-8de4-400b-87fc-9f7b12c5ce7e",
+            "isSelected": false,
+            "text": "Peut remplacer la loi.",
+            "count": 0
+          },
+          {
+            "id": "0ef84539-bbca-4f76-9f73-991ddcbfa04a",
+            "isSelected": false,
+            "text": "Désigne les règles de bonne conduite auxquelles sont soumis les professionnels de la santé.",
+            "count": 0
+          },
+          {
+            "id": "6221dd63-069b-41e8-9a35-a7e82aba45b4",
+            "isSelected": false,
+            "text": "Est purement théorique.",
+            "count": 0
+          },
+          {
+            "id": "f31aeda0-8ae2-44dc-ad38-9702a599bf22",
+            "isSelected": false,
+            "text": "Agit comme un service à la déontologie.",
+            "count": 0
+          },
+          {
+            "id": "dfe89e7a-e8a8-43c5-b346-7016e477d6bb",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124068",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "Concernant la procréation médicalement assistée :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318930,
+          "_nanoseconds": 51000000
+        },
+        "suggestions": [
+          {
+            "id": "fa9f0cac-c73a-4f62-baab-df06b9ef350c",
+            "isSelected": false,
+            "text": "L'insémination artificielle est l'une de ses techniques.",
+            "count": 0
+          },
+          {
+            "id": "decb61d9-57b4-4684-867f-286af130dcd6",
+            "isSelected": false,
+            "text": "La fécondation in vitro est l'une de ses techniques.",
+            "count": 0
+          },
+          {
+            "id": "e303fcb8-1f0a-40b3-890d-7a58870a6b54",
+            "isSelected": false,
+            "text": "Est régie par les articles de la loi nº 18-11 du 2 juillet 2018 relative à la santé.",
+            "count": 0
+          },
+          {
+            "id": "ae9f2a12-33c8-44c5-8810-47bced1dcf59",
+            "isSelected": false,
+            "text": "Synonyme du clonage.",
+            "count": 0
+          },
+          {
+            "id": "9aa7d8c3-d9e9-40fb-8ada-8cd8781b8599",
+            "isSelected": false,
+            "text": "Est l'un des domaines de la bioéthique.",
+            "count": 0
+          },
+          {
+            "id": "7880ca66-3076-4003-9d10-139f9c69eb12",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124069",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "Le prélèvement pour don d'organes chez le vivant :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318930,
+          "_nanoseconds": 582000000
+        },
+        "suggestions": [
+          {
+            "id": "4ec550c8-c57d-4d70-976c-fce78009aa6b",
+            "isSelected": false,
+            "text": "Nécessite le consentement du donneur.",
+            "count": 0
+          },
+          {
+            "id": "1897ca74-0dbf-4521-9754-a709eaa8dd17",
+            "isSelected": false,
+            "text": "N'est pas gratuit.",
+            "count": 0
+          },
+          {
+            "id": "2a1026d3-796f-4c9c-b77b-ba960f64e598",
+            "isSelected": false,
+            "text": "Est anonyme.",
+            "count": 0
+          },
+          {
+            "id": "0344314e-6c23-4e30-9794-029715e4732d",
+            "isSelected": false,
+            "text": "Se fait malgré l'absence d'intérêt thérapeutique du donneur.",
+            "count": 0
+          },
+          {
+            "id": "2edbaabe-c300-48f2-8c93-c6a76eba863f",
+            "isSelected": false,
+            "text": "Se fait même si la vie du donneur est en danger.",
+            "count": 0
+          },
+          {
+            "id": "6aa4d92d-3ef5-4941-b45c-418d42a9ac89",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124070",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "Le conseil national de l'éthique des sciences de la santé :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318931,
+          "_nanoseconds": 98000000
+        },
+        "suggestions": [
+          {
+            "id": "ddfbc802-4e26-4bdb-9e62-63b2584a8586",
+            "isSelected": false,
+            "text": "Est un conseil consultatif.",
+            "count": 0
+          },
+          {
+            "id": "1ace0e50-af84-4777-8bbf-d9110cd08031",
+            "isSelected": false,
+            "text": "Son objectif est de veiller au respect de la vie de la personne.",
+            "count": 0
+          },
+          {
+            "id": "93607de5-4b25-49e4-8997-6bc2c787b247",
+            "isSelected": false,
+            "text": "Il peut faire appel à toute personne physique ou morale.",
+            "count": 0
+          },
+          {
+            "id": "aeaf4747-9e4b-4d99-9e1e-032409f15585",
+            "isSelected": false,
+            "text": "Il ne peut sanctionner les fautes professionnelles.",
+            "count": 0
+          },
+          {
+            "id": "a76bc1ee-9db9-4638-b6c5-a6f95fdc2b64",
+            "isSelected": false,
+            "text": "Est un conseil qui émet des lois à exécuter par la justice.",
+            "count": 0
+          },
+          {
+            "id": "44c93f89-69fc-4888-a6d6-9fc9d2a22a9a",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124071",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "L'éthique est un ensemble de réflexions sur le domaine médical, essayant de résoudre les questions médicales posées :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318931,
+          "_nanoseconds": 619000000
+        },
+        "suggestions": [
+          {
+            "id": "49c9e021-727d-4ac6-b902-b1936b719303",
+            "isSelected": false,
+            "text": "Par les progrès des techniques utilisées dans les sciences médicales.",
+            "count": 0
+          },
+          {
+            "id": "d1095e20-0333-4d43-bc01-8882c6eab762",
+            "isSelected": false,
+            "text": "D'ordre légal dans le domaine médical.",
+            "count": 0
+          },
+          {
+            "id": "9317eebf-b8e5-4c35-b7de-000aff531af5",
+            "isSelected": false,
+            "text": "Se situe entre la morale et le droit.",
+            "count": 0
+          },
+          {
+            "id": "6e2a6767-992d-4277-9aef-5908af3c0ac0",
+            "isSelected": false,
+            "text": "D'ordre économique de la santé.",
+            "count": 0
+          },
+          {
+            "id": "b9ac86cd-6202-41c3-ab6d-2c597ada2746",
+            "isSelected": false,
+            "text": "D'ordre psychique.",
+            "count": 0
+          },
+          {
+            "id": "14104f93-762e-47d0-b1b2-d20d6d5711b0",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124079",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "05zVinaWLQYG10Csqw05",
+        "subcategoryName": "Histoire de la medecine",
+        "text": "La dissection humaine s'est avérée cruciale dans la diffusion des connaissances scientifiques dans le domaine de la médecine. Elle a été le principal moyen d'enseigner l'anatomie aux étudiants en médecine pendant des siècles.",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318936,
+          "_nanoseconds": 137000000
+        },
+        "suggestions": [
+          {
+            "id": "0aa0559d-8592-4ca0-8b02-7b248872cd78",
+            "isSelected": false,
+            "text": "Vrai.",
+            "count": 0
+          },
+          {
+            "id": "065dcaa6-efa0-4b1c-a0be-b867fad7c1b4",
+            "isSelected": false,
+            "text": "Faux.",
+            "count": 0
+          },
+          {
+            "id": "5a300ee6-f812-4f03-9112-770501e3599e",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124080",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "05zVinaWLQYG10Csqw05",
+        "subcategoryName": "Histoire de la medecine",
+        "text": "Concernant l'histoire de l'anatomie :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318936,
+          "_nanoseconds": 634000000
+        },
+        "suggestions": [
+          {
+            "id": "6fca3377-4663-4d18-869f-2dd075150f86",
+            "isSelected": false,
+            "text": "L'anatomie signifie étymologiquement dissection.",
+            "count": 0
+          },
+          {
+            "id": "57e5db8f-e04f-4822-8f3b-087af85c2ddc",
+            "isSelected": false,
+            "text": "S'est confrontée à des obstacles éthiques et moraux au temps de la Grèce antique.",
+            "count": 0
+          },
+          {
+            "id": "2f444954-4856-437c-aa88-a35805ee73cb",
+            "isSelected": false,
+            "text": "La première description anatomique de l'œil fut faite par Ibn Haitham.",
+            "count": 0
+          },
+          {
+            "id": "e64eeb20-c288-41b3-892a-cc7fe4cd1917",
+            "isSelected": false,
+            "text": "Léonard De Vinci fut le premier à réaliser une étude précise des muscles.",
+            "count": 0
+          },
+          {
+            "id": "8b7fa59d-4ffa-4d74-b630-89d099c48403",
+            "isSelected": false,
+            "text": "Toutes les réponses sont justes.",
+            "count": 0
+          },
+          {
+            "id": "44d11a07-e8ef-4f77-bbad-387cde32fc50",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124086",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "ngyfCu02Ydmw0p0I6oQQ",
+        "subcategoryName": "Iatrogene evenement lie aux soins",
+        "text": "Un événement indésirable lié aux soins :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318940,
+          "_nanoseconds": 119000000
+        },
+        "suggestions": [
+          {
+            "id": "52c43649-c680-439a-990e-215cde32f585",
+            "isSelected": false,
+            "text": "Est un événement inattendu qui perturbe ou retarde le processus de soin.",
+            "count": 0
+          },
+          {
+            "id": "56b21ab2-bbe7-4101-95c9-f108cf77428a",
+            "isSelected": false,
+            "text": "Correspond aux résultats espérés.",
+            "count": 0
+          },
+          {
+            "id": "87fe4fd1-c320-456b-a30f-e23400fe6da4",
+            "isSelected": false,
+            "text": "Est grave s'il n'entraîne pas une hospitalisation du malade.",
+            "count": 0
+          },
+          {
+            "id": "9c79b68d-d9aa-42f5-add8-222d14f8b21e",
+            "isSelected": false,
+            "text": "Ne peut pas être à l'origine du décès.",
+            "count": 0
+          },
+          {
+            "id": "1b878a9d-f361-4368-a92d-ff8cd8816abf",
+            "isSelected": false,
+            "text": "Les actes invasifs n'ont pas de risque d'EILS.",
+            "count": 0
+          },
+          {
+            "id": "8a24efd7-e6bd-435c-b264-0962a8b7e5da",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124087",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "ngyfCu02Ydmw0p0I6oQQ",
+        "subcategoryName": "Iatrogene evenement lie aux soins",
+        "text": "L'iatrogénie englobe :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318940,
+          "_nanoseconds": 624000000
+        },
+        "suggestions": [
+          {
+            "id": "acb1f9ef-3cfb-485a-a10e-e0cf177f0fb9",
+            "isSelected": false,
+            "text": "Les complications chirurgicales.",
+            "count": 0
+          },
+          {
+            "id": "81c380c2-2dd3-4081-8d7a-9e90290db532",
+            "isSelected": false,
+            "text": "La faute médicale.",
+            "count": 0
+          },
+          {
+            "id": "10858162-61c5-4627-a5fe-47d951c75bab",
+            "isSelected": false,
+            "text": "Les infections nosocomiales.",
+            "count": 0
+          },
+          {
+            "id": "bbaad849-26e7-4bf1-88cb-5cdbf12749ba",
+            "isSelected": false,
+            "text": "Lrogenie médicamenteuse.",
+            "count": 0
+          },
+          {
+            "id": "d02da52a-a7ac-47b5-b719-4c70d6a7dcfa",
+            "isSelected": false,
+            "text": "Les complications de l'imagerie.",
+            "count": 0
+          },
+          {
+            "id": "5d115e4a-7d58-4ea5-971e-37a354f48fbb",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124093",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "fM6ZEyo8xRiM2qfidZ8f",
+        "subcategoryName": "La responsabilite medicale",
+        "text": "La responsabilité indemnitaire relève du domaine de :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318944,
+          "_nanoseconds": 64000000
+        },
+        "suggestions": [
+          {
+            "id": "cd63b4fe-c348-4d39-83b9-964e16c7bd7c",
+            "isSelected": false,
+            "text": "La responsabilité médicale pénale.",
+            "count": 0
+          },
+          {
+            "id": "efe8ec4a-66fd-4772-8929-d21d3719fe1b",
+            "isSelected": false,
+            "text": "La responsabilité médicale civile.",
+            "count": 0
+          },
+          {
+            "id": "30501dd9-2e75-4d6d-b582-763ff00c15be",
+            "isSelected": false,
+            "text": "La responsabilité disciplinaire.",
+            "count": 0
+          },
+          {
+            "id": "b344bd31-95bf-46a9-84cb-6c151f6ab03d",
+            "isSelected": false,
+            "text": "La responsabilité disciplinaire et pénale.",
+            "count": 0
+          },
+          {
+            "id": "e95167c0-d7e6-4db6-9677-ba2ceddce3d9",
+            "isSelected": false,
+            "text": "La responsabilité disciplinaire et civile.",
+            "count": 0
+          },
+          {
+            "id": "ae8da7ac-4f2a-4fb8-ad5f-128e4a68ee61",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124094",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "fM6ZEyo8xRiM2qfidZ8f",
+        "subcategoryName": "La responsabilite medicale",
+        "text": "Le médecin mis en cause pour une faute disciplinaire est sanctionné par :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318944,
+          "_nanoseconds": 571000000
+        },
+        "suggestions": [
+          {
+            "id": "7ec2b48a-017c-4590-bc16-0c425dc65fbf",
+            "isSelected": false,
+            "text": "Le Conseil de déontologie médicale.",
+            "count": 0
+          },
+          {
+            "id": "6910dc02-cfed-408e-8eec-6324caf342e7",
+            "isSelected": false,
+            "text": "Le Conseil national de l'éthique médicale.",
+            "count": 0
+          },
+          {
+            "id": "ba554976-62c9-449b-935b-b23c5fa0baf7",
+            "isSelected": false,
+            "text": "Le Syndicat national des praticiens de la santé.",
+            "count": 0
+          },
+          {
+            "id": "df967906-c6c8-4a32-b31a-8bb20b3270d7",
+            "isSelected": false,
+            "text": "Le tribunal pénal.",
+            "count": 0
+          },
+          {
+            "id": "74d8b769-2fa6-412c-9edc-0238f31c649a",
+            "isSelected": false,
+            "text": "Les associations de malades.",
+            "count": 0
+          },
+          {
+            "id": "7fab6b78-f8ba-42dc-8f1f-a955d7e40fe9",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124095",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "fM6ZEyo8xRiM2qfidZ8f",
+        "subcategoryName": "La responsabilite medicale",
+        "text": "Concernant la responsabilité pénale :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318945,
+          "_nanoseconds": 83000000
+        },
+        "suggestions": [
+          {
+            "id": "297369c1-8620-4dad-a3b5-c8bdbabe4e6f",
+            "isSelected": false,
+            "text": "Les incriminations pénales sont toujours des délits.",
+            "count": 0
+          },
+          {
+            "id": "8994a736-fab8-451b-aeed-1ff7d7bdce5d",
+            "isSelected": false,
+            "text": "La mise en péril d'une personne n'engage pas la responsabilité pénale.",
+            "count": 0
+          },
+          {
+            "id": "f7c3d8c3-1cd2-4e6c-9006-99869b9027ff",
+            "isSelected": false,
+            "text": "Les incriminations peuvent concerner l'acte médical ou la profession médicale.",
+            "count": 0
+          },
+          {
+            "id": "9569197e-5a5a-4169-a5d8-3892f727fd20",
+            "isSelected": false,
+            "text": "La responsabilité pénale peut être couverte par l'assurance.",
+            "count": 0
+          },
+          {
+            "id": "63875d45-8439-436f-8da3-f5ed94bbeecf",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124096",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "fM6ZEyo8xRiM2qfidZ8f",
+        "subcategoryName": "La responsabilite medicale",
+        "text": "Les conditions pour engager la responsabilité médicale :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318945,
+          "_nanoseconds": 583000000
+        },
+        "suggestions": [
+          {
+            "id": "52e8696a-b5fe-424a-a5de-6551eac1f089",
+            "isSelected": false,
+            "text": "Une faute du médecin.",
+            "count": 0
+          },
+          {
+            "id": "70c1880e-12bd-41e5-8918-76b5983171ba",
+            "isSelected": false,
+            "text": "Un dommage pour le patient.",
+            "count": 0
+          },
+          {
+            "id": "5e1bd490-9432-416c-afb1-c812cd68bbd0",
+            "isSelected": false,
+            "text": "Un lien de causalité entre la faute et le dommage.",
+            "count": 0
+          },
+          {
+            "id": "2815125a-c97a-45b9-bd8e-3b2a6a563f12",
+            "isSelected": false,
+            "text": "A, B, C.",
+            "count": 0
+          },
+          {
+            "id": "69b28411-48a2-4fb9-94a8-4fa38fe37190",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124108",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "CbXdz3VaafwPCmgkiS0n",
+        "subcategoryName": "La sante publique",
+        "text": "La télé-santé se réalise grâce au développement des :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318952,
+          "_nanoseconds": 193000000
+        },
+        "suggestions": [
+          {
+            "id": "9813cef5-1497-4e92-b356-6acb2ffa899c",
+            "isSelected": false,
+            "text": "Politiques de santé.",
+            "count": 0
+          },
+          {
+            "id": "8b150e0d-78b4-4c45-9fbf-1ca2ae8a5ac0",
+            "isSelected": false,
+            "text": "Ressources humaines.",
+            "count": 0
+          },
+          {
+            "id": "41adb425-e8e8-4d0f-8b20-ee8bebd5e0bb",
+            "isSelected": false,
+            "text": "Réseaux de télécommunication.",
+            "count": 0
+          },
+          {
+            "id": "b67e23e9-2e50-4307-9014-68dffcdd12f2",
+            "isSelected": false,
+            "text": "Réseaux routiers.",
+            "count": 0
+          },
+          {
+            "id": "fc707783-8e38-4769-bf94-75f9c28d9675",
+            "isSelected": false,
+            "text": "Réseaux de communication.",
+            "count": 0
+          },
+          {
+            "id": "9119ad2a-8f0c-48f8-8d66-ad334f797164",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124109",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "CbXdz3VaafwPCmgkiS0n",
+        "subcategoryName": "La sante publique",
+        "text": "Une téléassistance médicale est réalisée lorsqu'un médecin assiste à distance :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318952,
+          "_nanoseconds": 705000000
+        },
+        "suggestions": [
+          {
+            "id": "9ba32706-d1dd-4e92-9b5c-ba864d24a62e",
+            "isSelected": false,
+            "text": "Un médecin à poser un pronostic.",
+            "count": 0
+          },
+          {
+            "id": "fc2df77a-915a-4321-9f7a-4092860d358b",
+            "isSelected": false,
+            "text": "Un patient à résoudre un problème administratif.",
+            "count": 0
+          },
+          {
+            "id": "220ec2e5-af7c-4b96-b440-b3db33f7cdd0",
+            "isSelected": false,
+            "text": "Un patient à ajuster un traitement.",
+            "count": 0
+          },
+          {
+            "id": "e909a1d8-3c5e-4965-af71-fd9aa8ae81c8",
+            "isSelected": false,
+            "text": "Un médecin à réaliser un acte médical.",
+            "count": 0
+          },
+          {
+            "id": "e145a5bb-2db3-4848-8564-fc3e24b12c0b",
+            "isSelected": false,
+            "text": "À une télécommunication.",
+            "count": 0
+          },
+          {
+            "id": "b4c6db75-af92-4b59-baf1-b5d66c78ede0",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124110",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "CbXdz3VaafwPCmgkiS0n",
+        "subcategoryName": "La sante publique",
+        "text": "La surveillance épidémiologique passive consiste à collecter les données de façon périodique par un contact régulier avec les services concernés à la recherche de nouveaux cas d'une pathologie particulière.",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318953,
+          "_nanoseconds": 218000000
+        },
+        "suggestions": [
+          {
+            "id": "d555a054-52d0-4b1f-8e76-25f3d1e27e0f",
+            "isSelected": false,
+            "text": "Vrai.",
+            "count": 0
+          },
+          {
+            "id": "5299fb91-d382-4a63-a44b-627589409102",
+            "isSelected": false,
+            "text": "Faux.",
+            "count": 0
+          },
+          {
+            "id": "cd080e93-dedf-47a0-b993-ac84c9ca8cc2",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124111",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "CbXdz3VaafwPCmgkiS0n",
+        "subcategoryName": "La sante publique",
+        "text": "La surveillance épidémiologique est dite passive si ses responsables attendent pour recevoir les notifications des maladies sans intervenir pour les recueillir.",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318953,
+          "_nanoseconds": 726000000
+        },
+        "suggestions": [
+          {
+            "id": "233f40fe-d305-4ec5-977b-d2abfc4d29d2",
+            "isSelected": false,
+            "text": "Vrai.",
+            "count": 0
+          },
+          {
+            "id": "2a3b1e77-683d-4df1-9140-27f35bb1f9cc",
+            "isSelected": false,
+            "text": "Faux.",
+            "count": 0
+          },
+          {
+            "id": "48a0111b-f0fa-4ba1-8cfe-9ed619dd71cb",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124112",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "CbXdz3VaafwPCmgkiS0n",
+        "subcategoryName": "La sante publique",
+        "text": "Dans le cadre de la lutte contre les maladies non transmissibles ou chroniques, la prévention tertiaire comprend tous les actes destinés à diminuer la prévalence des incapacités chroniques dans une population en diminuant les invalidités fonctionnelles consécutives à une maladie. Elle prévient les rechutes et les complications ou les séquelles par un traitement adéquat tout au long de la maladie.",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318954,
+          "_nanoseconds": 243000000
+        },
+        "suggestions": [
+          {
+            "id": "81a471f2-3ed5-4309-92e4-b5ffc13df4de",
+            "isSelected": false,
+            "text": "Vrai.",
+            "count": 0
+          },
+          {
+            "id": "c4a25a2a-7fa2-4524-b79c-1649032ad7bf",
+            "isSelected": false,
+            "text": "Faux.",
+            "count": 0
+          },
+          {
+            "id": "d1f6beae-c325-4b52-8a0c-619c554f650c",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124113",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "CbXdz3VaafwPCmgkiS0n",
+        "subcategoryName": "La sante publique",
+        "text": "Dans le cadre de la lutte contre les maladies non transmissibles ou chroniques, la prévention tertiaire comprend les actes destinés à réduire le risque d'apparition de nouveaux cas, donc à diminuer l'incidence de la maladie dans la population. Elle cherche à diminuer l'exposition de la population aux différents facteurs de risque responsables de ces maladies.",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318954,
+          "_nanoseconds": 755000000
+        },
+        "suggestions": [
+          {
+            "id": "7c000fe3-a2c0-44fa-8213-31c952080f4b",
+            "isSelected": false,
+            "text": "Vrai.",
+            "count": 0
+          },
+          {
+            "id": "142aca72-681c-432b-bff4-35fe503b1b90",
+            "isSelected": false,
+            "text": "Faux.",
+            "count": 0
+          },
+          {
+            "id": "c2d698b3-d49d-4758-92f8-431f57169b1f",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124134",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "NCHoAwUjR8UjezKtubgF",
+        "subcategoryName": "Relation entre medecin et malade",
+        "text": "Selon le code de déontologie, le médecin doit éclairer son malade par une information :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318967,
+          "_nanoseconds": 244000000
+        },
+        "suggestions": [
+          {
+            "id": "14024256-6089-480d-91a6-7c9021ed6260",
+            "isSelected": false,
+            "text": "Approximative et superficielle sur toutes les étapes de l'acte médical.",
+            "count": 0
+          },
+          {
+            "id": "f9d36b56-f1e1-4709-ba56-8b47c7eab6a7",
+            "isSelected": false,
+            "text": "Loyale et intelligible sur toutes les étapes de l'acte médical.",
+            "count": 0
+          },
+          {
+            "id": "8cb15d6e-fd01-412c-bb14-52b1c4967be5",
+            "isSelected": false,
+            "text": "Uniquement sur son diagnostic.",
+            "count": 0
+          },
+          {
+            "id": "ac1090bb-c6fa-4b9a-bad2-8590bbbc45cd",
+            "isSelected": false,
+            "text": "Incomplète en cas de risque grave.",
+            "count": 0
+          },
+          {
+            "id": "5966345c-013b-4e1d-8e54-41d24a936e6a",
+            "isSelected": false,
+            "text": "Complète par l'intermédiaire de ses proches.",
+            "count": 0
+          },
+          {
+            "id": "caf7b182-07cf-4786-8682-aa1f70b2e2c3",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124135",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "NCHoAwUjR8UjezKtubgF",
+        "subcategoryName": "Relation entre medecin et malade",
+        "text": "Les recommandations pour un comportement correct de l'étudiant en médecine sont :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318967,
+          "_nanoseconds": 753000000
+        },
+        "suggestions": [
+          {
+            "id": "821b9224-01ec-43fb-b09b-30d7f973071e",
+            "isSelected": false,
+            "text": "Travailler selon les principes éthiques et dans le cadre légal.",
+            "count": 0
+          },
+          {
+            "id": "cdc2960e-69f5-4820-9dec-4223dd47c23a",
+            "isSelected": false,
+            "text": "Avoir une attitude respectueuse vis-à-vis des médecins et des malades.",
+            "count": 0
+          },
+          {
+            "id": "a58463ac-6aa1-468a-b3bf-b5be96afe8c8",
+            "isSelected": false,
+            "text": "Manifester un comportement incompatible avec l'éthique dans la profession médicale.",
+            "count": 0
+          },
+          {
+            "id": "72f1c4ff-1a36-4870-985c-10415baf19f3",
+            "isSelected": false,
+            "text": "Respecter la ponctualité.",
+            "count": 0
+          },
+          {
+            "id": "42aaf31e-13f3-4d6a-8433-4774f3ab9698",
+            "isSelected": false,
+            "text": "Le sens de responsabilité dès le début des études est exigé.",
+            "count": 0
+          },
+          {
+            "id": "98ce1570-e636-4d03-ab48-592e517e88e2",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124136",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "NCHoAwUjR8UjezKtubgF",
+        "subcategoryName": "Relation entre medecin et malade",
+        "text": "Lors de l'exercice de sa profession, le médecin devra :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318968,
+          "_nanoseconds": 272000000
+        },
+        "suggestions": [
+          {
+            "id": "da0e0b70-6600-4c55-ace2-3ac7002319e2",
+            "isSelected": false,
+            "text": "Soulager les souffrances.",
+            "count": 0
+          },
+          {
+            "id": "ec9e497a-214f-421f-ab26-7a075ed4f11e",
+            "isSelected": false,
+            "text": "Pratiquer les actes de diagnostic et des gestes de prévention.",
+            "count": 0
+          },
+          {
+            "id": "8f3eee05-8ea6-42f7-ba56-93bda1f03e17",
+            "isSelected": false,
+            "text": "Pratiquer les actes thérapeutiques.",
+            "count": 0
+          },
+          {
+            "id": "5122920c-2182-41e1-99e7-27d99bbca87c",
+            "isSelected": false,
+            "text": "Respecter la vie et la dignité humaine.",
+            "count": 0
+          },
+          {
+            "id": "ee94c893-8361-4ba1-8b0a-c70014494a68",
+            "isSelected": false,
+            "text": "Utiliser tous les procédés expérimentaux.",
+            "count": 0
+          },
+          {
+            "id": "86f736e8-a4d8-4cd8-ba4d-7563d69e4c2b",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124137",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "NCHoAwUjR8UjezKtubgF",
+        "subcategoryName": "Relation entre medecin et malade",
+        "text": "Les obligations d'un médecin envers son malade sont les suivantes :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318968,
+          "_nanoseconds": 785000000
+        },
+        "suggestions": [
+          {
+            "id": "ed007354-c6ad-40ee-885b-d583a7300f1e",
+            "isSelected": false,
+            "text": "Obligation d'une information claire et intelligible.",
+            "count": 0
+          },
+          {
+            "id": "0679ec2e-2711-4ddf-acbc-62cfb03bfa45",
+            "isSelected": false,
+            "text": "Obligation d'avoir un consentement.",
+            "count": 0
+          },
+          {
+            "id": "aad83b64-e720-49e7-9bfb-778f454e4df6",
+            "isSelected": false,
+            "text": "Obligation de moyens et de résultats.",
+            "count": 0
+          },
+          {
+            "id": "6aa3da0e-a284-4258-89a3-d06ad421490a",
+            "isSelected": false,
+            "text": "Obligation du secret professionnel.",
+            "count": 0
+          },
+          {
+            "id": "2fc390f6-a757-4fa7-a674-32c6514bddda",
+            "isSelected": false,
+            "text": "Obligation de donner des soins consciencieux, conformes aux données de la science actuelle.",
+            "count": 0
+          },
+          {
+            "id": "a9964122-098d-4f68-81c9-666c017f5fb2",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124128",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "ZgWPAIRofiHK95SsvvuL",
+        "subcategoryName": "Pratique medicale pendant la periode coloniale en algerie",
+        "text": "La médecine coloniale pour les Algériens fut :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318963,
+          "_nanoseconds": 728000000
+        },
+        "suggestions": [
+          {
+            "id": "8f82e9b5-c37c-4cef-b45a-4bbc460723cf",
+            "isSelected": false,
+            "text": "Une médecine curative.",
+            "count": 0
+          },
+          {
+            "id": "3faf6c34-17ef-4ee2-af0b-0ec0485bce30",
+            "isSelected": false,
+            "text": "Une médecine non gouvernementale.",
+            "count": 0
+          },
+          {
+            "id": "0ec08f4d-1e25-47ae-b467-04b44e1fd42c",
+            "isSelected": false,
+            "text": "Une médecine de charité.",
+            "count": 0
+          },
+          {
+            "id": "c600cf9f-3b39-4713-b7ae-4edfad10bca4",
+            "isSelected": false,
+            "text": "Une médecine préventive.",
+            "count": 0
+          },
+          {
+            "id": "21e59121-c357-4306-b0bc-69146ca5fa7e",
+            "isSelected": false,
+            "text": "Une médecine expérimentale.",
+            "count": 0
+          },
+          {
+            "id": "d316ef8c-2b90-4c1b-bdbc-91d232ac9ebb",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124129",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "ZgWPAIRofiHK95SsvvuL",
+        "subcategoryName": "Pratique medicale pendant la periode coloniale en algerie",
+        "text": "La pratique médicale coloniale en Algérie consistait en une médecine populaire et traditionnelle.",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318964,
+          "_nanoseconds": 239000000
+        },
+        "suggestions": [
+          {
+            "id": "b599b0ff-4241-439e-b8d8-1126100f9b55",
+            "isSelected": false,
+            "text": "Vrai.",
+            "count": 0
+          },
+          {
+            "id": "441bc0a0-5540-4276-a725-658b0a618ab1",
+            "isSelected": false,
+            "text": "Faux.",
+            "count": 0
+          },
+          {
+            "id": "73f84d3a-2789-44e7-b362-673f6327f61c",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124125",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "9IEGrv31TgQeRmSEHqNT",
+        "subcategoryName": "Organisation du systeme de soins dans le monde et en algerie",
+        "text": "La télé-santé se réalise grâce au développement des :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318961,
+          "_nanoseconds": 834000000
+        },
+        "suggestions": [
+          {
+            "id": "402233ca-d8e8-4aa6-829e-7494c491f817",
+            "isSelected": false,
+            "text": "Politiques de santé.",
+            "count": 0
+          },
+          {
+            "id": "8d2cf1b3-f96e-46d7-9f2b-78f5023fb7be",
+            "isSelected": false,
+            "text": "Ressources humaines.",
+            "count": 0
+          },
+          {
+            "id": "ccc466b2-a26e-46fa-98c6-738a5fbf3fa8",
+            "isSelected": false,
+            "text": "Réseaux de télécommunication.",
+            "count": 0
+          },
+          {
+            "id": "a4fbefa5-9a3f-4284-83e5-159c14ea21cd",
+            "isSelected": false,
+            "text": "Réseaux routiers.",
+            "count": 0
+          },
+          {
+            "id": "17aa7631-84cf-423d-83c9-494f114c0f89",
+            "isSelected": false,
+            "text": "Réseaux de communication.",
+            "count": 0
+          },
+          {
+            "id": "cb7d9d1e-147c-4a56-a3ca-1f6c72934d5c",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124126",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "9IEGrv31TgQeRmSEHqNT",
+        "subcategoryName": "Organisation du systeme de soins dans le monde et en algerie",
+        "text": "Une téléassistance médicale est réalisée lorsqu'un médecin assiste à distance :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318962,
+          "_nanoseconds": 346000000
+        },
+        "suggestions": [
+          {
+            "id": "01b0a5d4-e7d1-421b-810b-a78a6d09337c",
+            "isSelected": false,
+            "text": "Un médecin à poser un pronostic.",
+            "count": 0
+          },
+          {
+            "id": "6479e93b-2a16-4f76-95dc-bca089b2037e",
+            "isSelected": false,
+            "text": "Un patient à résoudre un problème administratif.",
+            "count": 0
+          },
+          {
+            "id": "a75959bc-8290-482d-8ae6-092dd4fed614",
+            "isSelected": false,
+            "text": "Un patient à ajuster un traitement.",
+            "count": 0
+          },
+          {
+            "id": "5e9fc244-bf72-4b69-95d7-0e1ac08e6ddb",
+            "isSelected": false,
+            "text": "Un médecin à réaliser un acte médical.",
+            "count": 0
+          },
+          {
+            "id": "a0aa5f3e-a07f-4755-b8b2-2390f5d620cc",
+            "isSelected": false,
+            "text": "À une télécommunication.",
+            "count": 0
+          },
+          {
+            "id": "46e52834-f310-4712-9f7f-5542523cacb0",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124117",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "WJCrERfDAOYz4XV0vvzJ",
+        "subcategoryName": "Le secret medicale",
+        "text": "Le secret professionnel :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318957,
+          "_nanoseconds": 220000000
+        },
+        "suggestions": [
+          {
+            "id": "170ec9a4-08e7-4821-8e1a-2958b478e23c",
+            "isSelected": false,
+            "text": "S'impose à tout médecin sauf quand la loi en dispose autrement.",
+            "count": 0
+          },
+          {
+            "id": "5de04b34-989a-47c0-938d-e8db33262818",
+            "isSelected": false,
+            "text": "Couvre seulement ce que le médecin a vu.",
+            "count": 0
+          },
+          {
+            "id": "382a65ee-fa5f-49ff-9dea-a8b724874729",
+            "isSelected": false,
+            "text": "Est aboli par le décès du patient.",
+            "count": 0
+          },
+          {
+            "id": "40886155-c517-4327-84c3-3fe144ceeb74",
+            "isSelected": false,
+            "text": "La divulgation du secret médical est permise en cas de publication scientifique.",
+            "count": 0
+          },
+          {
+            "id": "31eb2ef2-a8f8-4705-ac38-ab334c1596c5",
+            "isSelected": false,
+            "text": "Les confidences du patient ne sont pas incluses dans le secret médical.",
+            "count": 0
+          },
+          {
+            "id": "8c1f82ac-56c9-4072-a3df-7ebe06b35e5a",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124118",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "WJCrERfDAOYz4XV0vvzJ",
+        "subcategoryName": "Le secret medicale",
+        "text": "Le secret professionnel médical pour le médecin s'applique à :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318957,
+          "_nanoseconds": 760000000
+        },
+        "suggestions": [
+          {
+            "id": "6dac48a1-3f7f-405a-841a-16cdd30e53be",
+            "isSelected": false,
+            "text": "Tous les faits d'ordre médical.",
+            "count": 0
+          },
+          {
+            "id": "90402f61-ad2a-45eb-9618-8ca8294359ef",
+            "isSelected": false,
+            "text": "Tous les faits propres au malade.",
+            "count": 0
+          },
+          {
+            "id": "084cfaa3-950f-4707-a383-7bd1c49710c2",
+            "isSelected": false,
+            "text": "Tous les faits extra-médicaux venant à la connaissance du médecin lors de son exercice.",
+            "count": 0
+          },
+          {
+            "id": "883af837-d3ef-446d-b1a7-cd201beb22ee",
+            "isSelected": false,
+            "text": "Aux résultats d'examens complémentaires.",
+            "count": 0
+          },
+          {
+            "id": "f67f8c75-7cc7-4c72-9b17-9cbf3f7f00e4",
+            "isSelected": false,
+            "text": "Toutes ces réponses sont justes.",
+            "count": 0
+          },
+          {
+            "id": "6ebc6e1a-64a4-44b4-9b1c-aff3c1ddacb9",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124119",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "WJCrERfDAOYz4XV0vvzJ",
+        "subcategoryName": "Le secret medicale",
+        "text": "La notion de secret médical est citée dans :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318958,
+          "_nanoseconds": 263000000
+        },
+        "suggestions": [
+          {
+            "id": "ae38ae10-05a0-4fc6-b529-f6cca2d090b9",
+            "isSelected": false,
+            "text": "Le code pénal.",
+            "count": 0
+          },
+          {
+            "id": "970a2939-3ea7-451b-85a1-9c4313e90e79",
+            "isSelected": false,
+            "text": "La loi relative à la santé.",
+            "count": 0
+          },
+          {
+            "id": "af3630c8-2049-44f6-9848-a90ead319aca",
+            "isSelected": false,
+            "text": "Le code de déontologie médicale.",
+            "count": 0
+          },
+          {
+            "id": "19ea6aa4-8694-495c-98ea-d3d5ce50fbee",
+            "isSelected": false,
+            "text": "Le serment d'Hippocrate.",
+            "count": 0
+          },
+          {
+            "id": "fcd7b6e2-231c-488e-bdb4-d1689c4cba3e",
+            "isSelected": false,
+            "text": "Toutes ces réponses sont justes.",
+            "count": 0
+          },
+          {
+            "id": "53aea881-1f48-4477-86a0-e163bc461664",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124120",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "WJCrERfDAOYz4XV0vvzJ",
+        "subcategoryName": "Le secret medicale",
+        "text": "Les dérogations absolues au secret médical :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318958,
+          "_nanoseconds": 762000000
+        },
+        "suggestions": [
+          {
+            "id": "f940a9be-0ac4-421f-934f-658e6e9eea72",
+            "isSelected": false,
+            "text": "L'annonciation des sévices infligés à des mineurs.",
+            "count": 0
+          },
+          {
+            "id": "95bbdf45-0dd1-416b-9a9e-f0a42131fbd5",
+            "isSelected": false,
+            "text": "Le certificat de coups et blessures volontaires sur réquisition.",
+            "count": 0
+          },
+          {
+            "id": "f8d0a473-17f2-40de-b4cd-988360c2632d",
+            "isSelected": false,
+            "text": "L'établissement de certificat de naissance.",
+            "count": 0
+          },
+          {
+            "id": "6816e2fb-e39f-4ac8-a851-83b43dd1d576",
+            "isSelected": false,
+            "text": "Le signalement des toxicomanes.",
+            "count": 0
+          },
+          {
+            "id": "4b625c19-335d-4bb4-a062-9e7798c844d9",
+            "isSelected": false,
+            "text": "La déclaration de maladie professionnelle.",
+            "count": 0
+          },
+          {
+            "id": "29ea4754-e0ad-41fa-b0d8-1b3400473436",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124121",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "WJCrERfDAOYz4XV0vvzJ",
+        "subcategoryName": "Le secret medicale",
+        "text": "Le secret médical est :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318959,
+          "_nanoseconds": 289000000
+        },
+        "suggestions": [
+          {
+            "id": "a2329a71-49ec-4738-80e7-681040ae783c",
+            "isSelected": false,
+            "text": "Une obligation prévue par l'un des articles du code de l'éthique.",
+            "count": 0
+          },
+          {
+            "id": "bca970bc-accc-4276-831d-ee793230b454",
+            "isSelected": false,
+            "text": "Prévu par le code du commerce.",
+            "count": 0
+          },
+          {
+            "id": "110a119b-d965-4fdc-a7a6-42e05483c65a",
+            "isSelected": false,
+            "text": "Prévu par la loi de la famille.",
+            "count": 0
+          },
+          {
+            "id": "323aafb0-eab5-4f89-a14b-15ae627d324e",
+            "isSelected": false,
+            "text": "Prévu par le code de déontologie médicale.",
+            "count": 0
+          },
+          {
+            "id": "885f9ada-6e7b-4f14-bb55-5068a6c4fc96",
+            "isSelected": false,
+            "text": "Une disposition du code du secret médical.",
+            "count": 0
+          },
+          {
+            "id": "ee399d6a-72e3-4de7-b7e2-b224d161bd8d",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124060",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "Les conditions de mise en oeuvre des relèvements et transplantations d’organes sont : (RF)",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318925,
+          "_nanoseconds": 582000000
+        },
+        "suggestions": [
+          {
+            "id": "103654a0-06ba-49e4-9d4d-1e30c6e0d0cd",
+            "isSelected": false,
+            "text": "Ne peuvent être effectués qu'à des fins diagnostic",
+            "count": 0
+          },
+          {
+            "id": "09d754b4-8e1b-401e-934c-f3ecf170ec06",
+            "isSelected": false,
+            "text": "La transplantation reste le seul moyen thérapeutique.",
+            "count": 0
+          },
+          {
+            "id": "0ef801e4-4d7b-4a8f-a702-b7581cbd7cdd",
+            "isSelected": false,
+            "text": "La transaction financière est interdite",
+            "count": 0
+          },
+          {
+            "id": "4eba14e5-ecb2-41cf-bfe9-4245beaa9797",
+            "isSelected": false,
+            "text": "Le consentement du donneur est exigé",
+            "count": 0
+          },
+          {
+            "id": "42c9f8b2-ca2e-4b73-9f2d-cc5dbda5f911",
+            "isSelected": false,
+            "text": "Le receveur ne doit pas connaitre le donneur chez un cadavre.",
+            "count": 0
+          },
+          {
+            "id": "6e40c89b-49c4-4b57-a5e8-ddcc6fea603b",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124061",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "Pour le prélèvement et la transplantation d'organes : (RJ)",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318926,
+          "_nanoseconds": 106000000
+        },
+        "suggestions": [
+          {
+            "id": "c4bb8cb9-c742-4212-ba9f-bfd7e10352d0",
+            "isSelected": false,
+            "text": "Le don est gratuit et anonyme",
+            "count": 0
+          },
+          {
+            "id": "46f27b03-ae0c-425b-b3c5-da25b06cd72c",
+            "isSelected": false,
+            "text": "Le donneur d'organe est récompensé par la sécurité sociale",
+            "count": 1
+          },
+          {
+            "id": "bc3c2932-247f-48d4-afdf-0466f9b8dbed",
+            "isSelected": false,
+            "text": "Le receveur connait l'identité du donneur",
+            "count": 0
+          },
+          {
+            "id": "efd47a5b-c8c5-4eec-a0c0-a236d1c741a6",
+            "isSelected": false,
+            "text": "Le don d'organe ne se fait qu'à partir d'un donneur vivant",
+            "count": 0
+          },
+          {
+            "id": "7ec28c84-1dc9-4f01-8391-57a113f2cc98",
+            "isSelected": false,
+            "text": "Le don d'organe ne se fait qu'à partir d'un donneur décédé",
+            "count": 0
+          },
+          {
+            "id": "370a6c2c-11c3-4d4f-b99a-c32b90d96007",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124062",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "La réflexion en éthique médicale : (RJ)",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318926,
+          "_nanoseconds": 878000000
+        },
+        "suggestions": [
+          {
+            "id": "a4bc8244-ed21-4dde-a4ba-654c16cf37af",
+            "isSelected": false,
+            "text": "A comme principe premier le respect de la personne humaine",
+            "count": 0
+          },
+          {
+            "id": "0a188d5e-2062-400b-a301-b4bc1e7fd461",
+            "isSelected": false,
+            "text": "Pèse l'impact des découvertes biomédicales sur l'homme et la société.",
+            "count": 0
+          },
+          {
+            "id": "f4a735cb-549a-4092-863d-4fed877f92f8",
+            "isSelected": false,
+            "text": "Réfléchit aux problèmes moraux posés par l'application des techniques biomédicales à l'homme.",
+            "count": 0
+          },
+          {
+            "id": "48ae4c60-e3cf-4758-bf7b-d57581ca14e9",
+            "isSelected": false,
+            "text": "Est née de l'existence de déviances du savoir scientifique.",
+            "count": 0
+          },
+          {
+            "id": "a8f65cb9-7e32-4fdf-9d84-71bd98a28417",
+            "isSelected": false,
+            "text": "Toutes ces réponses sont justes",
+            "count": 0
+          },
+          {
+            "id": "e6d0d4e1-b474-49ce-a276-c3779cdf8180",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124063",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "La bioéthique est un ensemble de réflexions : (RF)",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318927,
+          "_nanoseconds": 434000000
+        },
+        "suggestions": [
+          {
+            "id": "4c7e8100-fdcb-44da-a643-8253b1795201",
+            "isSelected": false,
+            "text": "Qui cherche à résoudre des questions morales posées par l'avancée des sciences",
+            "count": 0
+          },
+          {
+            "id": "952f3e8f-fc07-4a23-b922-9b3f18a64fd7",
+            "isSelected": false,
+            "text": "Qui se propose de poser des limites aux interventions de l'homme dans le domaine des sciences de la vie.",
+            "count": 0
+          },
+          {
+            "id": "799a7cf2-fb0d-4661-9dfc-e813af1910b0",
+            "isSelected": false,
+            "text": "Ayant comme finalité première le respect de la personne humaine",
+            "count": 0
+          },
+          {
+            "id": "6058380b-9519-4240-a361-0a2b8e41469d",
+            "isSelected": false,
+            "text": "Ne posant aucune limite à l'application des découvertes des sciences de la vie à l'homme",
+            "count": 0
+          },
+          {
+            "id": "c425aebd-228b-47e5-8c83-de786875c52a",
+            "isSelected": false,
+            "text": "A + B + C",
+            "count": 0
+          },
+          {
+            "id": "650d3e91-4ee8-4c49-9ab3-73c4df5cc9dc",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124090",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "fM6ZEyo8xRiM2qfidZ8f",
+        "subcategoryName": "La responsabilite medicale",
+        "text": "Le conseil de l'ordre des médecins est : (RJ)",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318942,
+          "_nanoseconds": 545000000
+        },
+        "suggestions": [
+          {
+            "id": "70f56659-8a6e-42a5-887a-956492cbec61",
+            "isSelected": false,
+            "text": "Une association médicale",
+            "count": 0
+          },
+          {
+            "id": "4a3ec993-5dee-4968-bd35-cda828fb088c",
+            "isSelected": false,
+            "text": "Un syndicat des médecins",
+            "count": 0
+          },
+          {
+            "id": "5698d8b0-0d6b-4a00-b621-5984a17bb560",
+            "isSelected": false,
+            "text": "Une instance qui veille au respect des règles déontologiques",
+            "count": 0
+          },
+          {
+            "id": "1b4d41eb-07cb-462f-87b8-605255665dc8",
+            "isSelected": false,
+            "text": "Un parti politique",
+            "count": 0
+          },
+          {
+            "id": "da83d1cf-114c-4db6-bf83-e598aa389bef",
+            "isSelected": false,
+            "text": "Une instance judiciaire",
+            "count": 0
+          },
+          {
+            "id": "291758d8-ce58-4594-9e4b-40b36c50c0d4",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124091",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "fM6ZEyo8xRiM2qfidZ8f",
+        "subcategoryName": "La responsabilite medicale",
+        "text": "En cas de dommage résultant du fait d'un chirurgien exerçant à l'hôpital privé, la responsabilité médicale mise en cause pour l'indemnisation est : (RJ)",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318943,
+          "_nanoseconds": 44000000
+        },
+        "suggestions": [
+          {
+            "id": "b6912ba6-ca6c-4a8d-a427-9e2d0f996ef5",
+            "isSelected": false,
+            "text": "Pénale",
+            "count": 0
+          },
+          {
+            "id": "36b64e14-7088-4ee8-a8b8-0b8ef2116c35",
+            "isSelected": false,
+            "text": "Civile",
+            "count": 0
+          },
+          {
+            "id": "d0dc1ae0-7d49-4a9d-a5d5-ea925cf15af8",
+            "isSelected": false,
+            "text": "Disciplinaire",
+            "count": 0
+          },
+          {
+            "id": "1a8fbd90-2770-40e5-85bb-0f7af94d26c4",
+            "isSelected": false,
+            "text": "Administrative",
+            "count": 0
+          },
+          {
+            "id": "8028a6b6-c72c-4546-bf75-e76c604d310d",
+            "isSelected": false,
+            "text": "Civile et disciplinaire",
+            "count": 0
+          },
+          {
+            "id": "f69aa1d7-2fce-414c-93ea-ad8e6c2e3c5c",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124092",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "fM6ZEyo8xRiM2qfidZ8f",
+        "subcategoryName": "La responsabilite medicale",
+        "text": "Le conseil de l'éthique est : (RJ)",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318943,
+          "_nanoseconds": 548000000
+        },
+        "suggestions": [
+          {
+            "id": "b05c1bda-aee2-4cab-9674-7dad19f8ad57",
+            "isSelected": false,
+            "text": "Une association médicale",
+            "count": 0
+          },
+          {
+            "id": "ed464dfe-e586-4beb-a193-8fb0fe10c47e",
+            "isSelected": false,
+            "text": "Un syndicat des médecins",
+            "count": 0
+          },
+          {
+            "id": "0a410e39-8dbb-4939-b2ba-32e6d647f216",
+            "isSelected": false,
+            "text": "Une instance qui émet des avis et des recommandations",
+            "count": 0
+          },
+          {
+            "id": "41a1d549-d000-43bd-ade5-9004db824a25",
+            "isSelected": false,
+            "text": "Une instance judiciaire",
+            "count": 0
+          },
+          {
+            "id": "6e701e6f-0c71-4e42-a16c-fa72075d4f7e",
+            "isSelected": false,
+            "text": "Prévu par le code de l'état civil",
+            "count": 0
+          },
+          {
+            "id": "015544c1-ad63-4018-9a4c-d33ba348c0ca",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124103",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "CbXdz3VaafwPCmgkiS0n",
+        "subcategoryName": "La sante publique",
+        "text": "Dans le cadre de la lutte contre les maladies non transmissibles ou chroniques, la Prévention tertiaire comprend tous les actes destinés à diminuer la prévalence des incapacités chroniques dans une population en diminuant les invalidités fonctionnelles consécutives à une maladie. Elle prévient les rechutes et les complications ou les séquelles par un traitement adéquat tout au long de la maladie (cocher la réponse juste)",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318949,
+          "_nanoseconds": 638000000
+        },
+        "suggestions": [
+          {
+            "id": "933019ec-dbad-4e4d-869b-0350ee7cf1ab",
+            "isSelected": false,
+            "text": "VRAI",
+            "count": 0
+          },
+          {
+            "id": "66c91f55-cae6-4fc5-9b9d-14e2366814a2",
+            "isSelected": false,
+            "text": "FAUX",
+            "count": 0
+          },
+          {
+            "id": "c24010a4-e7ff-4370-87c8-0b0cc6b26964",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124104",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "CbXdz3VaafwPCmgkiS0n",
+        "subcategoryName": "La sante publique",
+        "text": "Selon la fréquence à laquelle sont observées les maladies transmissibles dans une population, une pandémie est définie comme : (Cochez la RJ)",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318950,
+          "_nanoseconds": 136000000
+        },
+        "suggestions": [
+          {
+            "id": "d1b3acbb-0c96-4933-91cd-f72765a8ca38",
+            "isSelected": false,
+            "text": "L'apparition d'un nombre anormalement élevé de cas d'une maladie par rapport à la situation antérieure au sein d'une collectivité, dans une région donnée au cours d'une période déterminée",
+            "count": 0
+          },
+          {
+            "id": "1b1106c6-67ed-43dd-9414-e62779a3d271",
+            "isSelected": false,
+            "text": "L'existence habituelle d'une maladie dans une région donnée (limitée dans l'espace) plusieurs mois voire plusieurs années (persistant dans le temps).",
+            "count": 0
+          },
+          {
+            "id": "18151820-a0bb-4636-9e96-6b32a91e772b",
+            "isSelected": false,
+            "text": "L'apparition d'une maladie qui envahit plusieurs continents à la fois (illimité dans l'espace et limité dans le temps).",
+            "count": 0
+          },
+          {
+            "id": "78e9d6cd-8d7f-4684-bf61-53ee2ca6100f",
+            "isSelected": false,
+            "text": "La maladie non contagieuse qui atteint simultanément plusieurs membres d'une collectivité qui s'infectent à la même source.",
+            "count": 0
+          },
+          {
+            "id": "53ac0ba0-d3f1-42f1-8240-2e4217dab592",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124105",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "CbXdz3VaafwPCmgkiS0n",
+        "subcategoryName": "La sante publique",
+        "text": "Les principaux objectifs d'un système de santé sont (cocher la ou les RJ)",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318950,
+          "_nanoseconds": 640000000
+        },
+        "suggestions": [
+          {
+            "id": "bdd04858-dd58-41b1-8cf9-c12e605aafff",
+            "isSelected": false,
+            "text": "La restauration de la santé",
+            "count": 0
+          },
+          {
+            "id": "c77c8723-1b91-4a8f-a9a9-cda7e654d840",
+            "isSelected": false,
+            "text": "Le diagnostic et le traitement des sujets malades",
+            "count": 0
+          },
+          {
+            "id": "120f01e2-68bd-4d20-8ab4-27900f6e507f",
+            "isSelected": false,
+            "text": "La prévention des maladies et des accidents",
+            "count": 0
+          },
+          {
+            "id": "f1dedaae-8c40-4cc5-a0a0-9ce6973c85b2",
+            "isSelected": false,
+            "text": "La promotion de la santé",
+            "count": 0
+          },
+          {
+            "id": "7746af10-8b38-4d54-b059-31d545efa6f6",
+            "isSelected": false,
+            "text": "L'augmentation du capital santé de la population",
+            "count": 0
+          },
+          {
+            "id": "b1b9cf85-e564-413e-931e-ae56fd6853bc",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124106",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "CbXdz3VaafwPCmgkiS0n",
+        "subcategoryName": "La sante publique",
+        "text": "Selon l'OMS, la santé : (cocher la ou les RJ)",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318951,
+          "_nanoseconds": 167000000
+        },
+        "suggestions": [
+          {
+            "id": "29d8057c-2d06-4fa6-8032-0bf0ded359d5",
+            "isSelected": false,
+            "text": "Est un état complet de bien-être physique",
+            "count": 0
+          },
+          {
+            "id": "3cba4a01-e3cd-491a-a377-134364f0fbc7",
+            "isSelected": false,
+            "text": "Est un état complet de bien-être mental",
+            "count": 0
+          },
+          {
+            "id": "5c57158a-d1c3-4fbf-8d77-2ff2d6caab66",
+            "isSelected": false,
+            "text": "Est un état complet de bien-être social",
+            "count": 0
+          },
+          {
+            "id": "61a9d703-fa7f-424f-ab6d-12e983cc7608",
+            "isSelected": false,
+            "text": "Ne consiste pas seulement en une absence de maladie ou d'infirmité",
+            "count": 0
+          },
+          {
+            "id": "18ff6818-aad0-4dfc-ab73-665104c26708",
+            "isSelected": false,
+            "text": "Toutes les réponses sont justes",
+            "count": 0
+          },
+          {
+            "id": "ff88cb81-6f9b-4c15-bd28-dbcdb57dbfd1",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124107",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "CbXdz3VaafwPCmgkiS0n",
+        "subcategoryName": "La sante publique",
+        "text": "Selon l'OMS, la santé publique a comme objectifs de : (cocher la ou les RJ)",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318951,
+          "_nanoseconds": 671000000
+        },
+        "suggestions": [
+          {
+            "id": "e22974bc-b577-42fb-94e7-9f93e90c7dd8",
+            "isSelected": false,
+            "text": "Diminuer la morbidité au sein de la collectivité",
+            "count": 0
+          },
+          {
+            "id": "0f7e3d49-8d82-4fd7-a8ca-e5d4875ee409",
+            "isSelected": false,
+            "text": "Diminuer l'incapacité au sein de la collectivité",
+            "count": 0
+          },
+          {
+            "id": "9dd96b30-d998-4642-a51e-c30c91c90cfa",
+            "isSelected": false,
+            "text": "Réduire la mortalité prématurée au sein de la collectivité",
+            "count": 0
+          },
+          {
+            "id": "b150d18f-5f40-4224-9268-12f855b6f43b",
+            "isSelected": false,
+            "text": "Assurer l'égalité dans la santé à l'ensemble de la population",
+            "count": 0
+          },
+          {
+            "id": "8622dc02-e1fc-43be-9734-065e76385894",
+            "isSelected": false,
+            "text": "Toutes les réponses sont justes",
+            "count": 0
+          },
+          {
+            "id": "506d65c3-b040-49ce-a61e-7122ec66ca4e",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124131",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "NCHoAwUjR8UjezKtubgF",
+        "subcategoryName": "Relation entre medecin et malade",
+        "text": "La vocation du médecin consiste à : (RF)",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318965,
+          "_nanoseconds": 684000000
+        },
+        "suggestions": [
+          {
+            "id": "dd429199-8ea7-419e-8140-db2338fa5fd0",
+            "isSelected": false,
+            "text": "Défendre la santé de l'homme",
+            "count": 0
+          },
+          {
+            "id": "7e6ba44e-6424-484c-8511-5f911d864768",
+            "isSelected": false,
+            "text": "Soulager les souffrances",
+            "count": 0
+          },
+          {
+            "id": "98150530-2953-4b3c-ab7e-f0db60b7c4af",
+            "isSelected": false,
+            "text": "Respecter la dignité du malade",
+            "count": 0
+          },
+          {
+            "id": "e89b0412-ea75-4e6e-bca0-5884ff89c703",
+            "isSelected": false,
+            "text": "Rédiger des certificats médicaux de complaisance",
+            "count": 0
+          },
+          {
+            "id": "98217a3c-9d61-449f-ad69-119144a9a575",
+            "isSelected": false,
+            "text": "Porter secours au malade en danger",
+            "count": 0
+          },
+          {
+            "id": "cbd5dbfc-a5da-49ba-811f-78d1ed8191cf",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124132",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "NCHoAwUjR8UjezKtubgF",
+        "subcategoryName": "Relation entre medecin et malade",
+        "text": "Les qualités nécessaires pour être médecin ou chirurgien-dentiste sont : (RJ)",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318966,
+          "_nanoseconds": 208000000
+        },
+        "suggestions": [
+          {
+            "id": "dd30f735-dd51-440e-82d5-2b655ceec902",
+            "isSelected": false,
+            "text": "Le dévouement à ses malades",
+            "count": 0
+          },
+          {
+            "id": "415b674d-1916-43f6-a290-5787b4a7be54",
+            "isSelected": false,
+            "text": "Savoir écouter ses patients",
+            "count": 0
+          },
+          {
+            "id": "3a48aaf7-7dcc-4214-bda9-a3998490c81d",
+            "isSelected": false,
+            "text": "Aimer travailler et être disponible à tout moment",
+            "count": 0
+          },
+          {
+            "id": "7b4564ed-cb83-437a-b580-6185830acf8d",
+            "isSelected": false,
+            "text": "Avoir un esprit scientifique et entretenir ses connaissances",
+            "count": 0
+          },
+          {
+            "id": "dc2a0761-abe3-47a7-a14b-32105fafb655",
+            "isSelected": false,
+            "text": "L'ensemble de ces propositions.",
+            "count": 0
+          },
+          {
+            "id": "cff8ac96-9001-4cff-9ed2-dcd2a1793cf6",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124133",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "NCHoAwUjR8UjezKtubgF",
+        "subcategoryName": "Relation entre medecin et malade",
+        "text": "La mission du médecin et du chirurgien-dentiste dans la société : (RF)",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318966,
+          "_nanoseconds": 721000000
+        },
+        "suggestions": [
+          {
+            "id": "df3fd12f-7d50-4b52-8646-56d765d9d3de",
+            "isSelected": false,
+            "text": "Ets une vocation pour soigner et préserver la santé",
+            "count": 0
+          },
+          {
+            "id": "744f64e2-6a9b-4ae0-a489-98708a8ae200",
+            "isSelected": false,
+            "text": "Est une activité libre comme un commerce",
+            "count": 0
+          },
+          {
+            "id": "d1a50314-cd9e-4486-9070-c158ba54d4fe",
+            "isSelected": false,
+            "text": "Est d'être au service de la santé publique et de l'individu",
+            "count": 0
+          },
+          {
+            "id": "fdeafd62-9d35-4bff-ae74-7602606bcc9e",
+            "isSelected": false,
+            "text": "Respecter le secret professionnel",
+            "count": 0
+          },
+          {
+            "id": "9a25e369-a992-437f-8844-5273c10416da",
+            "isSelected": false,
+            "text": "Est de soulager la souffrance dans le respect de la vie et de la dignité de la personne humaine.",
+            "count": 0
+          },
+          {
+            "id": "3a50b955-d59c-442e-a022-e8dd040402a3",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124072",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "La bioéthique est un ensemble de réflexions sur le domaine médical essayant de résoudre les questions médicales posées :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318932,
+          "_nanoseconds": 137000000
+        },
+        "suggestions": [
+          {
+            "id": "0645550a-f932-4384-bb40-6505fbfde3c2",
+            "isSelected": false,
+            "text": "d'ordre moral soulevé par les progrès des sciences biomédicales",
+            "count": 0
+          },
+          {
+            "id": "2332c201-5aca-46b4-bb98-d0fe547ce014",
+            "isSelected": false,
+            "text": "d'ordre technique dans le domaine médical",
+            "count": 0
+          },
+          {
+            "id": "921163a5-bdfe-4c46-9dbd-ad3cdafc3346",
+            "isSelected": false,
+            "text": "d'ordre déontologique",
+            "count": 0
+          },
+          {
+            "id": "1689dfe1-7874-45c7-b30f-16b24d6017af",
+            "isSelected": false,
+            "text": "d'ordre économique de la santé",
+            "count": 0
+          },
+          {
+            "id": "a237f4de-8f6b-435b-88ad-b0b3df8ddbc5",
+            "isSelected": false,
+            "text": "d'ordre politique",
+            "count": 0
+          },
+          {
+            "id": "4a3a5139-774d-451a-8a04-6a42d98dd95c",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124073",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "Les prélèvements et transplantation d'organes sont :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318932,
+          "_nanoseconds": 639000000
+        },
+        "suggestions": [
+          {
+            "id": "94ce3d71-ab5c-42ca-8670-54b39646270d",
+            "isSelected": false,
+            "text": "effectués qu'à des fins thérapeutiques ou diagnostic",
+            "count": 0
+          },
+          {
+            "id": "48bcb146-833c-46ca-a201-c0cf02981578",
+            "isSelected": false,
+            "text": "la transplantation reste le seul moyen thérapeutique",
+            "count": 0
+          },
+          {
+            "id": "095698d8-b66e-4aa2-8e4c-85f8672d946b",
+            "isSelected": false,
+            "text": "la transaction financière est interdite",
+            "count": 0
+          },
+          {
+            "id": "62ccf81c-27bb-4ddc-8041-b92ce9463f27",
+            "isSelected": false,
+            "text": "le donneur doit être en état de mort cérébrale",
+            "count": 0
+          },
+          {
+            "id": "db700775-d09a-41e1-b677-44df321631a0",
+            "isSelected": false,
+            "text": "le consentement du donneur est exigé",
+            "count": 0
+          },
+          {
+            "id": "5fae75d4-8839-4161-807e-021641094d2e",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124074",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "les problèmes éthiques posés par la prise en charge quotidienne des malades sont :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318933,
+          "_nanoseconds": 177000000
+        },
+        "suggestions": [
+          {
+            "id": "980c9257-1e15-4cfc-884f-6f4f30ee8ee5",
+            "isSelected": false,
+            "text": "la demande d'euthanasie",
+            "count": 0
+          },
+          {
+            "id": "57c24e2f-03ce-459a-9153-ae4c7c1b829e",
+            "isSelected": false,
+            "text": "l'acharnement thérapeutique",
+            "count": 0
+          },
+          {
+            "id": "cd03dc8e-d478-4d4c-b18d-286bb8364536",
+            "isSelected": false,
+            "text": "comment informer un malade atteint d'une maladie incurable au stade terminal",
+            "count": 0
+          },
+          {
+            "id": "75ee11f1-b7c5-46b0-a245-6a7af940e72a",
+            "isSelected": false,
+            "text": "sanctionner les médecins fautifs",
+            "count": 0
+          },
+          {
+            "id": "9c3a2bcd-d741-46e3-9531-63f6dad00dbd",
+            "isSelected": false,
+            "text": "le refus de soin de la part du malade",
+            "count": 0
+          },
+          {
+            "id": "1d6b16bf-3aa5-48e5-8be0-f52985145690",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124075",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "Les prélèvements d'organes sur des personnes décédées en vue de transplantation :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318933,
+          "_nanoseconds": 688000000
+        },
+        "suggestions": [
+          {
+            "id": "7b804cfc-f6fa-4148-9638-5a0debcc0f56",
+            "isSelected": false,
+            "text": "se fait juste avant la constatation médicale du décès en urgence",
+            "count": 0
+          },
+          {
+            "id": "1cc4a2fa-0d3c-4908-bee9-f82e14193fa5",
+            "isSelected": false,
+            "text": "le consentement du donneur de son vivant n'a pas d'intérêt",
+            "count": 0
+          },
+          {
+            "id": "23993232-1fcf-4dcd-8f2e-5e1331551f53",
+            "isSelected": false,
+            "text": "peut faire l'objet d'une transaction financière",
+            "count": 0
+          },
+          {
+            "id": "aff9d529-131b-4252-84c8-126e1e70ec01",
+            "isSelected": false,
+            "text": "ne peuvent se faire que sous confidentialité",
+            "count": 0
+          },
+          {
+            "id": "34c9692e-9e42-4cda-b110-20e419e96377",
+            "isSelected": false,
+            "text": "peuvent-être effectués à des fins thérapeutiques",
+            "count": 0
+          },
+          {
+            "id": "2c1705a9-ceea-4dff-ad27-99976070d7db",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124076",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "Ce9iWl4qaCs91Up7kCMe",
+        "subcategoryName": "Ethique medicale",
+        "text": "Dans l'assistance médicale à la procréation :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318934,
+          "_nanoseconds": 220000000
+        },
+        "suggestions": [
+          {
+            "id": "0b672bb0-4167-4788-beb1-a9994b1ef840",
+            "isSelected": false,
+            "text": "L'insémination par don de sperme est possible",
+            "count": 0
+          },
+          {
+            "id": "8cc3c572-2b46-4d5f-8f93-38f82cfa0281",
+            "isSelected": false,
+            "text": "Le don d'ovocytes est autorisé.",
+            "count": 0
+          },
+          {
+            "id": "570fb525-b65b-4d48-b84f-5083f8743387",
+            "isSelected": false,
+            "text": "Le don d'embryon est possible.",
+            "count": 0
+          },
+          {
+            "id": "a5e2f942-1aa2-40b4-90c1-dc112bac3ee9",
+            "isSelected": false,
+            "text": "Elle est destinée aux femmes sous certaines conditions",
+            "count": 0
+          },
+          {
+            "id": "5dc684e5-ab89-46f3-befb-e00d01ef8eeb",
+            "isSelected": false,
+            "text": "Sert à traiter la stérilité sous toutes ses formes.",
+            "count": 0
+          },
+          {
+            "id": "b10aeffe-c0b1-4ed3-81fe-0b2b08029de8",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124081",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "05zVinaWLQYG10Csqw05",
+        "subcategoryName": "Histoire de la medecine",
+        "text": "L’enseignement de l'anatomie en Algérie :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318937,
+          "_nanoseconds": 148000000
+        },
+        "suggestions": [
+          {
+            "id": "bd028bb6-69d9-4203-896d-2f617c2fc256",
+            "isSelected": false,
+            "text": "a été poursuivi après l'indépendance",
+            "count": 0
+          },
+          {
+            "id": "86ac585f-6889-4fe6-95bb-9ed4998455e2",
+            "isSelected": false,
+            "text": "enrichi par les différents enseignements sur les cadavres à la Faculté d'Alger",
+            "count": 0
+          },
+          {
+            "id": "024d9c84-9caa-4ad5-a990-ef4692a36ab0",
+            "isSelected": false,
+            "text": "le laboratoire d'anatomie d'Alger a été d'un grand apport au développement de l'anatomie sur dissection de cadavres",
+            "count": 0
+          },
+          {
+            "id": "badaf13b-d3fe-44a6-8654-581fae45ae9a",
+            "isSelected": false,
+            "text": "est assuré essentiellement par les médecins",
+            "count": 0
+          },
+          {
+            "id": "74a90cc0-03f3-4747-8424-964d05b5c720",
+            "isSelected": false,
+            "text": "toutes les réponses sont justes",
+            "count": 0
+          },
+          {
+            "id": "ad34d7e9-978e-4744-ba0c-7799a5f7cb32",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124088",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "ngyfCu02Ydmw0p0I6oQQ",
+        "subcategoryName": "Iatrogene evenement lie aux soins",
+        "text": "Lors d'une faute médicale, la victime souhaite obtenir une réparation :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318941,
+          "_nanoseconds": 132000000
+        },
+        "suggestions": [
+          {
+            "id": "11a15b36-ea23-450b-91e7-7c398b83e979",
+            "isSelected": false,
+            "text": "la preuve doit être apportée par le médecin présentée au tribunal",
+            "count": 0
+          },
+          {
+            "id": "1ebad4d6-f75d-4707-abbe-47316b0167dc",
+            "isSelected": false,
+            "text": "les éléments constitutifs du délit sont au nombre de deux (une faute commise et un dommage)",
+            "count": 0
+          },
+          {
+            "id": "46f9fa68-c8c8-4ab3-bd8c-aa2c292e491d",
+            "isSelected": false,
+            "text": "la réparation peut relever de la responsabilité civile du médecin envers son malade",
+            "count": 0
+          },
+          {
+            "id": "927aa889-5934-403f-b564-9ddd3edef111",
+            "isSelected": false,
+            "text": "le Conseil de l'Ordre veille à l'indemnisation du malade",
+            "count": 0
+          },
+          {
+            "id": "fe541f15-08d6-4a4e-99cd-b38c316e8bb2",
+            "isSelected": false,
+            "text": "la réparation relève de la responsabilité pénale du médecin",
+            "count": 0
+          },
+          {
+            "id": "b58decb7-0515-4b36-abd0-f78253d9b1ab",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124097",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "fM6ZEyo8xRiM2qfidZ8f",
+        "subcategoryName": "La responsabilite medicale",
+        "text": "La réquisition à médecin :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318946,
+          "_nanoseconds": 89000000
+        },
+        "suggestions": [
+          {
+            "id": "2a3c80ba-ddb6-4f0c-9702-b31ea0fd476f",
+            "isSelected": false,
+            "text": "est une amende des autorités judiciaires pour effectuer une mission d'ordre médical ou médico-légale urgente",
+            "count": 0
+          },
+          {
+            "id": "e3e19efe-df38-4582-b358-109e6c109bfb",
+            "isSelected": false,
+            "text": "peut-être établie uniquement par les autorités judiciaires",
+            "count": 0
+          },
+          {
+            "id": "fb2f7b7a-6ce3-42f8-9f5d-ce5d6407adcd",
+            "isSelected": false,
+            "text": "est une injonction faite à un médecin",
+            "count": 0
+          },
+          {
+            "id": "03a457ee-6994-4834-84b7-bff59606131f",
+            "isSelected": false,
+            "text": "le médecin requis peut refuser en cas de force majeure",
+            "count": 0
+          },
+          {
+            "id": "db477367-3ea9-4e90-a99f-66a7280e600a",
+            "isSelected": false,
+            "text": "l'une des missions demandées et une levée de corps lors d'une d'un crime",
+            "count": 0
+          },
+          {
+            "id": "6eb4736f-717a-4b36-a187-0eb8ff4f7e58",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124098",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "fM6ZEyo8xRiM2qfidZ8f",
+        "subcategoryName": "La responsabilite medicale",
+        "text": "Lors d'une faute médicale, la victime souhaite obtenir une réparation :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318946,
+          "_nanoseconds": 593000000
+        },
+        "suggestions": [
+          {
+            "id": "f8474de9-32ba-4d17-a6bd-42f0cd6a850e",
+            "isSelected": false,
+            "text": "la preuve doit être apportée par le médecin présentée au tribunal",
+            "count": 0
+          },
+          {
+            "id": "09c884af-5788-4780-bed4-970435112a37",
+            "isSelected": false,
+            "text": "les éléments constitutifs du délit sont au nombre de deux (une faute commise et un dommage)",
+            "count": 0
+          },
+          {
+            "id": "a5d3392e-41f3-44bf-b50c-a0b8b0e4ce89",
+            "isSelected": false,
+            "text": "la réparation peut relever de la responsabilité civile du médecin envers son malade",
+            "count": 0
+          },
+          {
+            "id": "964a6c5f-9237-4ba2-ba9a-38dce9d6b10c",
+            "isSelected": false,
+            "text": "le Conseil de l'Ordre veille à l'indemnisation du malade",
+            "count": 0
+          },
+          {
+            "id": "00c1b385-8a88-4a30-b9eb-450978659975",
+            "isSelected": false,
+            "text": "la réparation relève de la responsabilité pénale du médecin",
+            "count": 0
+          },
+          {
+            "id": "9b90b0f0-ff06-4eac-86b2-993165921545",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124099",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "fM6ZEyo8xRiM2qfidZ8f",
+        "subcategoryName": "La responsabilite medicale",
+        "text": "La responsabilité disciplinaire du médecin est engagée en cas de :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318947,
+          "_nanoseconds": 88000000
+        },
+        "suggestions": [
+          {
+            "id": "67c5fecc-db64-447a-882e-fc798da0d99f",
+            "isSelected": false,
+            "text": "infraction pénale",
+            "count": 0
+          },
+          {
+            "id": "04b75527-b22d-474c-9fed-037917ad1849",
+            "isSelected": false,
+            "text": "Faute en matière de diagnostic",
+            "count": 0
+          },
+          {
+            "id": "93e52e07-2130-4359-82d4-a52f7013d38e",
+            "isSelected": false,
+            "text": "faute de service",
+            "count": 0
+          },
+          {
+            "id": "0b52e506-2dd9-4856-af4a-0cc8863dc1af",
+            "isSelected": false,
+            "text": "erreur médicale",
+            "count": 0
+          },
+          {
+            "id": "fa496955-3dc0-4ca2-a970-21a8630fe89f",
+            "isSelected": false,
+            "text": "manquement aux prescriptions du code de déontologie",
+            "count": 0
+          },
+          {
+            "id": "71f26512-9bd3-4367-8ff3-6fa3cd3cf896",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124114",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "CbXdz3VaafwPCmgkiS0n",
+        "subcategoryName": "La sante publique",
+        "text": "Selon la fréquence à laquelle sont observées les maladies transmissibles dans une population, une pandémie est définie comme :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318955,
+          "_nanoseconds": 254000000
+        },
+        "suggestions": [
+          {
+            "id": "87470c69-0fc7-4308-9c35-c7a0b2f2e073",
+            "isSelected": false,
+            "text": "L'apparition d'un nombre anormalement élevé de cas d'une maladie par rapport à la situation antérieure au sein d'une collectivité, dans une région donnée au cours d'une période déterminée.",
+            "count": 0
+          },
+          {
+            "id": "24477880-66c0-46c3-a4a1-947ad16dac16",
+            "isSelected": false,
+            "text": "L'existence habituelle d'une maladie dans une région donnée (limitée dans l'espace) plusieurs mois voire plusieurs années (persistant dans le temps).",
+            "count": 0
+          },
+          {
+            "id": "5577e7a4-a7c3-4fba-b5c5-f3297cb779c8",
+            "isSelected": false,
+            "text": "L'apparition d'une maladie qui envahit plusieurs continents à la fois (illimité dans l'espace et limité dans le temps)",
+            "count": 0
+          },
+          {
+            "id": "65318948-56e1-4379-bbaa-3799999c673a",
+            "isSelected": false,
+            "text": "La maladie non contagieuse qui atteint simultanément plusieurs membres d'une collectivité qui s'infectent à la même source.",
+            "count": 0
+          },
+          {
+            "id": "11e26975-9dc8-4a79-be75-05c41dddbd75",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124115",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "CbXdz3VaafwPCmgkiS0n",
+        "subcategoryName": "La sante publique",
+        "text": "Dans le cadre de la lutte contre les maladies non transmissibles ou chronique, la Prévention tertiaire comprend tous les actes destinés à diminuer la prévalence des incapacités chroniques dans une population en diminuant les invalidités fonctionnelles consécutives à une maladie. Elle prévient les rechutes et les complications ou les séquelles par un traitement adéquat tout au long de la maladie.",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318955,
+          "_nanoseconds": 766000000
+        },
+        "suggestions": [
+          {
+            "id": "af1f6382-1508-4d57-9786-684241af4683",
+            "isSelected": false,
+            "text": "Vrai",
+            "count": 0
+          },
+          {
+            "id": "5d123f3a-2f50-42ae-98c5-b284b834c6e5",
+            "isSelected": false,
+            "text": "Faux",
+            "count": 0
+          },
+          {
+            "id": "f65cce19-e884-48fb-9a8f-b78b0a692236",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124116",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "CbXdz3VaafwPCmgkiS0n",
+        "subcategoryName": "La sante publique",
+        "text": "La surveillance épidémiologique passive consiste à collecter les données de façon périodique par un contact régulier avec les services concernés à la recherche de nouveaux cas d'une pathologie particulière.",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318956,
+          "_nanoseconds": 275000000
+        },
+        "suggestions": [
+          {
+            "id": "f76edb55-f09e-4e62-8cf2-6c91b6411d41",
+            "isSelected": false,
+            "text": "Vrai",
+            "count": 0
+          },
+          {
+            "id": "7d1a66b7-a276-4ce9-87ba-0902e2adc688",
+            "isSelected": false,
+            "text": "Faux",
+            "count": 0
+          },
+          {
+            "id": "6814044b-f8a3-4493-85a3-ba76766ef3ae",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124138",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "NCHoAwUjR8UjezKtubgF",
+        "subcategoryName": "Relation entre medecin et malade",
+        "text": "Les obligations d'un médecin envers son malade sont les suivantes :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318969,
+          "_nanoseconds": 303000000
+        },
+        "suggestions": [
+          {
+            "id": "eb913e7c-1f34-4432-b04e-49cbcae8cd03",
+            "isSelected": false,
+            "text": "Obligation d'une information claire et simple pont sa famille.",
+            "count": 0
+          },
+          {
+            "id": "4d9cd16c-cfb8-4e55-afc0-baa0c00bf9cc",
+            "isSelected": false,
+            "text": "Obligation d'avoir un consentement",
+            "count": 0
+          },
+          {
+            "id": "9aae5c8f-f8e9-4d87-8b71-73d40d7047fc",
+            "isSelected": false,
+            "text": "Obligation du secret médical",
+            "count": 0
+          },
+          {
+            "id": "5c63bcd9-0558-490e-b4de-d693701e5082",
+            "isSelected": false,
+            "text": "Obligation de moyens et non de résultats.",
+            "count": 0
+          },
+          {
+            "id": "74bf72f7-844f-403c-a9ee-66f9016337e0",
+            "isSelected": false,
+            "text": "Obligation de donner des soins consciencieux conformes aux données récentes de la science",
+            "count": 0
+          },
+          {
+            "id": "08e71558-2834-433e-9834-a7d8492761db",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124127",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "9IEGrv31TgQeRmSEHqNT",
+        "subcategoryName": "Organisation du systeme de soins dans le monde et en algerie",
+        "text": "La télémédecine est :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318962,
+          "_nanoseconds": 843000000
+        },
+        "suggestions": [
+          {
+            "id": "b0fb09d2-9b01-4391-adc0-6c48673827e1",
+            "isSelected": false,
+            "text": "la partie de la médecine qui utilise la technologie de l'information et des télécommunications",
+            "count": 0
+          },
+          {
+            "id": "2ae1f89c-13c2-41f6-aab4-c81ef89a474e",
+            "isSelected": false,
+            "text": "utilisée pour le diagnostic, le traitement de l'éducation",
+            "count": 0
+          },
+          {
+            "id": "c85a334f-69c4-4187-b72a-b32aed5a3317",
+            "isSelected": false,
+            "text": "c'est la télésanté",
+            "count": 0
+          },
+          {
+            "id": "9c46cd82-0859-4ec9-82ec-6098157b2746",
+            "isSelected": false,
+            "text": "c'est la nouvelle technologie de l'information et de télécommunication",
+            "count": 0
+          },
+          {
+            "id": "e090577e-fa3e-4633-b794-eb2b585683cc",
+            "isSelected": false,
+            "text": "toutes ces réponses sont justes",
+            "count": 0
+          },
+          {
+            "id": "c20d94f7-a1be-4e7e-81b6-a4bde63583ac",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "124122",
+        "categoryId": "pqNFxsTIXO7uJA9OKmnL",
+        "categoryName": "SSH",
+        "subcategoryId": "WJCrERfDAOYz4XV0vvzJ",
+        "subcategoryName": "Le secret medicale",
+        "text": "Le secret médical :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1746318959,
+          "_nanoseconds": 823000000
+        },
+        "suggestions": [
+          {
+            "id": "0460ae93-00a4-468f-9b8e-45efb4a41ebf",
+            "isSelected": false,
+            "text": "est un principe éthique, déontologique et juridique",
+            "count": 0
+          },
+          {
+            "id": "ec2491fb-497b-41c3-9fba-13a13eb9ffae",
+            "isSelected": false,
+            "text": "s'impose à tout médecin",
+            "count": 0
+          },
+          {
+            "id": "4b61d7d6-5dea-4563-98c6-21452663ace5",
+            "isSelected": false,
+            "text": "doit être respecté par les infirmiers, les psychologues et les agents de service",
+            "count": 0
+          },
+          {
+            "id": "0b8506e1-1c00-460f-8443-4f837164045c",
+            "isSelected": false,
+            "text": "couvre tout ce qui a été confié au médecin, uniquement pendant l'exercice de sa profession",
+            "count": 0
+          },
+          {
+            "id": "19449319-c65c-4be3-8bf8-341bc3b86bac",
+            "isSelected": false,
+            "text": "impose la protection de l'identité des patients lors de travaux scientifiques",
+            "count": 0
+          },
+          {
+            "id": "0530f112-ace1-4f43-a0c2-0bdefc42ede3",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      }
+    ],
+    "modules": [
+      {
+        "id": "pqNFxsTIXO7uJA9OKmnL",
+        "name": "SSH",
+        "studyLevel": 1
+      }
+    ],
+    "subcategories": [
+      {
+        "id": "Ce9iWl4qaCs91Up7kCMe",
+        "name": "Ethique medicale",
+        "category": {
+          "id": "pqNFxsTIXO7uJA9OKmnL",
+          "father": "",
+          "name": "SSH"
+        }
+      },
+      {
+        "id": "05zVinaWLQYG10Csqw05",
+        "name": "Histoire de la medecine",
+        "category": {
+          "id": "pqNFxsTIXO7uJA9OKmnL",
+          "father": "",
+          "name": "SSH"
+        }
+      },
+      {
+        "id": "ngyfCu02Ydmw0p0I6oQQ",
+        "name": "Iatrogene evenement lie aux soins",
+        "category": {
+          "id": "pqNFxsTIXO7uJA9OKmnL",
+          "father": "",
+          "name": "SSH"
+        }
+      },
+      {
+        "id": "fM6ZEyo8xRiM2qfidZ8f",
+        "name": "La responsabilite medicale",
+        "category": {
+          "id": "pqNFxsTIXO7uJA9OKmnL",
+          "father": "",
+          "name": "SSH"
+        }
+      },
+      {
+        "id": "CbXdz3VaafwPCmgkiS0n",
+        "name": "La sante publique",
+        "category": {
+          "id": "pqNFxsTIXO7uJA9OKmnL",
+          "father": "",
+          "name": "SSH"
+        }
+      },
+      {
+        "id": "WJCrERfDAOYz4XV0vvzJ",
+        "name": "Le secret medicale",
+        "category": {
+          "id": "pqNFxsTIXO7uJA9OKmnL",
+          "father": "",
+          "name": "SSH"
+        }
+      },
+      {
+        "id": "9IEGrv31TgQeRmSEHqNT",
+        "name": "Organisation du systeme de soins dans le monde et en algerie",
+        "category": {
+          "id": "pqNFxsTIXO7uJA9OKmnL",
+          "father": "",
+          "name": "SSH"
+        }
+      },
+      {
+        "id": "ZgWPAIRofiHK95SsvvuL",
+        "name": "Pratique medicale pendant la periode coloniale en algerie",
+        "category": {
+          "id": "pqNFxsTIXO7uJA9OKmnL",
+          "father": "",
+          "name": "SSH"
+        }
+      },
+      {
+        "id": "NCHoAwUjR8UjezKtubgF",
+        "name": "Relation entre medecin et malade",
+        "category": {
+          "id": "pqNFxsTIXO7uJA9OKmnL",
+          "father": "",
+          "name": "SSH"
+        }
+      }
+    ],
+    "statistics": {
+      "time": 0,
+      "wrongCount": 0,
+      "correctCount": 0,
+      "lastAnsweredQuestionIndex": 0,
+      "neutralCount": 0,
+      "questionsCount": 81
+    },
+    "type": "quiz",
+    "createdAt": {
+      "_seconds": 1756080673,
+      "_nanoseconds": 603000000
+    }
+  }
+}

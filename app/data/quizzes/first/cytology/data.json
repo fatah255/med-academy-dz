@@ -1,0 +1,5827 @@
+{
+  "data": {
+    "name": "Cytologie",
+    "questions": [
+      {
+        "id": "168436",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "L'altération de la membrane basale (MB) favoriserait :",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546595,
+          "_nanoseconds": 959000000
+        },
+        "suggestions": [
+          {
+            "id": "cd5f7f40-aec1-4bb9-8cd9-042f6b5b1112",
+            "isSelected": false,
+            "text": "L'expression des métalloprotéases et non de leurs inhibiteurs.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "f0095db2-9a06-417e-89c2-dbdac5049b2b",
+            "isSelected": false,
+            "text": "La migration cellulaire.",
+            "isStudentAnswer": false,
+            "count": 4
+          },
+          {
+            "id": "4f1dca12-5ad7-4887-adc0-20da8f628222",
+            "isSelected": false,
+            "text": "La disparition des cadhérines.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "e9ae05e4-7c8e-4507-a546-7ba815213ff7",
+            "isSelected": false,
+            "text": "L'adhérence intercellulaire avec expression de gènes promoteurs de tumeurs.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 4,
+          "totalInteractions": 4
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168437",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Lors de la division cellulaire dans une cellule :",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546596,
+          "_nanoseconds": 604000000
+        },
+        "suggestions": [
+          {
+            "id": "2ac07933-59cf-4601-8870-6f352e6a8302",
+            "isSelected": false,
+            "text": "Normale : Il y a perte des télomères par inactivité de la télomérase.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "5771ee04-fdda-49fc-b1f2-8fc58b30a664",
+            "isSelected": false,
+            "text": "Tumorale : Il y a absence d'érosion des télomères par inactivation de la télomérase.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "7ef287be-a5cf-4d78-9f5e-322c93d01904",
+            "isSelected": false,
+            "text": "Tumorale : La présence de la télomérase maintient les télomères.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "fb0f0dfe-a8a0-4203-98b5-5356e5450610",
+            "isSelected": false,
+            "text": "Tumorale : La télomérase exercerait une action sur des parties codantes du chromosome.",
+            "isStudentAnswer": false,
+            "count": 2
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 3,
+          "wrong": 2
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168438",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "La translocation est une mutation génétique à l'origine de certaines tumeurs :",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546597,
+          "_nanoseconds": 168000000
+        },
+        "suggestions": [
+          {
+            "id": "cf2cabe2-f135-4d37-9955-032fe97fcb90",
+            "isSelected": false,
+            "text": "Elle se traduit par un échange de portions d'ADN entre chromosomes homologues.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "2a294a51-9b51-4828-b059-1154b91702a9",
+            "isSelected": false,
+            "text": "Elle se traduit par un échange de portions d'ADN entre chromosomes non homologues.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "9e6b5415-30c5-4b5f-837d-9ef668174aa3",
+            "isSelected": false,
+            "text": "Elle peut aboutir à l'expression d'une protéine inexistante au départ.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "1718f824-db45-4fec-8e71-ee81e30ce9b7",
+            "isSelected": false,
+            "text": "Mais en aucun cas, il n'est observé une perte de fonction de gènes suppresseurs.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 2,
+          "totalInteractions": 3
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168439",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "L'aflatoxine est très surveillée pour son action néfaste sur la santé, elle représente :",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546597,
+          "_nanoseconds": 718000000
+        },
+        "suggestions": [
+          {
+            "id": "3ee37ae0-58e2-497b-a654-e137032aba78",
+            "isSelected": false,
+            "text": "Un agent carcinogène spécifique du gène codant pour Bcl-2.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "aa090d35-c304-4e5b-9a85-222fc8bd22df",
+            "isSelected": false,
+            "text": "Une moisissure retrouvée sur des graines de céréales mal entreposées.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f5ce8d90-a8f0-4139-8727-23ff01a91872",
+            "isSelected": false,
+            "text": "Un agent carcinogène qui cible le gène capable de réparer l'ADN.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "aa0da1ee-fcff-4e3d-8fae-39304dd1538d",
+            "isSelected": false,
+            "text": "Une toxine capable d'induire une mutation.",
+            "isStudentAnswer": false,
+            "count": 3
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 3,
+          "totalInteractions": 3
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168440",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "L'altération du génome dans la cellule cancéreuse provoque la néoplasie :",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546598,
+          "_nanoseconds": 262000000
+        },
+        "suggestions": [
+          {
+            "id": "b47f2f43-efa2-40ab-96d2-681cdd1f43a6",
+            "isSelected": false,
+            "text": "Elle peut être acquise ou héréditaire.",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "f51ee59f-dfb5-47d7-92fe-ff88de31999e",
+            "isSelected": false,
+            "text": "Elle se traduit par la diminution de la taille du noyau.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "e8923f91-616f-4b8c-8d1b-93c9f3e13022",
+            "isSelected": false,
+            "text": "Avec aneuploïdie qui représente l'augmentation du nombre de chromosomes.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "620d2362-fc9e-4a73-a26c-8b4cabe40144",
+            "isSelected": false,
+            "text": "Qui se traduirait par une augmentation de la perméabilité au calcium.",
+            "isStudentAnswer": false,
+            "count": 2
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 2,
+          "totalInteractions": 3,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168441",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Les agents promoteurs du développement de tumeurs :",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546598,
+          "_nanoseconds": 820000000
+        },
+        "suggestions": [
+          {
+            "id": "14f71f4a-a822-4702-8f7a-c708f0ce625a",
+            "isSelected": false,
+            "text": "Induisent au préalable une lésion génétique.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "1823afb5-59cd-4548-972d-77370e040086",
+            "isSelected": false,
+            "text": "Favorisent l'expression d'une lésion génétique induite au préalable.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "1a554341-cf46-4aec-91cb-eff1ed2b2e59",
+            "isSelected": false,
+            "text": "Raccourcissent le temps entre l'initiation et l'apparition des tumeurs.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "59fbee7f-03d2-47de-a9ea-80d484e00289",
+            "isSelected": false,
+            "text": "Peuvent être sous la forme d'une hormone.",
+            "isStudentAnswer": false,
+            "count": 3
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 2,
+          "totalInteractions": 3
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168442",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Lors du processus tumoral, vous direz qu'il y aura activation :",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546599,
+          "_nanoseconds": 354000000
+        },
+        "suggestions": [
+          {
+            "id": "cc1d56d5-569c-494f-aded-960fd541d4ed",
+            "isSelected": false,
+            "text": "Des couples cycline/CdK.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "1c1b06d6-b8d8-4158-b2c3-59122fdd9e01",
+            "isSelected": false,
+            "text": "De la P21.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "781eae03-df86-41b6-a41e-9cebcf7a260c",
+            "isSelected": false,
+            "text": "De la protéine Rb (protéine du rétinoblastome).",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "62820823-f741-41db-a319-f22525e85c5d",
+            "isSelected": false,
+            "text": "De la P53.",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 2,
+          "totalInteractions": 3
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109399",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "La transcriptase inverse est une enzyme qui permet :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466804,
+          "_nanoseconds": 151000000
+        },
+        "suggestions": [
+          {
+            "id": "9dd71040-9658-4bd4-8cd0-4c2694e6e6ec",
+            "isSelected": false,
+            "text": "De transcrire une copie d’ARNm à partir d’un ARN viral.",
+            "count": 5
+          },
+          {
+            "id": "15ccd517-7ad6-40d0-a147-7328a5b8943e",
+            "isSelected": false,
+            "text": "De convertir l’ADN viral en ARN viral.",
+            "count": 2
+          },
+          {
+            "id": "c85ddc1e-9e16-4bf5-97e3-a83213a61dec",
+            "isSelected": false,
+            "text": "De transcrire de l’ADN viral à partir d’un ARN viral.",
+            "count": 14
+          },
+          {
+            "id": "1e02a451-30b9-4318-9405-6c69e2b877cb",
+            "isSelected": false,
+            "text": "D’avoir un effet similaire à la réplicase.",
+            "count": 4
+          },
+          {
+            "id": "caa93cb4-a4e0-408f-8942-61b3bd6565a4",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 24,
+          "totalInteractions": 24
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109400",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Le stroma tumoral, qui sert de charpente à la tumeur et assure sa nutrition, influence la consistance de celle-ci :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466804,
+          "_nanoseconds": 646000000
+        },
+        "suggestions": [
+          {
+            "id": "de1cae36-fa7c-4947-9511-2ec8133dba1b",
+            "isSelected": false,
+            "text": "Une faible abondance du stroma rend la tumeur dure.",
+            "count": 3
+          },
+          {
+            "id": "7706922a-e7a8-4b7e-9296-7920ccba0a67",
+            "isSelected": false,
+            "text": "Une abondance importante du stroma rend la tumeur molle.",
+            "count": 2
+          },
+          {
+            "id": "b7c5b03e-6136-4cae-b5c4-dbff3c8026c6",
+            "isSelected": false,
+            "text": "Un stroma abondant est souvent associé à une nécrose tumorale.",
+            "count": 5
+          },
+          {
+            "id": "09a7e4d5-998e-4ff7-836d-6b21de8a6cf6",
+            "isSelected": false,
+            "text": "Une faible abondance du stroma rend la tumeur molle.",
+            "count": 14
+          },
+          {
+            "id": "8fa27ae6-440f-4a70-a66b-3170e4c4dd90",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 20,
+          "totalInteractions": 20
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109401",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "La prolifération illimitée des cellules tumorales est due à :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466805,
+          "_nanoseconds": 138000000
+        },
+        "suggestions": [
+          {
+            "id": "00f4deb4-8c1f-4d5b-8469-32c7cf9d9aeb",
+            "isSelected": false,
+            "text": "La perte des télomères aux extrémités des chromosomes.",
+            "count": 3
+          },
+          {
+            "id": "e2790de1-b2a8-4004-9751-a75a9168e8f8",
+            "isSelected": false,
+            "text": "La présence de télomères aux extrémités des chromosomes sans érosion.",
+            "count": 11
+          },
+          {
+            "id": "9138313e-77fb-458a-9bd7-83f24333eb23",
+            "isSelected": false,
+            "text": "L’action de la télomérase qui érode les télomères des chromosomes.",
+            "count": 4
+          },
+          {
+            "id": "fbbcb3cd-1e56-413e-9290-13c44766adf1",
+            "isSelected": false,
+            "text": "L’érosion progressive des télomères à chaque division cellulaire, perturbant leur régulation.",
+            "count": 3
+          },
+          {
+            "id": "06cc0eed-be27-4876-9496-d0b7fbefa49d",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 17,
+          "totalInteractions": 17
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109402",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Lors de la tumérogenèse, on peut observer :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466805,
+          "_nanoseconds": 617000000
+        },
+        "suggestions": [
+          {
+            "id": "e0162535-5176-4f70-9cc4-8741805aa191",
+            "isSelected": false,
+            "text": "Une réduction de la taille des noyaux.",
+            "count": 2
+          },
+          {
+            "id": "fb08217b-354f-4247-b944-c469559693c8",
+            "isSelected": false,
+            "text": "Une activité accrue des métalloprotéases.",
+            "count": 9
+          },
+          {
+            "id": "13e0de22-c7bc-4bc3-a675-be26a5d0b199",
+            "isSelected": false,
+            "text": "Une activité des inhibiteurs de métalloprotéases.",
+            "count": 6
+          },
+          {
+            "id": "5e8f522e-a6cb-4545-9931-cf6539616def",
+            "isSelected": false,
+            "text": "Une stabilité des jonctions intercellulaires.",
+            "count": 0
+          },
+          {
+            "id": "d98658df-da01-48de-8e35-d0ddceeb5de1",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 15,
+          "totalInteractions": 15
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109403",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "La cellule maintient sa stabilité génétique et cellulaire grâce à :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466806,
+          "_nanoseconds": 132000000
+        },
+        "suggestions": [
+          {
+            "id": "77be65f4-14b8-439d-a541-178e98e0f328",
+            "isSelected": false,
+            "text": "L’expression du gène Bcl-2 à effet antiprolifératif.",
+            "isStudentAnswer": false,
+            "count": 4
+          },
+          {
+            "id": "f923d470-67bb-4c60-9bee-84f2dc79feb3",
+            "isSelected": false,
+            "text": "L’expression du gène codant pour la protéine Rb impliquée dans la réparation de l’ADN.",
+            "isStudentAnswer": false,
+            "count": 6
+          },
+          {
+            "id": "50f2a0f8-4fa4-4733-874a-7bef6f13ff08",
+            "isSelected": false,
+            "text": "L’expression du gène codant pour la protéine Rb ayant un rôle antimitotique.",
+            "isStudentAnswer": false,
+            "count": 5
+          },
+          {
+            "id": "ddffc721-3dc4-4f87-9ae1-07893d5f7cbc",
+            "isSelected": false,
+            "text": "L’expression du gène codant pour la protéine P53 impliquée dans l’apoptose.",
+            "isStudentAnswer": false,
+            "count": 14
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 10,
+          "totalInteractions": 19,
+          "wrong": 9
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109404",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Parmi les modifications subies par une cellule cancéreuse, on note :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466806,
+          "_nanoseconds": 604000000
+        },
+        "suggestions": [
+          {
+            "id": "7736d576-c5c8-4aae-9e29-44ea26db0234",
+            "isSelected": false,
+            "text": "Une diminution de l’activité des protéases facilitant les métastases.",
+            "isStudentAnswer": false,
+            "count": 4
+          },
+          {
+            "id": "7c4fca1a-501a-43cb-9033-8e716ebac0f1",
+            "isSelected": false,
+            "text": "Une réduction de la taille du noyau.",
+            "isStudentAnswer": false,
+            "count": 4
+          },
+          {
+            "id": "044033b5-3c11-4089-941f-1dac341d3fd7",
+            "isSelected": false,
+            "text": "Une aneuploïdie, caractérisée par une augmentation du nombre de chromosomes.",
+            "isStudentAnswer": false,
+            "count": 14
+          },
+          {
+            "id": "9a76b817-9642-4e60-86e5-aec8b9b8814c",
+            "isSelected": false,
+            "text": "Une augmentation de la perméabilité à certains cations comme le calcium.",
+            "isStudentAnswer": false,
+            "count": 14
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 7,
+          "correct": 12,
+          "totalInteractions": 19
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109405",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "L’altération du génome d’une cellule cancéreuse conduit à une néoplasie qui :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466807,
+          "_nanoseconds": 93000000
+        },
+        "suggestions": [
+          {
+            "id": "10d557c0-bd30-4f18-a401-b037211b36d6",
+            "isSelected": false,
+            "text": "Peut être acquise.",
+            "isStudentAnswer": false,
+            "count": 12
+          },
+          {
+            "id": "86182d8f-f07e-4dde-b6f2-204d5264c652",
+            "isSelected": false,
+            "text": "Peut être héréditaire.",
+            "isStudentAnswer": false,
+            "count": 19
+          },
+          {
+            "id": "e97bad05-5b05-4589-b5c8-9bf28f4fb495",
+            "isSelected": false,
+            "text": "Se traduit par l’entrée de la cellule en apoptose.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "188bf3a8-1001-4da4-9546-32bc6830945e",
+            "isSelected": false,
+            "text": "Se manifeste uniquement par des modifications morphologiques.",
+            "isStudentAnswer": false,
+            "count": 2
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 3,
+          "correct": 16,
+          "totalInteractions": 19
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109406",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "La translocation est une mutation génétique impliquée dans certaines tumeurs, elle :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466807,
+          "_nanoseconds": 575000000
+        },
+        "suggestions": [
+          {
+            "id": "5a2592ab-38bd-44ed-8391-2758e262c4e6",
+            "isSelected": false,
+            "text": "Résulte d’un échange de segments d’ADN entre chromosomes homologues.",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "9cb3a974-a27e-4980-8422-85a2e46bb6bd",
+            "isSelected": false,
+            "text": "Résulte d’un échange de segments d’ADN entre chromosomes non homologues.",
+            "isStudentAnswer": false,
+            "count": 13
+          },
+          {
+            "id": "f4345672-cfe9-4133-8e10-e052179342d1",
+            "isSelected": false,
+            "text": "Peut mener à l’expression d’une protéine inexistante initialement.",
+            "isStudentAnswer": false,
+            "count": 8
+          },
+          {
+            "id": "768ad894-484a-4fec-979b-bcb9020a08cb",
+            "isSelected": false,
+            "text": "N’entraîne jamais une perte de fonction des gènes suppresseurs.",
+            "isStudentAnswer": false,
+            "count": 5
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 10,
+          "totalInteractions": 18,
+          "wrong": 8
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109407",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "L’aflatoxine est :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466808,
+          "_nanoseconds": 47000000
+        },
+        "suggestions": [
+          {
+            "id": "a5232c10-cee8-402c-badd-8726c8b5d0ef",
+            "isSelected": false,
+            "text": "Une moisissure présente sur des céréales mal entreposées.",
+            "isStudentAnswer": false,
+            "count": 4
+          },
+          {
+            "id": "83933f71-7107-456d-aae5-a96f5d0bebd5",
+            "isSelected": false,
+            "text": "Une toxine capable d’induire une mutation.",
+            "isStudentAnswer": false,
+            "count": 11
+          },
+          {
+            "id": "d21033d6-d946-4a97-8c68-c5a2d315fd42",
+            "isSelected": false,
+            "text": "Un agent carcinogène ciblant un gène impliqué dans la réparation de l’ADN.",
+            "isStudentAnswer": false,
+            "count": 12
+          },
+          {
+            "id": "b95977d2-6cd7-4468-89eb-1902fa4a72cd",
+            "isSelected": false,
+            "text": "Un agent carcinogène spécifique du gène Bcl-2.",
+            "isStudentAnswer": false,
+            "count": 2
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 6,
+          "correct": 12,
+          "totalInteractions": 18
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109408",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Pour limiter l’expansion d’un cancer, il serait théoriquement possible de :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466808,
+          "_nanoseconds": 535000000
+        },
+        "suggestions": [
+          {
+            "id": "7d675832-2adb-4dd2-9c0d-e0be3d212996",
+            "isSelected": false,
+            "text": "Utiliser une métalloprotéase.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "c7a7b45c-b555-475c-b0c4-0107e89d0e3a",
+            "isSelected": false,
+            "text": "Utiliser un inhibiteur de métalloprotéase.",
+            "isStudentAnswer": false,
+            "count": 11
+          },
+          {
+            "id": "1bf64f45-3ad0-4aa7-9aeb-0402e53a4230",
+            "isSelected": false,
+            "text": "Utiliser la protéine Rb.",
+            "isStudentAnswer": false,
+            "count": 12
+          },
+          {
+            "id": "36e5edc5-c572-416e-800b-d9da30abb547",
+            "isSelected": false,
+            "text": "Ne rien faire car aucune proposition n’est valable.",
+            "isStudentAnswer": false,
+            "count": 3
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 4,
+          "correct": 14,
+          "totalInteractions": 18
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109409",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Une cellule tumorale peut se diviser indéfiniment grâce à :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466808,
+          "_nanoseconds": 994000000
+        },
+        "suggestions": [
+          {
+            "id": "e6e884a0-be25-4a6c-97f9-c4b537ef3c23",
+            "isSelected": false,
+            "text": "La perte des télomères aux extrémités des chromosomes.",
+            "isStudentAnswer": false,
+            "count": 4
+          },
+          {
+            "id": "e8bc8dc8-db44-40e8-b7b4-5cc7c35914b4",
+            "isSelected": false,
+            "text": "La présence de télomères aux extrémités des chromosomes sans érosion.",
+            "isStudentAnswer": false,
+            "count": 8
+          },
+          {
+            "id": "35eeca07-fb59-42fa-a352-bd31b12bb497",
+            "isSelected": false,
+            "text": "L’action de la télomérase qui érode les télomères aux extrémités des chromosomes.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "9a4ea3a8-a9b9-41dd-89e0-273eb3485a3f",
+            "isSelected": false,
+            "text": "L’érosion des télomères à chaque division cellulaire, désorganisant leur régulation.",
+            "isStudentAnswer": false,
+            "count": 5
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 8,
+          "totalInteractions": 17,
+          "wrong": 9
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109410",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Lors du processus tumoral, on observe une activation accrue :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466809,
+          "_nanoseconds": 460000000
+        },
+        "suggestions": [
+          {
+            "id": "40f65f98-77f8-4a51-90cb-0f63e25e7fb0",
+            "isSelected": false,
+            "text": "De la P21.",
+            "count": 4
+          },
+          {
+            "id": "1853bd45-8482-4829-8543-2d1f1fa8c47a",
+            "isSelected": false,
+            "text": "De la P16.",
+            "count": 2
+          },
+          {
+            "id": "d8046946-fc79-4fb1-8e01-e496c1dbcd0b",
+            "isSelected": false,
+            "text": "De la protéine Rb.",
+            "count": 8
+          },
+          {
+            "id": "bdf8ca97-5456-4851-aee4-b31e01168ef7",
+            "isSelected": false,
+            "text": "De la cycline B.",
+            "count": 5
+          },
+          {
+            "id": "9b02e53c-17e8-4194-92a3-981e5301b0df",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 16,
+          "totalInteractions": 16
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109465",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "Les jonctions gap (communicantes) :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466835,
+          "_nanoseconds": 902000000
+        },
+        "suggestions": [
+          {
+            "id": "f7c6aa98-3e87-4723-bd83-aadf2fd48769",
+            "isSelected": false,
+            "text": "Ne sont pas formées par des protéines transmembranaires.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e770c608-7c46-4207-9e78-541a54e03ab6",
+            "isSelected": false,
+            "text": "Sont considérées comme des canaux à échange avec la matrice extracellulaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "245673af-5169-4363-b474-580e71373814",
+            "isSelected": false,
+            "text": "Sont formées de protéines, les connexines, qui permettent le passage d’ions uniquement.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9720de61-ce71-4e0c-8074-b39ef9e3a62e",
+            "isSelected": false,
+            "text": "Sont formées de protéines, les connexines, organisées en canal intercellulaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109466",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "L’échange de matériel génétique entre deux bactéries peut avoir lieu :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466836,
+          "_nanoseconds": 367000000
+        },
+        "suggestions": [
+          {
+            "id": "3258e4a8-99c5-4935-9df5-2f5b541eada4",
+            "isSelected": false,
+            "text": "Par formation d’un pont protéique produit par la bactérie femelle.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e6f73c73-7088-459c-847e-16100742da6c",
+            "isSelected": false,
+            "text": "Sans formation de pont protéique mais directement par conjugaison.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6a7eba57-c541-4584-a37b-261ff0446649",
+            "isSelected": false,
+            "text": "Indirectement par transformation par un bactériophage.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4e1906ce-bc66-49eb-938a-9a6d7aa38c27",
+            "isSelected": false,
+            "text": "Par transduction par intervention d’un vecteur.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109467",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "Les eubactéries :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466836,
+          "_nanoseconds": 828000000
+        },
+        "suggestions": [
+          {
+            "id": "87e9ffc6-2cd8-4b22-9fb4-abe505bf63fc",
+            "isSelected": false,
+            "text": "Peuvent être dotées de chloroplastes comme les végétaux supérieurs.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "34ff821f-95e5-4b36-a39a-b3d47d35b523",
+            "isSelected": false,
+            "text": "Peuvent être dépourvues de paroi comme les cellules animales.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "265b64a5-fd39-4570-96bf-114482b5af4e",
+            "isSelected": false,
+            "text": "Ont une membrane plasmique pourvue de cholestérol.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "047dc049-f407-4562-8c32-6d49e290961d",
+            "isSelected": false,
+            "text": "Peuvent avoir un plasmide qui ne s’exprime qu’après transfert dans une autre bactérie.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109468",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "Les bactéries contemporaines :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466837,
+          "_nanoseconds": 308000000
+        },
+        "suggestions": [
+          {
+            "id": "e6937f50-32a5-4c3b-8efb-8ecd43b7b200",
+            "isSelected": false,
+            "text": "Ont une paroi riche en peptidoglycanes et dotée de porines.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "938389f1-f137-46b0-bd00-f7a170ffd7d7",
+            "isSelected": false,
+            "text": "Certaines résistent aux conditions défavorables en amorçant la germination.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ec2f8f54-d158-4688-ace2-f8747e85bfb5",
+            "isSelected": false,
+            "text": "Ont une paroi ciblée par des antibiotiques.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f83a73a1-3584-4c0c-93b5-e62cb07e78e1",
+            "isSelected": false,
+            "text": "Certaines se sporulent pour augmenter leur virulence.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109469",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "En biotechnologie, la transformation bactérienne est possible :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466837,
+          "_nanoseconds": 763000000
+        },
+        "suggestions": [
+          {
+            "id": "2f8d118b-d418-4f81-bed9-a9e5602844a7",
+            "isSelected": false,
+            "text": "En rendant la bactérie receveuse compétente.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a9dc2aee-bc62-4bcd-a379-3a4e010fe089",
+            "isSelected": false,
+            "text": "En rendant la bactérie donneuse compétente.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4dfd356c-776a-45d5-a077-5d996b07f499",
+            "isSelected": false,
+            "text": "En perméabilisant la paroi de la bactérie receveuse.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "720bc376-80f0-4ec0-8421-3bf6793113e8",
+            "isSelected": false,
+            "text": "En mettant la bactérie donneuse dans un milieu contenant du CaCl₂.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109470",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "Les organismes :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466838,
+          "_nanoseconds": 223000000
+        },
+        "suggestions": [
+          {
+            "id": "e3781bc1-a3eb-4b86-a34b-5e6aeb5e52cb",
+            "isSelected": false,
+            "text": "Les eucaryotes ne peuvent pas être unicellulaires.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "cd961b14-92b5-4d94-8330-978e321bbfe6",
+            "isSelected": false,
+            "text": "Les procaryotes peuvent être non pathogènes.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "46ffb7e9-4862-40c0-a52f-377dda4c6c26",
+            "isSelected": false,
+            "text": "Les eucaryotes peuvent être pathogènes.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c954d08f-1037-4d4b-bb40-85c5a9539ab9",
+            "isSelected": false,
+            "text": "Les eucaryotes et les procaryotes peuvent avoir de l’ADN extra-chromosomique.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109411",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Les agents promoteurs du développement de tumeur :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466809,
+          "_nanoseconds": 954000000
+        },
+        "suggestions": [
+          {
+            "id": "d764340c-bc3a-4759-b73f-f8d01cba1307",
+            "isSelected": false,
+            "text": "Induisent au préalable une lésion génétique.",
+            "isStudentAnswer": false,
+            "count": 4
+          },
+          {
+            "id": "b620f1c8-0a8a-4486-bb1f-256edc4382ec",
+            "isSelected": false,
+            "text": "Favorisent l’expression d’une lésion génétique induite au préalable.",
+            "isStudentAnswer": false,
+            "count": 9
+          },
+          {
+            "id": "64a548f6-5fc9-49f0-a4aa-0bc70e27c56e",
+            "isSelected": false,
+            "text": "Raccourcissent le temps entre l’initiation et l’apparition des tumeurs.",
+            "isStudentAnswer": false,
+            "count": 9
+          },
+          {
+            "id": "cb67b94c-da73-4a32-88b7-69cca65224d1",
+            "isSelected": false,
+            "text": "Peuvent être sous forme d’une hormone.",
+            "isStudentAnswer": false,
+            "count": 13
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 4,
+          "correct": 13,
+          "totalInteractions": 17
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109412",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "L’expression ou l’activation des gènes impliqués dans la tumérogenèse peut avoir lieu :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466810,
+          "_nanoseconds": 405000000
+        },
+        "suggestions": [
+          {
+            "id": "ecb96508-bf50-4399-b748-6b73dde50cf8",
+            "isSelected": false,
+            "text": "Par délétion de base qui aboutira à la production d’une protéine chimérique.",
+            "isStudentAnswer": false,
+            "count": 5
+          },
+          {
+            "id": "eec77ca2-ce30-4188-b5d5-a9a77bb76580",
+            "isSelected": false,
+            "text": "Par insertion de base qui aboutira à la production d’une protéine chimérique.",
+            "isStudentAnswer": false,
+            "count": 11
+          },
+          {
+            "id": "f1f4baee-304e-43e3-9e6c-c2d49d8242f7",
+            "isSelected": false,
+            "text": "Par fusion entre deux gènes et la production d’une protéine chimérique.",
+            "isStudentAnswer": false,
+            "count": 7
+          },
+          {
+            "id": "885fc1bb-bb5c-4a58-8a9e-9ff343a1abdb",
+            "isSelected": false,
+            "text": "Par raccourcissement d’un chromosome et l’expression de la tyrosine kinase.",
+            "isStudentAnswer": false,
+            "count": 9
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 11,
+          "correct": 5,
+          "totalInteractions": 16
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109413",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Vous direz de la P53 qu’elle peut être :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466810,
+          "_nanoseconds": 895000000
+        },
+        "suggestions": [
+          {
+            "id": "ae915368-3170-4988-9df8-c3fa78645e98",
+            "isSelected": false,
+            "text": "Apoptotique.",
+            "isStudentAnswer": false,
+            "count": 13
+          },
+          {
+            "id": "fd8fac8e-9c4d-4172-87de-28810a3d01f5",
+            "isSelected": false,
+            "text": "Réparatrice de l’ADN.",
+            "isStudentAnswer": false,
+            "count": 10
+          },
+          {
+            "id": "8552604e-7229-4c3b-9323-b48922548753",
+            "isSelected": false,
+            "text": "Mitotique.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b2a7796c-41d1-4f18-a876-6e683474d72f",
+            "isSelected": false,
+            "text": "Tumorale.",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 14,
+          "totalInteractions": 15
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109414",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Lors du processus tumoral, vous direz qu’il y a surtout :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466811,
+          "_nanoseconds": 364000000
+        },
+        "suggestions": [
+          {
+            "id": "60bafa6d-a30f-4cc1-9678-a330c49e6dbe",
+            "isSelected": false,
+            "text": "Activation de couples cycline CdK.",
+            "isStudentAnswer": false,
+            "count": 7
+          },
+          {
+            "id": "a4832398-22f0-4b0f-951a-44454e810ef3",
+            "isSelected": false,
+            "text": "Inhibition de la P21 et P16.",
+            "isStudentAnswer": false,
+            "count": 12
+          },
+          {
+            "id": "990fb75b-8a73-4b98-9ddb-92ad86d6af21",
+            "isSelected": false,
+            "text": "Activation de la protéine Rb (rétinoblastome protein).",
+            "isStudentAnswer": false,
+            "count": 6
+          },
+          {
+            "id": "6e12e98f-57db-4fda-a877-8703e0bb909f",
+            "isSelected": false,
+            "text": "Surexpression de BCL-2.",
+            "isStudentAnswer": false,
+            "count": 9
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 6,
+          "correct": 9,
+          "totalInteractions": 15
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109415",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "À propos de la télomérase, vous direz :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466811,
+          "_nanoseconds": 842000000
+        },
+        "suggestions": [
+          {
+            "id": "0ddf244e-eb78-48b8-954c-766346e43d70",
+            "isSelected": false,
+            "text": "Que dans la cellule souche (non différenciée) elle est présente.",
+            "isStudentAnswer": false,
+            "count": 4
+          },
+          {
+            "id": "12f3a636-1de4-4faa-a7a3-9db0e1220ffc",
+            "isSelected": false,
+            "text": "Que dans la cellule tumorale, elle est surexprimée.",
+            "isStudentAnswer": false,
+            "count": 9
+          },
+          {
+            "id": "2c7ee21f-975c-4c59-8d3b-621b5dcbac47",
+            "isSelected": false,
+            "text": "Qu’elle exercerait une action sur des parties codantes du chromosome.",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "d9195001-6fba-42dd-b982-cb9cdc6f1d4c",
+            "isSelected": false,
+            "text": "Qu’elle empêche une action physiologique sur des parties non codantes du chromosome.",
+            "isStudentAnswer": false,
+            "count": 4
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 3,
+          "correct": 11,
+          "totalInteractions": 14
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109416",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Des modifications observées dans une cellule cancéreuse, on retiendra :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466812,
+          "_nanoseconds": 304000000
+        },
+        "suggestions": [
+          {
+            "id": "aa78da2d-6619-4cf0-aec8-a899cf466d43",
+            "isSelected": false,
+            "text": "L’augmentation de la taille du noyau.",
+            "isStudentAnswer": false,
+            "count": 11
+          },
+          {
+            "id": "2d448915-1fed-4b0c-9714-3dce4ed18461",
+            "isSelected": false,
+            "text": "L’instabilité du nombre de chromosomes ou aneuploïdie.",
+            "isStudentAnswer": false,
+            "count": 11
+          },
+          {
+            "id": "c1f0cb92-7b9d-4967-a23d-dc05d743e697",
+            "isSelected": false,
+            "text": "Diminution de la perméabilité au calcium.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "2fb19d07-f5a4-4d6f-b36c-5a3fc5a0ed29",
+            "isSelected": false,
+            "text": "Augmentation de l’activité des protéases qui favorisent les métastases.",
+            "isStudentAnswer": false,
+            "count": 10
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 12,
+          "totalInteractions": 13
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109417",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "En cas de cassure de brin d’ADN, la cellule normale favorise sa réparation par :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466812,
+          "_nanoseconds": 772000000
+        },
+        "suggestions": [
+          {
+            "id": "a377b60d-1bd8-4096-8476-bbd1ac70f62c",
+            "isSelected": false,
+            "text": "Inactivation des CDK1.",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "2b207073-6909-4acf-8363-0bcb460e72fb",
+            "isSelected": false,
+            "text": "Activation de Cdc25 qui enlève des phosphates aux CdK.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "43cdf8f6-b627-4109-8608-4936cb24d58b",
+            "isSelected": false,
+            "text": "Phosphorylation de la P53.",
+            "isStudentAnswer": false,
+            "count": 12
+          },
+          {
+            "id": "8d150f89-1ea9-4521-9efd-3305d985fc99",
+            "isSelected": false,
+            "text": "Activation de la P21.",
+            "isStudentAnswer": false,
+            "count": 8
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 12,
+          "totalInteractions": 13
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109418",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "L’aflatoxine :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466813,
+          "_nanoseconds": 252000000
+        },
+        "suggestions": [
+          {
+            "id": "c561cd81-093c-41b5-ab72-d6e6b5c9259b",
+            "isSelected": false,
+            "text": "Est une moisissure.",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "5e52166a-1246-4301-bb5c-a7cb711801bd",
+            "isSelected": false,
+            "text": "Peut provoquer des mutations.",
+            "isStudentAnswer": false,
+            "count": 12
+          },
+          {
+            "id": "3c73cec5-a66a-4813-b94b-8b48a78a3a11",
+            "isSelected": false,
+            "text": "Peut toucher le gène de réparation de l’ADN.",
+            "isStudentAnswer": false,
+            "count": 12
+          },
+          {
+            "id": "f48ed938-33f2-4912-a8b5-e554d7782476",
+            "isSelected": false,
+            "text": "Peut toucher la production d’une protéine impliquée dans l’apoptose.",
+            "isStudentAnswer": false,
+            "count": 11
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 3,
+          "correct": 11,
+          "totalInteractions": 14
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109419",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "La connaissance des métalloprotéases constitue un espoir pour la thérapie anti-cancéreuse :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466813,
+          "_nanoseconds": 729000000
+        },
+        "suggestions": [
+          {
+            "id": "734ebe8e-cdd6-43f8-b4c8-9d4373fc4b5c",
+            "isSelected": false,
+            "text": "Car leur action protège contre la cancérogenèse.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "03485acd-5273-4e7f-87ac-18fd1a67526c",
+            "isSelected": false,
+            "text": "Car leur action favorise la cancérogenèse.",
+            "isStudentAnswer": false,
+            "count": 8
+          },
+          {
+            "id": "c32cdfd6-a758-46c4-b4d7-8cd3b82dbed6",
+            "isSelected": false,
+            "text": "Car dans la cellule normale leur inhibiteur existe, on peut le reproduire expérimentalement.",
+            "isStudentAnswer": false,
+            "count": 7
+          },
+          {
+            "id": "8d92abb8-8901-46dc-a115-9874738be88a",
+            "isSelected": false,
+            "text": "Car leur inhibiteur n’existe que dans la cellule tumorale, donc constitue une cible de choix.",
+            "isStudentAnswer": false,
+            "count": 3
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 4,
+          "correct": 9,
+          "totalInteractions": 13
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109420",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Lors de l’installation d’une tumeur (épithéliale), les métalloprotéases :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466814,
+          "_nanoseconds": 229000000
+        },
+        "suggestions": [
+          {
+            "id": "e9121975-49a7-49e2-a6e6-f8420ea6c687",
+            "isSelected": false,
+            "text": "Permettent de rompre la cohésion cellulaire.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "d772330a-2ad5-420e-96e9-8be9e67c0ba5",
+            "isSelected": false,
+            "text": "Stimulent l’expression des gènes promoteurs du cancer.",
+            "isStudentAnswer": false,
+            "count": 8
+          },
+          {
+            "id": "2d4e595c-d725-424f-ae12-050665144df6",
+            "isSelected": false,
+            "text": "Favorisent la cohésion cellulaire afin de former une masse tumorale.",
+            "isStudentAnswer": false,
+            "count": 9
+          },
+          {
+            "id": "4d439e24-f39c-433c-bcfa-642c0348591f",
+            "isSelected": false,
+            "text": "Favorisent le développement de nouveaux vaisseaux.",
+            "isStudentAnswer": false,
+            "count": 2
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 3,
+          "totalInteractions": 13,
+          "wrong": 10
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109426",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Expression des gènes suppresseurs",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466817,
+          "_nanoseconds": 49000000
+        },
+        "suggestions": [
+          {
+            "id": "9db21bd9-a03d-40be-abce-001605fc3af1",
+            "isSelected": false,
+            "text": "Peut inhiber la prolifération cellulaire.",
+            "isStudentAnswer": false,
+            "count": 7
+          },
+          {
+            "id": "c6226613-2df9-4687-93ec-e25b1798e154",
+            "isSelected": false,
+            "text": "Est activée en cas de tumeur pour supprimer la réponse immunitaire.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "f21284ab-03ec-424b-9032-87d706e89d31",
+            "isSelected": false,
+            "text": "Est bloquée durant le développement tumoral.",
+            "isStudentAnswer": false,
+            "count": 9
+          },
+          {
+            "id": "5c0f878b-2ffd-46aa-af67-605df67b81f0",
+            "isSelected": false,
+            "text": "Ne joue aucun rôle dans une cellule normale.",
+            "isStudentAnswer": false,
+            "count": 3
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 5,
+          "correct": 9,
+          "totalInteractions": 14
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109427",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Stabilité génétique",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466817,
+          "_nanoseconds": 515000000
+        },
+        "suggestions": [
+          {
+            "id": "283647d9-012a-4227-82cc-a747be69e700",
+            "isSelected": false,
+            "text": "Assurée par la protéine Rb, qui répare l’ADN.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9d4b34b2-79ed-4dc1-8b6a-258e31533e63",
+            "isSelected": false,
+            "text": "Altérée par l’inhibition de la transcription de P21.",
+            "isStudentAnswer": false,
+            "count": 7
+          },
+          {
+            "id": "e3d7c50c-b233-4c56-b2aa-f1bd3423534c",
+            "isSelected": false,
+            "text": "Maintenue grâce à la phosphorylation de Cdc25 sur sérine.",
+            "isStudentAnswer": false,
+            "count": 4
+          },
+          {
+            "id": "8e94133d-b959-4152-a372-54670508061f",
+            "isSelected": false,
+            "text": "Renforcée par l’expression de P53, protéine impliquée dans l’apoptose.",
+            "isStudentAnswer": false,
+            "count": 13
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 13,
+          "totalInteractions": 13
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109428",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Division illimitée des cellules tumorales",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466817,
+          "_nanoseconds": 964000000
+        },
+        "suggestions": [
+          {
+            "id": "20c5eac5-bd10-4413-b254-819a370a70a8",
+            "isSelected": false,
+            "text": "Due à la perte progressive des télomères chromosomiques.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a7d98568-3797-4a40-971f-97137148bc9c",
+            "isSelected": false,
+            "text": "Associée à l’absence d’érosion des télomères.",
+            "isStudentAnswer": false,
+            "count": 11
+          },
+          {
+            "id": "e583fc63-02b5-43c1-a8a8-ab0f9a3a9d44",
+            "isSelected": false,
+            "text": "Favorisée par l’activité de la télomérase.",
+            "isStudentAnswer": false,
+            "count": 7
+          },
+          {
+            "id": "41c72ac3-378d-4f17-9d27-b5f60db4cd41",
+            "isSelected": false,
+            "text": "Entraînée par l’érosion des télomères à chaque division, perturbant leur régulation.",
+            "isStudentAnswer": false,
+            "count": 4
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 4,
+          "correct": 9,
+          "totalInteractions": 13
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109429",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Modifications fonctionnelles des cellules tumorales",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466818,
+          "_nanoseconds": 425000000
+        },
+        "suggestions": [
+          {
+            "id": "3b048d57-91e7-4602-bab9-dc32b4c3374c",
+            "isSelected": false,
+            "text": "Réduction des protéines régulatrices et augmentation de la perméabilité aux ions Mg.",
+            "isStudentAnswer": false,
+            "count": 10
+          },
+          {
+            "id": "aae2afe3-38d6-4c4c-bcb0-3f411cdef3ee",
+            "isSelected": false,
+            "text": "Diminution des protéases impliquées dans la dégradation de la matrice extracellulaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "302c964f-94ce-45a9-921f-0397838fc114",
+            "isSelected": false,
+            "text": "Imperméabilité aux ions Ca.",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "ed5da700-25f5-45b8-82e8-3e98bf1e00e6",
+            "isSelected": false,
+            "text": "Sous-expression des facteurs de croissance (FGFᵝ).",
+            "isStudentAnswer": false,
+            "count": 3
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 5,
+          "correct": 8,
+          "totalInteractions": 13
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109430",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Thérapie génique anti-tumorale",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466818,
+          "_nanoseconds": 875000000
+        },
+        "suggestions": [
+          {
+            "id": "6583677f-1af1-4d9f-9677-4fa8c1a25db4",
+            "isSelected": false,
+            "text": "Introduction d’un gène favorisant la prolifération cellulaire.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "6bdf9893-190c-421a-8f9b-37cfd68fe8f1",
+            "isSelected": false,
+            "text": "Transfection d’une protéine P53.",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "4f945bba-2950-49bb-8ba2-ea23e014e5b4",
+            "isSelected": false,
+            "text": "Introduction d’un segment d’ADN codant pour P53.",
+            "isStudentAnswer": false,
+            "count": 8
+          },
+          {
+            "id": "bcb215d9-f23e-4ca0-b7d2-6cefb0773528",
+            "isSelected": false,
+            "text": "Administration d’un ARN messager codant pour P53.",
+            "isStudentAnswer": false,
+            "count": 3
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 7,
+          "correct": 6,
+          "totalInteractions": 13
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109471",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "Échange de matériel génétique chez les bactéries L’échange de matériel génétique entre deux bactéries peut se produire :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466838,
+          "_nanoseconds": 679000000
+        },
+        "suggestions": [
+          {
+            "id": "449425b1-72ce-42d3-8fac-262d9a1a85fb",
+            "isSelected": false,
+            "text": "Par la formation d’un pont protéique produit par la bactérie mâle.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "4840a8da-a621-4972-85a0-3bc181e0596b",
+            "isSelected": false,
+            "text": "Par conjugaison directe, sans formation de pont protéique.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "22702a89-a8ec-4244-a3d9-f6592385da00",
+            "isSelected": false,
+            "text": "Indirectement, par transformation via un bactériophage.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "2e67c238-06af-453e-9d8e-9385600e229d",
+            "isSelected": false,
+            "text": "Par transduction, un processus impliquant un vecteur.",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109472",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "Caractéristiques des procaryotes À propos des procaryotes, on peut dire que :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466839,
+          "_nanoseconds": 155000000
+        },
+        "suggestions": [
+          {
+            "id": "7440faa4-ad0a-406a-8bd6-4708909b2aa1",
+            "isSelected": false,
+            "text": "Certains peuvent être dépourvus de paroi.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "79118b12-5ca2-4d69-81a5-5e8cf6cf726c",
+            "isSelected": false,
+            "text": "Les archéobactéries ont un mode de vie strictement parasitaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4eddcf82-e967-4585-91a9-5bea9733fd06",
+            "isSelected": false,
+            "text": "L’ADN plasmidique code pour des protéines non essentielles à la croissance.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a2ed2336-99ea-4624-9ef4-a8eaf241e6b1",
+            "isSelected": false,
+            "text": "Certains peuvent réaliser la photosynthèse.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109473",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "Les desmosomes Concernant les desmosomes :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466839,
+          "_nanoseconds": 641000000
+        },
+        "suggestions": [
+          {
+            "id": "b3aa217e-ba99-49b1-b546-9483e62aa426",
+            "isSelected": false,
+            "text": "Ils ne font pas partie des jonctions de communication.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ab516287-6c05-4039-87f7-ad778d4ded43",
+            "isSelected": false,
+            "text": "Ils appartiennent aux jonctions cellule-matrice extracellulaire (MEC).",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "40c977bf-8d1e-4882-b8b8-4115b75f28e9",
+            "isSelected": false,
+            "text": "Ils impliquent des connexines comme protéines transmembranaires.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b2fbfce3-d367-48c6-8f59-bd003d6ded81",
+            "isSelected": false,
+            "text": "Ils impliquent des intégrines comme protéines transmembranaires.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109421",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Gènes de maintien de l’intégrité cellulaire (Care Takers) :",
+        "year": 2022,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466814,
+          "_nanoseconds": 697000000
+        },
+        "suggestions": [
+          {
+            "id": "19f4b4c3-7a83-4d17-827e-421b9231fea9",
+            "isSelected": false,
+            "text": "Ils assurent la réparation des anomalies dans une cellule normale.",
+            "isStudentAnswer": false,
+            "count": 9
+          },
+          {
+            "id": "86ea83ba-82e7-44a4-80ea-e97e78cb0203",
+            "isSelected": false,
+            "text": "Leur altération peut entraîner une transformation cellulaire dépendante de l’angiogenèse.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "9edb14d6-efaf-4ea6-9218-1a102b89112f",
+            "isSelected": false,
+            "text": "Leur altération favorise l’entrée de la cellule en apoptose.",
+            "isStudentAnswer": false,
+            "count": 4
+          },
+          {
+            "id": "f82d46bc-d80c-442b-ae4b-227c47dc3db3",
+            "isSelected": false,
+            "text": "Leur altération entraîne l’activation d’anti-oncogènes.",
+            "isStudentAnswer": false,
+            "count": 7
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 2,
+          "totalInteractions": 13,
+          "wrong": 11
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109422",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Division illimitée des cellules tumorales :",
+        "year": 2022,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466815,
+          "_nanoseconds": 169000000
+        },
+        "suggestions": [
+          {
+            "id": "2ecbb945-59c5-4180-8705-d6825b1ae107",
+            "isSelected": false,
+            "text": "Elle est causée par la perte des télomères aux extrémités des chromosomes.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "dda1238e-735c-4438-a60e-dc693594f596",
+            "isSelected": false,
+            "text": "Elle est due à la présence de télomères aux extrémités des chromosomes sans érosion.",
+            "isStudentAnswer": false,
+            "count": 13
+          },
+          {
+            "id": "bed5a7bf-e91c-4689-8183-c7704a9f7a2d",
+            "isSelected": false,
+            "text": "La télomérase érode les télomères aux extrémités des chromosomes.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "35dcd96c-41ab-4507-90c4-b9ae2f6f4493",
+            "isSelected": false,
+            "text": "La télomérase empêche l’érosion des télomères.",
+            "isStudentAnswer": false,
+            "count": 9
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 2,
+          "correct": 11,
+          "totalInteractions": 13
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109423",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Maturation des gènes critiques et croissance cellulaire anarchique :",
+        "year": 2022,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466815,
+          "_nanoseconds": 655000000
+        },
+        "suggestions": [
+          {
+            "id": "599296c8-a0fc-4983-aff6-dc36cc600cdf",
+            "isSelected": false,
+            "text": "Cela entraîne une perte progressive des éléments de différenciation cellulaire.",
+            "isStudentAnswer": false,
+            "count": 4
+          },
+          {
+            "id": "6a0f20b4-8979-4a1d-b81f-2004d283f446",
+            "isSelected": false,
+            "text": "Elle favorise une différenciation accrue des cellules vers des métastases.",
+            "isStudentAnswer": false,
+            "count": 6
+          },
+          {
+            "id": "bc9325ba-751a-414d-a6b3-b1a67546c494",
+            "isSelected": false,
+            "text": "Elle conduit à la formation d’un stroma tumoral abondant et d’une tumeur molle.",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "75dcc47d-0b28-4d5b-b5f0-0e12d13d2f52",
+            "isSelected": false,
+            "text": "Elle aboutit à un stroma tumoral peu abondant et une tumeur molle souvent nécrosée.",
+            "isStudentAnswer": false,
+            "count": 7
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 7,
+          "correct": 5,
+          "totalInteractions": 12
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109424",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Activation des gènes liés à la tumorogenèse par mécanismes épigénétiques :",
+        "year": 2022,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466816,
+          "_nanoseconds": 112000000
+        },
+        "suggestions": [
+          {
+            "id": "d1843d78-f631-4bdc-8ed3-8d3819d407fe",
+            "isSelected": false,
+            "text": "Par hyperméthylation de leurs séquences régulatrices.",
+            "isStudentAnswer": false,
+            "count": 8
+          },
+          {
+            "id": "8b804a18-88d0-4651-bdc6-791b586cb7ff",
+            "isSelected": false,
+            "text": "Par hypométhylation de leurs séquences régulatrices.",
+            "isStudentAnswer": false,
+            "count": 6
+          },
+          {
+            "id": "9adc79a0-c4fc-41eb-a62a-d14ce2fa80e1",
+            "isSelected": false,
+            "text": "Par altération (modification) des bases de l’ADN.",
+            "isStudentAnswer": false,
+            "count": 5
+          },
+          {
+            "id": "54bdcad0-7ab2-4414-b377-e442851e897f",
+            "isSelected": false,
+            "text": "Par modification de leur transcription.",
+            "isStudentAnswer": false,
+            "count": 4
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 7,
+          "totalInteractions": 12,
+          "wrong": 5
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109425",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Métalloprotéases et cancer :",
+        "year": 2022,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466816,
+          "_nanoseconds": 579000000
+        },
+        "suggestions": [
+          {
+            "id": "a95d8fd9-a9b6-490c-86aa-10554f6a02c1",
+            "isSelected": false,
+            "text": "Elles jouent un rôle dans la croissance tumorale.",
+            "isStudentAnswer": false,
+            "count": 6
+          },
+          {
+            "id": "c71d6990-7e5a-4c7c-809c-eb3beb06f0c6",
+            "isSelected": false,
+            "text": "Elles constituent une cible potentielle dans le traitement anticancéreux.",
+            "isStudentAnswer": false,
+            "count": 6
+          },
+          {
+            "id": "334d9144-6778-4975-914f-c616aed0ce7c",
+            "isSelected": false,
+            "text": "Elles peuvent être utilisées comme traitement anticancéreux.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "40b34911-b728-4da9-90ef-2bab9ae81a97",
+            "isSelected": false,
+            "text": "Leurs inhibiteurs peuvent être un traitement anticancéreux.",
+            "isStudentAnswer": false,
+            "count": 8
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 2,
+          "correct": 9,
+          "totalInteractions": 11
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109441",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Origine des néoplasies",
+        "year": 2022,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466824,
+          "_nanoseconds": 20000000
+        },
+        "suggestions": [
+          {
+            "id": "24e2231d-9fb9-402b-a81a-35bcbb41220f",
+            "isSelected": false,
+            "text": "L’altération du génome dans la cellule cancéreuse peut être : A- Acquise",
+            "count": 9
+          },
+          {
+            "id": "a26467e3-8cc8-4b9b-b09d-b740b7a61376",
+            "isSelected": false,
+            "text": "B- Héréditaire",
+            "count": 8
+          },
+          {
+            "id": "93ac9b3f-7027-4872-9f33-3415287db6c9",
+            "isSelected": false,
+            "text": "C- Responsable uniquement de modifications morphologiques, sans impact fonctionnel",
+            "count": 1
+          },
+          {
+            "id": "c9b77cb5-3119-4203-80d2-2b7e4fa733a4",
+            "isSelected": false,
+            "text": "À l’origine de l’entrée de la cellule en apoptose",
+            "count": 1
+          },
+          {
+            "id": "d9886068-a27e-4d05-a3a5-70447c18115e",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 9,
+          "totalInteractions": 9
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109442",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Définition des éléments liés aux cellules cancéreuses",
+        "year": 2022,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466824,
+          "_nanoseconds": 487000000
+        },
+        "suggestions": [
+          {
+            "id": "47a4ba0b-7802-4473-a801-f6a547f1f2fa",
+            "isSelected": false,
+            "text": "Un oncogène viral provient d’une origine cellulaire",
+            "count": 2
+          },
+          {
+            "id": "dc9eb642-a246-444c-939a-50324aacf513",
+            "isSelected": false,
+            "text": "Un proto-oncogène est un gène de régulation de la cellule normale",
+            "count": 5
+          },
+          {
+            "id": "3257be22-60ad-45b9-92af-73e8bc06c8ae",
+            "isSelected": false,
+            "text": "Un proto-oncogène surexprimé peut induire une tumeur",
+            "count": 3
+          },
+          {
+            "id": "79e1cf6c-dc87-4691-9581-c7ff86e7b8f0",
+            "isSelected": false,
+            "text": "Les C-oncogènes correspondent à des gènes cellulaires sains",
+            "count": 0
+          },
+          {
+            "id": "81e5e459-8102-4c9c-b810-3230defd0a94",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 6,
+          "totalInteractions": 6
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109443",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Prévention de la cancérisation d’une culture cellulaire",
+        "year": 2022,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466824,
+          "_nanoseconds": 957000000
+        },
+        "suggestions": [
+          {
+            "id": "4320ad3b-1472-4cb5-a268-1d0158dbedc8",
+            "isSelected": false,
+            "text": "Face à une exposition aux agents cancérigènes, pour éviter la transformation maligne, vous :",
+            "count": 1
+          },
+          {
+            "id": "c7a71530-8f3d-40ed-8712-cfb58dc3669d",
+            "isSelected": false,
+            "text": "Activez des gènes suppresseurs",
+            "count": 3
+          },
+          {
+            "id": "19257f16-7bd7-40dc-8423-2992022adaf3",
+            "isSelected": false,
+            "text": "Inhibez les care takers",
+            "count": 0
+          },
+          {
+            "id": "1485f618-e874-48ae-9f51-c09e4f6b43ac",
+            "isSelected": false,
+            "text": "Activez les care takers",
+            "count": 4
+          },
+          {
+            "id": "1c0993f3-1fb1-48b4-aa22-43ed7a992d34",
+            "isSelected": false,
+            "text": "Inhibez les molécules favorisant l’angiogenèse",
+            "count": 3
+          },
+          {
+            "id": "0f9396d5-e13b-465a-8855-8cc92f8d6635",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 4,
+          "totalInteractions": 4
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109444",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "La translocation et les tumeurs",
+        "year": 2022,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466825,
+          "_nanoseconds": 575000000
+        },
+        "suggestions": [
+          {
+            "id": "93bc6099-65d8-47b1-977f-08f4d326d346",
+            "isSelected": false,
+            "text": "La translocation, mutation génétique impliquée dans certaines tumeurs, se caractérise par :",
+            "count": 2
+          },
+          {
+            "id": "2ad49498-378f-4ed4-b2a0-fbc44e1b7222",
+            "isSelected": false,
+            "text": "Un échange de segments d’ADN entre chromosomes homologues",
+            "count": 0
+          },
+          {
+            "id": "a530a408-0f8b-4b7e-b4f4-34fa52a59473",
+            "isSelected": false,
+            "text": "Un échange de segments d’ADN entre chromosomes non homologues",
+            "count": 4
+          },
+          {
+            "id": "e823c9bc-e623-427c-83bf-5e8e9f54653a",
+            "isSelected": false,
+            "text": "L’apparition d’une protéine qui n’existait pas auparavant",
+            "count": 2
+          },
+          {
+            "id": "0a347d18-2cf8-4367-9fa9-0187a327ff2d",
+            "isSelected": false,
+            "text": "L’absence de toute perte de fonction des gènes suppresseurs",
+            "count": 1
+          },
+          {
+            "id": "ebc4532a-c473-48ab-9c90-7e3462bd2e83",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 5,
+          "totalInteractions": 5
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109445",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Définition de l’aflatoxine",
+        "year": 2022,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466826,
+          "_nanoseconds": 35000000
+        },
+        "suggestions": [
+          {
+            "id": "dabdeaa2-e393-4858-bf49-9a287e44e44e",
+            "isSelected": false,
+            "text": "L’aflatoxine est :",
+            "count": 0
+          },
+          {
+            "id": "aaccd5cb-b858-4d81-9ff4-da3135ea1ee8",
+            "isSelected": false,
+            "text": "Une moisissure présente sur des graines de céréales mal stockées",
+            "count": 1
+          },
+          {
+            "id": "7f5c627c-a76b-484d-bf1d-911396d882d9",
+            "isSelected": false,
+            "text": "Une toxine capable de provoquer une mutation",
+            "count": 3
+          },
+          {
+            "id": "47eea76c-8770-4956-86e5-91e4a89e5291",
+            "isSelected": false,
+            "text": "Un agent carcinogène ciblant un gène de réparation de l’ADN",
+            "count": 3
+          },
+          {
+            "id": "fb6872bb-ffed-4ef8-8162-8a0c1cd3bad0",
+            "isSelected": false,
+            "text": "Un agent carcinogène spécifique du gène Bcl-2",
+            "count": 0
+          },
+          {
+            "id": "34063f77-9252-4c78-9107-0ce7510866ac",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 4,
+          "totalInteractions": 4
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109446",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Changements observés dans une cellule cancéreuse",
+        "year": 2022,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466826,
+          "_nanoseconds": 505000000
+        },
+        "suggestions": [
+          {
+            "id": "b71dcbef-e213-4f8d-aa63-4dab0fd09d2d",
+            "isSelected": false,
+            "text": "Parmi les modifications caractéristiques des cellules cancéreuses, on retrouve :",
+            "count": 0
+          },
+          {
+            "id": "a1136bbe-a1df-4d67-9d99-f7a9b1ec2767",
+            "isSelected": false,
+            "text": "Une diminution de la taille du noyau",
+            "count": 0
+          },
+          {
+            "id": "b5dfffa2-2295-428f-8ff3-820498074666",
+            "isSelected": false,
+            "text": "L’aneuploïdie, correspondant à une augmentation du nombre de chromosomes",
+            "count": 4
+          },
+          {
+            "id": "2bb632a8-4f13-44a7-af74-a468134e54d0",
+            "isSelected": false,
+            "text": "Une augmentation de la perméabilité à certains cations, comme le calcium",
+            "count": 4
+          },
+          {
+            "id": "d3953a59-91ef-4ee6-90d0-b2852416dea1",
+            "isSelected": false,
+            "text": "Une diminution de l’activité des protéases impliquées dans la formation des métastases",
+            "count": 1
+          },
+          {
+            "id": "0f8ae0ea-31cf-4958-bfde-9b380765e07d",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 5,
+          "totalInteractions": 5
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109474",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "Peut-on affirmer que :",
+        "year": 2022,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466840,
+          "_nanoseconds": 100000000
+        },
+        "suggestions": [
+          {
+            "id": "4d1bea51-b258-4608-93af-bcbfba17e71c",
+            "isSelected": false,
+            "text": "Les bactéries (procaryotes) ne peuvent être infectées par un virus.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ba7ea1c0-9ad5-428e-a6c3-10d80b45515f",
+            "isSelected": false,
+            "text": "Les organismes eucaryotes ne peuvent être unicellulaires.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d6189a7c-583c-4b92-aee4-5034b0571300",
+            "isSelected": false,
+            "text": "Les cellules eucaryotes ne possèdent jamais de paroi.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "80a731fe-b756-4b22-80fa-facfb36e370f",
+            "isSelected": false,
+            "text": "L’ADN des eucaryotes est circulaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109475",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "Quelles caractéristiques témoignent de l’évolution des cellules eucaryotes à partir des procaryotes ?",
+        "year": 2022,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466840,
+          "_nanoseconds": 550000000
+        },
+        "suggestions": [
+          {
+            "id": "cff601c6-9f95-4e43-963e-176e40f56b89",
+            "isSelected": false,
+            "text": "La compartimentation du cytoplasme.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7bef7970-3ff5-40ce-93d5-80397dc3c267",
+            "isSelected": false,
+            "text": "La présence de ribosomes dans le cytoplasme.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "0e22f5e2-9d0a-4dbd-8b2e-e9253f207aef",
+            "isSelected": false,
+            "text": "Une meilleure capacité d’adaptation à leur environnement.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109476",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "Concernant les procaryotes, quelle(s) affirmation(s) est/sont correcte(s) ?",
+        "year": 2022,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466841,
+          "_nanoseconds": 65000000
+        },
+        "suggestions": [
+          {
+            "id": "4523acb6-4e4c-4ebe-a59a-4c3dca916067",
+            "isSelected": false,
+            "text": "Leur ADN chromosomique est bicaténaire et diploïde.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "5436bb6b-88c8-4d4c-ad27-a7e12c10b543",
+            "isSelected": false,
+            "text": "Les archéobactéries n’ont pas un mode de vie parasitaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ccf5336a-0dab-47e7-a334-64efc18b946e",
+            "isSelected": false,
+            "text": "L’ADN plasmidique code pour des protéines non essentielles à leur croissance.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d250be49-de5a-4a72-9808-2cc5d19515c7",
+            "isSelected": false,
+            "text": "Malgré l’absence de nucléole, ils synthétisent de l’ARN ribosomal.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109391",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Concernant les filaments intermédiaires :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466800,
+          "_nanoseconds": 151000000
+        },
+        "suggestions": [
+          {
+            "id": "f334f3b7-648d-44f0-91fa-f7c576fa7619",
+            "isSelected": false,
+            "text": "Ils sont utilisés en cancérologie, car présents dans toutes les cellules eucaryotes.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "fae1a9e7-5184-4969-b893-508474413e8c",
+            "isSelected": false,
+            "text": "Ils se trouvent aussi bien dans le cytoplasme que dans le noyau.",
+            "isStudentAnswer": false,
+            "count": 5
+          },
+          {
+            "id": "4d59755d-c77f-4485-bce4-70b3fccb2f55",
+            "isSelected": false,
+            "text": "Ils résultent de la polymérisation de protéines globulaires.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "1e3f226f-d0b9-496a-bae6-a13cb87814fa",
+            "isSelected": false,
+            "text": "Ce sont des structures plus stables que les autres composants du cytosquelette.",
+            "isStudentAnswer": false,
+            "count": 10
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 3,
+          "correct": 10,
+          "totalInteractions": 13
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109431",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Concernant l’étude des cellules cancéreuses, les gènes suppresseurs :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466819,
+          "_nanoseconds": 339000000
+        },
+        "suggestions": [
+          {
+            "id": "7703b65f-92a8-4999-95f9-aac55895117b",
+            "isSelected": false,
+            "text": "Sont considérés comme des anti-oncogènes.",
+            "isStudentAnswer": false,
+            "count": 9
+          },
+          {
+            "id": "0fc74d50-3642-4a67-aeb1-fde65c7e9aca",
+            "isSelected": false,
+            "text": "Sont assimilés à des oncogènes.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "864e884d-8150-4625-a708-d1e420da5121",
+            "isSelected": false,
+            "text": "Sont présents dans le génome et peuvent inhiber la prolifération cellulaire.",
+            "isStudentAnswer": false,
+            "count": 10
+          },
+          {
+            "id": "fabc48d6-6a75-4f00-937a-8b02dee47073",
+            "isSelected": false,
+            "text": "Sont activés en cas de tumeur, ce qui entraîne une suppression de la réponse immunitaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 10,
+          "totalInteractions": 11
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109432",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "La division illimitée des cellules tumorales est due à :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466819,
+          "_nanoseconds": 828000000
+        },
+        "suggestions": [
+          {
+            "id": "4efeeb4e-bd58-45fc-8fb0-0411680019af",
+            "isSelected": false,
+            "text": "La perte des télomères aux extrémités des chromosomes.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "abc39bce-d903-4a87-93dd-2a2b1caa6269",
+            "isSelected": false,
+            "text": "La présence de télomères intacts et l’absence de leur érosion.",
+            "isStudentAnswer": false,
+            "count": 11
+          },
+          {
+            "id": "2dac2a8b-d105-4154-9420-a1e05509bf8f",
+            "isSelected": false,
+            "text": "L’activité de la télomérase, qui dégrade les télomères des chromosomes.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "fc58e95b-4d73-46ab-9f08-ef363bec0033",
+            "isSelected": false,
+            "text": "L’activité de la télomérase, qui empêche l’érosion des télomères.",
+            "isStudentAnswer": false,
+            "count": 8
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 11,
+          "totalInteractions": 11
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109433",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Dans une cellule tumorale, on peut observer :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466820,
+          "_nanoseconds": 299000000
+        },
+        "suggestions": [
+          {
+            "id": "e098c718-117d-4d37-b237-be708146c7c9",
+            "isSelected": false,
+            "text": "L’activation du couple cyclines A/CDK1.",
+            "isStudentAnswer": false,
+            "count": 6
+          },
+          {
+            "id": "1fa51ecd-8322-4771-a616-087af4a8a9ae",
+            "isSelected": false,
+            "text": "Une altération de l’expression des couples cyclines B/CDK1.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "06dcefd9-3121-4c0f-b4dc-ca5e4644f569",
+            "isSelected": false,
+            "text": "Une modification de l’expression des inhibiteurs des cyclines A/CDK1.",
+            "isStudentAnswer": false,
+            "count": 4
+          },
+          {
+            "id": "03d9ca5d-a6cf-46de-bebe-e0dccd916ec2",
+            "isSelected": false,
+            "text": "Une surexpression du gène Bcl-2.",
+            "isStudentAnswer": false,
+            "count": 8
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 10,
+          "totalInteractions": 11
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109434",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "La mutation de gènes critiques entraîne une prolifération anarchique et :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466820,
+          "_nanoseconds": 770000000
+        },
+        "suggestions": [
+          {
+            "id": "8cfd7cb7-aaa5-4af7-b031-e7c47757434a",
+            "isSelected": false,
+            "text": "Une perte progressive des caractéristiques de différenciation cellulaire.",
+            "isStudentAnswer": false,
+            "count": 6
+          },
+          {
+            "id": "629fb093-f829-4fc6-90b8-f4500eceaade",
+            "isSelected": false,
+            "text": "Une différenciation accrue vers des cellules métastatiques.",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "4f8f9a47-155a-48cd-9222-93152816adac",
+            "isSelected": false,
+            "text": "La formation d’un stroma tumoral abondant et une tumeur molle.",
+            "isStudentAnswer": false,
+            "count": 4
+          },
+          {
+            "id": "db8d5d83-fcbd-40fc-a0b7-88a62da0b668",
+            "isSelected": false,
+            "text": "La formation d’un stroma tumoral peu abondant, rendant la tumeur souvent nécrosée.",
+            "isStudentAnswer": false,
+            "count": 6
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 6,
+          "correct": 5,
+          "totalInteractions": 11
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109435",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Certains gènes impliqués dans la tumorigénèse sont activés par un mécanisme épigénétique basé sur :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466821,
+          "_nanoseconds": 237000000
+        },
+        "suggestions": [
+          {
+            "id": "0850e40d-0e0b-461f-abe9-8f9b5fad2612",
+            "isSelected": false,
+            "text": "L’hyperméthylation de leurs séquences régulatrices.",
+            "isStudentAnswer": false,
+            "count": 10
+          },
+          {
+            "id": "385a9820-8d92-4f54-a9da-86e01e250c50",
+            "isSelected": false,
+            "text": "L’hypométhylation de leurs séquences régulatrices.",
+            "isStudentAnswer": false,
+            "count": 10
+          },
+          {
+            "id": "92a57b11-bc1f-4eaa-86fe-229b0301f509",
+            "isSelected": false,
+            "text": "L’altération chimique des bases de l’ADN.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "5a5e1d0e-38b1-40f3-be63-2b97e74d586a",
+            "isSelected": false,
+            "text": "Une modification de leur transcription.",
+            "isStudentAnswer": false,
+            "count": 8
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 11,
+          "totalInteractions": 11
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109436",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "La cellule possède des mécanismes de correction garantissant sa stabilité génétique et cellulaire par :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466821,
+          "_nanoseconds": 699000000
+        },
+        "suggestions": [
+          {
+            "id": "9e5e066b-0704-41a8-b374-c558c1b9cc5a",
+            "isSelected": false,
+            "text": "L’expression du gène Bcl-2, qui a une fonction antiproliférative.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "5ed2ca49-98b4-4d15-b655-ff97e3341c05",
+            "isSelected": false,
+            "text": "L’expression du gène codant pour la protéine P53, impliquée dans l’apoptose.",
+            "isStudentAnswer": false,
+            "count": 11
+          },
+          {
+            "id": "0171a639-561e-4c1c-88d9-352293f19ad0",
+            "isSelected": false,
+            "text": "L’expression du gène codant pour la protéine Rb, favorisant la prolifération cellulaire.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "634c6ee2-7b11-453b-a9d2-b9dfd5dba8c8",
+            "isSelected": false,
+            "text": "L’expression d’un oncogène codant pour la protéine Rb.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 2,
+          "correct": 9,
+          "totalInteractions": 11
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109437",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Dans une cellule cancéreuse, on observe principalement :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466822,
+          "_nanoseconds": 182000000
+        },
+        "suggestions": [
+          {
+            "id": "e574f5b9-5925-4579-a522-82f51373bfd4",
+            "isSelected": false,
+            "text": "L’activation du couple cyclines A / CDK I",
+            "isStudentAnswer": false,
+            "count": 9
+          },
+          {
+            "id": "986b6245-9a59-4842-a4a6-e005a3da8dc5",
+            "isSelected": false,
+            "text": "Une altération de l’expression des couples cyclines B / CDK I",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "fd3275c9-5cb2-493f-aac1-150fff19d00a",
+            "isSelected": false,
+            "text": "Une altération de l’expression des inhibiteurs des couples cyclines A / CDK I",
+            "isStudentAnswer": false,
+            "count": 5
+          },
+          {
+            "id": "d718f5b4-75a5-424b-a1c6-eb5c57ca02a5",
+            "isSelected": false,
+            "text": "Une surexpression du gène P53",
+            "isStudentAnswer": false,
+            "count": 4
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 7,
+          "totalInteractions": 11,
+          "wrong": 4
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109438",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "L’une des causes essentielles de la chimiorésistance de certaines tumeurs est :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466822,
+          "_nanoseconds": 640000000
+        },
+        "suggestions": [
+          {
+            "id": "53ef56b3-bfe3-465c-a46a-134ec20c8b37",
+            "isSelected": false,
+            "text": "Une sous-expression de transporteurs spécifiques excrétant les médicaments",
+            "isStudentAnswer": false,
+            "count": 4
+          },
+          {
+            "id": "7f25efd2-711a-4ae6-90d1-fb3650f7eff6",
+            "isSelected": false,
+            "text": "Une surexpression de transporteurs spécifiques excrétant les médicaments",
+            "isStudentAnswer": false,
+            "count": 5
+          },
+          {
+            "id": "78917c6e-ea50-4118-872e-d07fb442e68c",
+            "isSelected": false,
+            "text": "Des problèmes indépendants du transporteur",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "f6dc921f-abe7-4716-99d4-9ce3fe2e5c87",
+            "isSelected": false,
+            "text": "Une modification du transporteur induite par le traitement",
+            "isStudentAnswer": false,
+            "count": 3
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 6,
+          "correct": 4,
+          "totalInteractions": 10
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109439",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Les gènes altérés impliqués dans le développement du cancer sont :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466823,
+          "_nanoseconds": 94000000
+        },
+        "suggestions": [
+          {
+            "id": "2e976955-9b32-4eea-b154-e16ce7e3ed46",
+            "isSelected": false,
+            "text": "Les oncogènes",
+            "isStudentAnswer": false,
+            "count": 6
+          },
+          {
+            "id": "f384f824-4cf1-42a5-9f20-1f1ecd76ed30",
+            "isSelected": false,
+            "text": "Les proto-oncogènes",
+            "isStudentAnswer": false,
+            "count": 4
+          },
+          {
+            "id": "a78b61ed-86cf-4302-8548-e7364e83f972",
+            "isSelected": false,
+            "text": "Les anti-oncogènes",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "080f5c1c-5026-4a87-a964-a7bb4e616a37",
+            "isSelected": false,
+            "text": "Les gènes suppresseurs",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 4,
+          "correct": 6,
+          "totalInteractions": 10
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109440",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Le stroma tumoral joue un rôle de soutien et de nutrition pour la tumeur. On observe que :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466823,
+          "_nanoseconds": 561000000
+        },
+        "suggestions": [
+          {
+            "id": "d15b213d-18b0-4db2-b143-05fca8b15baf",
+            "isSelected": false,
+            "text": "Une faible abondance du stroma rend la tumeur dure",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "fb89df06-2c7a-444a-8be3-2c1689181e34",
+            "isSelected": false,
+            "text": "Une faible abondance du stroma rend la tumeur molle",
+            "isStudentAnswer": false,
+            "count": 9
+          },
+          {
+            "id": "d950fc69-557a-4c49-881f-41a5c4e542f0",
+            "isSelected": false,
+            "text": "Une grande abondance du stroma entraîne souvent une nécrose tumorale",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "962727f7-e8b4-4280-b215-512380eaa8d8",
+            "isSelected": false,
+            "text": "Une grande abondance du stroma rend la tumeur molle",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 8,
+          "totalInteractions": 9
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109477",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "L’appellation « champignons » désigne :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466841,
+          "_nanoseconds": 561000000
+        },
+        "suggestions": [
+          {
+            "id": "a882a016-2c23-41c0-a819-424957f348db",
+            "isSelected": false,
+            "text": "Uniquement des organismes unicellulaires et eucaryotes.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "dd1d85f1-7cfa-4ff8-aa95-71b313d739c0",
+            "isSelected": false,
+            "text": "Uniquement des organismes pluricellulaires.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "805f7105-62b2-4bd9-8231-b4e3a3756dfd",
+            "isSelected": false,
+            "text": "Des organismes à la fois unicellulaires et pluricellulaires.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "354fa812-9617-434b-916b-fbe84af9455e",
+            "isSelected": false,
+            "text": "Des organismes procaryotes et eucaryotes.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109478",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "On retrouve dans les jonctions :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466842,
+          "_nanoseconds": 17000000
+        },
+        "suggestions": [
+          {
+            "id": "4d6b179f-8e73-4189-bc13-929bc305f537",
+            "isSelected": false,
+            "text": "D’ancrage : desmosomes, hémidesmosomes et zonula adhérence.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e42bb74d-a4fb-4d2a-b182-68a94bce50a6",
+            "isSelected": false,
+            "text": "Ou barrières hermétiques : zonula occludens, desmosomes et jonction gap.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "2d026c22-9d49-401c-9394-e18492c0e5d5",
+            "isSelected": false,
+            "text": "Hémidesmosomes : intégrines reliées à l’actine.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "46d18d47-4db9-4568-92ff-557519d87a41",
+            "isSelected": false,
+            "text": "Desmosomes : intégrines reliées aux lamines.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109479",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "Les jonctions dans la cellule épithéliale sont des protéines telles que :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466842,
+          "_nanoseconds": 475000000
+        },
+        "suggestions": [
+          {
+            "id": "9594dd40-0fcf-4953-aa2c-d8f88febbeeb",
+            "isSelected": false,
+            "text": "Les jonctions communicantes qui déterminent la polarité de la membrane plasmique.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "1d41b0b7-d69f-40b7-a416-3027185a61af",
+            "isSelected": false,
+            "text": "Les jonctions serrées qui diminuent la fluidité de la membrane plasmique.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "54fd0961-8982-4374-99e7-a4450b3186e0",
+            "isSelected": false,
+            "text": "Les cadhérines en relation avec les filaments intermédiaires.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "41f06550-4b44-482e-9a89-44486f010a96",
+            "isSelected": false,
+            "text": "Les intégrines en relation avec la matrice extracellulaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109480",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "À propos des procaryotes, vous diriez :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466842,
+          "_nanoseconds": 957000000
+        },
+        "suggestions": [
+          {
+            "id": "5af83d79-e3fd-49a0-b9a6-b193987813d8",
+            "isSelected": false,
+            "text": "Que les mycoplasmes possèdent des parois et du cholestérol sur leur membrane plasmique.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "93c2be72-d555-4998-825f-578db13c5833",
+            "isSelected": false,
+            "text": "Que les mycoplasmes ont une grande taille mais sont dépourvus de cholestérol.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "0baeadac-984b-4f31-b639-346a68cd9408",
+            "isSelected": false,
+            "text": "Que certains peuvent utiliser le méthane comme source d’énergie.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "27050a89-0550-4d73-9f4d-e9f65cba9267",
+            "isSelected": false,
+            "text": "Que certains sont capables de photosynthèse.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109481",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "Concernant un plasmide :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466843,
+          "_nanoseconds": 409000000
+        },
+        "suggestions": [
+          {
+            "id": "db31106f-e1a0-445c-ba91-c697a64bd9c8",
+            "isSelected": false,
+            "text": "Une fois perdu accidentellement, cette perte est définitive.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "77506b9b-6da6-4bf9-96b9-17a389c614a1",
+            "isSelected": false,
+            "text": "Transféré à une autre bactérie, il n’est pas perdu pour la bactérie donneuse.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "0a8042b6-e34f-4431-a8be-f05d51293487",
+            "isSelected": false,
+            "text": "Une fois reçu par une bactérie, il est transmis à sa descendance.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b951a036-57d0-4fcd-980b-741683347247",
+            "isSelected": false,
+            "text": "Il peut être incorporé dans un virus.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109393",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Les lignées cellulaires immortelles en culture présentent l’avantage :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466801,
+          "_nanoseconds": 171000000
+        },
+        "suggestions": [
+          {
+            "id": "7977a751-ac6f-411e-9800-d0e59fa36a3d",
+            "isSelected": false,
+            "text": "D’être physiologiquement similaires aux cellules normales",
+            "isStudentAnswer": false,
+            "count": 5
+          },
+          {
+            "id": "9ad283a3-d9f1-4cca-b3b8-547535cf168e",
+            "isSelected": false,
+            "text": "De proliférer rapidement",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "6cb70669-5f85-4ce3-b651-62722e5a3ced",
+            "isSelected": false,
+            "text": "D’être disponibles en grand nombre",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "e0d5c87e-a1e1-4e38-ac9b-f27e2f3679f5",
+            "isSelected": false,
+            "text": "De résister à la mort cellulaire",
+            "isStudentAnswer": false,
+            "count": 8
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 7,
+          "totalInteractions": 12,
+          "wrong": 5
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109394",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Concernant les gènes suppresseurs de tumeur :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466801,
+          "_nanoseconds": 668000000
+        },
+        "suggestions": [
+          {
+            "id": "472c3484-d39a-452d-b2e7-3c79dfdaafa6",
+            "isSelected": false,
+            "text": "Ils sont présents dans le génome et peuvent inhiber la prolifération cellulaire.",
+            "isStudentAnswer": false,
+            "count": 9
+          },
+          {
+            "id": "4946b8dc-6658-4f28-bd02-5cfc62b722ce",
+            "isSelected": false,
+            "text": "Ils sont activés lors d’un état tumoral, supprimant ainsi la réponse immunitaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ea7d016d-e65a-4fa5-9e0b-1d565a7bb1e7",
+            "isSelected": false,
+            "text": "Ils sont considérés comme des anti-oncogènes.",
+            "isStudentAnswer": false,
+            "count": 9
+          },
+          {
+            "id": "012953d6-b704-4a7a-8b60-090a364110da",
+            "isSelected": false,
+            "text": "Ils sont classés parmi les oncogènes.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 9,
+          "totalInteractions": 9
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109395",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "La cellule assure la stabilité génétique et cellulaire grâce à :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466802,
+          "_nanoseconds": 162000000
+        },
+        "suggestions": [
+          {
+            "id": "aefcbca2-f399-4962-b23a-489763917b4f",
+            "isSelected": false,
+            "text": "L’expression du gène Bcl-2 aux propriétés antiprolifératives.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "efdb089f-50b8-401a-bf64-c9cd2df352ae",
+            "isSelected": false,
+            "text": "L’expression du gène codant pour la protéine Rb impliquée dans la réparation de l’ADN.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "809d9d2f-3109-4a89-95fc-5822c413483d",
+            "isSelected": false,
+            "text": "L’expression du gène codant pour la protéine Rb à action antimitotique.",
+            "isStudentAnswer": false,
+            "count": 6
+          },
+          {
+            "id": "10c76e3f-144f-4b29-91d7-e19f3169a3bc",
+            "isSelected": false,
+            "text": "L’expression du gène codant pour la protéine P53, impliquée dans l’apoptose.",
+            "isStudentAnswer": false,
+            "count": 9
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 2,
+          "correct": 7,
+          "totalInteractions": 9
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109396",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "La division illimitée des cellules tumorales est due à :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466802,
+          "_nanoseconds": 659000000
+        },
+        "suggestions": [
+          {
+            "id": "f58c73c0-649d-4043-93e2-f703c6a22cd7",
+            "isSelected": false,
+            "text": "La perte des télomères aux extrémités des chromosomes.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "dc45f636-1f21-42cb-bc08-9debd103befa",
+            "isSelected": false,
+            "text": "La présence de télomères fonctionnels empêchant leur érosion.",
+            "isStudentAnswer": false,
+            "count": 9
+          },
+          {
+            "id": "d324c570-8698-4981-91a7-0bb4f569c9d2",
+            "isSelected": false,
+            "text": "L’action de la télomérase qui dégrade les télomères aux extrémités des chromosomes.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "aeea0b35-5182-4f31-9f95-1c81dfefbbc4",
+            "isSelected": false,
+            "text": "L’érosion des télomères à chaque division cellulaire, perturbant leur régulation.",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 8,
+          "totalInteractions": 9
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109397",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Dans une cellule tumorale, on observe :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466803,
+          "_nanoseconds": 157000000
+        },
+        "suggestions": [
+          {
+            "id": "db235c39-e45e-4528-858f-087b922853e7",
+            "isSelected": false,
+            "text": "Une activation des complexes cyclines/CdK.",
+            "isStudentAnswer": false,
+            "count": 6
+          },
+          {
+            "id": "b0df2618-ef43-40de-866d-d2c3c6a7289c",
+            "isSelected": false,
+            "text": "Une altération de l’expression des complexes cyclines/CdK.",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "c3a47f6c-7db8-486c-af77-faedd2958546",
+            "isSelected": false,
+            "text": "Une modification de l’expression des inhibiteurs des complexes cyclines/CdK.",
+            "isStudentAnswer": false,
+            "count": 7
+          },
+          {
+            "id": "1e86d350-0e7f-4b3f-bb14-93a5ba53b09e",
+            "isSelected": false,
+            "text": "Une surexpression du gène Bcl-2.",
+            "isStudentAnswer": false,
+            "count": 8
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 3,
+          "correct": 7,
+          "totalInteractions": 10
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109398",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Le stroma tumoral, qui constitue la charpente et le support nutritif de la tumeur :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466803,
+          "_nanoseconds": 659000000
+        },
+        "suggestions": [
+          {
+            "id": "35845931-d1bb-4470-b409-3a02747799aa",
+            "isSelected": false,
+            "text": "Lorsque peu abondant, il confère à la tumeur une consistance dure.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "536fb253-e0c3-447f-81fb-a4fc3e53c653",
+            "isSelected": false,
+            "text": "Lorsque abondant, il rend la tumeur molle.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c8e104a9-b009-4fa5-860c-d9026aa694c7",
+            "isSelected": false,
+            "text": "Lorsque abondant, il favorise souvent la nécrose tumorale.",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "02c64cf6-8770-4871-a409-a7d031e6ab21",
+            "isSelected": false,
+            "text": "Lorsque peu abondant, il confère à la tumeur une consistance molle.",
+            "isStudentAnswer": false,
+            "count": 7
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 3,
+          "correct": 6,
+          "totalInteractions": 9
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109447",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Concernant un épithélium présentant un foyer tumoral avancé, vous diriez :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466826,
+          "_nanoseconds": 964000000
+        },
+        "suggestions": [
+          {
+            "id": "9fb89a4c-dff3-47b5-948f-0d33fb127fa1",
+            "isSelected": false,
+            "text": "Il y a une acquisition progressive de la différenciation cellulaire.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "30fb595b-9575-41a8-963a-aded0d1f5193",
+            "isSelected": false,
+            "text": "On observe plusieurs cellules en apoptose.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "3bd4abf5-3fa2-440e-b3e4-84f554075757",
+            "isSelected": false,
+            "text": "L’activité des cellules immunitaires environnantes est importante.",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "1a48feac-a727-4c84-a74a-da7bc0c02315",
+            "isSelected": false,
+            "text": "Des cellules endothéliales se forment.",
+            "isStudentAnswer": false,
+            "count": 5
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 6,
+          "correct": 3,
+          "totalInteractions": 9
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109448",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Même question que la précédente :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466827,
+          "_nanoseconds": 419000000
+        },
+        "suggestions": [
+          {
+            "id": "2c1b3afd-33e2-4636-aa26-7b412a95e2fa",
+            "isSelected": false,
+            "text": "Disparition des protéines de la membrane basale.",
+            "isStudentAnswer": false,
+            "count": 5
+          },
+          {
+            "id": "1ba07118-b184-4998-a5bc-4298fc738bfe",
+            "isSelected": false,
+            "text": "Modification des molécules d’adhérence cellule-cellule uniquement.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "2afa4192-df93-4dbc-975c-837887637b5e",
+            "isSelected": false,
+            "text": "Modification des molécules d’adhérence cellule-matrice extracellulaire uniquement.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "61557214-80cb-4b38-b848-923393b8fffe",
+            "isSelected": false,
+            "text": "Diminution du rapport noyau/cytoplasme.",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 3,
+          "correct": 4,
+          "totalInteractions": 7
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109449",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Quelle affirmation ne correspond pas à une modification tumorale ?",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466827,
+          "_nanoseconds": 879000000
+        },
+        "suggestions": [
+          {
+            "id": "d2785c66-ab21-45f9-90b5-0e7feca836c5",
+            "isSelected": false,
+            "text": "Augmentation des protéines de régulation.",
+            "isStudentAnswer": false,
+            "count": 3
+          },
+          {
+            "id": "b03b629c-23d5-41b9-8a7e-dd084e0527fe",
+            "isSelected": false,
+            "text": "Perte de protéines de régulation.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "56215631-3d90-4a00-b19b-a854cdd5c535",
+            "isSelected": false,
+            "text": "Apparition de récepteurs embryologiques.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "a86aa451-d7cd-444a-b1bf-2acff4bb8994",
+            "isSelected": false,
+            "text": "Inhibition des protéases.",
+            "isStudentAnswer": false,
+            "count": 2
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 2,
+          "totalInteractions": 7,
+          "wrong": 5
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109450",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "L’impact de la progression tumorale sur le cycle cellulaire se traduit par :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466828,
+          "_nanoseconds": 353000000
+        },
+        "suggestions": [
+          {
+            "id": "dc9ba95d-ebbd-4761-8e7a-6043906a8705",
+            "isSelected": false,
+            "text": "Dégradation des protéines bcl-2.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "afeb036e-b38a-4658-9dd0-c45c0b3f07bb",
+            "isSelected": false,
+            "text": "Activation de la protéine Rb.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "0e5c1c0b-5e8b-4cb2-bb37-b522809d6faa",
+            "isSelected": false,
+            "text": "Inhibition de la protéine P53.",
+            "isStudentAnswer": false,
+            "count": 7
+          },
+          {
+            "id": "8539b72b-7903-465d-ac43-fbc248a9c35c",
+            "isSelected": false,
+            "text": "Activation du point de contrôle G1 apoptotique.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 7,
+          "totalInteractions": 7
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109451",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Quelle enzyme est inutile à l’intégration du génome du VIH dans celui de la cellule ?",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466828,
+          "_nanoseconds": 819000000
+        },
+        "suggestions": [
+          {
+            "id": "4649667b-d764-48c7-9f24-d1ee7e20c03f",
+            "isSelected": false,
+            "text": "DNA polymérase dépendante de l’ADN.",
+            "isStudentAnswer": false,
+            "count": 4
+          },
+          {
+            "id": "e9e8f145-d715-4b41-8155-9b894d5f7c20",
+            "isSelected": false,
+            "text": "DNA polymérase dépendante de l’ARN.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "6c7f2061-7ee4-401c-9f6d-6aab669367c5",
+            "isSelected": false,
+            "text": "RNA polymérase dépendante de l’ADN.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "81fb6b38-8466-42d0-acf9-17a5e813b111",
+            "isSelected": false,
+            "text": "Intégrase.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 6,
+          "wrong": 5
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109452",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Avec quelle affirmation êtes-vous en désaccord ?",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466829,
+          "_nanoseconds": 272000000
+        },
+        "suggestions": [
+          {
+            "id": "f915803a-1ad2-4ca6-8feb-1a3f9cd1af71",
+            "isSelected": false,
+            "text": "La réplication d’un virus n’entraîne pas d’augmentation de sa taille.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a391c691-1e78-4c2a-a473-164d18b15c0b",
+            "isSelected": false,
+            "text": "Une fois formé, le virus sort de la cellule sous une forme complète.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "8522da9a-f655-453d-bfcb-ca2305a98e77",
+            "isSelected": false,
+            "text": "Dès son entrée dans la cellule, le virus apparaît par désintégration de son génome.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "20a62418-cbaa-4147-b002-570a0a38126d",
+            "isSelected": false,
+            "text": "Le virus peut quitter la cellule en endommageant ou non sa membrane.",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 3,
+          "correct": 2,
+          "totalInteractions": 5
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109482",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "Les eubactéries :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466843,
+          "_nanoseconds": 873000000
+        },
+        "suggestions": [
+          {
+            "id": "f798bf03-4c8a-4726-8ecd-5ca1c0691732",
+            "isSelected": false,
+            "text": "Peuvent posséder des chloroplastes similaires à ceux des végétaux supérieurs.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e62b292a-5216-4428-9364-aa578750bd5f",
+            "isSelected": false,
+            "text": "Peuvent être dépourvues de paroi, à l’instar des cellules animales.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d184c522-a52a-4995-ab5c-5345c8f078bc",
+            "isSelected": false,
+            "text": "Présentent une membrane plasmique contenant du cholestérol.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "20411a53-2333-41bd-8a04-f78bad36d5ac",
+            "isSelected": false,
+            "text": "Possèdent un matériel génétique sous forme d’ADN simple brin et sont diploïdes.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109483",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "6AalZDVelef2UGhVwC1u",
+        "subcategoryName": "L'introduction et les eucaryotes et les procaryotes",
+        "text": "Dans les bactéries contemporaines :",
+        "year": 2020,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466844,
+          "_nanoseconds": 341000000
+        },
+        "suggestions": [
+          {
+            "id": "664eeb51-8754-46c6-a3dc-3607f1987c20",
+            "isSelected": false,
+            "text": "Leur paroi cellulaire est riche en peptidoglycanes.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e050e419-6ba0-4e6c-82fe-fd9a89e778b6",
+            "isSelected": false,
+            "text": "Leur paroi rigide contient des porines.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "15257f4f-69f3-4afb-8d9d-f2274c5a794f",
+            "isSelected": false,
+            "text": "Leur paroi est une cible pour certains antibiotiques.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c403494e-e8eb-4eb7-9f0f-2c14ba14aaa2",
+            "isSelected": false,
+            "text": "Un plasmide ne peut s’exprimer et se répliquer que s’il est transféré dans une autre bactérie.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109392",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Les cellules tumorales en culture :",
+        "year": 2019,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466800,
+          "_nanoseconds": 669000000
+        },
+        "suggestions": [
+          {
+            "id": "8bc0b8d0-750a-4249-84c9-4999be6e607d",
+            "isSelected": false,
+            "text": "Ont l’avantage de pouvoir être conservées longtemps.",
+            "count": 5
+          },
+          {
+            "id": "fc01ed0d-9cd0-4ccb-9944-853ebbae3460",
+            "isSelected": false,
+            "text": "Meurent facilement.",
+            "count": 0
+          },
+          {
+            "id": "94670c6f-8c84-4f5d-8ef7-f1947a32e1af",
+            "isSelected": false,
+            "text": "Sont plus rares que celles issues d’un explant.",
+            "count": 0
+          },
+          {
+            "id": "268f25eb-ce1b-4fc7-86ff-6aa472d59b1a",
+            "isSelected": false,
+            "text": "Se rapprochent davantage du physiologique comparées aux cellules issues d’un explant.",
+            "count": 2
+          },
+          {
+            "id": "fa1b2cef-9275-4d90-959e-cc767801ad84",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 6,
+          "totalInteractions": 6
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109453",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Quels gènes sont qualifiés d’inducteurs de cancer ?",
+        "year": 2019,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466829,
+          "_nanoseconds": 734000000
+        },
+        "suggestions": [
+          {
+            "id": "94e47d93-195c-4c54-8388-15caf407be36",
+            "isSelected": false,
+            "text": "Les oncogènes",
+            "isStudentAnswer": false,
+            "count": 7
+          },
+          {
+            "id": "d5f74086-550f-4b60-a679-c7b3ed4bad6a",
+            "isSelected": false,
+            "text": "Les proto-oncogènes",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "07f0a47c-f36a-4512-9877-4e16476cbba7",
+            "isSelected": false,
+            "text": "Les anti-oncogènes",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a2b5b8b9-354a-441a-a952-e45fc9f45ae5",
+            "isSelected": false,
+            "text": "Les gènes suppresseurs",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 7,
+          "totalInteractions": 7
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109454",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Comment la cellule maintient-elle l’intégrité du génome et régule-t-elle la prolifération en cas d’anomalie ?",
+        "year": 2019,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466830,
+          "_nanoseconds": 193000000
+        },
+        "suggestions": [
+          {
+            "id": "fe7a22b0-7923-438b-a5ae-26e6b965dc2a",
+            "isSelected": false,
+            "text": "En favorisant l’expression du gène codant pour la protéine P53",
+            "isStudentAnswer": false,
+            "count": 7
+          },
+          {
+            "id": "6d8770b7-cb70-4305-a0a6-f9bae4c8b096",
+            "isSelected": false,
+            "text": "En inhibant le gène codant pour la protéine P53",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "5385b965-d87d-4a53-870e-6517ef9e5c0f",
+            "isSelected": false,
+            "text": "En favorisant l’expression du gène codant pour la protéine Rh, inductrice de mitoses",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "1f219b36-01b4-4be1-b818-62294636e21b",
+            "isSelected": false,
+            "text": "En favorisant l’expression du gène codant pour la protéine Bcl-2",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 7,
+          "totalInteractions": 7
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109455",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Qu’est-ce qui limite la division des cellules normales ?",
+        "year": 2019,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466830,
+          "_nanoseconds": 653000000
+        },
+        "suggestions": [
+          {
+            "id": "2e77de9d-e47f-407f-b3ab-b290b4f2cccb",
+            "isSelected": false,
+            "text": "L’absence de télomères aux extrémités des chromosomes",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a9996a9b-10ee-459a-91a8-10b40eaf7bb4",
+            "isSelected": false,
+            "text": "La présence de télomères aux extrémités des chromosomes sans érosion",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "c30adb13-7653-4c7d-93ed-2fbab6d24079",
+            "isSelected": false,
+            "text": "La présence de la télomérase qui érode les télomères",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "1c5adb9d-fe9d-41fb-861c-0dffd1f1a099",
+            "isSelected": false,
+            "text": "L’érosion des télomères à chaque division cellulaire",
+            "isStudentAnswer": false,
+            "count": 5
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 2,
+          "correct": 5,
+          "totalInteractions": 7
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109456",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Quelle est une caractéristique des cellules cancéreuses ?",
+        "year": 2019,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466831,
+          "_nanoseconds": 153000000
+        },
+        "suggestions": [
+          {
+            "id": "665b68ff-b835-42bc-aa4e-a1308e5e93f9",
+            "isSelected": false,
+            "text": "Une sous-expression du gène codant pour Bcl-2",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "345708da-6b9a-435c-bb11-de49514ed2f6",
+            "isSelected": false,
+            "text": "Une surexpression du gène codant pour P53",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "87d2b51a-119c-472b-89de-08f0f05ac6db",
+            "isSelected": false,
+            "text": "Une mise en silence des deux gènes cités ci-dessus",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "3abea341-c9e7-4ab1-830e-1af2440fef79",
+            "isSelected": false,
+            "text": "Une surexpression du gène Bcl-2",
+            "isStudentAnswer": false,
+            "count": 6
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 6,
+          "totalInteractions": 7
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109457",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Quel est le rôle du stroma tumoral ?",
+        "year": 2019,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466831,
+          "_nanoseconds": 659000000
+        },
+        "suggestions": [
+          {
+            "id": "21ccf9bc-d0ec-4900-848a-103f24a88ba3",
+            "isSelected": false,
+            "text": "Si peu abondant, la tumeur est dure",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "1de42580-034f-465d-a819-3ba4fdf964d8",
+            "isSelected": false,
+            "text": "Si abondant, la tumeur est molle",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f17fa8bc-75d7-4388-b862-8a61af41b6c3",
+            "isSelected": false,
+            "text": "Si abondant, la tumeur est souvent nécrosée",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "2d9f5bef-a5ed-4ae5-9466-6063cd2aeeee",
+            "isSelected": false,
+            "text": "Si peu abondant, la tumeur est molle",
+            "isStudentAnswer": false,
+            "count": 7
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 6,
+          "totalInteractions": 7
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109458",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Quelle est une cause majeure de chimiorésistance dans certaines tumeurs ?",
+        "year": 2019,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466832,
+          "_nanoseconds": 210000000
+        },
+        "suggestions": [
+          {
+            "id": "2bcf6eb9-b01d-4b02-baa4-01587c00f45c",
+            "isSelected": false,
+            "text": "Une sous-expression de transporteurs spécifiques excrétant les médicaments",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "19f39c75-4af3-4596-8ed6-2f36feebcb24",
+            "isSelected": false,
+            "text": "Une surexpression de transporteurs spécifiques excrétant les médicaments",
+            "isStudentAnswer": false,
+            "count": 7
+          },
+          {
+            "id": "2e41aa95-cba3-4431-b8ad-85ee92c8184d",
+            "isSelected": false,
+            "text": "Des problèmes indépendants des transporteurs",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "23f073b2-e0ed-45f3-be8e-3ee11e03566d",
+            "isSelected": false,
+            "text": "Des modifications des transporteurs par le traitement",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 6,
+          "totalInteractions": 7
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109459",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Concernant la transmission nerveuse :",
+        "year": 2019,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466832,
+          "_nanoseconds": 685000000
+        },
+        "suggestions": [
+          {
+            "id": "50900015-c219-4149-b5b2-ed4b552390ec",
+            "isSelected": false,
+            "text": "L’acétylcholine est un neuromédiateur ayant une action spécifique mais limitée.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "8d043085-ed24-4c9f-96ca-d250d49b0566",
+            "isSelected": false,
+            "text": "La synapse est constituée de protéines membranaires organisées qui facilitent le passage du neuromédiateur.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "1d68ab7c-9856-47a8-a019-9080487cf2fe",
+            "isSelected": false,
+            "text": "La libération d’un neuromédiateur est déclenchée par une entrée massive de Na+ dans la terminaison nerveuse.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "218e9607-77a5-429c-95a9-2294a726f1af",
+            "isSelected": false,
+            "text": "L’arrivée du potentiel d’action à la synapse entraîne l’ouverture de canaux spécifiques à l’acétylcholine, par exemple.",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 4,
+          "wrong": 3
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109460",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Les gènes suppresseurs :",
+        "year": 2019,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466833,
+          "_nanoseconds": 188000000
+        },
+        "suggestions": [
+          {
+            "id": "c29c5103-9c2f-4dbb-8b3b-f8a48fc8ed3b",
+            "isSelected": false,
+            "text": "Se trouvent dans le génome et ont la capacité d’inhiber la prolifération cellulaire.",
+            "isStudentAnswer": false,
+            "count": 7
+          },
+          {
+            "id": "ffb8ba9a-579a-497a-a48a-851452bb2857",
+            "isSelected": false,
+            "text": "Sont activés dans un contexte tumoral, entraînant une suppression de la réponse immunitaire.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "83c8bf54-698f-4c77-b2ed-3bd9a4872ad9",
+            "isSelected": false,
+            "text": "Sont considérés comme des anti-oncogènes.",
+            "isStudentAnswer": false,
+            "count": 8
+          },
+          {
+            "id": "9c928222-ca02-4b9d-bfb7-44103e2d1b80",
+            "isSelected": false,
+            "text": "Sont classés comme des oncogènes.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 8,
+          "totalInteractions": 8
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109461",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "La cellule assure sa stabilité génétique et cellulaire grâce à :",
+        "year": 2019,
+        "location": "TIZIOUZOU",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466833,
+          "_nanoseconds": 664000000
+        },
+        "suggestions": [
+          {
+            "id": "2be8848d-5ea6-4a0f-a964-d09340f125bf",
+            "isSelected": false,
+            "text": "L’expression du gène Bcl-2 à effet antiprolifératif.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "0e7184de-824e-4d5e-b55e-fc618d529c6f",
+            "isSelected": false,
+            "text": "L’expression du gène codant pour la protéine Rb, impliquée dans la réparation de l’ADN.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6b061cef-56f8-4102-87a7-3a5f993de6f8",
+            "isSelected": false,
+            "text": "L’expression du gène codant pour la protéine Rb, qui a un rôle antimitotique.",
+            "isStudentAnswer": false,
+            "count": 7
+          },
+          {
+            "id": "ff3151ac-5fb8-437e-99eb-9b4b19fd214f",
+            "isSelected": false,
+            "text": "L’expression du gène codant pour la protéine P53, favorisant l’apoptose.",
+            "isStudentAnswer": false,
+            "count": 8
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 8,
+          "totalInteractions": 8
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109462",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "La division illimitée des cellules tumorales est favorisée par :",
+        "year": 2019,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466834,
+          "_nanoseconds": 141000000
+        },
+        "suggestions": [
+          {
+            "id": "e17669af-a8c3-4e59-96e9-20ac8bd0ce2f",
+            "isSelected": false,
+            "text": "Une perte des télomères aux extrémités des chromosomes.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "9977a083-c94a-4e1a-9497-0def0a7980ca",
+            "isSelected": false,
+            "text": "La présence de télomères aux extrémités des chromosomes sans érosion.",
+            "isStudentAnswer": false,
+            "count": 6
+          },
+          {
+            "id": "0814265b-63a7-40a5-a1fb-425b2006c426",
+            "isSelected": false,
+            "text": "La présence de la télomérase, qui dégrade les télomères aux extrémités chromosomiques.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "625c0882-d92f-4386-a46f-fccf2f74e066",
+            "isSelected": false,
+            "text": "L’érosion progressive des télomères à chaque division cellulaire, entraînant une désorganisation de leur régulation.",
+            "isStudentAnswer": false,
+            "count": 2
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 3,
+          "correct": 5,
+          "totalInteractions": 8
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109463",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "Le stroma tumoral joue un rôle de support et de nutrition pour la tumeur :",
+        "year": 2019,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466834,
+          "_nanoseconds": 593000000
+        },
+        "suggestions": [
+          {
+            "id": "c8131559-9399-44de-a27f-6cdd6b2eed14",
+            "isSelected": false,
+            "text": "Si le stroma est peu abondant, la tumeur est dure.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "0c9c5085-9bcd-40a5-86b0-949e04b730ac",
+            "isSelected": false,
+            "text": "Si le stroma est abondant, la tumeur est molle.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f52caf44-eeec-414d-a09c-291c6a7a36f0",
+            "isSelected": false,
+            "text": "Si le stroma est abondant, la tumeur est souvent nécrosée.",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "7c595b2a-9d75-4e26-99b5-d7b826333f44",
+            "isSelected": false,
+            "text": "Si le stroma est peu abondant, la tumeur est molle.",
+            "isStudentAnswer": false,
+            "count": 9
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 1,
+          "correct": 8,
+          "totalInteractions": 9
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "109464",
+        "categoryId": "dGCzmNFanicej8fncYTu",
+        "categoryName": "Cytologie",
+        "subcategoryId": "OuKJEXD6KMvTRxY5veVP",
+        "subcategoryName": "Cellules cancéreuse",
+        "text": "La chimiothérapie est souvent associée à une chute de cheveux, car :",
+        "year": 2019,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1743466835,
+          "_nanoseconds": 62000000
+        },
+        "suggestions": [
+          {
+            "id": "dab5400d-1846-46a5-9ff5-fc1e3fa400b3",
+            "isSelected": false,
+            "text": "Elle cible les microtubules, constituants essentiels du cheveu.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "5db4793f-6ba6-46ba-b680-effd021a29b4",
+            "isSelected": false,
+            "text": "Elle affecte les filaments intermédiaires, qui composent la structure du cheveu.",
+            "isStudentAnswer": false,
+            "count": 2
+          },
+          {
+            "id": "d369bb0e-337b-4645-bc32-e8900a2b9530",
+            "isSelected": false,
+            "text": "Certaines personnes développent une intolérance aux agents chimiothérapeutiques.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7825955c-908e-4b89-84fb-1260d09fc7e9",
+            "isSelected": false,
+            "text": "Aucune de ces réponses n’est correcte.",
+            "isStudentAnswer": false,
+            "count": 4
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 4,
+          "totalInteractions": 8,
+          "wrong": 4
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      }
+    ],
+    "modules": [
+      {
+        "id": "dGCzmNFanicej8fncYTu",
+        "name": "Cytologie",
+        "studyLevel": 1
+      }
+    ],
+    "subcategories": [
+      {
+        "id": "OuKJEXD6KMvTRxY5veVP",
+        "name": "Cellules cancéreuse",
+        "category": {
+          "id": "dGCzmNFanicej8fncYTu",
+          "father": "",
+          "name": "Cytologie"
+        }
+      },
+      {
+        "id": "6AalZDVelef2UGhVwC1u",
+        "name": "L'introduction et les eucaryotes et les procaryotes",
+        "category": {
+          "id": "dGCzmNFanicej8fncYTu",
+          "father": "",
+          "name": "Cytologie"
+        }
+      },
+      {
+        "id": "jKyavQbbtdStZSUEDpGn",
+        "name": "La matrice extracellulaire",
+        "category": {
+          "id": "dGCzmNFanicej8fncYTu",
+          "father": "",
+          "name": "Cytologie"
+        }
+      },
+      {
+        "id": "T5ik9Pm6ZTYcb3MRGdBS",
+        "name": "La mitochondrie",
+        "category": {
+          "id": "dGCzmNFanicej8fncYTu",
+          "father": "",
+          "name": "Cytologie"
+        }
+      },
+      {
+        "id": "1M4U5IOjgsiTfKroFSLc",
+        "name": "La physiologie de la membrane plasmique",
+        "category": {
+          "id": "dGCzmNFanicej8fncYTu",
+          "father": "",
+          "name": "Cytologie"
+        }
+      },
+      {
+        "id": "jrfWSGQddLxTfFtSk4cA",
+        "name": "Le cycline cdk",
+        "category": {
+          "id": "dGCzmNFanicej8fncYTu",
+          "father": "",
+          "name": "Cytologie"
+        }
+      },
+      {
+        "id": "oBaq48UHrZBLJKpUeoaK",
+        "name": "Le cytosquelette",
+        "category": {
+          "id": "dGCzmNFanicej8fncYTu",
+          "father": "",
+          "name": "Cytologie"
+        }
+      },
+      {
+        "id": "5qtOUGi2PNBySH1WCr1j",
+        "name": "Les virus",
+        "category": {
+          "id": "dGCzmNFanicej8fncYTu",
+          "father": "",
+          "name": "Cytologie"
+        }
+      },
+      {
+        "id": "BCCrIeX8KtwCyYHphdyX",
+        "name": "Noyau interphase",
+        "category": {
+          "id": "dGCzmNFanicej8fncYTu",
+          "father": "",
+          "name": "Cytologie"
+        }
+      },
+      {
+        "id": "weQxPXghMkkUE9uQ9aJT",
+        "name": "Td-le réticulum endoplasmique et l'appareil de golgi",
+        "category": {
+          "id": "dGCzmNFanicej8fncYTu",
+          "father": "",
+          "name": "Cytologie"
+        }
+      },
+      {
+        "id": "xeC7fAsNBljDTlbPpSpe",
+        "name": "Td-les lysosomes",
+        "category": {
+          "id": "dGCzmNFanicej8fncYTu",
+          "father": "",
+          "name": "Cytologie"
+        }
+      },
+      {
+        "id": "53GeKUoHiq7WkOjjn3Ob",
+        "name": "Td-synthèse des fibres de collagène et élastique",
+        "category": {
+          "id": "dGCzmNFanicej8fncYTu",
+          "father": "",
+          "name": "Cytologie"
+        }
+      },
+      {
+        "id": "A3dXWWUqbyeHiVaEDUi8",
+        "name": "Td-technique d'étude de la cellule",
+        "category": {
+          "id": "dGCzmNFanicej8fncYTu",
+          "father": "",
+          "name": "Cytologie"
+        }
+      }
+    ],
+    "statistics": {
+      "time": 0,
+      "wrongCount": 0,
+      "correctCount": 0,
+      "lastAnsweredQuestionIndex": 0,
+      "neutralCount": 0,
+      "questionsCount": 100
+    },
+    "type": "quiz",
+    "createdAt": {
+      "_seconds": 1756078626,
+      "_nanoseconds": 138000000
+    }
+  }
+}

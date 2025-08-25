@@ -1,0 +1,3056 @@
+{
+  "data": {
+    "name": "Informatique (25/08/2025 01:00)",
+    "questions": [
+      {
+        "id": "168479",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "(F3015)16 (18",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546621,
+          "_nanoseconds": 511000000
+        },
+        "suggestions": [
+          {
+            "id": "cccfe19c-3b94-489c-b121-4d3ae4c03eb5",
+            "isSelected": false,
+            "text": "3626415",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "382fdd22-bc65-42d3-af3a-16a3a49dcf29",
+            "isSelected": false,
+            "text": "3672425",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "8fff0331-dfd7-4d8b-b31c-5d9aa1e2781e",
+            "isSelected": false,
+            "text": "3636425",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d12c5ddf-62a2-4015-9312-68d53732e815",
+            "isSelected": false,
+            "text": "3636435",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168480",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Calculer les conversions suivantes : (....................)2 = (1579)10",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546622,
+          "_nanoseconds": 13000000
+        },
+        "suggestions": [
+          {
+            "id": "290f5531-9464-4f39-bbe2-7861c347c68b",
+            "isSelected": false,
+            "text": "(11100011011)2",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d8ecd290-7c00-467e-ae16-db63f213c72a",
+            "isSelected": false,
+            "text": "(11000101110)2",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4b224a2e-58a4-4f13-b2e5-1e9ef0bf8c7f",
+            "isSelected": false,
+            "text": "(11010100011)2",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "27f75a6a-76ec-43a3-849f-9af1ffbb9501",
+            "isSelected": false,
+            "text": "(11000101011)2",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168481",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "(246,8515625)10=(...)2",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546622,
+          "_nanoseconds": 560000000
+        },
+        "suggestions": [
+          {
+            "id": "23a7e499-9b6d-41b2-8586-b4a7720af3dc",
+            "isSelected": false,
+            "text": "11110111,1100101",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "cbd0d25b-89ee-455b-a740-4240b1b91e82",
+            "isSelected": false,
+            "text": "11110110,1011011",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ce2e2491-b31d-454d-bc5e-b8bc11d5c1b0",
+            "isSelected": false,
+            "text": "11110110,1110101",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e34183a7-668a-4e05-b96f-549b2a2c8025",
+            "isSelected": false,
+            "text": "11110110,1101101",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168482",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "(7125,431)8=(.......)16",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546623,
+          "_nanoseconds": 97000000
+        },
+        "suggestions": [
+          {
+            "id": "1d0bb23b-d67d-4dbb-a0d1-7ea6a09f6aec",
+            "isSelected": false,
+            "text": "E55,8C4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a191eb2e-a1ce-4363-bf5a-3d4209df3bc7",
+            "isSelected": false,
+            "text": "E55,9CA",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "2877ceb4-cd3f-410a-8060-08edefd9ea8a",
+            "isSelected": false,
+            "text": "E55,8C8",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "5596db4e-b938-43a8-a591-a617920dd743",
+            "isSelected": false,
+            "text": "C44,9CA",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168483",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "(11447)10=(.............................)16",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546623,
+          "_nanoseconds": 698000000
+        },
+        "suggestions": [
+          {
+            "id": "58274469-7c3d-4a7f-a0c1-11fe981d8e55",
+            "isSelected": false,
+            "text": "2CB7",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "76b1c06b-aed0-420a-9312-e574fb630055",
+            "isSelected": false,
+            "text": "7BC2",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7b0d6b69-a7a2-4847-be5b-a0a18b937c92",
+            "isSelected": false,
+            "text": "7BC0",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6c6943f3-c287-4812-9fda-9e9cb88c5300",
+            "isSelected": false,
+            "text": "7CB2",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152080",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Un système d'exploitation conçu pour les ordinateurs :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059314,
+          "_nanoseconds": 558000000
+        },
+        "suggestions": [
+          {
+            "id": "4c5485d1-a92d-40c0-96a9-fd4589d8885b",
+            "isSelected": false,
+            "text": "Microsoft",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "b7e8cce3-d20e-4a4d-8e49-bea63928b01a",
+            "isSelected": false,
+            "text": "iOS",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "73c1990f-0fec-4e30-88dc-c67d7e11f8ea",
+            "isSelected": false,
+            "text": "Linux",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e82f0ffe-dea9-4d15-9a95-913fd1abe44c",
+            "isSelected": false,
+            "text": "Mozilla",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152081",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Une mémoire permanente contenant les premières instructions nécessaires pour le démarrage correct d'un ordinateur :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059315,
+          "_nanoseconds": 204000000
+        },
+        "suggestions": [
+          {
+            "id": "1426bf03-9c36-48e7-a509-1c7ccdcf5a87",
+            "isSelected": false,
+            "text": "La RAM",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6e5c4cd7-ae5b-44f0-b206-92e2c06f6e5c",
+            "isSelected": false,
+            "text": "La ROM",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "f05d91ea-eddc-4e86-aacb-b3c9fa2f4750",
+            "isSelected": false,
+            "text": "Le disque dur",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d5a66fdb-8677-40ae-96c2-f7416add0cca",
+            "isSelected": false,
+            "text": "La mémoire auxiliaire",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152082",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Ensemble de programmes permettant de faire fonctionner et contrôler un ordinateur :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059315,
+          "_nanoseconds": 876000000
+        },
+        "suggestions": [
+          {
+            "id": "1ffbc56b-e46b-4b09-a5e7-1425de8b96e5",
+            "isSelected": false,
+            "text": "Un langage de programmation",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "77c1c644-c825-4909-943d-314e533fa1da",
+            "isSelected": false,
+            "text": "Un algorithme",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "bfa19af0-a0af-4cf0-9aec-40a95e50fe28",
+            "isSelected": false,
+            "text": "Un système d'exploitation",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "2e942b82-9c39-4b67-a716-62ee740b1eb4",
+            "isSelected": false,
+            "text": "Le système binaire",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152083",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Calculez la conversion suivante :<br />(9467)₁₀ = (?)₈",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059316,
+          "_nanoseconds": 518000000
+        },
+        "suggestions": [
+          {
+            "id": "17dace00-fd36-4080-ad4b-bc2c42d486a2",
+            "isSelected": false,
+            "text": "37232",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "764fac5e-c1e1-410e-8aca-d42af6bfa007",
+            "isSelected": false,
+            "text": "37322",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "cb9d295e-0eef-418f-8b7c-e7345cf15deb",
+            "isSelected": false,
+            "text": "22733",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "2a431969-954f-4c62-9e4b-df5964e0843d",
+            "isSelected": false,
+            "text": "22373",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152084",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Calculez la conversion suivante :<br />(?)₁₀ = (C6E5F)₁₆",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059317,
+          "_nanoseconds": 161000000
+        },
+        "suggestions": [
+          {
+            "id": "786503ea-b788-483f-ba66-01f20bf53014",
+            "isSelected": false,
+            "text": "814672",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f6ff1c76-01b2-42fb-b90f-3ca98ba15cf3",
+            "isSelected": false,
+            "text": "814687",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "0a5f2b6b-1824-4834-acb0-c330b09d476f",
+            "isSelected": false,
+            "text": "3067137",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "0d05f12d-a9ae-49ea-abda-8266572648ea",
+            "isSelected": false,
+            "text": "3067122",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152085",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Calculez la conversion suivante :<br />(7125,431)₈ = (?)₁₆",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059317,
+          "_nanoseconds": 813000000
+        },
+        "suggestions": [
+          {
+            "id": "bf890663-8513-48b0-9444-fba23bb47133",
+            "isSelected": false,
+            "text": "E55.8C8",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "0dc7866a-9ba6-407e-800a-db5846125b73",
+            "isSelected": false,
+            "text": "E55.9CA",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "0e136644-5cdb-4902-8220-c1959fe41ab9",
+            "isSelected": false,
+            "text": "E55.8C1",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9c60a15e-e358-4cfe-b373-ae87e91b0906",
+            "isSelected": false,
+            "text": "C44.9C4",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152086",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Calculez la conversion suivante :<br />(361,59375)₁₀ = (?)₂",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059318,
+          "_nanoseconds": 484000000
+        },
+        "suggestions": [
+          {
+            "id": "9a5154c1-0cee-48f5-94c4-fe815a1d7ce7",
+            "isSelected": false,
+            "text": "100101101,10011",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9f1e3479-0b39-4268-ada9-9b4af57c2a84",
+            "isSelected": false,
+            "text": "101101101,11001",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7f0e9ab6-8377-442a-a3c2-87fea198f7f7",
+            "isSelected": false,
+            "text": "101111011,11001",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c2a188ed-ddcb-4fbc-93b5-22535172c07d",
+            "isSelected": false,
+            "text": "101101001,10011",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152087",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Calculez la conversion suivante :<br />(110111101,101101)₂ = (?)₁₀",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059319,
+          "_nanoseconds": 126000000
+        },
+        "suggestions": [
+          {
+            "id": "233cca40-d387-4851-9e96-2ea4a24c3d75",
+            "isSelected": false,
+            "text": "444,703125",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "41b3ec23-d296-402f-84b2-865cea02b398",
+            "isSelected": false,
+            "text": "444,203125",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "8b72eb96-430c-4edb-9e5f-688c0ed2fa6a",
+            "isSelected": false,
+            "text": "445,203125",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ddd6a6ef-045f-4373-81f5-c22f631c2c45",
+            "isSelected": false,
+            "text": "445,703125",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152088",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Un texte est composé de 255 caractères. Si chaque trois caractères sont codés sur 12 bits, la taille d'un tiers de ce texte en bytes est :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059319,
+          "_nanoseconds": 797000000
+        },
+        "suggestions": [
+          {
+            "id": "8357ddc4-0cd2-461b-87fb-6cc669749c3a",
+            "isSelected": false,
+            "text": "380",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "94798614-9c99-482e-83ed-2d70c25507fa",
+            "isSelected": false,
+            "text": "42,5",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "64593bf1-f6f7-4ad9-8296-1eae99d08669",
+            "isSelected": false,
+            "text": "127,5",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d422333e-6050-4f5d-a7f5-eac449062fbb",
+            "isSelected": false,
+            "text": "63,75",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152089",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "La taille de deux tiers de ce texte en kilobytes est :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059320,
+          "_nanoseconds": 442000000
+        },
+        "suggestions": [
+          {
+            "id": "4671bff4-7aa5-4ce9-8d37-73af6a3d70ea",
+            "isSelected": false,
+            "text": "0,0830078125",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d8c7e3d8-a421-428d-b2a1-3b7e176c4c13",
+            "isSelected": false,
+            "text": "0,1245117188",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9658c162-1e9b-4844-888e-88033286e775",
+            "isSelected": false,
+            "text": "0,0415039063",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "a7da758c-d2ca-435f-80fe-fe73c153b706",
+            "isSelected": false,
+            "text": "0,0125650375",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152090",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "La capacité de stockage d'une mémoire est de 128 Ko. La taille du registre d'adresse est de 12 bits. La taille du registre de données en octets est :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059321,
+          "_nanoseconds": 114000000
+        },
+        "suggestions": [
+          {
+            "id": "15989cbe-282d-44e1-b846-ba52721dae46",
+            "isSelected": false,
+            "text": "08",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "023ea2fd-2e84-413b-b1ca-4362b5ee62c5",
+            "isSelected": false,
+            "text": "16",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d4e9ec58-cb95-44a6-ad00-53c0999452b3",
+            "isSelected": false,
+            "text": "32",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "aa2671a4-b6ac-4499-9166-ded3d2741ceb",
+            "isSelected": false,
+            "text": "64",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152091",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "L'adresse de la 13ᵉ case est :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059321,
+          "_nanoseconds": 775000000
+        },
+        "suggestions": [
+          {
+            "id": "bf09507e-767c-4ff6-93f7-43f0c733cf21",
+            "isSelected": false,
+            "text": "@000000001101",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7564aa8d-5276-467b-80da-0fd78b49a1df",
+            "isSelected": false,
+            "text": "@000000001100",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a7e3c916-6a32-4d17-b2f0-7f83482387c7",
+            "isSelected": false,
+            "text": "@000000001010",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "8741aece-8f1a-45d6-afd6-634cb77612c1",
+            "isSelected": false,
+            "text": "@000000001011",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152092",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Une mémoire de 4096 mots est composée à partir de RAM de 512 × 2 bits. Le nombre de bascules nécessaires pour le registre de données est :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059322,
+          "_nanoseconds": 400000000
+        },
+        "suggestions": [
+          {
+            "id": "8c6b2c64-5c07-4ccf-86e0-1ce8bcdf0cf4",
+            "isSelected": false,
+            "text": "2",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "bbb82588-8708-42d9-8769-34c923daaba3",
+            "isSelected": false,
+            "text": "4",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "050cb622-58bc-4122-8e5a-58428d5b9248",
+            "isSelected": false,
+            "text": "8",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "db18e2fb-4785-4eb7-b73e-45dc71a91dd5",
+            "isSelected": false,
+            "text": "16",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152093",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "La capacité de cette mémoire en kilobytes est :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059323,
+          "_nanoseconds": 34000000
+        },
+        "suggestions": [
+          {
+            "id": "220e2381-c7dd-458a-9bbd-a8901735ca7a",
+            "isSelected": false,
+            "text": "0,25",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "1e5c7f3e-5bc8-45af-836b-faa8dcd82a75",
+            "isSelected": false,
+            "text": "0,5",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "1a5bee12-ce38-47b0-a08f-0e0accb1a709",
+            "isSelected": false,
+            "text": "2",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "2a918040-30c4-4c32-9c28-bc623e22b0dd",
+            "isSelected": false,
+            "text": "4",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152094",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "(395,453,125)₁₀ = (....)₈",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059323,
+          "_nanoseconds": 676000000
+        },
+        "suggestions": [
+          {
+            "id": "49dc82ca-715f-48ca-99f1-e35b239a13a0",
+            "isSelected": false,
+            "text": "316,53",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6d84760f-4566-4417-b63d-a13392d6c733",
+            "isSelected": false,
+            "text": "316,35",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7b9a7232-1993-4338-a80f-9ec4cd528a17",
+            "isSelected": false,
+            "text": "613,35",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "effcaf16-26dc-4ff3-9270-f91f3ab0e9c6",
+            "isSelected": false,
+            "text": "613,53",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152095",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "(111010010,011010)₂ = (....)₁₀",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059324,
+          "_nanoseconds": 327000000
+        },
+        "suggestions": [
+          {
+            "id": "0c6688e3-554f-4d9a-8858-e3f5b0b235b4",
+            "isSelected": false,
+            "text": "644,52604",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "055d35d4-7c36-41ab-b34e-db83a6f6c7a5",
+            "isSelected": false,
+            "text": "446,40625",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "9194fa5d-126d-4904-8ddd-6ad6cd72ed7e",
+            "isSelected": false,
+            "text": "446,40675",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d9c0e41a-2398-45e4-a5dd-f29b28cb3243",
+            "isSelected": false,
+            "text": "644,40625",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152096",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "(EB3F,5C)₁₆ = (....)₈",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059324,
+          "_nanoseconds": 974000000
+        },
+        "suggestions": [
+          {
+            "id": "6f0d1a6b-03d2-40e5-b898-7efd9dd956ae",
+            "isSelected": false,
+            "text": "165477,27",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "2c752597-85b2-4eca-b609-b4f3cb7fa400",
+            "isSelected": false,
+            "text": "365471,072",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d8828c00-d4df-44df-ad26-ec4b77be95a4",
+            "isSelected": false,
+            "text": "165477,275",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f6d262f2-f1ed-4674-802b-91c434b1783d",
+            "isSelected": false,
+            "text": "156477,27",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152097",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "(....)₁₆ = (1073,375)₁₀",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059325,
+          "_nanoseconds": 592000000
+        },
+        "suggestions": [
+          {
+            "id": "4a2d38a1-1be7-4378-9aad-55ec3d05c164",
+            "isSelected": false,
+            "text": "413,65",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "3a3a27c2-132a-4c39-9941-cc5961934305",
+            "isSelected": false,
+            "text": "413,6",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "cc60c9c5-0138-45ca-bd08-e8f27d3475a5",
+            "isSelected": false,
+            "text": "431,6",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "839e02dc-1a4f-48b9-8b37-57f9215fca88",
+            "isSelected": false,
+            "text": "413,66",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152098",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "La taille d'un texte est 45 KB et chaque trois caractères sont codés sur 240 octets. Le nombre de caractères de la moitié de ce texte est :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059326,
+          "_nanoseconds": 171000000
+        },
+        "suggestions": [
+          {
+            "id": "7bcdb634-6902-458b-9715-cab32484006b",
+            "isSelected": false,
+            "text": "23040",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "7f434a86-e5cb-4262-b862-90e151ec2cc7",
+            "isSelected": false,
+            "text": "192",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9ebb76e7-c174-41e0-a51c-3f1401154a1c",
+            "isSelected": false,
+            "text": "288",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "96a54155-9f8e-463f-9686-3e54038c111b",
+            "isSelected": false,
+            "text": "....",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152099",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Soit une mémoire de 2⁹, elle est composée de 4 blocs RAM en parallèle. Une mémoire de 64 octets composée de 8 entrées d'adresses. Le nombre d'entrées et sorties de données (la longueur en bits d'un mot) est :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059326,
+          "_nanoseconds": 779000000
+        },
+        "suggestions": [
+          {
+            "id": "b3976954-a69d-42af-ac99-2a20b3d5bb0e",
+            "isSelected": false,
+            "text": "2",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "0188a144-6c07-443b-a7c0-bc52b7d9bb06",
+            "isSelected": false,
+            "text": "3",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "d160608f-0c12-4a3c-b606-0ae16abd59ae",
+            "isSelected": false,
+            "text": "4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6c9e6ff6-9fe9-4626-a579-3696a4afe0b3",
+            "isSelected": false,
+            "text": "....",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152100",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Sachant que d = 2 Mo (la longueur d'un mot dans une RAM). Le nombre d'entrées d'adresses nécessaire pour chaque RAM est :",
+        "year": 2024,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059327,
+          "_nanoseconds": 400000000
+        },
+        "suggestions": [
+          {
+            "id": "06d1381a-1fc5-415b-9744-f6164281fd4d",
+            "isSelected": false,
+            "text": "7",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b49b0b8a-75c9-4d2c-bc9b-b68a2ce80d9d",
+            "isSelected": false,
+            "text": "8",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "4b07e432-7b82-4b51-9051-06447915bcfe",
+            "isSelected": false,
+            "text": "9",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "1cca38d4-f468-4c00-a0a0-a81eb5613b04",
+            "isSelected": false,
+            "text": "10",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152101",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Une mémoire permanente contenant les premières instructions nécessaires à la machine pour démarrer :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059328,
+          "_nanoseconds": 10000000
+        },
+        "suggestions": [
+          {
+            "id": "9421b2b8-dc76-4e53-a767-0dda2702c3ab",
+            "isSelected": false,
+            "text": "La RAM",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "2da3f8fc-0636-4ec7-b04e-eeb6fd1fb6a1",
+            "isSelected": false,
+            "text": "La ROM",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "7ec2e853-628f-462a-a712-5eff4d084fac",
+            "isSelected": false,
+            "text": "Le disque dur",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9e30dfb2-5888-4627-bd9d-ed3674cdb984",
+            "isSelected": false,
+            "text": "La mémoire auxiliaire",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152102",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Un système d'exploitation conçu pour fonctionner sur les appareils mobiles :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059328,
+          "_nanoseconds": 606000000
+        },
+        "suggestions": [
+          {
+            "id": "1c076846-835c-41a0-8c6a-3658571f3901",
+            "isSelected": false,
+            "text": "Microsoft",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "79c78d8c-f082-4ca5-848c-eb8bb4e45b0c",
+            "isSelected": false,
+            "text": "macOS",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "56b282e0-b9db-4de0-8771-125ab2d70016",
+            "isSelected": false,
+            "text": "iOS",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "17166869-9482-461b-a47b-f64b379e36fc",
+            "isSelected": false,
+            "text": "Mozilla",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152103",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Une feuille rigide qui peut contenir des données sous la forme de petits trous qui sont stratégiquement positionnés pour être lus par des ordinateurs :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059329,
+          "_nanoseconds": 215000000
+        },
+        "suggestions": [
+          {
+            "id": "d110c861-aa79-433e-86c7-6f18a7321c18",
+            "isSelected": false,
+            "text": "La carte d'interface",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "20d7656e-dc03-407f-aee5-6f5406ba27fc",
+            "isSelected": false,
+            "text": "Le compilateur",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "1513a9c0-b933-48cb-9a98-723423f0951f",
+            "isSelected": false,
+            "text": "La carte perforée",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "199fb27e-cf7d-4ed9-858f-0bdcb4cfc6c0",
+            "isSelected": false,
+            "text": "La carte de développement",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152104",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Ensemble de programmes permettant de faire fonctionner et contrôler un ordinateur :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059329,
+          "_nanoseconds": 841000000
+        },
+        "suggestions": [
+          {
+            "id": "0d022b2c-6996-46ef-adfd-4b0dd795382e",
+            "isSelected": false,
+            "text": "Un langage de programmation",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "456e2e7b-8c83-4df0-af4d-fcec27f6aee0",
+            "isSelected": false,
+            "text": "Un système d'exploitation",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "6da60f6d-bb08-4867-97f3-5803ff18ae3d",
+            "isSelected": false,
+            "text": "Un algorithme",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "62de9062-7476-4e87-9aa6-2b726b97305f",
+            "isSelected": false,
+            "text": "Le système binaire",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152105",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Calculez les conversions suivantes : (15796)₁₀ = (................)₈",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059330,
+          "_nanoseconds": 467000000
+        },
+        "suggestions": [
+          {
+            "id": "30782690-617d-4fd7-b766-61071341fd1d",
+            "isSelected": false,
+            "text": "36654",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a2e2ef1d-d7f7-4832-8e4a-6604328d1c5f",
+            "isSelected": false,
+            "text": "36656",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "672e5c8b-99e7-42a6-826b-31c93067a2ec",
+            "isSelected": false,
+            "text": "36546",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f2b1c21c-f268-4290-90e4-bcb47fd87908",
+            "isSelected": false,
+            "text": "36664",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152106",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "( )₁₀ = (1AC4E7F)₁₆",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059331,
+          "_nanoseconds": 101000000
+        },
+        "suggestions": [
+          {
+            "id": "d7bb0df8-ee1f-46d5-829e-34d03e87a8d1",
+            "isSelected": false,
+            "text": "28069503",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "6eb987fd-81e7-4954-a6b7-5f99360dd3a7",
+            "isSelected": false,
+            "text": "28069488",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "87177844-b702-479b-8793-09c1c528ce85",
+            "isSelected": false,
+            "text": "28069391",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7d1494e5-31b9-4f12-9c98-aecad9acf922",
+            "isSelected": false,
+            "text": "28069376",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152107",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "(745376)₈ = (........)₁₆",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059331,
+          "_nanoseconds": 716000000
+        },
+        "suggestions": [
+          {
+            "id": "133d9b12-58b5-4604-8528-5078049e93f5",
+            "isSelected": false,
+            "text": "3CBFD",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ba99abc2-78a4-4b06-aec0-9e59757699a5",
+            "isSelected": false,
+            "text": "2CBFE",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c2a7b527-4c3c-4945-a9b4-3677ee1678b6",
+            "isSelected": false,
+            "text": "2CAFE",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7c83392b-a273-49c9-a15a-793d441c313e",
+            "isSelected": false,
+            "text": "3CAFE",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152108",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "(379.203125)₁₀ = (........)₂",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059332,
+          "_nanoseconds": 354000000
+        },
+        "suggestions": [
+          {
+            "id": "929715e0-8f37-4e7f-b2a7-1ff670834e72",
+            "isSelected": false,
+            "text": "101111011.001001",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9198ceb1-948a-4e12-9c26-86c2f4c3985b",
+            "isSelected": false,
+            "text": "101111011.001101",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "628ef9d5-41fb-471e-a9a6-aa81ee775e1d",
+            "isSelected": false,
+            "text": "101111011.001101",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "3206503f-a3b1-4451-9574-ae7bb1797a68",
+            "isSelected": false,
+            "text": "101111011.001001",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152109",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "(1991)₂ = (........)₁₀",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059332,
+          "_nanoseconds": 956000000
+        },
+        "suggestions": [
+          {
+            "id": "38d023c0-b228-4225-a264-ec04f70f0f6c",
+            "isSelected": false,
+            "text": "444.703125",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6af3df43-cba9-4cc7-8f49-1b2ae1140d09",
+            "isSelected": false,
+            "text": "444.203125",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a7147b84-b90f-4258-a8f1-755c8ee061f8",
+            "isSelected": false,
+            "text": "445.203125",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "af24d8a1-5f3b-424d-9ef9-bf2f3f2a8ce5",
+            "isSelected": false,
+            "text": "445.703125",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152110",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Une phrase est composée de 128 caractères. Si chaque trois caractères sont codés sur 12 bits, la taille d'un tiers de cette phrase en Byte :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059333,
+          "_nanoseconds": 606000000
+        },
+        "suggestions": [
+          {
+            "id": "ab767988-9a60-4fcd-828b-bd659529aa26",
+            "isSelected": false,
+            "text": "4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e8d53cb9-8334-4b77-9a7e-3181af7addb2",
+            "isSelected": false,
+            "text": "16",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "dc1ee708-14ef-4425-803d-8f62ea2a4912",
+            "isSelected": false,
+            "text": "21.33",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "986259ba-0a64-4232-b409-8a9baee033aa",
+            "isSelected": false,
+            "text": "170.66",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152111",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "La taille de la moitié de cette phrase en KB :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059334,
+          "_nanoseconds": 191000000
+        },
+        "suggestions": [
+          {
+            "id": "2c2dd6eb-5601-46e8-ad8d-a7c1e6d802b9",
+            "isSelected": false,
+            "text": "0.015625",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f4553b20-4cb8-482f-b4a0-66601afcaed6",
+            "isSelected": false,
+            "text": "0.03125",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b919bd49-005b-4bfd-8571-4f44bd8aeb56",
+            "isSelected": false,
+            "text": "0.25",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "835943c8-fd43-4514-a543-529c94e7b9f7",
+            "isSelected": false,
+            "text": "0.50",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152112",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "La capacité de stockage d'une mémoire est 64 Ko. La longueur en bit de chacun des mots est 2ⁿ bits. Quel est le nombre d'entrées d'adresses ?",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059334,
+          "_nanoseconds": 774000000
+        },
+        "suggestions": [
+          {
+            "id": "c9befdd8-704c-4811-af51-be1382b124ea",
+            "isSelected": false,
+            "text": "7",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "1a5a1721-8b5e-4b94-bd41-0d3c3f666af5",
+            "isSelected": false,
+            "text": "10",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "936a5c4b-576f-475d-ac21-e6e58369c323",
+            "isSelected": false,
+            "text": "12",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "cbdf606c-5767-4b5b-9be5-b6a19368d513",
+            "isSelected": false,
+            "text": "14",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152113",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Le nombre de mots ou de cases que dispose cette mémoire :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059335,
+          "_nanoseconds": 401000000
+        },
+        "suggestions": [
+          {
+            "id": "043c2479-e28b-4771-b6ee-73466331812c",
+            "isSelected": false,
+            "text": "2048",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a2214e26-26e1-41ab-98bd-f50abef2395c",
+            "isSelected": false,
+            "text": "3072",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "baeead05-78bb-4eea-9fa2-a8bf0a38e1a9",
+            "isSelected": false,
+            "text": "4096",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "87d2b695-5ddd-4fd8-b9be-ec0cb4a65a9f",
+            "isSelected": false,
+            "text": "8192",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152114",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "L'adresse de la 10ᵉ case est :",
+        "year": 2023,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059336,
+          "_nanoseconds": 1000000
+        },
+        "suggestions": [
+          {
+            "id": "9eae8d9b-0c77-4c5b-809e-22680cf3ddd5",
+            "isSelected": false,
+            "text": "000000001000",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "617cae0b-179b-402b-97bc-2743ad51481c",
+            "isSelected": false,
+            "text": "000000001001",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "51936d1b-22a3-4221-82d5-99f704c2a2b8",
+            "isSelected": false,
+            "text": "000000001010",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "036878d0-8b58-4bf4-b665-c8d371f658c5",
+            "isSelected": false,
+            "text": "000000001011",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152066",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Convertissez les nombres de la base 10 à la base 2 : (199)₁₀ = (?)₂",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059304,
+          "_nanoseconds": 642000000
+        },
+        "suggestions": [
+          {
+            "id": "7dee4262-bf78-4d1e-b70c-3444f5c3bdd3",
+            "isSelected": false,
+            "text": "11000111",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "afef1a09-d10c-46cc-8de7-de6168bee3a3",
+            "isSelected": false,
+            "text": "11000101",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b906e658-166c-4c09-8ad8-dfeedcf228ac",
+            "isSelected": false,
+            "text": "11010101",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "999dbf73-9447-41cd-9f71-ee5c996e3d88",
+            "isSelected": false,
+            "text": "11001101",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152067",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Convertissez les nombres de la base 2 à la base 10 : (101110101)₂ = (?)₁₀",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059305,
+          "_nanoseconds": 324000000
+        },
+        "suggestions": [
+          {
+            "id": "964c6e7a-dae5-4a2b-8f4c-04ff1018ffdd",
+            "isSelected": false,
+            "text": "372",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "dbe7ac0e-aa75-42d4-b875-3109488649d5",
+            "isSelected": false,
+            "text": "373",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "3caa54f6-857a-41b2-a524-4d5544aa974d",
+            "isSelected": false,
+            "text": "576",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "3555dd70-151f-48ef-b771-69bdcfa911c7",
+            "isSelected": false,
+            "text": "573",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152068",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Convertissez les nombres de la base 10 à la base 8 : (200)₁₀ = (?)₈",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059306,
+          "_nanoseconds": 65000000
+        },
+        "suggestions": [
+          {
+            "id": "5474cde0-24c7-41f1-a435-b7a6d57d085a",
+            "isSelected": false,
+            "text": "512",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "5447912f-b912-4d77-974f-26921020c3df",
+            "isSelected": false,
+            "text": "410",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f12c875c-355d-443f-afbc-ca8a73837a4e",
+            "isSelected": false,
+            "text": "311",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "3123f295-96ed-4a7e-b318-f2807c33f78f",
+            "isSelected": false,
+            "text": "310",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152069",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Convertissez les nombres de la base 8 à la base 10 : (471)₈ = (?)₁₀",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059306,
+          "_nanoseconds": 833000000
+        },
+        "suggestions": [
+          {
+            "id": "db556f0f-8a57-452e-945a-5c0b5a9930bc",
+            "isSelected": false,
+            "text": "513",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f5fa6609-4469-432c-9e7a-710efdfde391",
+            "isSelected": false,
+            "text": "209",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d7ff7586-9985-4e32-aa59-e691e911bd47",
+            "isSelected": false,
+            "text": "313",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "71f8ef07-acc7-4aa1-aadc-e00677fb75f7",
+            "isSelected": false,
+            "text": "213",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152070",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Convertissez les nombres de la base 10 à la base 16 : (601)₁₀ = (?)₁₆",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059307,
+          "_nanoseconds": 531000000
+        },
+        "suggestions": [
+          {
+            "id": "4762b94f-cd44-439b-9684-8bd1e83d0a18",
+            "isSelected": false,
+            "text": "159",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9e0ed476-d668-4795-a545-3dd6fb3f3106",
+            "isSelected": false,
+            "text": "259",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "6705f0fb-c5b3-418f-9914-bc9c108c4a4c",
+            "isSelected": false,
+            "text": "249",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6a42b07b-8dba-42db-bf40-497031b37744",
+            "isSelected": false,
+            "text": "559",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152071",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Convertissez les nombres de la base 16 à la base 10 : (21B)₁₆ = (?)₁₀",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059308,
+          "_nanoseconds": 198000000
+        },
+        "suggestions": [
+          {
+            "id": "00ccd343-866b-40b7-8f8f-30b4b6175d3a",
+            "isSelected": false,
+            "text": "539",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "b38d44cf-6c1b-47b1-9804-40b20234bbba",
+            "isSelected": false,
+            "text": "599",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "3974f758-1aab-46b4-aa7c-f1a48aa3491f",
+            "isSelected": false,
+            "text": "739",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "db6429ee-c398-4004-ba1b-f38f203e51d7",
+            "isSelected": false,
+            "text": "538",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152072",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Convertissez les nombres de la base 2 à la base 8 : (11101010111000110)₂ = (?)₈",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059308,
+          "_nanoseconds": 870000000
+        },
+        "suggestions": [
+          {
+            "id": "254657ff-4e3b-40d3-8f78-a07d6e6cc268",
+            "isSelected": false,
+            "text": "352706",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b1318574-26ea-423a-9343-17bd9ef6d373",
+            "isSelected": false,
+            "text": "342706",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c8d47686-8e03-4918-b4d0-80647a42058d",
+            "isSelected": false,
+            "text": "352716",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4bd0a5b4-711c-42c3-b122-bda20ea67ff1",
+            "isSelected": false,
+            "text": "352706",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152073",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Convertissez les nombres de la base 2 à la base 16 : (111010111000101011111)₂ = (?)",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059309,
+          "_nanoseconds": 560000000
+        },
+        "suggestions": [
+          {
+            "id": "ee49b970-2685-4198-aa98-747621d9a6e8",
+            "isSelected": false,
+            "text": "EBBAFF",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a38abbd9-a70f-4721-ba6b-56e29abc9327",
+            "isSelected": false,
+            "text": "CBBAFF",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "8a728918-e987-4706-a35c-eb8554572285",
+            "isSelected": false,
+            "text": "EBBAFF",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "8e11412f-4c11-4a56-b492-b9c71a6385d3",
+            "isSelected": false,
+            "text": "DB7ABF",
+            "isStudentAnswer": false,
+            "count": 1
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152074",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "La taille du bus d'adresse est :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059310,
+          "_nanoseconds": 322000000
+        },
+        "suggestions": [
+          {
+            "id": "112cd8c7-5dbf-47e5-8727-1aeee41452f5",
+            "isSelected": false,
+            "text": "2",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "b889dd9e-1f94-4ff6-b99b-1bef647c9905",
+            "isSelected": false,
+            "text": "7",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "1a7d9453-1342-4741-a993-060a230a9e2e",
+            "isSelected": false,
+            "text": "16",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "70263b0c-43ac-43a7-9a10-7fb5a1e26f28",
+            "isSelected": false,
+            "text": "6",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 0,
+          "totalInteractions": 1,
+          "wrong": 1
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152075",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "La taille du bus de donnée est :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059311,
+          "_nanoseconds": 24000000
+        },
+        "suggestions": [
+          {
+            "id": "2fd0f03f-bc0c-40d7-916b-b8ee63e059d9",
+            "isSelected": false,
+            "text": "1",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "2fb47d27-10ec-4d21-8f24-ec878d38ee1c",
+            "isSelected": false,
+            "text": "8",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "936d137d-ffe0-4198-bac9-c3117c5513f7",
+            "isSelected": false,
+            "text": "64",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "5294648d-7214-4fdb-bc29-559b31f460fd",
+            "isSelected": false,
+            "text": "21",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152076",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "La capacité en bits est :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059311,
+          "_nanoseconds": 696000000
+        },
+        "suggestions": [
+          {
+            "id": "2a524093-738e-486e-b159-503746ff9106",
+            "isSelected": false,
+            "text": "3292",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "36880661-e2e1-40f6-8bf2-a85cc5e0c0fd",
+            "isSelected": false,
+            "text": "2019",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "254ea48f-9821-47c7-a100-3f92abba2879",
+            "isSelected": false,
+            "text": "8064",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "1399b378-10d2-4d41-aaf6-7c34aa705a37",
+            "isSelected": false,
+            "text": "8192",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152077",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "La capacité en octets est :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059312,
+          "_nanoseconds": 428000000
+        },
+        "suggestions": [
+          {
+            "id": "f4a75b4c-5e6f-4f5c-87f2-9084e1fda627",
+            "isSelected": false,
+            "text": "1024",
+            "isStudentAnswer": false,
+            "count": 1
+          },
+          {
+            "id": "5d483934-c24f-4076-a786-665729b16f26",
+            "isSelected": false,
+            "text": "1026",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a5f1e636-bc44-4571-9d40-3c72b76708cf",
+            "isSelected": false,
+            "text": "2048",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f260c605-18e3-4d0d-a571-793bae4d0095",
+            "isSelected": false,
+            "text": "96",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152078",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Pour calculer la médiane, on utilise quelle formule ?",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059313,
+          "_nanoseconds": 204000000
+        },
+        "suggestions": [
+          {
+            "id": "481c660c-69c1-4d83-bd82-e41df42e00ae",
+            "isSelected": false,
+            "text": "=mediane(nombre1 : nombre2)",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d184fd62-2123-43a2-ba51-2da4095c6a3f",
+            "isSelected": false,
+            "text": "=mediane(nombre1 ; nombre2)",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "907028d4-d514-4edd-a3b2-fb83ee3c6aa9",
+            "isSelected": false,
+            "text": "=mediane[nombre1 ; nombre2]",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d88a02ff-64e2-4814-9926-47079c275c09",
+            "isSelected": false,
+            "text": "=mediane(nombre1 , nombre2)",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "152079",
+        "categoryId": "ATYCMlE6URobnYcQGBMw",
+        "categoryName": "Informatique",
+        "subcategoryId": "qQ1EvfgBGm04YYcJGyCR",
+        "subcategoryName": "Informatique",
+        "text": "Unité de commande :",
+        "year": 2021,
+        "location": "TIZIOUZOU",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1753059313,
+          "_nanoseconds": 869000000
+        },
+        "suggestions": [
+          {
+            "id": "7486af11-a9da-438b-93cc-74966373b817",
+            "isSelected": false,
+            "text": "Elle dirige toutes les opérations qui se déroulent dans l'écran.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b405f102-603d-4441-8f77-f281a0548d3a",
+            "isSelected": false,
+            "text": "Elle dirige toutes les opérations qui se déroulent dans la carte mère.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e8b014aa-3746-43ad-ac3a-10331a371e00",
+            "isSelected": false,
+            "text": "Elle dirige toutes les opérations qui se déroulent dans la mémoire.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "49d6317d-7067-459c-9408-83b8d1d3037c",
+            "isSelected": false,
+            "text": "Elle dirige toutes les opérations qui se déroulent dans l'ordinateur.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      }
+    ],
+    "modules": [
+      {
+        "id": "ATYCMlE6URobnYcQGBMw",
+        "name": "Informatique",
+        "studyLevel": 1
+      }
+    ],
+    "subcategories": [
+      {
+        "id": "qQ1EvfgBGm04YYcJGyCR",
+        "name": "Informatique",
+        "category": {
+          "id": "ATYCMlE6URobnYcQGBMw",
+          "father": "",
+          "name": "Informatique"
+        }
+      }
+    ],
+    "statistics": {
+      "time": 0,
+      "wrongCount": 0,
+      "correctCount": 0,
+      "lastAnsweredQuestionIndex": 0,
+      "neutralCount": 0,
+      "questionsCount": 54
+    },
+    "type": "quiz",
+    "createdAt": {
+      "_seconds": 1756080057,
+      "_nanoseconds": 824000000
+    }
+  }
+}

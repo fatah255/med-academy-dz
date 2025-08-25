@@ -1,0 +1,1385 @@
+{
+  "data": {
+    "name": "Physiologie",
+    "questions": [
+      {
+        "id": "168643",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "eVg9QmO7Ap4X58GABaUa",
+        "subcategoryName": "Le potentiel membranaire",
+        "text": "Le potentiel de repos des neurones",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546715,
+          "_nanoseconds": 154000000
+        },
+        "suggestions": [
+          {
+            "id": "6330b475-bf4a-4dff-b2aa-a71dc95f1495",
+            "isSelected": false,
+            "text": "est caractérisé par un excès de charges positives à la face interne de la membrane plasmique.",
+            "count": 0
+          },
+          {
+            "id": "cd5c54b2-0a51-485d-8436-0331bd5dcf1a",
+            "isSelected": false,
+            "text": "est de l'ordre de 70mV.",
+            "count": 0
+          },
+          {
+            "id": "a1a57c1b-cebf-495b-b344-10c5a932bb9c",
+            "isSelected": false,
+            "text": "est maintenu seulement grâce aux pompes Na'/K' nécessitant de l'ATP.",
+            "count": 0
+          },
+          {
+            "id": "2033d7cb-b275-4281-b0d3-31454eb6fff0",
+            "isSelected": false,
+            "text": "est maintenu grâce à des canaux potassiques voltage dépendant.",
+            "count": 0
+          },
+          {
+            "id": "a4815773-7850-456a-8e93-53214e70755d",
+            "isSelected": false,
+            "text": "toutes ces réponses sont fausses",
+            "count": 1
+          },
+          {
+            "id": "e1f2de32-dd80-4713-9c3d-9f8ec51ba5c7",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168644",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "eVg9QmO7Ap4X58GABaUa",
+        "subcategoryName": "Le potentiel membranaire",
+        "text": "Le potentiel de repos des neurones",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546715,
+          "_nanoseconds": 689000000
+        },
+        "suggestions": [
+          {
+            "id": "72946503-0e2d-4cdc-b485-4f4b1e1bd219",
+            "isSelected": false,
+            "text": "la concentration en ions K' est supérieure en extracellulaire qu'en intracellulaire.",
+            "count": 0
+          },
+          {
+            "id": "460b40ac-0582-49db-9e16-9e6867bc2b10",
+            "isSelected": false,
+            "text": "la membrane est davantage perméable aux ions K qu'aux ions Nat.",
+            "count": 1
+          },
+          {
+            "id": "f465c290-c157-484d-a735-65e1d094f551",
+            "isSelected": false,
+            "text": "les canaux de fuite K' engendrent un important flux sortant d'ions K.",
+            "count": 1
+          },
+          {
+            "id": "6d6abe85-c03b-47b2-ab89-0fdf66f21f33",
+            "isSelected": false,
+            "text": "les pompes Na'/K assurent le transport d'ions K hors de la cellule.",
+            "count": 0
+          },
+          {
+            "id": "170e4209-ee86-4924-ac94-32064c3e70b9",
+            "isSelected": false,
+            "text": "toutes ces réponses sont fausses",
+            "count": 0
+          },
+          {
+            "id": "8d9175f4-1f38-4b42-bce8-e9b0d0b9f3f5",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168645",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "eVg9QmO7Ap4X58GABaUa",
+        "subcategoryName": "Le potentiel membranaire",
+        "text": "Les périodes réfractaires",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546716,
+          "_nanoseconds": 211000000
+        },
+        "suggestions": [
+          {
+            "id": "29642602-6801-4d08-b863-06bccbd2311f",
+            "isSelected": false,
+            "text": "la période réfractaire absolue succède à la période réfractaire relative.",
+            "count": 0
+          },
+          {
+            "id": "4b0ca86e-2c50-4823-a482-5b5222d14ca6",
+            "isSelected": false,
+            "text": "un potentiel d'action peut apparaître lorsque la fibre est en période réfractaire absolue.",
+            "count": 0
+          },
+          {
+            "id": "9ff0f763-99d6-4983-8821-a3e9108bfb9e",
+            "isSelected": false,
+            "text": "les périodes réfractaires permettent d'augmenter la fréquence de décharge des neurones.",
+            "count": 0
+          },
+          {
+            "id": "9f959a76-5c33-4c69-8d58-ff304ad14c27",
+            "isSelected": false,
+            "text": "en conditions physiologiques, les périodes réfractaires permettent d'orienter le potentiel d'action dans le sens antidromique.",
+            "count": 0
+          },
+          {
+            "id": "464a1397-1761-4ba3-9a9f-fa8d759f1c4b",
+            "isSelected": false,
+            "text": "toutes ces réponses sont fausses",
+            "count": 1
+          },
+          {
+            "id": "d6bdd658-87fc-4ffb-8b56-2365cf08bcde",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168646",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "eVg9QmO7Ap4X58GABaUa",
+        "subcategoryName": "Le potentiel membranaire",
+        "text": "Le potentiel d'action",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546716,
+          "_nanoseconds": 744000000
+        },
+        "suggestions": [
+          {
+            "id": "1256d28c-fa12-491a-b0b2-54f55041ce98",
+            "isSelected": false,
+            "text": "l'amplitude du potentiel d'action est indépendante du diamètre du neurone.",
+            "count": 0
+          },
+          {
+            "id": "6585893a-dfef-4533-a9ff-5f6f8edbc7ea",
+            "isSelected": false,
+            "text": "le potentiel d'action d'un nerf a une amplitude proportionnelle à l'intensité de la stimulation.",
+            "count": 1
+          },
+          {
+            "id": "040284aa-f6a0-4675-886e-5596c9411658",
+            "isSelected": false,
+            "text": "la vitesse de propagation du potentiel d'action le long d'un neurone est indépendante de l'intensité de stimulation.",
+            "count": 1
+          },
+          {
+            "id": "78161eab-dcdd-42e5-9d85-f7952b3597ba",
+            "isSelected": false,
+            "text": "les potentiels post-synaptiques sont toujours des potentiels d'action.",
+            "count": 0
+          },
+          {
+            "id": "06b09bba-efdd-4991-b988-7d273d579199",
+            "isSelected": false,
+            "text": "toutes ces réponses sont fausses",
+            "count": 0
+          },
+          {
+            "id": "a96051b7-46d2-4f47-8ebb-5f23394d9970",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168647",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "eVg9QmO7Ap4X58GABaUa",
+        "subcategoryName": "Le potentiel membranaire",
+        "text": "Le potentiel d'action",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546717,
+          "_nanoseconds": 263000000
+        },
+        "suggestions": [
+          {
+            "id": "eb8b9cd0-6002-41c1-9a82-a6a760a39791",
+            "isSelected": false,
+            "text": "en conditions expérimentales, la conduction peut se faire dans le sens antidromique.",
+            "count": 1
+          },
+          {
+            "id": "43be5e16-4f29-4502-bf6e-c03f4b1dd652",
+            "isSelected": false,
+            "text": "plus l'intensité de la stimulation est grande, plus la vitesse de propagation est élevée.",
+            "count": 0
+          },
+          {
+            "id": "231f341f-ba28-4543-befe-8969391442fe",
+            "isSelected": false,
+            "text": "la fréquence des potentiels d'action est indépendante de l'intensité de la stimulation.",
+            "count": 0
+          },
+          {
+            "id": "7776d4e8-1125-4a73-b572-acad57a1a515",
+            "isSelected": false,
+            "text": "dans un nerf, les fibres sont recrutées par propagation des potentiels d'action aux fibres voisines.",
+            "count": 0
+          },
+          {
+            "id": "984d3bfe-45d7-46fe-9930-de0bb2075908",
+            "isSelected": false,
+            "text": "lors de la propagation du potentiel d'action, des canaux voltage dépendant sont activés et modifient la perméabilité membranaire du neurone.",
+            "count": 1
+          },
+          {
+            "id": "2f9dbd29-8237-4e38-9693-30fb1d05a69b",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168561",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "ip9Fvy9cdui7itrqYKat",
+        "subcategoryName": "La communication cellulaire et signalisation",
+        "text": "les ligands hydrosolubles",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546667,
+          "_nanoseconds": 918000000
+        },
+        "suggestions": [
+          {
+            "id": "371920e5-50f6-4ebd-9a12-34754224b27d",
+            "isSelected": false,
+            "text": "diffusent librement à travers la membrane plasmique",
+            "count": 1
+          },
+          {
+            "id": "3e34212f-f1ac-4c0f-8e8e-88afb7a5ab9c",
+            "isSelected": false,
+            "text": "certains de leurs récepteurs sont intracellulaires",
+            "count": 0
+          },
+          {
+            "id": "25115a94-9c5a-45af-9252-37a130271807",
+            "isSelected": false,
+            "text": "induisent des réponses de longues durées",
+            "count": 0
+          },
+          {
+            "id": "305d245a-0d04-41f7-8c20-28fd38d96aaa",
+            "isSelected": false,
+            "text": "peuvent agir sur des enzymes, sur des canaux ioniques et sur la transcription des gènes",
+            "count": 1
+          },
+          {
+            "id": "9e0a47ab-9830-4670-b458-e34ef347e787",
+            "isSelected": false,
+            "text": "toutes ces réponses sont fausses",
+            "count": 1
+          },
+          {
+            "id": "619579bc-9daf-4792-a843-6306df0ae511",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 3,
+          "totalInteractions": 3
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168562",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "ip9Fvy9cdui7itrqYKat",
+        "subcategoryName": "La communication cellulaire et signalisation",
+        "text": "quelles sont les ligands hydrosolubles",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546668,
+          "_nanoseconds": 431000000
+        },
+        "suggestions": [
+          {
+            "id": "399010dd-bc61-4bef-a520-c3741876599e",
+            "isSelected": false,
+            "text": "glucagon",
+            "count": 3
+          },
+          {
+            "id": "cf33d44e-d8a9-40c6-b849-547a147e325d",
+            "isSelected": false,
+            "text": "epidermal growth factor (EGF)",
+            "count": 1
+          },
+          {
+            "id": "5020506d-d023-4678-bfae-e152e40f60f5",
+            "isSelected": false,
+            "text": "interleukine (IL-1)",
+            "count": 1
+          },
+          {
+            "id": "6f8bf8c8-3e93-4513-9ab7-24b4336bdf9a",
+            "isSelected": false,
+            "text": "thyroxine (T4)",
+            "count": 1
+          },
+          {
+            "id": "afbcf053-87d5-425e-a898-adace1a8774d",
+            "isSelected": false,
+            "text": "toutes ces propositions sont fausses",
+            "count": 0
+          },
+          {
+            "id": "601ccd15-ded3-4f13-8efe-5b37d79aa462",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 3,
+          "totalInteractions": 3
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168563",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "ip9Fvy9cdui7itrqYKat",
+        "subcategoryName": "La communication cellulaire et signalisation",
+        "text": "L'acétylcholine",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546668,
+          "_nanoseconds": 936000000
+        },
+        "suggestions": [
+          {
+            "id": "78d7d868-116e-44c3-90f0-baa735fc7262",
+            "isSelected": false,
+            "text": "la nicotine est l'agoniste, elle agit sur des RCPG",
+            "count": 0
+          },
+          {
+            "id": "f6b80154-2962-460d-9408-4e9f88caee76",
+            "isSelected": false,
+            "text": "la muscarine est l'antagoniste, elle agit sur des RCPG",
+            "count": 0
+          },
+          {
+            "id": "928b654a-db75-493f-b45d-aea2049a0b71",
+            "isSelected": false,
+            "text": "l'atropine est l'antagoniste, elle agit sur dés récepteurs canaux Proin Cr",
+            "count": 0
+          },
+          {
+            "id": "42e5dc7a-bcd5-4c89-af63-1b9e26cec37d",
+            "isSelected": false,
+            "text": "le curare est l'antagoniste, il agit sur des RCPG cane.",
+            "count": 0
+          },
+          {
+            "id": "28040f89-aeeb-41c0-a77a-e1f52c745d45",
+            "isSelected": false,
+            "text": "toutes les propositions sont fausses",
+            "count": 1
+          },
+          {
+            "id": "38755448-e5ff-4e77-90ec-6fc7c8feb107",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168564",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "ip9Fvy9cdui7itrqYKat",
+        "subcategoryName": "La communication cellulaire et signalisation",
+        "text": "La signalisation cellulaire",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546669,
+          "_nanoseconds": 463000000
+        },
+        "suggestions": [
+          {
+            "id": "5a057d2d-2262-45b2-a16e-999e4a0465c0",
+            "isSelected": false,
+            "text": "la sous unité ai de la protéine Gi hydrolyse le GTP en GDP+Pi",
+            "count": 1
+          },
+          {
+            "id": "7746c193-4ef5-45a2-ae56-6bd728f3bdff",
+            "isSelected": false,
+            "text": "l'adénylate cyclase qui transforme l'ATP en AMPC est une enzyme transmembranaire",
+            "count": 1
+          },
+          {
+            "id": "a1463591-5cdf-45c1-8e03-b3b6b6b090a5",
+            "isSelected": false,
+            "text": "l'AMPc considéré comme un premier messager, il active la protéine kinase A",
+            "count": 0
+          },
+          {
+            "id": "b3fd5231-c0fb-446c-8aa4-5a91f496efff",
+            "isSelected": false,
+            "text": "l'AMPC en se fixant sur la protéine kinase A, il contribue à l'amplification de la signalisation",
+            "count": 1
+          },
+          {
+            "id": "71567574-531b-4c5b-acba-bafd094f788d",
+            "isSelected": false,
+            "text": "toutes ces propositions sont fausses",
+            "count": 0
+          },
+          {
+            "id": "19af9fee-9337-439b-9bba-384f003d10c8",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168565",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "ip9Fvy9cdui7itrqYKat",
+        "subcategoryName": "La communication cellulaire et signalisation",
+        "text": "La signalisation cellulaire",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546669,
+          "_nanoseconds": 971000000
+        },
+        "suggestions": [
+          {
+            "id": "f48cdb08-fd19-48a5-8549-76a90912eb87",
+            "isSelected": false,
+            "text": "la phospholipase C est une enzyme activée par la sous unité as",
+            "count": 0
+          },
+          {
+            "id": "d2a4a287-32a8-4d1d-bc5c-59b34b77ae28",
+            "isSelected": false,
+            "text": "l'hydrolyse de phosphatidylserine par la PLC produit deux seconds messagers l'IP3 et le DAG",
+            "count": 0
+          },
+          {
+            "id": "06abb2c7-994f-4b70-b4e3-ba3b338dff06",
+            "isSelected": false,
+            "text": "le DAG (diacylglycerol) agit sur le réticulum endoplasmique et induit ainsi la libération du calcium",
+            "count": 0
+          },
+          {
+            "id": "bdd98816-edb1-4cd1-b071-0f57c4101a6d",
+            "isSelected": false,
+            "text": "le Ca quitte le réticulum endoplasmique par un transport actif",
+            "count": 0
+          },
+          {
+            "id": "2d110f42-5674-4527-aeeb-8d3c4c80484e",
+            "isSelected": false,
+            "text": "toutes ces réponses sont fausses",
+            "count": 1
+          },
+          {
+            "id": "06c14004-4725-4cd5-8137-7e1c09d8e643",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168566",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "ip9Fvy9cdui7itrqYKat",
+        "subcategoryName": "La communication cellulaire et signalisation",
+        "text": "ligands avec récepteurs enzymes",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546670,
+          "_nanoseconds": 490000000
+        },
+        "suggestions": [
+          {
+            "id": "5f15e2fe-43e3-4eda-9568-00bdac3bc958",
+            "isSelected": false,
+            "text": "Insuline",
+            "count": 1
+          },
+          {
+            "id": "e00f34e7-c5f1-4df5-814b-5d11ba0669f4",
+            "isSelected": false,
+            "text": "Glucagon",
+            "count": 0
+          },
+          {
+            "id": "c0302d35-0ae3-4e66-9da4-0a57dc33aba8",
+            "isSelected": false,
+            "text": "NGF (nerve growth factor)",
+            "count": 0
+          },
+          {
+            "id": "c0ea5c7c-681f-43f8-a4c7-a0a485b1bd09",
+            "isSelected": false,
+            "text": "ANP (atrial natriuretic peptide)",
+            "count": 0
+          },
+          {
+            "id": "d83e56fa-36b8-4c22-acf8-7f65128a771f",
+            "isSelected": false,
+            "text": "aldosterone",
+            "count": 0
+          },
+          {
+            "id": "73daa9cb-1265-4d04-be42-bc84992054ab",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168570",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "lygzdMkoH1P2AdsbudQz",
+        "subcategoryName": "La transmission synaptique",
+        "text": "Les synapses",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546673,
+          "_nanoseconds": 132000000
+        },
+        "suggestions": [
+          {
+            "id": "a0f919d6-bf86-41f2-b340-ab5d4ec716b5",
+            "isSelected": false,
+            "text": "elles sont toujours unidirectionnelles.",
+            "count": 1
+          },
+          {
+            "id": "6f30ca07-28af-411d-aac3-1885dad03615",
+            "isSelected": false,
+            "text": "elles peuvent être activatrices ou inhibitrices.",
+            "count": 0
+          },
+          {
+            "id": "76cdade8-acd3-4a2a-b96d-9c50c4efac16",
+            "isSelected": false,
+            "text": "la jonction neuromusculaire est une synapse neuro-effectrice.",
+            "count": 0
+          },
+          {
+            "id": "0d99419e-9a43-48a0-a2f7-6a3065da8565",
+            "isSelected": false,
+            "text": "au niveau des synapses électriques, le message est transmis par des courants ioniques.",
+            "count": 0
+          },
+          {
+            "id": "c11826a4-aa4f-4ba0-aac5-6150ae64d95f",
+            "isSelected": false,
+            "text": "lors de la libération du neurotransmetteur, on observe le déclenchement d'un potentiel d'action au niveau de la membrane post synaptique.",
+            "count": 0
+          },
+          {
+            "id": "9d9affec-2b55-4963-8585-3d3cd747eaef",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168571",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "lygzdMkoH1P2AdsbudQz",
+        "subcategoryName": "La transmission synaptique",
+        "text": "Les synapses chimiques",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546673,
+          "_nanoseconds": 657000000
+        },
+        "suggestions": [
+          {
+            "id": "719a90d2-89f0-44bb-a218-caee0faa80dc",
+            "isSelected": false,
+            "text": "l'entrée de Ca\" au niveau de l'élément post synaptique entraîne la production d'un potentiel post synaptique excitateur (PPSE).",
+            "count": 0
+          },
+          {
+            "id": "1e01bce8-f837-4bfa-9afe-497f7986fd86",
+            "isSelected": false,
+            "text": "les vésicules contenues dans l'élément post synaptique contiennent un seul type de neuromédiateur",
+            "count": 0
+          },
+          {
+            "id": "9075e929-a266-4aa1-813f-b563fa8b815a",
+            "isSelected": false,
+            "text": "l'augmentation du Ca intracellulaire provoque l'exocytose du neurotransmetteur.",
+            "count": 1
+          },
+          {
+            "id": "afd364d6-24d3-4b98-b98b-180727349586",
+            "isSelected": false,
+            "text": "les canaux calciques situés sur la membrane, pré synaptique sont voltage dépendant",
+            "count": 1
+          },
+          {
+            "id": "4970080b-040e-4ad9-8bf6-bfa0e360b7d9",
+            "isSelected": false,
+            "text": "toutes ces réponses sont fausses",
+            "count": 0
+          },
+          {
+            "id": "57be301e-64eb-487e-be91-e80989da8c5d",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168689",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "wlhkMCiCwUpQ4RPrzUoD",
+        "subcategoryName": "Les transports membranaires",
+        "text": "Les transports membranaires",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546740,
+          "_nanoseconds": 811000000
+        },
+        "suggestions": [
+          {
+            "id": "b6c9996c-454a-45e8-92fa-620091a4c21a",
+            "isSelected": false,
+            "text": "seules les molécules lipophiles peuvent traverser la membrane plasmique sans intervention des protéines",
+            "count": 1
+          },
+          {
+            "id": "18ffb4f4-e9cf-4568-80f2-0566ce83a961",
+            "isSelected": false,
+            "text": "les mécanismes de transport membranaire nécessitent toujours de l'ATP",
+            "count": 0
+          },
+          {
+            "id": "71c85625-ecc6-43ef-ad42-18c4258b3009",
+            "isSelected": false,
+            "text": "des protéines membranaires à activité ATPasique peuvent être impliquées dans le transport membranaire",
+            "count": 2
+          },
+          {
+            "id": "3359c1d0-7cc6-45b4-ae11-c2a9189a66a1",
+            "isSelected": false,
+            "text": "le passage des ions par les canaux toniques est un exemple typique du transport actif",
+            "count": 0
+          },
+          {
+            "id": "6805692a-49cc-4de1-ac91-10562654b5e9",
+            "isSelected": false,
+            "text": "toutes les propositions sont fausses",
+            "count": 0
+          },
+          {
+            "id": "d0f05986-1f25-4e1b-8b01-5c960d80b394",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "wrong": 0,
+          "correct": 2,
+          "totalInteractions": 2
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168690",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "wlhkMCiCwUpQ4RPrzUoD",
+        "subcategoryName": "Les transports membranaires",
+        "text": "Les transports membranaires",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546741,
+          "_nanoseconds": 328000000
+        },
+        "suggestions": [
+          {
+            "id": "c545a3dc-0fd1-4e56-bf5a-d145d27d93d0",
+            "isSelected": false,
+            "text": "la distribution des divers ions de part et d'autre de la membrane plasmique est un processus spontané.",
+            "count": 0
+          },
+          {
+            "id": "1e53a7c9-5535-466c-a2e9-b2a78bfc151f",
+            "isSelected": false,
+            "text": "le transport passif nécessite l'hydrolyse d'ATP.",
+            "count": 0
+          },
+          {
+            "id": "aede0ff3-15d0-4b5a-bdb0-91394e52e4a6",
+            "isSelected": false,
+            "text": "l'équilibre hydrique est facilité par les aquaporines",
+            "count": 1
+          },
+          {
+            "id": "82d69e2c-344f-47b4-a204-cce502f072f9",
+            "isSelected": false,
+            "text": "l'entrée de glucose due au transporteur Nat/glucose peut se faire contre le gradient de concentration de glucose.",
+            "count": 1
+          },
+          {
+            "id": "abc44484-fbf7-4344-9d4e-e8525bf657e1",
+            "isSelected": false,
+            "text": "toutes les propositions sont fausses",
+            "count": 0
+          },
+          {
+            "id": "68ce9c1d-a38c-450b-a321-0d4cb2e360d5",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168691",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "wlhkMCiCwUpQ4RPrzUoD",
+        "subcategoryName": "Les transports membranaires",
+        "text": "Les transporteurs membranaires",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546741,
+          "_nanoseconds": 859000000
+        },
+        "suggestions": [
+          {
+            "id": "9a1f6f47-fd84-4c9e-b9ec-8ef2a20caf31",
+            "isSelected": false,
+            "text": "ils sont présents exclusivement dans la membrane plasmique (organites exclus)",
+            "count": 0
+          },
+          {
+            "id": "d131e19f-fc62-4c96-a08f-d1712dba128c",
+            "isSelected": false,
+            "text": "ils réalisent toujours leurs transports dans le sens du gradient électrochimique",
+            "count": 0
+          },
+          {
+            "id": "1cb5e4ac-8abf-4847-ad04-fa82d268fe25",
+            "isSelected": false,
+            "text": "ils sont saturables",
+            "count": 1
+          },
+          {
+            "id": "158545b2-eaee-4dde-a62d-7250623063b9",
+            "isSelected": false,
+            "text": "ils peuvent être glycosylés du côté intracellulaire",
+            "count": 0
+          },
+          {
+            "id": "233940e7-90c7-4387-ad6b-341dde1cf721",
+            "isSelected": false,
+            "text": "ceux qui hydrolysent l'ATP assurent un transport actif",
+            "count": 1
+          },
+          {
+            "id": "98b0dbab-b90b-4e50-b0e1-5d911eafaec2",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168692",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "wlhkMCiCwUpQ4RPrzUoD",
+        "subcategoryName": "Les transports membranaires",
+        "text": "Les canaux ioniques",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546742,
+          "_nanoseconds": 375000000
+        },
+        "suggestions": [
+          {
+            "id": "fa4e76e6-483c-48fd-92a4-cb8bf9cb1b45",
+            "isSelected": false,
+            "text": "sont non saturables",
+            "count": 1
+          },
+          {
+            "id": "11130807-2bd3-43b9-ac2a-e299d11316f7",
+            "isSelected": false,
+            "text": "sont sélectifs",
+            "count": 1
+          },
+          {
+            "id": "74a6ba4c-8dc6-4ccb-bb91-2dfcaf6ac4ef",
+            "isSelected": false,
+            "text": "sont responsables de l'excitabilité électrique des cellules nerveuses et musculaires",
+            "count": 1
+          },
+          {
+            "id": "88030d67-4d80-4f44-87c8-c915cccd0040",
+            "isSelected": false,
+            "text": "sont couplés à une source d'énergie",
+            "count": 0
+          },
+          {
+            "id": "cd443ffb-e192-4a97-a86f-085dcd47d0eb",
+            "isSelected": false,
+            "text": "fonctionnent selon un mode de transport \"passif\"",
+            "count": 1
+          },
+          {
+            "id": "7c3af1dd-5e01-42cc-b3bd-54a8fe37c796",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168693",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "wlhkMCiCwUpQ4RPrzUoD",
+        "subcategoryName": "Les transports membranaires",
+        "text": "L'ATPase Na+/K+",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546742,
+          "_nanoseconds": 899000000
+        },
+        "suggestions": [
+          {
+            "id": "f95ff9e1-86ea-4d87-949b-bc06233d4806",
+            "isSelected": false,
+            "text": "catalyse un symport des ions Na' et K+",
+            "count": 0
+          },
+          {
+            "id": "f3b9eae3-3403-49ee-9b22-44b1ad44bb36",
+            "isSelected": false,
+            "text": "contribue au potentiel transmembranaire des membranes cellulaires",
+            "count": 1
+          },
+          {
+            "id": "29f8db43-d882-4d43-a891-9e2970de2af1",
+            "isSelected": false,
+            "text": "catalyse un transport ionique électro neutre",
+            "count": 0
+          },
+          {
+            "id": "f289261a-ee35-4eb2-8c1d-3f430b81c23f",
+            "isSelected": false,
+            "text": "fonctionne avec une stachiométrie de type 3 Na /2 K",
+            "count": 1
+          },
+          {
+            "id": "59eb4629-0d11-4e7c-b3e8-8e0a2affa23f",
+            "isSelected": false,
+            "text": "permet la régulation de l'équilibre osmotique de la cellule",
+            "count": 1
+          },
+          {
+            "id": "db79a326-de3a-4062-864b-b2006bf6198f",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168694",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "wlhkMCiCwUpQ4RPrzUoD",
+        "subcategoryName": "Les transports membranaires",
+        "text": "Le transporteur Na'/glucose (SGLT-1) des cellules épithéliales intestinales",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546743,
+          "_nanoseconds": 419000000
+        },
+        "suggestions": [
+          {
+            "id": "53984007-f7b6-40aa-9654-5539bbbb5b62",
+            "isSelected": false,
+            "text": "catalyse un antiport Na\"/glucose",
+            "count": 0
+          },
+          {
+            "id": "e706afe5-dfe3-4dd2-ac82-275dff9ffa26",
+            "isSelected": false,
+            "text": "est localisé du côté apical des cellules (côté lumière intestinale)",
+            "count": 1
+          },
+          {
+            "id": "858ef295-5278-41a6-b933-a81383dfe9f9",
+            "isSelected": false,
+            "text": "dépend pour son fonctionnement du gradient de proton",
+            "count": 0
+          },
+          {
+            "id": "66f3f53e-2e0d-44c7-94f8-b4bbf09d723c",
+            "isSelected": false,
+            "text": "permet le passage du glucose des entérocytes vers la circulation sanguine",
+            "count": 1
+          },
+          {
+            "id": "3c0696c1-0bdc-487a-9b2b-a58efb5d71d8",
+            "isSelected": false,
+            "text": "toutes ces propositions sont fausses",
+            "count": 0
+          },
+          {
+            "id": "c8630ec1-d2f2-4229-8249-bd8bb4c7b546",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "168695",
+        "categoryId": "uJuaGnKVhebfwWH91JgU",
+        "categoryName": "Physiologie",
+        "subcategoryId": "wlhkMCiCwUpQ4RPrzUoD",
+        "subcategoryName": "Les transports membranaires",
+        "text": "Les canaux Na' et K voltage- dépendants",
+        "year": 2025,
+        "location": "TIZIOUZOU",
+        "type": null,
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1755546743,
+          "_nanoseconds": 960000000
+        },
+        "suggestions": [
+          {
+            "id": "3baf2da0-e4a6-4ed5-9171-ba199bdecc4d",
+            "isSelected": false,
+            "text": "à l'état de repos, les canaux voltage- dépendants sont fermés.",
+            "count": 1
+          },
+          {
+            "id": "2a2ec13f-03a4-4615-8719-f7ebbf9bace1",
+            "isSelected": false,
+            "text": "lors de la phase de dépolarisation, les canaux K voltage-dépendants s'ouvrent.",
+            "count": 0
+          },
+          {
+            "id": "e6ff8135-913c-44d1-833d-5dd468046640",
+            "isSelected": false,
+            "text": "lors de la phase de repolarisation, les canaux Na voltage-dépendants se ferment andis que les canaux K s'ouvrent.",
+            "count": 1
+          },
+          {
+            "id": "daa591ad-a2e6-4225-bfee-7690af5a0fd0",
+            "isSelected": false,
+            "text": "lors de la phase d'hyperpolarisation, les canaux K voltage-dépendants s'ouvrent brutalement.",
+            "count": 0
+          },
+          {
+            "id": "2a5aafc0-9682-4848-934a-f509b07dc162",
+            "isSelected": false,
+            "text": "toutes ces réponses sont fausses.",
+            "count": 0
+          },
+          {
+            "id": "6475a65c-32a8-4c68-ab21-a5b8e0d590c1",
+            "isSelected": false,
+            "text": "Veuillez cocher cette option. De cette façon, vous ne serez pas pénalisé par un point incorrect dû à un manque d'information dans notre base de données.",
+            "isStudentAnswer": true,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": {
+          "correct": 1,
+          "totalInteractions": 1,
+          "wrong": 0
+        },
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      }
+    ],
+    "modules": [
+      {
+        "id": "uJuaGnKVhebfwWH91JgU",
+        "name": "Physiologie",
+        "studyLevel": 1
+      }
+    ],
+    "subcategories": [
+      {
+        "id": "eVg9QmO7Ap4X58GABaUa",
+        "name": "Le potentiel membranaire",
+        "category": {
+          "id": "uJuaGnKVhebfwWH91JgU",
+          "father": "",
+          "name": "Physiologie"
+        }
+      },
+      {
+        "id": "ip9Fvy9cdui7itrqYKat",
+        "name": "La communication cellulaire et signalisation",
+        "category": {
+          "id": "uJuaGnKVhebfwWH91JgU",
+          "father": "",
+          "name": "Physiologie"
+        }
+      },
+      {
+        "id": "lygzdMkoH1P2AdsbudQz",
+        "name": "La transmission synaptique",
+        "category": {
+          "id": "uJuaGnKVhebfwWH91JgU",
+          "father": "",
+          "name": "Physiologie"
+        }
+      },
+      {
+        "id": "wlhkMCiCwUpQ4RPrzUoD",
+        "name": "Les transports membranaires",
+        "category": {
+          "id": "uJuaGnKVhebfwWH91JgU",
+          "father": "",
+          "name": "Physiologie"
+        }
+      }
+    ],
+    "statistics": {
+      "time": 0,
+      "wrongCount": 0,
+      "correctCount": 0,
+      "lastAnsweredQuestionIndex": 0,
+      "neutralCount": 0,
+      "questionsCount": 20
+    },
+    "type": "quiz",
+    "createdAt": {
+      "_seconds": 1756080285,
+      "_nanoseconds": 362000000
+    }
+  }
+}
