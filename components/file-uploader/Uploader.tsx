@@ -45,75 +45,6 @@ const Uploader = ({ value, onChange, fileType }: iAppProps) => {
     objectUrl: value ? fileUrl : undefined,
   });
 
-  // const uploadFile = useCallback(async (file: File) => {
-  //   setFileState((prev) => prev && { ...prev, uploading: true, progress: 0 });
-
-  //   try {
-  //     const presignedUrlResponse = await fetch("/api/s3/upload", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({
-  //         fileName: file.name,
-  //         contentType: file.type,
-  //         size: file.size,
-  //         isImage: fileType === "image",
-  //       }),
-  //     });
-
-  //     if (!presignedUrlResponse.ok) {
-  //       toast.error("Failed to get presigned URL");
-  //       setFileState(
-  //         (prev) => prev && { ...prev, uploading: false, error: true }
-  //       );
-  //       return;
-  //     }
-
-  //     const { presignedUrl, uniqueKey } = await presignedUrlResponse.json();
-
-  //     await new Promise((resolve, reject) => {
-  //       const xhr = new XMLHttpRequest();
-  //       xhr.upload.onprogress = (event) => {
-  //         if (event.lengthComputable) {
-  //           const percent = (event.loaded / event.total) * 100;
-  //           setFileState(
-  //             (prev) => prev && { ...prev, progress: Math.round(percent) }
-  //           );
-  //         }
-  //       };
-  //       xhr.onload = () => {
-  //         if (xhr.status === 200 || xhr.status === 204) {
-  //           setFileState(
-  //             (prev) =>
-  //               prev && {
-  //                 ...prev,
-  //                 progress: 100,
-  //                 uploading: false,
-  //                 key: uniqueKey,
-  //               }
-  //           );
-  //           onChange?.(uniqueKey);
-  //           toast.success("File uploaded successfully");
-  //           resolve(true);
-  //         } else {
-  //           reject(new Error("Upload failed"));
-  //         }
-  //       };
-  //       xhr.onerror = () => reject(new Error("Upload failed"));
-  //       xhr.open("PUT", presignedUrl);
-  //       xhr.setRequestHeader("Content-Type", file.type);
-  //       xhr.send(file);
-  //     });
-  //   } catch (err) {
-  //     toast.error("Failed to upload file");
-  //     console.log(err);
-
-  //     setFileState(
-  //       (prev) => prev && { ...prev, uploading: false, error: true }
-  //     );
-  //   }
-  // }, []);
   const uploadFile = useCallback(
     async (file: File) => {
       setFileState(
@@ -279,6 +210,7 @@ const Uploader = ({ value, onChange, fileType }: iAppProps) => {
     onDropRejected: (rejectedFiles) => {
       rejectedFiles.forEach(({ errors }) => {
         errors.forEach((e) => {
+          console.log(e);
           if (e.code === "too-many-files") {
             toast.error("You can only upload one file at a time.");
           }
