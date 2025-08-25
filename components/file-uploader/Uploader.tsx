@@ -275,7 +275,7 @@ const Uploader = ({ value, onChange, fileType }: iAppProps) => {
     accept: fileType === "video" ? { "video/*": [] } : { "image/*": [] },
     maxFiles: 1,
     multiple: false,
-    maxSize: 1024 * 1024 * 1024, // 1GB for images and videos
+    maxSize: 5 * 1024 * 1024 * 1024, // 5GB for images and videos
     onDropRejected: (rejectedFiles) => {
       rejectedFiles.forEach(({ errors }) => {
         errors.forEach((e) => {
@@ -283,7 +283,7 @@ const Uploader = ({ value, onChange, fileType }: iAppProps) => {
             toast.error("You can only upload one file at a time.");
           }
           if (e.code === "file-too-large") {
-            toast.error("File size exceeds the 5 MB limit.");
+            toast.error("File size exceeds the 5 GB limit.");
           }
         });
       });
