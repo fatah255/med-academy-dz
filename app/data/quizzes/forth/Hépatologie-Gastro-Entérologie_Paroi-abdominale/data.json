@@ -1,0 +1,2880 @@
+{
+  "data": {
+    "name": "Hernies de la paroi +Hernies diaphragmati (26/08/2025 19:13)",
+    "questions": [
+      {
+        "id": "159395",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "La hernie inguinale directe :<br />1- Est une hernie de faiblesse.<br />2- Siège en dedans des vaisseaux épigastriques.<br />3- Est inguino-scrotale.<br />4- Est une hernie congénitale.<br />5- Le traitement de choix est une réparation prothétique.",
+        "year": 2024,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "résidanat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754318235,
+          "_nanoseconds": 482000000
+        },
+        "suggestions": [
+          {
+            "id": "948d1359-c6d1-4f35-a733-8c78de533123",
+            "isSelected": false,
+            "text": "1+2+3",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d7cedf82-f4c3-4aa7-b9fb-713d2fc2650b",
+            "isSelected": false,
+            "text": "2+3+4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "25f53e6b-0bdd-4771-a550-de3a70d9cf50",
+            "isSelected": false,
+            "text": "3+4+5",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e237dfaf-0705-4506-aa83-da57c67fe4fe",
+            "isSelected": false,
+            "text": "1+2+5",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "3554ddac-2be0-460c-bda8-8b41fd302d2b",
+            "isSelected": false,
+            "text": "1+2+4",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56596",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Les hernies crurales : réponse fausse",
+        "year": 2022,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<h5 class=\"western\" style=\"line-height: 150%; margin-top: 0.19in; margin-bottom: 0.19in; background: #ffffff\">\n<font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">Les\nhernies inguinales</font></font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">\n</span></font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">sont\nplus fréquentes chez les </span></font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">hommes</font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">\ncontrairement aux </span></font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">hernies\ncrurales</font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">\nplus souvent présentes chez </span></font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">les\nfemmes</font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">.\n</span></font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><i><span style=\"font-weight: normal\">La\nhernie crurale se complique plus fréquemment.</span></i></font></font></font></h5>\n<p align=\"justify\" style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067862,
+          "_nanoseconds": 744000000
+        },
+        "suggestions": [
+          {
+            "id": "e81549ba-7881-47fc-90d0-3efead6e0043",
+            "isSelected": false,
+            "text": "Se situent en dessous de la ligne de Malgaigne",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "bf1e644d-1e8a-4405-b730-b3df892e4ae2",
+            "isSelected": false,
+            "text": "Le diagnostic est fait à l'examen clinique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "74d69f5c-9a0b-4494-92ae-9f41cc877f64",
+            "isSelected": false,
+            "text": "Exposent particulièrement aux accidents d'étranglement",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "538a270a-da2c-4c86-88ce-046e979299e8",
+            "isSelected": false,
+            "text": "Se voient surtout chez l'homme âgé",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d4f0b4b6-9b60-41b9-bc1e-de1a55df9589",
+            "isSelected": false,
+            "text": "Le seul traitement curatif est chirurgical",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56597",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "L'étranglement herniaire : RF",
+        "year": 2022,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<h5 class=\"western\" style=\"line-height: 150%; margin-top: 0.19in; margin-bottom: 0.19in; background: #ffffff\">\n<font color=\"#ff0000\">► <font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">ETRANGLEMENT\nHERNIAIRE&nbsp;:</font></font></font></h5>\n<h5 class=\"western\" style=\"line-height: 150%; margin-top: 0.19in; margin-bottom: 0.19in; background: #ffffff\">\n●<font color=\"#ff0000\"> </font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">Il\ns'agit d'une </span></font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">occlusion\npar strangulation</font></font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">&nbsp;</span></font></font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">\n</span></font></font></font>\n</h5>\n<h5 class=\"western\" style=\"line-height: 150%; margin-top: 0.19in; margin-bottom: 0.19in; background: #ffffff\">\n● <font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">L'imagerie\npour confirmer l'occlusion n'est pas nécessaire</font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">,\nle diagnostic restant </span></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">clinique</font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">.\nEn cas de doute devant une occlusion, la </span></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><i>TDM</i></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">\nreste le meilleur examen</span></font></font></h5>\n<p align=\"justify\" style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067863,
+          "_nanoseconds": 56000000
+        },
+        "suggestions": [
+          {
+            "id": "8987d30f-cf3b-4fce-9781-dfe9a1f52a8d",
+            "isSelected": false,
+            "text": "Est irréductible",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "917ad6d9-e90c-48c8-b04e-1a09a05cb532",
+            "isSelected": false,
+            "text": "La douleur reste le symptôme majeur dans ce cas",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "53f66480-236f-40af-938d-f74a3a2e78af",
+            "isSelected": false,
+            "text": "L'échographie abdominale est l'examen de première intention",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f1baa49e-8203-4c35-b086-ac069ae0a9d5",
+            "isSelected": false,
+            "text": "Peut s'accompagner d'une nécrose intestinale",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a072cb1d-0208-4c91-83b5-06a96fb776c1",
+            "isSelected": false,
+            "text": "Une prise en charge tardive peut mettre en jeu le pronostic vital",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56598",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Une hernie inguinale étranglée présente toutes ses caractérisations sauf une; laquelle ?",
+        "year": 2021,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<h5 class=\"western\" style=\"line-height: 150%; margin-top: 0.19in; margin-bottom: 0.19in; background: #ffffff\">\n<font color=\"#ff0000\">► <font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">ETRANGLEMENT\nHERNIAIRE&nbsp;:</font></font></font></h5>\n<h5 class=\"western\" style=\"line-height: 150%; margin-top: 0.19in; margin-bottom: 0.19in; background: #ffffff\">\n●<font color=\"#ff0000\"> </font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">Il\ns'agit d'une </span></font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">occlusion\npar strangulation</font></font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">&nbsp;</span></font></font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">\n</span></font></font></font>\n</h5>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">●\n</span></span></font></span><span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Douleur\ninguinale brutale</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">,\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">tuméfaction\nnon réductible</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">et\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">non\nimpulsive</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.</span></span></span></font></font></span></font></span></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">●\n</span></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Occlusion\ndigestive</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">;\n</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">arrêt\ndes matières et des gaz</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">(plus\nou moins précoce selon que le côlon ou le grêle sont étranglés\ndans la hernie)</span></span></span></font></font></span></font></span></p>\n<p align=\"justify\" style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067863,
+          "_nanoseconds": 371000000
+        },
+        "suggestions": [
+          {
+            "id": "e4767f42-b8c4-4129-8b1c-54205d4dd435",
+            "isSelected": false,
+            "text": "Douloureuse",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f6c1683f-42a0-4cb8-8917-3aee39ae2d4c",
+            "isSelected": false,
+            "text": "Irréductible",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a59c4a21-842a-4121-b814-fdf63e0c1ccf",
+            "isSelected": false,
+            "text": "Globuleuse et tendue",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ee80b060-5021-4190-8ae8-bc2f50354e6d",
+            "isSelected": false,
+            "text": "Impulsive à la toux",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ec9bd39b-3ba0-4711-84e9-f6dff97ea5d1",
+            "isSelected": false,
+            "text": "Nécessite un traitement chirurgical en urgence",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56599",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Dans les hernies abdominales, quelle est la proposition fausse?",
+        "year": 2021,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.17in; border: none; padding: 0in; background: #ffffff; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">●\n</span></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Toute\nhernie symptomatique doit être opérée afin d'éviter\nl'étranglement+++</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.</span></span></span></font></font></span></font></span></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.17in; border: none; padding: 0in; background: #ffffff; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">●\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\">Les\n</span></span></font></font></span></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">petites\nhernies</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\npeuvent être </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">surveillées</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\nnotamment chez les patients avec une </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">comorbidité</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\nimportante ou chez les patients jeunes.</span></span></span></font></font></span></font></span></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.17in; border: none; padding: 0in; background: #ffffff; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">●</span></span></font></span><span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b>Le\ntraitement est uniquement chirurgical</b></span></font></font></span></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.\nIl existe plus de </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">200</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\ntechniques différentes !! </span></span></span></font></font></span></font></span>\n</p>\n<p align=\"justify\" style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067863,
+          "_nanoseconds": 698000000
+        },
+        "suggestions": [
+          {
+            "id": "d0dfb054-b9f7-450b-ac34-197b3fe82a61",
+            "isSelected": false,
+            "text": "Sont définies par l'issue d'un diverticule péritonéal (sac herniaire) au travers d'une zone de faiblesse naturelle de la paroi abdominale",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "1dfe3920-f992-468a-93c4-b221c2d72e3e",
+            "isSelected": false,
+            "text": "Une hernie crurale siège au-dessous de la ligne de Malgaigne",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "400cb4b4-9fc9-4d9c-ac02-0150c5a51396",
+            "isSelected": false,
+            "text": "La hernie inguinale est la plus fréquente",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "197c470d-51be-4bbe-888f-84694c47e2df",
+            "isSelected": false,
+            "text": "La hernie de ligne blanche siège entre les muscles grands droits, sur la ligne médiane sus ombilicale",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ce894f7b-50a6-441e-b482-57b7ec24481f",
+            "isSelected": false,
+            "text": "Le traitement chirurgical est discuté en cas d'échec du traitement médical",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56600",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Parmi les signes suivants, lesquels sont évocateurs d'un étranglement d'une hernie inguinale ? ;<br />1- Douleur au niveau du collet de la hernie ;<br />2- Irréductibilité ;<br />3- Présence de sang dans les selles ;<br />4- Absence d'expansion de la hernie à la toux ;<br />5- Douleur au toucher rectal",
+        "year": 2020,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<h5 class=\"western\" style=\"line-height: 150%; margin-top: 0.19in; margin-bottom: 0.19in; background: #ffffff\">\n<font color=\"#ff0000\">► <font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">ETRANGLEMENT\nHERNIAIRE&nbsp;:</font></font></font></h5>\n<h5 class=\"western\" style=\"line-height: 150%; margin-top: 0.19in; margin-bottom: 0.19in; background: #ffffff\">\n●<font color=\"#ff0000\"> </font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">Il\ns'agit d'une </span></font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">occlusion\npar strangulation</font></font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">&nbsp;</span></font></font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">\n</span></font></font></font>\n</h5>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">●\n</span></span></font></span><span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Douleur\ninguinale brutale</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">,\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">tuméfaction\nnon réductible</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">et\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">non\nimpulsive</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.</span></span></span></font></font></span></font></span></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">●\n</span></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Occlusion\ndigestive</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">;\n</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">arrêt\ndes matières et des gaz</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">(plus\nou moins précoce selon que le côlon ou le grêle sont étranglés\ndans la hernie)</span></span></span></font></font></span></font></span></p>\n<p align=\"justify\" style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067864,
+          "_nanoseconds": 40000000
+        },
+        "suggestions": [
+          {
+            "id": "fe9b3f14-717d-4e4c-b10a-e1aec6113f79",
+            "isSelected": false,
+            "text": "1.2.3",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9c1f935a-d489-46a7-9e09-aaacf4e72da6",
+            "isSelected": false,
+            "text": "1.2.4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b2d13b6a-299a-4a21-8036-fcf25ff50389",
+            "isSelected": false,
+            "text": "2.3.4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "28cfbd62-1400-4050-9836-cd39c1cf12c6",
+            "isSelected": false,
+            "text": "2.4.5",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a72d4b48-5760-46c0-8337-3a57aa572f0d",
+            "isSelected": false,
+            "text": "1.2.5",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56615",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Cas clinique 01<br />Une femme de 54 ans se présente aux urgences pour douleurs abdominales aiguës avec vomissements et distension abdominale. <br />A son arrivé le pouls est à 120/mn; TA à 100/75 mmHg; T° à 37°C. <br />L'abdomen est sensible dans son ensemble et on palpe une tuméfaction de 3 sur 4 centimètres ferme et sensible au niveau de la région inguinale droite. <br />Les bruits intestinaux ne sont pas perçus. ",
+        "year": 2020,
+        "location": "ALGER",
+        "type": "cas clinique",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067868,
+          "_nanoseconds": 718000000
+        },
+        "subQsts": [
+          {
+            "id": "56616",
+            "cliniqCaseId": "56615",
+            "categoryId": "DuoByhoc5gBCtwib4Bbe",
+            "categoryName": "Paroi abdominale",
+            "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+            "subcategoryName": "Hernies de la paroi abdominale",
+            "text": "Devant ce tableau clinique, quel est le diagnostic le plus probable?",
+            "year": 2020,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "ALGER",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1754067868,
+              "_nanoseconds": 974000000
+            },
+            "suggestions": [
+              {
+                "id": "80193731-cad4-4833-8562-f78a4cfe8d93",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Péritonite aiguë appendiculaire",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "a82f05c2-ea70-4c58-87a0-f2f62c091928",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Hernie inguinale étranglée",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "7111f359-9187-4a03-8e37-02520561fafb",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Atrésie du grêle",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "6f5f446e-0ac1-461b-926a-21d2ea17a17c",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Abcès intra-abdominal",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "f7123774-c484-4a7d-88b6-813cea72303f",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Volvulus du grêle",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "56617",
+            "cliniqCaseId": "56615",
+            "categoryId": "DuoByhoc5gBCtwib4Bbe",
+            "categoryName": "Paroi abdominale",
+            "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+            "subcategoryName": "Hernies de la paroi abdominale",
+            "text": "Deux éléments cliniques vous confortent dans votre diagnostique ; lesquels? ;<br />1- Le caractère douloureux ;<br />2- La tuméfaction non impulsive à la toux <br />3- La localisation au-dessus de l'arcade crurale de la tuméfaction ;<br />4- La localisation au-dessous de l'arcade crurale de la tuméfaction ;<br />5- La sensibilité diffuse de l'abdomen",
+            "year": 2020,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "ALGER",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1754067869,
+              "_nanoseconds": 325000000
+            },
+            "suggestions": [
+              {
+                "id": "2bd4d5e9-450a-4a7e-b88b-168086bf4112",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "1.2",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "3236da87-97d5-4d6e-9a63-787e58b95c6e",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "1.3",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "e5e191ed-1220-44e1-af11-b7787c0ee6f9",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "1.4",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "c76599ee-98ff-4496-af24-599734c1dbe4",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "2.3",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "d7170e67-2a5a-4474-91b3-e2c85a4949b1",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "2.5",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "56618",
+            "cliniqCaseId": "56615",
+            "categoryId": "DuoByhoc5gBCtwib4Bbe",
+            "categoryName": "Paroi abdominale",
+            "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+            "subcategoryName": "Hernies de la paroi abdominale",
+            "text": "Devant ce tableau, quels sont les éléments nécessaires à la prise en charge en urgence?; <br />1- Abdomen debout sans préparation ;<br />2- Consultation anesthésique ;<br />3- ECG et bilan biologique préopératoire ;<br />4- Scanner abdominopelvien avec injection de produit de contraste ;<br />5- Echographie de l'aine",
+            "year": 2020,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "ALGER",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1754067869,
+              "_nanoseconds": 685000000
+            },
+            "suggestions": [
+              {
+                "id": "36158f17-d70d-4a36-b992-0ed1a9087e09",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "1.3",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "4920c384-5d2e-4be8-aea4-48b723d17cf7",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "1.5",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "d98cf33e-9771-416e-8b58-fef67a047d7a",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "2.3",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "eab2c8ef-4c1f-4a07-a1d4-6f57f032de68",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "2.4",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "d4c23403-6d14-4bf4-8a60-2748ed1a7669",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "3.5",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "56619",
+            "cliniqCaseId": "56615",
+            "categoryId": "DuoByhoc5gBCtwib4Bbe",
+            "categoryName": "Paroi abdominale",
+            "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+            "subcategoryName": "Hernies de la paroi abdominale",
+            "text": "Quelle est votre conduite à tenir lors de la prise en charge en urgence?<br />1- Réduction par manaeuvres externes ;<br />2- Pose d'une sonde naso-gastrique ;<br />3- Surveillance et chirurgie différée ;<br />4- Antalgiques ;<br />5- Opérer le patient en urgence",
+            "year": 2020,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "ALGER",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1754067870,
+              "_nanoseconds": 42000000
+            },
+            "suggestions": [
+              {
+                "id": "b574fca3-2031-4030-ad21-dbfded671a80",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "1.2.4",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "8258c1d3-b89f-4da4-a27f-66a08173a69f",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "2.3.4",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "5361c88f-d52b-4041-aeff-57b8036ead1c",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "1.3.4",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "bb08d882-0ea2-4916-86d0-17963f0e24a1",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "1.4.5",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "423a9b99-3281-454a-b79f-6a5c71677e87",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "2.4.5",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "56620",
+            "cliniqCaseId": "56615",
+            "categoryId": "DuoByhoc5gBCtwib4Bbe",
+            "categoryName": "Paroi abdominale",
+            "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+            "subcategoryName": "Hernies de la paroi abdominale",
+            "text": "Les éléments suivants font partie de la prise en charge chirurgicale sauf un, lequel?",
+            "year": 2020,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "ALGER",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1754067870,
+              "_nanoseconds": 403000000
+            },
+            "suggestions": [
+              {
+                "id": "8f3f2b71-5e9a-472b-9737-982ea4d3d7b9",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Incision de l'aponévrose oblique externe",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "03defae1-88ba-46a5-83e9-4429cbd69f91",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Vérification du contenu du sac herniaire",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "ceb10b9a-c676-4d13-bcd1-47b5da12c457",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Pariétorraphie avec prothèse",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "fda0c4d5-67ae-422c-8e43-37d0115d4e3b",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Résection en cas de nécrose",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "daf18978-ffc9-42d3-b9b8-24b524900343",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Prévention des thromboses par héparines de bas poids moléculaire",
+                "isStudentAnswer": false
+              }
+            ]
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56616",
+        "cliniqCaseId": "56615",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Devant ce tableau clinique, quel est le diagnostic le plus probable?",
+        "year": 2020,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "ALGER",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067868,
+          "_nanoseconds": 974000000
+        },
+        "suggestions": [
+          {
+            "id": "80193731-cad4-4833-8562-f78a4cfe8d93",
+            "isSelected": false,
+            "text": "Péritonite aiguë appendiculaire",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a82f05c2-ea70-4c58-87a0-f2f62c091928",
+            "isSelected": false,
+            "text": "Hernie inguinale étranglée",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7111f359-9187-4a03-8e37-02520561fafb",
+            "isSelected": false,
+            "text": "Atrésie du grêle",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6f5f446e-0ac1-461b-926a-21d2ea17a17c",
+            "isSelected": false,
+            "text": "Abcès intra-abdominal",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f7123774-c484-4a7d-88b6-813cea72303f",
+            "isSelected": false,
+            "text": "Volvulus du grêle",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56617",
+        "cliniqCaseId": "56615",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Deux éléments cliniques vous confortent dans votre diagnostique ; lesquels? ;<br />1- Le caractère douloureux ;<br />2- La tuméfaction non impulsive à la toux <br />3- La localisation au-dessus de l'arcade crurale de la tuméfaction ;<br />4- La localisation au-dessous de l'arcade crurale de la tuméfaction ;<br />5- La sensibilité diffuse de l'abdomen",
+        "year": 2020,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "ALGER",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067869,
+          "_nanoseconds": 325000000
+        },
+        "suggestions": [
+          {
+            "id": "2bd4d5e9-450a-4a7e-b88b-168086bf4112",
+            "isSelected": false,
+            "text": "1.2",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "3236da87-97d5-4d6e-9a63-787e58b95c6e",
+            "isSelected": false,
+            "text": "1.3",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e5e191ed-1220-44e1-af11-b7787c0ee6f9",
+            "isSelected": false,
+            "text": "1.4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c76599ee-98ff-4496-af24-599734c1dbe4",
+            "isSelected": false,
+            "text": "2.3",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d7170e67-2a5a-4474-91b3-e2c85a4949b1",
+            "isSelected": false,
+            "text": "2.5",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56618",
+        "cliniqCaseId": "56615",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Devant ce tableau, quels sont les éléments nécessaires à la prise en charge en urgence?; <br />1- Abdomen debout sans préparation ;<br />2- Consultation anesthésique ;<br />3- ECG et bilan biologique préopératoire ;<br />4- Scanner abdominopelvien avec injection de produit de contraste ;<br />5- Echographie de l'aine",
+        "year": 2020,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "ALGER",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067869,
+          "_nanoseconds": 685000000
+        },
+        "suggestions": [
+          {
+            "id": "36158f17-d70d-4a36-b992-0ed1a9087e09",
+            "isSelected": false,
+            "text": "1.3",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4920c384-5d2e-4be8-aea4-48b723d17cf7",
+            "isSelected": false,
+            "text": "1.5",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d98cf33e-9771-416e-8b58-fef67a047d7a",
+            "isSelected": false,
+            "text": "2.3",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "eab2c8ef-4c1f-4a07-a1d4-6f57f032de68",
+            "isSelected": false,
+            "text": "2.4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d4c23403-6d14-4bf4-8a60-2748ed1a7669",
+            "isSelected": false,
+            "text": "3.5",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56619",
+        "cliniqCaseId": "56615",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Quelle est votre conduite à tenir lors de la prise en charge en urgence?<br />1- Réduction par manaeuvres externes ;<br />2- Pose d'une sonde naso-gastrique ;<br />3- Surveillance et chirurgie différée ;<br />4- Antalgiques ;<br />5- Opérer le patient en urgence",
+        "year": 2020,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "ALGER",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067870,
+          "_nanoseconds": 42000000
+        },
+        "suggestions": [
+          {
+            "id": "b574fca3-2031-4030-ad21-dbfded671a80",
+            "isSelected": false,
+            "text": "1.2.4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "8258c1d3-b89f-4da4-a27f-66a08173a69f",
+            "isSelected": false,
+            "text": "2.3.4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "5361c88f-d52b-4041-aeff-57b8036ead1c",
+            "isSelected": false,
+            "text": "1.3.4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "bb08d882-0ea2-4916-86d0-17963f0e24a1",
+            "isSelected": false,
+            "text": "1.4.5",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "423a9b99-3281-454a-b79f-6a5c71677e87",
+            "isSelected": false,
+            "text": "2.4.5",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56620",
+        "cliniqCaseId": "56615",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Les éléments suivants font partie de la prise en charge chirurgicale sauf un, lequel?",
+        "year": 2020,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "ALGER",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067870,
+          "_nanoseconds": 403000000
+        },
+        "suggestions": [
+          {
+            "id": "8f3f2b71-5e9a-472b-9737-982ea4d3d7b9",
+            "isSelected": false,
+            "text": "Incision de l'aponévrose oblique externe",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "03defae1-88ba-46a5-83e9-4429cbd69f91",
+            "isSelected": false,
+            "text": "Vérification du contenu du sac herniaire",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ceb10b9a-c676-4d13-bcd1-47b5da12c457",
+            "isSelected": false,
+            "text": "Pariétorraphie avec prothèse",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "fda0c4d5-67ae-422c-8e43-37d0115d4e3b",
+            "isSelected": false,
+            "text": "Résection en cas de nécrose",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "daf18978-ffc9-42d3-b9b8-24b524900343",
+            "isSelected": false,
+            "text": "Prévention des thromboses par héparines de bas poids moléculaire",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56601",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Parmi les propositions suivantes, deux sont exactes; lesquelles ?;<br />1- La hernie crurale est plus fréquente que la hernie inguinale ;<br />2- La hernie inguinale siège au-dessus de l'arcade fémorale (crurale) ;<br />3- La hernie crurale se complique fréquemment d'étranglement ;<br />4- Les hernies de la paroi abdominale, non compliquées, relèvent d'une abstention thérapeutique ;<br />5- La ceinture herniaire prévient l'étranglement",
+        "year": 2019,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.06in; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">●\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\">En\ngénéral, </span></span></font></font></span></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">la\nhernie inguinale</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">est\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">plus\nfréquente</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\nque </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">la\nhernie crurale</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">,\navec la hernie inguinale étant plus spécifique aux </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">hommes</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\net la hernie crurale étant plus fréquente chez les </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">femmes</span></b></span></font></font></span></font></span></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.06in; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">►\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b>HERNIE\nINGUINALE&nbsp;:</b></span></font></font></span></span></font></span><span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">Tuméfaction\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">inguinale</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">,\ncollet </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">au-dessus</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">de\nla ligne de Malgaigne. </span></span></span></font></font></span></font></span>\n</p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.06in; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">►\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b>HERNIE\nCRURALE&nbsp;: </b></span></font></font></span></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">Tuméfaction\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">interne</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">au\nniveau de </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">la\nracine de la cuisse</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">,\ncollet </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">en\ndessous</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">de\nla ligne de Malgaigne</span></span></span></font></font></span></font></span></p>\n<h5 class=\"western\" style=\"line-height: 150%; margin-top: 0.19in; margin-bottom: 0.19in; background: #ffffff\">\n<font color=\"#000000\">● </font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">La\nhernie crurale se complique plus fréquemment</font></font></font><font color=\"#444444\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">.</font></font></font></h5>\n<p align=\"justify\" style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067864,
+          "_nanoseconds": 347000000
+        },
+        "suggestions": [
+          {
+            "id": "63752e06-ba0c-48b9-aeb3-60a1e4ff3714",
+            "isSelected": false,
+            "text": "1.2",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "0c90e67b-3500-41c3-bec5-75fa6fff5737",
+            "isSelected": false,
+            "text": "1.3",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "51091f17-0352-41c2-af42-22b99e9686e8",
+            "isSelected": false,
+            "text": "2.3",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "1745455a-813c-489d-8df8-7ad2032810f8",
+            "isSelected": false,
+            "text": "3.4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "41cd3db0-da0c-4927-ae76-ac35304b30fd",
+            "isSelected": false,
+            "text": "1.5",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56627",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "lOHxnOwZUakImsefdVh9",
+        "subcategoryName": "Hernies diaphragmatiques",
+        "text": "Les hernies diaphragmatiques : RF",
+        "year": 2017,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<h5 class=\"western\" style=\"line-height: 150%; margin-top: 0.19in; margin-bottom: 0.19in; background: #ffffff\"><a name=\"_glhdpbv9is85\"></a>\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">La\nhernie hiatale par roulement est une condition où une partie de\nl'estomac forme une poche dans le thorax, tandis que la jonction\nentre l'œsophage et l'estomac reste en place dans l'abdomen.\nContrairement à la hernie par glissement, la hernie par roulement\nest souvent asymptomatique et peut se manifester par des douleurs, de\nla dysphagie et une gêne respiratoire. Cette condition peut être\nassociée à des complications telles que le reflux gastro-œsophagien\n(RGO) </font></font>\n</h5>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067873,
+          "_nanoseconds": 424000000
+        },
+        "suggestions": [
+          {
+            "id": "924ce2e2-7cc9-4ef5-b2e2-014ab4c62bf1",
+            "isSelected": false,
+            "text": "Sont définies par le passage des viscères abdominaux dans le thorax",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "cdd01fe4-bdc0-41d9-9eff-f9be3f2d7890",
+            "isSelected": false,
+            "text": "Dans la hernie hiatale par roulement, le cardia est intra abdominal",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4f4f6bba-9150-4602-a108-4bb6547c1677",
+            "isSelected": false,
+            "text": "La hernie hiatale par roulement est souvent révélée par un RGO",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "3df99d6b-3717-4e79-881f-0bab54b41cce",
+            "isSelected": false,
+            "text": "La hernie hiatale par glissement est la forme la plus fréquente",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e4af6f0c-5533-40d3-a81f-79de5d4520c7",
+            "isSelected": false,
+            "text": "Le volvulus gastrique complique une hernie hiatale par roulement",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56628",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "lOHxnOwZUakImsefdVh9",
+        "subcategoryName": "Hernies diaphragmatiques",
+        "text": "La hernie hiatale de type III: RF",
+        "year": 2017,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "<p style=\"line-height: 150%; margin-bottom: 0in\"><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>les\nhernies hiatales par roulement</b></font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">,\nle&nbsp;</font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>traitement\nchirurgical est indispensable</b></font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">.\nLors de l’intervention (qui se déroule\npar&nbsp;</font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>laparotomie</b></font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">&nbsp;ou&nbsp;</font></font></font><a href=\"https://www.elsan.care/fr/pathologie-et-traitement/maladie-digestive/hernie-hiatale-definition-causes-traitements\"><font color=\"#f9b004\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><u>cœlioscopie</u></font></font></font></a><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">),\nl’orifice distendu va être réparé et une valve anti-reflux\n(appelée&nbsp;</font></font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><i><b>fundoplicature</b></i></font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">)\nva être réalisée afin de renforcer le sphincter œsophagien et\nempêcher tout reflux acide. Le chirurgien va ensuite procéder à la\nréintégration de l’estomac à sa place. Le chirurgien peut\négalement réaliser&nbsp;</font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>une\ngastropexie</b></font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">&nbsp;qui\nconsiste uniquement à fixer l’estomac à la paroi abdominale. </font></font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>La\nchirurgie est un traitement efficace de la hernie hiatale</b></font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">,\npuisqu’on estime à</font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>&nbsp;90\n% le taux de réussite avec disparition totale des symptômes</b></font></font></font><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">&nbsp;chez\nles patients. Après la chirurgie, le patient sera placé sous\ninhibiteurs de pompe à proton pour éviter toute complication\npendant quelque temps.</font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font>\n</p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><img src=\"https://storage.googleapis.com/bmset-85f8a.appspot.com/images/ALGER/MEDICINE/4-year/Hepatologie_Gastro-Enterologie/Hernies_diaphragmatiques/Hernies_diaphragmatiques.Paroi_abdominale.Hepatologie_Gastro-Enterologie_html_db88767.png?GoogleAccessId=firebase-adminsdk-n13kr%40bmset-85f8a.iam.gserviceaccount.com&amp;Expires=16447017600&amp;Signature=BcbPs0pvRch0KrbG%2FCqPbfCDREoofHuvCM1EYkzr3532hy57D4LkywA6HqvIZ3aHSczw4GXyHiCbi2Ap3itU19mFprol55vRS7lwlIsXsWnS8KBp01S8jt3bOB0Z5Ja7X016KZhG8A656sVX%2BIkBRBDeZ0FGfX6mm2aYzqNPcbqUN39vlBEadT922vbCMqoFgc%2Bwul5uhhJyvKLV0V7rP0CuZl7odrcZqiwU76xxVI5NRmi7HKZAtwa7IeEEkOk82kWBBbPYVCGoSRqR1etBt%2F9CtMB7DisAHWOFJGLNzaXjyMEWDtDCbf8loGA7lYyOa0XDu%2B%2BCY%2BTmF67LZm%2BZxA%3D%3D\" name=\"image2.png\" align=\"bottom\" border=\"0\" style=\" max-width: 100%; height: auto; display: block;\">\n</p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067873,
+          "_nanoseconds": 733000000
+        },
+        "suggestions": [
+          {
+            "id": "640f38b8-a953-4e4b-83cd-8706ebbaf17a",
+            "isSelected": false,
+            "text": "Doit être opérée du fait des complications possibles",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "dc75be0a-0377-4f1a-bdaa-78aea8d70739",
+            "isSelected": false,
+            "text": "Est diagnostiquée à la TDM",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a4d89c0a-16e8-470c-af0e-94803549b28c",
+            "isSelected": false,
+            "text": "La fundoplicature est systématiquement associée à la réduction",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a3308ea8-3a52-4b38-86c4-3c497309e6a0",
+            "isSelected": false,
+            "text": "Est traitée par IPP à forte dose associés aux alginates",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "04f1cae4-5ed9-4096-b414-c59e59f0d406",
+            "isSelected": false,
+            "text": "Est une hernie mixte associant une hernie par roulement à une hernie par glissement",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56602",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "La hernie crurale: RF",
+        "year": 2017,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">Nous\ntravaillons à mettre en place des commentaires plus détaillés et\nplus clairs pour vous faciliter la révision.</font></font></font></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.19in; margin-bottom: 0.19in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\"></span></span></span></font></font></span></font></span></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067864,
+          "_nanoseconds": 685000000
+        },
+        "suggestions": [
+          {
+            "id": "299ac5a0-5a20-41aa-b156-4a0e2f495dd4",
+            "isSelected": false,
+            "text": "S'extériorise au-dessous de la ligne de Malgaigne",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9ce2e1a0-590c-4d6d-aa35-584b3a41a383",
+            "isSelected": false,
+            "text": "A un collet situe en dedans de la veine fémorale",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6fefe35f-96f6-4e9d-b0bc-c02a8d794cec",
+            "isSelected": false,
+            "text": "Peut s'engager dans la bourse chez l'homme",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f68bd089-0095-49e8-8527-7c32b6cc5134",
+            "isSelected": false,
+            "text": "S’étrangle fréquemment",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "997602c4-3df7-4e2c-bd13-2d83727ef355",
+            "isSelected": false,
+            "text": "Est plus fréquente chez la femme",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56603",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "La hernie crurale: RJ ; <br />1- S'extériorise au-dessous de la ligne de Malgaigne ;<br />2- A un collet situé en dedans de la veine fémoral ;<br />3- Peut s'engager dans la bourse chez l'homme ;<br />4- Peut descendre dans la grande lèvre chez la femme ;<br />5- S'étrangle fréquemment",
+        "year": 2017,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">Nous\ntravaillons à mettre en place des commentaires plus détaillés et\nplus clairs pour vous faciliter la révision.</font></font></font></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.19in; margin-bottom: 0.19in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\"></span></span></span></font></font></span></font></span></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067864,
+          "_nanoseconds": 997000000
+        },
+        "suggestions": [
+          {
+            "id": "a43c670c-f731-40ed-b5d3-3c8114e42573",
+            "isSelected": false,
+            "text": "1.2.3",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "05c4006b-8d5b-417d-a632-54310a0a9e5c",
+            "isSelected": false,
+            "text": "1.2.4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f9049512-92b9-4c41-a65c-30ee070a8c60",
+            "isSelected": false,
+            "text": "1.2.5",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "23fb893a-37ad-4e57-877b-8bc7f43d76d3",
+            "isSelected": false,
+            "text": "2.4.5",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "bf6a3d6e-b144-405d-97f3-28a580e4e37e",
+            "isSelected": false,
+            "text": "2.3.4",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56604",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Les pathologies suivantes sont responsables d'un abdomen aigu sauf une, laquelle ?",
+        "year": 2017,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">Nous\ntravaillons à mettre en place des commentaires plus détaillés et\nplus clairs pour vous faciliter la révision.</font></font></font></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.19in; margin-bottom: 0.19in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\"></span></span></span></font></font></span></font></span></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067865,
+          "_nanoseconds": 302000000
+        },
+        "suggestions": [
+          {
+            "id": "50a7917a-aee4-4389-98e8-90c47f2fdb9d",
+            "isSelected": false,
+            "text": "Appendicite aiguë",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e7b4ef23-30a9-4d52-a11f-e1f692908519",
+            "isSelected": false,
+            "text": "Hernie inguinale",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f168fa86-c648-498a-9ab5-d1cb8dcf0337",
+            "isSelected": false,
+            "text": "Péritonite aiguë",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "855a69e0-3b9b-4779-8e98-f4c76b3ccb40",
+            "isSelected": false,
+            "text": "Occlusion intestinale aiguë",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c14e94b2-45ab-498b-aace-da0932fd5fa2",
+            "isSelected": false,
+            "text": "Cholécystite aiguë",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56605",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "L'hernie inguinale étranglée: RJ ;<br />1- Devient globuleuse ;<br />2- Augmente de volume en position debout ;<br />3- N'est plus impulsive à la toux ;<br />4- Est irréductible ;<br />5- Réveille une douleur à la palpation du collet",
+        "year": 2017,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">Nous\ntravaillons à mettre en place des commentaires plus détaillés et\nplus clairs pour vous faciliter la révision.</font></font></font></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.19in; margin-bottom: 0.19in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\"></span></span></span></font></font></span></font></span></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067865,
+          "_nanoseconds": 611000000
+        },
+        "suggestions": [
+          {
+            "id": "9467db62-aaad-4e4f-b147-bc693b427427",
+            "isSelected": false,
+            "text": "1.2.3",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4154ce7b-1812-4c0a-b07f-95f3072beba8",
+            "isSelected": false,
+            "text": "2.3.4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "5fc3492c-04d8-4cef-8ad4-b4e91dbc2f0c",
+            "isSelected": false,
+            "text": "1.3.4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a540014e-da72-4805-b5a7-75426ffa264b",
+            "isSelected": false,
+            "text": "2.3.5",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f4a146fd-32a8-43da-a565-4ec8daf5bb27",
+            "isSelected": false,
+            "text": "1.2.5",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56621",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Cas clinique 02<br />Un jeune patient âgé de 36 ans sans antécédents pathologiques particuliers se présente aux urgences pour des douleurs abdominales aiguës diffuses évoluant depuis 6 heures associées à des vomissements bilieux. <br />Le transit est conservé. A l'examen de l'abdomen on note une tuméfaction ombilicale douloureuse, non impulsive à la toux et irréductible. <br />Le reste de l'abdomen est souple et respire bien. ",
+        "year": 2017,
+        "location": "ALGER",
+        "type": "cas clinique",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067870,
+          "_nanoseconds": 902000000
+        },
+        "subQsts": [
+          {
+            "id": "56622",
+            "cliniqCaseId": "56621",
+            "categoryId": "DuoByhoc5gBCtwib4Bbe",
+            "categoryName": "Paroi abdominale",
+            "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+            "subcategoryName": "Hernies de la paroi abdominale",
+            "text": "Devant une douleur abdominale aiguë, quel élément de l'examen physique vous oriente d'emblée vers un abdomen aigu chirurgical?",
+            "year": 2017,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "ALGER",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1754067871,
+              "_nanoseconds": 150000000
+            },
+            "suggestions": [
+              {
+                "id": "943d37e5-a2cc-4838-a9bf-53fad94a92f2",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Défense ou contracture abdominale",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "d5412082-fef0-4fe7-a2ea-bade70dff303",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Présence d'une cicatrice d'intervention",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "a5afc37a-55c8-49bd-9c97-8e7d70c1dcce",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "L'intensité des douleurs abdominales",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "c654516a-5537-4726-b0f2-c82c3f429c26",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "le caractère diffuse des douleurs abdominales",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "3720ef0a-3952-4ce3-b440-7e842c2bae43",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "une hépatomégalie associée",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "56623",
+            "cliniqCaseId": "56621",
+            "categoryId": "DuoByhoc5gBCtwib4Bbe",
+            "categoryName": "Paroi abdominale",
+            "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+            "subcategoryName": "Hernies de la paroi abdominale",
+            "text": "Quel element de l'examen clinique essential à la prise en charge n'a pas été mentionné dans l'observation?",
+            "year": 2017,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "ALGER",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1754067871,
+              "_nanoseconds": 501000000
+            },
+            "suggestions": [
+              {
+                "id": "c1c3beca-051f-4269-9ebb-b8eab0bdb913",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Toucher rectal",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "c29e8214-a05d-4ca7-8152-4d61451e90ca",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Etat hémodynamique",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "780656ca-f711-40aa-89e6-b9b9cf21568c",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Auscultation de l'abdomen",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "5858dc76-a5c9-4e08-a086-bc95a076d280",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Percussion de l'abdomen",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "703bce0f-c298-4598-ade9-d6addbc37f28",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Le périmètre abdominal",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "56624",
+            "cliniqCaseId": "56621",
+            "categoryId": "DuoByhoc5gBCtwib4Bbe",
+            "categoryName": "Paroi abdominale",
+            "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+            "subcategoryName": "Hernies de la paroi abdominale",
+            "text": "Quel diagnostic évoquez-vous?",
+            "year": 2017,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "ALGER",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1754067871,
+              "_nanoseconds": 867000000
+            },
+            "suggestions": [
+              {
+                "id": "c5ad3c63-c9fb-4253-9654-aa47d547432b",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "occlusion sur bride",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "fe589b7a-3445-4130-ae8f-04b524d826e8",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "hernie de la ligne blanche",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "b097c793-b156-4f25-a49b-50df260cdc94",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "hernie ombilicale non compliquée",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "1fd5348a-cd3e-47f3-b8e2-b536cc4a168f",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "hernie ombilicale compliquée",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "6156ea31-30ce-483b-aaf0-6b2f347bcf7a",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "tumeur de la paroi",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "56625",
+            "cliniqCaseId": "56621",
+            "categoryId": "DuoByhoc5gBCtwib4Bbe",
+            "categoryName": "Paroi abdominale",
+            "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+            "subcategoryName": "Hernies de la paroi abdominale",
+            "text": "Quel est le meilleur examen à préconiser en cas de doute diagnostique ?",
+            "year": 2017,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "ALGER",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1754067872,
+              "_nanoseconds": 219000000
+            },
+            "suggestions": [
+              {
+                "id": "522dcf7f-b671-4b66-8c2a-6c462da298a6",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "ASP (Abdomen Debout Sans préparation)",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "e3e6d0bf-6845-4a3a-a765-0f7c6bae3e15",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Echographie",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "c108f7f2-261a-40e0-be81-1b959151b993",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "TDM (Tomodensitométrie)",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "30f5d143-19bf-45a1-a956-8ad9ac212c89",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Echo-endoscopie endorectale",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "c5f60139-4386-465d-8cf9-72d4a6544ca1",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Aucun des examens sus cités",
+                "isStudentAnswer": false
+              }
+            ]
+          },
+          {
+            "id": "56626",
+            "cliniqCaseId": "56621",
+            "categoryId": "DuoByhoc5gBCtwib4Bbe",
+            "categoryName": "Paroi abdominale",
+            "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+            "subcategoryName": "Hernies de la paroi abdominale",
+            "text": "Quelle est votre conduite à tenir ?",
+            "year": 2017,
+            "type": "qcs",
+            "type2": "externat",
+            "explanation": "",
+            "location": "ALGER",
+            "explanationImage": null,
+            "createdAt": {
+              "_seconds": 1754067872,
+              "_nanoseconds": 578000000
+            },
+            "suggestions": [
+              {
+                "id": "00400ce9-500e-47e7-8284-7740a0cd558f",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Sonde nasogastrique + aspiration et intervention en cas de persistance des symptômes",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "9f093d47-5356-4ca7-b3b1-36d39ec9eca4",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Abstention + surveillance en milieu chirurgical",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "d7c9ad09-13d7-43a5-b276-ce39761df20d",
+                "isCorrect": true,
+                "isSelected": false,
+                "text": "Dissection de la hernie, réintégration dans l'abdomen puis réparation pariétale",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "a68d7b5d-9d8c-4a6d-8411-dc1665fc890b",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "Poches en place sur l'abdomen",
+                "isStudentAnswer": false
+              },
+              {
+                "id": "b8f44921-e7ee-43ac-9726-a78bda6c8b0f",
+                "isCorrect": false,
+                "isSelected": false,
+                "text": "surveillance rapprochée par ASP et intervention en cas de niveaux hydro-aériques",
+                "isStudentAnswer": false
+              }
+            ]
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56622",
+        "cliniqCaseId": "56621",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Devant une douleur abdominale aiguë, quel élément de l'examen physique vous oriente d'emblée vers un abdomen aigu chirurgical?",
+        "year": 2017,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "ALGER",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067871,
+          "_nanoseconds": 150000000
+        },
+        "suggestions": [
+          {
+            "id": "943d37e5-a2cc-4838-a9bf-53fad94a92f2",
+            "isSelected": false,
+            "text": "Défense ou contracture abdominale",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d5412082-fef0-4fe7-a2ea-bade70dff303",
+            "isSelected": false,
+            "text": "Présence d'une cicatrice d'intervention",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a5afc37a-55c8-49bd-9c97-8e7d70c1dcce",
+            "isSelected": false,
+            "text": "L'intensité des douleurs abdominales",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c654516a-5537-4726-b0f2-c82c3f429c26",
+            "isSelected": false,
+            "text": "le caractère diffuse des douleurs abdominales",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "3720ef0a-3952-4ce3-b440-7e842c2bae43",
+            "isSelected": false,
+            "text": "une hépatomégalie associée",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56623",
+        "cliniqCaseId": "56621",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Quel element de l'examen clinique essential à la prise en charge n'a pas été mentionné dans l'observation?",
+        "year": 2017,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "ALGER",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067871,
+          "_nanoseconds": 501000000
+        },
+        "suggestions": [
+          {
+            "id": "c1c3beca-051f-4269-9ebb-b8eab0bdb913",
+            "isSelected": false,
+            "text": "Toucher rectal",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c29e8214-a05d-4ca7-8152-4d61451e90ca",
+            "isSelected": false,
+            "text": "Etat hémodynamique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "780656ca-f711-40aa-89e6-b9b9cf21568c",
+            "isSelected": false,
+            "text": "Auscultation de l'abdomen",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "5858dc76-a5c9-4e08-a086-bc95a076d280",
+            "isSelected": false,
+            "text": "Percussion de l'abdomen",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "703bce0f-c298-4598-ade9-d6addbc37f28",
+            "isSelected": false,
+            "text": "Le périmètre abdominal",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56624",
+        "cliniqCaseId": "56621",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Quel diagnostic évoquez-vous?",
+        "year": 2017,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "ALGER",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067871,
+          "_nanoseconds": 867000000
+        },
+        "suggestions": [
+          {
+            "id": "c5ad3c63-c9fb-4253-9654-aa47d547432b",
+            "isSelected": false,
+            "text": "occlusion sur bride",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "fe589b7a-3445-4130-ae8f-04b524d826e8",
+            "isSelected": false,
+            "text": "hernie de la ligne blanche",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b097c793-b156-4f25-a49b-50df260cdc94",
+            "isSelected": false,
+            "text": "hernie ombilicale non compliquée",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "1fd5348a-cd3e-47f3-b8e2-b536cc4a168f",
+            "isSelected": false,
+            "text": "hernie ombilicale compliquée",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6156ea31-30ce-483b-aaf0-6b2f347bcf7a",
+            "isSelected": false,
+            "text": "tumeur de la paroi",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56625",
+        "cliniqCaseId": "56621",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Quel est le meilleur examen à préconiser en cas de doute diagnostique ?",
+        "year": 2017,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "ALGER",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067872,
+          "_nanoseconds": 219000000
+        },
+        "suggestions": [
+          {
+            "id": "522dcf7f-b671-4b66-8c2a-6c462da298a6",
+            "isSelected": false,
+            "text": "ASP (Abdomen Debout Sans préparation)",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e3e6d0bf-6845-4a3a-a765-0f7c6bae3e15",
+            "isSelected": false,
+            "text": "Echographie",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c108f7f2-261a-40e0-be81-1b959151b993",
+            "isSelected": false,
+            "text": "TDM (Tomodensitométrie)",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "30f5d143-19bf-45a1-a956-8ad9ac212c89",
+            "isSelected": false,
+            "text": "Echo-endoscopie endorectale",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c5f60139-4386-465d-8cf9-72d4a6544ca1",
+            "isSelected": false,
+            "text": "Aucun des examens sus cités",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56626",
+        "cliniqCaseId": "56621",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Quelle est votre conduite à tenir ?",
+        "year": 2017,
+        "type": "qcs",
+        "type2": "externat",
+        "explanation": "",
+        "location": "ALGER",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067872,
+          "_nanoseconds": 578000000
+        },
+        "suggestions": [
+          {
+            "id": "00400ce9-500e-47e7-8284-7740a0cd558f",
+            "isSelected": false,
+            "text": "Sonde nasogastrique + aspiration et intervention en cas de persistance des symptômes",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9f093d47-5356-4ca7-b3b1-36d39ec9eca4",
+            "isSelected": false,
+            "text": "Abstention + surveillance en milieu chirurgical",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d7c9ad09-13d7-43a5-b276-ce39761df20d",
+            "isSelected": false,
+            "text": "Dissection de la hernie, réintégration dans l'abdomen puis réparation pariétale",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a68d7b5d-9d8c-4a6d-8411-dc1665fc890b",
+            "isSelected": false,
+            "text": "Poches en place sur l'abdomen",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b8f44921-e7ee-43ac-9726-a78bda6c8b0f",
+            "isSelected": false,
+            "text": "surveillance rapprochée par ASP et intervention en cas de niveaux hydro-aériques",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56606",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Les hernies crurales: RF",
+        "year": 2016,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">Nous\ntravaillons à mettre en place des commentaires plus détaillés et\nplus clairs pour vous faciliter la révision.</font></font></font></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.19in; margin-bottom: 0.19in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\"></span></span></span></font></font></span></font></span></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067865,
+          "_nanoseconds": 927000000
+        },
+        "suggestions": [
+          {
+            "id": "ef99ff15-a58d-4e09-9007-c6e64d411eab",
+            "isSelected": false,
+            "text": "Se situent en dessous de la ligne de Malgaigne.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b90c84c7-ca63-4df8-afa0-08993d1b9892",
+            "isSelected": false,
+            "text": "Le diagnostic est fait à l'examen clinique.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "dff0a00b-419b-4fa4-bf5f-28df2fc36eba",
+            "isSelected": false,
+            "text": "Exposent particulièrement aux accidents d'étranglement.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "cc7d4422-8267-45d4-8365-fc3a2bdfaf32",
+            "isSelected": false,
+            "text": "Se voient surtout chez l'homme âgé,",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "276a716b-9783-4584-998f-919121a0014c",
+            "isSelected": false,
+            "text": "Le seul traitement curatif est chirurgical",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56629",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "lOHxnOwZUakImsefdVh9",
+        "subcategoryName": "Hernies diaphragmatiques",
+        "text": "Les hernies hiatales: RJ",
+        "year": 2015,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">La\nplus fréquente:</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">85%</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\ndes cas Le cardia est </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">ROULEMENT\nintra-thoracique</span></b></span></font></font></span></font></span></p>\n<p align=\"center\" style=\"line-height: 150%; margin-bottom: 0in\"><img src=\"https://storage.googleapis.com/bmset-85f8a.appspot.com/images/ALGER/MEDICINE/4-year/Hepatologie_Gastro-Enterologie/Hernies_diaphragmatiques/Hernies_diaphragmatiques.Paroi_abdominale.Hepatologie_Gastro-Enterologie_html_49970a08.gif?GoogleAccessId=firebase-adminsdk-n13kr%40bmset-85f8a.iam.gserviceaccount.com&amp;Expires=16447017600&amp;Signature=vmxDpNCEMLWG21fhvo9bdLxgzfo4SjDTJClc54vlIQ%2BqyiNrPjzg3YDmW6IPFo4wYZuJewCihHt3TogpBQQ8hxAaYR05azjNbaOMG%2Fn4MG%2FGSCk3LK12we1OzL9OwOfQoupThmaC5n3h4%2Fc7ODFD9qbmCjonHnzjm7rb%2BUY7IKJcJhHtJOopsRJO8C9tsgX50m9RnErBtl5xidYfzrXlNMFptfVKVElOZFXRAkW9TLKKBAXQt2Sewjnz8MhTuP5I5v5Qks5xyEAbJORK5vM8fseH83NUvnP5nt7RFOntsgPo2NDbhHQE%2FmqfB4YdyU6WLF5uwp8d1GDQdrkn0ZGAUg%3D%3D\" name=\"image1.gif\" align=\"bottom\" border=\"0\" style=\" max-width: 100%; height: auto; display: block;\">\n</p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067874,
+          "_nanoseconds": 59000000
+        },
+        "suggestions": [
+          {
+            "id": "74a11fff-9b86-47b5-a6a7-d35cb30b0983",
+            "isSelected": false,
+            "text": "Correspondent au passage d'une portion de la grosse tubérosité dans le thorax.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "37b977e3-8fe9-4ee7-b762-27c5eaaa1b6e",
+            "isSelected": false,
+            "text": "Dans la hernie hiatale par roulement, le cardia est en situation intrathoracique.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "505642dd-3cad-4d21-9b84-00e0464acbe1",
+            "isSelected": false,
+            "text": "Sont le plus souvent symptomatiques.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ff621ac3-eb90-4102-b9ff-702a0812b05c",
+            "isSelected": false,
+            "text": "La hernie hiatale par glissement est la forme la plus fréquente.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e3c96717-5949-4c93-8290-22f32f510f59",
+            "isSelected": false,
+            "text": "Le volvulus gastrique complique une hernie hiatale par glissement.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56630",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "lOHxnOwZUakImsefdVh9",
+        "subcategoryName": "Hernies diaphragmatiques",
+        "text": "Les hernies diaphragmatiques: RF",
+        "year": 2015,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.17in; border: none; padding: 0in; background: #ffffff; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b>Le\nvolvulus gastrique</b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\">\n</span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#1f1f1f\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b>est\nune&nbsp;</b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">rotation\nanormale de l'estomac autour de son axe</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#1f1f1f\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\">.&nbsp;</span></span></font></font></span></font></span></p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067874,
+          "_nanoseconds": 373000000
+        },
+        "suggestions": [
+          {
+            "id": "2820d880-e5a5-4c2b-a213-44b1d448adc4",
+            "isSelected": false,
+            "text": "Sont définies par le passage des viscères abdominaux dans le thorax",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "51220350-952b-40ca-8d0e-9a8bd121e7c1",
+            "isSelected": false,
+            "text": "Dans la hernie hiatale par roulement, le cardia est intra abdominal",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a81febe9-f679-4efc-ba69-15ab16703b2c",
+            "isSelected": false,
+            "text": "Peuvent se voir chez l'enfant",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d0c177b3-6d74-4ec0-abf1-3a8d48ff39fd",
+            "isSelected": false,
+            "text": "La hernie hiatale par glissement est la forme la plus fréquente",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4c034988-bca6-4090-b33c-5ccf0259c44e",
+            "isSelected": false,
+            "text": "Le volvulus gastrique complique une hernie hiatale par glissement",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56631",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "lOHxnOwZUakImsefdVh9",
+        "subcategoryName": "Hernies diaphragmatiques",
+        "text": "La hernie hiatale par roulement : RF",
+        "year": 2015,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.06in; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">plus\nsouvent </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">asymptomatique</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">mais\npeut être </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">associé\nà un RGO</span></b></span></font></font></span></font></span></p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><br>\n\n</p>\n\n",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067874,
+          "_nanoseconds": 675000000
+        },
+        "suggestions": [
+          {
+            "id": "81682865-fb40-4d8f-a8a1-d345c054fab5",
+            "isSelected": false,
+            "text": "Est le plus souvent asymptomatique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "93101c6f-10d6-4b28-9498-68d87cc0f656",
+            "isSelected": false,
+            "text": "Sa fréquence augmente avec l'âge",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "50ebfc09-28de-426e-85ef-22ae3c072f94",
+            "isSelected": false,
+            "text": "Peut se compliquer d'étranglement",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "478ba1c5-4a42-40cf-93e4-2366ec33b8fb",
+            "isSelected": false,
+            "text": "Son traitement est chirurgical",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "63e3aa47-4f15-42de-97e9-4fea577850cb",
+            "isSelected": false,
+            "text": "Est associée au reflux gastro-œsophagien",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "159394",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Quels sont les signes évocateurs d'un étranglement d'une hernie inguinale? (Cocher l'association juste)<br />1- Douleurs au niveau du collet de la hernie ;<br />2- Irréductibilité de la hernie ;<br />3- Absence d'expansion de la hernie à la toux ;<br />4- Présence de sang dans les selles ;<br />5- Caractère indolore du toucher rectal",
+        "year": 2015,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "résidanat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754318234,
+          "_nanoseconds": 974000000
+        },
+        "suggestions": [
+          {
+            "id": "dc8d6ba1-5b97-41b4-96bf-5fb7f89ffc0d",
+            "isSelected": false,
+            "text": "1+2+3",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "2fca6b2c-1ac5-4674-8765-9e912aafef46",
+            "isSelected": false,
+            "text": "2+3+4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9145bacf-e6f2-4656-89d6-cf46b4366bd2",
+            "isSelected": false,
+            "text": "3+4+5",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "87363beb-af2f-45d9-a3c6-77251c086763",
+            "isSelected": false,
+            "text": "1+4+5",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4d81a974-acaf-4769-be28-5bd6423c2688",
+            "isSelected": false,
+            "text": "1+3+5",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56607",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "La hernie crurale: RF",
+        "year": 2015,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">Nous\ntravaillons à mettre en place des commentaires plus détaillés et\nplus clairs pour vous faciliter la révision.</font></font></font></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.19in; margin-bottom: 0.19in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\"></span></span></span></font></font></span></font></span></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067866,
+          "_nanoseconds": 245000000
+        },
+        "suggestions": [
+          {
+            "id": "f3bf49aa-0ea5-440f-9b09-dfcfa57d713d",
+            "isSelected": false,
+            "text": "Se situe en dedans de l'artère fémorale.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b335d846-5a5b-49c5-a7bf-1acdf2714250",
+            "isSelected": false,
+            "text": "Est caractérisée par un collet étroit.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "69f6223d-dcfc-4258-b785-1bb36650dbbf",
+            "isSelected": false,
+            "text": "Est plus fréquente chez l'homme.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7cafbc71-26e2-486f-b202-182183068a7e",
+            "isSelected": false,
+            "text": "Se complique souvent d'étranglement.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "54d86b58-f2aa-4271-985c-b78dda6699bb",
+            "isSelected": false,
+            "text": "Sort de l'abdomen au-dessous de l'arcade crurale.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56608",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "L'étranglement herniaire: RF",
+        "year": 2015,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">Nous\ntravaillons à mettre en place des commentaires plus détaillés et\nplus clairs pour vous faciliter la révision.</font></font></font></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.19in; margin-bottom: 0.19in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\"></span></span></span></font></font></span></font></span></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067866,
+          "_nanoseconds": 552000000
+        },
+        "suggestions": [
+          {
+            "id": "a42f1a0f-bfc4-470d-9f48-61918c878c33",
+            "isSelected": false,
+            "text": "Les signes fonctionnels sont ceux d'une occlusion intestinale.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "afc1b4da-3e69-48c1-aeca-475bf023a4ff",
+            "isSelected": false,
+            "text": "Complique plus souvent la hernie inguinale que crurale.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ab52214b-5777-47be-b3c7-cd790533a950",
+            "isSelected": false,
+            "text": "Est irréductible.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a8dc208c-d4f3-44b2-afbf-52355e1a5ee3",
+            "isSelected": false,
+            "text": "L'examen clinique révèle une masse dure, non impulsive.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f6eae38c-7d6e-4ee8-af5d-b6e3b65603da",
+            "isSelected": false,
+            "text": "Nécessite une intervention chirurgicale en urgence en cas de signes généraux.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56609",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Toutes ces hernies font partie des hernies de la paroi abdominale sauf une, laquelle ?",
+        "year": 2015,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">Nous\ntravaillons à mettre en place des commentaires plus détaillés et\nplus clairs pour vous faciliter la révision.</font></font></font></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.19in; margin-bottom: 0.19in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\"></span></span></span></font></font></span></font></span></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067866,
+          "_nanoseconds": 865000000
+        },
+        "suggestions": [
+          {
+            "id": "36ebef5c-ef56-4783-a572-9be0ed4800ec",
+            "isSelected": false,
+            "text": "Hernie inguinale",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "64d66c70-6847-4110-ac8e-0734e8e1135e",
+            "isSelected": false,
+            "text": "Hernie ombilicale",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "867b6c66-13d1-4be1-84f5-df93396c6794",
+            "isSelected": false,
+            "text": "Hernie para-rectale dite de spigel",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "450dc1e2-b1cd-4bdd-87d6-351bbccf17bd",
+            "isSelected": false,
+            "text": "Hernie hiatale par roulement",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ccaea105-d4d7-4d17-be94-a0be00f86e25",
+            "isSelected": false,
+            "text": "Hernie lombaire",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "159393",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Dans les hernies de l'aine, toutes ces propositions sont justes sauf une, laquelle ? RF",
+        "year": 2002,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "résidanat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754318234,
+          "_nanoseconds": 507000000
+        },
+        "suggestions": [
+          {
+            "id": "9e8eda50-a593-41a1-88d1-552dd853a190",
+            "isSelected": false,
+            "text": "Les hernies obliques externes sont congénitales.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "374cd307-98d8-49f3-bcac-eec98620f95f",
+            "isSelected": false,
+            "text": "Les hernies crurales sont souvent volumineuses.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7fbeb786-c0be-4ebd-8c52-20cdb03f24ec",
+            "isSelected": false,
+            "text": "Les hernies crurales sont des hernies directes extériorisées sous l'arcade crurale.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "74c44775-15d7-42ff-b045-55f6118b7b4c",
+            "isSelected": false,
+            "text": "Les hernies crurales s'étranglent rarement.",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "617aac38-baca-4554-a558-75be88a0e4ab",
+            "isSelected": false,
+            "text": "Les hernies directes s'extériorisent en dedans des vaisseaux épigastriques.",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56610",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Parmi les affirmations suivantes, laquelle (lesquelles) est (sont) inexacte(s)?",
+        "year": null,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">Nous\ntravaillons à mettre en place des commentaires plus détaillés et\nplus clairs pour vous faciliter la révision.</font></font></font></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.19in; margin-bottom: 0.19in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\"></span></span></span></font></font></span></font></span></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067867,
+          "_nanoseconds": 185000000
+        },
+        "suggestions": [
+          {
+            "id": "21575482-35b0-4208-81e3-9b81c4b6ca74",
+            "isSelected": false,
+            "text": "les hernies pariétales se caractérisent parle franchissement du sac péritonéal du fascia transversalis",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6eab8b9a-3f4e-4b51-8f70-4db9880f7a07",
+            "isSelected": false,
+            "text": "les hernies inguinales peuvent être congénitales ou acquises",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "feff30c5-0569-4a6a-a315-627d1adb527e",
+            "isSelected": false,
+            "text": "les hernies ombilicales ne se compliquent jamais",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "12700da6-b513-480a-b470-54c40e8dcbe8",
+            "isSelected": false,
+            "text": "les hernies congénitales représentent plus de 95 % des hernies de l'enfant",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f60051c0-90cb-41d8-bb08-1046b4781a4a",
+            "isSelected": false,
+            "text": "les hernies inguinales acquises peuvent être directes ou indirectes",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56611",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Parmi les affirmations suivantes, laquelle (lesquelles) est (sont) vraie(s)?",
+        "year": null,
+        "location": "ALGER",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">Nous\ntravaillons à mettre en place des commentaires plus détaillés et\nplus clairs pour vous faciliter la révision.</font></font></font></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.19in; margin-bottom: 0.19in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\"></span></span></span></font></font></span></font></span></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067867,
+          "_nanoseconds": 500000000
+        },
+        "suggestions": [
+          {
+            "id": "82e482ce-be02-45f4-a287-4fcdad008aee",
+            "isSelected": false,
+            "text": "la hernie inguinale est une tuméfaction située au-dessus de la ligne de Malgaigne",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "09c7aa99-95b4-49d8-b877-7424e705c786",
+            "isSelected": false,
+            "text": "en cas de hernie inguinale oblique externe, les battements des vaisseaux épigastriques sont perçus en dedans",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e50631f9-95e8-440c-a13a-50d34dff71d8",
+            "isSelected": false,
+            "text": "en cas de hernie inguinale directe, les battements des vaisseaux épigastriques sont perçus en dehors",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9aff2f1b-ad74-49f3-9734-c296b3e17c7c",
+            "isSelected": false,
+            "text": "la hernie crurale est surtout présente chez l'homme",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f2daba0a-a001-404f-a6ef-038846a2ebc0",
+            "isSelected": false,
+            "text": "la hernie crurale est une tuméfaction située au-dessous de la ligne de Malgaigne",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56612",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Vous suspectez une hernie crurale étranglée chez un homme de 52 ans diabétique. Parmi les signes suivants, quel(s) est (sont) celui (ceux) en faveur de ce diagnostic?",
+        "year": null,
+        "location": "ALGER",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">Nous\ntravaillons à mettre en place des commentaires plus détaillés et\nplus clairs pour vous faciliter la révision.</font></font></font></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.19in; margin-bottom: 0.19in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\"></span></span></span></font></font></span></font></span></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067867,
+          "_nanoseconds": 804000000
+        },
+        "suggestions": [
+          {
+            "id": "3a7f02e8-be9a-444e-981a-b72c0e047baa",
+            "isSelected": false,
+            "text": "A la douleur au niveau de l'aine est de survenue brutale",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f060e683-9c0e-4c97-b79a-63b56d7f4280",
+            "isSelected": false,
+            "text": "la douleur est associée à un arrêt des gaz",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "354fc9d3-79b3-4ea9-aa89-9fb193344489",
+            "isSelected": false,
+            "text": "la tuméfaction inguinale est douloureuse, non expansive mais toujours impulsive à la toux",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d02c06ce-9af2-4181-a68f-9c3046426f3a",
+            "isSelected": false,
+            "text": "la tuméfaction est irréductible",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b5721ebb-d62b-4dd6-acad-ea3df8fadfea",
+            "isSelected": false,
+            "text": "la tuméfaction est douloureuse mais toujours réductible",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56613",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Vous trouvez une hernie crurale chez une femme de 60 ans et vous décidez de l'opérer. Quelle(s) est (sont) l'(les) affirmation() juste(s)?",
+        "year": null,
+        "location": "ALGER",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">Nous\ntravaillons à mettre en place des commentaires plus détaillés et\nplus clairs pour vous faciliter la révision.</font></font></font></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.19in; margin-bottom: 0.19in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\"></span></span></span></font></font></span></font></span></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067868,
+          "_nanoseconds": 109000000
+        },
+        "suggestions": [
+          {
+            "id": "bb0cad9b-5538-4b0c-8f8d-83a25dda8446",
+            "isSelected": false,
+            "text": "l'intervention est justifiée car le risque d'étranglement est élevé",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "5fa91d44-88a3-490f-86a8-31982788e04a",
+            "isSelected": false,
+            "text": "l'intervention est justifiée malgré le risque d'étranglement faible",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9ed79b0d-1d87-41de-883e-7974ca50436e",
+            "isSelected": false,
+            "text": "l'intervention est possible par voie cœlioscopique avec pose d’une prothèse",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e999f60b-3b44-40d1-b17a-d55ae477c0fb",
+            "isSelected": false,
+            "text": "l'intervention nécessite toujours une anesthésie générale",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d5c7fd89-db39-422e-8602-33aa4342d156",
+            "isSelected": false,
+            "text": "l'intervention par voie cœlioscopique se fait sous anesthésie locale",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56614",
+        "categoryId": "DuoByhoc5gBCtwib4Bbe",
+        "categoryName": "Paroi abdominale",
+        "subcategoryId": "qj5wJiFNMGvpYXpRn2EE",
+        "subcategoryName": "Hernies de la paroi abdominale",
+        "text": "Vous décidez d'opérer un patient ayant une hernie inguinale car la gêne altère sa qualité de vie. <br />Il na pas de comorbidité.<br />Vous lui précisez qu’il existe un risque faible de complications postopératoires. <br />Quelle(s) est (sont) l'(les) affirmation(s) vraie(s)?",
+        "year": null,
+        "location": "ALGER",
+        "type": "qcm",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">Nous\ntravaillons à mettre en place des commentaires plus détaillés et\nplus clairs pour vous faciliter la révision.</font></font></font></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.19in; margin-bottom: 0.19in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\"></span></span></span></font></font></span></font></span></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067868,
+          "_nanoseconds": 404000000
+        },
+        "suggestions": [
+          {
+            "id": "f20a1344-2d64-4ae5-9aed-e869c4d58d68",
+            "isSelected": false,
+            "text": "une hémorragie par plaie d'un vaisseau épigastrique est possible",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4f70f129-68c6-49ed-92ea-45ccbb8f675d",
+            "isSelected": false,
+            "text": "une lésion d'un nerf inguinal est possible",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "61e4fc32-00c8-4279-bf71-d1bbf2b55f91",
+            "isSelected": false,
+            "text": "la section du canal déférent est possible",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "80f36276-12c2-4626-858f-66836489c1f6",
+            "isSelected": false,
+            "text": "un hématome même important ne doit pas être évacué",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d4dee151-1008-4b11-8920-68f43917c323",
+            "isSelected": false,
+            "text": "une infection après pose de prothèse ne nécessite pas son ablation",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      }
+    ],
+    "modules": [
+      {
+        "id": "DuoByhoc5gBCtwib4Bbe",
+        "name": "Paroi abdominale",
+        "studyLevel": 4
+      },
+      {
+        "id": "t5i1L5uSQUTiEgeb2ON4",
+        "name": "Hépatologie Gastro-Entérologie",
+        "studyLevel": 4
+      }
+    ],
+    "subcategories": [
+      {
+        "id": "qj5wJiFNMGvpYXpRn2EE",
+        "name": "Hernies de la paroi abdominale",
+        "category": {
+          "id": "DuoByhoc5gBCtwib4Bbe",
+          "father": "Hépatologie Gastro-Entérologie",
+          "name": "Paroi abdominale"
+        }
+      },
+      {
+        "id": "lOHxnOwZUakImsefdVh9",
+        "name": "Hernies diaphragmatiques",
+        "category": {
+          "id": "DuoByhoc5gBCtwib4Bbe",
+          "father": "Hépatologie Gastro-Entérologie",
+          "name": "Paroi abdominale"
+        }
+      }
+    ],
+    "statistics": {
+      "time": 0,
+      "wrongCount": 0,
+      "correctCount": 0,
+      "lastAnsweredQuestionIndex": 0,
+      "neutralCount": 0,
+      "questionsCount": 37
+    },
+    "type": "quiz",
+    "createdAt": {
+      "_seconds": 1756232005,
+      "_nanoseconds": 810000000
+    }
+  }
+}

@@ -1,0 +1,1363 @@
+{
+  "data": {
+    "name": "Endoscopie digestive diagnostique et thérapeutique (26/08/2025 19:02)",
+    "questions": [
+      {
+        "id": "155615",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "tous ces symptomes constituent une indication a une endoscopie digestif haute de première intention sauf une laquelle",
+        "year": 2025,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">La\nperforation gastrique (ou duodénale) est une urgence chirurgicale\nnécessitant une prise en charge rapide, généralement par\nlaparotomie ou laparoscopie. L’endoscopie digestive haute (EDH) y\nest  </font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>contre-indiquée</b></font></font></font><font color=\"#404040\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>&nbsp;:\n</b></font></font></font>\n</p>\n<h4 class=\"western\" style=\"line-height: 150%; background: #ffffff\"><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-weight: normal\">Risque\nd’aggravation de la perforation</span></font></font></font></h4>\n<ul>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: #ffffff; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#404040\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">L’insufflation\n\td’air pendant l’endoscopie peut&nbsp;</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#404040\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">augmenter\n\tla fuite digestive</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#404040\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">&nbsp;et\n\taggraver la péritonite.</span></span></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: #ffffff; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#404040\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">Le\n\tpassage de l’endoscope lui-même peut&nbsp;</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#404040\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">élargir\n\tla brèche</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#404040\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">&nbsp;(surtout\n\tsi la perforation est large ou située dans une zone fragile).</span></span></span></font></font></span></font></span></p></li>\n</ul>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><br>\n<br>\n\n</p>\n\n",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754068488,
+          "_nanoseconds": 305000000
+        },
+        "suggestions": [
+          {
+            "id": "87f8f881-5dd8-4355-947f-64433e2f5a36",
+            "isSelected": false,
+            "text": "hematemese",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "5b0aa1a2-a750-4a0a-8354-2ca903f5b1da",
+            "isSelected": false,
+            "text": "un melena",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4b8a08e3-fc5b-4a56-a5b5-7ac065e58541",
+            "isSelected": false,
+            "text": "une dysphagie",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7627a100-ab92-40f3-b26f-7b37b9bc7ac2",
+            "isSelected": false,
+            "text": "perforation gastrique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d0c904ce-2e9d-4101-bb7a-c24d7b024bd5",
+            "isSelected": false,
+            "text": "syndrome douloureux epigastrique",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "155512",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "Toutes ces situations constituent une indication à une endoscopie haute de première Intention, sauf une: réponse fausse :",
+        "year": 2024,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.17in; margin-bottom: 0.17in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\"><a name=\"_7z4zhxtf476\"></a>\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">●&nbsp;</span></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Examen\nde routine</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">,\nelle est pratiquée en </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b>première\nintention devant toute symptomatologie ou affection nécessitant\nl’exploration du tube digestif supérieur:</b></span></font></font></span></font></span></p>\n<ul>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.17in; margin-bottom: 0.17in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Douleur\n\tépigastrique&nbsp;</span></b></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.17in; margin-bottom: 0.17in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Anémie\n\tferriprive&nbsp;</span></b></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.17in; margin-bottom: 0.17in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Hémorragies\n\tdigestives (hématémèse ou méléna)</span></b></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.17in; margin-bottom: 0.17in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Dysphagie</span></b></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.17in; margin-bottom: 0.17in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Dépistage</span></b></span></font></font></span></font></span></p></li>\n</ul>\n\n",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754068386,
+          "_nanoseconds": 237000000
+        },
+        "suggestions": [
+          {
+            "id": "2d18ceb6-bd11-4b25-87e4-71a1c0ddd42e",
+            "isSelected": false,
+            "text": "Anémie ferriprive",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "fd28294d-771c-456c-b4d4-bed6bdb70d95",
+            "isSelected": false,
+            "text": "Dysphagie",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7bd0f34b-e6c3-49b0-b09c-a6b975a65d3c",
+            "isSelected": false,
+            "text": "Méléna",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b5becbfd-5028-4c95-bd37-26ef99a2699c",
+            "isSelected": false,
+            "text": "Syndrome douloureux épigastrique chronique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "8e903432-c098-4bca-a544-e4d59ebd12a6",
+            "isSelected": false,
+            "text": "Syndrome hémorragique",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56247",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "L'endoscopie digestive haute d'urgence est indiquée dans toutes ces situations, sauf une. Laquelle ?",
+        "year": 2022,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Seules</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nles </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>hémorragies\ndigestives</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>graves</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>hautes</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nou </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>basses</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n(</font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>hématémèse</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nou </font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>méléna</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">)\n+++  et </font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>l’ingestion\nde corps étrangers</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nà risque très élevé nécessitent une </font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>endoscopie</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n« </font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>d’urgence</b></font></font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">».:\n</font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">à\ncondition que le patient présente des constantes hémodynamiques\nstables.</font></font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067735,
+          "_nanoseconds": 493000000
+        },
+        "suggestions": [
+          {
+            "id": "d9ef2d91-66c1-4c24-812f-2c71a6a1a8fb",
+            "isSelected": false,
+            "text": "Anémié aigue à 8 g/dl",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "0d852894-da87-4e44-9138-eae122bc013e",
+            "isSelected": false,
+            "text": "Rupture des varices œsophagiennes",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "5a3e98f2-d6b0-494b-b0cf-ea02f8d9edef",
+            "isSelected": false,
+            "text": "Corps étranger obstructif dans l'œsophage",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "993d8da5-ac4c-49ff-924e-c578cce8a304",
+            "isSelected": false,
+            "text": "Hémorragie digestive haute avec instabilité hémodynamique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "898c6320-e875-428b-a2d2-45391d709ec2",
+            "isSelected": false,
+            "text": "Rupture de varice gastrique sur foie de cirrhose",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56248",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "L'endoscopie digestive haute ? <br />1- Permet l'exploration du tube digestif et autorise des gestes thérapeutiques ; <br />2- Peut-être le vecteur de transmission de différents types d'infections d'un malade à un autre ; <br />3- Est l'examen de référence pour le diagnostic de la maladie ulcéreuse ;<br />4- Est l'examen de référence pour le diagnostic de la perforation d'ulcère ; <br />5- Est l'examen de référence pour le diagnostic de l'achalasie primitive de l'œsophage",
+        "year": 2022,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.11in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">►\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b>L’examen\nde référence pour le diagnostic de&nbsp;:</b></span></font></font></span></span></font></span></p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">● <font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>La\nperforation d’ulcère&nbsp;:</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>l’examen\nendoscopique est contre indiqué devant toutes suspicion de\nperforation digestive</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">.\nen cas d’une perforation d’ulcère elle va se manifester\ncliniquement par une </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>péritonite</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nles examens paraclinique sont celle de cette pathologie à savoir\n(</font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>ASP</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">,\n</font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>echo</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n, </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>TDM</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n)  </font></font>\n</p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">● <font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>L’achalasie</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">&nbsp;:\nla </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>manométrie\nœsophagienne de haute résolution</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">.\nL’endoscopie digestive haute est l’examen de </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><u>1re\nintension</u></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">,\nmais </font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>non\npas de référence</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>!</b></font></font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067735,
+          "_nanoseconds": 846000000
+        },
+        "suggestions": [
+          {
+            "id": "58185d17-0e81-4e69-b7fc-0e21efecf4b6",
+            "isSelected": false,
+            "text": "1.2.3",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "2ee3b05a-1768-4090-8614-aa59182fb24d",
+            "isSelected": false,
+            "text": "1.2.4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "5d38acae-8881-45a5-ab5d-031aab6ef9a8",
+            "isSelected": false,
+            "text": "1.2.5",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6cb72b0d-2351-4fed-803c-c77a0aebafd5",
+            "isSelected": false,
+            "text": "1.3.4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b0099993-84e6-4890-b243-b2baeb25700d",
+            "isSelected": false,
+            "text": "1.3.5",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56249",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "Toutes ces situations constituent une indication à une endoscopie digestive haute de première intention, sauf une ; laquelle ?",
+        "year": 2022,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.11in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">►\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b>un\nsyndrome hémorragique se traduit par des saignements extériorisés\nou non,caractérisés par: </b></span></font></font></span></span></font></span>\n</p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">• <font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">leur\nsurvenue </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>spontanée\n</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">ou\npour des </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>traumatismes\nminimes. </b></font></font>\n</p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">• <font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">leur\n</font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>répétition\n</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">dans\n</font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>plusieurs\nterritoires </b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">dont\ncertains sont évocateurs d'une pathologie précise. </font></font>\n</p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">• <font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">leur\nliaison à un </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>trouble\nde l'hémostase congénital</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nou </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>acquis</b></font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">• <font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">L’examen\nde 1 ère intention est </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>l’exploration\nhématologique</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n(</font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>FNS,\nhémogramme, taux de réticulocytes</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">)</font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067736,
+          "_nanoseconds": 160000000
+        },
+        "suggestions": [
+          {
+            "id": "a0697890-973b-4f9f-b638-3a1956a42acf",
+            "isSelected": false,
+            "text": "Anémie ferriprive",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4e2ee3f9-c69e-4c99-9a54-a1944d7dfc00",
+            "isSelected": false,
+            "text": "Dysphagie",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d00935a9-96d6-4c93-a477-c9fd9affd603",
+            "isSelected": false,
+            "text": "Méléna",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "29e724c3-4d08-48f2-80fa-97c148ddc498",
+            "isSelected": false,
+            "text": "Syndrome douloureux épigastrique chronique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "2766c8e9-a714-4fa4-b46a-6887bfa90b97",
+            "isSelected": false,
+            "text": "Syndrome hémorragique",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56250",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "L'endoscopie digestive haute en urgence est indiquée dans toutes ces situations, sauf une ;laquelle ?",
+        "year": 2022,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">● <font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Les\ntumeurs de l’œsophage</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nsont </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>asymptomatiques</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\ndans la majorité des cas à un </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>stade\nprécoce : découverte fortuite ou dépistage</b></font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">● <font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">Le\nsymptôme majeur est la </font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>dysphagie</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nqui indique une </font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>EOGD</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\ne</font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><u>n\npremière intention</u></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n(sauf suspicion de diverticule de Zenker).</font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067736,
+          "_nanoseconds": 465000000
+        },
+        "suggestions": [
+          {
+            "id": "f61e601f-d9bb-4955-8ae2-035153b09b15",
+            "isSelected": false,
+            "text": "Anémié aiguë à 9 g/dl",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "504e3254-2780-4dc0-8104-86f2125097f6",
+            "isSelected": false,
+            "text": "Rupture des varices esophagiennes",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ba6ee23b-3de6-4493-9013-f24c2663a5a0",
+            "isSelected": false,
+            "text": "Corps étranger obstructif dans l'œsophage",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "02e6a76f-0f6b-4007-ac56-b9f222c920da",
+            "isSelected": false,
+            "text": "Carcinome épidermoïde de l'œsophage",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "89d4a35e-d70a-4554-b7a5-43f5d20321ab",
+            "isSelected": false,
+            "text": "Rupture de varice gastrique sur un foie de cirrhose",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56251",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "L'endoscopie digestive haute à visée diagnostique est indiquée en première intention devant les situations suivantes sauf une, laquelle ?",
+        "year": 2021,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font color=\"#202124\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">La\nsurvenue d'une </font></font></font><font color=\"#202124\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>douleur\nabdominale</b></font></font></font><font color=\"#202124\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">,\nnotamment </font></font></font><font color=\"#202124\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>épigastrique</b></font></font></font><font color=\"#202124\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">,\nchez un patient présentant des </font></font></font><font color=\"#202124\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>facteurs\nde risque coronarien</b></font></font></font><font color=\"#202124\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n(diabète dans ce cas) ,&nbsp;</font></font></font><font color=\"#040c28\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">impose\nla </font></font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>réalisation\nsystématique d'un ECG</b></font></font></font><font color=\"#040c28\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">,\nà la recherche d'un </font></font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>infarctus\ndu myocarde</b></font></font></font><font color=\"#040c28\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">,\nnotamment </font></font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>inférieur</b></font></font></font><font color=\"#202124\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">.</font></font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067736,
+          "_nanoseconds": 788000000
+        },
+        "suggestions": [
+          {
+            "id": "ec8ede4a-ad3e-417e-a7af-dd3551ff97a0",
+            "isSelected": false,
+            "text": "Méléna",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e834e321-5398-4373-abda-c86d822c8b67",
+            "isSelected": false,
+            "text": "Dysphagie aux liquides",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "19537c60-26ad-49ed-8925-854634a30183",
+            "isSelected": false,
+            "text": "Dysphagie aux solides",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6fcd4d9c-c0a5-4db9-9670-db434180b01e",
+            "isSelected": false,
+            "text": "Douleur épigastrique aiguë chez le diabétique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "8e69d678-8fbd-4835-b3db-904f5fa13d13",
+            "isSelected": false,
+            "text": "Douleur épigastrique chronique",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56252",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "L'endoscopie digestive haute à visé diagnostic est contre indiquée dans toutes les situations suivantes sauf une ; laquelle ?",
+        "year": 2021,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.11in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">►\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b>Les\ncontres indication de l’EOGD&nbsp;:</b></span></font></font></span></span></font></span></p>\n<ul>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Contracture\n\tabdominale</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t= Suspicion de </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">perforations\n\t</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">digestives.</span></span></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">Etat\n\t</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">hémodynamique\n\tinstable</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.\n\t</span></span></span></font></font></span></font></span>\n\t</p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">Les\n\t</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">estomacs\n\tpleins</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\tou patient </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">non\n\tà jeun</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t: risque de </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">pneumopathie\n\td’inhalation.</span></b></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Diverticule\n\tpharyngo- œsophagien dit de Zencker</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.</span></span></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Insuffisance\n\tcardiaque</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\tou </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">respiratoire</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">décompensée</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.\n\t     </span></span></span></font></font></span></font></span>\n\t</p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">état\n\tde choc</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.</span></span></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.11in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">Troubles\n\tde la </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">conscience</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\tchez un patient </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">non\n\tintubé.</span></b></span></font></font></span></font></span></p></li>\n</ul>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067737,
+          "_nanoseconds": 130000000
+        },
+        "suggestions": [
+          {
+            "id": "d21ffb99-bfd6-459a-8aa4-c53bcade8092",
+            "isSelected": false,
+            "text": "Insuffisance cardiaque ou respiratoire décompensée",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "960323ca-3c9f-4cbb-8cdf-8742816fbdf6",
+            "isSelected": false,
+            "text": "Etat de choc",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "13e040c0-c436-4974-a62d-f8600879b068",
+            "isSelected": false,
+            "text": "Thrombopénie à 90 000/mm3",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ce01dd89-c848-41dc-b6d3-4f65b9f7bd22",
+            "isSelected": false,
+            "text": "Perforation gastrique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d2b4e587-e168-461f-be54-f269d1ef1d2a",
+            "isSelected": false,
+            "text": "Troubles de la conscience chez un patient non intubé",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56253",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "Tous ces symptômes constituent une indication à une endoscopie digestive haute de première intention sauf une, laquelle ?",
+        "year": 2021,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.11in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">C’est\nune contre-indication.   </span></b></span></font></font></span></font></span>\n</p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067737,
+          "_nanoseconds": 508000000
+        },
+        "suggestions": [
+          {
+            "id": "7c2db909-3d10-4a69-9303-aceaacc75481",
+            "isSelected": false,
+            "text": "Une hématémèse",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "8da26aa0-c531-4f5d-bb87-2232786f3845",
+            "isSelected": false,
+            "text": "Un meléna",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "5fac5b53-eb72-4d10-a361-b2287bdf7b12",
+            "isSelected": false,
+            "text": "Une dysphagie",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e194acf4-8554-4cbb-b6fd-70ae70cd9552",
+            "isSelected": false,
+            "text": "Une perforation gastrique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9424f962-f74a-451c-974d-8f2627306d00",
+            "isSelected": false,
+            "text": "Un syndrome douloureux épigastrique",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56254",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "Toutes ces pathologies et symptômes constituent une indication de première intention à la coloscopie sauf une ; laquelle ?",
+        "year": 2020,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Toute\nhémorragie digestive</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">,\nqu'elle soit haute ou basse, nécessite une </font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>EOGD</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>en\npremière intention.</b></font></font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067737,
+          "_nanoseconds": 853000000
+        },
+        "suggestions": [
+          {
+            "id": "d92c81e8-1604-4708-a896-a8cbcee959fc",
+            "isSelected": false,
+            "text": "Antécédents familiaux de polypose adénomateuse",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "565a5cd9-470f-4301-9e33-2e75da1c7d8c",
+            "isSelected": false,
+            "text": "Masse tissulaire colique au scanner",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "64392c6e-e299-47d8-b9a4-c9cbb2239d9c",
+            "isSelected": false,
+            "text": "Constipation récente",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "467f60bf-a820-4877-b0ae-f2506d3ced0e",
+            "isSelected": false,
+            "text": "Méléna avec un taux d'Hb à 9.5 g/dl",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a6edc920-faf9-4cb4-b486-e38015495d6d",
+            "isSelected": false,
+            "text": "Premier épisode de rectorragie chez le sujet âgé",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56255",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "La cholangio-pancréatographie rétrograde endoscopique (CPRE) est indiquée dans toutes ces situations sauf une ; laquelle ?",
+        "year": 2020,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.19in; margin-bottom: 0.19in; border: none; padding: 0in; background: #ffffff; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">●\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\">La\n</span></span></font></font></span></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">CPRE</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\nest réalisé principalement pour traiter </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">un\nblocage</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\ndans un </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">canal\nbiliaire</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\nou </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">pancréatique</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\net pour le </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">prélèvement\ndes biopsies</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.</span></span></span></font></font></span></font></span></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.19in; margin-bottom: 0.19in; border: none; padding: 0in; background: #ffffff; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">●\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\">Comme\nune </span></span></font></font></span></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">CPRE</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\nprésente un </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">risque\nde complications sérieuses plus élevé</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\nque pour les autres interventions endoscopiques, on y a </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">recours\nprincipalement pour traiter un canal biliaire bloqué</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.</span></span></span></font></font></span></font></span></p>\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-top: 0.19in; margin-bottom: 0.19in; border: none; padding: 0in; background: #ffffff; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">●\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\">On\nl’utilise </span></span></font></font></span></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">moins</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\nsouvent pour établir un diagnostic ou pour vérifier la présence\nd’un problème dans les canaux.</span></span></span></font></font></span></font></span></p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067738,
+          "_nanoseconds": 195000000
+        },
+        "suggestions": [
+          {
+            "id": "c0ae8838-f9bb-4707-865a-1ee44521ccda",
+            "isSelected": false,
+            "text": "Lithiase de la voie biliaire principale asymptomatique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b9d64c95-174e-46a3-845a-24c2e21d3946",
+            "isSelected": false,
+            "text": "Pancréatite aiguë avec angiocholite associée",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "fc69516b-af0c-45b4-9643-55aefb75391d",
+            "isSelected": false,
+            "text": "Kyste hydatique rompu dans les voies biliaires",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "993164f4-d688-471b-abd0-63c736685d0b",
+            "isSelected": false,
+            "text": "Angiocholite sur adénocarcinome de la tête du pancréas",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "8462b0be-df35-4d1b-b5e3-57c05d7a972f",
+            "isSelected": false,
+            "text": "Pancréatite aiguë biliaire grave sans obstruction des voies biliaires",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56256",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "Une iléo-coloscopie est indiquée dans toutes ces situations sauf une, laquelle ?",
+        "year": 2020,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.11in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">►\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b>Les\nindications d’une iléo-coloscopie&nbsp;:</b></span></font></font></span></span></font></span></p>\n<ul>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">dépistage\n\tdes </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">polypes</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\tet des </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">cancers</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\tchez les </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">sujets\n\tà risque.</span></b></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">ATCD\n\tde maladie inflammatoire de l’intestin</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">,\n\t</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">familiaux</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\tde </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">polypose\n\tfamiliale</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\tou de </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">cancer</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">colique</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t(à partir de 45 ans). </span></span></span></font></font></span></font></span>\n\t</p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">Tout\n\tsymptôme colique </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">persistant</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">,\n\tsurtout </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">après\n\t50 ans</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t: </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><i><span style=\"font-weight: normal\"><span style=\"background: transparent\">trouble\n\tdu transit intestinal, Douleurs</span></span></i></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><i><span style=\"font-weight: normal\"><span style=\"background: transparent\">abdominales,\n\tDiarrhée chronique, Rectorragies, Bilan d’une anémie ferriprive</span></span></i></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.</span></span></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.11in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Les\n\tproctalgies intenses </span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">indiquent\n\tun examen clinique </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">minutieux\n\t</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">et\n\tune </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">rectoscopie</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.\n\t</span></span></span></font></font></span></font></span>\n\t</p></li>\n</ul>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067738,
+          "_nanoseconds": 535000000
+        },
+        "suggestions": [
+          {
+            "id": "9faa1478-a01c-413a-ac1c-9ffb5fb565bb",
+            "isSelected": false,
+            "text": "Bilan d'une anémie ferriprive",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "36d11067-c7ec-4b74-9f8e-79f0883d1e70",
+            "isSelected": false,
+            "text": "Dépistage chez les sujets à risque élevé de cancer colorectal (CCR)",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9edf091d-1225-48fd-9be0-30b0f8dd276b",
+            "isSelected": false,
+            "text": "Diarrhée chronique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "490345e7-ad12-424c-9cf0-e69d68f93656",
+            "isSelected": false,
+            "text": "Proctalgies intenses",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "423b5d05-bad3-49bb-a472-9be9ab5313da",
+            "isSelected": false,
+            "text": "Une symptomatologie colique persistante surtout après l'âge de 50 ans",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56257",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "Toutes ces complications peuvent se voir lors d'endoscopie digestive haute sauf une, laquelle ?",
+        "year": 2019,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.11in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">►\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b>Les\ncomplications de l’EOGD&nbsp;:</b></span></font></font></span></span></font></span></p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">•  <font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>perforation</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>œsophagienne</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>ou</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>du</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>cardia</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n(si œsophage pathologique++ : cancer, </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>diverticule</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nde </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Zenker\n...)</b></font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">• <font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Complications</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>respiratoires</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n(</font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>inhalation</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">)</font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">• <font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Bactériémie</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n(</font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>rare</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">)\n</font></font>\n</p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">• <font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Complications\nde l'anesthésie générale</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font>\n</p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">• <font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Risque\nde transmission d'agents infectieux</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n: risque viral </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>quasi</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>nul</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">,\nrisque de transmission des prions inconnu</font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">•\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">interrogatoire\npréalable pour recherche de </font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>facteurs\nde risques</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nou de </font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>signes\nde maladie de Creutzfeldt</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Jakob</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">,\n</font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>séquestration\nde l'endoscope</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\ns'il a été utilisé chez un malade atteint </font></font>\n</p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">• <font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Risque\nde complications en cas d'endoscopie</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n:</font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">• <font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Perforation</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n: dilatation, pose de prothèse </font></font>\n</p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">• <font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Hémorragie</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n: par un traumatisme du muqueuse </font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>(muqueuse\nlésée et non pas seine)</b></font></font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">• <font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Bactériémie</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n: risque augmenté pour tout geste  </font></font>\n</p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067738,
+          "_nanoseconds": 881000000
+        },
+        "suggestions": [
+          {
+            "id": "8dd5b140-fa01-4a84-9b31-c245da3d497c",
+            "isSelected": false,
+            "text": "Trouble du rythme chez les patients à risque cardiovasculaire",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7d07ae27-184d-4fae-ab3d-ab63bec7a488",
+            "isSelected": false,
+            "text": "Hémorragie digestive sur une muqueuse saine",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "fba69800-2a8d-4b27-a64c-dd9399370f0c",
+            "isSelected": false,
+            "text": "Pneumopathie d'inhalation",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a2b19036-826d-4324-a6c8-40c9363816c1",
+            "isSelected": false,
+            "text": "Perforation favorisée par l'existence d'un diverticule de Zencker ou d'une sténose",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "52dd9853-b637-4d94-b5d7-25ee44089f81",
+            "isSelected": false,
+            "text": "Incarcération instrumentale",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56258",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "L'endoscopie digestive est contre indiquée dans toutes ces situations sauf une, laquelle ?",
+        "year": 2019,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">○ <font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Les\ntroubles dyspeptiques:</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>nausées</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">,\n</font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>vomissements</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nindiquent la réalisation d’une </font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>EOGD</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">.</font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">○ <font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Les\ncontres indication de l’EOGD&nbsp;:</b></font></font></font></p>\n<ul>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Contracture\n\tabdominale</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t= Suspicion de </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">perforations\n\t</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">digestives.</span></span></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">Etat\n\t</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">hémodynamique\n\tinstable</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.\n\t</span></span></span></font></font></span></font></span>\n\t</p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">Les\n\t</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">estomacs\n\tpleins</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\tou patient </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">non\n\tà jeun</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t: risque de </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">pneumopathie\n\td’inhalation.</span></b></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Diverticule\n\tpharyngo- œsophagien dit de Zencker</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.</span></span></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Insuffisance\n\tcardiaque</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\tou </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">respiratoire</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">décompensée</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.\n\t     </span></span></span></font></font></span></font></span>\n\t</p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">état\n\tde choc</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.</span></span></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.11in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">Troubles\n\tde la </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">conscience</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\tchez un patient </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">non\n\tintubé.</span></b></span></font></font></span></font></span></p></li>\n</ul>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067739,
+          "_nanoseconds": 213000000
+        },
+        "suggestions": [
+          {
+            "id": "7f71bc34-89ed-41b2-b325-74adcaa4b572",
+            "isSelected": false,
+            "text": "infarctus du myocarde",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c64b62ad-2c0c-42e4-a6b5-dde047608866",
+            "isSelected": false,
+            "text": "Instabilité hémodynamique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "58ef19de-7ab2-49b5-b838-ba3f58de7321",
+            "isSelected": false,
+            "text": "Trouble dyspepsique Chez le sujet âgé",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "41b7db23-ee13-4781-8f9d-4991e79e8403",
+            "isSelected": false,
+            "text": "Perforations digestives",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b734f58f-bea2-4caa-b8f7-1a36818de47e",
+            "isSelected": false,
+            "text": "Trouble de la conscience chez un patient non intubé",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56259",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "L'endoscopie digestive: RF",
+        "year": 2019,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.11in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">►\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b>Les\ncontres indication de l’EOGD&nbsp;:</b></span></font></font></span></span></font></span></p>\n<ul>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Contracture\n\tabdominale</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t= Suspicion de </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">perforations\n\t</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">digestives.</span></span></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">Etat\n\t</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">hémodynamique\n\tinstable</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.\n\t</span></span></span></font></font></span></font></span>\n\t</p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">Les\n\t</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">estomacs\n\tpleins</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\tou patient </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">non\n\tà jeun</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t: risque de </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">pneumopathie\n\td’inhalation.</span></b></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Diverticule\n\tpharyngo- œsophagien dit de Zencker</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.</span></span></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Insuffisance\n\tcardiaque</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\tou </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">respiratoire</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">décompensée</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.\n\t     </span></span></span></font></font></span></font></span>\n\t</p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">état\n\tde choc</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">.</span></span></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.11in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">Troubles\n\tde la </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">conscience</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\tchez un patient </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">non\n\tintubé.</span></b></span></font></font></span></font></span></p></li>\n</ul>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067739,
+          "_nanoseconds": 554000000
+        },
+        "suggestions": [
+          {
+            "id": "8016095d-7f13-44d1-801a-7182b2b5f72a",
+            "isSelected": false,
+            "text": "Est l'examen de référence pour le diagnostic des pathologies de la muqueuse gastrique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "72125b68-3b72-4123-ad6f-c6558419a62d",
+            "isSelected": false,
+            "text": "Permet de faire des biopsies sur des lésions suspectes",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b95ddcc8-48fd-43a5-b617-84cf52fbd409",
+            "isSelected": false,
+            "text": "La bactériémie est une complication rare",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d28e4ba8-f4bf-444c-8a62-1dac3577945c",
+            "isSelected": false,
+            "text": "Est contre indiqué en cas de troubles de l'hémostase",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "24bf2dfd-727d-402b-bf60-b17a5db67309",
+            "isSelected": false,
+            "text": "Permet l'ablation des tumeurs superficielles",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "159315",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "Une échoendoscopie digestive permet de réaliser les gestes suivants (cocher la réponse fausse) :",
+        "year": 2018,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "résidanat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754318190,
+          "_nanoseconds": 74000000
+        },
+        "suggestions": [
+          {
+            "id": "8b07c6b4-2721-4ac8-8f15-8cb7eb16df75",
+            "isSelected": false,
+            "text": "Gastro-kystostomie pancréatique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "2b7edb89-230d-416c-9394-04ee614a30ee",
+            "isSelected": false,
+            "text": "Mise en place d’une prothèse gastro-biliaire",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "875f9b8d-4ace-4075-b54f-a8042e7bc20d",
+            "isSelected": false,
+            "text": "Drainage d’un abcès péri-digestif accessible",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6d95a9ba-b5d1-4570-8835-17b3389d66aa",
+            "isSelected": false,
+            "text": "Ponction de ganglions médiastinaux",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "62999c11-ca2e-46d3-bb31-60cbbdcfefc1",
+            "isSelected": false,
+            "text": "Biopsies d'une tumeur péritonéale éloignée du transducteur",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "159316",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "L’exérèse endoscopique colique doit respecter les consignes suivantes (cocher la réponse fausse) :",
+        "year": 2018,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "résidanat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754318190,
+          "_nanoseconds": 568000000
+        },
+        "suggestions": [
+          {
+            "id": "7149225b-f2e8-4657-b7b1-920861819da9",
+            "isSelected": false,
+            "text": "Avoir une préparation colique parfaite",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "7ea6f931-4537-4874-8f7e-2d49ffb9fe3d",
+            "isSelected": false,
+            "text": "Un taux de prothrombine > 50 %",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "73aa8b11-89bd-4b1d-8390-ce2907845d27",
+            "isSelected": false,
+            "text": "Un taux de plaquettes > 50 000 éléments/mm³",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "8001ae9b-76b4-4c50-972b-9a4716a99fb7",
+            "isSelected": false,
+            "text": "Arrêt obligatoire des antiagrégants plaquettaires",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "6ef9b31b-9f5b-4ff0-b695-e53564f8fe7a",
+            "isSelected": false,
+            "text": "Arrêt obligatoire des anticoagulants",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56260",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "L'endoscopie digestive : RF",
+        "year": 2018,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>l’EOGD</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nest </font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>contre\nindiqué</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\ndevant toute </font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Suspicion\nde perforations digestives</b></font></font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067739,
+          "_nanoseconds": 880000000
+        },
+        "suggestions": [
+          {
+            "id": "6814b96f-a1cd-4734-a13d-d235c6d7e8ab",
+            "isSelected": false,
+            "text": "La perforation est une complication rare",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ffa83960-c6f2-46b5-b091-8c7f1ed07b4f",
+            "isSelected": false,
+            "text": "Peut-être le vecteur de transmission d'infection d'un malade à un autre",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9daa385d-238d-45c7-8619-17614408f606",
+            "isSelected": false,
+            "text": "Permet l'exploration du tube digestif et autorise des gestes thérapeutiques",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "a31553f0-4e97-4489-b8c9-48f4813d9f7c",
+            "isSelected": false,
+            "text": "Est 'examen de référence pour le diagnostic d'une perforation gastrique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "4a25403f-8298-428a-b0e3-895ad614da3a",
+            "isSelected": false,
+            "text": "L'endoscopie haute se fait en décubitus latéral gauche",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56261",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "L'endoscopie digestive en urgence est indiquée dans toutes ces situations sauf une ; laquelle ?",
+        "year": 2018,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">● <font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>Seules</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nles </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>hémorragies\ndigestives</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>graves</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>hautes</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nou </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>basses</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n(</font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>hématémèse</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nou </font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>méléna</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">)\n+++  et </font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>l’ingestion\nde corps étrangers</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nà risque très élevé nécessitent une </font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>endoscopie</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n« </font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>d’urgence</b></font></font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">».:\n</font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">à\ncondition que le patient présente des constantes hémodynamiques\nstables.</font></font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\">●<font color=\"#ff0000\">\n</font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">En\ncas </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>d’ingestion\nde caustique</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nou de </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>colite\nischémique</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n</font></font><font color=\"#00b050\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>la\nTDM</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nest </font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>l’examen\nde première intention </b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">(en\n</font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><u>pratique</u></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\nil utilise encore </font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>l’EOGD</b></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">\n.en cas d’ingestion de caustique à condition qu’elle est\nréalisée dans les premières </font></font><font color=\"#ff0000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>48\nheures</b></font></font></font><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">)</font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067740,
+          "_nanoseconds": 207000000
+        },
+        "suggestions": [
+          {
+            "id": "35049a32-8f7a-4000-8ae6-ce7c1d59cad9",
+            "isSelected": false,
+            "text": "Hémorragie digestive haute et basse",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f74773cd-b908-47d6-84c7-0f6ba4580fa0",
+            "isSelected": false,
+            "text": "Corps étrangers de l'hypopharynx et de l'œsophage obstructifs",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "c7ce8422-4dd1-4c78-8419-cf305747255c",
+            "isSelected": false,
+            "text": "Ingestion de produit caustique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f1edb9bb-6c95-4a71-a822-efe30085047e",
+            "isSelected": false,
+            "text": "Décompensation hémorragique chez le cirrhotique",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "ba8f7190-25a9-4616-946d-76a220293aa6",
+            "isSelected": false,
+            "text": "Suspicion d'un cancer gastrique",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56262",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "L'endoscopie digestive : RF",
+        "year": 2018,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font color=\"#000000\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\">Nous\ntravaillons à mettre en place des commentaires plus détaillés et\nplus clairs pour vous faciliter la révision.</font></font></font></p>\n<p style=\"line-height: 150%; margin-bottom: 0in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"></font></font></p>",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067740,
+          "_nanoseconds": 534000000
+        },
+        "suggestions": [
+          {
+            "id": "dd332065-6029-49bf-8748-5c5c4fc4f9cc",
+            "isSelected": false,
+            "text": "Pratiquée en première intention devant toute symptomatologie de type digestif",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "9376216b-a650-4acd-89f1-5253b2f47259",
+            "isSelected": false,
+            "text": "La perforation constitue la principale contre-indication à l'endoscopie",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "b57a8835-d5b1-4fc0-ba7d-9546f24fae98",
+            "isSelected": false,
+            "text": "Lage avancé n'est pas une contre-indication à l'endoscopie",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "78504153-025f-49a7-b48c-fde2a0815651",
+            "isSelected": false,
+            "text": "La transition entre les muqueuses œsophagienne et gastrique est appelée ligne z",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "1917f644-84bd-43b3-aaf5-916d1ae82088",
+            "isSelected": false,
+            "text": "Toutes les zones suspectes doivent êtres biopsiées",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "159314",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "Quel est le meilleur examen pour explorer les voies biliaires ? (RJ)",
+        "year": 2017,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "résidanat",
+        "cliniqCaseId": null,
+        "explanation": "",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754318189,
+          "_nanoseconds": 565000000
+        },
+        "suggestions": [
+          {
+            "id": "abf334e9-3094-4bc5-96b1-218aca4094c7",
+            "isSelected": false,
+            "text": "IRM hépato-biliaire",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "68e28d8a-5444-4cc4-bd25-bf576729caef",
+            "isSelected": false,
+            "text": "Écho-endoscopie",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "966334bd-0d9f-40c8-8d36-b87d48198c25",
+            "isSelected": false,
+            "text": "Bili-IRM",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "1fd4ad92-3c53-4c18-bb70-1e6fd1b2124e",
+            "isSelected": false,
+            "text": "Échographie hépato-biliaire",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "f2cc2379-2b7b-4ec6-81dc-170888921e62",
+            "isSelected": false,
+            "text": "Doppler hépatique",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      },
+      {
+        "id": "56263",
+        "categoryId": "6tLjsnOiROzcHgdHtfV0",
+        "categoryName": "General",
+        "subcategoryId": "soJqrueOyynOzoJSQqDg",
+        "subcategoryName": "Endoscopie digestive diagnostique et thérapeutique",
+        "text": "Parmi les lésions suivantes, lesquelles nécessitent une surveillance endoscopique prolongée ? <br />1- Les diverticules épibronchiques ; <br />2- L'œsophagite par reflux avec endobrachyoesophage ; <br />3-L’achalasie ;<br />4- Les sténoses caustiques ; <br />5- L'œsophage mycosique",
+        "year": 2017,
+        "location": "ALGER",
+        "type": "qcs",
+        "type2": "externat",
+        "cliniqCaseId": null,
+        "explanation": "\n<p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.11in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n<span style=\"font-variant: normal\"><font color=\"#ff0000\"><span style=\"text-decoration: none\"><span style=\"background: transparent\">►\n<font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b>Risque\nde dégénérescence&nbsp;:</b></span></font></font></span></span></font></span></p>\n<ul>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">En</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Carcinome\n\tépidermoïde de l’œsophage</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t(</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">2\n\tà 7 %</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\tde dégénérescence </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">15\n\tà 20 ans </span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">après\n\tles premiers symptômes) pour l’achalasie.</span></span></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">En\n\tadénocarcinome de l’œsophage</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\tpour </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">l’endobrachyoesophagie</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t(lésion précancéreuse)</span></span></span></font></font></span></font></span></p></li>\n\t<li><p align=\"left\" style=\"line-height: 150%; page-break-inside: auto; orphans: 2; widows: 2; margin-bottom: 0.11in; border: none; padding: 0in; background: transparent; page-break-before: auto; page-break-after: auto\">\n\t<span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">Carcinomes\n\tépidermoïde de l’œsophage</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t(</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">1-7%\n\t</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">)\n\tavec risque : </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">x\n\t1000-3000/population</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\tgénérale </span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">en</span></b></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#000000\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><span style=\"font-weight: normal\"><span style=\"background: transparent\">\n\t</span></span></span></font></font></span></font></span><span style=\"font-variant: normal\"><font color=\"#00b050\"><span style=\"text-decoration: none\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><span style=\"font-style: normal\"><b><span style=\"background: transparent\">cas\n\tATCD de prise de caustique.</span></b></span></font></font></span></font></span></p></li>\n</ul>\n<p style=\"line-height: 150%; margin-bottom: 0.11in\"><font face=\"Calibri, serif\"><font size=\"4\" style=\"font-size: 14pt\"><b>-\nCes trois nécessitent alors une surveillance -</b></font></font></p>\n\n",
+        "explanationImage": null,
+        "createdAt": {
+          "_seconds": 1754067740,
+          "_nanoseconds": 853000000
+        },
+        "suggestions": [
+          {
+            "id": "308d28b5-40de-4e96-8586-6db4c505b976",
+            "isSelected": false,
+            "text": "1.4.5",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "12f4dd3e-c1e2-435e-b46a-6b218b501b6e",
+            "isSelected": false,
+            "text": "1.3.4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "e4042d6b-5beb-43d7-ba84-6df19de2fef3",
+            "isSelected": false,
+            "text": "2.3.4",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "871be84c-fab0-413f-bf4d-a66f4e946586",
+            "isSelected": false,
+            "text": "2.4.5",
+            "isStudentAnswer": false,
+            "count": 0
+          },
+          {
+            "id": "d3d8f87d-1849-4e3b-96e1-0cc17751c6bb",
+            "isSelected": false,
+            "text": "3.4.5",
+            "isStudentAnswer": false,
+            "count": 0
+          }
+        ],
+        "correctWrongStats": null,
+        "selectedSuggestionId": [],
+        "isCorrect": null,
+        "timeSpent": 0
+      }
+    ],
+    "modules": [
+      {
+        "id": "t5i1L5uSQUTiEgeb2ON4",
+        "name": "Hépatologie Gastro-Entérologie",
+        "studyLevel": 4
+      },
+      {
+        "id": "6tLjsnOiROzcHgdHtfV0",
+        "name": "General",
+        "studyLevel": 4
+      }
+    ],
+    "subcategories": [
+      {
+        "id": "soJqrueOyynOzoJSQqDg",
+        "name": "Endoscopie digestive diagnostique et thérapeutique",
+        "category": {
+          "id": "6tLjsnOiROzcHgdHtfV0",
+          "father": "Hépatologie Gastro-Entérologie",
+          "name": "General"
+        }
+      }
+    ],
+    "statistics": {
+      "time": 0,
+      "wrongCount": 0,
+      "correctCount": 0,
+      "lastAnsweredQuestionIndex": 0,
+      "neutralCount": 0,
+      "questionsCount": 22
+    },
+    "type": "quiz",
+    "createdAt": {
+      "_seconds": 1756231375,
+      "_nanoseconds": 116000000
+    }
+  }
+}
