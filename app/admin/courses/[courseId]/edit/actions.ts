@@ -57,7 +57,7 @@ export const editCourse = async (
       };
     }
     await prisma.course.update({
-      where: { id: courseId, userId: user.user.id },
+      where: { id: courseId },
       data: {
         ...result.data,
       },
@@ -66,7 +66,8 @@ export const editCourse = async (
       status: "success",
       message: "Course updated successfully",
     };
-  } catch {
+  } catch (e) {
+    console.error(e);
     return {
       status: "error",
       message: "Something went wrong",
