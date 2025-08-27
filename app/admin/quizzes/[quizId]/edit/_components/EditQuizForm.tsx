@@ -79,7 +79,7 @@ const EditQuizForm = ({ quiz }: EditQuizFormProps) => {
       level: quiz?.level,
       category: quiz?.category,
 
-      fileKey: quiz?.fileKey,
+      fileKey: quiz?.fileKey || undefined,
       price: quiz?.price,
     },
   });
