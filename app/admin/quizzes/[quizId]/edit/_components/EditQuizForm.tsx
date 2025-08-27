@@ -80,7 +80,7 @@ const EditQuizForm = ({ quiz }: EditQuizFormProps) => {
       category: quiz?.category,
 
       fileKey: quiz?.fileKey || undefined,
-      price: quiz?.price,
+      price: quiz?.price || undefined,
     },
   });
 
@@ -362,17 +362,25 @@ const EditQuizForm = ({ quiz }: EditQuizFormProps) => {
           <FormField
             control={form.control}
             name="price"
-            render={({ field }) => {
-              return (
-                <FormItem className="w-full">
-                  <FormLabel>Price (DZD) </FormLabel>
-                  <FormControl>
-                    <Input {...field} type="number" placeholder="Price" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              );
-            }}
+            render={({ field }) => (
+              <FormItem className="w-full">
+                <FormLabel>Price (DZD)</FormLabel>
+                <FormControl>
+                  <Input
+                    type="number"
+                    inputMode="numeric"
+                    value={field.value == null ? "" : String(field.value)}
+                    onChange={(e) => {
+                      const v = e.target.value;
+                      if (v === "") return field.onChange(undefined);
+                      const n = Number(v);
+                      field.onChange(Number.isNaN(n) ? undefined : n);
+                    }}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
           />
         </div>
 
