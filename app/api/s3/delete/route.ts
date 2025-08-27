@@ -1,57 +1,55 @@
-import { requireAdmin } from "@/app/data/admin/require-admin";
-import arcjet, { detectBot, fixedWindow } from "@/lib/arcjet";
-import { auth } from "@/lib/auth";
-import { env } from "@/lib/env";
-import { S3 } from "@/lib/S3Client";
-import { DeleteObjectCommand } from "@aws-sdk/client-s3";
-import { headers } from "next/headers";
 import { NextResponse } from "next/server";
+import { DeleteObjectCommand } from "@aws-sdk/client-s3";
+import { S3 } from "@/lib/S3Client";
+import arcjet, { detectBot, fixedWindow } from "@/lib/arcjet";
+import { requireAdmin } from "@/app/data/admin/require-admin";
+import { env } from "@/lib/env";
 
 const aj = arcjet
-  .withRule(
-    detectBot({
-      mode: "LIVE",
-      allow: [],
-    })
-  )
-  .withRule(
-    fixedWindow({
-      mode: "LIVE",
-      window: "1m",
-      max: 30,
-    })
-  );
+  .withRule(detectBot({ mode: "LIVE", allow: [] }))
+  .withRule(fixedWindow({ mode: "LIVE", window: "1m", max: 30 }));
 
-export const DELETE = async (request: Request) => {
-  const session = await requireAdmin();
+export const runtime = "nodejs";
+
+export async function DELETE(request: Request) {
   try {
-    const body = await request.json();
+    const session = await requireAdmin(); // moved inside try like upload
 
+    // rate-limit / anti-bot
     const decision = await aj.protect(request, {
-      fingerprint: session?.user.id || "",
+      fingerprint: session.user.id || "anon",
     });
-
     if (decision.isDenied()) {
       return NextResponse.json(
-        {
-          error: "Request denied",
-        },
-        {
-          status: 429,
-        }
+        { error: decision.reason || "Rate limited" },
+        { status: 429 }
       );
     }
+
+    // parse request
+    const body = await request.json();
     const { key } = body;
-    if (!key) {
-      return new Response("Key is required", { status: 400 });
+    if (!key || typeof key !== "string") {
+      return NextResponse.json({ error: "Key is required" }, { status: 400 });
     }
 
-    const command = new DeleteObjectCommand({
+    // delete file
+    const cmd = new DeleteObjectCommand({
       Bucket: env.NEXT_PUBLIC_S3_BUCKET_NAME_IMAGES,
       Key: key,
     });
 
-    await S3.send(command);
-    return new Response("File deleted successfully", { status: 200 });
-  } catch (error) {}
-};
+    await S3.send(cmd);
+    return NextResponse.json({ message: "File deleted successfully" });
+  } catch (err: any) {
+    // translate auth errors to 401/403
+    if (err?.name === "AuthError" || err?.code === "UNAUTHORIZED") {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+    console.error("delete route error:", err);
+    return NextResponse.json(
+      { error: "Failed to delete file" },
+      { status: 500 }
+    );
+  }
+}
