@@ -98,7 +98,7 @@ model Course {
   id               String    @unique   @id @default(uuid())
   title            String
   description      String
-  fileKey          String
+  fileKey          String?
   price            Int
   duration         Int
   level            CourseLevel  @default(FIRST_YEAR)
@@ -163,7 +163,7 @@ model Quiz {
   id        String   @id @default(uuid())
   title     String
   description String
-  fileKey          String
+  fileKey          String?
   price            Int
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

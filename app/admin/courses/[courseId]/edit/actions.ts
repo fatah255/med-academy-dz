@@ -500,3 +500,19 @@ export const updateAnswer = async (
     return { status: "error", message: "Failed to update answer" };
   }
 };
+
+export async function deleteFileKey(courseId: string) {
+  await prisma.course.update({
+    where: { id: courseId },
+    data: { fileKey: null },
+  });
+  return { ok: true };
+}
+
+export async function saveFileKey(courseId: string, key: string) {
+  await prisma.course.update({
+    where: { id: courseId },
+    data: { fileKey: key },
+  });
+  return { ok: true };
+}
