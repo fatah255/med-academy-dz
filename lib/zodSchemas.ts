@@ -154,7 +154,7 @@ export const qcmSchema = z.object({
     .max(500, { message: "Description must not exceed 500 characters." }),
 
   price: z.number().min(0, { message: "Price is required." }),
-  fileKey: z.string().min(1, { message: "File key is required." }),
+  fileKey: z.string().min(1, { message: "File key is required." }).optional(),
 
   level: z.enum(courseLevels),
   category: z.string().min(1, { message: "Category is required." }),
