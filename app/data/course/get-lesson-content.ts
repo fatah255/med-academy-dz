@@ -31,6 +31,7 @@ export async function getLessonContent(lessonId: string) {
           course: {
             select: {
               slug: true,
+              price: true,
             },
           },
         },
@@ -52,7 +53,7 @@ export async function getLessonContent(lessonId: string) {
       },
     },
   });
-  if (!enrollment) {
+  if (!enrollment && lesson.chapter.course.price > 0) {
     return notFound();
   }
   return lesson;
