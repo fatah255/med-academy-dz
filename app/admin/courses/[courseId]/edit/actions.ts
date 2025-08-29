@@ -57,7 +57,7 @@ export const editCourse = async (
       };
     }
     await prisma.course.update({
-      where: { id: courseId },
+      where: { id: courseId, userId: user?.user?.id },
       data: {
         ...result.data,
       },
@@ -70,7 +70,7 @@ export const editCourse = async (
     console.error(e);
     return {
       status: "error",
-      message: "Something went wrong",
+      message: "Something went wrong or You are not the owner of this course!",
     };
   }
 };
