@@ -18,6 +18,7 @@ export const modulesByYear = [
       { name: "Biostatistique", type: "MODULE", icon: "📊" },
       { name: "Santé société humanité (SSH)", type: "MODULE", icon: "🤝" },
       { name: "Chimie", type: "MODULE", icon: "🧪" },
+      { name: "Biophysique", type: "MODULE" },
     ],
   },
   {
