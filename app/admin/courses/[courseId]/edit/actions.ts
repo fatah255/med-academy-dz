@@ -47,6 +47,27 @@ export const editCourse = async (
       message: "Request denied",
     };
   }
+  const course = await prisma.course.findUnique({
+    where: { id: courseId },
+    select: {
+      userId: true,
+    },
+  });
+  if (!course) {
+    return {
+      status: "error",
+      message: "Course not found",
+    };
+  }
+  if (
+    user?.user.id !== course.userId &&
+    user.user.email !== "medacademydz@gmail.com"
+  ) {
+    return {
+      status: "error",
+      message: "You are not the owner of this course",
+    };
+  }
 
   try {
     const result = courseSchema.safeParse(data);
@@ -57,7 +78,7 @@ export const editCourse = async (
       };
     }
     await prisma.course.update({
-      where: { id: courseId, userId: user?.user?.id },
+      where: { id: courseId },
       data: {
         ...result.data,
       },
