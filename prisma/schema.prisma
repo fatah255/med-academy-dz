@@ -31,6 +31,7 @@ model User {
   updatedAt     DateTime
   sessions      Session[]
   accounts      Account[]
+  setup         Boolean     @default(false)
   level         CourseLevel @default(FIRST_YEAR)
   courses       Course[]
   quizzes       Quiz[]

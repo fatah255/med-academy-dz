@@ -4,9 +4,14 @@ import PublicCourseCard, {
 } from "../(landing-page)/_components/PublicCourseCard";
 import { getAllCourses } from "../data/course/get-all-courses";
 
-import { getLevel } from "./actions";
+import { getLevel, getSetupStatus } from "./actions";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
+import LevelToast from "./LevelToast";
+import Link from "next/link";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
 
 export default async function PublicCoursesroute() {
   const session = await auth.api.getSession({
@@ -42,6 +47,7 @@ async function RenderCourses({
 }) {
   const courses = await getAllCourses();
   const level = await getLevel(userId);
+  const isSetup = await getSetupStatus(userId);
   const coursesToRender =
     isAdmin || !userId
       ? courses
@@ -52,6 +58,27 @@ async function RenderCourses({
       {coursesToRender.map((course) => (
         <PublicCourseCard key={course.id} course={course} />
       ))}
+      {coursesToRender.length === 0 && (
+        <Card className="bg-background/50 border-2 border-dashed border-border col-span-full flex">
+          <CardHeader>
+            <h2 className="text-lg font-semibold mx-auto">
+              No courses available for{" "}
+              {level.split("_").join(" ").toLowerCase()}.
+            </h2>
+          </CardHeader>
+          <CardContent className="mx-auto">
+            <Link
+              className={buttonVariants({ variant: "outline" })}
+              href="/settings"
+            >
+              update your study level
+              <ArrowRight className="inline-block ml-1 size-4" />
+            </Link>
+            .
+          </CardContent>
+        </Card>
+      )}
+      <LevelToast isSetup={isSetup} level={level} userId={userId} />
     </div>
   );
 }
