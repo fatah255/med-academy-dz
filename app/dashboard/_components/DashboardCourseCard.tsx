@@ -68,7 +68,7 @@ const DashboardCourseCard = ({
       <CardContent className="p-4">
         <Link
           className="font-medium text-lg line-clamp-2 hover:underline group-hover:text-primary transition-colors"
-          href={`/courses/${course.course?.slug}`}
+           href={`/dashboard/${course.course.slug}/${firstLesson?.id || ""}`}
         >
           {course.course?.title}
         </Link>
