@@ -1,67 +1,50 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
-
-datasource db {
-  provider = "cockroachdb"
-  url      = env("DB2_URL")
-}
 generator client {
   provider = "prisma-client-js"
   output   = "../lib/generated/prisma"
 }
 
-
-// datasource db {
-//   provider = "postgresql"
-//   url      = env("DATABASE_URL")
-// }
-
+datasource db {
+  provider = "cockroachdb"
+  url      = env("DB2_URL")
+}
 
 model User {
-  id            String      @id
-  name          String
-  email         String
-  emailVerified Boolean
-  image         String?
-  createdAt     DateTime
-  updatedAt     DateTime
-  sessions      Session[]
-  accounts      Account[]
-  setup         Boolean     @default(false)
-  level         CourseLevel @default(FIRST_YEAR)
-  courses       Course[]
-  quizzes       Quiz[]
-  enrollments   Enrollment[]
+  id             String           @id
+  name           String
+  email          String           @unique
+  emailVerified  Boolean
+  image          String?
+  createdAt      DateTime
+  updatedAt      DateTime
+  level          CourseLevel      @default(FIRST_YEAR)
+  isAdmin        Boolean          @default(false)
+  role           String?
+  banned         Boolean?
+  banReason      String?
+  banExpires     DateTime?
+  setup          Boolean          @default(false)
+  courses        Course[]
   lessonProgress LessonProgress[]
-  games         Game[]
-  isAdmin       Boolean     @default(false)
-  role          String?
-  banned        Boolean?
-  banReason     String?
-  banExpires    DateTime?
+  accounts       Account[]
+  enrollments    Enrollment[]
+  quizzes        Quiz[]
+  sessions       Session[]
 
-  @@unique([email])
   @@map("user")
 }
 
 model Session {
-  id        String   @id
-  expiresAt DateTime
-  token     String
-  createdAt DateTime
-  updatedAt DateTime
-  ipAddress String?
-  userAgent String?
-  userId    String
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-
+  id             String   @id
+  expiresAt      DateTime
+  token          String   @unique
+  createdAt      DateTime
+  updatedAt      DateTime
+  ipAddress      String?
+  userAgent      String?
+  userId         String
   impersonatedBy String?
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@unique([token])
   @@map("session")
 }
 
@@ -70,7 +53,6 @@ model Account {
   accountId             String
   providerId            String
   userId                String
-  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   accessToken           String?
   refreshToken          String?
   idToken               String?
@@ -80,6 +62,7 @@ model Account {
   password              String?
   createdAt             DateTime
   updatedAt             DateTime
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("account")
 }
@@ -96,7 +79,7 @@ model Verification {
 }
 
 model Course {
-  id               String    @unique   @id @default(uuid())
+  id               String       @id @unique @default(uuid())
   title            String
   description      String
   fileKey          String?
@@ -109,12 +92,135 @@ model Course {
   smallDescription String
   slug             String       @unique
   status           CourseStatus @default(DRAFT)
+  userId           String
+  chapters         Chapter[]
+  user             User         @relation(fields: [userId], references: [id])
+  enrollments      Enrollment[]
+}
 
+model Chapter {
+  id        String   @id @default(uuid())
+  title     String
+  position  Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  courseId  String
+  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  lesson    Lesson[]
+}
 
-  chapters Chapter[]
+model Lesson {
+  id           String           @id @default(uuid())
+  title        String
+  description  String?
+  position     Int
+  thumbnailKey String?
+  videoKey     String?
+  chapterId    String
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
+  progress     LessonProgress[]
+  chapter      Chapter          @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+
+  @@map("lesson")
+}
+
+model Quiz {
+  id          String       @id @default(uuid())
+  title       String
+  description String
+  fileKey     String?
+  price       Int
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  slug        String       @unique
+  status      CourseStatus @default(DRAFT)
+  level       CourseLevel  @default(FIRST_YEAR)
+  category    String
+  userId      String
+  cours       cours[]
   enrollments Enrollment[]
-  userId   String
-  user     User      @relation(fields: [userId], references: [id])
+  user        User         @relation(fields: [userId], references: [id])
+
+  @@map("quiz")
+}
+
+model Qcm {
+  id             String      @id @default(uuid())
+  question       String
+  position       Int
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+  comment        String?
+  examYear       Int?
+  parentId       String?
+  type           String      @default("QCM")
+  typeQuestionId Int         @default(1)
+  coursId        String
+  cours          cours       @relation(fields: [coursId], references: [id], onDelete: Cascade)
+  qcm            Qcm?        @relation("qcmToqcm", fields: [parentId], references: [id], onDelete: Cascade)
+  other_qcm      Qcm[]       @relation("qcmToqcm")
+  answers        QcmAnswer[]
+
+  @@index([parentId])
+  @@index([coursId])
+  @@map("qcm")
+}
+
+model QcmAnswer {
+  id        String  @id @default(uuid())
+  text      String
+  isCorrect Boolean @default(false)
+  position  Int
+  qcmId     String
+  percent   Int     @default(0)
+  qcm       Qcm     @relation(fields: [qcmId], references: [id], onDelete: Cascade)
+
+  @@unique([qcmId, position])
+  @@index([qcmId])
+  @@map("qcm_answer")
+}
+
+model Enrollment {
+  id            String   @id @default(uuid())
+  amount        Int
+  status        String   @default("PENDING")
+  transactionId String?  @unique
+  userId        String
+  courseId      String?
+  quizId        String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  course        Course?  @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  quiz          Quiz?    @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, courseId])
+  @@unique([userId, quizId])
+  @@map("enrollment")
+}
+
+model LessonProgress {
+  id        String   @id @default(uuid())
+  userId    String
+  lessonId  String
+  completed Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  lesson    Lesson   @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, lessonId])
+}
+
+model cours {
+  id        String   @id @unique
+  title     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  quizId    String
+  quiz      Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  qcm       Qcm[]
 }
 
 enum CourseLevel {
@@ -130,153 +236,4 @@ enum CourseStatus {
   DRAFT
   PUBLISHED
   ARCHIVED
-}
-
-model Chapter {
-  id        String   @id @default(uuid())
-  title     String
-  position  Int
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  lesson   Lesson[]
-  courseId String
-  course   Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
-}
-
-model Lesson {
-  id           String   @id @default(uuid())
-  title        String
-  description  String?
-  position     Int
-  thumbnailKey String?
-  videoKey     String?
-  chapterId    String
-  chapter      Chapter  @relation(fields: [chapterId], references: [id], onDelete: Cascade)
-  progress     LessonProgress[]
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
-
-  @@map("lesson")
-}
-
-model Quiz {
-  id        String   @id @default(uuid())
-  title     String
-  description String
-  fileKey          String?
-  price            Int
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  slug             String       @unique
-  status           CourseStatus @default(DRAFT)
-  
-  level            CourseLevel  @default(FIRST_YEAR)
-  category         String
-  enrollments      Enrollment[]
-  games            Game[]
-
-  userId   String
-  user     User      @relation(fields: [userId], references: [id])
-
-  qcm      Qcm[]    // <- quizzes live here
-
-  @@map("quiz")
-}
-
-model Qcm {
-  id        String       @id @default(uuid())
-  question  String
-  answers   QcmAnswer[]  // <- answers live here
-  gameAnswers GameAnswer[] // <- game answers live here
-  position         Int
-  
-  createdAt DateTime     @default(now())
-  updatedAt DateTime     @updatedAt
-
-  quizId String
-  quiz   Quiz   @relation(fields: [quizId], references: [id], onDelete: Cascade)
-
-  @@map("qcm")
-}
-
-model QcmAnswer {
-  id        String  @id @default(uuid())
-  text      String  // the answer text
-  isCorrect Boolean @default(false)
-  position  Int     // to keep A/B/C/D ordering
-
-  qcmId String
-  qcm   Qcm     @relation(fields: [qcmId], references: [id], onDelete: Cascade)
-
-  @@unique([qcmId, position])  // one row per position
-  @@map("qcm_answer")
-}
-
-
-model Enrollment {
-  id        String   @id @default(uuid())
-  amount    Int
-  status    String   @default("PENDING")
-  transactionId String? @unique 
-  userId    String
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  courseId  String?
-  course    Course?  @relation(fields: [courseId], references: [id], onDelete: Cascade)
-  quizId    String?
-  quiz      Quiz?    @relation(fields: [quizId], references: [id], onDelete: Cascade)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@unique([userId, courseId])
-  @@unique([userId, quizId])
-  @@map("enrollment")
-} 
-
-
-
-model LessonProgress {
-  id        String   @id @default(uuid())
-  userId    String
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  lessonId  String
-  lesson    Lesson   @relation(fields: [lessonId], references: [id], onDelete: Cascade)
-  completed Boolean  @default(false)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@unique([userId, lessonId])
-}
-
-model Game {
-  id          String   @id @default(uuid())
-  userId      String
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  quizId      String
-  quiz        Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
-  topic       String
-  timeStarted DateTime @default(now())
-  endedAt     DateTime?
-  correct     Int      @default(0)
-  wrong       Int      @default(0)
-  answers     GameAnswer[]
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  @@index([userId, quizId])
-  @@map("game")
-}
-
-model GameAnswer {
-  id           String   @id @default(uuid())
-  gameId       String
-  game         Game     @relation(fields: [gameId], references: [id], onDelete: Cascade)
-  qcmId        String
-  qcm          Qcm      @relation(fields: [qcmId], references: [id], onDelete: Cascade)
-  selectedText String
-  isCorrect    Boolean
-  position     Int?
-  createdAt    DateTime @default(now())
-
-  @@map("game_answer")
 }

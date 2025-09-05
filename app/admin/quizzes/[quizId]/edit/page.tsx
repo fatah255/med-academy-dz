@@ -46,9 +46,7 @@ const page = async ({ params }: { params: Params }) => {
               <CardTitle>Quiz Structure</CardTitle>
               <CardDescription>Edit the structure of the quiz</CardDescription>
             </CardHeader>
-            <CardContent>
-              <QuizStructure quiz={data} />
-            </CardContent>
+            <CardContent>{/* <QuizStructure quiz={data} /> */}</CardContent>
           </Card>
         </TabsContent>
       </Tabs>

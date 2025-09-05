@@ -20,17 +20,21 @@ export const adminGetQuiz = async (id: string) => {
       description: true,
       price: true,
       status: true,
-      qcm: {
+      cours: {
         select: {
-          id: true,
-          question: true,
-          position: true,
-          answers: {
+          qcm: {
             select: {
               id: true,
+              question: true,
               position: true,
-              isCorrect: true,
-              text: true,
+              answers: {
+                select: {
+                  id: true,
+                  position: true,
+                  isCorrect: true,
+                  text: true,
+                },
+              },
             },
           },
         },

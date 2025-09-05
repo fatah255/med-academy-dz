@@ -17,9 +17,13 @@ export const adminGetQuizzes = async () => {
       fileKey: true,
       level: true,
       category: true,
-      qcm: {
+      cours: {
         select: {
-          id: true,
+          qcm: {
+            select: {
+              id: true,
+            },
+          },
         },
       },
     },
