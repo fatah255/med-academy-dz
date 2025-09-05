@@ -487,7 +487,7 @@ export const updateAnswer = async (
     await prisma.$transaction(async (tx) => {
       // Ensure the question exists and belongs to the quiz
       const qcm = await tx.qcm.findFirst({
-        where: { id: questionId, quizId },
+        where: { id: questionId, cours: { quizId: quizId } },
         select: { id: true },
       });
       if (!qcm) throw new Error("Question not found for this quiz");
