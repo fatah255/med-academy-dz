@@ -6,15 +6,6 @@ import {
   CollapsibleTrigger,
   CollapsibleContent,
 } from "@/components/ui/collapsible";
-import { Button } from "@/components/ui/button";
-import { ChevronDown, ChevronRight, PlusIcon } from "lucide-react";
-import { Card } from "@/components/ui/card";
-import EditQcmModal from "./EditQcmModal";
-import DeleteQuestionModal from "./DeleteQuestion";
-import NormalQuestionCard from "./NormalQuestionCard";
-import type { QuestionItem } from "./QuizStructure";
-
-/* modal bits */
 import {
   Dialog,
   DialogContent,
@@ -32,6 +23,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -40,13 +32,28 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+
+import { Button } from "@/components/ui/button";
+import {
+  ChevronDown,
+  ChevronRight,
+  MessageSquare,
+  PlusIcon,
+} from "lucide-react";
+import { Card } from "@/components/ui/card";
+import EditQcmModal from "./EditQcmModal";
+import DeleteQuestionModal from "./DeleteQuestion";
+import NormalQuestionCard from "./NormalQuestionCard";
+import type { QuestionItem } from "./QuizStructure";
+
 import { useForm, SubmitHandler, Resolver } from "react-hook-form";
+import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { QuestionSchema, type questionSchemaType } from "@/lib/zodSchemas";
 import { QUESTION_TYPES } from "@/lib/utils";
 import { tryCatch } from "@/hooks/try-catch";
 import { toast } from "sonner";
-import { createSubQcm } from "../actions";
+import { createSubQcm, updateQcmComment } from "../actions";
 
 type Props = {
   item: QuestionItem; // clinical stem (parent)
@@ -64,13 +71,13 @@ const CliniqueQuestionCard: React.FC<Props> = ({
   subItems,
 }) => {
   return (
-    <Card>
+    <Card className="w-full">
       <Collapsible
         open={item.isOpen}
         onOpenChange={() => onToggle(item.id)}
         className="w-full"
       >
-        {/* Top: clinical stem */}
+        {/* Stem header */}
         <div className="flex items-center justify-between p-3 border-b border-border">
           <div className="flex items-center gap-2">
             <CollapsibleTrigger asChild>
@@ -84,7 +91,13 @@ const CliniqueQuestionCard: React.FC<Props> = ({
             </CollapsibleTrigger>
             <p className="cursor-pointer hover:text-primary">{item.question}</p>
           </div>
-          <div>
+          <div className="flex items-center gap-1">
+            <EditCommentButton
+              qcmId={item.id}
+              quizId={quizId}
+              coursId={coursId}
+              defaultComment={item.comment ?? ""}
+            />
             <EditQcmModal
               coursId={coursId}
               quizId={quizId}
@@ -95,11 +108,23 @@ const CliniqueQuestionCard: React.FC<Props> = ({
           </div>
         </div>
 
-        {/* Bottom: sub-questions + "Add sub-question" */}
+        {/* Body: stem comment, subs, add button */}
         <CollapsibleContent>
           <div className="space-y-4 p-2">
+            {/* Stem comment */}
+            {item.comment ? (
+              <div className="rounded-md border border-border bg-muted/30 p-3 text-sm whitespace-pre-wrap">
+                {item.comment}
+              </div>
+            ) : (
+              <div className="text-xs text-muted-foreground px-1">
+                No comment yet.
+              </div>
+            )}
+
+            {/* Sub-questions */}
             {subItems.length === 0 ? (
-              <p className="text-sm text-muted-foreground px-2">
+              <p className="text-sm text-muted-foreground px-1">
                 No sub-questions yet.
               </p>
             ) : (
@@ -114,7 +139,7 @@ const CliniqueQuestionCard: React.FC<Props> = ({
               ))
             )}
 
-            {/* Add sub-question button */}
+            {/* Add sub-question */}
             <div className="pt-2">
               <NewSubQcmModal
                 parentId={item.id}
@@ -131,9 +156,97 @@ const CliniqueQuestionCard: React.FC<Props> = ({
 
 export default CliniqueQuestionCard;
 
-/* ------------------------------------------------------------------ */
-/* NewSubQcmModal: small modal to create a sub-question under parent  */
-/* ------------------------------------------------------------------ */
+/* ---------- Inline comment edit modal ---------- */
+const CommentSchema = z.object({
+  comment: z.string().max(8000, "Too long").optional(),
+});
+type CommentForm = z.infer<typeof CommentSchema>;
+
+function EditCommentButton({
+  qcmId,
+  quizId,
+  coursId,
+  defaultComment,
+}: {
+  qcmId: string;
+  quizId: string;
+  coursId: string;
+  defaultComment: string;
+}) {
+  const form = useForm<CommentForm>({
+    resolver: zodResolver(CommentSchema),
+    defaultValues: { comment: defaultComment },
+  });
+
+  async function onSubmit(values: CommentForm) {
+    const { data, error } = await tryCatch(
+      updateQcmComment(qcmId, {
+        quizId,
+        coursId,
+        comment: values.comment?.trim() ?? "",
+      })
+    );
+    if (error) return toast.error("Failed to save comment");
+    data.status === "success"
+      ? toast.success(data.message)
+      : toast.error(data.message);
+  }
+
+  return (
+    <Dialog
+      onOpenChange={(o) => {
+        if (o === false) form.reset({ comment: defaultComment });
+      }}
+    >
+      <DialogTrigger asChild>
+        <Button
+          variant="outline"
+          size="icon"
+          className="mr-1"
+          title="Edit comment"
+        >
+          <MessageSquare className="size-4" />
+        </Button>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[520px]">
+        <DialogHeader>
+          <DialogTitle>Edit comment</DialogTitle>
+          <DialogDescription>
+            Add or update the teacher’s comment.
+          </DialogDescription>
+        </DialogHeader>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            <FormField
+              control={form.control}
+              name="comment"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Comment</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      rows={6}
+                      placeholder="Type a comment…"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <DialogFooter>
+              <Button type="submit" className="w-full">
+                Save comment
+              </Button>
+            </DialogFooter>
+          </form>
+        </Form>
+      </DialogContent>
+    </Dialog>
+  );
+}
+
+/* ---------- Your existing inline NewSubQcmModal (unchanged) ---------- */
 function NewSubQcmModal({
   parentId,
   quizId,
@@ -145,14 +258,15 @@ function NewSubQcmModal({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
-  const defaultTypeId = QUESTION_TYPES[0]?.id ?? 1; // usually QCM
+  const defaultTypeId = QUESTION_TYPES[0]?.id ?? 1; // QCM by default
 
   const form = useForm<questionSchemaType>({
-    resolver: zodResolver(QuestionSchema) as Resolver<
-      questionSchemaType,
-      any,
-      questionSchemaType
-    >,
+    resolver: zodResolver(QuestionSchema) as Resolver<{
+      question: string;
+      quizId: string;
+      coursId: string;
+      typeQuestionId: number;
+    }>,
     defaultValues: {
       question: "",
       quizId,

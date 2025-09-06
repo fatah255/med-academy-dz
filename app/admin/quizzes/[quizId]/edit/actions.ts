@@ -14,6 +14,7 @@ import {
 import arcjet, { detectBot, fixedWindow } from "@/lib/arcjet";
 import { request } from "@arcjet/next";
 import { revalidatePath } from "next/cache";
+import z from "zod";
 
 // ------------------------------------------------------------------
 // Arcjet instances
@@ -626,5 +627,55 @@ export const createSubQcm = async (
   } catch (e) {
     console.error(e);
     return { status: "error", message: "Failed to create sub-question" };
+  }
+};
+
+const CommentUpdateSchema = z.object({
+  quizId: z.string().uuid(),
+  coursId: z.string().uuid(),
+  comment: z.string().trim().max(2000).optional(),
+});
+
+export const updateQcmComment = async (
+  qcmId: string,
+  values: z.infer<typeof CommentUpdateSchema>
+): Promise<ApiResponse> => {
+  await requireAdmin();
+
+  const parsed = CommentUpdateSchema.safeParse(values);
+  if (!parsed.success) {
+    return { status: "error", message: "Invalid comment data" };
+  }
+
+  const { quizId, coursId, comment } = parsed.data;
+
+  try {
+    const req = await request();
+    const decision = await aj2.protect(req, { fingerprint: quizId });
+    if (decision.isDenied()) {
+      return { status: "error", message: "Request denied" };
+    }
+
+    await prisma.$transaction(async (tx) => {
+      // Ensure question belongs to the same quiz/cours
+      const ok = await tx.qcm.findFirst({
+        where: { id: qcmId, cours: { id: coursId, quizId } },
+        select: { id: true },
+      });
+      if (!ok) throw new Error("Question not found for this quiz");
+
+      await tx.qcm.update({
+        where: { id: qcmId },
+        data: {
+          comment: (comment ?? "").trim() === "" ? null : comment!.trim(),
+        },
+      });
+    });
+
+    revalidatePath(`/admin/quizzes/${quizId}/edit/${coursId}`);
+    return { status: "success", message: "Comment updated successfully" };
+  } catch (e) {
+    console.error(e);
+    return { status: "error", message: "Failed to update comment" };
   }
 };

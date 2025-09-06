@@ -28,6 +28,7 @@ export type QuestionItem = {
   answers: AnswerItem[];
   // parentId is optional; we don't rely on it for top-level filtering
   parentId?: string | null;
+  comment?: string | null; // ← add this
 };
 
 const QuizStructure = ({ quiz, coursId }: QuizStructureProps) => {
@@ -63,6 +64,7 @@ const QuizStructure = ({ quiz, coursId }: QuizStructureProps) => {
     return course.qcm.map((qcm: any) => ({
       id: qcm.id,
       question: qcm.question,
+      comment: (qcm as any).comment ?? null,
       order: qcm.position,
       typeId: +qcm.typeQuestionId,
       isOpen: keepOpenFrom?.[qcm.id] ?? true,
