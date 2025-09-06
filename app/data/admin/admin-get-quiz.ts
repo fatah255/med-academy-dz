@@ -22,6 +22,7 @@ export const adminGetQuiz = async (id: string) => {
       status: true,
       cours: {
         select: {
+          id: true,
           qcm: {
             select: {
               id: true,

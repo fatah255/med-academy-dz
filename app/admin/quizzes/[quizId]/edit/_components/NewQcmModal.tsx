@@ -27,7 +27,13 @@ import { tryCatch } from "@/hooks/try-catch";
 import { toast } from "sonner";
 import { createQcm } from "../actions";
 
-const NewQcmModal = ({ quizId }: { quizId: string }) => {
+const NewQcmModal = ({
+  quizId,
+  coursId,
+}: {
+  quizId: string;
+  coursId: string;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
 
@@ -60,6 +66,7 @@ const NewQcmModal = ({ quizId }: { quizId: string }) => {
     defaultValues: {
       question: "",
       quizId,
+      coursId,
     },
   });
 

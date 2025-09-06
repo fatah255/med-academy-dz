@@ -9,13 +9,15 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { adminGetQuiz } from "@/app/data/admin/admin-get-quiz";
 import EditQuizForm from "./_components/EditQuizForm";
-import QuizStructure from "./_components/QuizStructure";
+import QuizCours from "./_components/QuizCours";
+import { getQuizCourses } from "@/app/data/admin/admin-get-quiz-cours";
 
 type Params = Promise<{ quizId: string }>;
 
 const page = async ({ params }: { params: Params }) => {
   const { quizId } = await params;
   const data = await adminGetQuiz(quizId);
+  const cours = await getQuizCourses(quizId);
 
   return (
     <div>
@@ -46,7 +48,9 @@ const page = async ({ params }: { params: Params }) => {
               <CardTitle>Quiz Structure</CardTitle>
               <CardDescription>Edit the structure of the quiz</CardDescription>
             </CardHeader>
-            <CardContent>{/* <QuizStructure quiz={data} /> */}</CardContent>
+            <CardContent>
+              <QuizCours quizId={quizId} cours={cours} />
+            </CardContent>
           </Card>
         </TabsContent>
       </Tabs>

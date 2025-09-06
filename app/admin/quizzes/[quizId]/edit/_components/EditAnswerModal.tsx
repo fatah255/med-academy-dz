@@ -22,12 +22,12 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Pen } from "lucide-react";
 import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
-
 import { tryCatch } from "@/hooks/try-catch";
 import { toast } from "sonner";
-
 import { Checkbox } from "@/components/ui/checkbox";
-import { updateAnswer } from "@/app/admin/courses/[courseId]/edit/actions";
+
+// ✅ import from the quiz actions file (same folder as create/delete)
+import { updateAnswer } from "../actions";
 
 const EditAnswerModal = ({
   quizId,
@@ -35,27 +35,27 @@ const EditAnswerModal = ({
   answerText,
   answerId,
   isCorrect,
+  coursId,
 }: {
   answerText: string;
   answerId: string;
   isCorrect: boolean;
   quizId: string;
   qcmId: string;
+  coursId: string;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
 
   function handleOpenChange(open: boolean) {
-    if (!open) {
-      form.reset();
-    }
+    if (!open) form.reset();
     setIsOpen(open);
   }
 
   async function handleSubmit(values: answerSchemaType) {
     startTransition(async () => {
       const { data: result, error } = await tryCatch(
-        updateAnswer(answerId, values)
+        updateAnswer(coursId, answerId, values)
       );
       if (error) {
         toast.error("Something went wrong");
@@ -63,9 +63,9 @@ const EditAnswerModal = ({
       }
       if (result.status === "success") {
         toast.success(result.message);
-        form.reset();
+        // form.reset();
         setIsOpen(false);
-      } else if (result.status === "error") {
+      } else {
         toast.error(result.message);
       }
     });
@@ -77,14 +77,14 @@ const EditAnswerModal = ({
       text: answerText || "",
       quizId: quizId || "",
       questionId: qcmId || "",
-      isCorrect: isCorrect ?? false,
+      isCorrect,
     },
   });
 
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
-        <Button variant="outline" className="mr-1" size={"icon"}>
+        <Button variant="outline" className="mr-1" size="icon">
           <Pen className="size-4" />
         </Button>
       </DialogTrigger>
@@ -113,7 +113,6 @@ const EditAnswerModal = ({
                 </FormItem>
               )}
             />
-
             <FormField
               control={form.control}
               name="isCorrect"
@@ -134,7 +133,6 @@ const EditAnswerModal = ({
                 </FormItem>
               )}
             />
-
             <DialogFooter>
               <Button disabled={isPending} type="submit" className="w-full">
                 {isPending ? "Updating..." : "Update answer"}

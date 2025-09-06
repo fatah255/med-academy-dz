@@ -31,9 +31,11 @@ import { Checkbox } from "@/components/ui/checkbox";
 const NewAnswerModal = ({
   quizId,
   qcmId,
+  coursId,
 }: {
   quizId: string;
   qcmId: string;
+  coursId: string;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
@@ -47,7 +49,9 @@ const NewAnswerModal = ({
 
   async function handleSubmit(values: answerSchemaType) {
     startTransition(async () => {
-      const { data: result, error } = await tryCatch(createAnswer(values));
+      const { data: result, error } = await tryCatch(
+        createAnswer(coursId, values)
+      );
       if (error) {
         toast.error("Something went wrong");
         return;

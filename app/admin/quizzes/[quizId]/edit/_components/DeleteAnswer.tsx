@@ -20,10 +20,12 @@ const DeleteAnswerModal = ({
   answerId,
   qcmId,
   quizId,
+  coursId,
 }: {
   answerId: string;
   qcmId: string;
   quizId: string;
+  coursId: string;
 }) => {
   const [open, setOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
@@ -31,7 +33,7 @@ const DeleteAnswerModal = ({
   async function handleDelete() {
     startTransition(async () => {
       const { data, error } = await tryCatch(
-        deleteAnswer(answerId, qcmId, quizId)
+        deleteAnswer(answerId, qcmId, quizId, coursId)
       );
       if (error) {
         toast.error("Something went wrong");

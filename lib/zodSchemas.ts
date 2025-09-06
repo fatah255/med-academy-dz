@@ -1,4 +1,5 @@
-import z from "zod";
+import { z } from "zod";
+
 export const courseLevels = [
   "FIRST_YEAR",
   "SECOND_YEAR",
@@ -7,7 +8,11 @@ export const courseLevels = [
   "FIFTH_YEAR",
   "SIXTH_YEAR",
 ] as const;
+
 export const courseStatus = ["DRAFT", "PUBLISHED", "ARCHIVED"] as const;
+
+/* ----------------------------- Course schemas ----------------------------- */
+
 export const courseSchema = z.object({
   title: z
     .string()
@@ -43,6 +48,11 @@ export const chapterSchema = z.object({
   courseId: z.string().uuid({ message: "Invalid course ID." }),
 });
 
+export const coursSchema = z.object({
+  title: z.string().min(3, { message: "Course title is required." }),
+  quizId: z.string().uuid({ message: "Invalid quiz ID." }),
+});
+
 export const lessonSchema = z.object({
   name: z.string().min(3, { message: "Lesson name is required." }),
   courseId: z.string().uuid({ message: "Invalid course ID." }),
@@ -55,9 +65,12 @@ export const lessonSchema = z.object({
   videoKey: z.string().optional(),
 });
 
+/* ------------------------ QCM / Questions / Answers ----------------------- */
+
 export const QuestionSchema = z.object({
   question: z.string().min(1, { message: "Question name is required." }),
-  quizId: z.string().uuid({ message: "Invalid course ID." }),
+  quizId: z.string().uuid({ message: "Invalid quiz ID." }),
+  coursId: z.string().uuid({ message: "Invalid cours ID." }), // ✅ required now
 });
 
 export const answerSchema = z.object({
@@ -65,11 +78,6 @@ export const answerSchema = z.object({
   quizId: z.string().uuid({ message: "Invalid quiz ID." }),
   questionId: z.string().uuid({ message: "Invalid question ID." }),
   isCorrect: z.boolean(),
-});
-
-export const settingsSchema = z.object({
-  year: z.enum(courseLevels),
-  adminEmail: z.email().optional(),
 });
 
 /** One answer row (no id on create) */
@@ -80,15 +88,16 @@ export const qcmAnswerCreateSchema = z.object({
   order: z.coerce.number().int().min(1, "Order must be >= 1"),
 });
 
-/** Full create */
+/** Full create (question + answers) inside a cours */
 export const qcmCreateSchema = z.object({
+  quizId: z.string().uuid({ message: "Invalid quiz ID." }),
+  coursId: z.string().uuid({ message: "Invalid cours ID." }), // ✅ added
   question: z.string().trim().min(5).max(1000),
   answers: z
     .array(qcmAnswerCreateSchema)
     .min(2, "At least two answers")
-    .max(4, "At most four answers") // adjust if you allow more than A–D
+    .max(4, "At most four answers")
     .superRefine((answers, ctx) => {
-      // must have at least one correct
       if (!answers.some((a) => a.isCorrect)) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
@@ -96,7 +105,6 @@ export const qcmCreateSchema = z.object({
           path: ["answers"],
         });
       }
-      // no duplicate order values
       const seen = new Set<number>();
       answers.forEach((a, i) => {
         if (seen.has(a.order)) {
@@ -113,10 +121,13 @@ export const qcmCreateSchema = z.object({
 
 /** Update: replace-all strategy (simplest) */
 export const qcmUpdateSchema = z.object({
+  // optionally include for authorization flows
+  quizId: z.string().uuid({ message: "Invalid quiz ID." }).optional(),
+  coursId: z.string().uuid({ message: "Invalid cours ID." }).optional(),
   question: z.string().trim().min(5).max(1000).optional(),
   // optional: if provided, you'll replace the whole answers set
   answers: z
-    .array(qcmAnswerCreateSchema) // same shape as create (we recreate rows)
+    .array(qcmAnswerCreateSchema)
     .min(2)
     .max(4)
     .optional()
@@ -143,6 +154,8 @@ export const qcmUpdateSchema = z.object({
     }),
 });
 
+/* ------------------------------ Quiz metadata ----------------------------- */
+
 export const qcmSchema = z.object({
   title: z
     .string()
@@ -152,10 +165,8 @@ export const qcmSchema = z.object({
     .string()
     .min(10, { message: "Description must be at least 10 characters long." })
     .max(500, { message: "Description must not exceed 500 characters." }),
-
   price: z.number().min(0, { message: "Price is required." }),
   fileKey: z.string().min(1, { message: "File key is required." }).optional(),
-
   level: z.enum(courseLevels),
   category: z.string().min(1, { message: "Category is required." }),
   slug: z
@@ -165,8 +176,16 @@ export const qcmSchema = z.object({
   status: z.enum(courseStatus),
 });
 
-export type qcmSchemaType = z.infer<typeof qcmSchema>;
+/* --------------------------------- Settings -------------------------------- */
 
+export const settingsSchema = z.object({
+  year: z.enum(courseLevels),
+  adminEmail: z.string().email().optional(), // ✅ fixed
+});
+
+/* ---------------------------------- Types ---------------------------------- */
+
+export type qcmSchemaType = z.infer<typeof qcmSchema>;
 export type QcmCreateInput = z.infer<typeof qcmCreateSchema>;
 
 export type questionSchemaType = z.infer<typeof QuestionSchema>;
@@ -176,3 +195,4 @@ export type courseSchemaType = z.infer<typeof courseSchema>;
 export type chapterSchemaType = z.infer<typeof chapterSchema>;
 export type lessonSchemaType = z.infer<typeof lessonSchema>;
 export type settingsSchemaType = z.infer<typeof settingsSchema>;
+export type coursSchemaType = z.infer<typeof coursSchema>;

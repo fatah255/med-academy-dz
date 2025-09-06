@@ -214,14 +214,15 @@ model LessonProgress {
 }
 
 model cours {
-  id        String   @id @unique
+  id        String   @id @default(cuid())
   title     String
   createdAt DateTime @default(now())
-  updatedAt DateTime
+  updatedAt DateTime @updatedAt
   quizId    String
   quiz      Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
   qcm       Qcm[]
 }
+
 
 enum CourseLevel {
   FIRST_YEAR

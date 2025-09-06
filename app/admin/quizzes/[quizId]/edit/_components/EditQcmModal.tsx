@@ -22,17 +22,18 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Pen } from "lucide-react";
 import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
-
 import { tryCatch } from "@/hooks/try-catch";
 import { toast } from "sonner";
 import { updateQcm } from "../actions";
 
 const EditQcmModal = ({
   quizId,
+  coursId,
   qcmId,
   question,
 }: {
   quizId: string;
+  coursId: string; // ✅ required now
   qcmId: string;
   question: string;
 }) => {
@@ -40,9 +41,7 @@ const EditQcmModal = ({
   const [isPending, startTransition] = useTransition();
 
   function handleOpenChange(open: boolean) {
-    if (!open) {
-      form.reset();
-    }
+    if (!open) form.reset();
     setIsOpen(open);
   }
 
@@ -57,7 +56,7 @@ const EditQcmModal = ({
         toast.success(result.message);
         form.reset();
         setIsOpen(false);
-      } else if (result.status === "error") {
+      } else {
         toast.error(result.message);
       }
     });
@@ -68,6 +67,7 @@ const EditQcmModal = ({
     defaultValues: {
       question,
       quizId,
+      coursId, // ✅ send coursId so Zod passes
     },
   });
 
@@ -101,7 +101,6 @@ const EditQcmModal = ({
                 </FormItem>
               )}
             />
-
             <DialogFooter>
               <Button disabled={isPending} type="submit" className="w-full">
                 {isPending ? "Updating..." : "Update Question"}
