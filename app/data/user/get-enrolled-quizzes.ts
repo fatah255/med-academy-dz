@@ -28,6 +28,8 @@ export async function getEnrolledQuizzes() {
           category: true,
           cours: {
             select: {
+              title: true,
+              id: true,
               qcm: {
                 select: {
                   id: true,
@@ -48,6 +50,7 @@ export async function getEnrolledQuizzes() {
       },
     },
   });
+
   const freeQuizzes = await prisma.quiz.findMany({
     where: {
       price: 0,
@@ -64,6 +67,8 @@ export async function getEnrolledQuizzes() {
       category: true,
       cours: {
         select: {
+          id: true,
+          title: true,
           qcm: {
             select: {
               id: true,

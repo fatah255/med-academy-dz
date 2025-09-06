@@ -49,8 +49,19 @@ const DashboardQuizCard = ({
         </div>
         {/* hardcoded cours */}
         <StartTest
-          totalQuestions={quiz?.quiz?.cours?.[0]?.qcm.length || 0}
+          totalQuestions={
+            quiz?.quiz?.cours
+              ?.map((c) => c.qcm.length)
+              .reduce((a, b) => a + b, 0) || 0
+          }
           quizId={quiz?.quiz?.id as string}
+          coursOptions={
+            quiz?.quiz?.cours.map((c) => ({
+              id: c.id,
+              title: c.title,
+              questionCount: c.qcm.length,
+            })) || []
+          }
         />
       </CardContent>
     </Card>

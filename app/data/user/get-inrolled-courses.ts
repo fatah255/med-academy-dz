@@ -4,6 +4,10 @@ import { prisma } from "@/lib/db";
 
 export async function getInrolledCourses() {
   const user = await requireUser();
+  const level = await prisma.user.findUnique({
+    where: { id: user.user.id },
+    select: { level: true },
+  });
 
   const data = await prisma.enrollment.findMany({
     where: {
@@ -52,6 +56,7 @@ export async function getInrolledCourses() {
   const freeCourses = await prisma.course.findMany({
     where: {
       price: 0,
+      level: level?.level,
     },
     select: {
       id: true,
