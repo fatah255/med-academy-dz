@@ -142,3 +142,6 @@ export const QUESTION_TYPES: readonly QuestionTypeOption[] = [
 export const QUESTION_TYPE_BY_ID = new Map(
   QUESTION_TYPES.map((t) => [t.id, t.name] as const)
 );
+export const numToLetter: Map<number, string> = new Map(
+  Array.from({ length: 26 }, (_, i) => [i + 1, String.fromCharCode(65 + i)]) // 1->A, 2->B, ...
+);
