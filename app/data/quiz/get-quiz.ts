@@ -15,9 +15,15 @@ export const getQuiz = async (slug: string) => {
       fileKey: true,
       slug: true,
       price: true,
-      qcm: {
+      cours: {
         select: {
           id: true,
+          title: true,
+          qcm: {
+            select: {
+              id: true,
+            },
+          },
         },
       },
     },

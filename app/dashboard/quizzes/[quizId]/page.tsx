@@ -13,6 +13,8 @@ export default async function Page({ params, searchParams }: PageProps) {
   const { quizId } = await params;
   const session = await requireUser();
   const resolvedSearchParams = await searchParams;
+  // Temporary hardcoded coursId, replace with actual logic to get the relevant coursId
+  const coursId = "";
   const numberOfQuestions = parseInt(resolvedSearchParams?.ques ?? "", 10) || 5;
 
   const data = await prisma.quiz.findUnique({
@@ -20,16 +22,22 @@ export default async function Page({ params, searchParams }: PageProps) {
     select: {
       title: true,
       price: true,
-      qcm: {
+      cours: {
         select: {
-          id: true, // <-- include id
-          question: true,
-          answers: {
-            select: { text: true, isCorrect: true },
-            orderBy: { position: "asc" }, // keep answers in intended order
+          id: true,
+          title: true,
+          qcm: {
+            select: {
+              id: true, // <-- include id
+              question: true,
+              answers: {
+                select: { text: true, isCorrect: true },
+                orderBy: { position: "asc" }, // keep answers in intended order
+              },
+            },
+            orderBy: { position: "asc" }, // keep questions in intended order
           },
         },
-        orderBy: { position: "asc" }, // keep questions in intended order
       },
     },
   });
@@ -50,7 +58,9 @@ export default async function Page({ params, searchParams }: PageProps) {
   }
 
   // Optional shuffle (copy first to avoid mutating `data.qcm`)
-  const shuffled = [...data.qcm].sort(() => Math.random() - 0.5);
+  const shuffled = [
+    ...data.cours.filter((c) => c.id === coursId).flatMap((c) => c.qcm),
+  ].sort(() => Math.random() - 0.5);
   const picked = shuffled.slice(0, numberOfQuestions);
 
   const questions = picked.map((q) => ({
