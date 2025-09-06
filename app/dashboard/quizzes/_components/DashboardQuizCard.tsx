@@ -39,7 +39,6 @@ const DashboardQuizCard = ({
         <div className="font-medium text-lg line-clamp-2 group-hover:text-primary transition-colors">
           {quiz.quiz?.title}
         </div>
-
         <div className="mt-4 flex items-center gap-x-5">
           <div className="flex items-center gap-x-2">
             <BookAIcon className="size-6 p-1 rounded-md text-primary bg-primary/10" />
@@ -48,9 +47,9 @@ const DashboardQuizCard = ({
             </p>
           </div>
         </div>
-
+        {/* hardcoded cours */}
         <StartTest
-          totalQuestions={quiz?.quiz?.qcm.length || 0}
+          totalQuestions={quiz?.quiz?.cours?.[0]?.qcm.length || 0}
           quizId={quiz?.quiz?.id as string}
         />
       </CardContent>

@@ -26,17 +26,20 @@ export async function getEnrolledQuizzes() {
           slug: true,
           level: true,
           category: true,
-
-          qcm: {
+          cours: {
             select: {
-              id: true,
-              question: true,
-              answers: {
+              qcm: {
                 select: {
                   id: true,
-                  position: true,
-                  text: true,
-                  isCorrect: true,
+                  question: true,
+                  answers: {
+                    select: {
+                      id: true,
+                      position: true,
+                      text: true,
+                      isCorrect: true,
+                    },
+                  },
                 },
               },
             },
@@ -59,17 +62,20 @@ export async function getEnrolledQuizzes() {
       slug: true,
       level: true,
       category: true,
-
-      qcm: {
+      cours: {
         select: {
-          id: true,
-          question: true,
-          answers: {
+          qcm: {
             select: {
               id: true,
-              position: true,
-              text: true,
-              isCorrect: true,
+              question: true,
+              answers: {
+                select: {
+                  id: true,
+                  position: true,
+                  text: true,
+                  isCorrect: true,
+                },
+              },
             },
           },
         },
