@@ -70,7 +70,11 @@ const Page = async ({ params }: { params: Params }) => {
             <h2 className="text-3xl font-semibold tracking-tight">
               Quiz Content
             </h2>
-            <div>{course.qcm.length} QCMs</div>
+            {/* hardcoded cours */}
+            <div>
+              {course.cours.map((c) => c.qcm.length).reduce((a, b) => a + b, 0)}{" "}
+              QCMs
+            </div>
           </div>
         </div>
       </div>
@@ -118,7 +122,10 @@ const Page = async ({ params }: { params: Params }) => {
                       <IconQuestionMark className="size-4" />
                     </div>
                     <p className="text-sm font-medium">
-                      {course.qcm.length} QCMs
+                      {course.cours
+                        .map((c) => c.qcm.length)
+                        .reduce((a, b) => a + b, 0)}{" "}
+                      QCMs
                     </p>
                   </div>
                 </div>
