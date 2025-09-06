@@ -21,7 +21,7 @@ import { QuestionSchema, questionSchemaType } from "@/lib/zodSchemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Pen } from "lucide-react";
 import { useState, useTransition } from "react";
-import { useForm } from "react-hook-form";
+import { Resolver, useForm } from "react-hook-form";
 import { tryCatch } from "@/hooks/try-catch";
 import { toast } from "sonner";
 import { updateQcm } from "../actions";
@@ -63,7 +63,12 @@ const EditQcmModal = ({
   }
 
   const form = useForm<questionSchemaType>({
-    resolver: zodResolver(QuestionSchema),
+    resolver: zodResolver(QuestionSchema) as Resolver<{
+      question: string;
+      quizId: string;
+      coursId: string;
+      typeQuestionId: number;
+    }>,
     defaultValues: {
       question,
       quizId,

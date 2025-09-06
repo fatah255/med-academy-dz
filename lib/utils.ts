@@ -127,3 +127,18 @@ export function formatTimeDelta(seconds: number) {
   }
   return parts.join(" ");
 }
+
+export type QuestionTypeOption = { id: number; name: string };
+
+export const QUESTION_TYPES: readonly QuestionTypeOption[] = [
+  { id: 1, name: "QCM" },
+  { id: 2, name: "QROC" },
+  { id: 4, name: "QCS" },
+  { id: 5, name: "Cas Clinique" },
+  { id: 6, name: "Dossier Clinique" },
+] as const;
+
+// Optional: quick lookup by id
+export const QUESTION_TYPE_BY_ID = new Map(
+  QUESTION_TYPES.map((t) => [t.id, t.name] as const)
+);

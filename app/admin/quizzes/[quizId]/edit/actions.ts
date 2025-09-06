@@ -267,6 +267,7 @@ export const createQcm = async (
           question: parsed.data.question,
           coursId: parsed.data.coursId,
           position,
+          typeQuestionId: parsed.data.typeQuestionId,
         },
       });
     });
@@ -560,5 +561,70 @@ export const updateAnswer = async (
   } catch (e) {
     console.error(e);
     return { status: "error", message: "Failed to update answer" };
+  }
+};
+
+export const createSubQcm = async (
+  parentId: string,
+  values: questionSchemaType
+): Promise<ApiResponse> => {
+  await requireAdmin();
+
+  try {
+    const req = await request();
+    const decision = await aj2.protect(req, { fingerprint: values.quizId });
+    if (decision.isDenied()) {
+      return { status: "error", message: "Request denied" };
+    }
+
+    const parsed = QuestionSchema.safeParse(values);
+    if (!parsed.success) {
+      return { status: "error", message: "Invalid question data" };
+    }
+
+    await prisma.$transaction(async (tx) => {
+      // Ensure cours belongs to quiz
+      const cours = await tx.cours.findFirst({
+        where: { id: parsed.data.coursId, quizId: parsed.data.quizId },
+        select: { id: true },
+      });
+      if (!cours) throw new Error("Cours not found for this quiz");
+
+      // Ensure parent exists and is inside same cours & quiz
+      const parent = await tx.qcm.findFirst({
+        where: {
+          id: parentId,
+          cours: { id: parsed.data.coursId, quizId: parsed.data.quizId },
+        },
+        select: { id: true },
+      });
+      if (!parent) throw new Error("Parent question not found for this quiz");
+
+      // Position: append at end of this cours
+      const maxPos = await tx.qcm.findFirst({
+        where: { coursId: parsed.data.coursId },
+        orderBy: { position: "desc" },
+        select: { position: true },
+      });
+      const position = maxPos ? maxPos.position + 1 : 1;
+
+      await tx.qcm.create({
+        data: {
+          question: parsed.data.question,
+          coursId: parsed.data.coursId,
+          parentId, // ✅ link to parent
+          position,
+          typeQuestionId: parsed.data.typeQuestionId, // keep chosen type
+        },
+      });
+    });
+
+    revalidatePath(
+      `/admin/quizzes/${parsed.data.quizId}/edit/${parsed.data.coursId}`
+    );
+    return { status: "success", message: "Sub-question created successfully" };
+  } catch (e) {
+    console.error(e);
+    return { status: "error", message: "Failed to create sub-question" };
   }
 };

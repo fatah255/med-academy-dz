@@ -70,7 +70,9 @@ export const lessonSchema = z.object({
 export const QuestionSchema = z.object({
   question: z.string().min(1, { message: "Question name is required." }),
   quizId: z.string().uuid({ message: "Invalid quiz ID." }),
-  coursId: z.string().uuid({ message: "Invalid cours ID." }), // ✅ required now
+  coursId: z.string().uuid({ message: "Invalid cours ID." }),
+  // ✅ include the selected type id
+  typeQuestionId: z.coerce.number().int().min(1, "Type is required"),
 });
 
 export const answerSchema = z.object({
@@ -84,14 +86,13 @@ export const answerSchema = z.object({
 export const qcmAnswerCreateSchema = z.object({
   text: z.string().trim().min(1, "Answer text is required").max(500),
   isCorrect: z.boolean().default(false),
-  // if you receive strings from forms, use z.coerce.number()
   order: z.coerce.number().int().min(1, "Order must be >= 1"),
 });
 
 /** Full create (question + answers) inside a cours */
 export const qcmCreateSchema = z.object({
   quizId: z.string().uuid({ message: "Invalid quiz ID." }),
-  coursId: z.string().uuid({ message: "Invalid cours ID." }), // ✅ added
+  coursId: z.string().uuid({ message: "Invalid cours ID." }),
   question: z.string().trim().min(5).max(1000),
   answers: z
     .array(qcmAnswerCreateSchema)
@@ -121,11 +122,11 @@ export const qcmCreateSchema = z.object({
 
 /** Update: replace-all strategy (simplest) */
 export const qcmUpdateSchema = z.object({
-  // optionally include for authorization flows
   quizId: z.string().uuid({ message: "Invalid quiz ID." }).optional(),
   coursId: z.string().uuid({ message: "Invalid cours ID." }).optional(),
   question: z.string().trim().min(5).max(1000).optional(),
-  // optional: if provided, you'll replace the whole answers set
+  // allow updating the type too
+  typeQuestionId: z.coerce.number().int().min(1).optional(),
   answers: z
     .array(qcmAnswerCreateSchema)
     .min(2)
@@ -180,7 +181,7 @@ export const qcmSchema = z.object({
 
 export const settingsSchema = z.object({
   year: z.enum(courseLevels),
-  adminEmail: z.string().email().optional(), // ✅ fixed
+  adminEmail: z.string().email().optional(),
 });
 
 /* ---------------------------------- Types ---------------------------------- */

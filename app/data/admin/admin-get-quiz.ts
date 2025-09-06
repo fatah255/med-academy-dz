@@ -28,6 +28,25 @@ export const adminGetQuiz = async (id: string) => {
               id: true,
               question: true,
               position: true,
+              typeQuestionId: true,
+              comment: true,
+              other_qcm: {
+                select: {
+                  id: true,
+                  question: true,
+                  position: true,
+                  typeQuestionId: true,
+                  comment: true,
+                  answers: {
+                    select: {
+                      id: true,
+                      position: true,
+                      isCorrect: true,
+                      text: true,
+                    },
+                  },
+                },
+              },
               answers: {
                 select: {
                   id: true,

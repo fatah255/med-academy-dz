@@ -1,7 +1,8 @@
 generator client {
   provider = "prisma-client-js"
-  output   = "../lib/generated/prisma"
+  // remove 'output'
 }
+
 
 datasource db {
   provider = "cockroachdb"

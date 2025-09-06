@@ -23,7 +23,6 @@ export function NavMain({
   }[];
 }) {
   const pathname = usePathname();
-  console.log(pathname);
   const isAdmin = pathname.startsWith("/admin");
   return (
     <SidebarGroup>
