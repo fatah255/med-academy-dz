@@ -56,11 +56,11 @@ export async function createOfferCheckout(level: Level): Promise<ApiResponse> {
     // --- Price per level (adjust as you like) ---
     const offerPriceMap: Record<Level, number> = {
       FIRST_YEAR: 299,
-      SECOND_YEAR: 199,
-      THIRD_YEAR: 199,
-      FOURTH_YEAR: 199,
-      FIFTH_YEAR: 199,
-      SIXTH_YEAR: 199,
+      SECOND_YEAR: 249,
+      THIRD_YEAR: 249,
+      FOURTH_YEAR: 249,
+      FIFTH_YEAR: 249,
+      SIXTH_YEAR: 249,
     };
     const totalPrice = offerPriceMap[level] ?? 199;
 
