@@ -1,0 +1,277 @@
+"use client";
+
+import { createOfferCheckout } from "@/app/(landing-page)/actions";
+import { cn } from "@/lib/utils";
+import { ArrowRight, Repeat2, Loader2 } from "lucide-react";
+import { useState, useTransition } from "react";
+// ⬇️ Adjust this import to where your action file lives
+
+export type OfferLevel =
+  | "FIRST_YEAR"
+  | "SECOND_YEAR"
+  | "THIRD_YEAR"
+  | "FOURTH_YEAR"
+  | "FIFTH_YEAR"
+  | "SIXTH_YEAR";
+
+export interface CardFlipProps {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  features?: string[];
+  price: number;
+  /** Charged offer level (used by createOfferCheckout). */
+  level?: OfferLevel;
+  /** Optional image for the front face */
+  imageSrc?: string;
+  imageAlt?: string;
+  /**
+   * Optional handler to override the default buy action.
+   * If omitted, the component will call createOfferCheckout(level).
+   */
+  onBuy?: () => Promise<void> | void;
+  className?: string;
+}
+
+export default function CardFlip({
+  title = "Design Systems",
+  subtitle = "Explore the fundamentals",
+  description = "Dive deep into the world of modern UI/UX design.",
+  features = ["UI/UX", "Modern Design", "Tailwind CSS", "Kokonut UI"],
+  imageSrc,
+  imageAlt,
+  price,
+  level,
+  onBuy,
+  className,
+}: CardFlipProps) {
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [isPending, startTransition] = useTransition();
+
+  const priceText = new Intl.NumberFormat("fr-DZ").format(price);
+
+  const handleBuy = () => {
+    startTransition(async () => {
+      if (onBuy) {
+        await onBuy();
+        return;
+      }
+      if (!level) {
+        console.warn(
+          "CardFlip: 'level' is required when no custom onBuy handler is provided."
+        );
+        return;
+      }
+      // Server action will redirect to Chargily’s checkout
+      await createOfferCheckout(level);
+    });
+  };
+
+  return (
+    <div
+      className={cn(
+        "relative w-full max-w-[280px] h-[320px] group [perspective:2000px]",
+        className
+      )}
+      onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
+    >
+      <div
+        className={cn(
+          "relative w-full h-full",
+          "[transform-style:preserve-3d]",
+          "transition-all duration-700",
+          isFlipped
+            ? "[transform:rotateY(180deg)]"
+            : "[transform:rotateY(0deg)]"
+        )}
+      >
+        {/* Front */}
+        <div
+          className={cn(
+            "absolute inset-0 w-full h-full",
+            "[backface-visibility:hidden] [transform:rotateY(0deg)]",
+            "overflow-hidden rounded-2xl",
+            "bg-zinc-50 dark:bg-zinc-900",
+            "border border-zinc-200 dark:border-zinc-800/50",
+            "shadow-xs dark:shadow-lg",
+            "transition-all duration-700",
+            "group-hover:shadow-lg dark:group-hover:shadow-xl",
+            isFlipped ? "opacity-0" : "opacity-100"
+          )}
+        >
+          <div className="relative h-full overflow-hidden">
+            {imageSrc ? (
+              <>
+                <img
+                  src={imageSrc}
+                  alt={imageAlt ?? title}
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
+                {/* Price badge */}
+                <div className="absolute top-3 right-3 rounded-full bg-black/70 text-white px-3 py-1 text-xs font-medium shadow">
+                  {priceText} DZD
+                </div>
+              </>
+            ) : (
+              <div className="relative h-full overflow-hidden bg-gradient-to-b from-zinc-100 to-white dark:from-zinc-900 dark:to-black">
+                <div className="absolute inset-0 flex items-start justify-center pt-24">
+                  <div className="relative w-[200px] h-[100px] flex items-center justify-center">
+                    {[...Array(10)].map((_, i) => (
+                      <div
+                        key={i}
+                        className={cn(
+                          "absolute w-[50px] h-[50px]",
+                          "rounded-[140px]",
+                          "animate-[scale_3s_linear_infinite]",
+                          "opacity-0",
+                          "shadow-[0_0_50px_rgba(255,165,0,0.5)]",
+                          "group-hover:animate-[scale_2s_linear_infinite]"
+                        )}
+                        style={{ animationDelay: `${i * 0.3}s` }}
+                      />
+                    ))}
+                  </div>
+                </div>
+                <div className="absolute top-3 right-3 rounded-full bg-black/70 text-white px-3 py-1 text-xs font-medium shadow">
+                  {priceText} DZD
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="absolute bottom-0 left-0 right-0 p-5">
+            <div className="flex items-center justify-between gap-3">
+              <div className="space-y-1.5">
+                <h3 className="text-lg font-semibold text-zinc-900 dark:text-white leading-snug tracking-tighter transition-all duration-500 ease-out-expo group-hover:translate-y-[-4px]">
+                  {title}
+                </h3>
+                <p className="text-sm text-zinc-600 dark:text-zinc-200 line-clamp-2 tracking-tight transition-all duration-500 ease-out-expo group-hover:translate-y-[-4px] delay-[50ms]">
+                  {subtitle}
+                </p>
+              </div>
+              <div className="relative group/icon">
+                <div
+                  className={cn(
+                    "absolute inset-[-8px] rounded-lg transition-opacity duration-300",
+                    "bg-gradient-to-br from-orange-500/20 via-orange-500/10 to-transparent"
+                  )}
+                />
+                <Repeat2 className="relative z-10 w-4 h-4 text-orange-500 transition-transform duration-300 group-hover/icon:scale-110 group-hover/icon:-rotate-12" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Back */}
+        <div
+          className={cn(
+            "absolute inset-0 w-full h-full",
+            "[backface-visibility:hidden] [transform:rotateY(180deg)]",
+            "p-6 rounded-2xl",
+            "bg-gradient-to-b from-zinc-100 to-white dark:from-zinc-900 dark:to-black",
+            "border border-zinc-200 dark:border-zinc-800",
+            "shadow-xs dark:shadow-lg",
+            "flex flex-col",
+            "transition-all duration-700",
+            "group-hover:shadow-lg dark:group-hover:shadow-xl",
+            !isFlipped ? "opacity-0" : "opacity-100"
+          )}
+        >
+          <div className="flex-1 space-y-6">
+            <div className="space-y-2">
+              <h3 className="text-lg font-semibold text-zinc-900 dark:text-white leading-snug tracking-tight transition-all duration-500 ease-out-expo group-hover:translate-y-[-2px]">
+                {title}
+              </h3>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 tracking-tight transition-all duration-500 ease-out-expo group-hover:translate-y-[-2px] line-clamp-2">
+                {description}
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              {features.map((feature, index) => (
+                <div
+                  key={feature}
+                  className="flex items-center gap-2 text-sm text-zinc-700 dark:text-zinc-300 transition-all duration-500"
+                  style={{
+                    transform: isFlipped
+                      ? "translateX(0)"
+                      : "translateX(-10px)",
+                    opacity: isFlipped ? 1 : 0,
+                    transitionDelay: `${index * 100 + 200}ms`,
+                  }}
+                >
+                  <ArrowRight className="w-3 h-3 text-orange-500" />
+                  <span>{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="pt-6 mt-6 border-t border-zinc-200 dark:border-zinc-800">
+            {/* Use a real <button> for a11y & to prevent accidental clicks */}
+            <button
+              type="button"
+              onClick={handleBuy}
+              disabled={isPending}
+              className={cn(
+                "group/start relative w-full",
+                "flex items-center justify-between",
+                "p-3 -m-3 rounded-xl",
+                "transition-all duration-300",
+                "bg-gradient-to-r from-zinc-100 via-zinc-100 to-zinc-100",
+                "dark:from-zinc-800 dark:via-zinc-800 dark:to-zinc-800",
+                "hover:from-orange-500/10 hover:from-0% hover:via-orange-500/5 hover:via-100% hover:to-transparent hover:to-100%",
+                "dark:hover:from-orange-500/20 dark:hover:from-0% dark:hover:via-orange-500/10 dark:hover:via-100% dark:hover:to-transparent dark:hover:to-100%",
+                "hover:scale-[1.02]",
+                isPending && "opacity-80 cursor-not-allowed"
+              )}
+            >
+              <span className="text-sm font-medium text-zinc-900 dark:text-white transition-colors duration-300 group-hover/start:text-orange-600 dark:group-hover/start:text-orange-400">
+                {isPending
+                  ? "Creating checkout…"
+                  : `Buy the offer ${priceText} DZD`}
+              </span>
+              <div className="relative group/icon">
+                <div
+                  className={cn(
+                    "absolute inset-[-6px] rounded-lg transition-all duration-300",
+                    "bg-gradient-to-br from-orange-500/20 via-orange-500/10 to-transparent",
+                    "opacity-0 group-hover/start:opacity-100 scale-90 group-hover/start:scale-100"
+                  )}
+                />
+                {isPending ? (
+                  <Loader2 className="relative z-10 w-4 h-4 animate-spin text-orange-500" />
+                ) : (
+                  <ArrowRight className="relative z-10 w-4 h-4 text-orange-500 transition-all duration-300 group-hover/start:translate-x-0.5 group-hover/start:scale-110" />
+                )}
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Fallback glow animation keyframes */}
+      <style jsx>{`
+        @keyframes scale {
+          0% {
+            transform: scale(2);
+            opacity: 0;
+            box-shadow: 0 0 50px rgba(255, 165, 0, 0.5);
+          }
+          50% {
+            transform: translate(0px, -5px) scale(1);
+            opacity: 1;
+            box-shadow: 0 8px 20px rgba(255, 165, 0, 0.5);
+          }
+          100% {
+            transform: translate(0px, 5px) scale(0.1);
+            opacity: 0;
+            box-shadow: 0 10px 20px rgba(255, 165, 0, 0);
+          }
+        }
+      `}</style>
+    </div>
+  );
+}

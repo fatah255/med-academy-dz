@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
-import Features from "./_components/Features"; // adjust path if needed
+import Features from "./_components/Features";
 import FaqSection from "./_components/FaqSection";
 import Footer from "./_components/Footer";
 import Image from "next/image";
+import Stats from "./_components/Stats";
+import CardFlip from "@/components/kokonutui/card-flip";
 
 export default function LandingPage() {
   return (
@@ -98,6 +100,80 @@ export default function LandingPage() {
         </div>
 
         <Features />
+        <Stats />
+
+        {/* QCMs Offers */}
+        <section className="py-16">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <header className="mx-auto max-w-2xl text-center">
+              <h3 className="text-3xl sm:text-4xl font-semibold tracking-tight">
+                QCMs Offers
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Choose your year and unlock full access to exam-style practice.
+              </p>
+            </header>
+
+            {/* Responsive grid: 1 / 2 / 3 columns */}
+            <div className="mt-10 grid grid-cols-1 gap-6 justify-items-center sm:grid-cols-2 sm:justify-items-center xl:grid-cols-3 xl:justify-items-stretch">
+              <CardFlip
+                title="First Year Offer"
+                description="Get access to all first-year QCMs and resources."
+                features={["+5000 QCM", "+180 Exams", "7 Modules"]}
+                subtitle="click for details"
+                price={299}
+                imageSrc="/firstYear.jpg"
+                level="FIRST_YEAR"
+              />
+              <CardFlip
+                title="Second Year Offer"
+                description="Get access to all second-year QCMs and resources."
+                features={["+6000 QCM", "+200 Exams", "7 Units/Modules"]}
+                subtitle="click for details"
+                imageSrc="/secondYear.jpg"
+                price={249}
+                level="SECOND_YEAR"
+              />
+              <CardFlip
+                title="Third Year Offer"
+                description="Get access to all third-year QCMs and resources."
+                features={["+10000 QCM", "+210 Exams", "9 Unites/Modules"]}
+                imageSrc="/thirdYear.jpg"
+                subtitle="click for details"
+                price={249}
+                level="THIRD_YEAR"
+              />
+              <CardFlip
+                title="Fourth Year Offer"
+                description="Get access to all fourth-year QCMs and resources."
+                features={["+9500 QCM", "+150 Exams", "7 Modules"]}
+                subtitle="click for details"
+                imageSrc="/fourthYear.jpg"
+                price={249}
+                level="FOURTH_YEAR"
+              />
+              <CardFlip
+                title="Fifth Year Offer"
+                description="Get access to all fifth-year QCMs and resources."
+                features={["+8500 QCM", "+120 Exams", "7 Modules"]}
+                subtitle="click for details"
+                imageSrc="/fifthYear.jpg"
+                price={249}
+                level="FIFTH_YEAR"
+              />
+              <CardFlip
+                title="Sixth Year Offer"
+                description="Get access to all sixth-year QCMs and resources."
+                features={["+9000 QCM", "+150 Exams", "9 Modules"]}
+                level="SIXTH_YEAR"
+                subtitle="click for details"
+                imageSrc="/sixthYear.jpg"
+                price={249}
+              />
+            </div>
+          </div>
+        </section>
+
         <FaqSection />
         <Footer />
       </main>

@@ -186,7 +186,7 @@ model Enrollment {
   id            String   @id @default(uuid())
   amount        Int
   status        String   @default("PENDING")
-  transactionId String?  @unique
+  transactionId String?  
   userId        String
   courseId      String?
   quizId        String?
