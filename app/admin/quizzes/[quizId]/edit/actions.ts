@@ -71,16 +71,17 @@ export const editQuiz = async (
 
     await prisma.$transaction(async (tx) => {
       // Ensure ownership
-      const ok = await tx.quiz.findFirst({
+      const ok = await tx.quiz.findUnique({
         where: { id: quizId },
-        select: { id: true, user: true },
+        select: { id: true, user: { select: { id: true, email: true } } },
       });
       if (!ok) throw new Error("Quiz not found or unauthorized");
       if (
         ok.user.id !== user.user.id &&
-        ok.user.email !== "medacademydz@gmail.com"
-      )
+        user.user.email !== "medacademydz@gmail.com"
+      ) {
         throw new Error("Quiz not found or unauthorized");
+      }
 
       await tx.quiz.update({
         where: { id: quizId }, // unique selector only
