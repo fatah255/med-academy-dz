@@ -19,9 +19,9 @@ import {
   TLComponents,
   // hooks for convenience (toolbar etc.)
   useEditor,
+  throttle,
 } from "tldraw";
 import type { Editor } from "tldraw";
-import { throttle } from "lodash";
 import "tldraw/tldraw.css";
 
 /* ------------------------------ utils ------------------------------ */
