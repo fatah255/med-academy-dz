@@ -119,36 +119,7 @@ export async function POST(req: NextRequest) {
           data: { status: "PAID" },
         });
         break;
-
-      case "checkout.failed":
-      case "payment.failed":
-      case "charge.failed":
-        // Optional: mark enrollments as FAILED if you track that state
-        await prisma.enrollment.updateMany({
-          where: { transactionId: txId, status: "PENDING" },
-          data: { status: "FAILED" },
-        });
-        break;
-
-      case "checkout.canceled":
-      case "payment.canceled":
-      case "charge.canceled":
-        // Optional: mark as CANCELED
-        await prisma.enrollment.updateMany({
-          where: { transactionId: txId, status: "PENDING" },
-          data: { status: "CANCELED" },
-        });
-        break;
-
-      // Optional: handle refunds
-      case "payment.refunded":
-      case "charge.refunded":
-        await prisma.enrollment.updateMany({
-          where: { transactionId: txId, status: "PAID" },
-          data: { status: "REFUNDED" },
-        });
-        break;
-
+\
       default:
         // Ignore unknown or non-final events
         break;
