@@ -9,6 +9,7 @@ import {
   IconHelp,
   IconListDetails,
   IconSettings,
+  IconNote,
 } from "@tabler/icons-react";
 
 import { NavMain } from "@/components/sidebar/nav-main";
@@ -37,6 +38,11 @@ const data = {
       title: "Quizzes",
       url: "/dashboard/quizzes",
       icon: IconAbc,
+    },
+    {
+      title: "Notes",
+      url: "/dashboard/notes",
+      icon: IconNote,
     },
   ],
   navClouds: [
