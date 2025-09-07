@@ -119,7 +119,7 @@ export async function POST(req: NextRequest) {
           data: { status: "PAID" },
         });
         break;
-\
+
       default:
         // Ignore unknown or non-final events
         break;
