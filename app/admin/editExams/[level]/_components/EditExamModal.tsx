@@ -116,10 +116,7 @@ export default function EditExamModal({
       </AlertDialogTrigger>
 
       <AlertDialogContent
-        // IMPORTANT: keep the dialog open while the combobox popover is open
-        onInteractOutside={(e) => {
-          if (comboOpen) e.preventDefault();
-        }}
+      // IMPORTANT: keep the dialog open while the combobox popover is open
       >
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
