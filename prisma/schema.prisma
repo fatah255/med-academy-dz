@@ -3,7 +3,6 @@ generator client {
   output   = "../lib/generated/prisma"
 }
 
-
 datasource db {
   provider = "cockroachdb"
   url      = env("DB2_URL")
@@ -28,9 +27,9 @@ model User {
   lessonProgress LessonProgress[]
   accounts       Account[]
   enrollments    Enrollment[]
+  notes          notes[]
   quizzes        Quiz[]
   sessions       Session[]
-  notes          notes[]
 
   @@map("user")
 }
@@ -128,7 +127,7 @@ model Lesson {
 }
 
 model Quiz {
-  id          String       @id @default(uuid()) @unique
+  id          String       @id @unique @default(uuid())
   title       String
   description String
   fileKey     String?
@@ -158,8 +157,10 @@ model Qcm {
   parentId       String?
   type           String      @default("QCM")
   typeQuestionId Int         @default(1)
-  coursId        String
-  cours          cours       @relation(fields: [coursId], references: [id], onDelete: Cascade)
+  coursId        String?
+  examId         String?
+  cours          cours?      @relation(fields: [coursId], references: [id], onDelete: Cascade)
+  exams          exams?      @relation(fields: [examId], references: [id], onDelete: Cascade)
   qcm            Qcm?        @relation("qcmToqcm", fields: [parentId], references: [id], onDelete: Cascade)
   other_qcm      Qcm[]       @relation("qcmToqcm")
   answers        QcmAnswer[]
@@ -184,18 +185,20 @@ model QcmAnswer {
 }
 
 model Enrollment {
-  id            String   @id @default(uuid())
+  id            String       @id @default(uuid())
   amount        Int
-  status        String   @default("PENDING")
-  transactionId String?  
+  status        String       @default("PENDING")
+  transactionId String?
   userId        String
   courseId      String?
   quizId        String?
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
-  course        Course?  @relation(fields: [courseId], references: [id], onDelete: Cascade)
-  quiz          Quiz?    @relation(fields: [quizId], references: [id], onDelete: Cascade)
-  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+  offer         Boolean      @default(false)
+  offerLevel    CourseLevel?
+  course        Course?      @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  quiz          Quiz?        @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  user          User         @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, courseId])
   @@unique([userId, quizId])
@@ -225,6 +228,29 @@ model cours {
   qcm       Qcm[]
 }
 
+model notes {
+  id          String   @id @default(cuid())
+  content     String?
+  title       String
+  userId      String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  imageNumber Int      @default(12)
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, id])
+}
+
+model exams {
+  id        String      @id @unique @default(uuid())
+  title     String
+  createdAt DateTime    @default(now())
+  updatedAt DateTime
+  category  String
+  level     CourseLevel
+  year      Int         @default(0)
+  qcm       Qcm[]
+}
 
 enum CourseLevel {
   FIRST_YEAR
@@ -239,16 +265,4 @@ enum CourseStatus {
   DRAFT
   PUBLISHED
   ARCHIVED
-}
-
-model notes {
-  id        String   @id @default(cuid())
-  content  String?
-  title     String
-  userId    String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  imageNumber Int @default(12)
-  @@unique([userId, id])
 }
