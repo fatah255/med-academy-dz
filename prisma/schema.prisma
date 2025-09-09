@@ -30,6 +30,8 @@ model User {
   notes          notes[]
   quizzes        Quiz[]
   sessions       Session[]
+  nglLinks       NglLink[]
+  nglMessages    NglMessage[]
 
   @@map("user")
 }
@@ -250,6 +252,117 @@ model exams {
   level     CourseLevel
   year      Int         @default(0)
   qcm       Qcm[]
+}
+
+model books {
+  id        String   @id @unique
+  title     String
+  cover     String?
+  url       String
+  moduleId  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  modules   modules  @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+}
+
+model links {
+  id         String    @id @unique
+  title      String
+  url        String
+  resourceId String
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime
+  resources  resources @relation(fields: [resourceId], references: [id], onDelete: Cascade)
+}
+
+model models3d {
+  id         String    @id @unique
+  title      String
+  url        String
+  resourceId String
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime
+  resources  resources @relation(fields: [resourceId], references: [id], onDelete: Cascade)
+}
+
+model modules {
+  id          String      @id @unique
+  title       String
+  icon        String?
+  description String?
+  uniteId     String?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime
+  level       CourseLevel @default(FIRST_YEAR)
+  books       books[]
+  unites      unites?     @relation(fields: [uniteId], references: [id], onDelete: Cascade)
+  resources   resources[]
+}
+
+model pdfs {
+  id         String    @id @unique
+  title      String
+  url        String
+  resourceId String
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime
+  resources  resources @relation(fields: [resourceId], references: [id], onDelete: Cascade)
+}
+
+model resources {
+  id          String     @id @unique
+  title       String
+  description String?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime
+  moduleId    String
+  links       links[]
+  models3d    models3d[]
+  pdfs        pdfs[]
+  modules     modules    @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  videos      videos[]
+}
+
+model unites {
+  id          String      @id @unique
+  title       String
+  description String?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime
+  level       CourseLevel @default(FIRST_YEAR)
+  modules     modules[]
+}
+
+model videos {
+  id         String    @id @unique
+  title      String
+  url        String
+  resourceId String
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime
+  resources  resources @relation(fields: [resourceId], references: [id], onDelete: Cascade)
+}
+
+model NglLink {
+  /// Public share code (used in /ngl/[code])
+  code        String   @id
+  recipientId String   @unique
+  recipient   User     @relation(fields: [recipientId], references: [id], onDelete: Cascade)
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+}
+
+model NglMessage {
+  id          String   @id @default(cuid())
+  recipientId String
+  recipient   User     @relation(fields: [recipientId], references: [id], onDelete: Cascade)
+  fileKey    String?
+  content     String   
+  userAgent   String?
+  ipHash      String?
+  createdAt   DateTime @default(now())
+
+  @@index([recipientId, createdAt])
 }
 
 enum CourseLevel {

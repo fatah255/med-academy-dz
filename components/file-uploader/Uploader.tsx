@@ -31,9 +31,16 @@ interface UploaderProps {
   onChange?: (value: string) => void; // receives S3 key (or "" on delete)
   fileType: "image" | "video";
   courseId?: string; // used to clear DB key immediately after delete
+  anonym?: boolean; // if true, use anonymous upload endpoint
 }
 
-const Uploader = ({ value, onChange, fileType, courseId }: UploaderProps) => {
+const Uploader = ({
+  value,
+  onChange,
+  fileType,
+  courseId,
+  anonym,
+}: UploaderProps) => {
   // SAFE: no cache-busting (useConstructUrl might already include a query)
   const fileUrl = useConstructUrl(value || "");
 
@@ -88,17 +95,32 @@ const Uploader = ({ value, onChange, fileType, courseId }: UploaderProps) => {
 
       try {
         // 1) Get presigned URL
-        const resp = await fetch("/api/s3/upload", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          credentials: "include",
-          body: JSON.stringify({
-            fileName: file.name,
-            contentType: file.type,
-            size: file.size,
-            isImage: fileType === "image",
-          }),
-        });
+        let resp: Response;
+        if (anonym) {
+          resp = await fetch("/api/s3/uploadanonym", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            credentials: "include",
+            body: JSON.stringify({
+              fileName: file.name,
+              contentType: file.type,
+              size: file.size,
+              isImage: fileType === "image",
+            }),
+          });
+        } else {
+          resp = await fetch("/api/s3/upload", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            credentials: "include",
+            body: JSON.stringify({
+              fileName: file.name,
+              contentType: file.type,
+              size: file.size,
+              isImage: fileType === "image",
+            }),
+          });
+        }
 
         if (!resp.ok) {
           const txt = await resp.text();
@@ -215,12 +237,22 @@ const Uploader = ({ value, onChange, fileType, courseId }: UploaderProps) => {
       setFileState((prev) => ({ ...prev, isDeleting: true }));
 
       // 1) delete from S3
-      const response = await fetch("/api/s3/delete", {
-        method: "DELETE",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({ key: fileState.key }),
-      });
+      let response: Response;
+      if (anonym) {
+        response = await fetch("/api/s3/deleteanonym", {
+          method: "DELETE",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ key: fileState.key }),
+        });
+      } else {
+        response = await fetch("/api/s3/delete", {
+          method: "DELETE",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ key: fileState.key }),
+        });
+      }
 
       if (!response.ok) {
         const txt = await response.text();
