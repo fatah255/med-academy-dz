@@ -3,9 +3,14 @@ import { notFound } from "next/navigation";
 import { prisma } from "@/lib/db";
 import SendForm from "./send-form";
 
-export default async function Page({ params }: { params: { code: string } }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ code: string }>;
+}) {
+  const { code } = await params;
   const link = await prisma.nglLink.findUnique({
-    where: { code: params.code },
+    where: { code },
     select: { active: true, recipient: { select: { name: true } } },
   });
   if (!link || !link.active) return notFound();
@@ -19,7 +24,7 @@ export default async function Page({ params }: { params: { code: string } }) {
         Your identity is not recorded. Be kind.
       </p>
       <div className="mt-6">
-        <SendForm code={params.code} />
+        <SendForm code={code} />
       </div>
     </div>
   );
