@@ -4,7 +4,7 @@ import { createOfferCheckout } from "@/app/(landing-page)/actions";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Repeat2, Loader2 } from "lucide-react";
 import { useState, useTransition } from "react";
-// ⬇️ Adjust this import to where your action file lives
+import Image from "next/image";
 
 export type OfferLevel =
   | "FIRST_YEAR"
@@ -20,15 +20,9 @@ export interface CardFlipProps {
   description?: string;
   features?: string[];
   price: number;
-  /** Charged offer level (used by createOfferCheckout). */
   level?: OfferLevel;
-  /** Optional image for the front face */
   imageSrc?: string;
   imageAlt?: string;
-  /**
-   * Optional handler to override the default buy action.
-   * If omitted, the component will call createOfferCheckout(level).
-   */
   onBuy?: () => Promise<void> | void;
   className?: string;
 }
@@ -62,7 +56,6 @@ export default function CardFlip({
         );
         return;
       }
-      // Server action will redirect to Chargily’s checkout
       await createOfferCheckout(level);
     });
   };
@@ -103,13 +96,15 @@ export default function CardFlip({
           <div className="relative h-full overflow-hidden">
             {imageSrc ? (
               <>
-                <img
+                <Image
                   src={imageSrc}
                   alt={imageAlt ?? title}
-                  className="absolute inset-0 h-full w-full object-cover"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 280px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
-                {/* Price badge */}
                 <div className="absolute top-3 right-3 rounded-full bg-black/70 text-white px-3 py-1 text-xs font-medium shadow">
                   {priceText} DZD
                 </div>
@@ -210,7 +205,6 @@ export default function CardFlip({
           </div>
 
           <div className="pt-6 mt-6 border-t border-zinc-200 dark:border-zinc-800">
-            {/* Use a real <button> for a11y & to prevent accidental clicks */}
             <button
               type="button"
               onClick={handleBuy}
@@ -223,7 +217,7 @@ export default function CardFlip({
                 "bg-gradient-to-r from-zinc-100 via-zinc-100 to-zinc-100",
                 "dark:from-zinc-800 dark:via-zinc-800 dark:to-zinc-800",
                 "hover:from-orange-500/10 hover:from-0% hover:via-orange-500/5 hover:via-100% hover:to-transparent hover:to-100%",
-                "dark:hover:from-orange-500/20 dark:hover:from-0% dark:hover:via-orange-500/10 dark:hover:via-100% dark:hover:to-transparent dark:hover:to-100%",
+                "dark:hover:from-orange-500/20 dark:hover:from-0% dark:hover:via-orange-500/10 dark:hover:via-100% dark:hover:to-transparent dark:hover:to-100% ",
                 "hover:scale-[1.02]",
                 isPending && "opacity-80 cursor-not-allowed"
               )}
@@ -252,7 +246,6 @@ export default function CardFlip({
         </div>
       </div>
 
-      {/* Fallback glow animation keyframes */}
       <style jsx>{`
         @keyframes scale {
           0% {

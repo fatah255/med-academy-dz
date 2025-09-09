@@ -184,11 +184,16 @@ export default function LandingPage() {
 function ImageCard({ src }: { src: string }) {
   return (
     <div className="relative">
-      <img
-        alt=""
-        src={src}
-        className="aspect-[2/3] w-full rounded-xl bg-muted object-cover shadow-lg"
-      />
+      <div className="relative aspect-[2/3] w-full">
+        <Image
+          src={src}
+          alt=""
+          fill
+          priority
+          className="rounded-xl bg-muted object-cover shadow-lg"
+          sizes="(max-width: 768px) 100vw, 400px"
+        />
+      </div>
       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-border/60" />
     </div>
   );
