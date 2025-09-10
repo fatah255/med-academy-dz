@@ -15,7 +15,7 @@ const Page = async ({ params }: { params: Promise<{ examId: string }> }) => {
   const hasOffer = await prisma.enrollment.findFirst({
     where: {
       userId: session.user.id,
-      isOffer: true,
+      OR: [{ isOffer: true }, { offer: true }],
       status: { in: ["PAID", "paid"] },
       quiz: { level: examLevel.level },
     },

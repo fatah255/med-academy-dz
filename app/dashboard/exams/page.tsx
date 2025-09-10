@@ -41,7 +41,7 @@ export default async function Page({
   // ——————————————————————————————————————————————
   const levelOffer = await prisma.enrollment.findFirst({
     where: {
-      userId: "j9fF3J5E6MpcXJ85acmfUDk8jRV8q4xe",
+      userId: session.user.id,
       OR: [{ isOffer: true }, { offer: true }],
       status: { in: ["PAID", "paid"] },
     },
