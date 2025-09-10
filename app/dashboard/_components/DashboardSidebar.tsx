@@ -11,6 +11,7 @@ import {
   IconSettings,
   IconNote,
   IconClipboardList,
+  IconBrandGoogleDrive,
 } from "@tabler/icons-react";
 
 import { NavMain } from "@/components/sidebar/nav-main";
@@ -50,6 +51,11 @@ const data = {
       url: "/dashboard/exams",
       icon: IconClipboardList,
     },
+    // {
+    //   title: "Drives",
+    //   url: "/dashboard/drives",
+    //   icon: IconBrandGoogleDrive,
+    // },
   ],
   navClouds: [
     {
