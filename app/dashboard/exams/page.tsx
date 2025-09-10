@@ -5,6 +5,7 @@ import { modulesByYear } from "@/lib/utils";
 import { Prisma } from "@/lib/generated/prisma";
 import { requireUser } from "@/app/data/user/require-user";
 import { notFound } from "next/navigation";
+import ExamsLocked from "./_components/exam-locked";
 
 /* ---------- Helpers ---------- */
 
@@ -47,7 +48,7 @@ export default async function Page({
     select: { quiz: { select: { level: true } } },
   });
   if (!levelOffer?.quiz?.level) {
-    return notFound();
+    return <ExamsLocked />;
   }
   const level = levelOffer?.quiz?.level; // "FIRST_YEAR" | "SECOND_YEAR" | ...
 
