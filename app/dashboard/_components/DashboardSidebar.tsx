@@ -10,6 +10,7 @@ import {
   IconListDetails,
   IconSettings,
   IconNote,
+  IconClipboardList,
 } from "@tabler/icons-react";
 
 import { NavMain } from "@/components/sidebar/nav-main";
@@ -43,6 +44,11 @@ const data = {
       title: "Notes",
       url: "/dashboard/notes",
       icon: IconNote,
+    },
+    {
+      title: "Exams",
+      url: "/dashboard/exams",
+      icon: IconClipboardList,
     },
   ],
   navClouds: [

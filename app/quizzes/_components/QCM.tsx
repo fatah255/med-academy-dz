@@ -467,7 +467,6 @@ const MCQ: React.FC<Props> = ({ game }) => {
           >
             Clear
           </Button>
-
           <Button
             className="mt-2"
             size="lg"
@@ -480,14 +479,23 @@ const MCQ: React.FC<Props> = ({ game }) => {
           >
             Verify
           </Button>
-
           <Button className="mt-2" size="lg" onClick={handleNext}>
             {verified ? "Next" : "Skip"}
             <ChevronRight className="w-4 h-4 ml-2" />
           </Button>
-
           {/* Show comment button only after verification and when it exists */}
           {verified && !!safeCommentHtml && (
+            <Button
+              variant="outline"
+              className="mt-2"
+              size="lg"
+              onClick={() => setCommentOpen(true)}
+            >
+              <MessageSquare className="w-4 h-4 mr-2" />
+              Show comment
+            </Button>
+          )}{" "}
+          {currentQuestion.typeId === 2 && (
             <Button
               variant="outline"
               className="mt-2"

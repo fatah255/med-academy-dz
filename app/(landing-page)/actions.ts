@@ -112,6 +112,7 @@ export async function createOfferCheckout(level: Level): Promise<ApiResponse> {
             amount: perQuizAmount,
             status: "PENDING",
             transactionId,
+            isOffer: true,
           },
         })
       )
