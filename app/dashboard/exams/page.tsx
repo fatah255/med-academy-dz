@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { modulesByYear } from "@/lib/utils";
 import { Prisma } from "@/lib/generated/prisma";
 import { requireUser } from "@/app/data/user/require-user";
+import { notFound } from "next/navigation";
 
 /* ---------- Helpers ---------- */
 
@@ -45,6 +46,9 @@ export default async function Page({
     },
     select: { quiz: { select: { level: true } } },
   });
+  if (!levelOffer?.quiz?.level) {
+    return notFound();
+  }
   const level = levelOffer?.quiz?.level; // "FIRST_YEAR" | "SECOND_YEAR" | ...
 
   // Available categories for THIS level (from modulesByYear)
