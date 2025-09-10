@@ -103,7 +103,7 @@ export default function LandingPage() {
         <Stats />
 
         {/* QCMs Offers */}
-        <section className="py-16">
+        <section id="offers" className="py-16 scroll-mt-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <header className="mx-auto max-w-2xl text-center">
               <h3 className="text-3xl sm:text-4xl font-semibold tracking-tight">
@@ -114,7 +114,7 @@ export default function LandingPage() {
               </p>
             </header>
 
-            {/* Responsive grid: 1 / 2 / 3 columns */}
+            {/* offers grid: 1 / 2 / 3 columns */}
             <div className="mt-10 grid grid-cols-1 gap-6 justify-items-center sm:grid-cols-2 sm:justify-items-center xl:grid-cols-3 xl:justify-items-stretch">
               <CardFlip
                 title="First Year Offer"

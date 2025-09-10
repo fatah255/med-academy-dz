@@ -26,8 +26,13 @@ function buildHref(basePath: string, sp: SP, nextPage: number) {
   return q ? `${basePath}?${q}` : basePath;
 }
 
-export default async function Page({ searchParams }: { searchParams: SP }) {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<SP>;
+}) {
   const session = await requireUser();
+  const resolvedSP = await searchParams;
 
   // ——————————————————————————————————————————————
   // Resolve user's accessible level from their paid offer
@@ -49,19 +54,19 @@ export default async function Page({ searchParams }: { searchParams: SP }) {
   // ——————————————————————————————————————————————
   // Parse incoming query params (GET)
   // ——————————————————————————————————————————————
-  const q = (typeof searchParams.q === "string" ? searchParams.q : "") ?? "";
+  const q = (typeof resolvedSP.q === "string" ? resolvedSP.q : "") ?? "";
   const year = Number(
-    typeof searchParams.year === "string" ? searchParams.year : 0
+    typeof resolvedSP.year === "string" ? resolvedSP.year : 0
   );
   const sortKey =
-    typeof searchParams.sort === "string" ? searchParams.sort : "title"; // "title" | "createdAt"
-  const catRaw = typeof searchParams.cat === "string" ? searchParams.cat : "";
+    typeof resolvedSP.sort === "string" ? resolvedSP.sort : "title"; // "title" | "createdAt"
+  const catRaw = typeof resolvedSP.cat === "string" ? resolvedSP.cat : "";
   // Only accept category if it belongs to the current level
   const cat = availableCategories.includes(catRaw) ? catRaw : "";
 
   const page = Math.max(
     1,
-    Number(typeof searchParams.page === "string" ? searchParams.page : 1)
+    Number(typeof resolvedSP.page === "string" ? resolvedSP.page : 1)
   );
   const perPage = 20;
 
@@ -108,8 +113,8 @@ export default async function Page({ searchParams }: { searchParams: SP }) {
 
   // Pagination hrefs (must be strings)
   const basePath = "/dashboard/exams";
-  const prevHref = buildHref(basePath, searchParams, page - 1);
-  const nextHref = buildHref(basePath, searchParams, page + 1);
+  const prevHref = buildHref(basePath, resolvedSP, page - 1);
+  const nextHref = buildHref(basePath, resolvedSP, page + 1);
 
   return (
     <div className="mx-auto w-full max-w-5xl px-4 py-6 space-y-6">
