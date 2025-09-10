@@ -33,15 +33,6 @@ export async function getEnrolledQuizzes() {
               qcm: {
                 select: {
                   id: true,
-                  question: true,
-                  answers: {
-                    select: {
-                      id: true,
-                      position: true,
-                      text: true,
-                      isCorrect: true,
-                    },
-                  },
                 },
               },
             },
