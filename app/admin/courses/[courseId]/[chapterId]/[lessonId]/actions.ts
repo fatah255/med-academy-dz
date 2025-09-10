@@ -4,6 +4,7 @@ import { requireAdmin } from "@/app/data/admin/require-admin";
 import { prisma } from "@/lib/db";
 import { ApiResponse } from "@/lib/types";
 import { lessonSchema, lessonSchemaType } from "@/lib/zodSchemas";
+import { revalidatePath } from "next/cache";
 
 export const updateLesson = async (
   values: lessonSchemaType,
@@ -29,6 +30,9 @@ export const updateLesson = async (
         videoKey: result.data.videoKey,
       },
     });
+    revalidatePath(
+      `/admin/courses/${values.courseId}/${values.chapterId}/${lessonId}`
+    );
     return {
       status: "success",
       message: "Lesson updated successfully.",

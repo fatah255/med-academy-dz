@@ -25,13 +25,14 @@ model User {
   setup          Boolean          @default(false)
   courses        Course[]
   lessonProgress LessonProgress[]
+  nglLinks       NglLink?
+  nglMessages    NglMessage[]
   accounts       Account[]
+  chat           chat[]
   enrollments    Enrollment[]
   notes          notes[]
   quizzes        Quiz[]
   sessions       Session[]
-  nglLinks       NglLink[]
-  nglMessages    NglMessage[]
 
   @@map("user")
 }
@@ -198,10 +199,11 @@ model Enrollment {
   updatedAt     DateTime     @updatedAt
   offer         Boolean      @default(false)
   offerLevel    CourseLevel?
+  isOffer       Boolean      @default(false)
   course        Course?      @relation(fields: [courseId], references: [id], onDelete: Cascade)
   quiz          Quiz?        @relation(fields: [quizId], references: [id], onDelete: Cascade)
   user          User         @relation(fields: [userId], references: [id], onDelete: Cascade)
-  isOffer       Boolean      @default(false)
+
   @@unique([userId, courseId])
   @@unique([userId, quizId])
   @@map("enrollment")
@@ -347,22 +349,42 @@ model NglLink {
   /// Public share code (used in /ngl/[code])
   code        String   @id
   recipientId String   @unique
-  recipient   User     @relation(fields: [recipientId], references: [id], onDelete: Cascade)
   active      Boolean  @default(true)
   createdAt   DateTime @default(now())
+  recipient   User     @relation(fields: [recipientId], references: [id], onDelete: Cascade)
 }
 
 model NglMessage {
   id          String   @id @default(cuid())
   recipientId String
-  recipient   User     @relation(fields: [recipientId], references: [id], onDelete: Cascade)
-  fileKey    String?
-  content     String   
+  content     String
   userAgent   String?
   ipHash      String?
   createdAt   DateTime @default(now())
+  fileKey     String?
+  recipient   User     @relation(fields: [recipientId], references: [id], onDelete: Cascade)
 
   @@index([recipientId, createdAt])
+}
+
+model chat {
+  id          String        @id
+  pdfName     String
+  pdfFileKey  String
+  message     String
+  userId      String
+  createdAt   DateTime      @default(now())
+  user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  chatMessage chatMessage[]
+}
+
+model chatMessage {
+  id        String   @id
+  content   String
+  chatId    String
+  role      chatRole
+  createdAt DateTime @default(now())
+  chat      chat     @relation(fields: [chatId], references: [id], onDelete: Cascade)
 }
 
 enum CourseLevel {
@@ -378,4 +400,9 @@ enum CourseStatus {
   DRAFT
   PUBLISHED
   ARCHIVED
+}
+
+enum chatRole {
+  USER
+  SYSTEM
 }
