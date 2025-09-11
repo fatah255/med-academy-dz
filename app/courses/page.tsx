@@ -83,7 +83,7 @@ async function RenderCourses({
   );
 }
 
-function RenderCoursesSkeleton() {
+export function RenderCoursesSkeleton() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-3 gap-9 m-5">
       {Array.from({ length: 6 }).map((_, index) => (

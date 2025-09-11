@@ -5,8 +5,20 @@ import { requireUser } from "../../data/user/require-user";
 import { getEnrolledQuizzes } from "@/app/data/user/get-enrolled-quizzes";
 import { Ban } from "lucide-react";
 import DashboardQuizCard from "./_components/DashboardQuizCard";
+import { Suspense } from "react";
+import { RenderCoursesSkeleton } from "@/app/courses/page";
 
-const page = async () => {
+const page = () => {
+  return (
+    <Suspense fallback={<RenderCoursesSkeleton />}>
+      <RenderQuizzes />
+    </Suspense>
+  );
+};
+
+export default page;
+
+async function RenderQuizzes() {
   const enrolledQuizzes = await getEnrolledQuizzes();
   const session = await requireUser();
 
@@ -68,6 +80,4 @@ const page = async () => {
       )}
     </>
   );
-};
-
-export default page;
+}
