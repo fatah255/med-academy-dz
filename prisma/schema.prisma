@@ -9,7 +9,7 @@ datasource db {
 }
 
 model User {
-  id             String           @id
+  id             String           @id @default(uuid())
   name           String
   email          String           @unique
   emailVerified  Boolean
@@ -368,10 +368,9 @@ model NglMessage {
 }
 
 model chat {
-  id          String        @id
+  id          String        @id @default(cuid())
   pdfName     String
   pdfFileKey  String
-  message     String
   userId      String
   createdAt   DateTime      @default(now())
   user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -385,6 +384,17 @@ model chatMessage {
   role      chatRole
   createdAt DateTime @default(now())
   chat      chat     @relation(fields: [chatId], references: [id], onDelete: Cascade)
+}
+
+model pdf_chunks {
+  id          String                @id
+  file_key    String
+  page_number BigInt
+  text        String
+  embedding   Unsupported("vector")
+  created_at  DateTime              @default(now()) @db.Timestamptz(6)
+
+  @@index([file_key, page_number], map: "pdf_chunks_filekey_page_idx")
 }
 
 enum CourseLevel {

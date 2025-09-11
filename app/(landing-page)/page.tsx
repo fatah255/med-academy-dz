@@ -6,8 +6,24 @@ import Footer from "./_components/Footer";
 import Image from "next/image";
 import Stats from "./_components/Stats";
 import CardFlip from "@/components/kokonutui/card-flip";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
+import { prisma } from "@/lib/db";
+import { redirect } from "next/navigation";
 
-export default function LandingPage() {
+export default async function LandingPage() {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+  if (session?.user?.id) {
+    const setup = await prisma.user.findFirst({
+      where: { id: session.user.id },
+      select: { setup: true },
+    });
+    if (!setup?.setup) {
+      return redirect("/setup");
+    }
+  }
   return (
     <div className="bg-background text-foreground">
       <main>

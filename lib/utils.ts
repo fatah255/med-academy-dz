@@ -145,3 +145,8 @@ export const QUESTION_TYPE_BY_ID = new Map(
 export const numToLetter: Map<number, string> = new Map(
   Array.from({ length: 26 }, (_, i) => [i + 1, String.fromCharCode(65 + i)]) // 1->A, 2->B, ...
 );
+export function convertToAscii(inputString: string) {
+  // remove non ascii characters
+  const asciiString = inputString.replace(/[^\x00-\x7F]+/g, "");
+  return asciiString;
+}

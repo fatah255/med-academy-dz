@@ -32,6 +32,14 @@ export const auth = betterAuth({
       await prisma.session.deleteMany({
         where: { userId, id: { not: currentSessionId } },
       });
+      // const setup = await prisma.user.findFirst({
+      //   where: { id: userId },
+      //   select: { setup: true },
+      // });
+      // if (!setup?.setup) {
+      //   // return ctx.context.response.redirect("/setup");
+      //   console.log("User needs to complete setup");
+      // }
     }),
   },
   database: prismaAdapter(prisma, {

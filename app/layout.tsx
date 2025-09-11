@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import NavbarClient from "@/components/NavbarClient";
 import { Toaster } from "sonner";
+import { Toaster as HotToaster } from "react-hot-toast";
+import Providers from "../components/Providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,23 +28,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}
-      >
-        <main className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <NavbarClient />
-            {children}
-            <Toaster />
-          </ThemeProvider>
-        </main>
-      </body>
-    </html>
+    <Providers>
+      <html lang="en" suppressHydrationWarning>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}
+        >
+          <main className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <NavbarClient />
+              {children}
+              <Toaster />
+              <HotToaster position="top-right" />
+            </ThemeProvider>
+          </main>
+        </body>
+      </html>
+    </Providers>
   );
 }
