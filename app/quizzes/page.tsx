@@ -3,7 +3,7 @@ import { PublicCourseCardSkeleton } from "../(landing-page)/_components/PublicCo
 
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
-import { getLevel } from "../courses/actions";
+
 import { getAllQuizzes } from "../data/quiz/get-all-quizzes";
 import PublicQuizCard from "./_components/PublicQuizCard";
 
@@ -38,16 +38,11 @@ async function RenderCourses({
   isAdmin: boolean;
   userId: string;
 }) {
-  const courses = await getAllQuizzes();
-  const level = await getLevel(userId);
-  const coursesToRender =
-    isAdmin || !userId
-      ? courses
-      : courses.filter((course) => course.level === level);
+  const courses = await getAllQuizzes(userId);
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-3 gap-9 m-5">
-      {coursesToRender.map((course) => (
+      {courses.map((course) => (
         <PublicQuizCard key={course.id} course={course} />
       ))}
     </div>
