@@ -40,7 +40,7 @@ const navigation: Social[] = [
 
   {
     name: "Email",
-    href: "mailto:na_lebkara@esi.dz",
+    href: "mailto:medacademydz@gmail.com",
     external: false,
     icon: (props) => (
       <svg viewBox="0 0 24 24" fill="currentColor" {...props}>

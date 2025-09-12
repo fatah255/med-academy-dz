@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
         hostname: "medacademydz.t3.storageapi.dev",
         port: "",
       },
+      { protocol: "https", hostname: "pub-*.r2.dev", pathname: "/**" },
     ],
   },
   webpack: (config, { isServer }) => {
