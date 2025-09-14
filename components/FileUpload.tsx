@@ -57,7 +57,7 @@ export default function FileUpload() {
 
   const { mutate, isPending } = useMutation({
     mutationFn: async (payload: { file_key: string; file_name: string }) => {
-      const res = await axios.post("/api/create-chat", payload);
+      const res = await axios.post("/api/chat/create-chat", payload);
       return res.data as { chat_id: string };
     },
   });
@@ -81,7 +81,7 @@ export default function FileUpload() {
           mutate(data, {
             onSuccess: ({ chat_id }) => {
               toast.success("Chat created!");
-              router.push(`/chat/${chat_id}`);
+              router.push(`/dashboard/ai/${chat_id}`);
             },
             onError: (err) => {
               console.error(err);

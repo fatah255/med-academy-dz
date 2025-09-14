@@ -1,47 +1,39 @@
+// import { requireUser } from "@/app/data/user/require-user";
+
 import { requireUser } from "@/app/data/user/require-user";
-// import ChatWrapper from "@/components/chat/ChatWrapper";
-import { notFound, redirect } from "next/navigation";
-import { ClientPdfRenderer } from "./_components/ClientPdfRenderer";
+import { notFound } from "next/navigation";
+import { prisma } from "@/lib/db";
+import useConstructUrl from "@/hooks/use-construct-url";
+import PdfRenderer from "@/components/PdfRenderer";
+import RightPaneTabs from "@/components/RightPaneTabs";
 
 interface PageProps {
-  params: Promise<{
-    chatId: string;
-  }>;
+  params: Promise<{ chatId: string }>;
 }
-const url =
-  "https://medacademydz.t3.storage.dev/0167baa8-6bcc-4921-b9be-a109a331bc30-02_-_series_numeriques_cours_complet-2.pdf";
-const Page = async ({ params }: PageProps) => {
+
+export default async function Page({ params }: PageProps) {
   const { chatId } = await params;
-
   const session = await requireUser();
-  const user = session.user;
 
-  // const file = await prisma.chat.findFirst({
-  //   where: {
-  //     id: chatId,
-  //     userId: user.id,
-  //   },
-  // });
+  const chat = await prisma.chat.findFirst({
+    where: { id: chatId, userId: session.user.id },
+    select: { pdfFileKey: true, id: true },
+  });
 
-  // if (!file) notFound();
+  if (!chat) notFound();
+  const url = useConstructUrl(chat.pdfFileKey);
 
   return (
-    <div className="flex-1 justify-between flex flex-col h-[calc(100vh-3.5rem)]">
-      <div className="mx-auto w-full max-w-8xl grow lg:flex xl:px-2">
-        {/* Left sidebar & main wrapper */}
-        <div className="flex-1 xl:flex">
-          <div className="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
-            {/* Main area */}
-            <ClientPdfRenderer url={url} />
-          </div>
-        </div>
+    <div className="container mx-auto px-4 lg:px-6 py-6">
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_420px] items-start">
+        <section className="min-w-0">
+          <PdfRenderer url={url} />
+        </section>
 
-        <div className="shrink-0 flex-[0.75] border-t border-gray-200 lg:w-96 lg:border-l lg:border-t-0">
-          {/* <ChatWrapper isSubscribed={plan.isSubscribed} fileId={file.id} /> */}
-        </div>
+        <aside className="min-w-0">
+          <RightPaneTabs chatId={chat.id} />
+        </aside>
       </div>
     </div>
   );
-};
-
-export default Page;
+}

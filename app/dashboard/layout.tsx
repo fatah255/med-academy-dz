@@ -3,6 +3,7 @@ import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { ReactNode } from "react";
 import { DashboardSidebar } from "./_components/DashboardSidebar";
 import "katex/dist/katex.min.css";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const Layout = async ({ children }: { children: ReactNode }) => {
   return (
@@ -18,9 +19,9 @@ const Layout = async ({ children }: { children: ReactNode }) => {
 
       <SidebarInset>
         <SiteHeader />
-        <div className="flex flex-1 flex-col">
+        <div className="flex flex-1 flex-col ">
           <div className="@container/main flex flex-1 flex-col gap-2">
-            <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
+            <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6 ">
               {children}
             </div>
           </div>

@@ -1,98 +1,62 @@
-// import { requireUser } from "@/app/data/user/require-user";
-// import { prisma } from "@/lib/db";
-// import { loadS3IntoPinecone } from "@/lib/pinecone";
-// import { NextResponse } from "next/server";
-
-// // /api/create-chat
-// export async function POST(req: Request, res: Response) {
-//   const session = await requireUser();
-//   const userId = session?.user?.id;
-//   if (!userId) {
-//     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-//   }
-//   try {
-//     const body = await req.json();
-//     const { file_key, file_name } = body;
-//     console.log(file_key, file_name);
-//     await loadS3IntoPinecone(file_key);
-//     const chat = await prisma.chat.create({
-//       data: {
-//         userId: userId as string,
-//         pdfFileKey: file_key as string,
-//         pdfName: file_name as string,
-//       },
-//     });
-//     return NextResponse.json(
-//       {
-//         chat_id: chat.id,
-//       },
-//       { status: 200 }
-//     );
-//   } catch (error) {
-//     console.error(error);
-//     return NextResponse.json(
-//       { error: "internal server error" },
-//       { status: 500 }
-//     );
-//   }
-// }
 // app/api/chat/create-chat/route.ts
-export const runtime = "nodejs";
-
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { requireUser } from "@/app/data/user/require-user";
 import { prisma } from "@/lib/db";
-import { loadS3IntoPinecone } from "@/lib/pinecone";
+
+// Prisma needs Node runtime (not Edge)
+export const runtime = "nodejs";
+// Ensure this route is never statically optimized/cached
+export const dynamic = "force-dynamic";
+
+const BodySchema = z.object({
+  file_key: z.string().min(1, "file_key is required"),
+  file_name: z.string().min(1, "file_name is required"),
+});
 
 export async function POST(req: Request) {
+  // Auth
   const session = await requireUser();
   const userId = session?.user?.id;
-  if (!userId)
+  if (!userId) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  }
+
+  // Parse & validate body
+  let body: unknown;
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: "invalid_json" }, { status: 400 });
+  }
+
+  const parsed = BodySchema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json(
+      { error: "validation_error", details: parsed.error.flatten() },
+      { status: 400 }
+    );
+  }
+
+  const { file_key, file_name } = parsed.data;
 
   try {
-    const { file_key, file_name } = await req.json();
+    // (Blocking) ingest to Pinecone. If you prefer backgrounding this,
+    // move it to a queue/job and return the chat id immediately.
 
-    // Ingest (sync version). If you prefer background, queue it and return early.
-    await loadS3IntoPinecone(file_key);
-
+    // Create chat record
     const chat = await prisma.chat.create({
       data: {
         userId,
         pdfFileKey: file_key,
         pdfName: file_name,
       },
+      select: { id: true },
     });
 
     return NextResponse.json({ chat_id: chat.id }, { status: 200 });
   } catch (err: any) {
     const msg = String(err?.message ?? err);
-
-    if (msg.includes("EMBEDDINGS_QUOTA_EXCEEDED")) {
-      return NextResponse.json(
-        {
-          error: "embeddings_quota",
-          message:
-            "Embeddings quota exhausted. Add billing or switch provider.",
-        },
-        { status: 429 }
-      );
-    }
-    if (msg.includes("EMBEDDINGS_RATE_LIMIT")) {
-      return NextResponse.json(
-        {
-          error: "embeddings_rate_limit",
-          message: "Rate limited. Please retry shortly.",
-        },
-        { status: 429 }
-      );
-    }
-    if (msg.includes("PINECONE_DIMENSION_MISMATCH")) {
-      return NextResponse.json(
-        { error: "pinecone_dimension", message: msg },
-        { status: 400 }
-      );
-    }
 
     console.error("create-chat error:", err);
     return NextResponse.json(

@@ -7,6 +7,7 @@ import { Toaster } from "sonner";
 import { Toaster as HotToaster } from "react-hot-toast";
 import Providers from "../components/Providers";
 import "simplebar-react/dist/simplebar.min.css";
+import "reactflow/dist/style.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -109,10 +109,15 @@
 // };
 
 // export default Page;
+import FileUpload from "@/components/FileUpload";
 import React from "react";
 
 const page = () => {
-  return <div>page</div>;
+  return (
+    <div>
+      <FileUpload />
+    </div>
+  );
 };
 
 export default page;

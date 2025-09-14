@@ -1,10 +1,11 @@
 "use client";
-import "@/lib/setup-pdf-worker";
+// import "@/lib/setup-pdf-worker";
 
 import { useEffect, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import SimpleBar from "simplebar-react";
 import { useResizeDetector } from "react-resize-detector";
+import { initPdfWorker } from "@/lib/setup-pdf-worker";
 import {
   ChevronDown,
   ChevronUp,
@@ -48,6 +49,7 @@ interface PdfRendererProps {
 }
 
 export default function PdfRenderer({ url }: PdfRendererProps) {
+  
   const { toast } = useToast();
   const [numPages, setNumPages] = useState<number>();
   const [currPage, setCurrPage] = useState<number>(1);
@@ -55,6 +57,9 @@ export default function PdfRenderer({ url }: PdfRendererProps) {
   const [rotation, setRotation] = useState<number>(0);
   const [renderedScale, setRenderedScale] = useState<number | null>(null);
   const isLoading = renderedScale !== scale;
+  useEffect(() => {
+    initPdfWorker();   // runs only in the browser
+  }, []);
 
   const PageSchema = z.object({
     page: z.string().refine((n) => {

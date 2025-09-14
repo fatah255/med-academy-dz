@@ -1,21 +1,15 @@
 "use client";
-import "@/lib/setup-pdf-worker";
+// import "@/lib/setup-pdf-worker";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import SimpleBar from "simplebar-react";
 import { useResizeDetector } from "react-resize-detector";
+import { initPdfWorker } from "@/lib/setup-pdf-worker";
 import { Expand, Loader2 } from "lucide-react";
 import { Button } from "./ui/button";
 import { useToast } from "./ui/use-toast";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "./ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-
-// ✅ initialize pdf.js worker once
-
-// If you want selectable/searchable text/links, keep these 2 CSS imports.
-// Otherwise you can delete them and keep renderTextLayer/AnnotationLayer = false.
-// import 'react-pdf/dist/Page/AnnotationLayer.css';
-// import 'react-pdf/dist/Page/TextLayer.css';
 
 import dynamic from "next/dynamic";
 const Document: any = dynamic(
@@ -35,6 +29,9 @@ export default function PdfFullscreen({ fileUrl }: PdfFullscreenProps) {
   const [numPages, setNumPages] = useState<number>();
   const { width, ref } = useResizeDetector();
   const { toast } = useToast();
+  useEffect(() => {
+    initPdfWorker(); // runs only in the browser
+  }, []);
 
   const file = useMemo(
     () => ({ url: fileUrl, withCredentials: false }),
