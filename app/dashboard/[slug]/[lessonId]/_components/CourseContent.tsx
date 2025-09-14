@@ -3,7 +3,7 @@
 import { LessonContentType } from "@/app/data/course/get-lesson-content";
 import { Button } from "@/components/ui/button";
 import useConstructUrl from "@/hooks/use-construct-url";
-import { CheckCircle } from "lucide-react";
+import { BookIcon, CheckCircle } from "lucide-react";
 import { useTransition } from "react";
 import { markLessonAsCompleted } from "../actions";
 import { toast } from "sonner";
@@ -28,14 +28,15 @@ const CourseContent = ({ lesson }: CourseContentProps) => {
   }) => {
     const videoUrl = useConstructUrl(videoKey || "");
     const poster = thumbnailKey ? useConstructUrl(thumbnailKey) : undefined;
-    // if (!videoKey) {
-    //   return (
-    //     <div className="aspect-video rounded-lg bg-muted flex flex-col items-center justify-center">
-    //       <BookIcon className="size-16 text-muted-foreground mb-4" />
-    //       <p className="text-muted-foreground">No video available</p>
-    //     </div>
-    //   );
-    // }
+
+    if (!videoKey) {
+      return (
+        <div className="aspect-video rounded-lg bg-muted flex flex-col items-center justify-center">
+          <BookIcon className="size-16 text-muted-foreground mb-4" />
+          <p className="text-muted-foreground">No video available</p>
+        </div>
+      );
+    }
 
     return (
       <div className="aspect-video relative rounded-lg overflow-hidden bg-black">

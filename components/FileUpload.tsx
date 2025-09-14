@@ -57,7 +57,7 @@ export default function FileUpload() {
 
   const { mutate, isPending } = useMutation({
     mutationFn: async (payload: { file_key: string; file_name: string }) => {
-      const res = await axios.post("/api/chat/create-chat", payload);
+      const res = await axios.post("/api/create-chat", payload);
       return res.data as { chat_id: string };
     },
   });

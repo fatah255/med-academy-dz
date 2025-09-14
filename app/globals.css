@@ -207,3 +207,45 @@ body {
 .tl-watermark_SEE-LICENSE {
   display: none !important;
 }
+\/* —— SimpleBar theme (light/dark) ——————————————————————————— */
+
+.simplebar-track {
+  background: transparent; /* no gray rails */
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 8px;
+}
+.simplebar-track.simplebar-horizontal {
+  height: 8px;
+}
+
+.simplebar-scrollbar::before {
+  /* rounded, subtle thumb */
+  content: "";
+  display: block;
+  border-radius: 9999px;
+  background-color: rgb(148 163 184 / 0.55); /* slate-400 @ light */
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+  background-color: rgb(100 116 139 / 0.75); /* slate-500 @ hover/visible */
+}
+
+.dark .simplebar-scrollbar::before {
+  background-color: rgb(71 85 105 / 0.55); /* slate-600 @ dark */
+}
+
+.dark .simplebar-scrollbar.simplebar-visible::before {
+  background-color: rgb(148 163 184 / 0.75); /* slate-400 @ dark hover */
+}
+
+/* make the content area breathe a bit (optional) */
+.theme-simplebar .simplebar-content {
+  padding: 0.75rem;
+}
+
+/* hide the little corner block on some browsers (optional) */
+.simplebar-content-wrapper {
+  background: transparent;
+}

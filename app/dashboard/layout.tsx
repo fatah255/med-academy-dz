@@ -2,6 +2,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { ReactNode } from "react";
 import { DashboardSidebar } from "./_components/DashboardSidebar";
+import "katex/dist/katex.min.css";
 
 const Layout = async ({ children }: { children: ReactNode }) => {
   return (
