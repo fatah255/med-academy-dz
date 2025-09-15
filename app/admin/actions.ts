@@ -1,9 +1,9 @@
 "use server";
 
 import { prisma } from "@/lib/db";
-import { Prisma } from "@/lib/generated/prisma";
 import { requireAdmin } from "../data/admin/require-admin";
 import { requireUser } from "../data/user/require-user";
+import { Prisma } from "@prisma/client";
 
 /** ---------- Helpers ---------- **/
 function date30DaysAgo() {

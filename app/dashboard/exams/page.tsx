@@ -2,10 +2,10 @@ import Link from "next/link";
 import { prisma } from "@/lib/db";
 import { Button } from "@/components/ui/button";
 import { modulesByYear } from "@/lib/utils";
-import { Prisma } from "@/lib/generated/prisma";
 import { requireUser } from "@/app/data/user/require-user";
 import { notFound } from "next/navigation";
 import ExamsLocked from "./_components/exam-locked";
+import { Prisma } from "@prisma/client";
 
 /* ---------- Helpers ---------- */
 

@@ -95,7 +95,7 @@ export async function POST(req: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: MODEL,
+        model: "openai/gpt-4o-mini",
         messages: [
           { role: "system", content: systemPrompt },
           {

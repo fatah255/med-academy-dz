@@ -1,6 +1,7 @@
 generator client {
   provider = "prisma-client-js"
-  output   = "../lib/generated/prisma"
+  // output   = "../lib/generated/prisma"
+   binaryTargets = ["native"] // add this line
 }
 
 datasource db {
@@ -33,6 +34,7 @@ model User {
   notes          notes[]
   quizzes        Quiz[]
   sessions       Session[]
+   quizAttempts QuizAttempt[]
 
   @@map("user")
 }
@@ -144,6 +146,7 @@ model Quiz {
   userId      String
   cours       cours[]
   enrollments Enrollment[]
+   quizAttempts QuizAttempt[]
   user        User         @relation(fields: [userId], references: [id])
 
   @@map("quiz")
@@ -229,6 +232,7 @@ model cours {
   updatedAt DateTime @updatedAt
   quizId    String
   quiz      Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
+   quizAttempts QuizAttempt[]
   qcm       Qcm[]
 }
 
@@ -252,6 +256,7 @@ model exams {
   updatedAt DateTime
   category  String
   level     CourseLevel
+  quizAttempts QuizAttempt[]
   year      Int         @default(0)
   qcm       Qcm[]
 }
@@ -396,6 +401,52 @@ model pdf_chunks {
 
   @@index([file_key, page_number], map: "pdf_chunks_filekey_page_idx")
 }
+
+
+model QuizAttempt {
+  id               String    @id @default(cuid())
+  createdAt        DateTime  @default(now())
+
+  // who
+  userId           String?  
+  user             User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // what this run was based on (all optional — pass whichever you have)
+  quizId           String? 
+  quiz             Quiz?     @relation(fields: [quizId], references: [id], onDelete: SetNull)
+
+  coursId          String?  
+  cours            cours?    @relation(fields: [coursId], references: [id], onDelete: SetNull)
+
+  examId           String?  
+  exam             exams?    @relation(fields: [examId], references: [id], onDelete: SetNull)
+
+  // display label (e.g. "Endocrino... 5ÈME MED")
+  topic            String
+
+  // timing
+  startedAt        DateTime
+  endedAt          DateTime
+  durationSeconds  Int
+
+  // scoring
+  totalQuestions   Int
+  attempted        Int
+  correctCount     Int
+  wrongCount       Int
+  scorePercent     Int        // 0..100
+  completedAll     Boolean
+
+  // hidden bookkeeping
+  qcmIds           String[]   // store Qcm.id and/or subQcm.id
+  answers          Json?      // optional raw AnswerLog[] for audits/review
+
+  @@index([userId, createdAt])
+  @@index([quizId])
+  @@index([coursId])
+  @@index([examId])
+}
+
 
 enum CourseLevel {
   FIRST_YEAR

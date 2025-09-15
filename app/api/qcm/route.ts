@@ -155,7 +155,7 @@ export async function POST(req: Request) {
       },
       body: JSON.stringify({
         // choose your model; free or paid
-        model: "meta-llama/llama-3.1-70b-instruct",
+        model: "openai/gpt-4o-mini",
         messages: prompt,
         max_tokens: 1500,
         response_format: {
