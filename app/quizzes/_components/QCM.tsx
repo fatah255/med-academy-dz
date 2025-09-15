@@ -13,6 +13,7 @@ import {
   Flag,
   Loader2,
   Award,
+  History,
 } from "lucide-react";
 import {
   Card,
@@ -570,12 +571,12 @@ const MCQ: React.FC<Props> = ({ game }) => {
                 View Statistics <BarChart className="ml-2 h-4 w-4" />
               </Link>
               <Link
-                href={`/quizzes`}
+                href={`/dashboard/attempts`}
                 className={cn(
                   buttonVariants({ variant: "secondary", size: "lg" })
                 )}
               >
-                Back to Quizzes
+                <History className="mr-2 h-4 w-4" /> View Your History
               </Link>
             </div>
           </CardHeader>
