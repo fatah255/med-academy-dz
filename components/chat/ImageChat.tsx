@@ -7,13 +7,12 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Icons } from "../Icons";
 import {
   X,
   ImageIcon,
   Send,
   Loader2,
-  Bot,
-  User2,
   Sparkles,
   Paperclip,
   Maximize2,
@@ -415,12 +414,13 @@ function MessageBubble({
     <div className={`flex ${me ? "justify-end" : "justify-start"}`}>
       <div className={`flex max-w-[85%] items-start gap-3`}>
         {!me ? (
-          <div className="mt-0.5 hidden shrink-0 rounded-full border bg-background p-2 sm:block">
-            <Bot className="h-4 w-4" />
+          <div className="hidden sm:grid size-8 place-items-center shrink-0 rounded-full border bg-background overflow-hidden">
+            {/* Use a compact mark; clamp the svg size so it can't expand */}
+            <Icons.logo className="h-4 w-4 shrink-0 text-muted-foreground" />
           </div>
         ) : (
-          <div className="mt-0.5 hidden shrink-0 rounded-full border bg-background p-2 sm:block">
-            <User2 className="h-4 w-4" />
+          <div className="hidden sm:grid size-8 place-items-center shrink-0 rounded-full border bg-background overflow-hidden">
+            <Icons.user className="h-4 w-4 shrink-0" />
           </div>
         )}
 

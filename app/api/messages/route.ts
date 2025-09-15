@@ -7,13 +7,9 @@ export const runtime = "nodejs";
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
-  const chatId = searchParams.get("chatId");
+  const chatId = searchParams.get("chatId")!;
   const limit = Number(searchParams.get("limit") ?? "20");
   const cursor = searchParams.get("cursor"); // last id from previous page
-
-  if (!chatId) {
-    return NextResponse.json({ error: "chatId is required" }, { status: 400 });
-  }
 
   const session = await requireUser();
   const userId = session.user.id;
@@ -38,7 +34,6 @@ export async function GET(req: Request) {
     id: m.id,
     createdAt: m.createdAt.toISOString(),
     text: m.content,
-    // ⚠️ adjust this line if your enum uses "AI" instead of "ASSISTANT".
     isUserMessage: m.role === "USER",
   }));
 

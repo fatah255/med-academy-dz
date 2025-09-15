@@ -5,17 +5,25 @@ import { prisma } from "@/lib/db";
 import { requireUser } from "@/app/data/user/require-user";
 import useConstructUrl from "@/hooks/use-construct-url";
 
+// --- tiny helper: fetch URL -> data: URL ---
+async function pdfToDataUrlFromUrl(url: string): Promise<string> {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("Failed to fetch PDF");
+  const buf = Buffer.from(await res.arrayBuffer());
+  return `data:application/pdf;base64,${buf.toString("base64")}`;
+}
+
 export const runtime = "nodejs";
 
-/** Request body */
+// Request
 const BodySchema = z.object({
   chatId: z.string().min(1),
   count: z.number().int().min(1).max(50).default(5),
   difficulty: z.enum(["easy", "normal", "hard"]).default("normal"),
-  language: z.string().optional().default("fr"), // change default if you want
+  language: z.string().default("fr"),
 });
 
-/** Expected QCM structure */
+// Final shape
 const QcmSchema = z.object({
   questions: z
     .array(
@@ -23,13 +31,11 @@ const QcmSchema = z.object({
         id: z.string(),
         question: z.string(),
         difficulty: z.enum(["easy", "normal", "hard"]).optional(),
-        choices: z.array(
-          z.object({
-            id: z.string(),
-            text: z.string(),
-            correct: z.boolean(),
-          })
-        ),
+        choices: z
+          .array(
+            z.object({ id: z.string(), text: z.string(), correct: z.boolean() })
+          )
+          .length(4),
         explanation: z.string().optional(),
       })
     )
@@ -37,22 +43,114 @@ const QcmSchema = z.object({
 });
 type QcmPayload = z.infer<typeof QcmSchema>;
 
-function extractJsonSafe(s: string): unknown {
-  // some models may wrap JSON in fences; strip them and parse
+// Extract JSON even if fenced
+function extractJsonSafe(s: string): any {
   const fence = s.match(/```(?:json)?\s*([\s\S]*?)\s*```/i);
   const raw = fence ? fence[1] : s;
-  // try direct parse
   try {
     return JSON.parse(raw);
   } catch {
-    // try to find first {...}
-    const first = raw.indexOf("{");
-    const last = raw.lastIndexOf("}");
-    if (first !== -1 && last !== -1 && last > first) {
-      return JSON.parse(raw.slice(first, last + 1));
-    }
+    const i = raw.indexOf("{");
+    const j = raw.lastIndexOf("}");
+    if (i >= 0 && j > i) return JSON.parse(raw.slice(i, j + 1));
     throw new Error("Model did not return valid JSON.");
   }
+}
+
+// Normalize loose outputs -> exact schema
+function normalizeToQcmShape(input: any, expectedCount: number): QcmPayload {
+  let qArr: any[] =
+    input?.questions ?? input?.items ?? input?.data?.questions ?? [];
+  if (!Array.isArray(qArr)) throw new Error("No questions[] in model output.");
+  qArr = qArr.slice(0, expectedCount);
+
+  const letters = ["A", "B", "C", "D"];
+
+  const questions = qArr.map((q: any) => {
+    const id = String(q?.id ?? crypto.randomUUID());
+    const question = String(
+      q?.question ?? q?.prompt ?? q?.title ?? q?.text ?? ""
+    ).trim();
+
+    const difficultyRaw = (q?.difficulty ?? q?.level ?? "")
+      .toString()
+      .toLowerCase();
+    const difficulty = ["easy", "normal", "hard"].includes(difficultyRaw)
+      ? (difficultyRaw as any)
+      : undefined;
+
+    let choicesRaw: any[] = q?.choices ?? q?.options ?? q?.answers ?? [];
+    if (!Array.isArray(choicesRaw)) choicesRaw = [];
+
+    // convert strings -> objects
+    let choices = choicesRaw.map((c: any) =>
+      typeof c === "string"
+        ? { id: crypto.randomUUID(), text: c, correct: false }
+        : {
+            id: String(c?.id ?? crypto.randomUUID()),
+            text: String(c?.text ?? c?.label ?? c ?? ""),
+            correct: Boolean(c?.correct ?? c?.isCorrect ?? false),
+          }
+    );
+
+    // detect/mark correct
+    const ansLetter = String(q?.answer ?? q?.key ?? "")
+      .trim()
+      .toUpperCase();
+    const idxFromLetter = letters.includes(ansLetter)
+      ? letters.indexOf(ansLetter)
+      : -1;
+    const idx =
+      typeof q?.correctIndex === "number"
+        ? q.correctIndex
+        : typeof q?.answerIndex === "number"
+        ? q.answerIndex
+        : idxFromLetter;
+
+    if (idx >= 0 && idx < choices.length) {
+      choices = choices.map((c, i) => ({ ...c, correct: i === idx }));
+    }
+
+    // if none marked, default first to true
+    if (!choices.some((c) => c.correct) && choices.length)
+      choices[0].correct = true;
+
+    // exactly 4 choices
+    choices = choices.slice(0, 4);
+    while (choices.length < 4) {
+      choices.push({ id: crypto.randomUUID(), text: "—", correct: false });
+    }
+
+    const explanation = q?.explanation ?? q?.rationale ?? q?.why;
+    return { id, question, difficulty, choices, explanation };
+  });
+
+  return { questions };
+}
+
+// OpenRouter call (with good headers)
+async function callOpenRouter(payload: any) {
+  const key = process.env.OPENROUTER_API_KEY;
+  if (!key) throw new Error("OPENROUTER_API_KEY not set");
+
+  const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${key}`,
+      "Content-Type": "application/json",
+      "HTTP-Referer": process.env.BETTER_AUTH_URL || "http://localhost",
+      "X-Title": "Med Academy - QCM generator",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const text = await res.text();
+  if (!res.ok) {
+    const err = new Error(text || res.statusText) as any;
+    err.status = res.status;
+    throw err;
+  }
+  return JSON.parse(text);
 }
 
 export async function POST(req: Request) {
@@ -63,145 +161,161 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { chatId, count, difficulty, language } = BodySchema.parse(body);
 
-    // verify chat ownership
+    // ownership + pdf url
     const chat = await prisma.chat.findFirst({
       where: { id: chatId, userId },
-      select: { id: true, pdfFileKey: true },
+      select: { pdfFileKey: true, pdfName: true },
     });
-    if (!chat) {
+    if (!chat)
       return NextResponse.json({ error: "Not found" }, { status: 404 });
-    }
 
+    // ALWAYS send as data URL to avoid "Invalid content"
     const pdfUrl = useConstructUrl(chat.pdfFileKey);
+    const dataUrl = await pdfToDataUrlFromUrl(pdfUrl);
 
-    // Build a strict JSON schema the model must follow
-    const jsonSchema = {
-      name: "qcm_list",
-      strict: true,
-      schema: {
-        type: "object",
-        properties: {
-          questions: {
-            type: "array",
-            minItems: count,
-            maxItems: count,
-            items: {
-              type: "object",
-              required: ["id", "question", "choices"],
-              additionalProperties: false,
-              properties: {
-                id: { type: "string" },
-                question: { type: "string" },
-                difficulty: {
-                  type: "string",
-                  enum: ["easy", "normal", "hard"],
-                },
-                choices: {
-                  type: "array",
-                  minItems: 4,
-                  maxItems: 4,
-                  items: {
-                    type: "object",
-                    required: ["id", "text", "correct"],
-                    additionalProperties: false,
-                    properties: {
-                      id: { type: "string" },
-                      text: { type: "string" },
-                      correct: { type: "boolean" },
-                    },
-                  },
-                },
-                explanation: { type: "string" },
-              },
-            },
-          },
-        },
-        required: ["questions"],
-        additionalProperties: false,
-      },
-    };
+    const system =
+      "You generate multiple-choice questions strictly from the attached PDF. Return ONLY JSON, no prose.";
 
-    const prompt = [
+    const instruction = [
+      `Generate ${count} QCM questions in ${language}. Difficulty: ${difficulty}.`,
+      "Each question has exactly 4 choices and exactly one correct answer.",
+      "Include a short 'explanation' for the correct answer.",
+      "Return only JSON that matches the schema.",
+    ].join("\n");
+
+    const messages = [
+      { role: "system" as const, content: [{ type: "text", text: system }] },
       {
-        role: "user",
+        role: "user" as const,
         content: [
-          {
-            type: "text",
-            text: `From the attached PDF, generate ${count} multiple-choice questions in ${language}.
-- Difficulty: ${difficulty}.
-- Each question must have exactly 4 choices with exactly one correct answer.
-- Keep questions concise and unambiguous.
-- Include a short explanation for the correct answer.
-- Return ONLY JSON matching the provided schema.`,
-          },
+          { type: "text", text: instruction },
           {
             type: "file",
             file: {
-              filename: "document.pdf",
-              file_data: pdfUrl, // public URL
+              filename: chat.pdfName ?? "document.pdf",
+              file_data: dataUrl,
             },
           },
         ],
       },
     ];
 
-    const resp = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.OPENROUTER_API_KEY!}`,
-        "Content-Type": "application/json",
-        "HTTP-Referer": process.env.BETTER_AUTH_URL || "http://localhost",
-        "X-Title": "Med Academy - QCM generator",
-      },
-      body: JSON.stringify({
-        // choose your model; free or paid
-        model: "openai/gpt-4o-mini",
-        messages: prompt,
-        max_tokens: 1500,
-        response_format: {
-          type: "json_schema",
-          json_schema: jsonSchema,
-        },
-        plugins: [
-          {
-            id: "file-parser",
-            pdf: { engine: "pdf-text" },
-          },
-        ],
-      }),
-    });
+    const model = "openai/gpt-4o-mini"; // supports structured outputs
 
-    if (!resp.ok) {
-      const errTxt = await resp.text().catch(() => "");
-      return NextResponse.json(
-        { error: "upstream_error", message: errTxt || resp.statusText },
-        { status: 502 }
-      );
+    // 1) strict schema
+    const payloadSchema = {
+      model,
+      messages,
+      max_tokens: Math.max(1200, 300 * count),
+      temperature: 0.2,
+      plugins: [{ id: "file-parser", pdf: { engine: "pdf-text" } }],
+      response_format: {
+        type: "json_schema",
+        json_schema: {
+          name: "qcm_list",
+          strict: true,
+          schema: {
+            type: "object",
+            additionalProperties: false,
+            required: ["questions"],
+            properties: {
+              questions: {
+                type: "array",
+                minItems: count,
+                maxItems: count,
+                items: {
+                  type: "object",
+                  additionalProperties: false,
+                  required: ["id", "question", "choices"],
+                  properties: {
+                    id: { type: "string" },
+                    question: { type: "string" },
+                    difficulty: {
+                      type: "string",
+                      enum: ["easy", "normal", "hard"],
+                    },
+                    choices: {
+                      type: "array",
+                      minItems: 4,
+                      maxItems: 4,
+                      items: {
+                        type: "object",
+                        additionalProperties: false,
+                        required: ["id", "text", "correct"],
+                        properties: {
+                          id: { type: "string" },
+                          text: { type: "string" },
+                          correct: { type: "boolean" },
+                        },
+                      },
+                    },
+                    explanation: { type: "string" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    };
+
+    let data;
+    try {
+      data = await callOpenRouter(payloadSchema);
+    } catch (e: any) {
+      // 2) fallback if provider rejects schema / "Invalid content"
+      if (
+        e?.status === 400 ||
+        String(e?.message || "").includes("Invalid content")
+      ) {
+        const payloadFallback = {
+          model,
+          messages: [
+            messages[0],
+            {
+              ...messages[1],
+              content: [
+                {
+                  type: "text",
+                  text:
+                    instruction +
+                    "\n\nReturn a single JSON object with questions[].",
+                },
+                (messages[1] as any).content[1], // the file
+              ],
+            },
+          ],
+          max_tokens: Math.max(1200, 300 * count),
+          temperature: 0.2,
+          plugins: [{ id: "file-parser", pdf: { engine: "pdf-text" } }],
+          response_format: { type: "json_object" },
+        };
+        data = await callOpenRouter(payloadFallback);
+      } else {
+        throw e;
+      }
     }
 
-    const data = await resp.json();
-
-    // OpenRouter returns content as a string when using JSON schema
     const content = data?.choices?.[0]?.message?.content;
     if (!content) {
       return NextResponse.json(
-        { error: "bad_response", message: "No content from model" },
+        { error: "bad_response", message: "No content" },
         { status: 502 }
       );
     }
 
-    const parsed = extractJsonSafe(
+    const raw = extractJsonSafe(
       typeof content === "string" ? content : String(content)
     );
-    const qcm = QcmSchema.parse(parsed) as QcmPayload;
-
-    // optional: persist QCM to DB if you want
-    // await prisma.generatedQcm.create({ data: { chatId, payload: qcm as any } });
+    const normalized = normalizeToQcmShape(raw, count);
+    const qcm = QcmSchema.parse(normalized);
 
     return NextResponse.json(qcm, { status: 200 });
   } catch (err: any) {
     console.log("QCM error", err);
-    const message = err?.message || "Unexpected error";
-    return NextResponse.json({ error: "internal", message }, { status: 500 });
+    return NextResponse.json(
+      { error: "internal", message: err?.message || "Unexpected error" },
+      { status: 500 }
+    );
   }
 }

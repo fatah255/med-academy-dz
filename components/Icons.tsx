@@ -1,20 +1,18 @@
 import { LucideProps, User } from "lucide-react";
-import Logo from "@/public/logo.svg";
 
 export const Icons = {
   user: User,
-  logo: (props: LucideProps) => (
+  logo: ({ className, ...props }: LucideProps) => (
     <svg
-      version="1.0"
-      xmlns="http://www.w3.org/2000/svg"
-      width="1024.000000pt"
-      height="1024.000000pt"
-      viewBox="0 0 1024.000000 1024.000000"
+      viewBox="0 0 1024 1024"
       preserveAspectRatio="xMidYMid meet"
+      aria-hidden="true"
+      className={`h-4 w-4 ${className ?? ""}`} // tailwind controls size
+      {...props}
     >
       <g
-        transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)"
-        fill="#000000"
+        transform="translate(0,1024) scale(0.1,-0.1)"
+        fill="currentColor" // let text/fill utilities control color
         stroke="none"
       >
         <path

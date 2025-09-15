@@ -3,31 +3,72 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { requireUser } from "@/app/data/user/require-user";
 import useConstructUrl from "@/hooks/use-construct-url";
-export const runtime = "nodejs"; // we need Node runtime for Prisma + streaming
+
+export const runtime = "nodejs"; // Prisma needs Node
 
 type ORSSE = {
-  id?: string;
-  object?: string;
-  created?: number;
-  model?: string;
   choices?: Array<{
-    index?: number;
     delta?: { content?: string };
     message?: { content?: string };
   }>;
 };
 
+// Uniform content part helper
+const txt = (text: string) => [{ type: "text", text }];
+
+// Robust: accept both shapes from your clients
+type BodyA = { chatId?: string; fileId?: string; message?: string };
+type BodyB = {
+  chatId?: string;
+  fileId?: string;
+  messages?: { role: "user" | "assistant" | "system"; content: string }[];
+};
+type Body = BodyA | BodyB;
+
+// Turn a (signed/private) PDF URL into a base64 data URL, so OpenRouter
+// doesn't need to fetch your storage URL directly.
+async function pdfToDataUrl(url: string): Promise<string> {
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok)
+    throw new Error(`PDF fetch failed: ${res.status} ${res.statusText}`);
+  const buf = Buffer.from(await res.arrayBuffer());
+  return `data:application/pdf;base64,${buf.toString("base64")}`;
+}
+
 export async function POST(req: Request) {
   try {
-    const { fileId, message } = (await req.json()) as {
-      fileId: string;
-      message: string;
-    };
+    const body = (await req.json()) as Body;
+
+    // ✅ accept chatId or fileId; prefer chatId
+    const chatId = body.chatId || body.fileId;
+    if (!chatId) {
+      return NextResponse.json(
+        { error: "chatId (or fileId) is required" },
+        { status: 400 }
+      );
+    }
+
+    // extract the user prompt from either shape
+    let userMessage = (body as BodyA).message?.trim() ?? "";
+    if (!userMessage && (body as BodyB).messages?.length) {
+      const lastUser = [...(body as BodyB).messages!]
+        .reverse()
+        .find((m) => m.role === "user");
+      userMessage = lastUser?.content?.trim() ?? "";
+    }
+    if (!userMessage) {
+      return NextResponse.json(
+        { error: "message is required" },
+        { status: 400 }
+      );
+    }
+
     const session = await requireUser();
     const userId = session.user.id;
 
+    // strict: fetch THIS chat for THIS user only
     const chat = await prisma.chat.findFirst({
-      where: { id: fileId, userId },
+      where: { id: chatId, userId },
       select: { id: true, pdfFileKey: true, pdfName: true },
     });
     if (!chat)
@@ -40,52 +81,68 @@ export async function POST(req: Request) {
       data: {
         id: crypto.randomUUID(),
         chatId: chat.id,
-        content: message,
+        content: userMessage,
         role: "USER",
       },
     });
 
-    // 2) (optional) include short history for context
+    // 2) Load short history ONLY for this chat
     const history = await prisma.chatMessage.findMany({
       where: { chatId: chat.id },
       orderBy: { createdAt: "asc" },
       take: 30,
     });
 
-    const openRouterMessages = [
+    // 3) Build OpenRouter messages — ALL as arrays (prevents Invalid content)
+    const baseMessages = [
+      {
+        role: "system" as const,
+        content: txt(
+          "You are a study assistant. Use ONLY the attached PDF for answers. If a question is unrelated to the PDF, say so."
+        ),
+      },
       ...history.map((m) => ({
-        role: m.role === "USER" ? "user" : "assistant",
-        content: m.content,
+        role: m.role === "USER" ? ("user" as const) : ("assistant" as const),
+        content: txt(m.content),
       })),
+    ];
+
+    // Always attach the correct PDF with the current prompt (simple & reliable).
+    // If you want to attach it only on the first turn, you can detect that by
+    // checking if any non-USER messages exist in history.
+    const dataUrl = await pdfToDataUrl(fileUrl);
+
+    const openRouterMessages = [
+      ...baseMessages,
       {
         role: "user",
         content: [
-          { type: "text", text: message },
+          { type: "text", text: userMessage },
           {
             type: "file",
             file: {
               filename: chat.pdfName ?? "document.pdf",
-              file_data: fileUrl,
+              file_data: dataUrl, // base64 data URL => no external fetch by provider
             },
           },
         ],
       },
     ];
 
-    // 3) Call OpenRouter with streaming
-    const model =
-      process.env.OPENROUTER_MODEL || "meta-llama/llama-3.1-405b-instruct:free";
+    const model = "openai/gpt-4o-mini";
+
+    const headers: Record<string, string> = {
+      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY ?? ""}`,
+      "Content-Type": "application/json",
+    };
+
     const orRes = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-        "Content-Type": "application/json",
-      },
+      headers,
       body: JSON.stringify({
         model,
         stream: true,
         messages: openRouterMessages,
-        // ensure PDF parsing
         plugins: [{ id: "file-parser", pdf: { engine: "pdf-text" } }],
         max_tokens: 1500,
       }),
@@ -96,10 +153,10 @@ export async function POST(req: Request) {
       return new NextResponse(err || "OpenRouter error", { status: 502 });
     }
 
-    // 4) Transform SSE → plain text stream; also buffer to save to DB at end
+    // 4) Stream SSE → client; buffer to store the assistant reply at the end
     const encoder = new TextEncoder();
     let buffer = "";
-    let carry = ""; // carry over partial lines between chunks
+    let carry = "";
 
     const stream = new ReadableStream<Uint8Array>({
       async start(controller) {
@@ -139,7 +196,6 @@ export async function POST(req: Request) {
           }
         } finally {
           controller.close();
-          // 5) Save assistant message at the end
           if (buffer.trim().length) {
             await prisma.chatMessage.create({
               data: {
@@ -168,126 +224,3 @@ export async function POST(req: Request) {
     );
   }
 }
-// app/api/message/route.ts
-// import { NextResponse } from "next/server";
-// import { prisma } from "@/lib/db";
-// import { requireUser } from "@/app/data/user/require-user";
-// import useConstructUrl from "@/hooks/use-construct-url";
-
-// export const runtime = "nodejs";
-
-// export async function POST(req: Request) {
-//   const body = await req.json().catch(() => null);
-//   const chatId = body?.chatId as string | undefined;
-//   const message = body?.message as string | undefined;
-
-//   if (!chatId || !message?.trim()) {
-//     return NextResponse.json(
-//       { error: "chatId and message are required" },
-//       { status: 400 }
-//     );
-//   }
-
-//   const session = await requireUser();
-//   const userId = session.user.id;
-
-//   // verify ownership + get pdf key
-//   const chat = await prisma.chat.findFirst({
-//     where: { id: chatId, userId },
-//     select: { id: true, pdfFileKey: true },
-//   });
-//   if (!chat) return NextResponse.json({ error: "Not found" }, { status: 404 });
-
-//   const pdfUrl = useConstructUrl(chat.pdfFileKey);
-
-//   // Persist the user's message
-//   const userMsgId = crypto.randomUUID();
-//   await prisma.chatMessage.create({
-//     data: {
-//       id: userMsgId,
-//       chatId,
-//       content: message,
-//       // ⚠️ match your Prisma enum (USER / ASSISTANT). If your enum is USER/AI, change below.
-//       role: "USER" as any,
-//     },
-//   });
-
-//   // Call OpenRouter (non-streaming is simpler; your client still "streams" a single chunk).
-//   const model =
-//     process.env.OPENROUTER_MODEL ?? "meta-llama/llama-3.1-405b-instruct:free";
-//   const headers = {
-//     Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-//     "Content-Type": "application/json",
-//   };
-
-//   const orRes = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-//     method: "POST",
-//     headers,
-//     body: JSON.stringify({
-//       model,
-//       max_tokens: 800,
-//       messages: [
-//         {
-//           role: "user",
-//           content: [
-//             { type: "text", text: message },
-//             {
-//               type: "file",
-//               file: {
-//                 filename: "document.pdf",
-//                 file_data: pdfUrl,
-//               },
-//             },
-//           ],
-//         },
-//       ],
-//       plugins: [{ id: "file-parser", pdf: { engine: "pdf-text" } }],
-//       // stream: true, // You can enable later and proxy SSE if you want true token streaming.
-//     }),
-//   });
-
-//   if (!orRes.ok) {
-//     const text = await orRes.text().catch(() => "OpenRouter error");
-//     return NextResponse.json({ error: text }, { status: 500 });
-//   }
-
-//   const data = await orRes.json().catch(() => null);
-//   // OpenRouter returns either string or array — normalize to string
-//   let aiText = "";
-//   try {
-//     const c = data?.choices?.[0]?.message?.content;
-//     aiText = Array.isArray(c)
-//       ? c.map((p: any) => (typeof p === "string" ? p : p?.text ?? "")).join("")
-//       : c ?? "";
-//   } catch {
-//     aiText = "";
-//   }
-//   aiText ||= "Sorry, I couldn't generate a response.";
-
-//   // Persist AI reply
-//   const aiMsgId = crypto.randomUUID();
-//   await prisma.chatMessage.create({
-//     data: {
-//       id: aiMsgId,
-//       chatId,
-//       content: aiText,
-//       role: "SYSTEM",
-//     },
-//   });
-
-//   // Return a readable stream so your client can incrementally read it
-//   const encoder = new TextEncoder();
-//   const stream = new ReadableStream({
-//     start(controller) {
-//       controller.enqueue(encoder.encode(aiText));
-//       controller.close();
-//     },
-//   });
-
-//   return new Response(stream, {
-//     headers: {
-//       "Content-Type": "text/plain; charset=utf-8",
-//       "Cache-Control": "no-cache",
-//     },
-//   });
-// }
