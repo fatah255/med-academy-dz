@@ -57,10 +57,11 @@ export const dynamic = "force-dynamic";
 export default async function AttemptDetail({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
+  const { id } = await params;
   const attempt = await prisma.quizAttempt.findUnique({
-    where: { id: params.id },
+    where: { id: id },
     include: { quiz: true, cours: true, exam: true, user: true },
   });
   if (!attempt) return notFound();
