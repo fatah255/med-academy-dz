@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Med Academy DZ",
     images: [
       {
-        url: "https://www.medacademydz.com/logo.png", // must be absolute URL
+        url: "https://www.medacademydz.com/logo.svg", // must be absolute URL
         width: 1200,
         height: 630,
         alt: "Med Academy DZ Logo",
