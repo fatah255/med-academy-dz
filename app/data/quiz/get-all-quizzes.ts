@@ -1,5 +1,5 @@
+import { getLevel } from "@/app/(landing-page)/courses/actions";
 import { prisma } from "@/lib/db";
-import { getLevel } from "@/app/courses/actions";
 export const getAllQuizzes = async (userId: string) => {
   if (userId) {
     const level = await getLevel(userId);
