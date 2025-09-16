@@ -13,6 +13,7 @@ import {
   TestTubes,
   GraduationCap,
 } from "lucide-react";
+import { requireUser } from "@/app/data/user/require-user";
 
 function fmtDur(secs: number) {
   const m = Math.floor(secs / 60);
@@ -23,7 +24,9 @@ function fmtDur(secs: number) {
 export const dynamic = "force-dynamic";
 
 export default async function AttemptsPage() {
+  const session = await requireUser();
   const attempts = await prisma.quizAttempt.findMany({
+    where: { userId: session.user.id },
     orderBy: { createdAt: "desc" },
     take: 30,
     include: {

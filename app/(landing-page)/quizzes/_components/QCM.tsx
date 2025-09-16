@@ -39,6 +39,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { useSession } from "@/lib/auth-client";
 
 /* =========================
    Types
@@ -107,6 +108,7 @@ const MCQ: React.FC<Props> = ({ game }) => {
   const [questionIndex, setQuestionIndex] = React.useState(0);
   const [subIndex, setSubIndex] = React.useState(0);
   const [hasEnded, setHasEnded] = React.useState(false);
+  const session = useSession();
 
   const [stats, setStats] = React.useState({
     correct_answers: 0,
@@ -240,7 +242,7 @@ const MCQ: React.FC<Props> = ({ game }) => {
       );
 
       await postAttempt({
-        userId: undefined,
+        userId: session.data?.user.id,
         quizId: game.quizId ?? null,
         coursId: game.coursId ?? null,
         examId: game.examId ?? null,
