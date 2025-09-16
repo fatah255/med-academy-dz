@@ -1,6 +1,9 @@
 // File: app/api/quiz/end/route.ts
+import {
+  SaveAttemptInput,
+  saveQuizAttempt,
+} from "@/app/(landing-page)/quizzes/actions";
 import { NextResponse } from "next/server";
-import { saveQuizAttempt, type SaveAttemptInput } from "@/app/quizzes/actions";
 
 export const runtime = "nodejs";
 
