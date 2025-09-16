@@ -4,10 +4,38 @@
 import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/db";
 import { requireUser } from "@/app/data/user/require-user";
+import arcjet, { detectBot, fixedWindow } from "@/lib/arcjet";
+import { getLevel } from "@/app/(landing-page)/courses/actions";
+import { request } from "@arcjet/next";
 
 export async function createNote() {
   const session = await requireUser();
   const userId = session.user.id;
+  let window = "1440m";
+
+  const level = await getLevel(userId);
+  const enrollment = await prisma.enrollment.findFirst({
+    where: { userId, quiz: { level }, status: { in: ["paid", "PAID"] } },
+    select: { id: true },
+  });
+
+  if (enrollment?.id) {
+    window = "1m";
+  }
+
+  const aj = arcjet
+    .withRule(detectBot({ mode: "LIVE", allow: [] }))
+    .withRule(fixedWindow({ mode: "LIVE", window, max: 3 }));
+  const req = await request();
+  const decision = await aj.protect(req, {
+    fingerprint: session.user.id || "anon",
+  });
+  if (decision.isDenied()) {
+    throw new Error(
+      "You can only create 3 notes per Day , upgrade for unlimited notes"
+    );
+  }
+
   const num = Math.floor(Math.random() * 12);
   const note = await prisma.notes.create({
     data: {

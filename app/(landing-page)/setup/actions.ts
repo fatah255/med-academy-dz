@@ -2,7 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/db";
-import { requireUser } from "../data/user/require-user";
+import { requireUser } from "@/app/data/user/require-user";
 import { revalidatePath } from "next/cache";
 
 type CourseLevel =

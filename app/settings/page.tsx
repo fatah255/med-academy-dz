@@ -35,10 +35,10 @@ import { useEffect, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { addAdmin, editLevel } from "./actions";
 import { useSession } from "@/lib/auth-client";
-import { getLevel } from "../courses/actions";
 import { tryCatch } from "@/hooks/try-catch";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
+import { getLevel } from "../(landing-page)/courses/actions";
 
 const toLabel = (v?: string) =>
   v
@@ -110,7 +110,10 @@ export default function Page() {
       }
     });
   }
-  const userIsOwner = session?.user.email === "a.lebkara@esi-sba.dz" || session?.user.email === "abdouzerguine897@gmail.com" || session?.user.email === "medacademydz@gmail.com";
+  const userIsOwner =
+    session?.user.email === "a.lebkara@esi-sba.dz" ||
+    session?.user.email === "abdouzerguine897@gmail.com" ||
+    session?.user.email === "medacademydz@gmail.com";
 
   return (
     <div className="max-w-2xl mx-auto p-6 mt-5">

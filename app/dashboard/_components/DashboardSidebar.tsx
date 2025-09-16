@@ -14,6 +14,7 @@ import {
   IconBrandGoogleDrive,
   IconGift,
   IconHistory,
+  IconBrain,
 } from "@tabler/icons-react";
 
 import { NavMain } from "@/components/sidebar/nav-main";
@@ -52,6 +53,11 @@ const data = {
       title: "Exams",
       url: "/dashboard/exams",
       icon: IconClipboardList,
+    },
+    {
+      title: "AI",
+      url: "/dashboard/ai",
+      icon: IconBrain,
     },
     {
       title: "History",

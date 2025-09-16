@@ -1,4 +1,3 @@
-// File: app/api/ai/route.ts
 import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
@@ -9,39 +8,47 @@ export async function POST(req: Request) {
   try {
     const {
       messages,
-      model = "google/gemini-2.0-flash-001",
-      stream = false,
+      model = "openai/gpt-4o-mini", // ✅ streaming + vision
+      stream = true, // ✅ stream by default
     } = await req.json();
 
-    if (!process.env.OPENROUTER_API_KEY) {
+    const key = process.env.OPENROUTER_API_KEY;
+    if (!key) {
       return NextResponse.json(
         { error: "Missing OPENROUTER_API_KEY" },
         { status: 500 }
       );
     }
 
-    const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-        "Content-Type": "application/json",
-        "HTTP-Referer": ascii(process.env.APP_URL || "http://localhost:3000"),
-        "X-Title": ascii("Med Academy - Image Chat"),
-      },
-      body: JSON.stringify({ model, messages, stream }),
-    });
+    const upstream = await fetch(
+      "https://openrouter.ai/api/v1/chat/completions",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${key}`,
+          "Content-Type": "application/json",
+          // 👇 these help prevent buffering and nudge SSE behavior
+          Accept: stream ? "text/event-stream" : "application/json",
+          "HTTP-Referer": ascii(process.env.APP_URL || "http://localhost:3000"),
+          "X-Title": ascii("Med Academy - Image Chat"),
+        },
+        body: JSON.stringify({ model, messages, stream }),
+      }
+    );
 
+    // Non-streaming: just pass JSON back
     if (!stream) {
-      const data = await res.json();
+      const data = await upstream.json();
       return NextResponse.json(data);
     }
 
-    return new Response(res.body, {
+    // Streaming: pipe SSE through
+    return new Response(upstream.body, {
       headers: {
         "Content-Type": "text/event-stream",
         "Cache-Control": "no-cache, no-transform",
         Connection: "keep-alive",
-        "Transfer-Encoding": "chunked",
+        "X-Accel-Buffering": "no",
       },
     });
   } catch (err: any) {

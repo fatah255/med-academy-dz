@@ -1,4 +1,3 @@
-// File: components/chat/ImageChat.tsx
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -18,6 +17,7 @@ import {
   Maximize2,
 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { toast } from "react-hot-toast";
 
 type Part =
   | { type: "text"; text: string }
@@ -28,7 +28,17 @@ type ChatMessage = {
   content: Part[];
 };
 
+// Small custom error so we can distinguish “rate-limit” from other errors
+class UploadLimitError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "UploadLimitError";
+  }
+}
+
 export default function ImageChat() {
+  const controllerRef = useRef<AbortController | null>(null);
+
   const [history, setHistory] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
   const [files, setFiles] = useState<File[]>([]);
@@ -41,6 +51,10 @@ export default function ImageChat() {
   const textRef = useRef<HTMLTextAreaElement>(null);
   const composerRef = useRef<HTMLDivElement>(null);
   const [bottomGap, setBottomGap] = useState(96);
+
+  useEffect(() => {
+    return () => controllerRef.current?.abort();
+  }, []);
 
   useEffect(() => {
     if (!composerRef.current) return;
@@ -81,70 +95,133 @@ export default function ImageChat() {
   const removeFile = (idx: number) =>
     setFiles((arr) => arr.filter((_, i) => i !== idx));
 
+  const MAX_MB = 20;
+
   const onPick = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const f = Array.from(e.target.files || []);
-    const accepted = f.filter(
-      (fi) => fi.type.startsWith("image/") && fi.size <= 20 * 1024 * 1024
+    const picked = Array.from(e.target.files || []);
+    const accepted = picked.filter(
+      (fi) => fi.type.startsWith("image/") && fi.size <= MAX_MB * 1024 * 1024
     );
-    setFiles((prev) => [...prev, ...accepted]);
+    const rejectedCount = picked.length - accepted.length;
+    if (rejectedCount > 0) {
+      toast.error(`Some files were rejected (only images ≤ ${MAX_MB} MB).`);
+    }
+    if (accepted.length) setFiles((prev) => [...prev, ...accepted]);
   };
 
   const onDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     setDragOver(false);
     const items = Array.from(e.dataTransfer.files || []);
-    const accepted = items.filter((fi) => fi.type.startsWith("image/"));
+    const accepted = items.filter(
+      (fi) => fi.type.startsWith("image/") && fi.size <= MAX_MB * 1024 * 1024
+    );
+    const rejectedCount = items.length - accepted.length;
+    if (rejectedCount > 0) {
+      toast.error(`Some files were rejected (only images ≤ ${MAX_MB} MB).`);
+    }
     if (accepted.length) setFiles((prev) => [...prev, ...accepted]);
   };
 
   const onPaste = (e: React.ClipboardEvent<HTMLTextAreaElement>) => {
     const items = Array.from(e.clipboardData.files || []);
-    const accepted = items.filter((fi) => fi.type.startsWith("image/"));
+    const accepted = items.filter(
+      (fi) => fi.type.startsWith("image/") && fi.size <= MAX_MB * 1024 * 1024
+    );
+    const rejectedCount = items.length - accepted.length;
+    if (rejectedCount > 0) {
+      toast.error(`Some files were rejected (only images ≤ ${MAX_MB} MB).`);
+    }
     if (accepted.length) {
       e.preventDefault();
       setFiles((prev) => [...prev, ...accepted]);
     }
   };
 
+  /** Ask server for a presigned URL, then PUT the file to S3/Tigris */
   async function uploadOneToTigris(file: File) {
-    // 1) Ask server for a presigned PUT URL
     const signRes = await fetch("/api/upload-url", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ contentType: file.type, filename: file.name }),
+      credentials: "include",
     });
-    if (!signRes.ok) throw new Error(await signRes.text());
+
+    // Handle rate limit (ArcJet returns 429)
+    if (signRes.status === 429) {
+      let msg = "Upload limit reached. Please try again later.";
+      try {
+        const j = await signRes.json();
+        if (j?.error) msg = j.error;
+      } catch {}
+      toast.error(msg, { id: "upload-limit" });
+      throw new UploadLimitError(msg);
+    }
+
+    if (!signRes.ok) {
+      const txt = await signRes.text();
+      toast.error("Could not start upload.");
+      throw new Error(`Presign failed: ${signRes.status} ${txt}`);
+    }
+
     const { putUrl, publicUrl } = (await signRes.json()) as {
       putUrl: string;
       publicUrl: string;
     };
 
-    // 2) PUT the file directly to Tigris
     const put = await fetch(putUrl, {
       method: "PUT",
       headers: { "Content-Type": file.type || "application/octet-stream" },
       body: file,
     });
-    if (!put.ok) throw new Error(`Upload failed: ${put.status}`);
 
-    // 3) Return the public URL we can show + send to OpenRouter
+    if (!put.ok) {
+      // Common cases: 403 (expired/bad presign), 413 (too large if enforced by server policy)
+      if (put.status === 403) {
+        toast.error("Upload link expired. Please try again.");
+      } else if (put.status === 413) {
+        toast.error(`That image is too large (max ${MAX_MB} MB).`);
+      } else {
+        toast.error("Upload failed. Please retry.");
+      }
+      throw new Error(`Upload failed: ${put.status}`);
+    }
+
     return publicUrl;
+  }
+
+  /** Replace the last assistant bubble’s text with `text` (no appending). */
+  function setAssistantText(text: string) {
+    setHistory((old) => {
+      const next = [...old];
+      const lastIdx = next.length - 1;
+      if (lastIdx < 0 || next[lastIdx].role !== "assistant") {
+        next.push({ role: "assistant", content: [{ type: "text", text }] });
+        return next;
+      }
+      next[lastIdx] = {
+        ...next[lastIdx],
+        content: [{ type: "text", text }],
+      };
+      return next;
+    });
   }
 
   const send = useCallback(async () => {
     if (!input.trim() && files.length === 0) return;
-    setLoading(true);
 
+    controllerRef.current?.abort();
+    controllerRef.current = new AbortController();
+
+    setLoading(true);
     try {
-      // Upload first, get public URLs
+      // 1) Upload selected images and build the outgoing user message
       const urls = await Promise.all(files.map(uploadOneToTigris));
 
-      // Build the outgoing user message with remote URLs
       const uiParts: Part[] = [];
       if (input.trim()) uiParts.push({ type: "text", text: input.trim() });
-      for (const url of urls) {
+      for (const url of urls)
         uiParts.push({ type: "image_url", image_url: { url } });
-      }
 
       const userMsg: ChatMessage = { role: "user", content: uiParts };
       setHistory((h) => [...h, userMsg]);
@@ -153,35 +230,98 @@ export default function ImageChat() {
 
       const messagesForApi = [...history, userMsg];
 
-      // Call OpenRouter with URLs (not base64)
+      // 2) Call our API with streaming enabled
       const res = await fetch("/api/ai", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          model: "google/gemini-2.0-flash-001",
-          stream: false,
+          model: "openai/gpt-4o-mini",
+          stream: true,
           messages: messagesForApi,
         }),
+        signal: controllerRef.current.signal,
       });
 
-      if (!res.ok) throw new Error(await res.text());
-      const data = await res.json();
-
-      const assistantParts: Part[] = [];
-      const msg = data?.choices?.[0]?.message;
-
-      if (Array.isArray(msg?.content)) {
-        for (const p of msg.content) {
-          if (p?.type === "text" && p?.text) {
-            assistantParts.push({ type: "text", text: p.text });
-          }
+      // If the upstream provider returned JSON (no streaming), handle it.
+      const ct = res.headers.get("content-type") || "";
+      if (ct.includes("application/json")) {
+        const data = await res.json();
+        const msg = data?.choices?.[0]?.message;
+        if (Array.isArray(msg?.content)) {
+          const text = msg.content
+            .filter((p: any) => p?.type === "text" && p?.text)
+            .map((p: any) => p.text)
+            .join("");
+          setAssistantText(text || "⚠️ Empty response.");
+        } else if (typeof msg?.content === "string") {
+          setAssistantText(msg.content || "⚠️ Empty response.");
+        } else {
+          setAssistantText("⚠️ Empty response.");
         }
-      } else if (typeof msg?.content === "string") {
-        assistantParts.push({ type: "text", text: msg.content });
+        return;
       }
 
-      setHistory((h) => [...h, { role: "assistant", content: assistantParts }]);
+      // 3) Stream parse SSE. Build a single accumulator and REPLACE bubble text.
+      const reader = res.body?.getReader();
+      if (!reader) throw new Error("No readable stream from server");
+
+      const decoder = new TextDecoder();
+      let buffer = "";
+      let acc = "";
+
+      // Create (or ensure) the assistant bubble exists
+      setAssistantText("");
+
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+
+        buffer += decoder.decode(value, { stream: true });
+
+        // consume complete lines
+        while (true) {
+          const nl = buffer.indexOf("\n");
+          if (nl === -1) break;
+
+          const line = buffer.slice(0, nl).trim();
+          buffer = buffer.slice(nl + 1);
+
+          if (!line || line.startsWith(":")) continue; // SSE keep-alives
+          if (!line.startsWith("data:")) continue;
+
+          const dataStr = line.slice(5).trim();
+          if (dataStr === "[DONE]") break;
+
+          try {
+            const json = JSON.parse(dataStr);
+            // IMPORTANT: during streaming, ONLY use delta.content to avoid duplicates
+            const piece = json?.choices?.[0]?.delta?.content;
+
+            if (typeof piece === "string" && piece) {
+              acc += piece;
+              setAssistantText(acc);
+            } else if (Array.isArray(piece)) {
+              const joined = piece
+                .filter((p: any) => p?.type === "text" && p?.text)
+                .map((p: any) => p.text)
+                .join("");
+              if (joined) {
+                acc += joined;
+                setAssistantText(acc);
+              }
+            }
+          } catch {
+            // ignore malformed chunks
+          }
+        }
+      }
     } catch (e: any) {
+      setLoading(false);
+      // If this was *only* an upload limit event, we've already shown a toast—no chat bubble.
+      if (e?.name === "UploadLimitError") return;
+
+      // Otherwise, show both a toast and a single assistant error bubble
+      toast.error(e?.message || "Something went wrong.");
       setHistory((h) => [
         ...h,
         {
@@ -237,7 +377,7 @@ export default function ImageChat() {
                 </div>
               </div>
               <div className="hidden text-xs text-muted-foreground md:block">
-                PNG · JPEG · WebP · GIF — up to 20MB each
+                PNG · JPEG · WebP · GIF — up to {MAX_MB}MB each
               </div>
             </div>
           </div>
@@ -415,7 +555,6 @@ function MessageBubble({
       <div className={`flex max-w-[85%] items-start gap-3`}>
         {!me ? (
           <div className="hidden sm:grid size-8 place-items-center shrink-0 rounded-full border bg-background overflow-hidden">
-            {/* Use a compact mark; clamp the svg size so it can't expand */}
             <Icons.logo className="h-4 w-4 shrink-0 text-muted-foreground" />
           </div>
         ) : (

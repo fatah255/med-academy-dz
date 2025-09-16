@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
@@ -14,12 +15,22 @@ import { useSession } from "@/lib/auth-client";
 
 export function Navbar() {
   const { data: session, isPending } = useSession();
+  const pathname = usePathname();
+
+  // show Pricing only on "/", "/courses*", "/quizzes*"
+  const showPricing =
+    pathname === "/" ||
+    pathname.startsWith("/courses") ||
+    pathname.startsWith("/pricing") ||
+    pathname.startsWith("/quizzes");
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [navigationItems, setNavigationItems] = useState([
     { name: "Home", href: "/" },
     { name: "Courses", href: "/courses" },
     { name: "Quizzes", href: "/quizzes" },
   ]);
+
   useEffect(() => {
     if (session?.user) {
       setNavigationItems([
@@ -70,6 +81,17 @@ export function Navbar() {
               {item.name}
             </Link>
           ))}
+
+          {/* Pricing shows only on /, /courses*, /quizzes* */}
+          {showPricing && (
+            <Link
+              href="/pricing"
+              className="text-sm font-semibold text-foreground/90 hover:text-foreground"
+            >
+              Pricing
+            </Link>
+          )}
+
           {session?.user.role === "admin" && (
             <Link
               href="/admin"
@@ -162,6 +184,18 @@ export function Navbar() {
                     {item.name}
                   </Link>
                 ))}
+
+                {/* Pricing only on /, /courses*, /quizzes* */}
+                {showPricing && (
+                  <Link
+                    href="/pricing"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold hover:bg-muted"
+                  >
+                    Pricing
+                  </Link>
+                )}
+
                 {session?.user.role === "admin" && (
                   <Link
                     href="/admin"

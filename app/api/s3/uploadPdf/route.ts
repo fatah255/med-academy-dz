@@ -6,7 +6,9 @@ import { z } from "zod";
 import { v4 as uuid } from "uuid";
 import { S3 } from "@/lib/S3Client";
 import arcjet, { detectBot, fixedWindow } from "@/lib/arcjet";
-import { requireAdmin } from "@/app/data/admin/require-admin";
+import { prisma } from "@/lib/db";
+import { requireUser } from "@/app/data/user/require-user";
+import { userHasActiveAI } from "@/lib/subscription";
 
 export const runtime = "nodejs";
 
@@ -17,20 +19,29 @@ const uploadSchema = z.object({
   isImage: z.boolean(), // will be false for PDFs
 });
 
-const aj = arcjet
-  .withRule(detectBot({ mode: "LIVE", allow: [] }))
-  .withRule(fixedWindow({ mode: "LIVE", window: "1m", max: 3 }));
-
 export async function POST(request: Request) {
-  try {
-    const session = await requireAdmin();
+  const session = await requireUser();
+  let window = "1440m";
 
+  const allowed = await userHasActiveAI(session.user.id);
+
+  if (allowed) {
+    window = "1m";
+  }
+
+  const aj = arcjet
+    .withRule(detectBot({ mode: "LIVE", allow: [] }))
+    .withRule(fixedWindow({ mode: "LIVE", window, max: 4 }));
+  try {
     const decision = await aj.protect(request, {
       fingerprint: session.user.id || "anon",
     });
     if (decision.isDenied()) {
       return NextResponse.json(
-        { error: decision.reason || "Rate limited" },
+        {
+          error:
+            "You can only upload 3 PDFs per Day , upgrade for unlimited uploads",
+        },
         { status: 429 }
       );
     }

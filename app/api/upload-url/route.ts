@@ -4,6 +4,10 @@ import { NextResponse } from "next/server";
 import { PutObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { S3 } from "@/lib/S3Client";
+import arcjet, { detectBot, fixedWindow } from "@/lib/arcjet";
+import { requireUser } from "@/app/data/user/require-user";
+import { prisma } from "@/lib/db";
+import { userHasActiveAI } from "@/lib/subscription";
 
 export const runtime = "nodejs";
 
@@ -26,6 +30,30 @@ function guessExt(mime?: string) {
 export async function POST(req: Request) {
   try {
     const { contentType, filename } = await req.json();
+    const session = await requireUser();
+    let window = "1440m";
+
+    const allowed = await userHasActiveAI(session.user.id);
+    if (allowed) {
+      window = "1m";
+    }
+
+    const aj = arcjet
+      .withRule(detectBot({ mode: "LIVE", allow: [] }))
+      .withRule(fixedWindow({ mode: "LIVE", window, max: 3 }));
+
+    const decision = await aj.protect(req, {
+      fingerprint: session.user.id || "anon",
+    });
+    if (decision.isDenied()) {
+      return NextResponse.json(
+        {
+          error:
+            "You can only upload 3 Photos per Day , upgrade for unlimited uploads",
+        },
+        { status: 429 }
+      );
+    }
 
     const bucket = process.env.NEXT_PUBLIC_S3_BUCKET_NAME_IMAGES;
     if (!bucket) {

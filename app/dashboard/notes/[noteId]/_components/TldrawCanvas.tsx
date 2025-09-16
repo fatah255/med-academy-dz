@@ -1,3 +1,4 @@
+// File: <wherever>/TldrawCanvas.tsx
 "use client";
 
 import { useEffect, useMemo, useTransition } from "react";
@@ -15,7 +16,20 @@ import {
 import "tldraw/tldraw.css";
 import { loadNoteSnapshot, saveNoteSnapshot } from "../actions";
 
-/* ------------------ Menu items ------------------ */
+/* ───────────────── helpers ───────────────── */
+
+function downloadBlob(blob: Blob, filename: string) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
+/* ───────────────── menu items ───────────────── */
 
 function SaveToDatabaseItem({ noteId }: { noteId: string }) {
   const editor = useEditor();
@@ -39,40 +53,76 @@ function SaveToDatabaseItem({ noteId }: { noteId: string }) {
 
 function ExportPngItem() {
   const editor = useEditor();
+  const [pending, startTransition] = useTransition();
+
   return (
     <TldrawUiMenuItem
-      id="export-image"
-      label="Export image…"
+      id="export-png"
+      label={pending ? "Exporting…" : "Export PNG…"}
       icon="external-link"
       readonlyOk
-      onSelect={() => {
-        try {
-          // @ts-expect-error - different builds expose different names
-          if (typeof editor.exportAs === "function") {
-            // @ts-expect-error
-            editor.exportAs("png", {
-              background: false,
-              scale: 2,
-              filename: "board.png",
-            });
-            return;
-          }
-        } catch {}
-        try {
-          // @ts-expect-error
-          if (typeof editor.exportPageAsImage === "function") {
-            // @ts-expect-error
-            editor.exportPageAsImage({
+      onSelect={() =>
+        startTransition(async () => {
+          try {
+            const ids = editor.getCurrentPageShapeIds();
+            if (ids.size === 0) {
+              alert("No shapes on the canvas.");
+              return;
+            }
+
+            // Official API (from docs): pass ids + options, use `format`
+            const { blob } = await editor.toImage([...ids], {
               format: "png",
               background: false,
-              scale: 2,
-              filename: "board.png",
+              scale: 2, // retina-ish
             });
-            return;
+
+            downloadBlob(blob, "board.png");
+          } catch (e) {
+            console.error("[tldraw] PNG export failed:", e);
+            alert(
+              "Export failed. Check the console for details.\nIf your canvas contains external images, ensure they have proper CORS headers."
+            );
           }
-        } catch {}
-        alert("Export isn’t available in this build of tldraw.");
-      }}
+        })
+      }
+    />
+  );
+}
+
+function ExportSvgItem() {
+  const editor = useEditor();
+  const [pending, startTransition] = useTransition();
+
+  return (
+    <TldrawUiMenuItem
+      id="export-svg"
+      label={pending ? "Exporting…" : "Export SVG…"}
+      icon="file"
+      readonlyOk
+      onSelect={() =>
+        startTransition(async () => {
+          try {
+            const ids = editor.getCurrentPageShapeIds();
+            if (ids.size === 0) {
+              alert("No shapes on the canvas.");
+              return;
+            }
+
+            // Prefer getSvgString with ids
+            // @ts-expect-error – some builds don’t type this overload
+            const svgString: string = await editor.getSvgString([...ids], {
+              background: false,
+            });
+
+            const blob = new Blob([svgString], { type: "image/svg+xml" });
+            downloadBlob(blob, "board.svg");
+          } catch (e) {
+            console.error("[tldraw] SVG export failed:", e);
+            alert("SVG export failed. See console for details.");
+          }
+        })
+      }
     />
   );
 }
@@ -84,22 +134,22 @@ function MainMenu({ noteId }: { noteId: string }) {
       <TldrawUiMenuGroup id="medacademy">
         <SaveToDatabaseItem noteId={noteId} />
         <ExportPngItem />
+        <ExportSvgItem />
       </TldrawUiMenuGroup>
       {/* No DefaultMainMenuContent -> everything else hidden */}
     </DefaultMainMenu>
   );
 }
 
-/* ------------------ Canvas ------------------ */
+/* ───────────────── canvas ───────────────── */
 
 export default function TldrawCanvas({ noteId }: { noteId: string }) {
   const { resolvedTheme } = useTheme();
   const isDark = resolvedTheme === "dark";
 
-  // one store shared between TLDraw + loader
   const store = useMemo(() => createTLStore(), []);
 
-  // Load the snapshot when the component mounts / noteId changes
+  // Load saved snapshot when noteId changes
   useEffect(() => {
     let cancelled = false;
 

@@ -6,7 +6,7 @@ import { getEnrolledQuizzes } from "@/app/data/user/get-enrolled-quizzes";
 import { Ban } from "lucide-react";
 import DashboardQuizCard from "./_components/DashboardQuizCard";
 import { Suspense } from "react";
-import { RenderCoursesSkeleton } from "@/app/courses/page";
+import { RenderCoursesSkeleton } from "@/app/(landing-page)/courses/page";
 
 const page = () => {
   return (

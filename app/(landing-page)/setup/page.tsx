@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { requireUser } from "../data/user/require-user";
+import { requireUser } from "@/app/data/user/require-user";
 import { prisma } from "@/lib/db";
 import {
   Card,

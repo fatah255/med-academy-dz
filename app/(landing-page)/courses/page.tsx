@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 import PublicCourseCard, {
   PublicCourseCardSkeleton,
-} from "../(landing-page)/_components/PublicCourseCard";
-import { getAllCourses } from "../data/course/get-all-courses";
+} from "../_components/PublicCourseCard";
+import { getAllCourses } from "@/app/data/course/get-all-courses";
 
 import { getLevel, getSetupStatus } from "./actions";
 import { auth } from "@/lib/auth";

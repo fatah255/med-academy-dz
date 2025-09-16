@@ -6,6 +6,8 @@ import { requireUser } from "@/app/data/user/require-user";
 import { notFound } from "next/navigation";
 import ExamsLocked from "./_components/exam-locked";
 import { Prisma } from "@prisma/client";
+import { userHasActiveOfferForQuiz } from "@/lib/subscription";
+import { getLevel } from "@/app/(landing-page)/courses/actions";
 
 /* ---------- Helpers ---------- */
 
@@ -39,15 +41,23 @@ export default async function Page({
   // ——————————————————————————————————————————————
   // Resolve user's accessible level from their paid offer
   // ——————————————————————————————————————————————
+  const userLevel = await getLevel(session.user.id);
   const levelOffer = await prisma.enrollment.findFirst({
     where: {
       userId: session.user.id,
       OR: [{ isOffer: true }, { offer: true }],
       status: { in: ["PAID", "paid"] },
+      quiz: { level: userLevel },
     },
-    select: { quiz: { select: { level: true } } },
+    select: { quiz: { select: { level: true, id: true } } },
   });
-  if (!levelOffer) {
+
+  const allowed = await userHasActiveOfferForQuiz(
+    session.user.id,
+    levelOffer?.quiz?.id || ""
+  );
+
+  if (!levelOffer?.quiz?.id || !allowed) {
     return <ExamsLocked />;
   }
   const level = levelOffer?.quiz?.level; // "FIRST_YEAR" | "SECOND_YEAR" | ...

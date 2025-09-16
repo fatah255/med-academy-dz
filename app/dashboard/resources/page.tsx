@@ -1,5 +1,4 @@
 // app/dashboard/resources/page.tsx (or your current file)
-import { getLevel } from "@/app/courses/actions";
 import { requireUser } from "@/app/data/user/require-user";
 import { redirect } from "next/navigation";
 import Link from "next/link";
@@ -21,7 +20,8 @@ import {
   IconCompass,
 } from "@tabler/icons-react";
 import { Suspense } from "react";
-import { RenderCoursesSkeleton } from "@/app/courses/page";
+import { getLevel } from "@/app/(landing-page)/courses/actions";
+import { RenderCoursesSkeleton } from "@/app/(landing-page)/courses/page";
 
 type LevelEnum =
   | "FIRST_YEAR"

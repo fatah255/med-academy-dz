@@ -1,10 +1,10 @@
 import { Suspense } from "react";
-import { PublicCourseCardSkeleton } from "../(landing-page)/_components/PublicCourseCard";
+import { PublicCourseCardSkeleton } from "../_components/PublicCourseCard";
 
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 
-import { getAllQuizzes } from "../data/quiz/get-all-quizzes";
+import { getAllQuizzes } from "@/app/data/quiz/get-all-quizzes";
 import PublicQuizCard from "./_components/PublicQuizCard";
 
 export default async function PublicQuizzesRoute() {

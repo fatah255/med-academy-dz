@@ -8,13 +8,13 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { IconBook, IconQuestionMark, IconSchool } from "@tabler/icons-react";
 import { buttonVariants } from "@/components/ui/button";
+import EnrollementQuizButton from "./EnrollmentQuizButton";
 
 import Link from "next/link";
 
 import { getQuiz } from "@/app/data/quiz/get-quiz";
-import Description from "@/app/courses/[slug]/Description";
-import EnrollementQuizButton from "@/app/quizzes/[slug]/EnrollmentQuizButton";
 import { userIsEnrolledQuiz } from "@/app/data/user/user-is-enrolled-quiz";
+import Description from "../../courses/[slug]/Description";
 
 type Params = Promise<{
   slug: string;

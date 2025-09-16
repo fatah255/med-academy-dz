@@ -3,6 +3,7 @@
 
 import { useMemo, useState, useEffect } from "react";
 import SimpleBar from "simplebar-react";
+import "simplebar-react/dist/simplebar.min.css"; // ✅ IMPORTANT
 import { useResizeDetector } from "react-resize-detector";
 import { initPdfWorker } from "@/lib/setup-pdf-worker";
 import { Expand, Loader2 } from "lucide-react";
@@ -29,6 +30,7 @@ export default function PdfFullscreen({ fileUrl }: PdfFullscreenProps) {
   const [numPages, setNumPages] = useState<number>();
   const { width, ref } = useResizeDetector();
   const { toast } = useToast();
+
   useEffect(() => {
     initPdfWorker(); // runs only in the browser
   }, []);
@@ -46,45 +48,47 @@ export default function PdfFullscreen({ fileUrl }: PdfFullscreenProps) {
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="max-w-7xl w-full">
-        {/* A11y title (visually hidden) */}
+      <DialogContent className="w-[96vw] max-w-7xl p-4">
         <VisuallyHidden>
           <DialogTitle>PDF viewer</DialogTitle>
         </VisuallyHidden>
 
-        <SimpleBar autoHide={false} className="max-h-[calc(100vh-10rem)] mt-6">
-          <div ref={ref}>
-            <Document
-              file={file}
-              //@ts-ignore
-              onLoadSuccess={({ numPages }) => setNumPages(numPages)}
-              //@ts-ignore
-              onLoadError={(err) =>
-                toast({
-                  title: "Error loading PDF",
-                  description:
-                    (err as Error)?.message ?? "Please try again later",
-                  variant: "destructive",
-                })
-              }
-              loading={
-                <div className="flex justify-center">
-                  <Loader2 className="my-24 h-6 w-6 animate-spin" />
-                </div>
-              }
-            >
-              {Array.from({ length: numPages ?? 0 }, (_, i) => (
-                <Page
-                  key={i}
-                  width={width || 1}
-                  pageNumber={i + 1}
-                  renderTextLayer={false}
-                  renderAnnotationLayer={false}
-                />
-              ))}
-            </Document>
-          </div>
-        </SimpleBar>
+        {/* Give the scroll viewport a definite height */}
+        <div className="mt-2 h-[calc(100vh-12rem)] overflow-hidden">
+          <SimpleBar autoHide={false} style={{ height: "100%" }}>
+            <div ref={ref} className="pb-6">
+              <Document
+                file={file}
+                // @ts-ignore
+                onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+                // @ts-ignore
+                onLoadError={(err) =>
+                  toast({
+                    title: "Error loading PDF",
+                    description:
+                      (err as Error)?.message ?? "Please try again later",
+                    variant: "destructive",
+                  })
+                }
+                loading={
+                  <div className="flex justify-center">
+                    <Loader2 className="my-24 h-6 w-6 animate-spin" />
+                  </div>
+                }
+              >
+                {Array.from({ length: numPages ?? 0 }, (_, i) => (
+                  <Page
+                    key={i}
+                    width={width || 1}
+                    pageNumber={i + 1}
+                    renderTextLayer={false}
+                    renderAnnotationLayer={false}
+                  />
+                ))}
+              </Document>
+            </div>
+          </SimpleBar>
+        </div>
       </DialogContent>
     </Dialog>
   );

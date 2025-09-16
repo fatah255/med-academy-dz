@@ -70,12 +70,10 @@ export default async function AttemptDetail({
     ? (attempt.answers as any)
     : [];
 
-  // Map user answers by qcmId for quick lookup
   const byId = new Map<string, AnswerLog>(
     answers.map((a) => [a.questionId, a])
   );
 
-  // Pull *all* QCMs for this session (to include skipped ones)
   const qcms = attempt.qcmIds.length
     ? await prisma.qcm.findMany({
         where: { id: { in: attempt.qcmIds } },
@@ -85,7 +83,6 @@ export default async function AttemptDetail({
       })
     : [];
 
-  // Keep the original session order
   const orderedQcms = attempt.qcmIds
     .map((id) => qcms.find((q) => q.id === id))
     .filter(Boolean) as typeof qcms;
@@ -195,7 +192,7 @@ export default async function AttemptDetail({
           <TabsTrigger value="correction">Correction</TabsTrigger>
         </TabsList>
 
-        {/* ORIGINAL "Questions" tab (based on what was stored in `answers`) */}
+        {/* QUESTIONS TAB */}
         <TabsContent value="questions" className="mt-4 space-y-4">
           {answers.length === 0 ? (
             <Card>
@@ -285,15 +282,28 @@ export default async function AttemptDetail({
                             Show Comment
                           </Button>
                         </DialogTrigger>
-                        <DialogContent className="max-w-3xl">
-                          <DialogHeader>
+
+                        {/* ✨ SCROLLABLE DIALOG CONTENT */}
+                        <DialogContent className="max-w-3xl w-[92vw] md:w-auto overflow-hidden p-0">
+                          <DialogHeader className="px-4 pt-4">
                             <DialogTitle>Commentary</DialogTitle>
                             <DialogDescription className="text-xs">
                               Explanation and notes for this question.
                             </DialogDescription>
                           </DialogHeader>
-                          <div className="prose prose-invert max-w-none">
-                            <CommentHtml html={comment ?? ""} />
+
+                          {/* Put the scroll on this wrapper */}
+                          <div className="max-h-[80vh] overflow-y-auto px-4 pb-4">
+                            <div
+                              className="prose prose-invert max-w-none
+                              [&_*]:max-w-full
+                              [&_img]:h-auto [&_img]:max-w-full
+                              [&_video]:h-auto [&_video]:max-w-full
+                              [&_canvas]:max-w-full
+                              [&_iframe]:max-w-full"
+                            >
+                              <CommentHtml html={comment ?? ""} />
+                            </div>
                           </div>
                         </DialogContent>
                       </Dialog>
@@ -309,7 +319,7 @@ export default async function AttemptDetail({
           )}
         </TabsContent>
 
-        {/* NEW "Correction" tab — shows ALL session questions (even skipped) */}
+        {/* CORRECTION TAB */}
         <TabsContent value="correction" className="mt-4 space-y-4">
           {orderedQcms.length === 0 ? (
             <Card>
@@ -325,7 +335,7 @@ export default async function AttemptDetail({
               const opts = qcm.answers.sort((a, b) => a.position - b.position);
               const correctIdx = opts
                 .filter((a) => a.isCorrect)
-                .map((a) => a.position - 1); // positions are 1-based in DB
+                .map((a) => a.position - 1);
 
               const user = byId.get(qcm.id);
               const userIdx = user?.selectedIndices ?? [];
@@ -420,15 +430,27 @@ export default async function AttemptDetail({
                             Show Comment
                           </Button>
                         </DialogTrigger>
-                        <DialogContent className="max-w-3xl">
-                          <DialogHeader>
+
+                        {/* ✨ SCROLLABLE DIALOG CONTENT */}
+                        <DialogContent className="max-w-3xl w-[92vw] md:w-auto overflow-hidden p-0">
+                          <DialogHeader className="px-4 pt-4">
                             <DialogTitle>Commentary</DialogTitle>
                             <DialogDescription className="text-xs">
                               Explanation and notes for this question.
                             </DialogDescription>
                           </DialogHeader>
-                          <div className="prose prose-invert max-w-none">
-                            <CommentHtml html={qcm.comment ?? ""} />
+
+                          <div className="max-h-[80vh] overflow-y-auto px-4 pb-4">
+                            <div
+                              className="prose prose-invert max-w-none
+                              [&_*]:max-w-full
+                              [&_img]:h-auto [&_img]:max-w-full
+                              [&_video]:h-auto [&_video]:max-w-full
+                              [&_canvas]:max-w-full
+                              [&_iframe]:max-w-full"
+                            >
+                              <CommentHtml html={qcm.comment ?? ""} />
+                            </div>
                           </div>
                         </DialogContent>
                       </Dialog>

@@ -89,7 +89,7 @@ export default function FileUpload() {
             },
           });
         } catch (e: any) {
-          console.error(e);
+          console.log(e);
           toast.error(e?.message || "Upload failed");
         } finally {
           setUploading(false);

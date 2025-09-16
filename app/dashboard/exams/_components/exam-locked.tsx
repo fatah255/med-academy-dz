@@ -27,7 +27,7 @@ type Props = {
 };
 
 export default function ExamsLocked({
-  actionHref = "/#offers",
+  actionHref = "/pricing",
   actionLabel = "View offers",
   className,
 }: Props) {

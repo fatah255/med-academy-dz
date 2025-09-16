@@ -194,6 +194,12 @@ model QcmAnswer {
   @@map("qcm_answer")
 }
 
+// prisma/schema.prisma
+enum BillingPeriod {
+  MONTHLY
+  YEARLY
+}
+
 model Enrollment {
   id            String       @id @default(uuid())
   amount        Int
@@ -204,17 +210,29 @@ model Enrollment {
   quizId        String?
   createdAt     DateTime     @default(now())
   updatedAt     DateTime     @updatedAt
+
+  // existing flags
   offer         Boolean      @default(false)
   offerLevel    CourseLevel?
   isOffer       Boolean      @default(false)
+  ai            Boolean      @default(false)
+
+  // NEW (all optional => no breaking change)
+  billingPeriod BillingPeriod?
+  months        Int?         // 1 or 12
+  paidAt        DateTime?
+  expiresAt     DateTime?
+
   course        Course?      @relation(fields: [courseId], references: [id], onDelete: Cascade)
   quiz          Quiz?        @relation(fields: [quizId], references: [id], onDelete: Cascade)
   user          User         @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, courseId])
   @@unique([userId, quizId])
+  @@index([transactionId])
   @@map("enrollment")
 }
+
 
 model LessonProgress {
   id        String   @id @default(uuid())

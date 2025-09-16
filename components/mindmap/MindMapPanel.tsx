@@ -1,4 +1,3 @@
-// components/mindmap/MindMapPanel.tsx
 "use client";
 
 import { useState } from "react";
@@ -22,7 +21,7 @@ export default function MindMapPanel({ chatId }: { chatId: string }) {
   const [loading, setLoading] = useState(false);
   const [map, setMap] = useState<MindMap | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [open, setOpen] = useState(false); // dialog
+  const [open, setOpen] = useState(false);
 
   async function handleGenerate() {
     try {
@@ -34,7 +33,7 @@ export default function MindMapPanel({ chatId }: { chatId: string }) {
       });
       const json = await res.json();
       if (!res.ok) throw new Error(json?.message || "Failed to generate");
-      setMap(json.mindmap ?? json); // support both shapes
+      setMap(json.mindmap ?? json);
     } catch (e: any) {
       setError(String(e.message ?? e));
       setMap(null);
@@ -47,8 +46,8 @@ export default function MindMapPanel({ chatId }: { chatId: string }) {
     <div className="rounded-lg border bg-card p-4">
       <h3 className="mb-1 text-lg font-semibold">Mind Map Generation</h3>
       <p className="mb-4 text-sm text-muted-foreground">
-        Generate a colorful hierarchical mind map from your PDF with level-based
-        colors.
+        Generate a **mind-map layout** (root left, curved branches to the
+        right).
       </p>
 
       <div className="mb-3 flex flex-wrap items-center gap-2">
@@ -86,12 +85,11 @@ export default function MindMapPanel({ chatId }: { chatId: string }) {
           <MindMapCanvas data={map} height={540} />
         ) : (
           <div className="grid h-[540px] place-items-center rounded-md border bg-muted/10 text-sm text-muted-foreground">
-            Your generated colorful mind map will be displayed here.
+            Your mind map will appear here.
           </div>
         )}
       </div>
 
-      {/* Fullscreen-ish dialog */}
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="w-[96vw] max-w-[1200px] p-0">
           <DialogHeader className="px-4 pt-4 pb-0">

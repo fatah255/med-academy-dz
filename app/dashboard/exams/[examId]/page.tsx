@@ -3,6 +3,7 @@ import { prisma } from "@/lib/db";
 import { notFound } from "next/navigation";
 import ClientQCM from "../../quizzes/_components/ClientQCM";
 import { v4 as uuidv4 } from "uuid";
+import { userHasActiveOfferForQuiz } from "@/lib/subscription";
 
 const Page = async ({ params }: { params: Promise<{ examId: string }> }) => {
   const { examId } = await params;
@@ -19,8 +20,13 @@ const Page = async ({ params }: { params: Promise<{ examId: string }> }) => {
       status: { in: ["PAID", "paid"] },
       quiz: { level: examLevel.level },
     },
+    select: { quizId: true },
   });
-  if (!hasOffer) {
+  const allowed = await userHasActiveOfferForQuiz(
+    session.user.id,
+    hasOffer?.quizId || ""
+  );
+  if (!hasOffer?.quizId || !allowed) {
     return notFound();
   }
   const picked = await prisma.qcm.findMany({

@@ -19,8 +19,8 @@ export default function NewNoteCard() {
         toast.success("Note created");
         router.push(`/dashboard/notes/${note.id}`);
       } catch (err) {
-        console.error(err);
-        toast.error("Failed to create note");
+        // @ts-ignore
+        toast.error(err.message || "Failed to create note");
       }
     });
   };

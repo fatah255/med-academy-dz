@@ -701,15 +701,23 @@ const MCQ: React.FC<Props> = ({ game }) => {
             <Button
               key={`${active.id}-${index}`}
               variant={isSelected && !verified ? undefined : "outline"}
-              className={cn("mb-4 w-full justify-start py-8", revealedClass)}
+              className={cn(
+                "mb-4 w-full justify-start py-6 text-left",
+                revealedClass
+              )}
               onClick={() => toggleChoice(index)}
               disabled={verified || ending}
             >
-              <div className="flex items-center justify-start">
-                <div className="mr-5 rounded-md border p-2 px-3">
+              {/* make the row take full width */}
+              <div className="flex w-full items-start gap-3">
+                <div className="shrink-0 rounded-md border px-3 py-2">
                   {numToLetter.get(index + 1)}
                 </div>
-                <div className="text-start">{option}</div>
+
+                {/* allow wrapping */}
+                <div className="flex-1 min-w-0 whitespace-pre-wrap break-words leading-relaxed">
+                  {option}
+                </div>
               </div>
             </Button>
           );
@@ -748,6 +756,21 @@ const MCQ: React.FC<Props> = ({ game }) => {
             {verified ? "Next" : "Skip"}{" "}
             <ChevronRight className="ml-2 h-4 w-4" />
           </Button>
+
+          {/* >>> Show / Hide Comment button <<< */}
+          {safeCommentHtml && verified && (
+            <Button
+              variant="outline"
+              className="mt-2"
+              size="lg"
+              onClick={() => setCommentOpen((o) => !o)}
+              aria-expanded={commentOpen}
+              title={commentOpen ? "Hide comment" : "Show comment"}
+            >
+              <MessageSquare className="mr-2 h-4 w-4" />
+              {commentOpen ? "Hide comment" : "Show comment"}
+            </Button>
+          )}
 
           {/* End Game now (save partial) - with confirmation */}
           <AlertDialog open={endOpen} onOpenChange={setEndOpen}>
