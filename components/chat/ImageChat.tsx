@@ -477,11 +477,6 @@ export default function ImageChat() {
             ))}
           </div>
         )}
-
-        <p className="mt-2 text-xs text-muted-foreground">
-          Images are uploaded to Tigris first, then their public URLs are sent
-          to the model.
-        </p>
       </div>
 
       {/* Lightbox */}
