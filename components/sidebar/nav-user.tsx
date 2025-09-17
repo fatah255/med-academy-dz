@@ -25,8 +25,8 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import { useSession } from "@/lib/auth-client";
-import Link from "next/dist/client/link";
 import { HomeIcon, Tv2 } from "lucide-react";
+import Link from "next/link";
 
 export function NavUser() {
   const { isMobile } = useSidebar();

@@ -23,9 +23,9 @@ const BILLING: { value: Billing; label: string; suffix: string }[] = [
 // 2 months free on yearly
 const YEARLY_CHARGE_MONTHS = 10;
 
-// base monthly by plan and year (your requirement: 1st year higher)
+// base monthly by plan and year
 function baseMonthly(plan: "without-ai" | "with-ai", year: number) {
-  if (plan === "without-ai") return year > 1 ? 99 : 149;
+  if (plan === "without-ai") return year > 1 ? 29.9 : 34.9;
   return year > 1 ? 149 : 199;
 }
 function priceText(
@@ -35,23 +35,27 @@ function priceText(
 ) {
   const base = baseMonthly(plan, year);
   if (billing === "monthly") return `${base} DZD`;
+  if (plan === "with-ai") return year > 1 ? 999 : 1499;
   return `${base * YEARLY_CHARGE_MONTHS} DZD`;
 }
-
-// function cx(...parts: Array<string | false | null | undefined>) {
-//   return parts.filter(Boolean).join(" ");
-// }
 
 export default function PricingPage() {
   const [billing, setBilling] = React.useState<Billing>("monthly");
   const [year, setYear] = React.useState<number>(1);
-
-  // simple local pending state per plan button
   const [submitting, setSubmitting] = React.useState<
     null | "without-ai" | "with-ai"
   >(null);
 
-  const suffix = billing === "monthly" ? "/month" : "/year";
+  // prices/suffix
+  const suffixWithAi = billing === "monthly" ? "/month" : "/year";
+  const priceWithAi = priceText("with-ai", billing, year);
+  const priceWithoutAi = priceText("without-ai", "yearly", year); // yearly only
+
+  // render list of cards: if monthly → ONLY with-ai. if yearly → both.
+  const showWithoutAi = billing === "yearly";
+  const gridClass = showWithoutAi
+    ? "mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-6 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+    : "mx-auto mt-10 grid max-w-xl grid-cols-1 gap-6"; // one card centered
 
   return (
     <section className="bg-background py-16 sm:py-24">
@@ -63,7 +67,7 @@ export default function PricingPage() {
             Simple plans for every year
           </h1>
           <p className="mt-4 text-pretty text-muted-foreground">
-            Pick monthly or yearly billing, and choose your current study year.
+            Choose billing for AI plan and your current study year.
           </p>
         </div>
 
@@ -91,6 +95,12 @@ export default function PricingPage() {
                 );
               })}
             </div>
+            <p className="mt-2 text-center text-xs text-muted-foreground">
+              When <span className="font-medium">Monthly</span> is selected,
+              only the <span className="font-medium">With AI</span> plan is
+              available. “Without AI” is{" "}
+              <span className="font-medium">yearly only</span>.
+            </p>
           </fieldset>
 
           {/* Year selector */}
@@ -119,50 +129,60 @@ export default function PricingPage() {
         </div>
 
         {/* Cards */}
-        <div className="mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-6 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          {/* WITHOUT AI */}
-          <PlanCard
-            id="without-ai"
-            name="Without AI"
-            featured={false}
-            price={priceText("without-ai", billing, year)}
-            suffix={suffix}
-            features={[
-              "unlimited notes",
-              "access for all questions of previous years classed by course",
-              "access  for all exams of previous years claessed by year",
-              "Saved progress & bookmarking",
-              "Community & updates",
-              "Email support",
-            ]}
-          >
-            <form
-              action={createOfferCheckoutAction}
-              onSubmit={() => setSubmitting("without-ai")}
+        <div className={gridClass}>
+          {/* WITHOUT AI — render ONLY if yearly is selected */}
+          {showWithoutAi && (
+            <PlanCard
+              id="without-ai"
+              name="Without AI"
+              featured={false}
+              price={String(priceWithoutAi)}
+              suffix="/year"
+              features={[
+                "unlimited notes",
+                "access for all questions of previous years classed by course",
+                "access  for all exams of previous years claessed by year",
+                "Saved progress & bookmarking",
+                "Community & updates",
+                "Email support",
+              ]}
             >
-              <input type="hidden" name="billing" value={billing} />
-              <input type="hidden" name="year" value={year} />
-              <button
-                type="submit"
-                className={cx(
-                  "mt-6 block w-full rounded-md bg-muted px-3 py-2 text-center text-sm font-semibold text-foreground hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                )}
-                disabled={submitting !== null}
+              <form
+                action={createOfferCheckoutAction}
+                onSubmit={() => setSubmitting("without-ai")}
               >
-                {submitting === "without-ai" ? "Processing…" : "Choose plan"}
-              </button>
-            </form>
-          </PlanCard>
+                {/* Hard-code YEARLY to backend */}
+                <input type="hidden" name="billing" value="yearly" />
+                <input type="hidden" name="year" value={year} />
+                <button
+                  type="submit"
+                  className={cx(
+                    "mt-6 block w-full rounded-md bg-muted px-3 py-2 text-center text-sm font-semibold text-foreground hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  )}
+                  disabled={submitting !== null}
+                >
+                  {submitting === "without-ai" ? "Processing…" : "Choose plan"}
+                </button>
+              </form>
+              <p className="mt-2 text-xs text-muted-foreground">
+                Yearly plan only.
+              </p>
+            </PlanCard>
+          )}
 
-          {/* WITH AI */}
+          {/* WITH AI — always visible */}
           <PlanCard
             id="with-ai"
             name="With AI"
             featured
-            price={priceText("with-ai", billing, year)}
-            suffix={suffix}
+            price={String(priceWithAi)}
+            suffix={suffixWithAi}
             features={[
-              "Everything in Without AI",
+              "Access for ALL the quizzes",
+              "Access for ALL the exams",
+              "Unlimited notes",
+              "Saved progress & bookmarking",
+              "unlimited PDF and Photo uploads",
               "AI QCM generator",
               "AI PDF chat & mind maps",
               "Image understanding (diagrams, slides)",
