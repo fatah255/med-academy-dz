@@ -9,46 +9,25 @@ import { pdfToDataUrlFromUrl } from "@/lib/pdf-to-data-url";
 
 type Mode = "resumed" | "detailed";
 
-type MindMapNode = {
-  title: string;
-  note?: string;
-  children?: MindMapNode[];
-};
-
-type MindMap = {
-  title: string;
-  children?: MindMapNode[];
-};
-
-// ---------- Zod validation (recursive) ----------
-const MindNodeSchema: z.ZodType<MindMapNode> = z.lazy(() =>
-  z.object({
-    title: z.string().min(1),
-    note: z.string().optional(),
-    children: z.array(MindNodeSchema).optional(),
-  })
-);
-
-const MindMapSchema = z.object({
-  title: z.string().min(1),
-  children: z.array(MindNodeSchema).optional(),
+const MapifySchema = z.object({
+  topic: z.string().min(2),
+  markdown: z.string().min(2),
 });
 
 export async function POST(req: Request) {
   try {
     const { chatId, mode }: { chatId: string; mode?: Mode } = await req.json();
-    if (!chatId) {
+    if (!chatId)
       return NextResponse.json(
         { error: "chatId is required" },
         { status: 400 }
       );
-    }
+
     const detail: Mode = mode === "detailed" ? "detailed" : "resumed";
 
     const session = await requireUser();
     const userId = session.user.id;
 
-    // Verify ownership & fetch the PDF key/name
     const chat = await prisma.chat.findFirst({
       where: { id: chatId, userId },
       select: { pdfFileKey: true, pdfName: true },
@@ -56,27 +35,35 @@ export async function POST(req: Request) {
     if (!chat)
       return NextResponse.json({ error: "Not found" }, { status: 404 });
 
-    // Construct your storage URL, then convert to base64 data URL so the provider
-    // never needs to fetch it across the network (avoids "Invalid content").
-    const publicOrSignedUrl = useConstructUrl(chat.pdfFileKey);
-    const dataUrl = await pdfToDataUrlFromUrl(publicOrSignedUrl);
+    const fileUrl = useConstructUrl(chat.pdfFileKey);
+    const dataUrl = await pdfToDataUrlFromUrl(fileUrl);
 
+    // —— Prompt tuned for Mapify-like output ——
     const depthHint =
       detail === "resumed"
-        ? "Keep the hierarchy concise (max ~2 levels under root) with the most important topics."
-        : "Provide a deeper outline (up to ~4 levels when meaningful) with organized subtopics.";
+        ? "Use # + ##. Keep it concise."
+        : "Use # for title, ## for branches, and ### for sub-branches. Every ## branch MUST contain 3–7 ### sub-branches (no bullets). Optionally add a few #### leaves if helpful.";
 
     const systemPrompt =
-      "You are a careful reading assistant that extracts a clean hierarchical mind map from a PDF. " +
-      "Use the document's language. Titles are short noun phrases; notes are one concise sentence. " +
-      "Exclude noise (TOCs, headers/footers, page numbers). Avoid duplicates. " +
-      "Return ONLY JSON with { title: string, children?: Node[] } and Node { title, note?, children? }.";
+      "Return STRICT JSON only: { topic: string, markdown: string }. " +
+      "Markdown MUST contain headings only (#, ##, ###, optional ####). No lists/paragraphs/tables/code.";
 
-    const userPrompt = [
-      `Create a ${detail} mind map for the attached PDF.`,
-      depthHint,
-      "Root 'title' is the document topic; children are subtopics in logical order.",
-    ].join("\n");
+    const userPrompt = `
+You are a helpful assistant that generates well-structured mind maps.
+Please generate a Mind Map as Markdown text for the attached PDF content.
+
+Rules:
+- Use headings: # for title, ## for branch, ### for sub-branch.
+- Avoid boilerplate like "Overview" or "Conclusion".
+- Prefer specific, factual nodes—not just categories.
+- If a list would exceed 6 items, compress into a single branch with a comma-separated enumeration.
+- ${depthHint}
+
+Return JSON exactly as:
+{
+  "topic": "{Good title without the words 'Mind Map'}",
+  "markdown": "# {same title}\\n## Branch 1\\n### Sub A\\n..."
+}`;
 
     const key = process.env.OPENROUTER_API_KEY;
     if (!key) {
@@ -86,7 +73,6 @@ export async function POST(req: Request) {
       );
     }
 
-    // Use a tolerant route (you can swap to any model you prefer).
     const model = "openai/gpt-4o-mini";
 
     const response = await fetch(
@@ -99,7 +85,6 @@ export async function POST(req: Request) {
         },
         body: JSON.stringify({
           model,
-          // Make EVERY message use "content" parts (prevents provider quirks)
           messages: [
             { role: "system", content: [{ type: "text", text: systemPrompt }] },
             {
@@ -110,35 +95,32 @@ export async function POST(req: Request) {
                   type: "file",
                   file: {
                     filename: chat.pdfName ?? "document.pdf",
-                    file_data: dataUrl, // base64 data URL, not an external link
+                    file_data: dataUrl,
                   },
                 },
               ],
             },
           ],
           plugins: [{ id: "file-parser", pdf: { engine: "pdf-text" } }],
-          // Proper OpenAI-style shape for JSON output
           response_format: { type: "json_object" },
-          max_tokens: detail === "detailed" ? 4000 : 1800,
-          temperature: detail === "detailed" ? 0.4 : 0.2,
+          max_tokens: detail === "detailed" ? 3200 : 1600,
+          temperature: 0.4,
         }),
       }
     );
 
     if (!response.ok) {
-      const errText = await response.text().catch(() => "");
+      const err = await response.text().catch(() => "");
       return NextResponse.json(
-        { error: "openrouter_error", message: errText || response.statusText },
+        { error: "openrouter_error", message: err || response.statusText },
         { status: 502 }
       );
     }
 
     const data = await response.json();
-
-    // The response should already be a JSON object (given response_format),
-    // but we defensively handle string outputs too.
     let raw = data?.choices?.[0]?.message?.content ?? "";
 
+    // Defensive parse: model should already return JSON, but handle strings.
     let parsed: unknown = raw;
     if (typeof raw === "string") {
       const fenced = raw.match(/```json\s*([\s\S]*?)```/i);
@@ -152,9 +134,8 @@ export async function POST(req: Request) {
       }
     }
 
-    const mindmap = MindMapSchema.parse(parsed) as MindMap;
-
-    return NextResponse.json({ mode: detail, mindmap }, { status: 200 });
+    const doc = MapifySchema.parse(parsed);
+    return NextResponse.json({ mode: detail, doc }, { status: 200 });
   } catch (err: any) {
     return NextResponse.json(
       { error: "internal_server_error", message: String(err?.message ?? err) },
