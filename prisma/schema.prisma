@@ -1,7 +1,7 @@
 generator client {
-  provider = "prisma-client-js"
-  // output   = "../lib/generated/prisma"
-   binaryTargets = ["native"] // add this line
+  provider      = "prisma-client-js"
+  output        = "../lib/generated/prisma"
+  binaryTargets = ["native"]
 }
 
 datasource db {
@@ -10,34 +10,33 @@ datasource db {
 }
 
 model User {
-  id             String           @id @default(uuid())
-  name           String
-  email          String           @unique
-  emailVerified  Boolean
-  image          String?
-  createdAt      DateTime
-  updatedAt      DateTime
-  level          CourseLevel      @default(FIRST_YEAR)
-  isAdmin        Boolean          @default(false)
-  role           String?
-  banned         Boolean?
-  banReason      String?
-  banExpires     DateTime?
-  setup          Boolean          @default(false)
-  courses        Course[]
-  lessonProgress LessonProgress[]
-  nglLinks       NglLink?
-  nglMessages    NglMessage[]
-  accounts       Account[]
-  chat           chat[]
-  enrollments    Enrollment[]
-  notes          notes[]
-  quizzes        Quiz[]
-  sessions       Session[]
-   quizAttempts QuizAttempt[]
-   liveSessions LiveSession[]
-   LiveSessionParticipants LiveSessionParticipant[]
-   
+  id                      String                   @id @default(uuid())
+  name                    String
+  email                   String                   @unique
+  emailVerified           Boolean
+  image                   String?
+  createdAt               DateTime
+  updatedAt               DateTime
+  level                   CourseLevel              @default(FIRST_YEAR)
+  isAdmin                 Boolean                  @default(false)
+  role                    String?
+  banned                  Boolean?
+  banReason               String?
+  banExpires              DateTime?
+  setup                   Boolean                  @default(false)
+  courses                 Course[]
+  lessonProgress          LessonProgress[]
+  liveSessions            LiveSession[]
+  LiveSessionParticipants LiveSessionParticipant[]
+  nglLinks                NglLink?
+  nglMessages             NglMessage[]
+  quizAttempts            QuizAttempt[]
+  accounts                Account[]
+  chat                    chat[]
+  enrollments             Enrollment[]
+  notes                   notes[]
+  quizzes                 Quiz[]
+  sessions                Session[]
 
   @@map("user")
 }
@@ -135,23 +134,23 @@ model Lesson {
 }
 
 model Quiz {
-  id          String       @id @unique @default(uuid())
-  title       String
-  description String
-  fileKey     String?
-  price       Int
-  createdAt   DateTime     @default(now())
-  updatedAt   DateTime     @updatedAt
-  slug        String       @unique
-  status      CourseStatus @default(DRAFT)
-  level       CourseLevel  @default(FIRST_YEAR)
-  category    String
-  userId      String
-  cours       cours[]
+  id           String        @id @unique @default(uuid())
+  title        String
+  description  String
+  fileKey      String?
+  price        Int
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  slug         String        @unique
+  status       CourseStatus  @default(DRAFT)
+  level        CourseLevel   @default(FIRST_YEAR)
+  category     String
+  userId       String
   liveSessions LiveSession[]
-  enrollments Enrollment[]
-   quizAttempts QuizAttempt[]
-  user        User         @relation(fields: [userId], references: [id])
+  quizAttempts QuizAttempt[]
+  cours        cours[]
+  enrollments  Enrollment[]
+  user         User          @relation(fields: [userId], references: [id])
 
   @@map("quiz")
 }
@@ -194,45 +193,33 @@ model QcmAnswer {
   @@map("qcm_answer")
 }
 
-// prisma/schema.prisma
-enum BillingPeriod {
-  MONTHLY
-  YEARLY
-}
-
 model Enrollment {
-  id            String       @id @default(uuid())
+  id            String         @id @default(uuid())
   amount        Int
-  status        String       @default("PENDING")
+  status        String         @default("PENDING")
   transactionId String?
   userId        String
   courseId      String?
   quizId        String?
-  createdAt     DateTime     @default(now())
-  updatedAt     DateTime     @updatedAt
-
-  // existing flags
-  offer         Boolean      @default(false)
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  offer         Boolean        @default(false)
   offerLevel    CourseLevel?
-  isOffer       Boolean      @default(false)
-  ai            Boolean      @default(false)
-
-  // NEW (all optional => no breaking change)
+  isOffer       Boolean        @default(false)
+  ai            Boolean        @default(false)
   billingPeriod BillingPeriod?
-  months        Int?         // 1 or 12
-  paidAt        DateTime?
   expiresAt     DateTime?
-
-  course        Course?      @relation(fields: [courseId], references: [id], onDelete: Cascade)
-  quiz          Quiz?        @relation(fields: [quizId], references: [id], onDelete: Cascade)
-  user          User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  months        Int?
+  paidAt        DateTime?
+  course        Course?        @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  quiz          Quiz?          @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  user          User           @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, courseId])
   @@unique([userId, quizId])
   @@index([transactionId])
   @@map("enrollment")
 }
-
 
 model LessonProgress {
   id        String   @id @default(uuid())
@@ -248,16 +235,15 @@ model LessonProgress {
 }
 
 model cours {
-  id        String   @id @default(cuid())
-  title     String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  quizId    String
-  quiz      Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
-   quizAttempts QuizAttempt[]
-   liveSessions LiveSession[]
-
-  qcm       Qcm[]
+  id           String        @id @default(cuid())
+  title        String
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  quizId       String
+  liveSessions LiveSession[]
+  quizAttempts QuizAttempt[]
+  quiz         Quiz          @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  qcm          Qcm[]
 }
 
 model notes {
@@ -274,16 +260,16 @@ model notes {
 }
 
 model exams {
-  id        String      @id @unique @default(uuid())
-  title     String
-  createdAt DateTime    @default(now())
-  updatedAt DateTime
-  category  String
-  level     CourseLevel
-  quizAttempts QuizAttempt[]
+  id           String        @id @unique @default(uuid())
+  title        String
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime
+  category     String
+  level        CourseLevel
+  year         Int           @default(0)
   liveSessions LiveSession[]
-  year      Int         @default(0)
-  qcm       Qcm[]
+  quizAttempts QuizAttempt[]
+  qcm          Qcm[]
 }
 
 model books {
@@ -342,16 +328,17 @@ model pdfs {
 }
 
 model resources {
-  id          String     @id @unique
+  id          String       @id @unique
   title       String
   description String?
-  createdAt   DateTime   @default(now())
+  createdAt   DateTime     @default(now())
   updatedAt   DateTime
   moduleId    String
+  flashCards  flashCards[]
   links       links[]
   models3d    models3d[]
   pdfs        pdfs[]
-  modules     modules    @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  modules     modules      @relation(fields: [moduleId], references: [id], onDelete: Cascade)
   videos      videos[]
 }
 
@@ -398,14 +385,14 @@ model NglMessage {
 }
 
 model chat {
-  id          String        @id @default(cuid())
-  pdfName     String
-  pdfFileKey  String
-  userId      String
-  createdAt   DateTime      @default(now())
-  pdfAnnotations Json? 
-  user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
-  chatMessage chatMessage[]
+  id             String        @id @default(cuid())
+  pdfName        String
+  pdfFileKey     String
+  userId         String
+  createdAt      DateTime      @default(now())
+  pdfAnnotations Json?
+  user           User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  chatMessage    chatMessage[]
 }
 
 model chatMessage {
@@ -428,44 +415,29 @@ model pdf_chunks {
   @@index([file_key, page_number], map: "pdf_chunks_filekey_page_idx")
 }
 
-
 model QuizAttempt {
-  id               String    @id @default(cuid())
-  createdAt        DateTime  @default(now())
-
-  // who
-  userId           String?  
-  user             User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  // what this run was based on (all optional — pass whichever you have)
-  quizId           String? 
-  quiz             Quiz?     @relation(fields: [quizId], references: [id], onDelete: SetNull)
-
-  coursId          String?  
-  cours            cours?    @relation(fields: [coursId], references: [id], onDelete: SetNull)
-
-  examId           String?  
-  exam             exams?    @relation(fields: [examId], references: [id], onDelete: SetNull)
-
-  // display label (e.g. "Endocrino... 5ÈME MED")
-  topic            String
-
-  // timing
-  startedAt        DateTime
-  endedAt          DateTime
-  durationSeconds  Int
-
-  // scoring
-  totalQuestions   Int
-  attempted        Int
-  correctCount     Int
-  wrongCount       Int
-  scorePercent     Int        // 0..100
-  completedAll     Boolean
-
-  // hidden bookkeeping
-  qcmIds           String[]   // store Qcm.id and/or subQcm.id
-  answers          Json?      // optional raw AnswerLog[] for audits/review
+  id              String   @id @default(cuid())
+  createdAt       DateTime @default(now())
+  topic           String
+  startedAt       DateTime
+  endedAt         DateTime
+  durationSeconds Int
+  totalQuestions  Int
+  attempted       Int
+  correctCount    Int
+  wrongCount      Int
+  scorePercent    Int
+  completedAll    Boolean
+  qcmIds          String[]
+  answers         Json?
+  userId          String?
+  quizId          String?
+  coursId         String?
+  examId          String?
+  cours           cours?   @relation(fields: [coursId], references: [id])
+  exam            exams?   @relation(fields: [examId], references: [id])
+  quiz            Quiz?    @relation(fields: [quizId], references: [id])
+  user            User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId, createdAt])
   @@index([quizId])
@@ -473,7 +445,66 @@ model QuizAttempt {
   @@index([examId])
 }
 
-// --- Live session enums ---
+model LiveSession {
+  id               String                   @id @default(cuid())
+  code             String                   @unique
+  mode             LiveSessionMode
+  quizId           String?
+  coursId          String?
+  examId           String?
+  hostId           String
+  scheduledStart   DateTime?
+  durationSec      Int
+  allowLateJoin    Boolean                  @default(false)
+  createdAt        DateTime                 @default(now())
+  startedAt        DateTime?
+  endedAt          DateTime?
+  status           LiveSessionStatus        @default(DRAFT)
+  questionSnapshot Json
+  cours            cours?                   @relation(fields: [coursId], references: [id])
+  exam             exams?                   @relation(fields: [examId], references: [id])
+  host             User                     @relation(fields: [hostId], references: [id], onDelete: Cascade)
+  quiz             Quiz?                    @relation(fields: [quizId], references: [id])
+  participants     LiveSessionParticipant[]
+
+  @@index([status])
+  @@index([hostId])
+}
+
+model LiveSessionParticipant {
+  id           String      @id @default(uuid())
+  sessionId    String
+  userId       String?
+  displayName  String
+  joinedAt     DateTime    @default(now())
+  finishedAt   DateTime?
+  attempted    Int?
+  correctCount Int?
+  wrongCount   Int?
+  scorePercent Int?
+  answers      Json?
+  session      LiveSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  user         User?       @relation(fields: [userId], references: [id])
+
+  @@index([sessionId])
+  @@index([userId])
+}
+
+model flashCards {
+  id         String     @id @unique
+  question   String
+  answer     String
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime
+  resourceId String?
+  resources  resources? @relation(fields: [resourceId], references: [id], onDelete: Cascade)
+}
+
+enum BillingPeriod {
+  MONTHLY
+  YEARLY
+}
+
 enum LiveSessionMode {
   QUIZ
   EXAM
@@ -486,59 +517,6 @@ enum LiveSessionStatus {
   ENDED
   CANCELLED
 }
-
-// --- Live session models ---
-model LiveSession {
-  id               String             @id @default(cuid())
-  code             String             @unique                 // short join code
-  mode             LiveSessionMode
-  quizId           String?
-  coursId          String?
-  examId           String?
-  hostId           String
-  scheduledStart   DateTime?
-  durationSec      Int
-  allowLateJoin    Boolean            @default(false)
-  createdAt        DateTime           @default(now())
-  startedAt        DateTime?
-  endedAt          DateTime?
-  status           LiveSessionStatus  @default(DRAFT)
-
-  // Snapshot of selected questions (ids/order/seed/minimal text)
-  questionSnapshot Json
-
-  // Relations
-  quiz         Quiz?      @relation(fields: [quizId], references: [id], onDelete: SetNull)
-  cours        cours?     @relation(fields: [coursId], references: [id], onDelete: SetNull)
-  exam         exams?     @relation(fields: [examId], references: [id], onDelete: SetNull)
-  host         User       @relation(fields: [hostId], references: [id], onDelete: Cascade)
-  participants LiveSessionParticipant[]
-
-  @@index([status])
-  @@index([hostId])
-}
-
-model LiveSessionParticipant {
-  id           String      @id @default(uuid())
-  sessionId    String
-  userId       String?     // null for guest
-  displayName  String
-  joinedAt     DateTime    @default(now())
-  finishedAt   DateTime?
-  attempted    Int?
-  correctCount Int?
-  wrongCount   Int?
-  scorePercent Int?
-  answers      Json?       // AnswerLog[] for corrections
-
-  session LiveSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
-  user    User?       @relation(fields: [userId], references: [id], onDelete: SetNull)
-
-  @@index([sessionId])
-  @@index([userId])
-}
-
-
 
 enum CourseLevel {
   FIRST_YEAR
@@ -559,4 +537,3 @@ enum chatRole {
   USER
   SYSTEM
 }
-

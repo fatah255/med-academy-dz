@@ -39,6 +39,7 @@ export default async function Page({ params, searchParams }: PageProps) {
           id: true,
           title: true,
           qcm: {
+            where: { parentId: null },
             select: {
               id: true,
               question: true,

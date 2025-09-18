@@ -3,7 +3,7 @@
 import { prisma } from "@/lib/db";
 import { requireAdmin } from "../data/admin/require-admin";
 import { requireUser } from "../data/user/require-user";
-import { Prisma } from "@prisma/client";
+import { Prisma } from "@/lib/generated/prisma";
 
 /** ---------- Helpers ---------- **/
 function date30DaysAgo() {

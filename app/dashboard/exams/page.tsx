@@ -5,7 +5,7 @@ import { modulesByYear } from "@/lib/utils";
 import { requireUser } from "@/app/data/user/require-user";
 import { notFound } from "next/navigation";
 import ExamsLocked from "./_components/exam-locked";
-import { Prisma } from "@prisma/client";
+import { Prisma } from "@/lib/generated/prisma";
 import { userHasActiveOfferForQuiz } from "@/lib/subscription";
 import { getLevel } from "@/app/(landing-page)/courses/actions";
 

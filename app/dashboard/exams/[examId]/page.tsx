@@ -30,7 +30,7 @@ const Page = async ({ params }: { params: Promise<{ examId: string }> }) => {
     return notFound();
   }
   const picked = await prisma.qcm.findMany({
-    where: { examId },
+    where: { examId, parentId: null },
     orderBy: { position: "asc" },
     select: {
       id: true,
