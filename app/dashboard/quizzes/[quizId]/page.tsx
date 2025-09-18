@@ -39,7 +39,7 @@ export default async function Page({ params, searchParams }: PageProps) {
           id: true,
           title: true,
           qcm: {
-            orderBy: { createdAt: "asc", examYear: "asc" },
+            orderBy: { examYear: "desc" },
             where: { parentId: null },
             select: {
               id: true,
@@ -97,14 +97,11 @@ export default async function Page({ params, searchParams }: PageProps) {
   }
 
   // Shuffle to randomize
-  const shuffled = [...allQcm].sort(() => Math.random() - 0.5);
+  const shuffled = [...allQcm];
 
   // If you want to cap by ?ques (when > 0), do it here. If you prefer to always send all,
   // set requestedQues to 0 in the URL, and we won't slice.
-  const picked =
-    requestedQues > 0
-      ? shuffled.slice(0, Math.min(requestedQues, shuffled.length))
-      : shuffled;
+  const picked = shuffled;
 
   // Map to the shape ClientQCM expects, including clinique sub-questions
   const questions = picked.map((q) => ({
