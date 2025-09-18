@@ -31,7 +31,7 @@ const Page = async ({ params }: { params: Promise<{ examId: string }> }) => {
   }
   const picked = await prisma.qcm.findMany({
     where: { examId, parentId: null },
-    orderBy: { position: "asc" },
+    orderBy: { createdAt: "asc" },
     select: {
       id: true,
       question: true,
@@ -41,9 +41,9 @@ const Page = async ({ params }: { params: Promise<{ examId: string }> }) => {
       examYear: true,
       answers: {
         select: { text: true, isCorrect: true },
-        orderBy: { position: "asc" },
       },
       other_qcm: {
+        orderBy: { createdAt: "asc" },
         select: {
           id: true,
           question: true,
@@ -53,7 +53,6 @@ const Page = async ({ params }: { params: Promise<{ examId: string }> }) => {
           // examYear: true, // include if you want it on subs
           answers: {
             select: { text: true, isCorrect: true },
-            orderBy: { position: "asc" },
           },
         },
       },

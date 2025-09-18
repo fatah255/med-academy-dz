@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "react-quizlet-flashcard/dist/index.css";
+
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import Providers from "@/components/Providers";
 import { Toaster } from "sonner";

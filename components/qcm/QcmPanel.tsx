@@ -3,6 +3,21 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import QcmModal from "./QcmModal";
 
 export type QcmItem = {
@@ -40,53 +55,77 @@ export default function QcmPanel({ chatId }: { chatId: string }) {
       setLoading(false);
     }
   }
-  console.log(questions);
+
   return (
     <>
-      <div className="rounded-lg border bg-card p-4">
-        <h3 className="font-semibold text-lg">QCM Generation</h3>
-        <p className="text-sm text-muted-foreground">
-          Generate multiple-choice questions from your PDF.
-        </p>
+      <Card className="sticky top-4">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-base">QCM Generation</CardTitle>
+          <CardDescription>
+            Generate multiple-choice questions from your PDF.
+          </CardDescription>
+        </CardHeader>
 
-        <div className="mt-4 grid gap-6 sm:grid-cols-2">
-          <div>
-            <label className="mb-1 block text-sm font-medium">
-              Number of Questions
-            </label>
-            <select
-              className="w-28 rounded-md border bg-background px-3 py-2"
-              value={count}
-              onChange={(e) => setCount(Number(e.target.value))}
-            >
-              {[5, 10, 15, 20].map((n) => (
-                <option key={n} value={n}>
-                  {n}
-                </option>
-              ))}
-            </select>
+        <CardContent className="pt-0">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="min-w-0">
+              <label className="mb-1 block text-xs font-medium text-muted-foreground">
+                Number of Questions
+              </label>
+              <Select
+                value={String(count)}
+                onValueChange={(v) => setCount(Number(v))}
+              >
+                <SelectTrigger className="w-full">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {[5, 10, 15, 20].map((n) => (
+                    <SelectItem key={n} value={String(n)}>
+                      {n}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="min-w-0">
+              <label className="mb-1 block text-xs font-medium text-muted-foreground">
+                Difficulty
+              </label>
+              <Select
+                value={difficulty}
+                onValueChange={(v) =>
+                  setDifficulty(v as "easy" | "normal" | "hard")
+                }
+              >
+                <SelectTrigger className="w-full">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="easy">Easy</SelectItem>
+                  <SelectItem value="normal">Normal</SelectItem>
+                  <SelectItem value="hard">Hard</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
           </div>
+        </CardContent>
 
-          <div>
-            <label className="mb-1 block text-sm font-medium">Difficulty</label>
-            <select
-              className="w-36 rounded-md border bg-background px-3 py-2"
-              value={difficulty}
-              onChange={(e) =>
-                setDifficulty(e.target.value as "easy" | "normal" | "hard")
-              }
-            >
-              <option value="easy">Easy</option>
-              <option value="normal">Normal</option>
-              <option value="hard">Hard</option>
-            </select>
-          </div>
-        </div>
-
-        <Button className="mt-6" onClick={handleGenerate} disabled={loading}>
-          {loading ? "Generating..." : "Generate QCM"}
-        </Button>
-      </div>
+        <CardFooter className="pt-0 flex items-center justify-end gap-2">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setQuestions(null)}
+            disabled={loading || !questions?.length}
+          >
+            Clear
+          </Button>
+          <Button onClick={handleGenerate} disabled={loading}>
+            {loading ? "Generating..." : "Generate QCM"}
+          </Button>
+        </CardFooter>
+      </Card>
 
       <QcmModal
         open={open}

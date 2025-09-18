@@ -39,6 +39,7 @@ export default async function Page({ params, searchParams }: PageProps) {
           id: true,
           title: true,
           qcm: {
+            orderBy: { createdAt: "asc", examYear: "asc" },
             where: { parentId: null },
             select: {
               id: true,
@@ -52,6 +53,7 @@ export default async function Page({ params, searchParams }: PageProps) {
                 orderBy: { position: "asc" },
               },
               other_qcm: {
+                orderBy: { createdAt: "asc" },
                 select: {
                   id: true,
                   question: true,
