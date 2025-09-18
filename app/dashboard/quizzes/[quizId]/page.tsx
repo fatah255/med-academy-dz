@@ -53,7 +53,7 @@ export default async function Page({ params, searchParams }: PageProps) {
                 orderBy: { position: "asc" },
               },
               other_qcm: {
-                orderBy: { createdAt: "desc" },
+                orderBy: [{ createdAt: "desc" }, { position: "asc" }],
                 select: {
                   id: true,
                   question: true,
