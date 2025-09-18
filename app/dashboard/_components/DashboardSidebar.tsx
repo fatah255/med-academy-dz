@@ -64,11 +64,11 @@ const data = {
       url: "/dashboard/attempts",
       icon: IconHistory,
     },
-    // {
-    //   title: "Drives",
-    //   url: "/dashboard/drives",
-    //   icon: IconBrandGoogleDrive,
-    // },
+    {
+      title: "Drives",
+      url: "/dashboard/drive",
+      icon: IconBrandGoogleDrive,
+    },
     {
       title: "Free Resources",
       url: "/dashboard/resources",
