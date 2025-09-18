@@ -68,7 +68,6 @@ export default async function Page({ params, searchParams }: PageProps) {
                 },
               },
             },
-            orderBy: { position: "asc" },
           },
         },
       },
