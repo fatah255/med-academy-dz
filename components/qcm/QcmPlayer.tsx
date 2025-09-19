@@ -49,26 +49,21 @@ function normalizeQuestions(
   input: Array<QcmItem | ApiItem> = []
 ): Normalized[] {
   return input.map((q, i) => {
-    // Base fields
     const id = String((q as any).id ?? i);
     const question = (q as any).question ?? (q as any).text ?? "";
 
-    // Choices
     const rawChoices = (q as any).choices ?? [];
     let choices: string[] = [];
     let correctIndex = 0;
 
     if (Array.isArray(rawChoices) && rawChoices.length > 0) {
-      // If first is string, assume all strings
       if (typeof rawChoices[0] === "string") {
         choices = rawChoices as string[];
-        // prefer provided correctIndex if present
         correctIndex =
           typeof (q as any).correctIndex === "number"
             ? (q as any).correctIndex
             : 0;
       } else {
-        // API shape with objects
         const arr = rawChoices as ApiChoice[];
         choices = arr.map((c) => c?.text ?? "");
         const idx = arr.findIndex((c) => c?.correct === true);
@@ -150,7 +145,7 @@ export default function QcmPlayer({
       <Card>
         <CardHeader>
           <CardTitle className="text-base md:text-lg">Q{i + 1}</CardTitle>
-          <CardDescription className="text-base whitespace-pre-wrap">
+          <CardDescription className="text-base break-words whitespace-pre-wrap hyphens-auto">
             {q.question}
           </CardDescription>
         </CardHeader>
@@ -168,18 +163,26 @@ export default function QcmPlayer({
               key={idx}
               variant={selected && !verified ? undefined : "outline"}
               className={cn(
-                "w-full justify-start py-5",
-                correct && "border-green-500 bg-green-500/10 text-green-500",
-                wrong && "border-red-500 bg-red-500/10 text-red-500"
+                // allow wrapping & growth
+                "w-full h-auto justify-start px-3 py-4 text-left whitespace-normal",
+                correct && "border-green-500 bg-green-500/10 text-green-600",
+                wrong && "border-red-500 bg-red-500/10 text-red-600"
               )}
               onClick={() => !verified && setPicked(idx)}
               disabled={verified}
             >
-              <div className="flex items-center gap-4">
-                <div className="rounded-md border px-3 py-1 text-sm">
+              <div className="flex w-full items-start gap-3 overflow-hidden">
+                {/* letter badge stays fixed width */}
+                <div className="shrink-0 rounded-md border px-2 py-1 text-sm leading-none">
                   {letter(idx)}
                 </div>
-                <div className="text-left">{choice}</div>
+
+                {/* text container MUST be shrinkable to wrap */}
+                <div className="min-w-0 flex-1">
+                  <span className="block w-full min-w-0 break-words whitespace-pre-wrap hyphens-auto leading-relaxed">
+                    {choice}
+                  </span>
+                </div>
               </div>
             </Button>
           );
@@ -232,7 +235,9 @@ export default function QcmPlayer({
             <CheckCircle2 className="h-4 w-4 text-green-500" />
             Explanation
           </div>
-          <div className="whitespace-pre-wrap">{q.explanation}</div>
+          <div className="break-words whitespace-pre-wrap hyphens-auto leading-relaxed">
+            {q.explanation}
+          </div>
         </div>
       )}
 
