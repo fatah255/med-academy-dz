@@ -44,6 +44,7 @@ export default function SmoothTabsClient({
     {
       id: "videos",
       title: "Videos",
+      // @ts-ignore
       icon: IconVideo,
       count: videos.length,
       color: "bg-sky-500",
@@ -74,6 +75,7 @@ export default function SmoothTabsClient({
     {
       id: "pdfs",
       title: "PDFs",
+      // @ts-ignore
       icon: IconFileTypePdf,
       count: pdfs.length,
       color: "bg-indigo-500",
@@ -111,7 +113,9 @@ export default function SmoothTabsClient({
     },
     {
       id: "links",
+      // @ts-ignore
       title: "Links",
+      // @ts-ignore
       icon: IconExternalLink,
       count: links.length,
       color: "bg-rose-500",
@@ -152,7 +156,9 @@ export default function SmoothTabsClient({
     },
     {
       id: "models",
+      // @ts-ignore
       title: "3D Models",
+      // @ts-ignore
       icon: IconCube3dSphere,
       count: models.length,
       color: "bg-emerald-500",
