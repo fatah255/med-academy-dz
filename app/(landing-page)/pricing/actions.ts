@@ -47,6 +47,7 @@ function totalAmount(
   yearNum: number
 ) {
   const base = calcBaseMonthly(planId, yearNum);
+  if (planId === "with-ai") return yearNum > 1 ? 999 : 1499;
   return billing === "monthly" ? base : base * YEARLY_CHARGE_MONTHS;
 }
 
