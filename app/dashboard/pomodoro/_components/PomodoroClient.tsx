@@ -1,7 +1,7 @@
-// app/dashboard/pomodoro/_components/PomodoroClient.tsx
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useTimer } from "react-timer-hook";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import {
@@ -18,6 +18,7 @@ import {
   CheckCircle2,
   Timer as TimerIcon,
 } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -40,7 +41,7 @@ import {
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 
-/* ---------- hydration-safe wrapper: NO other hooks here ---------- */
+/* ---------------- hydration-safe wrapper ---------------- */
 export default function PomodoroClient() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
@@ -49,7 +50,9 @@ export default function PomodoroClient() {
 }
 
 /* -------------------- helpers -------------------- */
+
 type Mode = "focus" | "short" | "long";
+
 const DEFAULT_SETTINGS = {
   focusMin: 50,
   shortMin: 10,
@@ -61,33 +64,37 @@ const DEFAULT_SETTINGS = {
   tick: false,
   desktopNotify: true,
 };
+
 type Settings = typeof DEFAULT_SETTINGS;
 
 type Task = {
   id: string;
   title: string;
-  estimate: number;
+  estimate: number; // pomodoros estimate
   done: boolean;
-  completed: number;
+  completed: number; // finished focus sessions on this task
 };
+
 type HistoryItem = {
   id: string;
   mode: Mode;
-  startedAt: number;
-  endedAt: number;
+  startedAt: number; // epoch ms
+  endedAt: number; // epoch ms
   taskId?: string;
 };
 
 const pad = (n: number) => String(n).padStart(2, "0");
 const mmssFromMs = (ms: number) => {
   const total = Math.max(0, Math.round(ms / 1000));
-  const m = Math.floor(total / 60),
-    s = total % 60;
+  const m = Math.floor(total / 60);
+  const s = total % 60;
   return `${pad(m)}:${pad(s)}`;
 };
 const uid = () => Math.random().toString(36).slice(2, 10);
-const todayKey = (d = new Date()) =>
-  `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+
+function todayKey(d = new Date()) {
+  return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+}
 function weekKey(d = new Date()) {
   const date = new Date(d);
   const day = (date.getDay() + 6) % 7; // Mon=0
@@ -95,7 +102,7 @@ function weekKey(d = new Date()) {
   return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
 }
 
-/* Persisted state hook (safe in client-only inner) */
+/* Persisted state hook */
 function usePersistedState<T>(key: string, initial: T) {
   const [state, setState] = useState<T>(initial);
   const didHydrateRef = useRef(false);
@@ -118,7 +125,7 @@ function usePersistedState<T>(key: string, initial: T) {
   return [state, setState] as const;
 }
 
-/* WebAudio beeps */
+/* WebAudio beeps (no assets) */
 function playBeep({ freq = 880, dur = 0.18, vol = 0.07 } = {}) {
   const AC = (window as any).AudioContext || (window as any).webkitAudioContext;
   if (!AC) return;
@@ -136,22 +143,20 @@ function playBeep({ freq = 880, dur = 0.18, vol = 0.07 } = {}) {
     ctx.close();
   }, dur * 1000);
 }
+
 function playChime() {
   playBeep({ freq: 1046, dur: 0.12, vol: 0.06 });
   setTimeout(() => playBeep({ freq: 1568, dur: 0.15, vol: 0.06 }), 150);
 }
 
-/* -------------------- ALL other hooks go here -------------------- */
+/* -------------------- inner (all other hooks) -------------------- */
+
 function PomodoroInner() {
   const [settings, setSettings] = usePersistedState<Settings>(
     "pomodoro:settings",
     DEFAULT_SETTINGS
   );
   const [mode, setMode] = usePersistedState<Mode>("pomodoro:mode", "focus");
-  const [running, setRunning] = usePersistedState<boolean>(
-    "pomodoro:running",
-    false
-  );
   const [cycles, setCycles] = usePersistedState<number>("pomodoro:cycles", 0);
   const [taskId, setTaskId] = usePersistedState<string | null>(
     "pomodoro:activeTask",
@@ -163,6 +168,7 @@ function PomodoroInner() {
     []
   );
 
+  // derive current mode duration
   const baseDuration = useMemo(() => {
     const m =
       mode === "focus"
@@ -173,31 +179,107 @@ function PomodoroInner() {
     return m * 60_000;
   }, [mode, settings.focusMin, settings.shortMin, settings.longMin]);
 
+  // "remain" stored so we can pause/resume or change modes while stopped
   const [remain, setRemain] = usePersistedState<number>(
     "pomodoro:remain",
     baseDuration
   );
 
-  useEffect(() => {
-    if (!running) setRemain(baseDuration);
-  }, [baseDuration]); // ok: running in deps not needed for reset
+  // keep remain synced when settings/mode change and timer isn't running
+  // (we'll also control the hook timer separately via restart)
+  const [isRunningPersist, setIsRunningPersist] = usePersistedState<boolean>(
+    "pomodoro:running",
+    false
+  );
 
-  // timers/refs
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const targetRef = useRef<number | null>(null);
+  // react-timer-hook: initialize with a dummy expiry then immediately align it
+  const initialExpiry = useMemo(
+    () => new Date(Date.now() + baseDuration),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  );
+
   const lastSecondRef = useRef<number>(-1);
-  const finishSessionRef = useRef<() => void>(() => {});
-  const clearTimer = () => {
-    if (timerRef.current) {
-      clearTimeout(timerRef.current);
-      timerRef.current = null;
-    }
-  };
 
+  const { totalMilliseconds, isRunning, start, pause, resume, restart } =
+    useTimer({
+      expiryTimestamp: initialExpiry,
+      autoStart: false,
+      interval: 250, // smoother per-second edge
+      onExpire: () => finishSessionRef.current(),
+    });
+
+  // expose one source of truth for "running"
+  const running = isRunning;
+
+  // keep our persisted flags in sync with the hook
+  useEffect(() => {
+    setIsRunningPersist(running);
+  }, [running, setIsRunningPersist]);
+
+  // when mode/settings change and not running, reset remain & timer
+  useEffect(() => {
+    if (!running) {
+      setRemain(baseDuration);
+      const t = new Date(Date.now() + baseDuration);
+      restart(t, false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [baseDuration]);
+
+  // seconds tick sound
+  useEffect(() => {
+    if (!settings.tick || !running) return;
+    const sec = Math.floor(totalMilliseconds / 1000);
+    if (sec !== lastSecondRef.current) {
+      lastSecondRef.current = sec;
+      if (sec > 0) playBeep({ freq: 660, dur: 0.03, vol: 0.03 });
+    }
+  }, [settings.tick, running, totalMilliseconds]);
+
+  // document title
+  useEffect(() => {
+    const ms = running ? totalMilliseconds : remain;
+    const label =
+      mode === "focus" ? "Focus" : mode === "short" ? "Break" : "Long";
+    document.title = `${mmssFromMs(ms)} · ${label}`;
+  }, [running, totalMilliseconds, remain, mode]);
+
+  // notification permission request (lazy)
+  useEffect(() => {
+    if (!settings.desktopNotify || !("Notification" in window)) return;
+    if (Notification.permission === "default")
+      Notification.requestPermission().catch(() => {});
+  }, [settings.desktopNotify]);
+
+  // controls using react-timer-hook
+  const doStart = useCallback(() => {
+    // start from whatever "remain" is
+    const ms = Math.max(0, running ? totalMilliseconds : remain);
+    const t = new Date(Date.now() + (ms || baseDuration));
+    restart(t, true);
+    // we also save remain so a quick pause can pick up exactly
+    setRemain(ms || baseDuration);
+  }, [running, totalMilliseconds, remain, baseDuration, restart, setRemain]);
+
+  const doPause = useCallback(() => {
+    pause();
+    // snapshot the remaining ms
+    setRemain(totalMilliseconds);
+  }, [pause, totalMilliseconds, setRemain]);
+
+  const doReset = useCallback(() => {
+    pause();
+    setRemain(baseDuration);
+    const t = new Date(Date.now() + baseDuration);
+    restart(t, false);
+    lastSecondRef.current = -1;
+  }, [pause, baseDuration, restart, setRemain]);
+
+  // mode change helper (pause, switch, reset remain, restart stopped)
   const setModeAndReset = useCallback(
     (m: Mode) => {
-      setRunning(false);
-      clearTimer();
+      pause();
       setMode(m);
       const mns =
         m === "focus"
@@ -205,66 +287,25 @@ function PomodoroInner() {
           : m === "short"
           ? settings.shortMin
           : settings.longMin;
-      setRemain(mns * 60_000);
+      const nextMs = mns * 60_000;
+      setRemain(nextMs);
+      const t = new Date(Date.now() + nextMs);
+      restart(t, false);
+      lastSecondRef.current = -1;
     },
     [
-      setRunning,
+      pause,
       setMode,
       settings.focusMin,
       settings.shortMin,
       settings.longMin,
+      restart,
       setRemain,
     ]
   );
 
-  const tick = useCallback(() => {
-    if (!running) return;
-    const now = performance.now();
-    if (targetRef.current == null) targetRef.current = now + 1000;
-    const ahead = now - (targetRef.current - 1000);
-
-    setRemain((prev) => {
-      let next = prev - 1000 - (ahead > 50 ? ahead : 0);
-      if (next < 0) next = 0;
-
-      const secondsLeft = Math.round(next / 1000);
-      if (settings.tick && secondsLeft !== lastSecondRef.current) {
-        lastSecondRef.current = secondsLeft;
-        if (secondsLeft > 0) playBeep({ freq: 660, dur: 0.03, vol: 0.03 });
-      }
-
-      if (next <= 0) {
-        Promise.resolve().then(() => finishSessionRef.current());
-      } else {
-        targetRef.current = (targetRef.current as number) + 1000;
-        timerRef.current = setTimeout(
-          tick,
-          Math.max(0, (targetRef.current as number) - performance.now())
-        );
-      }
-      return next;
-    });
-  }, [running, settings.tick]);
-
-  const start = useCallback(() => {
-    if (running) return;
-    setRunning(true);
-    targetRef.current = null;
-    timerRef.current = setTimeout(tick, 1000);
-  }, [running, setRunning, tick]);
-
-  const pause = useCallback(() => {
-    setRunning(false);
-    clearTimer();
-  }, [setRunning]);
-
-  const reset = useCallback(() => {
-    pause();
-    setRemain(baseDuration);
-    lastSecondRef.current = -1;
-  }, [baseDuration, pause, setRemain]);
-
-  const advanceMode = useCallback<() => Mode>(() => {
+  // advance cycle helper
+  const advanceMode = useCallback((): Mode => {
     if (mode === "focus") {
       const nextCycles = cycles + 1;
       const next =
@@ -277,9 +318,12 @@ function PomodoroInner() {
     return "focus";
   }, [cycles, mode, setCycles, settings.longEvery]);
 
+  // finish + advance
   const finishSession = useCallback(() => {
     pause();
     setRemain(0);
+
+    // history
     setHistory((prev) => [
       ...prev,
       {
@@ -290,6 +334,8 @@ function PomodoroInner() {
         taskId: taskId ?? undefined,
       },
     ]);
+
+    // increment active task if focus
     if (mode === "focus" && taskId) {
       setTasks((prev) =>
         prev.map((t) =>
@@ -297,21 +343,21 @@ function PomodoroInner() {
         )
       );
     }
+
     if (settings.sounds) playChime();
-    if (
-      settings.desktopNotify &&
-      "Notification" in window &&
-      Notification.permission === "granted"
-    ) {
-      const title =
-        mode === "focus" ? "Time for a break 🎉" : "Back to work 💪";
-      const body =
-        mode === "focus"
-          ? "Great job! Take a short breather."
-          : "Focus session is starting.";
-      new Notification(title, { body, silent: true });
+    if (settings.desktopNotify && "Notification" in window) {
+      if (Notification.permission === "granted") {
+        const title =
+          mode === "focus" ? "Time for a break 🎉" : "Back to work 💪";
+        const body =
+          mode === "focus"
+            ? "Great job! Take a short breather."
+            : "Focus session is starting.";
+        new Notification(title, { body, silent: true });
+      }
     }
 
+    // move to next
     const nextMode = advanceMode();
     setMode(nextMode);
     const nextDuration =
@@ -320,11 +366,14 @@ function PomodoroInner() {
         : nextMode === "short"
         ? settings.shortMin
         : settings.longMin;
-    setRemain(nextDuration * 60_000);
+    const nextMs = nextDuration * 60_000;
+    setRemain(nextMs);
 
     const shouldAutostart =
       nextMode === "focus" ? settings.autoStartWork : settings.autoStartBreaks;
-    if (shouldAutostart) setTimeout(() => start(), 350);
+
+    const t = new Date(Date.now() + nextMs);
+    restart(t, shouldAutostart);
   }, [
     pause,
     setRemain,
@@ -342,51 +391,62 @@ function PomodoroInner() {
     settings.longMin,
     settings.autoStartWork,
     settings.autoStartBreaks,
-    start,
+    restart,
   ]);
 
+  const finishSessionRef = useRef(finishSession);
   useEffect(() => {
     finishSessionRef.current = finishSession;
   }, [finishSession]);
-  useEffect(() => () => clearTimer(), []);
-  useEffect(() => {
-    const label =
-      mode === "focus" ? "Focus" : mode === "short" ? "Break" : "Long";
-    document.title = `${mmssFromMs(remain)} · ${label}`;
-  }, [remain, mode]);
-  useEffect(() => {
-    if (!settings.desktopNotify || !("Notification" in window)) return;
-    if (Notification.permission === "default")
-      Notification.requestPermission().catch(() => {});
-  }, [settings.desktopNotify]);
 
+  // keyboard shortcuts
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const tag = (e.target as HTMLElement)?.tagName?.toLowerCase();
       if (tag === "input" || tag === "textarea") return;
+
       if (e.key === " " || e.code === "Space") {
         e.preventDefault();
-        running ? pause() : start();
+        running ? doPause() : doStart();
       } else if (e.key === "n" || e.key === "N") {
         e.preventDefault();
         finishSessionRef.current();
       } else if (e.key === "r" || e.key === "R") {
         e.preventDefault();
-        reset();
+        doReset();
       } else if (e.key === "+" || e.key === "=") {
         e.preventDefault();
-        setRemain((v) => v + 60_000);
+        // add 1 minute on the fly
+        const ms = (running ? totalMilliseconds : remain) + 60_000;
+        setRemain(ms);
+        const t = new Date(Date.now() + ms);
+        restart(t, running);
       } else if (e.key === "-" || e.key === "_") {
         e.preventDefault();
-        setRemain((v) => Math.max(0, v - 60_000));
+        // subtract 1 minute (min 0)
+        const ms = Math.max(0, (running ? totalMilliseconds : remain) - 60_000);
+        setRemain(ms);
+        const t = new Date(Date.now() + ms);
+        restart(t, running && ms > 0);
       } else if (e.key === "1") setModeAndReset("focus");
       else if (e.key === "2") setModeAndReset("short");
       else if (e.key === "3") setModeAndReset("long");
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [pause, reset, running, setRemain, start, setModeAndReset]);
+  }, [
+    running,
+    totalMilliseconds,
+    remain,
+    doPause,
+    doStart,
+    doReset,
+    restart,
+    setRemain,
+    setModeAndReset,
+  ]);
 
+  /* --------- stats --------- */
   const stats = useMemo(() => {
     const byToday = history.filter(
       (h) => todayKey(new Date(h.endedAt)) === todayKey()
@@ -400,6 +460,7 @@ function PomodoroInner() {
     const focusMsWeek = byWeek
       .filter((h) => h.mode === "focus")
       .reduce((a, b) => a + (b.endedAt - b.startedAt), 0);
+
     return {
       todayMin: Math.round(focusMsToday / 60000),
       weekMin: Math.round(focusMsWeek / 60000),
@@ -407,9 +468,15 @@ function PomodoroInner() {
     };
   }, [history]);
 
-  const progress = 1 - Math.max(0, remain) / baseDuration;
-  const circumference = 2 * Math.PI * 120;
+  /* ring progress */
+  const msLeft = running ? totalMilliseconds : remain;
+  const progress = 1 - Math.max(0, msLeft) / baseDuration;
+  const circumference = 2 * Math.PI * 120; // r=120
+
+  /* active task */
   const activeTask = tasks.find((t) => t.id === taskId) || null;
+
+  /* -------------------- UI -------------------- */
 
   return (
     <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
@@ -426,10 +493,9 @@ function PomodoroInner() {
                 <>
                   Working on:{" "}
                   <span className="font-medium">{activeTask.title}</span>{" "}
-                  <Badge
-                    variant="outline"
-                    className="ml-1"
-                  >{`${activeTask.completed}/${activeTask.estimate}`}</Badge>
+                  <Badge variant="outline" className="ml-1">
+                    {`${activeTask.completed}/${activeTask.estimate}`}
+                  </Badge>
                 </>
               ) : (
                 <>Pick or add a task to stay focused.</>
@@ -488,10 +554,11 @@ function PomodoroInner() {
                   }}
                 />
               </svg>
+
               <div className="absolute inset-0 grid place-items-center">
                 <div className="text-center">
                   <div className="text-5xl font-bold tabular-nums md:text-6xl">
-                    {mmssFromMs(remain)}
+                    {mmssFromMs(msLeft)}
                   </div>
                   <div className="mt-1 text-xs uppercase tracking-wide text-muted-foreground">
                     {mode === "focus"
@@ -508,14 +575,14 @@ function PomodoroInner() {
             <div className="flex flex-col items-center gap-2 md:items-stretch">
               <div className="flex flex-wrap items-center justify-center gap-2">
                 {!running ? (
-                  <Button size="lg" onClick={start} className="gap-2">
+                  <Button size="lg" onClick={doStart} className="gap-2">
                     <Play className="h-5 w-5" />
                     Start
                   </Button>
                 ) : (
                   <Button
                     size="lg"
-                    onClick={pause}
+                    onClick={doPause}
                     variant="secondary"
                     className="gap-2"
                   >
@@ -523,7 +590,7 @@ function PomodoroInner() {
                     Pause
                   </Button>
                 )}
-                <Button variant="outline" onClick={reset} className="gap-2">
+                <Button variant="outline" onClick={doReset} className="gap-2">
                   <RotateCcw className="h-4 w-4" />
                   Reset
                 </Button>
@@ -540,14 +607,24 @@ function PomodoroInner() {
               <div className="mt-2 flex items-center justify-center gap-2">
                 <Button
                   variant="ghost"
-                  onClick={() => setRemain((v) => Math.max(0, v - 60_000))}
+                  onClick={() => {
+                    const ms = Math.max(0, msLeft - 60_000);
+                    setRemain(ms);
+                    const t = new Date(Date.now() + ms);
+                    restart(t, running && ms > 0);
+                  }}
                 >
                   <Minus className="h-4 w-4" />
                 </Button>
                 <span className="text-xs text-muted-foreground">± 1 min</span>
                 <Button
                   variant="ghost"
-                  onClick={() => setRemain((v) => v + 60_000)}
+                  onClick={() => {
+                    const ms = msLeft + 60_000;
+                    setRemain(ms);
+                    const t = new Date(Date.now() + ms);
+                    restart(t, running);
+                  }}
                 >
                   <Plus className="h-4 w-4" />
                 </Button>
@@ -596,6 +673,7 @@ function PomodoroInner() {
 }
 
 /* -------------------- UI Pieces -------------------- */
+
 function ModeChip({
   label,
   active,
@@ -774,6 +852,7 @@ function ToggleRow({
 }
 
 /* Tasks */
+
 function TasksCard({
   tasks,
   activeTaskId,
@@ -806,6 +885,7 @@ function TasksCard({
 
   const setDone = (id: string, value: boolean) =>
     onChange(tasks.map((t) => (t.id === id ? { ...t, done: value } : t)));
+
   const remove = (id: string) => onChange(tasks.filter((t) => t.id !== id));
 
   return (
@@ -818,6 +898,7 @@ function TasksCard({
         <CardDescription>Track what you’ll focus on.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
+        {/* add */}
         <div className="flex flex-col gap-2 sm:flex-row">
           <Input
             placeholder="Add a task…"
@@ -839,6 +920,7 @@ function TasksCard({
           </div>
         </div>
 
+        {/* list */}
         <div className="space-y-2">
           {tasks.length === 0 && (
             <p className="text-sm text-muted-foreground">No tasks yet.</p>
@@ -901,8 +983,10 @@ function TasksCard({
 }
 
 /* History */
+
 function HistoryCard({ history }: { history: HistoryItem[] }) {
   const byRecent = [...history].reverse().slice(0, 20);
+
   return (
     <Card>
       <CardHeader>

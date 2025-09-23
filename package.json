@@ -112,6 +112,7 @@
     "react-player": "^3.3.1",
     "react-quizlet-flashcard": "^4.0.22",
     "react-resize-detector": "^12.3.0",
+    "react-timer-hook": "^4.0.5",
     "reactflow": "^11.11.4",
     "recharts": "2.15.4",
     "rehype-highlight": "^7.0.2",

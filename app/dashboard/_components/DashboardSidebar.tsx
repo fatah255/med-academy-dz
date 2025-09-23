@@ -15,6 +15,7 @@ import {
   IconGift,
   IconHistory,
   IconBrain,
+  IconTimeDuration30,
 } from "@tabler/icons-react";
 
 import { NavMain } from "@/components/sidebar/nav-main";
@@ -63,6 +64,11 @@ const data = {
       title: "History",
       url: "/dashboard/attempts",
       icon: IconHistory,
+    },
+    {
+      title: "Timer",
+      url: "/dashboard/pomodoro",
+      icon: IconTimeDuration30,
     },
     {
       title: "Drives",
