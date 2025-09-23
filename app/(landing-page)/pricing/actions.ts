@@ -38,7 +38,7 @@ const YEAR_TO_LEVEL: Record<number, Level> = {
 };
 
 function calcBaseMonthly(planId: "without-ai" | "with-ai", yearNum: number) {
-  if (planId === "without-ai") return yearNum > 1 ? 99 : 149; // DZD
+  if (planId === "without-ai") return yearNum > 1 ? 29.9 : 34.9; // DZD
   return yearNum > 1 ? 149 : 199; // DZD
 }
 function totalAmount(
