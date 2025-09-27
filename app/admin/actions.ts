@@ -277,8 +277,6 @@ export async function getQuizRevenueLast30DaysFatah(): Promise<number> {
     where: {
       status: "paid", // adjust if you use another success status
       createdAt: { gte: since },
-      quizId: { not: null }, // it's a quiz enrollment
-      courseId: null, // and NOT a course enrollment
     },
     _sum: {
       amount: true, // <<< change to your column name if needed
