@@ -34,6 +34,7 @@ export async function getEnrolledQuizzes() {
               qcm: {
                 select: {
                   id: true,
+                  examYear: true,
                 },
               },
             },
@@ -64,6 +65,7 @@ export async function getEnrolledQuizzes() {
           qcm: {
             select: {
               id: true,
+              examYear: true,
               question: true,
               answers: {
                 select: {

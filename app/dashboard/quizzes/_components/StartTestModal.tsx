@@ -1,3 +1,4 @@
+// StartTestModal.tsx
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
@@ -34,36 +35,53 @@ import { useDirection } from "@radix-ui/react-direction";
 import { toast } from "sonner";
 import { RiCheckboxCircleFill } from "@remixicon/react";
 
-type CoursOption = {
-  id: string;
-  title: string;
-  questionCount?: number | null;
-};
+type CoursOption = { id: string; title: string; questionCount?: number | null };
 
 export default function StartTest({
   totalQuestions,
   quizId,
   coursOptions,
+  yearIndex, // <- { [courseId]: { [year]: count } }
+  globalMinYear, // <- number | undefined
+  globalMaxYear, // <- number | undefined
 }: {
   totalQuestions: number;
   quizId: string;
   coursOptions: CoursOption[];
+  yearIndex: Record<string, Record<number, number>>;
+  globalMinYear?: number;
+  globalMaxYear?: number;
 }) {
   const [open, setOpen] = useState(false);
   const router = useRouter();
   const direction = useDirection();
 
-  const FormSchema = z.object({
-    numberOfQuestions: z
-      .number()
-      .int("Must be an integer")
-      .min(0, "Number of questions cannot be negative")
-      .max(
-        totalQuestions,
-        `Number of questions cannot exceed ${totalQuestions}`
-      ),
-    coursIds: z.array(z.string()).min(1, "Select at least one cours"),
-  });
+  const hasYearData =
+    typeof globalMinYear === "number" && typeof globalMaxYear === "number";
+
+  const FormSchema = z
+    .object({
+      numberOfQuestions: z
+        .number()
+        .int("Must be an integer")
+        .min(0, "Number of questions cannot be negative")
+        .max(
+          totalQuestions,
+          `Number of questions cannot exceed ${totalQuestions}`
+        ),
+      coursIds: z.array(z.string()).min(1, "Select at least one cours"),
+      yearFrom: z.number().optional(),
+      yearTo: z.number().optional(),
+    })
+    .refine(
+      (val) => {
+        if (!hasYearData) return true;
+        if (val.yearFrom == null && val.yearTo == null) return true;
+        if (val.yearFrom == null || val.yearTo == null) return false;
+        return val.yearFrom <= val.yearTo;
+      },
+      { message: "Invalid year range", path: ["yearTo"] }
+    );
 
   type FormValues = z.infer<typeof FormSchema>;
 
@@ -72,36 +90,62 @@ export default function StartTest({
     defaultValues: {
       numberOfQuestions: 0,
       coursIds: [],
+      yearFrom: hasYearData ? globalMinYear : undefined,
+      yearTo: hasYearData ? globalMaxYear : undefined,
     },
     mode: "onSubmit",
   });
 
-  // Live watch cours selection
   const watchedCoursIds =
     useWatch({ control: form.control, name: "coursIds" }) ?? [];
+  const yearFrom = useWatch({ control: form.control, name: "yearFrom" });
+  const yearTo = useWatch({ control: form.control, name: "yearTo" });
 
-  // Helpers for "Select all"
+  // Select-all helpers
   const allIds = useMemo(() => coursOptions.map((c) => c.id), [coursOptions]);
   const allSelected =
     allIds.length > 0 && watchedCoursIds.length === allIds.length;
   const someSelected = watchedCoursIds.length > 0 && !allSelected;
 
-  // Compute dynamic cap from selected cours
+  // Cap based on selected courses AND selected year range (if any)
   const dynamicCap = useMemo(() => {
-    const picks = watchedCoursIds ?? [];
-    const hasPerCoursCounts = coursOptions.some(
-      (c) => typeof c.questionCount === "number"
+    // no courses selected
+    if (!watchedCoursIds.length) return 0;
+
+    // If no year data at all -> fall back to total selected counts
+    const anyYearData = watchedCoursIds.some(
+      (cid) => Object.keys(yearIndex[cid] ?? {}).length
     );
+    if (!anyYearData) {
+      return coursOptions
+        .filter((c) => watchedCoursIds.includes(c.id))
+        .reduce((acc, c) => acc + (c.questionCount ?? 0), 0);
+    }
 
-    if (!picks.length) return 0;
-    if (!hasPerCoursCounts) return totalQuestions;
+    // If range not set → treat as all available years
+    const from = typeof yearFrom === "number" ? yearFrom : globalMinYear!;
+    const to = typeof yearTo === "number" ? yearTo : globalMaxYear!;
 
-    return coursOptions
-      .filter((c) => picks.includes(c.id))
-      .reduce((acc, c) => acc + (c.questionCount ?? 0), 0);
-  }, [coursOptions, totalQuestions, watchedCoursIds]);
+    let sum = 0;
+    for (const cid of watchedCoursIds) {
+      const perYear = yearIndex[cid] ?? {};
+      for (const [yStr, cnt] of Object.entries(perYear)) {
+        const y = Number(yStr);
+        if (y >= from && y <= to) sum += cnt;
+      }
+    }
+    return sum;
+  }, [
+    watchedCoursIds,
+    coursOptions,
+    yearIndex,
+    yearFrom,
+    yearTo,
+    globalMinYear,
+    globalMaxYear,
+  ]);
 
-  // Always set the input to the CURRENT MAX whenever selection changes
+  // Keep input synced with cap
   useEffect(() => {
     form.setValue("numberOfQuestions", dynamicCap, { shouldValidate: true });
   }, [dynamicCap, form]);
@@ -109,12 +153,19 @@ export default function StartTest({
   function onSubmit(values: FormValues) {
     if (values.numberOfQuestions > dynamicCap) {
       toast.error(
-        `You requested ${values.numberOfQuestions} questions but the selected cours hold only ${dynamicCap}.`
+        `You requested ${values.numberOfQuestions} questions but the selected filters hold only ${dynamicCap}.`
       );
       return;
     }
-
     const coursParam = values.coursIds.join(",");
+    const params = new URLSearchParams({
+      ques: String(values.numberOfQuestions),
+      cours: coursParam,
+    });
+    if (hasYearData && values.yearFrom != null && values.yearTo != null) {
+      params.set("yearFrom", String(values.yearFrom));
+      params.set("yearTo", String(values.yearTo));
+    }
 
     toast.custom((t) => (
       <Alert variant="mono" icon="primary" onClose={() => toast.dismiss(t)}>
@@ -125,32 +176,30 @@ export default function StartTest({
       </Alert>
     ));
 
-    router.push(
-      `/dashboard/quizzes/${quizId}?ques=${
-        values.numberOfQuestions
-      }&cours=${encodeURIComponent(coursParam)}`
-    );
-
+    router.push(`/dashboard/quizzes/${quizId}?${params.toString()}`);
     form.reset();
     setOpen(false);
   }
 
-  // Handlers for master controls
-  const handleSelectAll = () => {
+  // Master controls
+  const handleSelectAll = () =>
     form.setValue("coursIds", allIds, {
       shouldValidate: true,
       shouldDirty: true,
     });
-  };
-  const handleClearAll = () => {
+  const handleClearAll = () =>
     form.setValue("coursIds", [], { shouldValidate: true, shouldDirty: true });
-  };
-  const handleToggleMaster = (v: boolean | "indeterminate") => {
-    const checked = v === true;
-    form.setValue("coursIds", checked ? allIds : [], {
+  const handleToggleMaster = (v: boolean | "indeterminate") =>
+    form.setValue("coursIds", v === true ? allIds : [], {
       shouldValidate: true,
       shouldDirty: true,
     });
+
+  // Quick year helpers
+  const handleAllYears = () => {
+    if (!hasYearData) return;
+    form.setValue("yearFrom", globalMinYear, { shouldValidate: true });
+    form.setValue("yearTo", globalMaxYear, { shouldValidate: true });
   };
 
   return (
@@ -165,12 +214,102 @@ export default function StartTest({
             <DialogHeader>
               <DialogTitle>Start Test</DialogTitle>
               <DialogDescription>
-                Choose the number of questions and which cours to include.
+                Choose the number of questions, courses, and (optionally) a year
+                range.
               </DialogDescription>
             </DialogHeader>
 
             <DialogBody className="space-y-6">
-              {/* Number of questions (auto-fills with max) */}
+              {/* Year Range (optional; only if we have year data) */}
+              {hasYearData && (
+                <div className="grid grid-cols-2 gap-3">
+                  <FormField
+                    control={form.control}
+                    name="yearFrom"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>From (year)</FormLabel>
+                        <FormControl>
+                          <Input
+                            type="number"
+                            inputMode="numeric"
+                            min={globalMinYear}
+                            max={globalMaxYear}
+                            value={field.value ?? ""}
+                            onChange={(e) =>
+                              field.onChange(
+                                e.target.value === ""
+                                  ? undefined
+                                  : Number(e.target.value)
+                              )
+                            }
+                          />
+                        </FormControl>
+                        <FormDescription>
+                          Available: {globalMinYear}–{globalMaxYear}
+                        </FormDescription>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="yearTo"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>To (year)</FormLabel>
+                        <FormControl>
+                          <Input
+                            type="number"
+                            inputMode="numeric"
+                            min={globalMinYear}
+                            max={globalMaxYear}
+                            value={field.value ?? ""}
+                            onChange={(e) =>
+                              field.onChange(
+                                e.target.value === ""
+                                  ? undefined
+                                  : Number(e.target.value)
+                              )
+                            }
+                          />
+                        </FormControl>
+                        <FormDescription>
+                          Leave empty = all years
+                        </FormDescription>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <div className="col-span-2 flex items-center gap-2">
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant="secondary"
+                      onClick={handleAllYears}
+                    >
+                      All years
+                    </Button>
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant="ghost"
+                      onClick={() => {
+                        form.setValue("yearFrom", undefined, {
+                          shouldValidate: true,
+                        });
+                        form.setValue("yearTo", undefined, {
+                          shouldValidate: true,
+                        });
+                      }}
+                    >
+                      Clear range
+                    </Button>
+                  </div>
+                </div>
+              )}
+
+              {/* Number of questions (auto-fills with cap) */}
               <FormField
                 control={form.control}
                 name="numberOfQuestions"
@@ -183,17 +322,10 @@ export default function StartTest({
                         inputMode="numeric"
                         min={0}
                         max={dynamicCap}
-                        value={
-                          field.value === undefined || field.value === null
-                            ? ""
-                            : String(field.value)
-                        }
+                        value={field.value ?? ""}
                         onChange={(e) => {
                           const v = e.target.value;
-                          if (v === "") {
-                            field.onChange(0);
-                            return;
-                          }
+                          if (v === "") return field.onChange(0);
                           const n = Number(v);
                           const clamped = Number.isNaN(n)
                             ? 0
@@ -208,7 +340,7 @@ export default function StartTest({
                 )}
               />
 
-              {/* Multi-select cours */}
+              {/* Courses multi-select (with Select All) */}
               <FormField
                 control={form.control}
                 name="coursIds"
@@ -217,7 +349,6 @@ export default function StartTest({
                     <div className="flex items-center justify-between">
                       <FormLabel>Select cours (multiple)</FormLabel>
                       <div className="flex items-center gap-2">
-                        {/* Master checkbox with indeterminate */}
                         <div className="flex items-center gap-2">
                           <Checkbox
                             checked={
@@ -237,8 +368,6 @@ export default function StartTest({
                               : "None selected"}
                           </span>
                         </div>
-
-                        {/* Quick actions */}
                         <Button
                           type="button"
                           size="sm"
@@ -267,6 +396,21 @@ export default function StartTest({
 
                       {coursOptions.map((c) => {
                         const checked = watchedCoursIds.includes(c.id);
+                        // Optional: show available count inside current year range
+                        const perYear = yearIndex[c.id] ?? {};
+                        const from =
+                          typeof yearFrom === "number"
+                            ? yearFrom
+                            : globalMinYear!;
+                        const to =
+                          typeof yearTo === "number" ? yearTo : globalMaxYear!;
+                        const rangeCount = hasYearData
+                          ? Object.entries(perYear).reduce((acc, [ys, cnt]) => {
+                              const y = Number(ys);
+                              return y >= from && y <= to ? acc + cnt : acc;
+                            }, 0)
+                          : c.questionCount ?? 0;
+
                         return (
                           <div
                             key={c.id}
@@ -276,10 +420,9 @@ export default function StartTest({
                               <Checkbox
                                 checked={checked}
                                 onCheckedChange={(v) => {
-                                  const next = v === true; // coerce
                                   const prev = form.getValues("coursIds");
-                                  if (next) {
-                                    if (!prev.includes(c.id)) {
+                                  if (v === true) {
+                                    if (!prev.includes(c.id))
                                       form.setValue(
                                         "coursIds",
                                         [...prev, c.id],
@@ -288,7 +431,6 @@ export default function StartTest({
                                           shouldDirty: true,
                                         }
                                       );
-                                    }
                                   } else {
                                     form.setValue(
                                       "coursIds",
@@ -302,15 +444,13 @@ export default function StartTest({
                                 }}
                               />
                             </FormControl>
-
                             <div className="grid gap-0.5 leading-tight">
                               <span className="text-sm">{c.title}</span>
-                              {typeof c.questionCount === "number" && (
-                                <span className="text-xs text-muted-foreground">
-                                  {c.questionCount} question
-                                  {c.questionCount === 1 ? "" : "s"}
-                                </span>
-                              )}
+                              <span className="text-xs text-muted-foreground">
+                                {rangeCount} question
+                                {rangeCount === 1 ? "" : "s"}
+                                {hasYearData && ` in range`}
+                              </span>
                             </div>
                           </div>
                         );
@@ -318,7 +458,8 @@ export default function StartTest({
                     </div>
 
                     <FormDescription>
-                      Pick one or more cours to pull questions from.
+                      Pick one or more cours. If you set a year range, the cap
+                      and counts adapt automatically.
                     </FormDescription>
                     <FormMessage />
                   </FormItem>

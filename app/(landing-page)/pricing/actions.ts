@@ -36,6 +36,10 @@ const YEAR_TO_LEVEL: Record<number, Level> = {
   5: "FIFTH_YEAR",
   6: "SIXTH_YEAR",
 };
+function baseMonthly(plan: "without-ai" | "with-ai", year: number) {
+  if (plan === "without-ai") return year > 1 ? 29.9 : 34.9;
+  return year > 1 ? 149 : 199;
+}
 
 function calcBaseMonthly(planId: "without-ai" | "with-ai", yearNum: number) {
   if (planId === "without-ai") return yearNum > 1 ? 29.9 : 34.9; // DZD
