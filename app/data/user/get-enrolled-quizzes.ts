@@ -30,6 +30,7 @@ export async function getEnrolledQuizzes() {
             select: {
               title: true,
               id: true,
+
               qcm: {
                 select: {
                   id: true,

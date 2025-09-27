@@ -41,13 +41,37 @@ function calcBaseMonthly(planId: "without-ai" | "with-ai", yearNum: number) {
   if (planId === "without-ai") return yearNum > 1 ? 29.9 : 34.9; // DZD
   return yearNum > 1 ? 149 : 199; // DZD
 }
+// UI helper
+function priceText(
+  plan: "without-ai" | "with-ai",
+  billing: Billing,
+  year: number
+) {
+  const base = baseMonthly(plan, year);
+  if (plan === "with-ai") {
+    if (billing === "monthly") return `${base} DZD`;
+    return `${year > 1 ? 999 : 1499} DZD`;
+  }
+  // without-ai
+  return billing === "monthly"
+    ? `${base} DZD`
+    : `${base * YEARLY_CHARGE_MONTHS} DZD`;
+}
+
+// Server checkout math
 function totalAmount(
   planId: "without-ai" | "with-ai",
   billing: Billing,
   yearNum: number
 ) {
   const base = calcBaseMonthly(planId, yearNum);
-  if (planId === "with-ai") return yearNum > 1 ? 999 : 1499;
+
+  if (planId === "with-ai") {
+    if (billing === "monthly") return base; // 199 or 149
+    return yearNum > 1 ? 999 : 1499; // yearly promo
+  }
+
+  // without-ai
   return billing === "monthly" ? base : base * YEARLY_CHARGE_MONTHS;
 }
 

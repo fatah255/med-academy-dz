@@ -91,7 +91,7 @@ export default async function LandingPage() {
                     >
                       Get started with courses
                     </Link>
-                    <Link href="/quizzes" className="text-sm font-semibold">
+                    <Link href="/pricing" className="text-sm font-semibold">
                       Or with Quizzes <span aria-hidden="true">→</span>
                     </Link>
                   </div>

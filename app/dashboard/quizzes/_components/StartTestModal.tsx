@@ -70,14 +70,21 @@ export default function StartTest({
   const form = useForm<FormValues>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      numberOfQuestions: 0, // <- default to 0
+      numberOfQuestions: 0,
       coursIds: [],
     },
     mode: "onSubmit",
   });
 
   // Live watch cours selection
-  const watchedCoursIds = useWatch({ control: form.control, name: "coursIds" });
+  const watchedCoursIds =
+    useWatch({ control: form.control, name: "coursIds" }) ?? [];
+
+  // Helpers for "Select all"
+  const allIds = useMemo(() => coursOptions.map((c) => c.id), [coursOptions]);
+  const allSelected =
+    allIds.length > 0 && watchedCoursIds.length === allIds.length;
+  const someSelected = watchedCoursIds.length > 0 && !allSelected;
 
   // Compute dynamic cap from selected cours
   const dynamicCap = useMemo(() => {
@@ -86,13 +93,9 @@ export default function StartTest({
       (c) => typeof c.questionCount === "number"
     );
 
-    // If no cours selected: cap is 0
     if (!picks.length) return 0;
-
-    // If no per-cours counts provided: cap is the global total
     if (!hasPerCoursCounts) return totalQuestions;
 
-    // Otherwise sum the selected cours counts
     return coursOptions
       .filter((c) => picks.includes(c.id))
       .reduce((acc, c) => acc + (c.questionCount ?? 0), 0);
@@ -104,7 +107,6 @@ export default function StartTest({
   }, [dynamicCap, form]);
 
   function onSubmit(values: FormValues) {
-    // Guard against exceeding dynamic cap
     if (values.numberOfQuestions > dynamicCap) {
       toast.error(
         `You requested ${values.numberOfQuestions} questions but the selected cours hold only ${dynamicCap}.`
@@ -132,6 +134,24 @@ export default function StartTest({
     form.reset();
     setOpen(false);
   }
+
+  // Handlers for master controls
+  const handleSelectAll = () => {
+    form.setValue("coursIds", allIds, {
+      shouldValidate: true,
+      shouldDirty: true,
+    });
+  };
+  const handleClearAll = () => {
+    form.setValue("coursIds", [], { shouldValidate: true, shouldDirty: true });
+  };
+  const handleToggleMaster = (v: boolean | "indeterminate") => {
+    const checked = v === true;
+    form.setValue("coursIds", checked ? allIds : [], {
+      shouldValidate: true,
+      shouldDirty: true,
+    });
+  };
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -194,9 +214,51 @@ export default function StartTest({
                 name="coursIds"
                 render={() => (
                   <FormItem>
-                    <FormLabel>Select cours (multiple)</FormLabel>
+                    <div className="flex items-center justify-between">
+                      <FormLabel>Select cours (multiple)</FormLabel>
+                      <div className="flex items-center gap-2">
+                        {/* Master checkbox with indeterminate */}
+                        <div className="flex items-center gap-2">
+                          <Checkbox
+                            checked={
+                              allSelected
+                                ? true
+                                : someSelected
+                                ? "indeterminate"
+                                : false
+                            }
+                            onCheckedChange={handleToggleMaster}
+                          />
+                          <span className="text-sm text-muted-foreground">
+                            {allSelected
+                              ? "All selected"
+                              : someSelected
+                              ? "Some selected"
+                              : "None selected"}
+                          </span>
+                        </div>
 
-                    <div className="max-h-60 overflow-auto rounded-md border p-2 space-y-2">
+                        {/* Quick actions */}
+                        <Button
+                          type="button"
+                          size="sm"
+                          variant="secondary"
+                          onClick={handleSelectAll}
+                        >
+                          Select all
+                        </Button>
+                        <Button
+                          type="button"
+                          size="sm"
+                          variant="ghost"
+                          onClick={handleClearAll}
+                        >
+                          Clear
+                        </Button>
+                      </div>
+                    </div>
+
+                    <div className="max-h-60 overflow-auto rounded-md border p-2 space-y-2 mt-2">
                       {coursOptions.length === 0 && (
                         <p className="px-2 py-1 text-sm text-muted-foreground">
                           No cours available.
@@ -204,8 +266,7 @@ export default function StartTest({
                       )}
 
                       {coursOptions.map((c) => {
-                        const checked =
-                          watchedCoursIds?.includes(c.id) ?? false;
+                        const checked = watchedCoursIds.includes(c.id);
                         return (
                           <div
                             key={c.id}
@@ -215,8 +276,9 @@ export default function StartTest({
                               <Checkbox
                                 checked={checked}
                                 onCheckedChange={(v) => {
+                                  const next = v === true; // coerce
                                   const prev = form.getValues("coursIds");
-                                  if (v) {
+                                  if (next) {
                                     if (!prev.includes(c.id)) {
                                       form.setValue(
                                         "coursIds",
