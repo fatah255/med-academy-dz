@@ -10,6 +10,7 @@ import {
   countNewUsersLastMonth,
   countTotalUsers,
   getQuizRevenueLast30Days,
+  getQuizRevenueLast30DaysFatah,
   totalCourses,
   totalRevenueLast30Days,
   totalRevenueLast30DaysUser,
@@ -31,6 +32,24 @@ export async function SectionCards({ email }: { email?: string }) {
             <CardDescription>Total SignUps</CardDescription>
             <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
               {await countTotalUsers()}
+            </CardTitle>
+          </CardHeader>
+          <CardFooter className="flex-col items-start gap-1.5 text-sm">
+            <p className="text-muted-foreground">
+              Registered users in the platform{" "}
+            </p>
+            <div className="line-clamp-1 flex gap-2 font-medium">
+              + {await countNewUsersLastMonth()} in the last month
+            </div>
+          </CardFooter>
+        </Card>
+      )}
+      {email === "a.lebkara@esi-sba.dz" && (
+        <Card className="@container/card">
+          <CardHeader>
+            <CardDescription>Fatah's revenue</CardDescription>
+            <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+              {await getQuizRevenueLast30DaysFatah()}
             </CardTitle>
           </CardHeader>
           <CardFooter className="flex-col items-start gap-1.5 text-sm">

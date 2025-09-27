@@ -269,3 +269,23 @@ export async function getQuizRevenueLast30Days(): Promise<number> {
   const total = agg._sum.amount ?? 0;
   return Number(total); // Decimal -> number (okay for totals)
 }
+
+export async function getQuizRevenueLast30DaysFatah(): Promise<number> {
+  const since = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+
+  const agg = await prisma.enrollment.aggregate({
+    where: {
+      status: "paid", // adjust if you use another success status
+      createdAt: { gte: since },
+      quizId: { not: null }, // it's a quiz enrollment
+      courseId: null, // and NOT a course enrollment
+    },
+    _sum: {
+      amount: true, // <<< change to your column name if needed
+    },
+  });
+
+  // If you store cents as an integer, remove the division.
+  const total = agg._sum.amount ?? 0;
+  return Number(total); // Decimal -> number (okay for totals)
+}
