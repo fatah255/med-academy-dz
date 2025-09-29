@@ -194,7 +194,7 @@ export async function POST(req: NextRequest) {
         prisma.enrollment.update({
           where: { id: row.id },
           data: {
-            status: "paid",
+            status: "PAID",
             paidAt: now,
             expiresAt: addMonths(now, row.months ?? 1), // default to 1 if missing
             // OPTIONAL: treat this payment as a renewal "start" timestamp

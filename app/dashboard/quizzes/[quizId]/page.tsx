@@ -73,6 +73,7 @@ export default async function Page({ params, searchParams }: PageProps) {
               comment: true,
               typeQuestionId: true,
               type: true,
+              cours: true,
               examYear: true,
               answers: {
                 select: { text: true, isCorrect: true },
@@ -82,6 +83,7 @@ export default async function Page({ params, searchParams }: PageProps) {
                 orderBy: [{ createdAt: "desc" }, { position: "asc" }],
                 select: {
                   id: true,
+                  cours: true,
                   question: true,
                   comment: true,
                   type: true,
@@ -126,12 +128,14 @@ export default async function Page({ params, searchParams }: PageProps) {
     type: q.type ?? undefined,
     typeId: q.typeQuestionId ?? undefined,
     comment: q.comment ?? undefined,
+    cours: q.cours?.title,
     options: q.answers.map((a) => a.text),
     correctIndices: q.answers
       .map((a, i) => (a.isCorrect ? i : -1))
       .filter((i) => i >= 0),
     subQuestions: (q.other_qcm ?? []).map((sq) => ({
       id: sq.id,
+      cours: sq.cours?.title,
       question: sq.question,
       typeId: sq.typeQuestionId ?? undefined,
       comment: sq.comment ?? undefined,

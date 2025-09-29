@@ -62,6 +62,7 @@ type UISubQuestion = {
   year?: number | null;
   type?: string | null;
   typeId?: number | null;
+  cours?: String | null;
 };
 
 type UIQuestion = {
@@ -70,7 +71,7 @@ type UIQuestion = {
   options: string[];
   correctIndices: number[];
   comment?: string | null;
-
+  cours?: String | null;
   year?: number | null;
   type?: string | null;
   typeId?: number | null;
@@ -623,6 +624,11 @@ const MCQ: React.FC<Props> = ({ game }) => {
             {currentQuestion?.year ? (
               <span className="rounded border border-slate-700/60 bg-slate-800/40 px-2 py-0.5 text-xs">
                 {currentQuestion.year}
+              </span>
+            ) : null}
+            {currentQuestion?.cours ? (
+              <span className="rounded border border-slate-700/60 bg-slate-800/40 px-2 py-0.5 text-xs">
+                {currentQuestion.cours}
               </span>
             ) : null}
             {currentQuestion?.type ? (
