@@ -5,15 +5,11 @@ import { prisma } from "@/lib/db";
 export async function getEnrolledQuizzes() {
   const user = await requireUser();
 
-  const data = await prisma.enrollment.findMany({
+  const paidEnrollments = await prisma.enrollment.findMany({
     where: {
       userId: user.user.id,
-      quizId: {
-        not: null,
-      },
-      status: {
-        in: ["PAID", "paid"],
-      },
+      quizId: { not: null },
+      status: { in: ["PAID", "paid"] },
     },
     include: {
       quiz: {
@@ -21,76 +17,32 @@ export async function getEnrolledQuizzes() {
           id: true,
           title: true,
           description: true,
-
           fileKey: true,
           slug: true,
           level: true,
           category: true,
-          cours: {
-            select: {
-              title: true,
-              id: true,
-
-              qcm: {
-                select: {
-                  id: true,
-                  examYear: true,
-                },
-              },
-            },
-          },
+          // ⚠️ No cours/qcm here — defer to modal fetch
         },
       },
     },
   });
 
   const freeQuizzes = await prisma.quiz.findMany({
-    where: {
-      price: 0,
-    },
-
+    where: { price: 0 },
     select: {
       id: true,
       title: true,
       description: true,
-
       fileKey: true,
       slug: true,
       level: true,
       category: true,
-      cours: {
-        select: {
-          id: true,
-          title: true,
-          qcm: {
-            select: {
-              id: true,
-              examYear: true,
-              question: true,
-              answers: {
-                select: {
-                  id: true,
-                  position: true,
-                  text: true,
-                  isCorrect: true,
-                },
-              },
-            },
-          },
-        },
-      },
+      // ⚠️ No cours/qcm here either
     },
   });
 
-  const freeQuizzesObjects = freeQuizzes.map((q) => ({
-    quiz: {
-      ...q,
-    },
-  }));
-
-  const finalData = [...data, ...freeQuizzesObjects];
-
-  return finalData;
+  const freeQuizzesObjects = freeQuizzes.map((q) => ({ quiz: { ...q } }));
+  return [...paidEnrollments, ...freeQuizzesObjects];
 }
 
 export type EnrolledQuizType = Awaited<

@@ -55,7 +55,7 @@ async function RenderQuizzes() {
             {enrolledQuizzes.map((quiz) => (
               <DashboardQuizCard
                 key={quiz?.quiz?.id}
-                userId={session.user.id}
+                // userId={session.user.id}
                 quiz={quiz}
               />
             ))}
@@ -64,17 +64,17 @@ async function RenderQuizzes() {
       ) : (
         <div className="flex flex-1 flex-col h-full items-center justify-center rounded-md border border-dashed p-8 text-center animate-in fade-in-50">
           <Ban className="mb-4 h-12 w-12 text-primary" />
-          <h2 className="mb-2 text-lg font-semibold">No Courses Available</h2>
+          <h2 className="mb-2 text-lg font-semibold">No quizzes Available</h2>
           <p className="text-sm text-muted-foreground">
-            You didn't enroll in any course yet.
+            You didn't enroll in any quiz yet.
           </p>
           <Link
-            href="/courses"
+            href="/quizzes"
             className={buttonVariants({
               className: "mt-4 w-full cursor-pointer",
             })}
           >
-            Explore Courses
+            Explore Quizzes
           </Link>
         </div>
       )}

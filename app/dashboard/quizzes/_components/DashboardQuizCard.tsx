@@ -9,41 +9,16 @@ import { BookAIcon } from "lucide-react";
 import Image from "next/image";
 import StartTest from "./StartTestModal";
 
-const DashboardQuizCard = ({
-  quiz,
-}: {
-  quiz: EnrolledQuizType;
-  userId: string;
-}) => {
+const DashboardQuizCard = ({ quiz }: { quiz: EnrolledQuizType }) => {
   const level = quiz.quiz?.level.split("_").join(" ").toLowerCase();
   const thumbnailUrl = useConstructUrl(quiz.quiz?.fileKey || "");
-
-  // Build a per-course year index: { [courseId]: { [year]: count } }
-  const yearIndex: Record<string, Record<number, number>> = Object.fromEntries(
-    (quiz.quiz?.cours ?? []).map((c) => {
-      const counts: Record<number, number> = {};
-      for (const q of c.qcm ?? []) {
-        const y = q?.examYear;
-        if (typeof y === "number") {
-          counts[y] = (counts[y] ?? 0) + 1;
-        }
-      }
-      return [c.id, counts];
-    })
-  );
-
-  // Global min/max (only from items having examYear)
-  const allYears = Object.values(yearIndex).flatMap((m) =>
-    Object.keys(m).map(Number)
-  );
-  const globalMinYear = allYears.length ? Math.min(...allYears) : undefined;
-  const globalMaxYear = allYears.length ? Math.max(...allYears) : undefined;
 
   return (
     <Card className="group relative py-0 gap-0 space-y-3">
       <Badge className="absolute top-2 right-2 z-10 p-2 font-medium">
         {level}
       </Badge>
+
       <Image
         className="w-full rounded-t-xl h-full aspect-video object-cover"
         src={thumbnailUrl}
@@ -51,6 +26,7 @@ const DashboardQuizCard = ({
         width={600}
         height={400}
       />
+
       <CardContent className="p-4">
         <div className="font-medium text-lg line-clamp-2 group-hover:text-primary transition-colors">
           {quiz.quiz?.title}
@@ -65,24 +41,8 @@ const DashboardQuizCard = ({
           </div>
         </div>
 
-        <StartTest
-          totalQuestions={
-            quiz?.quiz?.cours
-              ?.map((c) => c.qcm.length)
-              .reduce((a, b) => a + b, 0) || 0
-          }
-          quizId={quiz?.quiz?.id as string}
-          coursOptions={
-            quiz?.quiz?.cours.map((c) => ({
-              id: c.id,
-              title: c.title,
-              questionCount: c.qcm.length,
-            })) || []
-          }
-          yearIndex={yearIndex}
-          globalMinYear={globalMinYear}
-          globalMaxYear={globalMaxYear}
-        />
+        {/* The modal will fetch details lazily when opened */}
+        <StartTest quizId={quiz?.quiz?.id as string} />
       </CardContent>
     </Card>
   );

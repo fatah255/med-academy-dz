@@ -158,7 +158,7 @@ const MCQ: React.FC<Props> = ({ game }) => {
     return () => clearInterval(id);
   }, [hasEnded]);
 
-  /* -------- Reset when navigating -------- */
+  /* -------- Reset when navigating (safety) -------- */
   React.useEffect(() => {
     setSubIndex(0);
     setSelectedChoices(new Set());
@@ -275,6 +275,7 @@ const MCQ: React.FC<Props> = ({ game }) => {
       game.questions.length,
       startedAt,
       allQcmIds,
+      session.data?.user.id,
     ]
   );
 
@@ -392,6 +393,11 @@ const MCQ: React.FC<Props> = ({ game }) => {
 
   /* -------- Next / Skip -------- */
   const handleNext = React.useCallback(() => {
+    // FIX: reset reveal state BEFORE navigating to prevent brief flash
+    setVerified(false);
+    setSelectedChoices(new Set());
+    setCommentOpen(false);
+
     if (isClinical) {
       const lastSub =
         subIndex === (currentQuestion.subQuestions?.length ?? 1) - 1;
@@ -466,6 +472,11 @@ const MCQ: React.FC<Props> = ({ game }) => {
   const jumpTo = React.useCallback(
     (i: number) => {
       if (i < 0 || i >= game.questions.length) return;
+      // FIX: reset immediately when jumping to avoid flash
+      setVerified(false);
+      setSelectedChoices(new Set());
+      setCommentOpen(false);
+      setSubIndex(0);
       setQuestionIndex(i);
       if (typeof window !== "undefined")
         window.scrollTo({ top: 0, behavior: "smooth" });
