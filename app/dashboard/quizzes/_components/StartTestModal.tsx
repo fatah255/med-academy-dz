@@ -48,47 +48,40 @@ type StartInfoPayload = {
 };
 
 /* ------------------ Cache helpers ------------------ */
-const CACHE_VERSION = "v1"; // bump to invalidate old cache
-const CACHE_TTL_MS = 1000 * 60 * 15; // 15 minutes
-
+const CACHE_VERSION = "v1";
+const CACHE_TTL_MS = 1000 * 60 * 15; // 15 min
 const cacheKey = (quizId: string) =>
   `quiz:start-info:${CACHE_VERSION}:${quizId}`;
-
 type CacheEnvelope = { ts: number; data: StartInfoPayload };
 
 function readCache(quizId: string): CacheEnvelope | null {
   if (typeof window === "undefined") return null;
   try {
     const raw = localStorage.getItem(cacheKey(quizId));
-    if (!raw) return null;
-    return JSON.parse(raw) as CacheEnvelope;
+    return raw ? (JSON.parse(raw) as CacheEnvelope) : null;
   } catch {
     return null;
   }
 }
-
 function writeCache(quizId: string, data: StartInfoPayload) {
   if (typeof window === "undefined") return;
   try {
-    const env: CacheEnvelope = { ts: Date.now(), data };
-    localStorage.setItem(cacheKey(quizId), JSON.stringify(env));
-  } catch {
-    // ignore quota/etc.
-  }
+    localStorage.setItem(
+      cacheKey(quizId),
+      JSON.stringify({ ts: Date.now(), data })
+    );
+  } catch {}
 }
-
-function isFresh(env: CacheEnvelope | null) {
-  if (!env) return false;
-  return Date.now() - env.ts < CACHE_TTL_MS;
-}
+const isFresh = (env: CacheEnvelope | null) =>
+  !!env && Date.now() - env.ts < CACHE_TTL_MS;
 
 /* =================================================== */
 
 export default function StartTest({ quizId }: { quizId: string }) {
   const [open, setOpen] = useState(false);
   const [fetched, setFetched] = useState<StartInfoPayload | null>(null);
-  const [loading, setLoading] = useState(false); // initial load
-  const [refreshing, setRefreshing] = useState(false); // background SWR
+  const [loading, setLoading] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [err, setErr] = useState<string | null>(null);
 
@@ -98,26 +91,22 @@ export default function StartTest({ quizId }: { quizId: string }) {
   /* --------------- Lazy load with cache --------------- */
   useEffect(() => {
     if (!open) return;
-
-    // If we already have data (from first open), do nothing.
     if (fetched || loading || refreshing) return;
 
     const cached = readCache(quizId);
+
     if (cached && isFresh(cached)) {
-      // Fresh cache: use immediately, no network required.
       setFetched(cached.data);
-      // also hydrate the form defaults (below effect will run too)
       return;
     }
 
     if (cached && !isFresh(cached)) {
-      // Stale cache: use it now (instant UI), then revalidate in background.
       setFetched(cached.data);
       setRefreshing(true);
       fetch(`/api/quiz/start-info?quizId=${encodeURIComponent(quizId)}`)
         .then(async (r) => {
           if (!r.ok) throw new Error(await r.text());
-          return r.json() as Promise<StartInfoPayload>;
+          return (await r.json()) as StartInfoPayload;
         })
         .then((data) => {
           writeCache(quizId, data);
@@ -128,12 +117,11 @@ export default function StartTest({ quizId }: { quizId: string }) {
       return;
     }
 
-    // No cache at all: full load
     setLoading(true);
     fetch(`/api/quiz/start-info?quizId=${encodeURIComponent(quizId)}`)
       .then(async (r) => {
         if (!r.ok) throw new Error(await r.text());
-        return r.json() as Promise<StartInfoPayload>;
+        return (await r.json()) as StartInfoPayload;
       })
       .then((data) => {
         writeCache(quizId, data);
@@ -154,7 +142,6 @@ export default function StartTest({ quizId }: { quizId: string }) {
     typeof fetched?.globalMaxYear === "number"
       ? fetched!.globalMaxYear
       : undefined;
-
   const hasYearData =
     typeof globalMinYear === "number" && typeof globalMaxYear === "number";
 
@@ -178,7 +165,6 @@ export default function StartTest({ quizId }: { quizId: string }) {
       },
       { message: "Invalid year range", path: ["yearTo"] }
     );
-
   type FormValues = z.infer<typeof FormSchema>;
 
   const form = useForm<FormValues>({
@@ -192,7 +178,7 @@ export default function StartTest({ quizId }: { quizId: string }) {
     mode: "onSubmit",
   });
 
-  // When new data appears (from cache or network), seed form defaults
+  // Seed defaults whenever data arrives (from cache/network)
   useEffect(() => {
     if (!fetched) return;
     form.reset({
@@ -207,7 +193,8 @@ export default function StartTest({ quizId }: { quizId: string }) {
           ? fetched.globalMaxYear
           : undefined,
     });
-  }, [fetched]); // eslint-disable-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fetched]);
 
   const watchedCoursIds =
     useWatch({ control: form.control, name: "coursIds" }) ?? [];
@@ -270,7 +257,6 @@ export default function StartTest({ quizId }: { quizId: string }) {
       0,
       Math.min(values.numberOfQuestions ?? 0, dynamicCap)
     );
-
     const coursParam = (values.coursIds ?? []).join(",");
     const params = new URLSearchParams({
       ques: String(qty),
@@ -325,334 +311,375 @@ export default function StartTest({ quizId }: { quizId: string }) {
         <Button className="mt-4 w-full">Start a test</Button>
       </DialogTrigger>
 
-      <DialogContent className="sm:max-w-lg" dir={direction}>
-        {/* Top bar: loader + error + refresh hint */}
-        {(loading || refreshing) && (
-          <div className="mb-2 flex items-center gap-2 text-sm text-muted-foreground">
-            <Loader2 className="h-4 w-4 animate-spin" />
-            {loading ? "Loading options…" : "Refreshing options…"}
-          </div>
-        )}
-        {err && (
-          <p className="mb-2 text-sm text-destructive">
-            Failed to load quiz details: {err}
-          </p>
-        )}
+      {/* Mobile-friendly container:
+         - no padding inside content (p-0)
+         - internal flex column with sticky header/footer
+         - capped height with 100dvh so nothing gets hidden
+      */}
+      <DialogContent
+        className="
+          sm:max-w-lg w-[min(100vw-0.75rem,40rem)] p-0 overflow-hidden
+          rounded-xl md:rounded-2xl
+        "
+        dir={direction}
+      >
+        <div
+          className="
+            flex flex-col
+            max-h-[calc(100dvh-1rem)]
+            md:max-h-[85vh]
+            bg-background
+          "
+        >
+          {/* Top bar: loader / error */}
+          {(loading || refreshing) && (
+            <div className="px-4 pt-2 text-sm text-muted-foreground">
+              <span className="inline-flex items-center gap-2">
+                <Loader2 className="h-4 w-4 animate-spin" />
+                {loading ? "Loading options…" : "Refreshing options…"}
+              </span>
+            </div>
+          )}
+          {err && (
+            <p className="px-4 pt-2 text-sm text-destructive">
+              Failed to load quiz details: {err}
+            </p>
+          )}
 
-        <Form {...form}>
-          {/* Disable native HTML validation so browser doesn't block submit */}
-          <form onSubmit={form.handleSubmit(onSubmit)} noValidate>
-            <DialogHeader>
-              <DialogTitle>Start Test</DialogTitle>
-              <DialogDescription>
-                Choose the number of questions, courses, and (optionally) a year
-                range.
-              </DialogDescription>
-            </DialogHeader>
+          {/* Sticky header with safe-area top */}
+          <DialogHeader
+            className="
+              sticky top-0 z-10
+              bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60
+              border-b px-4 pt-[max(0.5rem,env(safe-area-inset-top))] pb-3
+            "
+          >
+            <DialogTitle>Start Test</DialogTitle>
+            <DialogDescription>
+              Choose the number of questions, courses, and (optionally) a year
+              range.
+            </DialogDescription>
+          </DialogHeader>
 
-            <DialogBody className="space-y-6">
-              {isLoadingUI ? (
-                <LoadingCoursSkeleton />
-              ) : (
-                <>
-                  {/* Year Range */}
-                  {hasYearData && (
-                    <div className="grid grid-cols-2 gap-3">
-                      <FormField
-                        control={form.control}
-                        name="yearFrom"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>From (year)</FormLabel>
-                            <FormControl>
-                              <Input
-                                type="number"
-                                inputMode="numeric"
-                                min={globalMinYear}
-                                value={field.value ?? ""}
-                                onChange={(e) =>
-                                  field.onChange(
-                                    e.target.value === ""
-                                      ? undefined
-                                      : Number(e.target.value)
-                                  )
-                                }
-                                disabled={disabledUI}
-                              />
-                            </FormControl>
-                            <FormDescription>
-                              Available: {globalMinYear}–{globalMaxYear}
-                            </FormDescription>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="yearTo"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>To (year)</FormLabel>
-                            <FormControl>
-                              <Input
-                                type="number"
-                                inputMode="numeric"
-                                max={globalMaxYear}
-                                value={field.value ?? ""}
-                                onChange={(e) =>
-                                  field.onChange(
-                                    e.target.value === ""
-                                      ? undefined
-                                      : Number(e.target.value)
-                                  )
-                                }
-                                disabled={disabledUI}
-                              />
-                            </FormControl>
-                            <FormDescription>
-                              Leave empty = all years
-                            </FormDescription>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <div className="col-span-2 flex items-center gap-2">
-                        <Button
-                          type="button"
-                          size="sm"
-                          variant="secondary"
-                          onClick={handleAllYears}
-                          disabled={disabledUI}
-                        >
-                          All years
-                        </Button>
-                        <Button
-                          type="button"
-                          size="sm"
-                          variant="ghost"
-                          onClick={() => {
-                            form.setValue("yearFrom", undefined, {
-                              shouldValidate: true,
-                            });
-                            form.setValue("yearTo", undefined, {
-                              shouldValidate: true,
-                            });
-                          }}
-                          disabled={disabledUI}
-                        >
-                          Clear range
-                        </Button>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Number of questions */}
-                  <FormField
-                    control={form.control}
-                    name="numberOfQuestions"
-                    render={({ field }) => (
-                      <FormItem className="w-full">
-                        <FormLabel>Number of Questions</FormLabel>
-                        <FormControl>
-                          <Input
-                            type="number"
-                            inputMode="numeric"
-                            min={0}
-                            // no max attribute -> no native blocking
-                            value={field.value ?? ""}
-                            onChange={(e) => {
-                              const v = e.target.value;
-                              if (v === "") return field.onChange(0);
-                              const n = Number(v);
-                              const clamped = Number.isNaN(n)
-                                ? 0
-                                : Math.max(0, Math.min(n, dynamicCap));
-                              field.onChange(clamped);
+          <Form {...form}>
+            {/* Disable native validation to avoid blocking submit */}
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              noValidate
+              className="contents"
+            >
+              {/* Scrollable body */}
+              <DialogBody className="flex-1 overflow-y-auto px-4 py-4">
+                {isLoadingUI ? (
+                  <LoadingCoursSkeleton />
+                ) : (
+                  <>
+                    {/* Year Range */}
+                    {hasYearData && (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <FormField
+                          control={form.control}
+                          name="yearFrom"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>From (year)</FormLabel>
+                              <FormControl>
+                                <Input
+                                  type="number"
+                                  inputMode="numeric"
+                                  min={globalMinYear}
+                                  value={field.value ?? ""}
+                                  onChange={(e) =>
+                                    field.onChange(
+                                      e.target.value === ""
+                                        ? undefined
+                                        : Number(e.target.value)
+                                    )
+                                  }
+                                  disabled={disabledUI}
+                                />
+                              </FormControl>
+                              <FormDescription>
+                                Available: {globalMinYear}–{globalMaxYear}
+                              </FormDescription>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="yearTo"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>To (year)</FormLabel>
+                              <FormControl>
+                                <Input
+                                  type="number"
+                                  inputMode="numeric"
+                                  max={globalMaxYear}
+                                  value={field.value ?? ""}
+                                  onChange={(e) =>
+                                    field.onChange(
+                                      e.target.value === ""
+                                        ? undefined
+                                        : Number(e.target.value)
+                                    )
+                                  }
+                                  disabled={disabledUI}
+                                />
+                              </FormControl>
+                              <FormDescription>
+                                Leave empty = all years
+                              </FormDescription>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <div className="col-span-1 sm:col-span-2 flex items-center gap-2">
+                          <Button
+                            type="button"
+                            size="sm"
+                            variant="secondary"
+                            onClick={handleAllYears}
+                            disabled={disabledUI}
+                          >
+                            All years
+                          </Button>
+                          <Button
+                            type="button"
+                            size="sm"
+                            variant="ghost"
+                            onClick={() => {
+                              form.setValue("yearFrom", undefined, {
+                                shouldValidate: true,
+                              });
+                              form.setValue("yearTo", undefined, {
+                                shouldValidate: true,
+                              });
                             }}
                             disabled={disabledUI}
-                          />
-                        </FormControl>
-                        <FormDescription>Up to {dynamicCap}</FormDescription>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  {/* Courses multi-select */}
-                  <FormField
-                    control={form.control}
-                    name="coursIds"
-                    render={() => (
-                      <FormItem>
-                        <div className="flex items-center justify-between">
-                          <FormLabel>Select cours (multiple)</FormLabel>
-                          <div className="flex items-center gap-2">
-                            <div className="flex items-center gap-2">
-                              <Checkbox
-                                checked={
-                                  allSelected
-                                    ? true
-                                    : someSelected
-                                    ? "indeterminate"
-                                    : false
-                                }
-                                onCheckedChange={handleToggleMaster}
-                                disabled={disabledUI}
-                              />
-                              <span className="text-sm text-muted-foreground">
-                                {allSelected
-                                  ? "All selected"
-                                  : someSelected
-                                  ? "Some selected"
-                                  : "None selected"}
-                              </span>
-                            </div>
-                            <Button
-                              type="button"
-                              size="sm"
-                              variant="secondary"
-                              onClick={handleSelectAll}
-                              disabled={disabledUI}
-                            >
-                              Select all
-                            </Button>
-                            <Button
-                              type="button"
-                              size="sm"
-                              variant="ghost"
-                              onClick={handleClearAll}
-                              disabled={disabledUI}
-                            >
-                              Clear
-                            </Button>
-                          </div>
+                          >
+                            Clear range
+                          </Button>
                         </div>
+                      </div>
+                    )}
 
-                        <div className="max-h-60 overflow-auto rounded-md border p-2 space-y-2 mt-2">
-                          {coursOptions.length === 0 && (
-                            <p className="px-2 py-1 text-sm text-muted-foreground">
-                              {fetched
-                                ? "No cours available."
-                                : "Loading cours…"}
-                            </p>
-                          )}
+                    {/* Number of questions */}
+                    <FormField
+                      control={form.control}
+                      name="numberOfQuestions"
+                      render={({ field }) => (
+                        <FormItem className="w-full mt-4">
+                          <FormLabel>Number of Questions</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="number"
+                              inputMode="numeric"
+                              min={0}
+                              // no max attribute -> no native blocking
+                              value={field.value ?? ""}
+                              onChange={(e) => {
+                                const v = e.target.value;
+                                if (v === "") return field.onChange(0);
+                                const n = Number(v);
+                                const clamped = Number.isNaN(n)
+                                  ? 0
+                                  : Math.max(0, Math.min(n, dynamicCap));
+                                field.onChange(clamped);
+                              }}
+                              disabled={disabledUI}
+                            />
+                          </FormControl>
+                          <FormDescription>Up to {dynamicCap}</FormDescription>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
 
-                          {coursOptions.map((c) => {
-                            const checked = watchedCoursIds.includes(c.id);
-                            const perYear = yearIndex[c.id] ?? {};
-                            const from =
-                              typeof yearFrom === "number"
-                                ? yearFrom
-                                : (globalMinYear as number);
-                            const to =
-                              typeof yearTo === "number"
-                                ? yearTo
-                                : (globalMaxYear as number);
-                            const rangeCount = hasYearData
-                              ? Object.entries(perYear).reduce(
-                                  (acc, [ys, cnt]) => {
-                                    const y = Number(ys);
-                                    return y >= from && y <= to
-                                      ? acc + cnt
-                                      : acc;
-                                  },
-                                  0
-                                )
-                              : c.questionCount ?? 0;
-
-                            return (
-                              <div
-                                key={c.id}
-                                className="flex items-start gap-3 rounded-md px-2 py-1 hover:bg-accent"
+                    {/* Courses multi-select */}
+                    <FormField
+                      control={form.control}
+                      name="coursIds"
+                      render={() => (
+                        <FormItem className="mt-4">
+                          <div className="flex items-center justify-between gap-2">
+                            <FormLabel>Select cours (multiple)</FormLabel>
+                            <div className="flex items-center gap-2">
+                              <div className="flex items-center gap-2">
+                                <Checkbox
+                                  checked={
+                                    allSelected
+                                      ? true
+                                      : someSelected
+                                      ? "indeterminate"
+                                      : false
+                                  }
+                                  onCheckedChange={handleToggleMaster}
+                                  disabled={disabledUI}
+                                />
+                                <span className="text-sm text-muted-foreground">
+                                  {allSelected
+                                    ? "All selected"
+                                    : someSelected
+                                    ? "Some selected"
+                                    : "None selected"}
+                                </span>
+                              </div>
+                              <Button
+                                type="button"
+                                size="sm"
+                                variant="secondary"
+                                onClick={handleSelectAll}
+                                disabled={disabledUI}
                               >
-                                <FormControl>
-                                  <Checkbox
-                                    checked={checked}
-                                    disabled={disabledUI}
-                                    onCheckedChange={(v) => {
-                                      const prev = form.getValues("coursIds");
-                                      if (v === true) {
-                                        if (!prev.includes(c.id))
+                                Select all
+                              </Button>
+                              <Button
+                                type="button"
+                                size="sm"
+                                variant="ghost"
+                                onClick={handleClearAll}
+                                disabled={disabledUI}
+                              >
+                                Clear
+                              </Button>
+                            </div>
+                          </div>
+
+                          {/* Let the outer body scroll; avoid nested scroll traps on mobile */}
+                          <div className="rounded-md border p-2 mt-2 space-y-2">
+                            {coursOptions.length === 0 && (
+                              <p className="px-2 py-1 text-sm text-muted-foreground">
+                                {fetched
+                                  ? "No cours available."
+                                  : "Loading cours…"}
+                              </p>
+                            )}
+
+                            {coursOptions.map((c) => {
+                              const checked = watchedCoursIds.includes(c.id);
+                              const perYear = yearIndex[c.id] ?? {};
+                              const from =
+                                typeof yearFrom === "number"
+                                  ? yearFrom
+                                  : (globalMinYear as number);
+                              const to =
+                                typeof yearTo === "number"
+                                  ? yearTo
+                                  : (globalMaxYear as number);
+                              const rangeCount = hasYearData
+                                ? Object.entries(perYear).reduce(
+                                    (acc, [ys, cnt]) => {
+                                      const y = Number(ys);
+                                      return y >= from && y <= to
+                                        ? acc + cnt
+                                        : acc;
+                                    },
+                                    0
+                                  )
+                                : c.questionCount ?? 0;
+
+                              return (
+                                <div
+                                  key={c.id}
+                                  className="flex items-start gap-3 rounded-md px-2 py-1 hover:bg-accent"
+                                >
+                                  <FormControl>
+                                    <Checkbox
+                                      checked={checked}
+                                      disabled={disabledUI}
+                                      onCheckedChange={(v) => {
+                                        const prev = form.getValues("coursIds");
+                                        if (v === true) {
+                                          if (!prev.includes(c.id))
+                                            form.setValue(
+                                              "coursIds",
+                                              [...prev, c.id],
+                                              {
+                                                shouldValidate: true,
+                                                shouldDirty: true,
+                                              }
+                                            );
+                                        } else {
                                           form.setValue(
                                             "coursIds",
-                                            [...prev, c.id],
+                                            prev.filter((x) => x !== c.id),
                                             {
                                               shouldValidate: true,
                                               shouldDirty: true,
                                             }
                                           );
-                                      } else {
-                                        form.setValue(
-                                          "coursIds",
-                                          prev.filter((x) => x !== c.id),
-                                          {
-                                            shouldValidate: true,
-                                            shouldDirty: true,
-                                          }
-                                        );
-                                      }
-                                    }}
-                                  />
-                                </FormControl>
-                                <div className="grid gap-0.5 leading-tight">
-                                  <span className="text-sm">{c.title}</span>
-                                  <span className="text-xs text-muted-foreground">
-                                    {rangeCount} question
-                                    {rangeCount === 1 ? "" : "s"}
-                                    {hasYearData && ` in range`}
-                                  </span>
+                                        }
+                                      }}
+                                    />
+                                  </FormControl>
+                                  <div className="grid gap-0.5 leading-tight">
+                                    <span className="text-sm">{c.title}</span>
+                                    <span className="text-xs text-muted-foreground">
+                                      {rangeCount} question
+                                      {rangeCount === 1 ? "" : "s"}
+                                      {hasYearData && ` in range`}
+                                    </span>
+                                  </div>
                                 </div>
-                              </div>
-                            );
-                          })}
-                        </div>
+                              );
+                            })}
+                          </div>
 
-                        <FormDescription>
-                          Pick one or more cours. If you set a year range, the
-                          cap and counts adapt automatically.
-                        </FormDescription>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </>
-              )}
-            </DialogBody>
-
-            <DialogFooter>
-              <DialogClose asChild>
-                <Button type="button" variant="outline">
-                  Close
-                </Button>
-              </DialogClose>
-              <Button
-                type="submit"
-                disabled={!fetched || loading || submitting}
-              >
-                {submitting ? (
-                  <span className="inline-flex items-center gap-2">
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                    Redirecting…
-                  </span>
-                ) : (
-                  "Continue"
+                          <FormDescription className="mt-2">
+                            Pick one or more cours. If you set a year range, the
+                            cap and counts adapt automatically.
+                          </FormDescription>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </>
                 )}
-              </Button>
-            </DialogFooter>
-          </form>
-        </Form>
+              </DialogBody>
+
+              {/* Sticky footer with safe-area bottom */}
+              <DialogFooter
+                className="
+                  sticky bottom-0 z-10
+                  bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60
+                  border-t px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]
+                "
+              >
+                <DialogClose asChild>
+                  <Button type="button" variant="outline">
+                    Close
+                  </Button>
+                </DialogClose>
+                <Button
+                  type="submit"
+                  disabled={!fetched || loading || submitting}
+                >
+                  {submitting ? (
+                    <span className="inline-flex items-center gap-2">
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                      Redirecting…
+                    </span>
+                  ) : (
+                    "Continue"
+                  )}
+                </Button>
+              </DialogFooter>
+            </form>
+          </Form>
+        </div>
       </DialogContent>
     </Dialog>
   );
 }
 
 /* ---------- Pretty loading skeletons ---------- */
-
 function LoadingCoursSkeleton() {
   return (
     <div className="space-y-6" aria-busy="true">
       {/* Years */}
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div className="space-y-2">
           <Skeleton className="h-4 w-24" />
           <Skeleton className="h-9 w-full" />
@@ -681,7 +708,7 @@ function LoadingCoursSkeleton() {
             <Skeleton className="h-5 w-16" />
           </div>
         </div>
-        <div className="max-h-60 overflow-auto rounded-md border p-2 space-y-2 mt-2">
+        <div className="rounded-md border p-2 space-y-2 mt-2">
           {Array.from({ length: 6 }).map((_, i) => (
             <div
               key={i}
