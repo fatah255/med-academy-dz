@@ -28,6 +28,7 @@ export const updateLesson = async (
         description: result.data.description,
         thumbnailKey: result.data.thumbnailKey,
         videoKey: result.data.videoKey,
+        muxVideoId: result.data.muxVideoId ?? null,
       },
     });
     revalidatePath(

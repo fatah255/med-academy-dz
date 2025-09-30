@@ -47,7 +47,6 @@ export async function POST(request: Request) {
 
     const { fileName, contentType } = parsed.data;
     const key = `${uuid()}-${fileName}`;
-    return NextResponse.json({ error: "under fix" }, { status: 501 });
 
     const cmd = new PutObjectCommand({
       Bucket: process.env.NEXT_PUBLIC_S3_BUCKET_NAME_IMAGES, // use a server-only var

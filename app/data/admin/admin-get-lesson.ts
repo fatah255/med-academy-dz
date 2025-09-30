@@ -12,6 +12,7 @@ export const getLesson = async (lessonId: string) => {
         title: true,
         thumbnailKey: true,
         videoKey: true,
+        muxVideoId: true,
         description: true,
         position: true,
       },

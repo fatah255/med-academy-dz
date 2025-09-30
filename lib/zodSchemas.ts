@@ -57,6 +57,7 @@ export const lessonSchema = z.object({
   name: z.string().min(3, { message: "Lesson name is required." }),
   courseId: z.string().uuid({ message: "Invalid course ID." }),
   chapterId: z.string().uuid({ message: "Invalid chapter ID." }),
+  muxVideoId: z.string().optional().nullable(),
   description: z
     .string()
     .min(10, { message: "Description must be at least 10 characters long." })

@@ -1,8 +1,9 @@
+// app/admin/lessons/[id]/LessonForm.tsx
 "use client";
 
 import { AdminLessonType } from "@/app/data/admin/admin-get-lesson";
-import Uploader from "@/components/file-uploader/Uploader";
-
+import Uploader from "@/components/file-uploader/Uploader"; // keep for images
+import MuxUploader from "@/components/file-uploader/MuxUploader";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Card,
@@ -21,7 +22,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { tryCatch } from "@/hooks/try-catch";
-import { lessonSchema, lessonSchemaType } from "@/lib/zodSchemas";
+import { lessonSchema, lessonSchemaType } from "@/lib/zodSchemas"; // add muxVideoId?: string
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
@@ -43,9 +44,12 @@ const LessonForm = ({ data, chapterId, courseId }: LessonFormProps) => {
       name: data.title,
       description: data.description ?? undefined,
       thumbnailKey: data.thumbnailKey ?? undefined,
-      videoKey: data.videoKey ?? undefined,
-      chapterId: chapterId,
-      courseId: courseId,
+      // 🔄 we now bind muxVideoId instead of videoKey
+      muxVideoId: data.muxVideoId ?? undefined,
+      // keep legacy videoKey around if you still need to show it / migrate it
+      videoKey: undefined,
+      chapterId,
+      courseId,
     },
   });
 
@@ -59,6 +63,7 @@ const LessonForm = ({ data, chapterId, courseId }: LessonFormProps) => {
 
       if (error) {
         toast.error("Something went wrong while updating the lesson");
+        return;
       }
       if (response?.status === "success") {
         toast.success(response?.message);
@@ -122,7 +127,7 @@ const LessonForm = ({ data, chapterId, courseId }: LessonFormProps) => {
                 name="thumbnailKey"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>image cover</FormLabel>
+                    <FormLabel>Image cover</FormLabel>
                     <FormControl>
                       <Uploader
                         fileType="image"
@@ -134,22 +139,23 @@ const LessonForm = ({ data, chapterId, courseId }: LessonFormProps) => {
                 )}
               />
 
+              {/* 🔁 NEW: Mux uploader updates muxVideoId (playbackId) */}
               <FormField
                 control={form.control}
-                name="videoKey"
+                name="muxVideoId"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>video file for the lesson</FormLabel>
                     <FormControl>
-                      <Uploader
-                        fileType="video"
+                      <MuxUploader
                         value={field.value}
                         onChange={field.onChange}
+                        label="Lesson Video"
                       />
                     </FormControl>
                   </FormItem>
                 )}
               />
+
               <Button type="submit">
                 {isPending ? "Saving..." : "Save Lesson"}
               </Button>
