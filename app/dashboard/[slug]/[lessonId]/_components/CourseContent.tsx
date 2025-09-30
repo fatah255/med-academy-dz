@@ -163,7 +163,7 @@ interface CourseContentProps {
 
 const CourseContent = ({ lesson }: CourseContentProps) => {
   const [isPending, startTransition] = useTransition();
-  const confetti = useConfetti(); // ✅ call the hook
+  const confetti = useConfetti; // ✅ call the hook
 
   const videoUrl = useConstructUrl(lesson.videoKey || "");
   const poster = lesson.thumbnailKey
