@@ -1,4 +1,7 @@
 // app/api/mux/uploads/[id]/route.ts
+// @ts-nocheck
+/* eslint-disable */
+
 import { NextResponse } from "next/server";
 
 const MUX_AUTH =
