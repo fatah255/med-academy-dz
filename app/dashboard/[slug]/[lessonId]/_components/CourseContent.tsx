@@ -1,15 +1,161 @@
 "use client";
 
+import { useEffect, useMemo, useRef, useState, useTransition } from "react";
+import Head from "next/head";
 import { LessonContentType } from "@/app/data/course/get-lesson-content";
 import { Button } from "@/components/ui/button";
 import useConstructUrl from "@/hooks/use-construct-url";
-import { BookIcon, CheckCircle } from "lucide-react";
-import { useTransition } from "react";
+import { BookIcon, CheckCircle, Play } from "lucide-react";
 import { markLessonAsCompleted } from "../actions";
 import { toast } from "sonner";
 import { tryCatch } from "@/hooks/try-catch";
 import { useConfetti } from "@/hooks/use-confetti";
 import { Skeleton } from "@/components/ui/skeleton";
+import clsx from "clsx";
+
+/* ------------------------------------------------------------------ */
+/* Utilities                                                           */
+/* ------------------------------------------------------------------ */
+
+function getOrigin(url?: string | null) {
+  try {
+    if (!url) return null;
+    return new URL(url).origin;
+  } catch {
+    return null;
+  }
+}
+
+function looksLikeHls(url: string) {
+  return /\.m3u8(\?|$)/i.test(url) || /([?&])format=hls(&|$)/i.test(url);
+}
+
+/* ------------------------------------------------------------------ */
+/* Smart video (lazy + HLS fallback)                                  */
+/* ------------------------------------------------------------------ */
+
+function SmartVideo({
+  videoUrl,
+  poster,
+  className,
+}: {
+  videoUrl: string;
+  poster?: string;
+  className?: string;
+}) {
+  const [inView, setInView] = useState(false); // mount video only when visible
+  const [armed, setArmed] = useState(false); // user pressed Play
+  const [metaReady, setMetaReady] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const isHls = looksLikeHls(videoUrl);
+
+  // Lazy observe
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el || inView) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setInView(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "200px 0px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [inView]);
+
+  // Wire source on first Play (so we don't fetch large media upfront)
+  const onArmAndPlay = async () => {
+    setArmed(true);
+    const el = videoRef.current;
+    if (!el) return;
+
+    // If HLS, try hls.js (dynamic import to avoid bundling)
+    if (
+      isHls &&
+      !("canPlayType" in el && el.canPlayType("application/vnd.apple.mpegurl"))
+    ) {
+      try {
+        const Hls = (await import("hls.js")).default;
+        if (Hls.isSupported()) {
+          const hls = new Hls({ enableWorker: true });
+          hls.loadSource(videoUrl);
+          hls.attachMedia(el);
+        } else {
+          el.src = videoUrl; // fallback anyway
+        }
+      } catch {
+        el.src = videoUrl;
+      }
+    } else {
+      el.src = videoUrl; // MP4 or Safari-native HLS
+    }
+
+    // Let the browser buffer enough then play
+    try {
+      await el.play();
+    } catch {
+      // Some browsers require explicit user gesture; if play() fails just show controls
+    }
+  };
+
+  return (
+    <div
+      ref={containerRef}
+      className={clsx(
+        "relative aspect-video overflow-hidden rounded-lg bg-black",
+        className
+      )}
+    >
+      {/* While not in view, just paint the poster box to avoid layout jank */}
+      {!inView ? (
+        <Skeleton className="absolute inset-0 rounded-none" />
+      ) : (
+        <>
+          {/* Video mounts only after inView */}
+          <video
+            ref={videoRef}
+            className="h-full w-full object-cover"
+            poster={poster}
+            controls={armed}
+            playsInline
+            disableRemotePlayback
+            controlsList="nodownload"
+            // Keep network cost low until the user really wants it:
+            preload={armed ? "auto" : "metadata"}
+            onLoadedMetadata={() => setMetaReady(true)}
+          />
+
+          {/* Overlay play button until armed */}
+          {!armed && (
+            <button
+              aria-label="Play"
+              className="absolute inset-0 grid place-items-center bg-black/30 hover:bg-black/40 transition"
+              onClick={onArmAndPlay}
+            >
+              <span className="inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 text-black">
+                <Play className="h-4 w-4" />
+                Play
+              </span>
+            </button>
+          )}
+
+          {/* Tiny shimmer while metadata is loading after click */}
+          {armed && !metaReady && (
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-[pulse_1.2s_ease-in-out_infinite]" />
+          )}
+        </>
+      )}
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Main component                                                      */
+/* ------------------------------------------------------------------ */
 
 interface CourseContentProps {
   lesson: LessonContentType;
@@ -17,45 +163,13 @@ interface CourseContentProps {
 
 const CourseContent = ({ lesson }: CourseContentProps) => {
   const [isPending, startTransition] = useTransition();
-  const confetti = useConfetti; // call the hook so we can call confetti()
+  const confetti = useConfetti(); // ✅ call the hook
 
-  const VideoPlayer = ({
-    videoKey,
-    thumbnailKey,
-  }: {
-    videoKey: string | null;
-    thumbnailKey: string | null;
-  }) => {
-    const videoUrl = useConstructUrl(videoKey || "");
-    const poster = thumbnailKey ? useConstructUrl(thumbnailKey) : undefined;
-
-    if (!videoKey) {
-      return (
-        <div className="aspect-video rounded-lg bg-muted flex flex-col items-center justify-center">
-          <BookIcon className="size-16 text-muted-foreground mb-4" />
-          <p className="text-muted-foreground">No video available</p>
-        </div>
-      );
-    }
-
-    return (
-      <div className="aspect-video relative rounded-lg overflow-hidden bg-black">
-        <video
-          className="h-full w-full object-cover"
-          poster={poster}
-          controls
-          controlsList="nodownload"
-          playsInline
-          preload="metadata"
-        >
-          <source src={videoUrl} type="video/mp4" />
-          <source src={videoUrl} type="video/webm" />
-          <source src={videoUrl} type="video/ogg" />
-          Your browser does not support the video playing.
-        </video>
-      </div>
-    );
-  };
+  const videoUrl = useConstructUrl(lesson.videoKey || "");
+  const poster = lesson.thumbnailKey
+    ? useConstructUrl(lesson.thumbnailKey)
+    : undefined;
+  const origin = useMemo(() => getOrigin(videoUrl), [videoUrl]);
 
   function onSubmit() {
     startTransition(async () => {
@@ -76,12 +190,28 @@ const CourseContent = ({ lesson }: CourseContentProps) => {
     });
   }
 
+  const NoVideo = (
+    <div className="aspect-video rounded-lg bg-muted flex flex-col items-center justify-center">
+      <BookIcon className="size-16 text-muted-foreground mb-4" />
+      <p className="text-muted-foreground">No video available</p>
+    </div>
+  );
+
   return (
     <div className="flex h-full flex-col gap-4 bg-background px-4 sm:px-6 py-4">
-      <VideoPlayer
-        videoKey={lesson.videoKey}
-        thumbnailKey={lesson.thumbnailKey}
-      />
+      {/* Networking hints – helps establish TLS to your storage/CDN early */}
+      {origin && (
+        <Head>
+          <link rel="preconnect" href={origin} crossOrigin="" />
+          <link rel="dns-prefetch" href={origin} />
+        </Head>
+      )}
+
+      {lesson.videoKey ? (
+        <SmartVideo videoUrl={videoUrl} poster={poster} />
+      ) : (
+        NoVideo
+      )}
 
       <div className="border-b pb-4">
         {lesson.progress.length > 0 ? (
@@ -117,6 +247,10 @@ const CourseContent = ({ lesson }: CourseContentProps) => {
 };
 
 export default CourseContent;
+
+/* ------------------------------------------------------------------ */
+/* Skeleton                                                            */
+/* ------------------------------------------------------------------ */
 
 export const CourseContentSkeleton = () => {
   return (
