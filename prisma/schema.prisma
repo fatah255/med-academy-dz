@@ -129,7 +129,7 @@ model Lesson {
   updatedAt    DateTime         @updatedAt
   progress     LessonProgress[]
   chapter      Chapter          @relation(fields: [chapterId], references: [id], onDelete: Cascade)
-
+  muxVideoId   String?
   @@map("lesson")
 }
 

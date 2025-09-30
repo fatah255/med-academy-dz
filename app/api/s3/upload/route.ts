@@ -22,6 +22,7 @@ const aj = arcjet
   .withRule(fixedWindow({ mode: "LIVE", window: "1m", max: 30 }));
 
 export async function POST(request: Request) {
+  return NextResponse.json({ error: "under fix" }, { status: 501 });
   try {
     const session = await requireAdmin(); // moved inside try
 

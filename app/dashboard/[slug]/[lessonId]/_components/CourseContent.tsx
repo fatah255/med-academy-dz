@@ -2,6 +2,9 @@
 
 import { useEffect, useMemo, useRef, useState, useTransition } from "react";
 import Head from "next/head";
+import dynamic from "next/dynamic";
+import clsx from "clsx";
+
 import { LessonContentType } from "@/app/data/course/get-lesson-content";
 import { Button } from "@/components/ui/button";
 import useConstructUrl from "@/hooks/use-construct-url";
@@ -11,7 +14,11 @@ import { toast } from "sonner";
 import { tryCatch } from "@/hooks/try-catch";
 import { useConfetti } from "@/hooks/use-confetti";
 import { Skeleton } from "@/components/ui/skeleton";
-import clsx from "clsx";
+
+/* ------------------------- Mux (client-only) ------------------------- */
+const MuxPlayer = dynamic(() => import("@mux/mux-player-react"), {
+  ssr: false,
+});
 
 /* ------------------------------------------------------------------ */
 /* Utilities                                                           */
@@ -43,14 +50,13 @@ function SmartVideo({
   poster?: string;
   className?: string;
 }) {
-  const [inView, setInView] = useState(false); // mount video only when visible
-  const [armed, setArmed] = useState(false); // user pressed Play
+  const [inView, setInView] = useState(false);
+  const [armed, setArmed] = useState(false);
   const [metaReady, setMetaReady] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const isHls = looksLikeHls(videoUrl);
 
-  // Lazy observe
   useEffect(() => {
     const el = containerRef.current;
     if (!el || inView) return;
@@ -67,13 +73,11 @@ function SmartVideo({
     return () => io.disconnect();
   }, [inView]);
 
-  // Wire source on first Play (so we don't fetch large media upfront)
   const onArmAndPlay = async () => {
     setArmed(true);
     const el = videoRef.current;
     if (!el) return;
 
-    // If HLS, try hls.js (dynamic import to avoid bundling)
     if (
       isHls &&
       !("canPlayType" in el && el.canPlayType("application/vnd.apple.mpegurl"))
@@ -85,20 +89,19 @@ function SmartVideo({
           hls.loadSource(videoUrl);
           hls.attachMedia(el);
         } else {
-          el.src = videoUrl; // fallback anyway
+          el.src = videoUrl;
         }
       } catch {
         el.src = videoUrl;
       }
     } else {
-      el.src = videoUrl; // MP4 or Safari-native HLS
+      el.src = videoUrl;
     }
 
-    // Let the browser buffer enough then play
     try {
       await el.play();
     } catch {
-      // Some browsers require explicit user gesture; if play() fails just show controls
+      /* ignore – controls are visible */
     }
   };
 
@@ -110,12 +113,10 @@ function SmartVideo({
         className
       )}
     >
-      {/* While not in view, just paint the poster box to avoid layout jank */}
       {!inView ? (
         <Skeleton className="absolute inset-0 rounded-none" />
       ) : (
         <>
-          {/* Video mounts only after inView */}
           <video
             ref={videoRef}
             className="h-full w-full object-cover"
@@ -124,12 +125,9 @@ function SmartVideo({
             playsInline
             disableRemotePlayback
             controlsList="nodownload"
-            // Keep network cost low until the user really wants it:
             preload={armed ? "auto" : "metadata"}
             onLoadedMetadata={() => setMetaReady(true)}
           />
-
-          {/* Overlay play button until armed */}
           {!armed && (
             <button
               aria-label="Play"
@@ -142,8 +140,6 @@ function SmartVideo({
               </span>
             </button>
           )}
-
-          {/* Tiny shimmer while metadata is loading after click */}
           {armed && !metaReady && (
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-[pulse_1.2s_ease-in-out_infinite]" />
           )}
@@ -163,8 +159,9 @@ interface CourseContentProps {
 
 const CourseContent = ({ lesson }: CourseContentProps) => {
   const [isPending, startTransition] = useTransition();
-  const confetti = useConfetti; // ✅ call the hook
+  const confetti = useConfetti; // ✅ call the hook to get the trigger fn
 
+  const hasMux = true;
   const videoUrl = useConstructUrl(lesson.videoKey || "");
   const poster = lesson.thumbnailKey
     ? useConstructUrl(lesson.thumbnailKey)
@@ -199,15 +196,40 @@ const CourseContent = ({ lesson }: CourseContentProps) => {
 
   return (
     <div className="flex h-full flex-col gap-4 bg-background px-4 sm:px-6 py-4">
-      {/* Networking hints – helps establish TLS to your storage/CDN early */}
-      {origin && (
-        <Head>
-          <link rel="preconnect" href={origin} crossOrigin="" />
-          <link rel="dns-prefetch" href={origin} />
-        </Head>
-      )}
+      {/* Networking hints */}
+      <Head>
+        {origin && (
+          <>
+            <link rel="preconnect" href={origin} crossOrigin="" />
+            <link rel="dns-prefetch" href={origin} />
+          </>
+        )}
+        {hasMux && (
+          <>
+            <link rel="preconnect" href="https://stream.mux.com" />
+            <link rel="preconnect" href="https://image.mux.com" />
+            <link rel="dns-prefetch" href="https://stream.mux.com" />
+            <link rel="dns-prefetch" href="https://image.mux.com" />
+          </>
+        )}
+      </Head>
 
-      {lesson.videoKey ? (
+      {/* Prefer Mux if we have a playback id; else fall back to your video */}
+      {hasMux ? (
+        <MuxPlayer
+          // NOTE: make sure lesson.muxVideoId is a **Mux playback ID**.
+          // (If you stored an Asset ID instead, create a playback ID for it and store that.)
+          playbackId={lesson.muxVideoId || ""}
+          poster={poster}
+          streamType="on-demand"
+          className="aspect-video rounded-lg overflow-hidden"
+          accent-color="#1c9cf0"
+          // optional nice-to-haves:
+          // autoPlay
+          // muted
+          // primaryColor="#22c55e"
+        />
+      ) : lesson.videoKey ? (
         <SmartVideo videoUrl={videoUrl} poster={poster} />
       ) : (
         NoVideo

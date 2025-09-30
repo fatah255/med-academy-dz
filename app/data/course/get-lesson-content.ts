@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 
 export async function getLessonContent(lessonId: string) {
   const session = await requireUser();
-  const lesson = await prisma.lesson.findUnique({
+  const lesson = await prisma.lesson.findFirst({
     where: {
       id: lessonId,
     },
@@ -14,6 +14,7 @@ export async function getLessonContent(lessonId: string) {
       id: true,
       title: true,
       videoKey: true,
+      muxVideoId: true,
       thumbnailKey: true,
       position: true,
       progress: {
