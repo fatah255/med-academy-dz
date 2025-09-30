@@ -19,7 +19,6 @@ import {
 } from "@tabler/icons-react";
 
 import { NavMain } from "@/components/sidebar/nav-main";
-
 import { NavUser } from "@/components/sidebar/nav-user";
 import {
   Sidebar,
@@ -29,57 +28,23 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  // ⬇️ import the hook
+  useSidebar,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
 import Image from "next/image";
 
 const data = {
   navMain: [
-    {
-      title: "Courses",
-      url: "/dashboard",
-      icon: IconListDetails,
-    },
-    {
-      title: "Quizzes",
-      url: "/dashboard/quizzes",
-      icon: IconAbc,
-    },
-    {
-      title: "Notes",
-      url: "/dashboard/notes",
-      icon: IconNote,
-    },
-    {
-      title: "Exams",
-      url: "/dashboard/exams",
-      icon: IconClipboardList,
-    },
-    {
-      title: "AI",
-      url: "/dashboard/ai",
-      icon: IconBrain,
-    },
-    {
-      title: "History",
-      url: "/dashboard/attempts",
-      icon: IconHistory,
-    },
-    {
-      title: "Timer",
-      url: "/dashboard/pomodoro",
-      icon: IconTimeDuration30,
-    },
-    {
-      title: "Drives",
-      url: "/dashboard/drive",
-      icon: IconBrandGoogleDrive,
-    },
-    {
-      title: "Free Resources",
-      url: "/dashboard/resources",
-      icon: IconGift,
-    },
+    { title: "Courses", url: "/dashboard", icon: IconListDetails },
+    { title: "Quizzes", url: "/dashboard/quizzes", icon: IconAbc },
+    { title: "Notes", url: "/dashboard/notes", icon: IconNote },
+    { title: "Exams", url: "/dashboard/exams", icon: IconClipboardList },
+    { title: "AI", url: "/dashboard/ai", icon: IconBrain },
+    { title: "History", url: "/dashboard/attempts", icon: IconHistory },
+    { title: "Timer", url: "/dashboard/pomodoro", icon: IconTimeDuration30 },
+    { title: "Drives", url: "/dashboard/drive", icon: IconBrandGoogleDrive },
+    { title: "Free Resources", url: "/dashboard/resources", icon: IconGift },
   ],
   navClouds: [
     {
@@ -88,14 +53,8 @@ const data = {
       isActive: true,
       url: "#",
       items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
+        { title: "Active Proposals", url: "#" },
+        { title: "Archived", url: "#" },
       ],
     },
     {
@@ -103,14 +62,8 @@ const data = {
       icon: IconFileDescription,
       url: "#",
       items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
+        { title: "Active Proposals", url: "#" },
+        { title: "Archived", url: "#" },
       ],
     },
     {
@@ -118,34 +71,51 @@ const data = {
       icon: IconFileAi,
       url: "#",
       items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
+        { title: "Active Proposals", url: "#" },
+        { title: "Archived", url: "#" },
       ],
     },
   ],
   navSecondary: [
-    {
-      title: "Settings",
-      url: "/settings",
-      icon: IconSettings,
-    },
-    {
-      title: "Get Help",
-      url: "/help",
-      icon: IconHelp,
-    },
+    { title: "Settings", url: "/settings", icon: IconSettings },
+    { title: "Get Help", url: "/help", icon: IconHelp },
   ],
 };
 
 export function DashboardSidebar({
   ...props
 }: React.ComponentProps<typeof Sidebar>) {
+  const { isMobile, setOpen, setOpenMobile } = useSidebar() as {
+    isMobile?: boolean;
+    setOpen?: (v: boolean) => void;
+    setOpenMobile?: (v: boolean) => void;
+  };
+
+  // Close the offcanvas sidebar after a link click (only on mobile)
+  const closeIfMobile = React.useCallback(() => {
+    if (!isMobile) return;
+    // small timeout lets Next.js handle the navigation first
+    setTimeout(() => {
+      setOpenMobile?.(false);
+      setOpen?.(false);
+    }, 0);
+  }, [isMobile, setOpen, setOpenMobile]);
+
+  // Event delegation: any anchor inside the content will close the sidebar
+  const onContentClick = React.useCallback(
+    (e: React.MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest("a[href]") as HTMLAnchorElement | null;
+      if (!anchor) return;
+      // ignore new-tab/middle-click/meta/ctrl
+      if (e.defaultPrevented) return;
+      // @ts-ignore - button exists on MouseEvent in the browser
+      if (e.button === 1 || e.ctrlKey || e.metaKey) return;
+      closeIfMobile();
+    },
+    [closeIfMobile]
+  );
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader className="mt-10">
@@ -155,7 +125,8 @@ export function DashboardSidebar({
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5 mt-3"
             >
-              <Link href="/">
+              {/* Close on logo click too (mobile) */}
+              <Link href="/" onClick={closeIfMobile}>
                 <Image
                   src="/logo.svg"
                   width={20}
@@ -169,11 +140,13 @@ export function DashboardSidebar({
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
-      <SidebarContent>
-        <NavMain items={data.navMain} />
 
+      {/* Capture link clicks inside the nav to close the drawer */}
+      <SidebarContent onClickCapture={onContentClick}>
+        <NavMain items={data.navMain} />
         {/* <NavSecondary items={data.navSecondary} className="mt-auto" /> */}
       </SidebarContent>
+
       <SidebarFooter>
         <NavUser />
       </SidebarFooter>
