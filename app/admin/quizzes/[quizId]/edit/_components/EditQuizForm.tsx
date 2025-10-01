@@ -37,7 +37,7 @@ import slugify from "slugify";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useEffect, useTransition } from "react";
-import { useForm, useWatch, useFieldArray } from "react-hook-form";
+import { useForm, useWatch, useFieldArray, Resolver } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { cn, modulesByYear } from "@/lib/utils";
 import Uploader from "@/components/file-uploader/Uploader";
@@ -62,7 +62,29 @@ export default function EditQuizForm({ quiz }: EditQuizFormProps) {
   const router = useRouter();
 
   const form = useForm<qcmSchemaType>({
-    resolver: zodResolver(qcmSchema),
+    resolver: zodResolver(qcmSchema) as
+      | Resolver<{
+          title: string;
+          description: string;
+          price: number;
+          level:
+            | "FIRST_YEAR"
+            | "SECOND_YEAR"
+            | "THIRD_YEAR"
+            | "FOURTH_YEAR"
+            | "FIFTH_YEAR"
+            | "SIXTH_YEAR";
+          category: string;
+          slug: string;
+          status: "DRAFT" | "PUBLISHED" | "ARCHIVED";
+          isUnite: boolean;
+          modules: {
+            title: string;
+            id?: string | undefined;
+          }[];
+          fileKey?: string | undefined;
+        }>
+      | undefined,
     defaultValues: {
       title: quiz?.title,
       description: quiz?.description,
