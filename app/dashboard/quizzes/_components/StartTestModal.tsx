@@ -46,15 +46,13 @@ type StartInfoPayload = {
   globalMinYear: number | null;
   globalMaxYear: number | null;
   totalQuestions: number;
-
-  // NEW
   isUnite: boolean;
   moduleGroups?: ModuleGroup[];
 };
 
 /* ------------------ Cache helpers ------------------ */
-const CACHE_VERSION = "v2"; // bump since payload shape changed
-const CACHE_TTL_MS = 1000 * 60 * 15; // 15 min
+const CACHE_VERSION = "v2";
+const CACHE_TTL_MS = 1000 * 60 * 15;
 const cacheKey = (quizId: string) =>
   `quiz:start-info:${CACHE_VERSION}:${quizId}`;
 type CacheEnvelope = { ts: number; data: StartInfoPayload };
@@ -152,7 +150,6 @@ export default function StartTest({ quizId }: { quizId: string }) {
         .number()
         .int("Must be an integer")
         .min(0, "Number of questions cannot be negative"),
-      // We still submit coursIds (even in module view we manage cours selections)
       coursIds: z.array(z.string()).min(1, "Select at least one cours"),
       yearFrom: z.number().optional(),
       yearTo: z.number().optional(),
@@ -179,10 +176,8 @@ export default function StartTest({ quizId }: { quizId: string }) {
     mode: "onSubmit",
   });
 
-  // Seed defaults whenever data arrives (from cache/network)
   useEffect(() => {
     if (!fetched) return;
-    // Default selection = all cours (across modules too)
     const allCoursIds = (
       isUnite
         ? moduleGroups.flatMap((g) => g.cours.map((c) => c.id))
@@ -222,7 +217,6 @@ export default function StartTest({ quizId }: { quizId: string }) {
     allIds.length > 0 && watchedCoursIds.length === allIds.length;
   const someSelected = watchedCoursIds.length > 0 && !allSelected;
 
-  // Current cap based on selected courses and year range
   const dynamicCap = useMemo(() => {
     if (!watchedCoursIds.length || !fetched) return 0;
 
@@ -231,7 +225,6 @@ export default function StartTest({ quizId }: { quizId: string }) {
     );
 
     if (!anyYearData) {
-      // No per-year index: sum questionCount per selected cours
       const pool = isUnite
         ? moduleGroups.flatMap((g) => g.cours)
         : coursOptions;
@@ -266,13 +259,11 @@ export default function StartTest({ quizId }: { quizId: string }) {
     fetched,
   ]);
 
-  // Auto-sync "Number of Questions" to the current cap
   useEffect(() => {
     if (!fetched) return;
     form.setValue("numberOfQuestions", dynamicCap, { shouldValidate: true });
   }, [dynamicCap, fetched, form]);
 
-  /* --------------- Submit --------------- */
   function onSubmit(values: FormValues) {
     const qty = Math.max(
       0,
@@ -358,19 +349,25 @@ export default function StartTest({ quizId }: { quizId: string }) {
       </DialogTrigger>
 
       <DialogContent
+        // WIDTH + OUTER BOX: constrain width and height, remove padding, and avoid overflow issues
         className="
-          sm:max-w-lg w-[min(100vw-0.75rem,40rem)] p-0 overflow-hidden
-          rounded-xl md:rounded-2xl
+          p-0 overflow-hidden rounded-xl md:rounded-2xl
+          w-[min(100vw-1rem,40rem)] sm:max-w-lg
+          max-h-[100dvh] sm:max-h-[85vh]
         "
         dir={direction}
       >
+        {/* FLEX COLUMN WRAPPER: allow inner sections to shrink/scroll */}
         <div
           className="
-            flex flex-col
-            max-h=[calc(100dvh-1rem)]
-            md:max-h-[85vh]
+            flex flex-col min-h-0
+            /* MOBILE height cap with dvh (and fallback below) */
+            h-[calc(100dvh-0.5rem)]
+            sm:h-auto
             bg-background
           "
+          // Fallback for browsers w/o dvh support (Safari older)
+          style={{ maxHeight: "calc(100vh - 0.5rem)" }}
         >
           {(loading || refreshing) && (
             <div className="px-4 pt-2 text-sm text-muted-foreground">
@@ -386,6 +383,7 @@ export default function StartTest({ quizId }: { quizId: string }) {
             </p>
           )}
 
+          {/* HEADER: sticky, safe-area aware */}
           <DialogHeader
             className="
               sticky top-0 z-10
@@ -407,7 +405,8 @@ export default function StartTest({ quizId }: { quizId: string }) {
               noValidate
               className="contents"
             >
-              <DialogBody className="flex-1 overflow-y-auto px-4 py-4">
+              {/* BODY: scrollable area between sticky header/footer */}
+              <DialogBody className="flex-1 min-h-0 overflow-y-auto px-4 py-4">
                 {isLoadingUI ? (
                   <LoadingCoursSkeleton />
                 ) : (
@@ -610,7 +609,6 @@ export default function StartTest({ quizId }: { quizId: string }) {
                                     watchedCoursIds.includes(id)
                                   );
 
-                                // compute count within current year range
                                 const rangeCountForId = (
                                   id: string,
                                   fallback?: number | null
@@ -652,7 +650,6 @@ export default function StartTest({ quizId }: { quizId: string }) {
                                     key={g.id}
                                     className="rounded-md border p-2"
                                   >
-                                    {/* Module header with tri-state checkbox */}
                                     <div className="flex items-center justify-between px-1 py-1">
                                       <div className="flex items-center gap-2">
                                         <Checkbox
@@ -678,7 +675,6 @@ export default function StartTest({ quizId }: { quizId: string }) {
                                       </span>
                                     </div>
 
-                                    {/* Module cours list */}
                                     <div className="mt-2 space-y-1">
                                       {g.cours.map((c) => {
                                         const checked =
@@ -720,7 +716,6 @@ export default function StartTest({ quizId }: { quizId: string }) {
                               })}
                             </div>
                           ) : (
-                            // Flat list (non-unité)
                             <div className="rounded-md border p-2 mt-2 space-y-2">
                               {coursOptions.length === 0 && (
                                 <p className="px-2 py-1 text-sm text-muted-foreground">
@@ -794,6 +789,7 @@ export default function StartTest({ quizId }: { quizId: string }) {
                 )}
               </DialogBody>
 
+              {/* FOOTER: sticky, safe-area aware */}
               <DialogFooter
                 className="
                   sticky bottom-0 z-10
@@ -832,7 +828,6 @@ export default function StartTest({ quizId }: { quizId: string }) {
 function LoadingCoursSkeleton() {
   return (
     <div className="space-y-6" aria-busy="true">
-      {/* Years */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div className="space-y-2">
           <Skeleton className="h-4 w-24" />
@@ -845,15 +840,11 @@ function LoadingCoursSkeleton() {
           <Skeleton className="h-3 w-28" />
         </div>
       </div>
-
-      {/* Number of questions */}
       <div className="space-y-2">
         <Skeleton className="h-4 w-40" />
         <Skeleton className="h-9 w-full" />
         <Skeleton className="h-3 w-24" />
       </div>
-
-      {/* Course/Module list */}
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <Skeleton className="h-4 w-40" />
