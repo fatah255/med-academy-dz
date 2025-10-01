@@ -1,10 +1,11 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import Markdown from "./Markdown";
 import { format } from "date-fns";
 import { forwardRef } from "react";
 import { Icons } from "../Icons";
+import Markdown from "./Markdown"; // keep for user messages if you like
+import { Response } from "@/components/ai-elements/response";
 
 type ExtendedMessage = {
   id: string;
@@ -27,6 +28,7 @@ const Message = forwardRef<HTMLDivElement, MessageProps>(
         ref={ref}
         className={cn("flex items-end", { "justify-end": isUser })}
       >
+        {/* avatar */}
         <div
           className={cn(
             "relative flex h-6 w-6 aspect-square items-center justify-center",
@@ -44,6 +46,7 @@ const Message = forwardRef<HTMLDivElement, MessageProps>(
           )}
         </div>
 
+        {/* bubble */}
         <div
           className={cn("flex flex-col space-y-2 text-base max-w-md mx-2", {
             "order-1 items-end": isUser,
@@ -62,14 +65,27 @@ const Message = forwardRef<HTMLDivElement, MessageProps>(
               }
             )}
           >
+            {/* CONTENT */}
             {typeof message.text === "string" ? (
-              <Markdown className={cn(isUser && "prose-invert")}>
-                {message.text}
-              </Markdown>
+              isUser ? (
+                // user text: keep your existing Markdown (or plain text)
+                <Markdown className={cn(isUser && "prose-invert")}>
+                  {message.text}
+                </Markdown>
+              ) : (
+                // assistant text: render via <Response/> so streaming MD is fixed
+                <Response
+                  parseIncompleteMarkdown
+                  className="prose dark:prose-invert max-w-none"
+                >
+                  {message.text}
+                </Response>
+              )
             ) : (
               message.text
             )}
 
+            {/* time */}
             {message.id !== "loading-message" ? (
               <div
                 className={cn("text-xs select-none mt-2 w-full text-right", {

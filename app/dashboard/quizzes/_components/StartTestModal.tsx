@@ -37,18 +37,23 @@ import { RiCheckboxCircleFill } from "@remixicon/react";
 import { Loader2 } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 
-/* ------------------ Types ------------------ */
 type CoursOption = { id: string; title: string; questionCount?: number | null };
+type ModuleGroup = { id: string; title: string; cours: CoursOption[] };
+
 type StartInfoPayload = {
   coursOptions: CoursOption[];
   yearIndex: Record<string, Record<number, number>>;
   globalMinYear: number | null;
   globalMaxYear: number | null;
   totalQuestions: number;
+
+  // NEW
+  isUnite: boolean;
+  moduleGroups?: ModuleGroup[];
 };
 
 /* ------------------ Cache helpers ------------------ */
-const CACHE_VERSION = "v1";
+const CACHE_VERSION = "v2"; // bump since payload shape changed
 const CACHE_TTL_MS = 1000 * 60 * 15; // 15 min
 const cacheKey = (quizId: string) =>
   `quiz:start-info:${CACHE_VERSION}:${quizId}`;
@@ -95,14 +100,7 @@ export default function StartTest({ quizId }: { quizId: string }) {
 
     const cached = readCache(quizId);
 
-    if (cached && isFresh(cached)) {
-      setFetched(cached.data);
-      return;
-    }
-
-    if (cached && !isFresh(cached)) {
-      setFetched(cached.data);
-      setRefreshing(true);
+    const fetchFresh = () =>
       fetch(`/api/quiz/start-info?quizId=${encodeURIComponent(quizId)}`)
         .then(async (r) => {
           if (!r.ok) throw new Error(await r.text());
@@ -112,27 +110,29 @@ export default function StartTest({ quizId }: { quizId: string }) {
           writeCache(quizId, data);
           setFetched(data);
         })
-        .catch((e) => setErr(e.message || "Failed to refresh"))
-        .finally(() => setRefreshing(false));
+        .catch((e) => setErr(e.message || "Failed to load"));
+
+    if (cached && isFresh(cached)) {
+      setFetched(cached.data);
+      return;
+    }
+
+    if (cached && !isFresh(cached)) {
+      setFetched(cached.data);
+      setRefreshing(true);
+      fetchFresh().finally(() => setRefreshing(false));
       return;
     }
 
     setLoading(true);
-    fetch(`/api/quiz/start-info?quizId=${encodeURIComponent(quizId)}`)
-      .then(async (r) => {
-        if (!r.ok) throw new Error(await r.text());
-        return (await r.json()) as StartInfoPayload;
-      })
-      .then((data) => {
-        writeCache(quizId, data);
-        setFetched(data);
-      })
-      .catch((e) => setErr(e.message || "Failed to load"))
-      .finally(() => setLoading(false));
+    fetchFresh().finally(() => setLoading(false));
   }, [open, fetched, loading, refreshing, quizId]);
 
   /* --------------- Pluck data --------------- */
   const coursOptions = fetched?.coursOptions ?? [];
+  const moduleGroups = fetched?.moduleGroups ?? [];
+  const isUnite = !!fetched?.isUnite && moduleGroups.length > 0;
+
   const yearIndex = fetched?.yearIndex ?? {};
   const globalMinYear =
     typeof fetched?.globalMinYear === "number"
@@ -152,6 +152,7 @@ export default function StartTest({ quizId }: { quizId: string }) {
         .number()
         .int("Must be an integer")
         .min(0, "Number of questions cannot be negative"),
+      // We still submit coursIds (even in module view we manage cours selections)
       coursIds: z.array(z.string()).min(1, "Select at least one cours"),
       yearFrom: z.number().optional(),
       yearTo: z.number().optional(),
@@ -181,9 +182,16 @@ export default function StartTest({ quizId }: { quizId: string }) {
   // Seed defaults whenever data arrives (from cache/network)
   useEffect(() => {
     if (!fetched) return;
+    // Default selection = all cours (across modules too)
+    const allCoursIds = (
+      isUnite
+        ? moduleGroups.flatMap((g) => g.cours.map((c) => c.id))
+        : coursOptions.map((c) => c.id)
+    ).filter(Boolean);
+
     form.reset({
       numberOfQuestions: fetched.totalQuestions,
-      coursIds: fetched.coursOptions.map((c) => c.id),
+      coursIds: allCoursIds,
       yearFrom:
         typeof fetched.globalMinYear === "number"
           ? fetched.globalMinYear
@@ -201,8 +209,15 @@ export default function StartTest({ quizId }: { quizId: string }) {
   const yearFrom = useWatch({ control: form.control, name: "yearFrom" });
   const yearTo = useWatch({ control: form.control, name: "yearTo" });
 
-  // Select-all helpers
-  const allIds = useMemo(() => coursOptions.map((c) => c.id), [coursOptions]);
+  const allIds = useMemo(
+    () =>
+      (isUnite
+        ? moduleGroups.flatMap((g) => g.cours.map((c) => c.id))
+        : coursOptions.map((c) => c.id)
+      ).filter(Boolean),
+    [isUnite, moduleGroups, coursOptions]
+  );
+
   const allSelected =
     allIds.length > 0 && watchedCoursIds.length === allIds.length;
   const someSelected = watchedCoursIds.length > 0 && !allSelected;
@@ -216,7 +231,11 @@ export default function StartTest({ quizId }: { quizId: string }) {
     );
 
     if (!anyYearData) {
-      return coursOptions
+      // No per-year index: sum questionCount per selected cours
+      const pool = isUnite
+        ? moduleGroups.flatMap((g) => g.cours)
+        : coursOptions;
+      return pool
         .filter((c) => watchedCoursIds.includes(c.id))
         .reduce((acc, c) => acc + (c.questionCount ?? 0), 0);
     }
@@ -237,6 +256,8 @@ export default function StartTest({ quizId }: { quizId: string }) {
   }, [
     watchedCoursIds,
     coursOptions,
+    moduleGroups,
+    isUnite,
     yearIndex,
     yearFrom,
     yearTo,
@@ -296,10 +317,35 @@ export default function StartTest({ quizId }: { quizId: string }) {
       shouldDirty: true,
     });
 
-  const handleAllYears = () => {
-    if (!hasYearData) return;
-    form.setValue("yearFrom", globalMinYear, { shouldValidate: true });
-    form.setValue("yearTo", globalMaxYear, { shouldValidate: true });
+  const toggleCours = (id: string, on: boolean) => {
+    const prev = form.getValues("coursIds") ?? [];
+    if (on) {
+      if (!prev.includes(id))
+        form.setValue("coursIds", [...prev, id], {
+          shouldValidate: true,
+          shouldDirty: true,
+        });
+    } else {
+      form.setValue(
+        "coursIds",
+        prev.filter((x) => x !== id),
+        { shouldValidate: true, shouldDirty: true }
+      );
+    }
+  };
+
+  const toggleModule = (group: ModuleGroup, on: boolean) => {
+    const ids = group.cours.map((c) => c.id);
+    const prev = new Set(form.getValues("coursIds") ?? []);
+    if (on) {
+      ids.forEach((id) => prev.add(id));
+    } else {
+      ids.forEach((id) => prev.delete(id));
+    }
+    form.setValue("coursIds", Array.from(prev), {
+      shouldValidate: true,
+      shouldDirty: true,
+    });
   };
 
   const disabledUI = !fetched || loading;
@@ -311,11 +357,6 @@ export default function StartTest({ quizId }: { quizId: string }) {
         <Button className="mt-4 w-full">Start a test</Button>
       </DialogTrigger>
 
-      {/* Mobile-friendly container:
-         - no padding inside content (p-0)
-         - internal flex column with sticky header/footer
-         - capped height with 100dvh so nothing gets hidden
-      */}
       <DialogContent
         className="
           sm:max-w-lg w-[min(100vw-0.75rem,40rem)] p-0 overflow-hidden
@@ -326,12 +367,11 @@ export default function StartTest({ quizId }: { quizId: string }) {
         <div
           className="
             flex flex-col
-            max-h-[calc(100dvh-1rem)]
+            max-h=[calc(100dvh-1rem)]
             md:max-h-[85vh]
             bg-background
           "
         >
-          {/* Top bar: loader / error */}
           {(loading || refreshing) && (
             <div className="px-4 pt-2 text-sm text-muted-foreground">
               <span className="inline-flex items-center gap-2">
@@ -346,7 +386,6 @@ export default function StartTest({ quizId }: { quizId: string }) {
             </p>
           )}
 
-          {/* Sticky header with safe-area top */}
           <DialogHeader
             className="
               sticky top-0 z-10
@@ -356,19 +395,18 @@ export default function StartTest({ quizId }: { quizId: string }) {
           >
             <DialogTitle>Start Test</DialogTitle>
             <DialogDescription>
-              Choose the number of questions, courses, and (optionally) a year
+              Choose the number of questions,{" "}
+              {isUnite ? "modules/cours" : "courses"}, and (optionally) a year
               range.
             </DialogDescription>
           </DialogHeader>
 
           <Form {...form}>
-            {/* Disable native validation to avoid blocking submit */}
             <form
               onSubmit={form.handleSubmit(onSubmit)}
               noValidate
               className="contents"
             >
-              {/* Scrollable body */}
               <DialogBody className="flex-1 overflow-y-auto px-4 py-4">
                 {isLoadingUI ? (
                   <LoadingCoursSkeleton />
@@ -440,7 +478,15 @@ export default function StartTest({ quizId }: { quizId: string }) {
                             type="button"
                             size="sm"
                             variant="secondary"
-                            onClick={handleAllYears}
+                            onClick={() => {
+                              if (!hasYearData) return;
+                              form.setValue("yearFrom", globalMinYear, {
+                                shouldValidate: true,
+                              });
+                              form.setValue("yearTo", globalMaxYear, {
+                                shouldValidate: true,
+                              });
+                            }}
                             disabled={disabledUI}
                           >
                             All years
@@ -477,7 +523,6 @@ export default function StartTest({ quizId }: { quizId: string }) {
                               type="number"
                               inputMode="numeric"
                               min={0}
-                              // no max attribute -> no native blocking
                               value={field.value ?? ""}
                               onChange={(e) => {
                                 const v = e.target.value;
@@ -497,14 +542,18 @@ export default function StartTest({ quizId }: { quizId: string }) {
                       )}
                     />
 
-                    {/* Courses multi-select */}
+                    {/* Selection UI */}
                     <FormField
                       control={form.control}
                       name="coursIds"
                       render={() => (
                         <FormItem className="mt-4">
                           <div className="flex items-center justify-between gap-2">
-                            <FormLabel>Select cours (multiple)</FormLabel>
+                            <FormLabel>
+                              {isUnite
+                                ? "Select modules or specific cours"
+                                : "Select cours (multiple)"}
+                            </FormLabel>
                             <div className="flex items-center gap-2">
                               <div className="flex items-center gap-2">
                                 <Checkbox
@@ -547,89 +596,195 @@ export default function StartTest({ quizId }: { quizId: string }) {
                             </div>
                           </div>
 
-                          {/* Let the outer body scroll; avoid nested scroll traps on mobile */}
-                          <div className="rounded-md border p-2 mt-2 space-y-2">
-                            {coursOptions.length === 0 && (
-                              <p className="px-2 py-1 text-sm text-muted-foreground">
-                                {fetched
-                                  ? "No cours available."
-                                  : "Loading cours…"}
-                              </p>
-                            )}
+                          {/* Groups (Unité) */}
+                          {isUnite ? (
+                            <div className="space-y-3 mt-2">
+                              {moduleGroups.map((g) => {
+                                const ids = g.cours.map((c) => c.id);
+                                const groupAll = ids.every((id) =>
+                                  watchedCoursIds.includes(id)
+                                );
+                                const groupSome =
+                                  !groupAll &&
+                                  ids.some((id) =>
+                                    watchedCoursIds.includes(id)
+                                  );
 
-                            {coursOptions.map((c) => {
-                              const checked = watchedCoursIds.includes(c.id);
-                              const perYear = yearIndex[c.id] ?? {};
-                              const from =
-                                typeof yearFrom === "number"
-                                  ? yearFrom
-                                  : (globalMinYear as number);
-                              const to =
-                                typeof yearTo === "number"
-                                  ? yearTo
-                                  : (globalMaxYear as number);
-                              const rangeCount = hasYearData
-                                ? Object.entries(perYear).reduce(
-                                    (acc, [ys, cnt]) => {
-                                      const y = Number(ys);
-                                      return y >= from && y <= to
-                                        ? acc + cnt
-                                        : acc;
-                                    },
-                                    0
-                                  )
-                                : c.questionCount ?? 0;
+                                // compute count within current year range
+                                const rangeCountForId = (
+                                  id: string,
+                                  fallback?: number | null
+                                ) => {
+                                  const perYear = yearIndex[id] ?? {};
+                                  if (
+                                    !hasYearData ||
+                                    Object.keys(perYear).length === 0
+                                  ) {
+                                    return fallback ?? 0;
+                                  }
+                                  const from =
+                                    typeof yearFrom === "number"
+                                      ? yearFrom
+                                      : (globalMinYear as number);
+                                  const to =
+                                    typeof yearTo === "number"
+                                      ? yearTo
+                                      : (globalMaxYear as number);
+                                  let sum = 0;
+                                  for (const [ys, cnt] of Object.entries(
+                                    perYear
+                                  )) {
+                                    const y = Number(ys);
+                                    if (y >= from && y <= to) sum += cnt;
+                                  }
+                                  return sum;
+                                };
 
-                              return (
-                                <div
-                                  key={c.id}
-                                  className="flex items-start gap-3 rounded-md px-2 py-1 hover:bg-accent"
-                                >
-                                  <FormControl>
-                                    <Checkbox
-                                      checked={checked}
-                                      disabled={disabledUI}
-                                      onCheckedChange={(v) => {
-                                        const prev = form.getValues("coursIds");
-                                        if (v === true) {
-                                          if (!prev.includes(c.id))
-                                            form.setValue(
-                                              "coursIds",
-                                              [...prev, c.id],
-                                              {
-                                                shouldValidate: true,
-                                                shouldDirty: true,
-                                              }
-                                            );
-                                        } else {
-                                          form.setValue(
-                                            "coursIds",
-                                            prev.filter((x) => x !== c.id),
-                                            {
-                                              shouldValidate: true,
-                                              shouldDirty: true,
-                                            }
-                                          );
-                                        }
-                                      }}
-                                    />
-                                  </FormControl>
-                                  <div className="grid gap-0.5 leading-tight">
-                                    <span className="text-sm">{c.title}</span>
-                                    <span className="text-xs text-muted-foreground">
-                                      {rangeCount} question
-                                      {rangeCount === 1 ? "" : "s"}
-                                      {hasYearData && ` in range`}
-                                    </span>
+                                const moduleRangeCount = g.cours.reduce(
+                                  (acc, c) =>
+                                    acc +
+                                    rangeCountForId(c.id, c.questionCount),
+                                  0
+                                );
+
+                                return (
+                                  <div
+                                    key={g.id}
+                                    className="rounded-md border p-2"
+                                  >
+                                    {/* Module header with tri-state checkbox */}
+                                    <div className="flex items-center justify-between px-1 py-1">
+                                      <div className="flex items-center gap-2">
+                                        <Checkbox
+                                          checked={
+                                            groupAll
+                                              ? true
+                                              : groupSome
+                                              ? "indeterminate"
+                                              : false
+                                          }
+                                          disabled={disabledUI}
+                                          onCheckedChange={(v) =>
+                                            toggleModule(g, v === true)
+                                          }
+                                        />
+                                        <span className="font-medium">
+                                          {g.title}
+                                        </span>
+                                      </div>
+                                      <span className="text-xs text-muted-foreground">
+                                        {moduleRangeCount} question
+                                        {moduleRangeCount === 1 ? "" : "s"}
+                                      </span>
+                                    </div>
+
+                                    {/* Module cours list */}
+                                    <div className="mt-2 space-y-1">
+                                      {g.cours.map((c) => {
+                                        const checked =
+                                          watchedCoursIds.includes(c.id);
+                                        const rangeCount = rangeCountForId(
+                                          c.id,
+                                          c.questionCount
+                                        );
+                                        return (
+                                          <div
+                                            key={c.id}
+                                            className="flex items-start gap-3 rounded-md px-2 py-1 hover:bg-accent"
+                                          >
+                                            <FormControl>
+                                              <Checkbox
+                                                checked={checked}
+                                                disabled={disabledUI}
+                                                onCheckedChange={(v) =>
+                                                  toggleCours(c.id, v === true)
+                                                }
+                                              />
+                                            </FormControl>
+                                            <div className="grid gap-0.5 leading-tight">
+                                              <span className="text-sm">
+                                                {c.title}
+                                              </span>
+                                              <span className="text-xs text-muted-foreground">
+                                                {rangeCount} question
+                                                {rangeCount === 1 ? "" : "s"}
+                                                {hasYearData && ` in range`}
+                                              </span>
+                                            </div>
+                                          </div>
+                                        );
+                                      })}
+                                    </div>
                                   </div>
-                                </div>
-                              );
-                            })}
-                          </div>
+                                );
+                              })}
+                            </div>
+                          ) : (
+                            // Flat list (non-unité)
+                            <div className="rounded-md border p-2 mt-2 space-y-2">
+                              {coursOptions.length === 0 && (
+                                <p className="px-2 py-1 text-sm text-muted-foreground">
+                                  {fetched
+                                    ? "No cours available."
+                                    : "Loading cours…"}
+                                </p>
+                              )}
+
+                              {coursOptions.map((c) => {
+                                const checked = watchedCoursIds.includes(c.id);
+                                const perYear = yearIndex[c.id] ?? {};
+                                const from =
+                                  typeof yearFrom === "number"
+                                    ? yearFrom
+                                    : (globalMinYear as number);
+                                const to =
+                                  typeof yearTo === "number"
+                                    ? yearTo
+                                    : (globalMaxYear as number);
+                                const rangeCount = hasYearData
+                                  ? Object.entries(perYear).reduce(
+                                      (acc, [ys, cnt]) => {
+                                        const y = Number(ys);
+                                        return y >= from && y <= to
+                                          ? acc + cnt
+                                          : acc;
+                                      },
+                                      0
+                                    )
+                                  : c.questionCount ?? 0;
+
+                                return (
+                                  <div
+                                    key={c.id}
+                                    className="flex items-start gap-3 rounded-md px-2 py-1 hover:bg-accent"
+                                  >
+                                    <FormControl>
+                                      <Checkbox
+                                        checked={checked}
+                                        disabled={disabledUI}
+                                        onCheckedChange={(v) =>
+                                          toggleCours(c.id, v === true)
+                                        }
+                                      />
+                                    </FormControl>
+                                    <div className="grid gap-0.5 leading-tight">
+                                      <span className="text-sm">{c.title}</span>
+                                      <span className="text-xs text-muted-foreground">
+                                        {rangeCount} question
+                                        {rangeCount === 1 ? "" : "s"}
+                                        {hasYearData && ` in range`}
+                                      </span>
+                                    </div>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          )}
 
                           <FormDescription className="mt-2">
-                            Pick one or more cours. If you set a year range, the
-                            cap and counts adapt automatically.
+                            {isUnite
+                              ? "Pick whole modules or drill down to specific cours. Year range and caps adapt automatically."
+                              : "Pick one or more cours. If you set a year range, the cap and counts adapt automatically."}
                           </FormDescription>
                           <FormMessage />
                         </FormItem>
@@ -639,7 +794,6 @@ export default function StartTest({ quizId }: { quizId: string }) {
                 )}
               </DialogBody>
 
-              {/* Sticky footer with safe-area bottom */}
               <DialogFooter
                 className="
                   sticky bottom-0 z-10
@@ -699,7 +853,7 @@ function LoadingCoursSkeleton() {
         <Skeleton className="h-3 w-24" />
       </div>
 
-      {/* Course list */}
+      {/* Course/Module list */}
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <Skeleton className="h-4 w-40" />

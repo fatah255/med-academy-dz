@@ -14,6 +14,7 @@ import {
   Loader2,
   Award,
   History,
+  Trash2,
 } from "lucide-react";
 import {
   Card,
@@ -150,6 +151,36 @@ const MCQ: React.FC<Props> = ({ game }) => {
     [isClinical, currentQuestion, subIndex]
   );
 
+  /* -------- "Cross out" state per (question/sub) -------- */
+  const [eliminated, setEliminated] = React.useState<Map<string, Set<number>>>(
+    () => new Map()
+  );
+
+  const isEliminated = React.useCallback(
+    (qid: string | undefined, idx: number) => {
+      if (!qid) return false;
+      const set = eliminated.get(qid);
+      return set ? set.has(idx) : false;
+    },
+    [eliminated]
+  );
+
+  const toggleElimination = React.useCallback(
+    (qid: string | undefined, idx: number) => {
+      if (!qid) return;
+      setEliminated((prev) => {
+        const next = new Map(prev);
+        const set = new Set(next.get(qid) ?? []);
+        if (set.has(idx)) set.delete(idx);
+        else set.add(idx);
+        if (set.size === 0) next.delete(qid);
+        else next.set(qid, set);
+        return next;
+      });
+    },
+    []
+  );
+
   /* -------- Timer -------- */
   React.useEffect(() => {
     const id = setInterval(() => {
@@ -175,13 +206,15 @@ const MCQ: React.FC<Props> = ({ game }) => {
   const toggleChoice = React.useCallback(
     (idx: number) => {
       if (verified) return;
+      // disallow selecting an eliminated choice until uncrossed
+      if (isEliminated(active?.id, idx)) return;
       setSelectedChoices((prev) => {
         const next = new Set(prev);
         next.has(idx) ? next.delete(idx) : next.add(idx);
         return next;
       });
     },
-    [verified]
+    [verified, isEliminated, active?.id]
   );
 
   const setsEqual = (a: Set<number>, b: Set<number>) =>
@@ -392,8 +425,9 @@ const MCQ: React.FC<Props> = ({ game }) => {
   ]);
 
   /* -------- Next / Skip -------- */
+  const [ending, setEnding] = React.useState(false);
+
   const handleNext = React.useCallback(() => {
-    // FIX: reset reveal state BEFORE navigating to prevent brief flash
     setVerified(false);
     setSelectedChoices(new Set());
     setCommentOpen(false);
@@ -472,7 +506,6 @@ const MCQ: React.FC<Props> = ({ game }) => {
   const jumpTo = React.useCallback(
     (i: number) => {
       if (i < 0 || i >= game.questions.length) return;
-      // FIX: reset immediately when jumping to avoid flash
       setVerified(false);
       setSelectedChoices(new Set());
       setCommentOpen(false);
@@ -486,12 +519,10 @@ const MCQ: React.FC<Props> = ({ game }) => {
 
   /* -------- End Game now (confirmation + loading) -------- */
   const [endOpen, setEndOpen] = React.useState(false);
-  const [ending, setEnding] = React.useState(false);
 
   const endGameNowConfirmed = React.useCallback(async () => {
     try {
       setEnding(true);
-      // local + remote with partial
       persistLocal(answersLog, stats.correct_answers, stats.wrong_answers);
       await saveRemoteAttempt({
         completedAll: false,
@@ -511,7 +542,7 @@ const MCQ: React.FC<Props> = ({ game }) => {
     saveRemoteAttempt,
   ]);
 
-  /* -------- Completed view (polished layout) -------- */
+  /* -------- Completed view -------- */
   if (hasEnded) {
     const finishedAt = endedAt ?? now;
     const duration = formatTimeDelta(
@@ -704,41 +735,70 @@ const MCQ: React.FC<Props> = ({ game }) => {
         </Card>
       )}
 
-      {/* Options */}
+      {/* Options with cross-out */}
       <div className="mt-4 flex w-full flex-col items-center justify-center">
         {active?.options?.map((option, index) => {
-          const isSelected = selectedChoices.has(index);
+          const selected = selectedChoices.has(index);
+          const eliminatedNow = isEliminated(active?.id, index);
+
+          // Reveal styles on verify
           const revealedClass = verified
             ? correctSet.has(index)
               ? "border-green-500 bg-green-500/10 text-green-400"
-              : isSelected
+              : selected
               ? "border-red-500 bg-red-500/10 text-red-400"
               : "opacity-70"
             : "";
 
-          return (
-            <Button
-              key={`${active.id}-${index}`}
-              variant={isSelected && !verified ? undefined : "outline"}
-              className={cn(
-                "mb-4 w-full justify-start py-6 text-left",
-                revealedClass
-              )}
-              onClick={() => toggleChoice(index)}
-              disabled={verified || ending}
-            >
-              {/* make the row take full width */}
-              <div className="flex w-full items-start gap-3">
-                <div className="shrink-0 rounded-md border px-3 py-2">
-                  {numToLetter.get(index + 1)}
-                </div>
+          // Cross-out appearance when eliminated (before verify)
+          const crossedClass =
+            eliminatedNow && !verified
+              ? "line-through decoration-rose-400 decoration-2 opacity-60"
+              : "";
 
-                {/* allow wrapping */}
-                <div className="flex-1 min-w-0 whitespace-pre-wrap break-words leading-relaxed">
-                  {option}
+          return (
+            <div key={`${active.id}-${index}`} className="relative mb-4 w-full">
+              <Button
+                variant={selected && !verified ? undefined : "outline"}
+                className={cn(
+                  "w-full justify-start py-6 text-left pr-12", // leave room for trash button
+                  revealedClass,
+                  crossedClass
+                )}
+                onClick={() => toggleChoice(index)}
+                disabled={verified || ending || eliminatedNow}
+              >
+                <div className="flex w-full items-start gap-3">
+                  <div className="shrink-0 rounded-md border px-3 py-2">
+                    {numToLetter.get(index + 1)}
+                  </div>
+                  <div className="flex-1 min-w-0 whitespace-pre-wrap break-words leading-relaxed">
+                    {option}
+                  </div>
                 </div>
-              </div>
-            </Button>
+              </Button>
+
+              {/* Trash / cross toggle */}
+              <button
+                type="button"
+                title={eliminatedNow ? "Uncross" : "Cross out this answer"}
+                aria-label={eliminatedNow ? "Uncross" : "Cross out"}
+                className={cn(
+                  "absolute right-2 top-1/2 -translate-y-1/2 inline-flex h-9 w-9 items-center justify-center rounded-md border transition",
+                  eliminatedNow
+                    ? "border-rose-500 text-rose-500 bg-rose-500/10"
+                    : "border-border text-muted-foreground hover:bg-accent"
+                )}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (ending || verified) return;
+                  toggleElimination(active?.id, index);
+                }}
+                disabled={ending || verified}
+              >
+                <Trash2 className="h-4 w-4" />
+              </button>
+            </div>
           );
         })}
 
@@ -776,7 +836,6 @@ const MCQ: React.FC<Props> = ({ game }) => {
             <ChevronRight className="ml-2 h-4 w-4" />
           </Button>
 
-          {/* >>> Show / Hide Comment button <<< */}
           {safeCommentHtml && verified && (
             <Button
               variant="outline"

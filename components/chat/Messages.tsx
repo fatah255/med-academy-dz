@@ -2,7 +2,7 @@
 
 import { Loader2, MessageSquare } from "lucide-react";
 import Message from "./Message";
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useLayoutEffect, useRef } from "react";
 import { ChatContext } from "./ChatContext";
 import { useIntersection } from "@mantine/hooks";
 import { useInfiniteQuery } from "@tanstack/react-query";
@@ -59,11 +59,45 @@ const Messages = ({ chatId }: MessagesProps) => {
     ) as any,
   };
 
+  // Keep your original UX: newest at bottom via flex-col-reverse
   const combined = [...(isAiThinking ? [loadingMessage] : []), ...messages];
 
-  const lastMessageRef = useRef<HTMLDivElement>(null);
-  const { ref, entry } = useIntersection({
-    root: lastMessageRef.current,
+  // ---- Scroll management: stable during streaming, no jump ----
+  const listRef = useRef<HTMLDivElement>(null);
+  const prevHeightRef = useRef<number>(0);
+
+  // In flex-col-reverse, “bottom” is scrollTop === 0
+  const isAtVisualBottom = () => {
+    const el = listRef.current;
+    if (!el) return true;
+    return el.scrollTop <= 2;
+  };
+
+  useLayoutEffect(() => {
+    const el = listRef.current;
+    if (!el) return;
+
+    const prevH = prevHeightRef.current || el.scrollHeight;
+    const stick = isAtVisualBottom();
+
+    // run after DOM paints
+    requestAnimationFrame(() => {
+      const newH = el.scrollHeight;
+      if (stick) {
+        // keep stuck to bottom while AI streams
+        el.scrollTop = 0;
+      } else {
+        // preserve viewport position if user scrolled up
+        el.scrollTop += newH - prevH;
+      }
+      prevHeightRef.current = newH;
+    });
+  }, [combined.length, isAiThinking, messages.length]);
+
+  // Infinite loader: trigger when top item (visually) is in view
+  const topAnchorRef = useRef<HTMLDivElement>(null);
+  const { ref: topObserverRef, entry } = useIntersection({
+    root: listRef.current,
     threshold: 1,
   });
 
@@ -72,25 +106,28 @@ const Messages = ({ chatId }: MessagesProps) => {
   }, [entry, fetchNextPage, hasNextPage]);
 
   return (
-    <div className="flex max-h-[calc(100vh-3.5rem-7rem)] border-zinc-200 dark:border-zinc-800 flex-1 flex-col-reverse gap-4 p-3 overflow-y-auto">
+    <div
+      ref={listRef}
+      className="flex h-full max-h-[calc(100vh-3.5rem-7rem)] border-zinc-200 dark:border-zinc-800
+                 flex-1 flex-col-reverse gap-4 p-3 overflow-y-auto [overflow-anchor:none]"
+    >
       {combined.length > 0 ? (
         combined.map((m, i) => {
-          const isNextSame = combined[i - 1]?.isUserMessage === m.isUserMessage;
-          if (i === combined.length - 1) {
-            return (
-              <Message
-                ref={ref}
-                message={m as any}
-                isNextMessageSamePerson={!!isNextSame}
-                key={m.id}
-              />
-            );
-          }
+          // with flex-col-reverse, the next visual bubble is i-1
+          const isNextSame =
+            i > 0
+              ? combined[i - 1]?.isUserMessage === (m as any).isUserMessage
+              : false;
+
+          // attach intersection ref to the LAST array item (visually at the TOP)
+          const attachRef = i === combined.length - 1;
+
           return (
             <Message
+              ref={attachRef ? topObserverRef : undefined}
               message={m as any}
               isNextMessageSamePerson={!!isNextSame}
-              key={m.id}
+              key={(m as any).id}
             />
           );
         })
@@ -110,6 +147,9 @@ const Messages = ({ chatId }: MessagesProps) => {
           </p>
         </div>
       )}
+
+      {/* optional anchor */}
+      <div ref={topAnchorRef} />
     </div>
   );
 };

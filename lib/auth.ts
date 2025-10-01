@@ -27,11 +27,20 @@ export const auth = betterAuth({
         (ns.user?.id as string) ?? (ns.userId as string);
 
       if (!currentSessionId || !userId) return;
-
-      // keep the new one, delete everything else
-      await prisma.session.deleteMany({
-        where: { userId, id: { not: currentSessionId } },
+      const user = await prisma.user.findFirst({
+        where: { id: userId },
+        select: { email: true },
       });
+      if (
+        user?.email !== "a.lebkara@esi-sba.dz" &&
+        user?.email !== "medacademydz@gmail.com"
+      ) {
+        // keep the new one, delete everything else
+        await prisma.session.deleteMany({
+          where: { userId, id: { not: currentSessionId } },
+        });
+      }
+
       // const setup = await prisma.user.findFirst({
       //   where: { id: userId },
       //   select: { setup: true },
