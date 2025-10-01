@@ -63,35 +63,88 @@ export const editQuiz = async (
     return { status: "error", message: "Request denied" };
   }
 
-  try {
-    const parsed = qcmSchema.safeParse(data);
-    if (!parsed.success) {
-      return { status: "error", message: "Invalid quiz data" };
-    }
+  const parsed = qcmSchema.safeParse(data);
+  if (!parsed.success) {
+    return { status: "error", message: "Invalid quiz data" };
+  }
+  const v = parsed.data;
 
+  try {
     await prisma.$transaction(async (tx) => {
       // Ensure ownership
       const ok = await tx.quiz.findUnique({
         where: { id: quizId },
         select: { id: true, user: { select: { id: true, email: true } } },
       });
-      if (!ok) throw new Error("Quiz not found or unauthorized");
       if (
-        ok.user.id !== user.user.id &&
-        user.user.email !== "medacademydz@gmail.com"
+        !ok ||
+        (ok.user.id !== user.user.id &&
+          user.user.email !== "medacademydz@gmail.com")
       ) {
         throw new Error("Quiz not found or unauthorized");
       }
 
+      // Update base quiz fields
       await tx.quiz.update({
-        where: { id: quizId }, // unique selector only
-        data: parsed.data,
+        where: { id: quizId },
+        data: {
+          title: v.title,
+          description: v.description ?? null,
+          slug: v.slug,
+          status: v.status,
+          level: v.level,
+          // If unite, category is unused
+          category: v.category,
+          fileKey: v.fileKey ?? null,
+          price: v.price ?? null,
+          isUnite: v.isUnite,
+        },
       });
+
+      if (!v.isUnite) {
+        // Optionally clear modules when not a unite quiz
+        await tx.quizmodule.deleteMany({ where: { quizId } });
+        return;
+      }
+
+      // Reconcile modules
+      const existing = await tx.quizmodule.findMany({
+        where: { quizId },
+        select: { id: true },
+      });
+
+      const incoming = v.modules ?? [];
+
+      // delete removed
+      const keepIds = new Set(incoming.filter((m) => m.id).map((m) => m.id!));
+      const toDelete = existing.filter((e) => !keepIds.has(e.id));
+      if (toDelete.length) {
+        await tx.quizmodule.deleteMany({
+          where: { id: { in: toDelete.map((d) => d.id) } },
+        });
+      }
+
+      // upserts (update when id present, otherwise create)
+      for (const m of incoming) {
+        const title = m.title.trim();
+        if (!title) continue;
+        if (m.id) {
+          await tx.quizmodule.update({
+            where: { id: m.id },
+            data: { title },
+          });
+        } else {
+          await tx.quizmodule.create({
+            data: { title, quizId },
+          });
+        }
+      }
     });
 
     revalidatePath(`/admin/quizzes/${quizId}/edit`);
     return { status: "success", message: "Quiz updated successfully" };
   } catch (e) {
+    console.error(e);
     return { status: "error", message: "Something went wrong" };
   }
 };

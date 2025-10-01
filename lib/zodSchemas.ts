@@ -157,26 +157,36 @@ export const qcmUpdateSchema = z.object({
 });
 
 /* ------------------------------ Quiz metadata ----------------------------- */
-
-export const qcmSchema = z.object({
-  title: z
-    .string()
-    .min(1, { message: "Title must be at least 1 character long." })
-    .max(100, { message: "Title must not exceed 100 characters." }),
-  description: z
-    .string()
-    .min(10, { message: "Description must be at least 10 characters long." })
-    .max(500, { message: "Description must not exceed 500 characters." }),
-  price: z.number().min(0, { message: "Price is required." }),
-  fileKey: z.string().min(1, { message: "File key is required." }).optional(),
-  level: z.enum(courseLevels),
-  category: z.string().min(1, { message: "Category is required." }),
-  slug: z
-    .string()
-    .min(3, { message: "Slug must be at least 3 characters long." })
-    .max(100, { message: "Slug must not exceed 100 characters." }),
-  status: z.enum(courseStatus),
+export const quizModuleInput = z.object({
+  id: z.string().optional(), // existing module id when editing
+  title: z.string().min(1, "Module title is required"),
 });
+export const qcmSchema = z
+  .object({
+    title: z
+      .string()
+      .min(1, { message: "Title must be at least 1 character long." })
+      .max(100, { message: "Title must not exceed 100 characters." }),
+    description: z
+      .string()
+      .min(10, { message: "Description must be at least 10 characters long." })
+      .max(500, { message: "Description must not exceed 500 characters." }),
+    price: z.number().min(0, { message: "Price is required." }),
+    fileKey: z.string().min(1, { message: "File key is required." }).optional(),
+    level: z.enum(courseLevels),
+    category: z.string().min(1, { message: "Category is required." }),
+    slug: z
+      .string()
+      .min(3, { message: "Slug must be at least 3 characters long." })
+      .max(100, { message: "Slug must not exceed 100 characters." }),
+    status: z.enum(courseStatus),
+    isUnite: z.boolean().default(false),
+    modules: z.array(quizModuleInput).default([]), // only used if isUnite = true
+  })
+  .refine(
+    (v) => !v.isUnite || (v.modules && v.modules.some((m) => m.title.trim())),
+    { message: "Add at least one module", path: ["modules"] }
+  );
 
 /* --------------------------------- Settings -------------------------------- */
 

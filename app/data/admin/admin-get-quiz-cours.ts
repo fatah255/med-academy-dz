@@ -9,6 +9,7 @@ export async function getQuizCourses(quizId: string) {
           id: true,
           title: true,
           quizId: true,
+          quizModuleId: true,
         },
       },
     },

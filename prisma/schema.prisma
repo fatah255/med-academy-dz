@@ -136,6 +136,7 @@ model Lesson {
 model Quiz {
   id           String        @id @unique @default(uuid())
   title        String
+  isUnite      Boolean       @default(false)
   description  String
   fileKey      String?
   price        Int
@@ -151,7 +152,7 @@ model Quiz {
   cours        cours[]
   enrollments  Enrollment[]
   user         User          @relation(fields: [userId], references: [id])
-
+  quizModules  quizmodule[]
   @@map("quiz")
 }
 
@@ -233,6 +234,15 @@ model LessonProgress {
 
   @@unique([userId, lessonId])
 }
+model quizmodule {
+  id        String   @id @default(cuid())
+  title     String
+  quizId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  quiz      Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  cours    cours[]  @relation("QuizModuleCourses")
+}
 
 model cours {
   id           String        @id @default(cuid())
@@ -244,6 +254,8 @@ model cours {
   quizAttempts QuizAttempt[]
   quiz         Quiz          @relation(fields: [quizId], references: [id], onDelete: Cascade)
   qcm          Qcm[]
+  quizModuleId String?
+  quizmodule   quizmodule?   @relation("QuizModuleCourses", fields: [quizModuleId], references: [id])
 }
 
 model notes {

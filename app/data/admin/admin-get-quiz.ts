@@ -1,3 +1,4 @@
+// app/data/admin/admin-get-quiz.ts
 import "server-only";
 import { requireAdmin } from "./require-admin";
 import { prisma } from "@/lib/db";
@@ -5,21 +6,31 @@ import { notFound } from "next/navigation";
 
 export const adminGetQuiz = async (id: string) => {
   await requireAdmin();
+
   const data = await prisma.quiz.findUnique({
-    where: {
-      id: id,
-    },
+    where: { id },
     select: {
       id: true,
       title: true,
       slug: true,
       fileKey: true,
-
       level: true,
       category: true,
       description: true,
       price: true,
       status: true,
+
+      // NEW
+      isUnite: true,
+      quizModules: {
+        select: {
+          id: true,
+          title: true,
+        },
+        orderBy: { createdAt: "asc" },
+      },
+
+      // unchanged
       cours: {
         select: {
           id: true,
@@ -56,15 +67,14 @@ export const adminGetQuiz = async (id: string) => {
                 },
               },
             },
+            orderBy: { position: "asc" },
           },
         },
       },
     },
   });
 
-  if (!data) {
-    return notFound();
-  }
+  if (!data) return notFound();
   return data;
 };
 
