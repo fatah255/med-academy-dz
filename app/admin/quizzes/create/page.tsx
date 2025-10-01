@@ -13,7 +13,7 @@ import { ArrowLeft, Loader2, PlusIcon, SparklesIcon } from "lucide-react";
 import Link from "next/link";
 import { modulesByYear } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, useWatch } from "react-hook-form";
+import { Resolver, useForm, useWatch } from "react-hook-form";
 import {
   courseLevels,
   courseStatus,
@@ -71,7 +71,29 @@ const Page = (): ReactNode => {
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
   const form = useForm<qcmSchemaType>({
-    resolver: zodResolver(qcmSchema),
+    resolver: zodResolver(qcmSchema) as
+      | Resolver<{
+          title: string;
+          description: string;
+          price: number;
+          level:
+            | "FIRST_YEAR"
+            | "SECOND_YEAR"
+            | "THIRD_YEAR"
+            | "FOURTH_YEAR"
+            | "FIFTH_YEAR"
+            | "SIXTH_YEAR";
+          category: string;
+          slug: string;
+          status: "DRAFT" | "PUBLISHED" | "ARCHIVED";
+          isUnite: boolean;
+          modules: {
+            title: string;
+            id?: string | undefined;
+          }[];
+          fileKey?: string | undefined;
+        }>
+      | undefined,
     defaultValues: {
       title: "",
       description: "",
