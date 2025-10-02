@@ -926,7 +926,7 @@ const MCQ: React.FC<Props> = ({ game }) => {
                 </div>
                 <div className="p-4">
                   <div
-                    className="mcq-comment prose prose-invert max-w-none"
+                    className="mcq-comment prose prose-slate max-w-none dark:prose-invert prose-a:underline prose-a:underline-offset-2 prose-a:text-blue-700 dark:prose-a:text-blue-400"
                     dangerouslySetInnerHTML={{ __html: safeCommentHtml }}
                   />
                 </div>
