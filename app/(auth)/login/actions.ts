@@ -1,14 +1,12 @@
 import { prisma } from "@/lib/db";
+import { isOwnersEmail } from "@/lib/utils";
 
 export const handleOneTimeLogin = async (userId: string, sessionId: string) => {
   const user = await prisma.user.findFirst({
     where: { id: userId },
     select: { email: true },
   });
-  if (
-    user?.email !== "a.lebkara@esi-sba.dz" &&
-    user?.email !== "medacademydz@gmail.com"
-  ) {
+  if (isOwnersEmail(user?.email || "")) {
     await prisma.session.deleteMany({
       where: {
         userId,

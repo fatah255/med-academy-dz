@@ -4,6 +4,13 @@ import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
+export function isOwnersEmail(email: string) {
+  return (
+    email === "a.lebkara@esi-sba.dz" ||
+    email === "abdouzerguine897@gmail.com" ||
+    email === "medacademydz@gmail.com"
+  );
+}
 export const modulesByYear = [
   {
     year: "FIRST_YEAR",

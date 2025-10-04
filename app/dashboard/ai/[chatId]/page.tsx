@@ -1,11 +1,9 @@
-// import { requireUser } from "@/app/data/user/require-user";
-
 import { requireUser } from "@/app/data/user/require-user";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/db";
-import useConstructUrl from "@/hooks/use-construct-url";
 import PdfRenderer from "@/components/PdfRenderer";
 import RightPaneTabs from "@/components/RightPaneTabs";
+import useConstructUrl from "@/hooks/use-construct-url";
 
 interface PageProps {
   params: Promise<{ chatId: string }>;
@@ -17,10 +15,11 @@ export default async function Page({ params }: PageProps) {
 
   const chat = await prisma.chat.findFirst({
     where: { id: chatId, userId: session.user.id },
-    select: { pdfFileKey: true, id: true },
+    select: { pdfFileKey: true, id: true, pdfName: true },
   });
 
   if (!chat) notFound();
+
   const url = useConstructUrl(chat.pdfFileKey);
 
   return (

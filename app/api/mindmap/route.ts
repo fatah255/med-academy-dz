@@ -135,6 +135,20 @@ Return JSON exactly as:
     }
 
     const doc = MapifySchema.parse(parsed);
+    // --- SAVE MINDMAP (non-breaking; response shape unchanged) ---
+    try {
+      await prisma.chatMindmap.create({
+        data: {
+          chatId,
+          mode: detail,
+          topic: doc.topic,
+          markdown: doc.markdown,
+        },
+      });
+    } catch (persistErr) {
+      console.error("Mindmap persist error (non-fatal):", persistErr);
+    }
+
     return NextResponse.json({ mode: detail, doc }, { status: 200 });
   } catch (err: any) {
     return NextResponse.json(

@@ -401,6 +401,9 @@ model chat {
   pdfName        String
   pdfFileKey     String
   userId         String
+  chatFlashcardSets chatFlashcardSet[]
+  qcmSets       chatQcmSet[]
+  mindmaps      chatMindmap[]
   createdAt      DateTime      @default(now())
   pdfAnnotations Json?
   user           User          @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -548,4 +551,71 @@ enum CourseStatus {
 enum chatRole {
   USER
   SYSTEM
+}
+model chatFlashcardSet {
+  id         String           @id @default(cuid())
+  chatId     String
+  title      String           @default("Flashcards")
+  count      Int
+  difficulty String           // "easy" | "normal" | "hard"
+  language   String           // "fr" | "en" | "ar" | ...
+  createdAt  DateTime         @default(now())
+  chat       chat             @relation(fields: [chatId], references: [id], onDelete: Cascade)
+  items      chatFlashcard[]
+
+  @@index([chatId, createdAt])
+  @@map("chat_flashcard_set")
+}
+
+model chatFlashcard {
+  id        String            @id @default(cuid())
+  setId     String
+  front     String
+  back      String
+  hint      String?
+  createdAt DateTime          @default(now())
+  set       chatFlashcardSet  @relation(fields: [setId], references: [id], onDelete: Cascade)
+
+  @@index([setId])
+  @@map("chat_flashcard")
+}
+
+model chatQcmSet {
+  id         String          @id @default(cuid())
+  chatId     String
+  count      Int
+  difficulty String          // "easy" | "normal" | "hard"
+  createdAt  DateTime        @default(now())
+  chat       chat            @relation(fields: [chatId], references: [id], onDelete: Cascade)
+  items      chatQcmQuestion[]
+
+  @@index([chatId, createdAt])
+  @@map("chat_qcm_set")
+}
+
+model chatQcmQuestion {
+  id           String     @id @default(cuid())
+  setId        String
+  question     String
+  choices      String[]   // store as TEXT[] in Cockroach (Prisma handles)
+  correctIndex Int
+  explanation  String?
+  createdAt    DateTime   @default(now())
+  set          chatQcmSet @relation(fields: [setId], references: [id], onDelete: Cascade)
+
+  @@index([setId])
+  @@map("chat_qcm_question")
+}
+
+model chatMindmap {
+  id        String   @id @default(cuid())
+  chatId    String
+  mode      String   // "resumed" | "detailed"
+  topic     String
+  markdown  String
+  createdAt DateTime @default(now())
+  chat      chat     @relation(fields: [chatId], references: [id], onDelete: Cascade)
+
+  @@index([chatId, createdAt])
+  @@map("chat_mindmap")
 }

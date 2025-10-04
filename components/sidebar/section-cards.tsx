@@ -18,15 +18,14 @@ import {
 
 import { requireAdmin } from "@/app/data/admin/require-admin";
 import { Separator } from "../ui/separator";
+import { isOwnersEmail } from "@/lib/utils";
 
 export async function SectionCards({ email }: { email?: string }) {
   await requireAdmin();
   const { published, draft, archived } = await totalCourses();
   return (
     <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
-      {(email === "a.lebkara@esi-sba.dz" ||
-        email === "abdouzerguine897@gmail.com" ||
-        email === "medacademydz@gmail.com") && (
+      {isOwnersEmail(email || "") && (
         <Card className="@container/card">
           <CardHeader>
             <CardDescription>Total SignUps</CardDescription>
@@ -62,9 +61,7 @@ export async function SectionCards({ email }: { email?: string }) {
           </CardFooter>
         </Card>
       )}
-      {(email === "a.lebkara@esi-sba.dz" ||
-        email === "abdouzerguine897@gmail.com" ||
-        email === "medacademydz@gmail.com") && (
+      {isOwnersEmail(email || "") && (
         <Card className="@container/card ">
           <CardHeader>
             <CardDescription>
@@ -103,9 +100,7 @@ export async function SectionCards({ email }: { email?: string }) {
           <p> </p>
         </CardContent>
       </Card>
-      {(email === "a.lebkara@esi-sba.dz" ||
-        email === "abdouzerguine897@gmail.com" ||
-        email === "medacademydz@gmail.com") && (
+      {isOwnersEmail(email || "") && (
         <Card className="@container/card">
           <CardHeader>
             <CardDescription>Total Courses</CardDescription>

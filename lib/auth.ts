@@ -7,6 +7,7 @@ import { resend } from "./resend";
 import { admin } from "better-auth/plugins";
 import { multiSession } from "better-auth/plugins";
 import { createAuthMiddleware } from "better-auth/api";
+import { isOwnersEmail } from "./utils";
 
 export const auth = betterAuth({
   hooks: {
@@ -31,10 +32,7 @@ export const auth = betterAuth({
         where: { id: userId },
         select: { email: true },
       });
-      if (
-        user?.email !== "a.lebkara@esi-sba.dz" &&
-        user?.email !== "medacademydz@gmail.com"
-      ) {
+      if (isOwnersEmail(user?.email || "")) {
         // keep the new one, delete everything else
         await prisma.session.deleteMany({
           where: { userId, id: { not: currentSessionId } },

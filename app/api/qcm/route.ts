@@ -310,6 +310,34 @@ export async function POST(req: Request) {
     const normalized = normalizeToQcmShape(raw, count);
     const qcm = QcmSchema.parse(normalized);
 
+    // --- SAVE QCM SET (added; non-breaking) ---
+    try {
+      const itemsToCreate = qcm.questions.map((q) => {
+        const correctIndex = q.choices.findIndex((c) => c.correct);
+        return {
+          question: q.question,
+          choices: q.choices.map((c) => c.text), // TEXT[] in CockroachDB
+          correctIndex: correctIndex >= 0 ? correctIndex : 0,
+          explanation: q.explanation ?? null,
+        };
+      });
+
+      await prisma.chatQcmSet.create({
+        data: {
+          chatId,
+          count,
+          difficulty, // stored as string (matches your model suggestion)
+          items: {
+            create: itemsToCreate,
+          },
+        },
+      });
+    } catch (persistErr) {
+      // Do not block client if persistence fails
+      console.error("QCM persist error (non-fatal):", persistErr);
+    }
+
+    // unchanged response
     return NextResponse.json(qcm, { status: 200 });
   } catch (err: any) {
     console.log("QCM error", err);

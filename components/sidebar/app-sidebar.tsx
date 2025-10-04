@@ -10,6 +10,7 @@ import {
   IconHelp,
   IconListDetails,
   IconSettings,
+  IconGift,
 } from "@tabler/icons-react";
 
 import { NavMain } from "@/components/sidebar/nav-main";
@@ -26,8 +27,99 @@ import {
 } from "@/components/ui/sidebar";
 import Link from "next/link";
 import Image from "next/image";
+import { useSession } from "@/lib/auth-client";
+import { isOwnersEmail } from "@/lib/utils";
 
-const data = {
+const dataOwner = {
+  navMain: [
+    {
+      title: "Dashboard",
+      url: "/admin",
+      icon: IconDashboard,
+    },
+    {
+      title: "Courses",
+      url: "/admin/courses",
+      icon: IconListDetails,
+    },
+    {
+      title: "Quizzes",
+      url: "/admin/quizzes",
+      icon: IconFileWord,
+    },
+    {
+      title: "courses Access",
+      url: "/admin/course-access",
+      icon: IconGift,
+    },
+    {
+      title: "Quizzes Access",
+      url: "/admin/quizzes-access",
+      icon: IconGift,
+    },
+  ],
+  navClouds: [
+    {
+      title: "Capture",
+      icon: IconCamera,
+      isActive: true,
+      url: "#",
+      items: [
+        {
+          title: "Active Proposals",
+          url: "#",
+        },
+        {
+          title: "Archived",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Proposal",
+      icon: IconFileDescription,
+      url: "#",
+      items: [
+        {
+          title: "Active Proposals",
+          url: "#",
+        },
+        {
+          title: "Archived",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Prompts",
+      icon: IconFileAi,
+      url: "#",
+      items: [
+        {
+          title: "Active Proposals",
+          url: "#",
+        },
+        {
+          title: "Archived",
+          url: "#",
+        },
+      ],
+    },
+  ],
+  navSecondary: [
+    {
+      title: "Settings",
+      url: "/settings",
+      icon: IconSettings,
+    },
+    {
+      title: "Get Help",
+      url: "/help",
+      icon: IconHelp,
+    },
+  ],
+};
+const dataAdmin = {
   navMain: [
     {
       title: "Dashboard",
@@ -108,6 +200,43 @@ const data = {
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const session = useSession();
+  if (session.isPending) {
+    return (
+      <Sidebar collapsible="offcanvas" {...props}>
+        <SidebarHeader>
+          <SidebarMenu>
+            <SidebarMenuItem>
+              <SidebarMenuButton className="data-[slot=sidebar-menu-button]:!p-1.5 mt-3">
+                <div className="flex items-center gap-2">
+                  <div className="size-5 rounded bg-muted animate-pulse" />
+                  <div className="h-4 w-28 rounded bg-muted animate-pulse" />
+                </div>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </SidebarHeader>
+        <SidebarContent>
+          <div className="p-3 space-y-2">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div
+                key={i}
+                className="h-9 w-full rounded-md bg-muted animate-pulse"
+              />
+            ))}
+          </div>
+        </SidebarContent>
+        <SidebarFooter>
+          <div className="p-3">
+            <div className="h-10 w-full rounded-md bg-muted animate-pulse" />
+          </div>
+        </SidebarFooter>
+      </Sidebar>
+    );
+  }
+  const isOwner = isOwnersEmail(session.data?.user.email || "");
+  const data = isOwner ? dataOwner : dataAdmin;
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>

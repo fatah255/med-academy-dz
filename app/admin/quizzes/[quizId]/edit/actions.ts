@@ -15,6 +15,7 @@ import arcjet, { detectBot, fixedWindow } from "@/lib/arcjet";
 import { request } from "@arcjet/next";
 import { revalidatePath } from "next/cache";
 import z from "zod";
+import { isOwnersEmail } from "@/lib/utils";
 
 // ------------------------------------------------------------------
 // Arcjet instances
@@ -76,11 +77,7 @@ export const editQuiz = async (
         where: { id: quizId },
         select: { id: true, user: { select: { id: true, email: true } } },
       });
-      if (
-        !ok ||
-        (ok.user.id !== user.user.id &&
-          user.user.email !== "medacademydz@gmail.com")
-      ) {
+      if (!ok || (ok.user.id !== user.user.id && !isOwnersEmail(user.user.email || ""))) {
         throw new Error("Quiz not found or unauthorized");
       }
 

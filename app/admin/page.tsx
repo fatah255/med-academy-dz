@@ -8,6 +8,7 @@ import {
 } from "./actions";
 import { requireAdmin } from "../data/admin/require-admin";
 import { prisma } from "@/lib/db";
+import { isOwnersEmail } from "@/lib/utils";
 
 const AdminPage = async () => {
   const session = await requireAdmin();
@@ -26,12 +27,7 @@ const AdminPage = async () => {
   const enrolled = await countUsersWithAtLeastOnePaidEnrollment();
   const notEnrolled = total - enrolled;
 
-  const dataToRender =
-    session.user.email === "a.lebkara@esi-sba.dz" ||
-    session.user.email === "abdouzerguine897@gmail.com" ||
-    session.user.email === "medacademydz@gmail.com"
-      ? data
-      : finalData;
+  const dataToRender = isOwnersEmail(session.user.email || "") ? data : finalData;
   return (
     <>
       <SectionCards email={session.user.email} />

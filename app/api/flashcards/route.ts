@@ -149,9 +149,7 @@ export async function POST(req: Request) {
     if (!chat)
       return NextResponse.json({ error: "Not found" }, { status: 404 });
 
-    const pdfUrl = useConstructUrl(chat.pdfFileKey);
-
-    // ---------- Messages (FILE attempt) ----------
+    const pdfUrl = useConstructUrl(chat.pdfFileKey); // ⬅️ server-safe
     const dataUrl = await pdfToDataUrlFromUrl(pdfUrl);
 
     const system =
@@ -183,7 +181,7 @@ export async function POST(req: Request) {
 
     const model = "openai/gpt-4o-mini";
 
-    // Try 1: strict schema with FILE (same pattern as your QCM route)
+    // Try 1: strict schema with FILE
     const payloadSchemaWithFile = {
       model,
       messages: messagesWithFile,
@@ -234,13 +232,12 @@ export async function POST(req: Request) {
       contentStr =
         typeof content === "string" ? content : String(content ?? "");
     } catch (e: any) {
-      // ---------- AUTO-FALLBACK: pass the PDF URL as TEXT (no file) ----------
+      // Fallback: pass the PDF URL as TEXT (no file)
       const isFileUnsupported =
         e?.status === 400 &&
         /does not support file content types|Invalid Value: 'file'|messages\[1\]\.content\[\d+\]\.type/i.test(
           String(e?.message || "")
         );
-
       if (!isFileUnsupported) throw e;
 
       const messagesWithLink = [
@@ -259,13 +256,12 @@ export async function POST(req: Request) {
         },
       ];
 
-      // Try 2a: schema with LINK
       const payloadSchemaWithLink = {
         model,
         messages: messagesWithLink,
         max_tokens: Math.max(1200, 200 * count),
         temperature: 0.2,
-        response_format: { type: "json_object" }, // json_object is more widely honored when links are used
+        response_format: { type: "json_object" },
       } as const;
 
       try {
@@ -273,8 +269,7 @@ export async function POST(req: Request) {
         const content = data?.choices?.[0]?.message?.content;
         contentStr =
           typeof content === "string" ? content : String(content ?? "");
-      } catch (e2: any) {
-        // Try 2b: ultra-plain instruction
+      } catch {
         const payloadPlain = {
           model,
           messages: [
@@ -289,8 +284,8 @@ export async function POST(req: Request) {
                   type: "text",
                   text:
                     `Return ONLY this JSON shape (no prose): {"cards":[{"id":"...","front":"...","back":"..."}]}\n` +
-                    `Generate exactly ${count} cards in ${language}. Difficulty: ${difficulty}.` +
-                    `\nPDF URL: ${pdfUrl}`,
+                    `Generate exactly ${count} cards in ${language}. Difficulty: ${difficulty}.\n` +
+                    `PDF URL: ${pdfUrl}`,
                 },
               ],
             },
@@ -328,7 +323,34 @@ export async function POST(req: Request) {
     }
 
     const ok = FlashcardsSchema.parse(normalized);
-    return NextResponse.json(ok, { status: 200 });
+
+    // 🔥 SAVE to per-chat history
+    const set = await prisma.chatFlashcardSet.create({
+      data: {
+        chatId,
+        count,
+        difficulty, // DB column is string; adjust if you made an enum
+        language,
+        items: {
+          create: ok.cards.map((c) => ({
+            front: c.front,
+            back: c.back,
+            hint: c.hint ?? null,
+          })),
+        },
+      },
+      select: { id: true, createdAt: true },
+    });
+
+    // Return set metadata + cards (so UI can open the modal immediately)
+    return NextResponse.json(
+      {
+        setId: set.id,
+        createdAt: set.createdAt.toISOString(),
+        cards: ok.cards,
+      },
+      { status: 200 }
+    );
   } catch (err: any) {
     console.error("Flashcards error", err);
     return NextResponse.json(

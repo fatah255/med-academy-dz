@@ -4,6 +4,7 @@ import { requireAdmin } from "@/app/data/admin/require-admin";
 import arcjet, { detectBot, fixedWindow } from "@/lib/arcjet";
 import { prisma } from "@/lib/db";
 import { ApiResponse } from "@/lib/types";
+import { isOwnersEmail } from "@/lib/utils";
 import { request } from "@arcjet/next";
 import { revalidatePath } from "next/cache";
 
@@ -49,7 +50,7 @@ export const deleteCourse = async (courseId: string): Promise<ApiResponse> => {
   }
   if (
     user?.user.id !== course.userId &&
-    user.user.email !== "medacademydz@gmail.com"
+    !isOwnersEmail(user?.user.email || "")
   ) {
     return {
       status: "error",

@@ -61,7 +61,7 @@ export const editCourse = async (
   }
   if (
     user?.user.id !== course.userId &&
-    user.user.email !== "medacademydz@gmail.com"
+    isOwnersEmail(user?.user.email || "")
   ) {
     return {
       status: "error",

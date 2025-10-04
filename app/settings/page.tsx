@@ -23,7 +23,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { cn } from "@/lib/utils";
+import { cn, isOwnersEmail } from "@/lib/utils";
 import {
   courseLevels,
   settingsSchema,
@@ -110,11 +110,7 @@ export default function Page() {
       }
     });
   }
-  const userIsOwner =
-    session?.user.email === "a.lebkara@esi-sba.dz" ||
-    session?.user.email === "abdouzerguine897@gmail.com" ||
-    session?.user.email === "medacademydz@gmail.com";
-
+  const userIsOwner = isOwnersEmail(session?.user?.email || "");
   return (
     <div className="max-w-2xl mx-auto p-6 mt-5">
       <Form {...form}>
