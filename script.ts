@@ -1,6 +1,8 @@
 // /* scripts/migrate-lessons-to-mux.ts
 //    Run:  npx tsx scripts/migrate-lessons-to-mux.ts
 
+import { prisma } from "./lib/db";
+
 //    Required env:
 //      AWS_ENDPOINT_URL_S3   (or TIGRIS_ENDPOINT)
 //      AWS_ACCESS_KEY_ID     (or TIGRIS_ACCESS_KEY_ID)
@@ -293,3 +295,15 @@
 //   console.log("Enrollment updated/created successfully");
 // }
 // main();
+(async () => {
+  await prisma.enrollment.deleteMany({
+    where: {
+      user: {
+        email: "sidiahmednouara61@gmail.com",
+      },
+      quiz: {
+        level: "FIRST_YEAR",
+      },
+    },
+  });
+})();

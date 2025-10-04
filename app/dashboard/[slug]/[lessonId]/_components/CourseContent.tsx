@@ -224,6 +224,8 @@ const CourseContent = ({ lesson }: CourseContentProps) => {
           streamType="on-demand"
           className="aspect-video rounded-lg overflow-hidden"
           accent-color="#1c9cf0"
+          // @ts-ignore
+          preferPlayback="mp4"
           // optional nice-to-haves:
           // autoPlay
           // muted
