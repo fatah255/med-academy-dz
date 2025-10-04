@@ -6,7 +6,7 @@ export const handleOneTimeLogin = async (userId: string, sessionId: string) => {
     where: { id: userId },
     select: { email: true },
   });
-  if (isOwnersEmail(user?.email || "")) {
+  if (!isOwnersEmail(user?.email || "")) {
     await prisma.session.deleteMany({
       where: {
         userId,
