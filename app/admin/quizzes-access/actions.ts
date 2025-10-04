@@ -3,7 +3,6 @@
 
 import { requireAdmin } from "@/app/data/admin/require-admin";
 import { prisma } from "@/lib/db";
-import { BillingPeriod } from "@prisma/client";
 
 export async function findUserWithQuizEnrollments(email: string) {
   const session = await requireAdmin();
@@ -76,7 +75,7 @@ export async function grantQuizzesToUser(input: {
           isOffer: true,
           offer: true,
           ai: includeAi,
-          billingPeriod: billing as BillingPeriod,
+          billingPeriod: billing as any,
           months,
           paidAt,
           expiresAt,
@@ -89,7 +88,7 @@ export async function grantQuizzesToUser(input: {
           isOffer: true,
           offer: true,
           ai: includeAi,
-          billingPeriod: billing as BillingPeriod,
+          billingPeriod: billing as any,
           months,
           paidAt,
           expiresAt,
