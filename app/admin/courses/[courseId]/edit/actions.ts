@@ -16,6 +16,7 @@ import {
 import arcjet, { detectBot, fixedWindow } from "@/lib/arcjet";
 import { request } from "@arcjet/next";
 import { revalidatePath } from "next/cache";
+import { isOwnersEmail } from "@/lib/utils";
 
 const aj = arcjet
   .withRule(

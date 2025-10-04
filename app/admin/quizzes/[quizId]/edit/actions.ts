@@ -1,5 +1,5 @@
 "use server";
-
+//waaaay i addedddd iiiit
 import { requireAdmin } from "@/app/data/admin/require-admin";
 import { prisma } from "@/lib/db";
 import { ApiResponse } from "@/lib/types";
@@ -77,7 +77,10 @@ export const editQuiz = async (
         where: { id: quizId },
         select: { id: true, user: { select: { id: true, email: true } } },
       });
-      if (!ok || (ok.user.id !== user.user.id && !isOwnersEmail(user.user.email || ""))) {
+      if (
+        !ok ||
+        (ok.user.id !== user.user.id && !isOwnersEmail(user.user.email || ""))
+      ) {
         throw new Error("Quiz not found or unauthorized");
       }
 
