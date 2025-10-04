@@ -295,15 +295,15 @@ import { prisma } from "./lib/db";
 //   console.log("Enrollment updated/created successfully");
 // }
 // main();
-(async () => {
-  await prisma.enrollment.deleteMany({
-    where: {
-      user: {
-        email: "sidiahmednouara61@gmail.com",
-      },
-      quiz: {
-        level: "FIRST_YEAR",
-      },
-    },
-  });
-})();
+// (async () => {
+//   await prisma.enrollment.deleteMany({
+//     where: {
+//       user: {
+//         email: "sidiahmednouara61@gmail.com",
+//       },
+//       quiz: {
+//         level: "FIRST_YEAR",
+//       },
+//     },
+//   });
+// })();
