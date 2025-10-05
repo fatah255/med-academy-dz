@@ -234,6 +234,72 @@ export async function getCategoryEnrollments(opts?: {
     .map(([course, enrollments]) => ({ course, enrollments }))
     .sort((a, b) => a.course.localeCompare(b.course));
 }
+export async function getCourseEnrollments(opts?: {
+  level?: CourseLevel;
+  since?: Date | null;
+  calendarLastMonth?: boolean;
+}) {
+  const level = opts?.level;
+
+  // Time window
+  let createdAtFilter: Prisma.DateTimeFilter | undefined;
+  if (opts?.calendarLastMonth) {
+    const now = new Date();
+    const start = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+    const end = new Date(now.getFullYear(), now.getMonth(), 0, 23, 59, 59, 999);
+    createdAtFilter = { gte: start, lte: end };
+  } else if (opts?.since) {
+    createdAtFilter = { gte: opts.since };
+  }
+
+  // Optional: filter by course level
+  let courseIdFilter: string[] | undefined;
+  if (level) {
+    const ids = await prisma.course.findMany({
+      where: { level },
+      select: { id: true },
+    });
+    courseIdFilter = ids.map((c) => c.id);
+    if (courseIdFilter.length === 0) return [];
+  }
+
+  // Enrollment filter
+  const enrollWhere: Prisma.EnrollmentWhereInput = {
+    status: "PAID",
+    ...(createdAtFilter ? { createdAt: createdAtFilter } : {}),
+    ...(courseIdFilter ? { courseId: { in: courseIdFilter } } : {}),
+    NOT: { courseId: null },
+  };
+
+  // 1️⃣ Group enrollments by courseId
+  const enrollGroups = await prisma.enrollment.groupBy({
+    by: ["courseId"],
+    where: enrollWhere,
+    _count: { _all: true },
+  });
+  if (enrollGroups.length === 0) return [];
+
+  const courseIds = enrollGroups
+    .map((g) => g.courseId)
+    .filter((id): id is string => !!id);
+
+  // 2️⃣ Fetch course names for those IDs
+  const courses = await prisma.course.findMany({
+    where: { id: { in: courseIds } },
+    select: { id: true, title: true },
+  });
+  const titleById = new Map(courses.map((c) => [c.id, c.title]));
+
+  // 3️⃣ Map to output format
+  const result = enrollGroups
+    .map((g) => ({
+      course: titleById.get(g.courseId!) ?? "Unknown Course",
+      enrollments: g._count._all,
+    }))
+    .sort((a, b) => a.course.localeCompare(b.course));
+
+  return result;
+}
 
 export async function totalCourses() {
   const published = await prisma.course.count({

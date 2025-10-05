@@ -4,7 +4,7 @@ import { ChartPieSeparatorNone } from "./_components/PieChart";
 import {
   countTotalUsers,
   countUsersWithAtLeastOnePaidEnrollment,
-  getCategoryEnrollments,
+  getCourseEnrollments,
 } from "./actions";
 import { requireAdmin } from "../data/admin/require-admin";
 import { prisma } from "@/lib/db";
@@ -12,7 +12,8 @@ import { isOwnersEmail } from "@/lib/utils";
 
 const AdminPage = async () => {
   const session = await requireAdmin();
-  const data = await getCategoryEnrollments();
+  const data = await getCourseEnrollments();
+
   const userId = session.user.id;
   const userCoursesCategories = await prisma.course.findMany({
     where: { userId },
@@ -27,7 +28,9 @@ const AdminPage = async () => {
   const enrolled = await countUsersWithAtLeastOnePaidEnrollment();
   const notEnrolled = total - enrolled;
 
-  const dataToRender = isOwnersEmail(session.user.email || "") ? data : finalData;
+  const dataToRender = isOwnersEmail(session.user.email || "")
+    ? data
+    : finalData;
   return (
     <>
       <SectionCards email={session.user.email} />

@@ -299,11 +299,11 @@ import { prisma } from "./lib/db";
 //   await prisma.enrollment.deleteMany({
 //     where: {
 //       user: {
-//         email: "sidiahmednouara61@gmail.com",
+//         email: "serineomiri@gmail.com",
 //       },
-//       quiz: {
-//         level: "FIRST_YEAR",
-//       },
+//       // quiz: {
+//       //   level: "FIRST_YEAR",
+//       // },
 //     },
 //   });
 // })();
