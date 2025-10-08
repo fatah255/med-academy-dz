@@ -769,11 +769,16 @@ const MCQ: React.FC<Props> = ({ game }) => {
                 disabled={verified || ending || eliminatedNow}
               >
                 <div className="flex w-full items-start gap-3">
-                  <div className="shrink-0 rounded-md border px-3 py-2">
+                  {/* Option Letter */}
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-sky-400 text-sky-400 font-semibold">
                     {numToLetter.get(index + 1)}
                   </div>
-                  <div className="flex-1 min-w-0 whitespace-pre-wrap break-words leading-relaxed">
-                    {option}
+
+                  {/* Option Text */}
+                  <div className="flex-1">
+                    <p className="text-[15px] sm:text-base leading-snug text-sky-400 whitespace-pre-line break-words text-left">
+                      {option}
+                    </p>
                   </div>
                 </div>
               </Button>
