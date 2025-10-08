@@ -768,12 +768,17 @@ const MCQ: React.FC<Props> = ({ game }) => {
                 onClick={() => toggleChoice(index)}
                 disabled={verified || ending || eliminatedNow}
               >
-                <div className="flex w-full items-start gap-3">
-                  <div className="shrink-0 rounded-md border px-3 py-2">
+                <div className="flex w-full items-start gap-3 text-[15px] sm:text-base leading-relaxed">
+                  {/* Option letter */}
+                  <div className="shrink-0 rounded-md border px-3 py-2 text-sm sm:text-base">
                     {numToLetter.get(index + 1)}
                   </div>
-                  <div className="flex-1 min-w-0 whitespace-pre-wrap break-words leading-relaxed">
-                    {option}
+
+                  {/* Option text (fix mobile wrapping) */}
+                  <div className="flex-1 break-words whitespace-pre-wrap text-left">
+                    <p className="text-[15px] sm:text-base leading-snug break-words">
+                      {option}
+                    </p>
                   </div>
                 </div>
               </Button>

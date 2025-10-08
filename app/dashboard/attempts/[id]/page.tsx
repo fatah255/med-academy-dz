@@ -1,4 +1,3 @@
-// File: app/dashboard/attempts/[id]/page.tsx
 import { prisma } from "@/lib/db";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
@@ -32,23 +31,16 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import CommentHtml from "@/components/attempts/CommentHtml";
-
-type AnswerLog = {
-  questionId: string;
-  question: string;
-  options: string[];
-  correctIndices: number[];
-  selectedIndices: number[];
-  isCorrect: boolean;
-};
+import { DownloadCorrectionButton } from "./DownloadCorrectionButton";
 
 function fmtDur(secs: number) {
   const m = Math.floor(secs / 60);
   const s = secs % 60;
   return `${m}m ${s}s`;
 }
+
 function letters(indices: number[]) {
-  const map = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"];
+  const map = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
   return indices.map((i) => map[i] ?? `#${i + 1}`).join(", ");
 }
 
@@ -57,29 +49,26 @@ export const dynamic = "force-dynamic";
 export default async function AttemptDetail({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }) {
-  const { id } = await params;
+  const { id } = params;
+
   const attempt = await prisma.quizAttempt.findUnique({
-    where: { id: id },
+    where: { id },
     include: { quiz: true, cours: true, exam: true, user: true },
   });
   if (!attempt) return notFound();
 
-  const answers: AnswerLog[] = Array.isArray(attempt.answers)
+  const answers = Array.isArray(attempt.answers)
     ? (attempt.answers as any)
     : [];
 
-  const byId = new Map<string, AnswerLog>(
-    answers.map((a) => [a.questionId, a])
-  );
+  const byId = new Map(answers.map((a: any) => [a.questionId, a]));
 
   const qcms = attempt.qcmIds.length
     ? await prisma.qcm.findMany({
         where: { id: { in: attempt.qcmIds } },
-        include: {
-          answers: { orderBy: { position: "asc" } },
-        },
+        include: { answers: { orderBy: { position: "asc" } } },
       })
     : [];
 
@@ -96,6 +85,7 @@ export default async function AttemptDetail({
   const score =
     attempt.scorePercent ??
     Math.round((attempt.correctCount * 100) / Math.max(1, attempt.attempted));
+
   const correct = attempt.correctCount;
   const wrong = attempt.wrongCount;
 
@@ -111,6 +101,7 @@ export default async function AttemptDetail({
         <div className="text-xs text-muted-foreground">{attempt.id}</div>
       </div>
 
+      {/* Summary */}
       <Card>
         <CardHeader>
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
@@ -186,283 +177,146 @@ export default async function AttemptDetail({
         </CardContent>
       </Card>
 
-      <Tabs defaultValue="questions" className="w-full">
+      {/* Tabs */}
+      <Tabs defaultValue="correction" className="w-full">
         <TabsList>
           <TabsTrigger value="questions">Questions</TabsTrigger>
           <TabsTrigger value="correction">Correction</TabsTrigger>
         </TabsList>
 
-        {/* QUESTIONS TAB */}
-        <TabsContent value="questions" className="mt-4 space-y-4">
-          {answers.length === 0 ? (
-            <Card>
-              <CardHeader>
-                <CardTitle>No answers stored</CardTitle>
-                <CardDescription>
-                  This attempt was saved without per-question detail.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          ) : (
-            answers.map((ans, i) => {
-              const correctSet = new Set(ans.correctIndices ?? []);
-              const userSet = new Set(ans.selectedIndices ?? []);
-              const isCorrect = !!ans.isCorrect;
-              const comment =
-                orderedQcms.find((q) => q.id === ans.questionId)?.comment ??
-                null;
-
-              return (
-                <Card key={ans.questionId} className="overflow-hidden">
-                  <CardHeader className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <div className="text-xs text-muted-foreground">
-                        Q{i + 1}
-                      </div>
-                      <div className="inline-flex items-center gap-2">
-                        {isCorrect ? (
-                          <Badge className="bg-green-600 hover:bg-green-600/90">
-                            <CheckCircle2 className="mr-1 h-4 w-4" /> Correct
-                          </Badge>
-                        ) : (
-                          <Badge className="bg-red-600 hover:bg-red-600/90">
-                            <XCircle className="mr-1 h-4 w-4" /> Wrong
-                          </Badge>
-                        )}
-                        <Badge variant="outline">
-                          {ans.options?.length ?? 0} options
-                        </Badge>
-                      </div>
-                    </div>
-                    <CardTitle className="text-base">{ans.question}</CardTitle>
-                    <CardDescription className="text-xs">
-                      User picked:{" "}
-                      <span className="font-medium">
-                        {letters(ans.selectedIndices ?? []) || "—"}
-                      </span>{" "}
-                      · Correct:{" "}
-                      <span className="font-medium">
-                        {letters(ans.correctIndices ?? []) || "—"}
-                      </span>
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    <div className="space-y-2">
-                      {(ans.options ?? []).map((opt, idx) => {
-                        const picked = userSet.has(idx);
-                        const should = correctSet.has(idx);
-                        const tone = should
-                          ? "border-green-500 bg-green-500/10 text-green-400"
-                          : picked
-                          ? "border-red-500 bg-red-500/10 text-red-400"
-                          : "border-muted bg-muted/10";
-                        return (
-                          <div
-                            key={idx}
-                            className={`flex items-start gap-3 rounded-xl border p-3 ${tone}`}
-                          >
-                            <div className="mt-0.5 w-5 shrink-0 text-center text-xs font-mono rounded border bg-background">
-                              {String.fromCharCode(65 + idx)}
-                            </div>
-                            <div className="flex-1 leading-relaxed">{opt}</div>
-                          </div>
-                        );
-                      })}
-                    </div>
-
-                    {comment ? (
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            className="inline-flex items-center"
-                          >
-                            <MessageSquare className="mr-2 h-4 w-4" />
-                            Show Comment
-                          </Button>
-                        </DialogTrigger>
-
-                        {/* ✨ SCROLLABLE DIALOG CONTENT */}
-                        <DialogContent className="max-w-3xl w-[92vw] md:w-auto overflow-hidden p-0">
-                          <DialogHeader className="px-4 pt-4">
-                            <DialogTitle>Commentary</DialogTitle>
-                            <DialogDescription className="text-xs">
-                              Explanation and notes for this question.
-                            </DialogDescription>
-                          </DialogHeader>
-
-                          {/* Put the scroll on this wrapper */}
-                          <div className="max-h-[80vh] overflow-y-auto px-4 pb-4">
-                            <div
-                              className="prose prose-invert max-w-none
-                              [&_*]:max-w-full
-                              [&_img]:h-auto [&_img]:max-w-full
-                              [&_video]:h-auto [&_video]:max-w-full
-                              [&_canvas]:max-w-full
-                              [&_iframe]:max-w-full"
-                            >
-                              <CommentHtml html={comment ?? ""} />
-                            </div>
-                          </div>
-                        </DialogContent>
-                      </Dialog>
-                    ) : (
-                      <div className="inline-flex items-center gap-2 text-xs text-muted-foreground">
-                        <Info className="h-3.5 w-3.5" /> No comment provided.
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-              );
-            })
-          )}
-        </TabsContent>
-
-        {/* CORRECTION TAB */}
         <TabsContent value="correction" className="mt-4 space-y-4">
           {orderedQcms.length === 0 ? (
             <Card>
               <CardHeader>
                 <CardTitle>No questions found</CardTitle>
-                <CardDescription>
-                  This session didn’t include any stored QCM IDs.
-                </CardDescription>
+                <CardDescription>This attempt has no QCM data.</CardDescription>
               </CardHeader>
             </Card>
           ) : (
-            orderedQcms.map((qcm, idx) => {
-              const opts = qcm.answers.sort((a, b) => a.position - b.position);
-              const correctIdx = opts
-                .filter((a) => a.isCorrect)
-                .map((a) => a.position - 1);
+            <>
+              {false && (
+                <div className="flex justify-end mb-4">
+                  {/* @ts-ignore */}
+                  <DownloadCorrectionButton qcms={orderedQcms} label={label} />
+                </div>
+              )}
 
-              const user = byId.get(qcm.id);
-              const userIdx = user?.selectedIndices ?? [];
-              const userSet = new Set(userIdx);
-              const correctSet = new Set(correctIdx);
+              {orderedQcms.map((qcm, idx) => {
+                const opts = qcm.answers.sort(
+                  (a, b) => a.position - b.position
+                );
+                const correctIdx = opts
+                  .filter((a) => a.isCorrect)
+                  .map((a) => a.position - 1);
 
-              const userPickedLetters = letters(userIdx);
-              const correctLetters = letters(correctIdx);
+                const user = byId.get(qcm.id);
+                //@ts-ignore
+                const userIdx = user?.selectedIndices ?? [];
+                const userSet = new Set(userIdx);
+                const correctSet = new Set(correctIdx);
 
-              const answered = !!user;
-              const isCorrect =
-                answered &&
-                userIdx.length > 0 &&
-                userIdx.length === correctIdx.length &&
-                userIdx.every((i) => correctSet.has(i));
+                const correctLetters = letters(correctIdx);
+                const userPickedLetters = letters(userIdx);
 
-              return (
-                <Card key={qcm.id} className="overflow-hidden">
-                  <CardHeader className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <div className="text-xs text-muted-foreground">
-                        Q{idx + 1}
-                      </div>
-                      <div className="inline-flex items-center gap-2">
-                        {answered ? (
-                          isCorrect ? (
-                            <Badge className="bg-green-600 hover:bg-green-600/90">
-                              <CheckCircle2 className="mr-1 h-4 w-4" /> Correct
-                            </Badge>
+                const answered = !!user;
+                const isCorrect =
+                  answered &&
+                  userIdx.length > 0 &&
+                  userIdx.length === correctIdx.length &&
+                  userIdx.every((i: number) => correctSet.has(i));
+
+                return (
+                  <Card key={qcm.id}>
+                    <CardHeader>
+                      <div className="flex justify-between">
+                        <span className="text-xs text-muted-foreground">
+                          Q{idx + 1}
+                        </span>
+                        <div className="inline-flex gap-2">
+                          {answered ? (
+                            isCorrect ? (
+                              <Badge className="bg-green-600">Correct</Badge>
+                            ) : (
+                              <Badge className="bg-red-600">Wrong</Badge>
+                            )
                           ) : (
-                            <Badge className="bg-red-600 hover:bg-red-600/90">
-                              <XCircle className="mr-1 h-4 w-4" /> Wrong
-                            </Badge>
-                          )
-                        ) : (
-                          <Badge variant="secondary">Skipped</Badge>
-                        )}
-                        <Badge variant="outline">{opts.length} options</Badge>
+                            <Badge variant="secondary">Skipped</Badge>
+                          )}
+                          <Badge variant="outline">{opts.length} options</Badge>
+                        </div>
                       </div>
-                    </div>
+                      <CardTitle className="text-base">
+                        {qcm.question}
+                      </CardTitle>
+                      <CardDescription className="text-xs">
+                        Your answer:{" "}
+                        <span className="font-medium">
+                          {answered ? userPickedLetters || "—" : "—"}
+                        </span>{" "}
+                        · Correct:{" "}
+                        <span className="font-medium">
+                          {correctLetters || "—"}
+                        </span>
+                      </CardDescription>
+                    </CardHeader>
 
-                    <CardTitle className="text-base">{qcm.question}</CardTitle>
-                    <CardDescription className="text-xs">
-                      Your answer:{" "}
-                      <span className="font-medium">
-                        {answered ? userPickedLetters || "—" : "—"}
-                      </span>{" "}
-                      · Correct:{" "}
-                      <span className="font-medium">
-                        {correctLetters || "—"}
-                      </span>
-                    </CardDescription>
-                  </CardHeader>
-
-                  <CardContent className="space-y-3">
-                    <div className="space-y-2">
-                      {opts.map((opt) => {
-                        const idx0 = opt.position - 1;
-                        const picked = userSet.has(idx0);
-                        const should = correctSet.has(idx0);
-                        const tone = should
-                          ? "border-green-500 bg-green-500/10 text-green-400"
-                          : picked
-                          ? "border-red-500 bg-red-500/10 text-red-400"
-                          : "border-muted bg-muted/10";
-
-                        return (
-                          <div
-                            key={opt.id}
-                            className={`flex items-start gap-3 rounded-xl border p-3 ${tone}`}
-                          >
-                            <div className="mt-0.5 w-5 shrink-0 text-center text-xs font-mono rounded border bg-background">
-                              {String.fromCharCode(65 + idx0)}
-                            </div>
-                            <div className="flex-1 leading-relaxed">
-                              {opt.text}
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-
-                    {qcm.comment ? (
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            className="inline-flex items-center"
-                          >
-                            <MessageSquare className="mr-2 h-4 w-4" />
-                            Show Comment
-                          </Button>
-                        </DialogTrigger>
-
-                        {/* ✨ SCROLLABLE DIALOG CONTENT */}
-                        <DialogContent className="max-w-3xl w-[92vw] md:w-auto overflow-hidden p-0">
-                          <DialogHeader className="px-4 pt-4">
-                            <DialogTitle>Commentary</DialogTitle>
-                            <DialogDescription className="text-xs">
-                              Explanation and notes for this question.
-                            </DialogDescription>
-                          </DialogHeader>
-
-                          <div className="max-h-[80vh] overflow-y-auto px-4 pb-4">
+                    <CardContent>
+                      <div className="space-y-2">
+                        {opts.map((opt) => {
+                          const idx0 = opt.position - 1;
+                          const picked = userSet.has(idx0);
+                          const should = correctSet.has(idx0);
+                          const tone = should
+                            ? "border-green-500 bg-green-500/10 text-green-400"
+                            : picked
+                            ? "border-red-500 bg-red-500/10 text-red-400"
+                            : "border-muted bg-muted/10";
+                          return (
                             <div
-                              className="prose prose-invert max-w-none
-                              [&_*]:max-w-full
-                              [&_img]:h-auto [&_img]:max-w-full
-                              [&_video]:h-auto [&_video]:max-w-full
-                              [&_canvas]:max-w-full
-                              [&_iframe]:max-w-full"
+                              key={opt.id}
+                              className={`flex items-start gap-3 rounded-xl border p-3 ${tone}`}
                             >
-                              <CommentHtml html={qcm.comment ?? ""} />
+                              <div className="mt-0.5 w-5 text-center text-xs font-mono rounded border bg-background">
+                                {String.fromCharCode(65 + idx0)}
+                              </div>
+                              <div className="flex-1">{opt.text}</div>
                             </div>
-                          </div>
-                        </DialogContent>
-                      </Dialog>
-                    ) : (
-                      <div className="inline-flex items-center gap-2 text-xs text-muted-foreground">
-                        <Info className="h-3.5 w-3.5" /> No comment provided.
+                          );
+                        })}
                       </div>
-                    )}
-                  </CardContent>
-                </Card>
-              );
-            })
+
+                      {qcm.comment ? (
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <Button variant="outline" size="sm">
+                              <MessageSquare className="mr-2 h-4 w-4" />
+                              Show Comment
+                            </Button>
+                          </DialogTrigger>
+                          <DialogContent className="max-w-3xl overflow-hidden p-0">
+                            <DialogHeader className="px-4 pt-4">
+                              <DialogTitle>Commentary</DialogTitle>
+                              <DialogDescription className="text-xs">
+                                Explanation for this question.
+                              </DialogDescription>
+                            </DialogHeader>
+                            <div className="max-h-[80vh] overflow-y-auto px-4 pb-4">
+                              <div className="prose prose-invert max-w-none">
+                                <CommentHtml html={qcm.comment ?? ""} />
+                              </div>
+                            </div>
+                          </DialogContent>
+                        </Dialog>
+                      ) : (
+                        <div className="text-xs text-muted-foreground flex items-center gap-2">
+                          <Info className="h-3.5 w-3.5" /> No comment provided.
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </>
           )}
         </TabsContent>
       </Tabs>
