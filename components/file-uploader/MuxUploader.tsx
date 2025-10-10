@@ -80,7 +80,7 @@ export default function MuxUploader({ value, onChange, label }: Props) {
 
   async function pollForPlaybackId(id: string) {
     const started = Date.now();
-    const timeoutMs = 5 * 60 * 1000; // 5 min max
+    const timeoutMs = 10 * 60 * 1000; // 10 min max
     const delay = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
     while (true) {

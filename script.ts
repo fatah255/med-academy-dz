@@ -307,3 +307,100 @@ import { prisma } from "./lib/db";
 //     },
 //   });
 // })();
+async function main() {
+  // 1️⃣ Fetch all enrollments with a courseId and paid status
+  const enrollments = await prisma.enrollment.findMany({
+    where: {
+      courseId: { not: null },
+      status: { in: ["PAID", "paid"] },
+    },
+    select: {
+      id: true,
+      userId: true,
+      course: { select: { category: true, level: true } },
+    },
+  });
+
+  console.log(`Found ${enrollments.length} paid course enrollments.`);
+
+  let createdCount = 0;
+  let skippedCount = 0;
+  let deletedPending = 0;
+
+  for (const e of enrollments) {
+    if (!e.course?.category) continue;
+    if (!e.course?.level) continue;
+
+    const { category, level } = e.course;
+    console.log(
+      `Processing enrollment ${e.id} for user ${e.userId} (${category}, ${level})…`
+    );
+
+    // 2️⃣ Find the first quiz with same category and level
+    const quiz = await prisma.quiz.findFirst({
+      where: { category, level },
+      orderBy: { createdAt: "asc" },
+      select: { id: true },
+    });
+
+    if (!quiz) {
+      console.warn(
+        `⚠️ No quiz found for category "${category}" at level "${level}"`
+      );
+      continue;
+    }
+
+    // 🧹 2.5️⃣ Delete "PENDING" enrollments for same user & quiz
+    const deleted = await prisma.enrollment.deleteMany({
+      where: {
+        userId: e.userId,
+        quizId: quiz.id,
+        status: { in: ["PENDING", "pending"] },
+      },
+    });
+    if (deleted.count > 0) {
+      deletedPending += deleted.count;
+      console.log(
+        `🗑️ Deleted ${deleted.count} pending enrollment(s) for user ${e.userId}`
+      );
+    }
+
+    // 3️⃣ Check if user already has a PAID enrollment
+    const existing = await prisma.enrollment.findFirst({
+      where: {
+        userId: e.userId,
+        quizId: quiz.id,
+        status: { in: ["PAID", "paid"] },
+      },
+    });
+
+    if (existing) {
+      skippedCount++;
+      continue;
+    }
+
+    // 4️⃣ Create new paid enrollment for that quiz
+    await prisma.enrollment.create({
+      data: {
+        userId: e.userId,
+        quizId: quiz.id,
+        status: "paid",
+        amount: 0,
+      },
+    });
+
+    createdCount++;
+  }
+
+  console.log(`✅ Created ${createdCount} new quiz enrollments`);
+  console.log(`🗑️ Deleted ${deletedPending} pending duplicates`);
+  console.log(`⏭️ Skipped ${skippedCount} already existing paid ones`);
+}
+
+main()
+  .catch((err) => {
+    console.error("❌ Error:", err);
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });
