@@ -41,6 +41,7 @@ export default function CourseAccessForm({ courses }: { courses: Course[] }) {
   const [isPending, startTransition] = useTransition();
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [isPrice, setIsPrice] = useState<boolean>(false);
   const [filter, setFilter] = useState("");
 
   const filtered = useMemo(() => {
@@ -101,6 +102,7 @@ export default function CourseAccessForm({ courses }: { courses: Course[] }) {
         const res = await grantCoursesToUser({
           email: email.trim(),
           courseIds: ids,
+          isPrice: Boolean(isPrice),
         });
         setMessage(`Updated ${res.updated} enrollment(s).`);
         // refresh enrollments
@@ -176,13 +178,28 @@ export default function CourseAccessForm({ courses }: { courses: Course[] }) {
                 Select all (filtered)
               </Label>
             </div>
-            <Button
-              onClick={grant}
-              disabled={isPending || !user || selected.size === 0}
-            >
-              {isPending ? "Saving..." : "Grant access"}
-            </Button>
           </div>
+        </div>
+
+        {/* New section for isPrice toggle */}
+        <div className="flex items-center gap-2">
+          <Checkbox
+            id="isPrice"
+            checked={isPrice}
+            onCheckedChange={(v) => setIsPrice(Boolean(v))}
+          />
+          <Label htmlFor="isPrice" className="text-sm">
+            show the payment for the teacher?
+          </Label>
+        </div>
+
+        <div className="flex justify-end">
+          <Button
+            onClick={grant}
+            disabled={isPending || !user || selected.size === 0}
+          >
+            {isPending ? "Saving..." : "Grant access"}
+          </Button>
         </div>
 
         <div className="rounded-md border">

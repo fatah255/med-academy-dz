@@ -28,10 +28,11 @@ export async function findUserWithEnrollments(email: string) {
 export async function grantCoursesToUser(input: {
   email: string;
   courseIds: string[];
+  isPrice?: boolean;
 }) {
   const session = await requireAdmin();
 
-  const { email, courseIds } = input;
+  const { email, courseIds, isPrice } = input;
   if (!email || courseIds.length === 0) return { ok: true, updated: 0 };
 
   const user = await prisma.user.findFirst({
@@ -63,15 +64,18 @@ export async function grantCoursesToUser(input: {
         data: {
           userId: user.id,
           courseId,
-          amount: 0,
-          status: "paid",
+          amount: isPrice ? price : 0,
+          status: isPrice ? "PAID" : "paid",
         },
       });
       updated++;
     } else if (existing.status !== "PAID" && existing.status !== "paid") {
       await prisma.enrollment.update({
         where: { userId_courseId: { userId: user.id, courseId } },
-        data: { amount: 0, status: "paid" },
+        data: {
+          amount: isPrice ? price : 0,
+          status: isPrice ? "PAID" : "paid",
+        },
       });
       updated++;
     }
