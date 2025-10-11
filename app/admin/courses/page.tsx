@@ -5,7 +5,7 @@ import CourseCard, { CourseCardSkeleton } from "./_components/CourseCard";
 import EmptyCourses from "@/components/general/EmptyCourses";
 import { Suspense } from "react";
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <div className="flex items-center justify-between">
@@ -21,7 +21,7 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
 async function RenderCourses() {
   const data = await adminGetCourses();
   return (
