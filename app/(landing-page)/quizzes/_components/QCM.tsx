@@ -650,41 +650,44 @@ const MCQ: React.FC<Props> = ({ game }) => {
       />
 
       {/* Header */}
-      <div className="flex flex-row justify-between gap-4">
-        <div className="flex flex-col">
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4 w-full">
+        <div className="flex flex-col w-full sm:w-auto">
           <p>
             <span className="text-slate-400">Topic</span>&nbsp;
             <span className="rounded-lg bg-slate-800 px-2 py-1 text-white">
               {game.topic}
             </span>
           </p>
-          <div className="mt-3 flex items-center gap-2 text-slate-400">
+          <div className="mt-3 flex flex-wrap items-center gap-2 text-slate-400">
             <span className="inline-flex items-center">
-              <Timer className="mr-2" />
+              <Timer className="mr-2 h-4 w-4" />
               {formatTimeDelta(differenceInSeconds(now, startedAt))}
             </span>
-            {currentQuestion?.year ? (
+            {currentQuestion?.year && (
               <span className="rounded border border-slate-700/60 bg-slate-800/40 px-2 py-0.5 text-xs">
                 {currentQuestion.year}
               </span>
-            ) : null}
-            {currentQuestion?.cours ? (
+            )}
+            {currentQuestion?.cours && (
               <span className="rounded border border-slate-700/60 bg-slate-800/40 px-2 py-0.5 text-xs">
                 {currentQuestion.cours}
               </span>
-            ) : null}
-            {currentQuestion?.type ? (
+            )}
+            {currentQuestion?.type && (
               <span className="rounded border border-slate-700/60 bg-slate-800/40 px-2 py-0.5 text-xs">
                 {currentQuestion.type}
               </span>
-            ) : null}
+            )}
           </div>
         </div>
 
-        <MCQCounter
-          correct_answers={stats.correct_answers}
-          wrong_answers={stats.wrong_answers}
-        />
+        {/* Counter block — center it on small screens */}
+        <div className="w-full sm:w-auto flex justify-center sm:justify-end">
+          <MCQCounter
+            correct_answers={stats.correct_answers}
+            wrong_answers={stats.wrong_answers}
+          />
+        </div>
       </div>
 
       {/* Main question / stem */}

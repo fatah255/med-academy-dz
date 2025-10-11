@@ -43,7 +43,7 @@ export async function SectionCards({ email }: { email?: string }) {
           </CardFooter>
         </Card>
       )}
-      {email === "a.lebkara@esi-sba.dz" && (
+      {/* {email === "a.lebkara@esi-sba.dz" && (
         <Card className="@container/card">
           <CardHeader>
             <CardDescription>Fatah's revenue</CardDescription>
@@ -60,7 +60,7 @@ export async function SectionCards({ email }: { email?: string }) {
             </div>
           </CardFooter>
         </Card>
-      )}
+      )} */}
       {isOwnersEmail(email || "") && (
         <Card className="@container/card ">
           <CardHeader>

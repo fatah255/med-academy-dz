@@ -9,6 +9,7 @@ import {
 import { requireAdmin } from "../data/admin/require-admin";
 import { prisma } from "@/lib/db";
 import { isOwnersEmail } from "@/lib/utils";
+import { EnrollmentTable } from "@/components/admin/EnrollmentTable";
 
 const AdminPage = async () => {
   const session = await requireAdmin();
@@ -31,12 +32,34 @@ const AdminPage = async () => {
   const dataToRender = isOwnersEmail(session.user.email || "")
     ? data
     : finalData;
+  const enrollments = await prisma.enrollment.findMany({
+    where: { status: "PAID", courseId: { not: null } },
+    select: {
+      id: true,
+      amount: true,
+      status: true,
+      transactionId: true,
+      offer: true,
+      isOffer: true,
+      ai: true,
+      billingPeriod: true,
+      createdAt: true,
+      paidAt: true,
+      expiresAt: true,
+      user: { select: { name: true, email: true } },
+      course: { select: { title: true, slug: true } },
+      quiz: { select: { title: true } },
+    },
+    orderBy: { paidAt: "desc" }, // optional but handy
+  });
+
   return (
     <>
       <SectionCards email={session.user.email} />
       <div className="px-4 lg:px-6">
         <EnrollmentsChart data={dataToRender} />
         <ChartPieSeparatorNone enrolled={enrolled} notEnrolled={notEnrolled} />
+        {/* <EnrollmentTable enrollments={enrollments} /> */}
       </div>
     </>
   );
