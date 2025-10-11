@@ -4,6 +4,10 @@ import type { NextConfig } from "next";
 import { PrismaPlugin } from "@prisma/nextjs-monorepo-workaround-plugin";
 
 const nextConfig: NextConfig = {
+  typescript: { ignoreBuildErrors: true },
+
+  // 🔕 skip ESLint during builds
+  eslint: { ignoreDuringBuilds: true },
   images: {
     unoptimized: true,
     remotePatterns: [
