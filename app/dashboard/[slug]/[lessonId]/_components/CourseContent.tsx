@@ -143,7 +143,6 @@ const CourseContent = ({ lesson }: CourseContentProps) => {
               autoPlay
               playsInline
               preload="auto"
-              muted
             />
           )}
         </div>
