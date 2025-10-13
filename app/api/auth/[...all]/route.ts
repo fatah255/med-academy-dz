@@ -18,7 +18,7 @@ const emailOptions = {
   // Block emails that are disposable, invalid, or have no MX records
   block: ["DISPOSABLE", "INVALID", "NO_MX_RECORDS"],
 } satisfies EmailOptions;
-
+export const runtime = "nodejs";
 const botOptions = {
   mode: "LIVE", // will block requests. Use "DRY_RUN" to log only
   // configured with a list of bots to allow from
