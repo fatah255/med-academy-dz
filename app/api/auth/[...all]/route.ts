@@ -19,6 +19,9 @@ const emailOptions = {
   block: ["DISPOSABLE", "INVALID", "NO_MX_RECORDS"],
 } satisfies EmailOptions;
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 const botOptions = {
   mode: "LIVE", // will block requests. Use "DRY_RUN" to log only
   // configured with a list of bots to allow from
