@@ -4,12 +4,17 @@ import type { NextConfig } from "next";
 import { PrismaPlugin } from "@prisma/nextjs-monorepo-workaround-plugin";
 
 const nextConfig: NextConfig = {
+  compilerOptions: {
+    baseUrl: ".",
+    paths: { "@/*": ["*"] }, // or ["*"] if you don’t use /src
+  },
   typescript: { ignoreBuildErrors: true },
 
   // 🔕 skip ESLint during builds
   eslint: { ignoreDuringBuilds: true },
   images: {
     unoptimized: true,
+
     remotePatterns: [
       {
         protocol: "https",
