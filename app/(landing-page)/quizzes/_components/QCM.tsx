@@ -961,6 +961,24 @@ const MCQ: React.FC<Props> = ({ game }) => {
         .mcq-comment * {
           max-width: 100%;
         }
+        /* Highlight visibility (mark + inline background) */
+        .mcq-comment mark,
+        .mcq-comment span[style*="background-color"],
+        .mcq-comment span[style*="background"],
+        .mcq-comment [style*="background-color:"] {
+          background-color: rgba(255, 255, 0, 0.3) !important;
+          color: inherit !important;
+          padding: 0.1em 0.2em;
+          border-radius: 4px;
+        }
+
+        /* Dark mode tweak */
+        :global(.dark) .mcq-comment mark,
+        :global(.dark) .mcq-comment span[style*="background-color"],
+        :global(.dark) .mcq-comment span[style*="background"],
+        :global(.dark) .mcq-comment [style*="background-color:"] {
+          background-color: rgba(0, 255, 120, 0.2) !important;
+        }
       `}</style>
     </div>
   );
