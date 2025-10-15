@@ -764,7 +764,7 @@ const MCQ: React.FC<Props> = ({ game }) => {
               <Button
                 variant={selected && !verified ? undefined : "outline"}
                 className={cn(
-                  "w-full justify-start py-6 text-left pr-12", // leave room for trash button
+                  "w-full justify-start py-5 text-left pr-14 sm:pr-12 min-h-[64px]", // leave room for trash button
                   revealedClass,
                   crossedClass
                 )}
@@ -779,7 +779,7 @@ const MCQ: React.FC<Props> = ({ game }) => {
 
                   {/* Option Text */}
                   <div className="flex-1">
-                    <p className="text-[15px] sm:text-base leading-snug text-sky-400 whitespace-pre-line break-words text-left">
+                    <p className="option-text text-[15px] sm:text-base leading-relaxed text-sky-400 whitespace-pre-line text-left">
                       {option}
                     </p>
                   </div>
