@@ -84,6 +84,8 @@ const CourseContent = ({ lesson }: CourseContentProps) => {
       <p className="text-muted-foreground">No video available</p>
     </div>
   );
+  const playbackId = lesson.muxVideoId;
+  const videoUrlMux = `/api/mux-proxy/${playbackId}`;
 
   return (
     <div className="flex h-full flex-col gap-4 bg-background px-4 sm:px-6 py-4">
@@ -124,10 +126,31 @@ const CourseContent = ({ lesson }: CourseContentProps) => {
           )}
 
           {!hasError && (
+            // <MuxPlayer
+            //   key={retryKey}
+            //   title={lesson.title}
+            //   playbackId={lesson.muxVideoId}
+            //   poster={poster}
+            //   streamType="on-demand"
+            //   className={clsx(
+            //     "h-full w-full rounded-lg transition-opacity duration-500",
+            //     !isReady ? "opacity-0" : "opacity-100"
+            //   )}
+            //   accentColor="#1c9cf0"
+            //   onCanPlay={() => setIsReady(true)}
+            //   onError={(err) => {
+            //     console.error("MuxPlayer error:", err);
+            //     setHasError(true);
+            //   }}
+            //   autoPlay
+            //   playsInline
+            //   preload="auto"
+            // />
             <MuxPlayer
               key={retryKey}
               title={lesson.title}
               playbackId={lesson.muxVideoId}
+              src={videoUrlMux} // add this line
               poster={poster}
               streamType="on-demand"
               className={clsx(
