@@ -58,9 +58,9 @@ export default async function AIPage() {
               </CardDescription>
             </CardHeader>
             <CardContent className="flex justify-center gap-3">
-              <form action={createChat}>
+              <Link href="/dashboard/chat">
                 <Button size="lg">Start Chat</Button>
-              </form>
+              </Link>
             </CardContent>
           </Card>
         </div>
