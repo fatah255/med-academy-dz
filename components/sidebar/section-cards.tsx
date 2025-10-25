@@ -64,9 +64,7 @@ export async function SectionCards({ email }: { email?: string }) {
       {isOwnersEmail(email || "") && (
         <Card className="@container/card ">
           <CardHeader>
-            <CardDescription>
-              Total Revenues for the last 30 days
-            </CardDescription>
+            <CardDescription>Total Revenues</CardDescription>
           </CardHeader>
           <CardContent className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl mt-2">
             {new Intl.NumberFormat("en-US", {
@@ -88,9 +86,7 @@ export async function SectionCards({ email }: { email?: string }) {
       )}
       <Card className="@container/card ">
         <CardHeader>
-          <CardDescription>
-            Total Revenues for your courses in the last 30 days
-          </CardDescription>
+          <CardDescription>Total Revenues for your courses</CardDescription>
         </CardHeader>
         <CardContent className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl mt-2">
           {new Intl.NumberFormat("en-US", {

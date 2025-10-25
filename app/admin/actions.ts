@@ -104,7 +104,7 @@ export async function totalRevenueLast30Days() {
   const session = await requireAdmin();
   const res = await prisma.enrollment.aggregate({
     _sum: { amount: true },
-    where: { status: "PAID", createdAt: { gte: since } },
+    where: { status: "PAID" },
   });
   return res._sum.amount ?? 0;
 }
@@ -116,7 +116,7 @@ export async function totalRevenueLast30DaysUser() {
   const since = date30DaysAgo();
   const res = await prisma.enrollment.aggregate({
     _sum: { amount: true },
-    where: { status: "PAID", createdAt: { gte: since }, course: { userId } },
+    where: { status: "PAID", course: { userId } },
   });
   return res._sum.amount ?? 0;
 }
