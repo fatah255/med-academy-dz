@@ -353,3 +353,30 @@ export async function getQuizRevenueLast30DaysFatah(): Promise<number> {
   const total = agg._sum.amount ?? 0;
   return Number(total); // Decimal -> number (okay for totals)
 }
+
+/** -------------------- PERCENTAGE CALCULATION -------------------- **/
+export async function calculatePercentage() {
+  // Fetch all valid PAID enrollments with a courseId
+  const enrollments = await prisma.enrollment.findMany({
+    where: {
+      status: "PAID",
+      courseId: { not: null },
+    },
+    select: {
+      id: true,
+      amount: true,
+    },
+  });
+
+  // Calculate percentage (commission) based on your rules
+  let total = 0;
+  for (const e of enrollments) {
+    if (e.amount >= 900) {
+      total += 400;
+    } else {
+      total += 300;
+    }
+  }
+
+  return total;
+}

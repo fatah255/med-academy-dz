@@ -1,6 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
-
+//api/mux-proxy/[id]/route.ts
 // Forward requests from your domain to Mux CDN
+
+// Handle CORS preflight
+export async function OPTIONS() {
+  return new NextResponse(null, {
+    status: 200,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+    },
+  });
+}
+
 export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
@@ -34,6 +47,9 @@ export async function GET(
           muxResponse.headers.get("content-type") ||
           "application/vnd.apple.mpegurl",
         "Cache-Control": "public, max-age=60",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type",
       },
     });
 

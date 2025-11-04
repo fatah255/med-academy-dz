@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {
+  calculatePercentage,
   countNewUsersLastMonth,
   countTotalUsers,
   getQuizRevenueLast30Days,
@@ -94,6 +95,17 @@ export async function SectionCards({ email }: { email?: string }) {
             currency: "DZD",
           }).format(await totalRevenueLast30DaysUser())}
           <p> </p>
+        </CardContent>
+      </Card>
+      <Card className="@container/card ">
+        <CardHeader>
+          <CardDescription>Total Revenues for your courses</CardDescription>
+        </CardHeader>
+        <CardContent className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl mt-2">
+          {new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "DZD",
+          }).format(await calculatePercentage())}
         </CardContent>
       </Card>
       {isOwnersEmail(email || "") && (
