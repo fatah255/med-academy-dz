@@ -97,7 +97,7 @@ export async function SectionCards({ email }: { email?: string }) {
           <p> </p>
         </CardContent>
       </Card>
-      <Card className="@container/card ">
+      {/* <Card className="@container/card ">
         <CardHeader>
           <CardDescription>Total Revenues for your courses</CardDescription>
         </CardHeader>
@@ -107,7 +107,7 @@ export async function SectionCards({ email }: { email?: string }) {
             currency: "DZD",
           }).format(await calculatePercentage())}
         </CardContent>
-      </Card>
+      </Card> */}
       {isOwnersEmail(email || "") && (
         <Card className="@container/card">
           <CardHeader>
