@@ -85,7 +85,7 @@ export async function SectionCards({ email }: { email?: string }) {
           </CardFooter>
         </Card>
       )}
-      <Card className="@container/card ">
+      {/* <Card className="@container/card ">
         <CardHeader>
           <CardDescription>Total Revenues for your courses</CardDescription>
         </CardHeader>
@@ -96,18 +96,8 @@ export async function SectionCards({ email }: { email?: string }) {
           }).format(await totalRevenueLast30DaysUser())}
           <p> </p>
         </CardContent>
-      </Card>
-      {/* <Card className="@container/card ">
-        <CardHeader>
-          <CardDescription>Total Revenues for your courses</CardDescription>
-        </CardHeader>
-        <CardContent className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl mt-2">
-          {new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "DZD",
-          }).format(await calculatePercentage())}
-        </CardContent>
       </Card> */}
+     
       {isOwnersEmail(email || "") && (
         <Card className="@container/card">
           <CardHeader>
